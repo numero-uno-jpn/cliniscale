@@ -1,0 +1,125 @@
+{
+  "_comment": [
+    "Alvarado Score (MANTRELS Score) - 急性虫垂炎診断スコア",
+    "原著論文: Alvarado A. A practical score for the early diagnosis of acute appendicitis. Ann Emerg Med. 1986;15(5):557-64.",
+    "各項目の頭文字から MANTRELS Score とも呼ばれる",
+    "8項目・最大10点のスコアリングシステム",
+    "7点以上で急性虫垂炎の可能性が高く、3点以下で可能性が低い"
+  ],
+  "title": "Alvarado Score 急性虫垂炎診断スコア",
+  "description": [
+    "急性虫垂炎の診断を補助するスコアリングシステムです。",
+    "症状、理学所見、血液検査所見の8項目から急性虫垂炎の可能性を評価します。",
+    "7点以上で急性虫垂炎の可能性が高く、さらなる検査が推奨されます。"
+  ],
+  "submit_button_title": "スコア算出",
+  "fields": [
+    {
+      "dispname": "痛みの移動 (Migration)",
+      "name": "migration",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1",
+      "description": "心窩部や臍周囲から右下腹部への痛みの移動"
+    },
+    {
+      "dispname": "食思不振 (Anorexia)",
+      "name": "anorexia",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1",
+      "description": "食欲不振の有無"
+    },
+    {
+      "dispname": "悪心・嘔吐 (Nausea/Vomiting)",
+      "name": "nausea",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1",
+      "description": "悪心または嘔吐の有無"
+    },
+    {
+      "dispname": "右下腹部圧痛 (Tenderness in RLQ)",
+      "name": "tenderness",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|2",
+      "description": "右下腹部の圧痛の有無"
+    },
+    {
+      "dispname": "反跳痛 (Rebound tenderness)",
+      "name": "rebound",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1",
+      "description": "反跳痛の有無"
+    },
+    {
+      "dispname": "発熱 (Elevated temperature)",
+      "name": "fever",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "37.3℃未満|37.3℃以上",
+      "selectoridx": "0|1",
+      "description": "37.3℃以上の発熱"
+    },
+    {
+      "dispname": "白血球数上昇 (Leukocytosis)",
+      "name": "leukocytosis",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "10,000/μL未満|10,000/μL以上",
+      "selectoridx": "0|2",
+      "description": "白血球数10,000/μL以上"
+    },
+    {
+      "dispname": "左方移動 (Shift to left)",
+      "name": "shift",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1",
+      "description": "多核好中球が75%以上の白血球分画の左方移動"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "合計スコア",
+      "dispname": "Alvaradoスコア合計",
+      "type": "eval",
+      "formula": "[[migration.index]] + [[anorexia.index]] + [[nausea.index]] + [[tenderness.index]] + [[rebound.index]] + [[fever.index]] + [[leukocytosis.index]] + [[shift.index]]",
+      "description": "Alvarado Score 合計点数 (0-10点)"
+    },
+    {
+      "name": "リスク評価",
+      "dispname": "急性虫垂炎リスク評価",
+      "type": "eval",
+      "formula": "[[合計スコア]] >= 7 ? '高リスク (急性虫垂炎の可能性が高い)' : ( [[合計スコア]] >= 4 ? '中等度リスク (さらなる評価が必要)' : '低リスク (急性虫垂炎の可能性は低い)' )"
+    },
+    {
+      "name": "推奨される対応",
+      "dispname": "推奨される臨床対応",
+      "type": "eval",
+      "formula": "[[合計スコア]] >= 7 ? '外科的治療の検討、画像検査による確定診断' : ( [[合計スコア]] >= 4 ? 'CT等の画像検査を検討' : '外来経過観察可' )"
+    },
+    {
+      "name": "Warning: 高リスク (合計スコア >= 7)",
+      "formula": "[[合計スコア]] >= 7",
+      "type": "warning"
+    }
+  ]
+}

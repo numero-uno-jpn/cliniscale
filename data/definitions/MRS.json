@@ -1,0 +1,275 @@
+{
+    "_comment": [
+        "更年期評価尺度 (Menopause Rating Scale: MRS)",
+        "開発者: Schneider HPG, Heinemann LA, et al.",
+        "発行年: 1990年代初頭",
+        "原典: Hauser GA, Huber IC, Keller PJ, et al. Evaluation der klinischen Beschwerden (Menopause Rating Scale). Zentralbl Gynakol 1994;116:16-23.",
+        "参考URL: https://hormonebalance.org/files/MRS%20QOL%20questionnaire%20.pdf",
+        "用途: 更年期症状の重症度評価と生活の質への影響測定",
+        "構成: 11項目、3サブスケール（身体症状：項目1,2,11、心理症状：項目3,4,5,6,7、泌尿生殖器症状：項目8,9,10）",
+        "評価: 5段階評価（0=なし、1=軽度、2=中等度、3=重度、4=極めて重度）",
+        "妥当性: 多国間研究により信頼性・妥当性確認済み"
+    ],
+    "title": "MRS 更年期評価尺度",
+    "description": [
+        "現在のあなたの症状について、当てはまるものを選んでください。",
+        "各症状について、その重症度を5段階で評価してください。"
+    ],
+    "fields": [
+        {
+            "dispname": "身体症状",
+            "type": "subsection"
+        },
+        {
+            "dispname": "1. のぼせ、発汗",
+            "name": "のぼせ発汗",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極めて重度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "発汗エピソードを含む"
+        },
+        {
+            "dispname": "2. 心臓の不快感",
+            "name": "心臓不快感",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極めて重度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "心拍数の異常な認識、動悸、胸部圧迫感"
+        },
+        {
+            "dispname": "11. 筋肉・関節の不快感",
+            "name": "筋肉関節不快感",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極めて重度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "関節痛、リウマチ様症状"
+        },
+        {
+            "dispname": "心理症状",
+            "type": "subsection"
+        },
+        {
+            "dispname": "3. 睡眠障害",
+            "name": "睡眠障害",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極めて重度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "入眠困難、夜間覚醒、早朝覚醒"
+        },
+        {
+            "dispname": "4. 憂うつな気分",
+            "name": "憂うつ気分",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極めて重度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "気分の落ち込み、悲しみ、涙もろさ、意欲の低下、気分変動"
+        },
+        {
+            "dispname": "5. イライラ感",
+            "name": "イライラ感",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極めて重度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "神経質、内的緊張、攻撃的な感情"
+        },
+        {
+            "dispname": "6. 不安感",
+            "name": "不安感",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極めて重度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "内的不安、パニック様感情"
+        },
+        {
+            "dispname": "7. 身体的・精神的疲労",
+            "name": "身体精神疲労",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極めて重度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "全般的な能力低下、記憶力障害、集中力低下、物忘れ"
+        },
+        {
+            "dispname": "泌尿生殖器症状",
+            "type": "subsection"
+        },
+        {
+            "dispname": "8. 性的問題",
+            "name": "性的問題",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極めて重度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "性欲の変化、性的活動や満足度の変化"
+        },
+        {
+            "dispname": "9. 膀胱障害",
+            "name": "膀胱障害",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極めて重度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "排尿困難、頻尿、膀胱失禁"
+        },
+        {
+            "dispname": "10. 膣の乾燥",
+            "name": "膣乾燥",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極めて重度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "膣の乾燥感や灼熱感、性交困難"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "身体症状スコア",
+            "type": "eval",
+            "formula": "[[のぼせ発汗.index]] + [[心臓不快感.index]] + [[筋肉関節不快感.index]]",
+            "dispname": "身体症状スコア 身体症状サブスケール（項目1,2,11）の合計点"
+        },
+        {
+            "name": "心理症状スコア",
+            "type": "eval",
+            "formula": "[[睡眠障害.index]] + [[憂うつ気分.index]] + [[イライラ感.index]] + [[不安感.index]] + [[身体精神疲労.index]]",
+            "dispname": "心理症状スコア 心理症状サブスケール（項目3,4,5,6,7）の合計点"
+        },
+        {
+            "name": "泌尿生殖器症状スコア",
+            "type": "eval",
+            "formula": "[[性的問題.index]] + [[膀胱障害.index]] + [[膣乾燥.index]]",
+            "dispname": "泌尿生殖器症状スコア 泌尿生殖器症状サブスケール（項目8,9,10）の合計点"
+        },
+        {
+            "name": "MRS総合計",
+            "type": "eval",
+            "formula": "[[身体症状スコア]] + [[心理症状スコア]] + [[泌尿生殖器症状スコア]]",
+            "dispname": "MRS総得点（全11項目の合計、0-44点）"
+        },
+        {
+            "name": "身体症状重症度",
+            "type": "eval",
+            "formula": "[[身体症状スコア]] >= 9 ? '重度' : ([[身体症状スコア]] >= 5 ? '中等度' : ([[身体症状スコア]] >= 3 ? '軽度' : '軽微'))",
+            "dispname": "身体症状の重症度評価（0-12点範囲）"
+        },
+        {
+            "name": "心理症状重症度",
+            "type": "eval",
+            "formula": "[[心理症状スコア]] >= 11 ? '重度' : ([[心理症状スコア]] >= 7 ? '中等度' : ([[心理症状スコア]] >= 4 ? '軽度' : '軽微'))",
+            "dispname": "心理症状の重症度評価（0-20点範囲）"
+        },
+        {
+            "name": "泌尿生殖器症状重症度",
+            "type": "eval",
+            "formula": "[[泌尿生殖器症状スコア]] >= 4 ? '重度' : ([[泌尿生殖器症状スコア]] >= 2 ? '中等度' : ([[泌尿生殖器症状スコア]] >= 1 ? '軽度' : '軽微'))",
+            "dispname": "泌尿生殖器症状の重症度評価（0-12点範囲）"
+        },
+        {
+            "name": "総合重症度",
+            "type": "eval",
+            "formula": "[[MRS総合計]] >= 16 ? '重度' : ([[MRS総合計]] >= 9 ? '中等度' : ([[MRS総合計]] >= 5 ? '軽度' : '軽微'))",
+            "dispname": "MRS総得点による重症度評価（原典準拠：軽微0-4、軽度5-8、中等度9-15、重度16+）"
+        },
+        {
+            "name": "治療必要性評価",
+            "type": "eval",
+            "formula": "[[MRS総合計]] >= 14 ? '治療推奨' : '経過観察'",
+            "dispname": "カットオフ値14点に基づく治療必要性の評価（後続研究基準）"
+        },
+        {
+            "formula": "[[MRS総合計]] >= 14",
+            "type": "warning",
+            "name": "warning: 治療の検討が推奨されます（MRS得点14点以上）"
+        },
+        {
+            "formula": "[[MRS総合計]] >= 16",
+            "type": "emergency",
+            "name": "emergency: 重症 MRS得点16点以上"
+        }
+    ]
+}

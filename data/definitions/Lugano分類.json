@@ -1,0 +1,395 @@
+{
+  "_comment": [
+    "Lugano分類(2014)リンパ腫病期分類問診票",
+    "原典: Cheson BD, et al., Recommendations for Initial Evaluation, Staging, and Response Assessment of Hodgkin and Non-Hodgkin Lymphoma: The Lugano Classification, J Clin Oncol. 2014; 32(27): 3059-3067.",
+    "参考: 日本血液学会編, 造血器腫瘍診療ガイドライン 2024年版",
+    "FDG-PET/CTを活用した悪性リンパ腫の病期分類システム"
+  ],
+  "title": "Lugano リンパ腫病期分類 (2014)",
+  "description": [
+    "リンパ節を原発とする悪性リンパ腫の病期分類を行います",
+    "FDG-PET/CTまたはCTの画像所見をもとに入力してください"
+  ],
+  "fields": [
+    {
+      "dispname": "基本情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "リンパ腫の組織型",
+      "name": "組織型",
+      "type": "text",
+      "required": true,
+      "description": "病理診断による組織型を記載"
+    },
+    {
+      "dispname": "使用画像検査",
+      "name": "使用画像",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "FDG-PET/CT|CT単独",
+      "description": "病期決定に使用した画像検査を選択"
+    },
+    {
+      "dispname": "リンパ節病変の評価",
+      "type": "subsection"
+    },
+    {
+      "dispname": "リンパ節病変の有無",
+      "name": "リンパ節病変",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "あり|なし"
+    },
+    {
+      "dispname": "リンパ節病変の範囲",
+      "name": "病変範囲",
+      "type": "radio",
+      "required": true,
+      "parentname": "リンパ節病変",
+      "parentsel": "あり",
+      "selector": [
+        "単独のリンパ節病変または隣接するリンパ節病変の集合",
+        "横隔膜同側の複数リンパ節病変",
+        "横隔膜両側の複数リンパ節病変"
+      ],
+      "description": "リンパ節病変の分布を選択"
+    },
+    {
+      "dispname": "bulky病変の有無",
+      "name": "bulky病変",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "parentname": "病変範囲",
+      "parentsel": "横隔膜同側の複数リンパ節病変",
+      "selector": "あり|なし",
+      "description": "bulky病変の定義は組織型により異なります"
+    },
+    {
+      "dispname": "bulky病変の最長径",
+      "name": "bulky径",
+      "type": "text",
+      "inputmode": "decimal",
+      "postfix": "cm",
+      "testrange": [
+        1,
+        20
+      ],
+      "parentname": "bulky病変",
+      "parentsel": "あり",
+      "description": "bulky病変の最長径を記録してください（例: 12.5）"
+    },
+    {
+      "dispname": "脾臓病変の有無",
+      "name": "脾臓病変",
+      "type": "radio",
+      "inline": true,
+      "parentname": "病変範囲",
+      "parentsel": "横隔膜両側の複数リンパ節病変",
+      "selector": "あり|なし",
+      "description": "脾臓は節性病変とみなします"
+    },
+    {
+      "dispname": "節外病変の評価",
+      "type": "subsection"
+    },
+    {
+      "dispname": "節外病変の有無",
+      "name": "節外病変",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "あり|なし"
+    },
+    {
+      "dispname": "節外病変の性状",
+      "name": "節外性状",
+      "type": "radio",
+      "required": true,
+      "parentname": "節外病変",
+      "parentsel": "あり",
+      "selector": [
+        "リンパ節病変を伴わない単独の限局性病変",
+        "リンパ節病変の進展による限局性かつ連続性の病変",
+        "リンパ節病変とは非連続性の病変"
+      ],
+      "description": "節外病変の性状を選択"
+    },
+    {
+      "dispname": "節外病変の部位",
+      "name": "節外部位",
+      "type": "checkbox",
+      "required": true,
+      "parentname": "節外病変",
+      "parentsel": "あり",
+      "selector": [
+        "肺",
+        "肝臓",
+        "骨髄",
+        "中枢神経系",
+        "消化管",
+        "骨",
+        "腎臓",
+        "その他"
+      ],
+      "description": "該当する部位をすべて選択"
+    },
+    {
+      "dispname": "ワルダイエル輪・扁桃の病変",
+      "name": "ワルダイエル輪",
+      "type": "radio",
+      "inline": true,
+      "selector": "あり|なし",
+      "description": "扁桃、ワルダイエル輪は節性病変とみなします"
+    },
+    {
+      "dispname": "骨髄検査",
+      "type": "subsection"
+    },
+    {
+      "dispname": "骨髄検査実施の有無",
+      "name": "骨髄検査",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "実施|未実施",
+      "description": "HLとDLBCLでFDG-PET/CT実施時は骨髄生検省略可"
+    },
+    {
+      "dispname": "骨髄浸潤の有無",
+      "name": "骨髄浸潤",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "parentname": "骨髄検査",
+      "parentsel": "実施",
+      "selector": "あり|なし"
+    },
+    {
+      "dispname": "ホジキンリンパ腫の場合のみ",
+      "type": "subsection"
+    },
+    {
+      "dispname": "ホジキンリンパ腫の診断",
+      "name": "ホジキン",
+      "type": "radio",
+      "inline": true,
+      "selector": "ホジキンリンパ腫|非ホジキンリンパ腫",
+      "description": "ホジキンリンパ腫のみB症状を評価"
+    },
+    {
+      "dispname": "B症状の有無",
+      "name": "B症状",
+      "type": "radio",
+      "inline": true,
+      "parentname": "ホジキン",
+      "parentsel": "ホジキンリンパ腫",
+      "selector": "あり|なし",
+      "description": "発熱、体重減少、盗汗"
+    },
+    {
+      "dispname": "B症状の詳細",
+      "name": "B症状詳細",
+      "type": "checkbox",
+      "parentname": "B症状",
+      "parentsel": "あり",
+      "selector": [
+        "38℃以上の発熱",
+        "6か月以内に10%以上の体重減少",
+        "盗汗"
+      ]
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "リンパ節病変_index",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[リンパ節病変.index]]"
+    },
+    {
+      "name": "病変範囲_index",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[病変範囲.index]]"
+    },
+    {
+      "name": "bulky病変_index",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[bulky病変.index]]"
+    },
+    {
+      "name": "節外病変_index",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[節外病変.index]]"
+    },
+    {
+      "name": "節外性状_index",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[節外性状.index]]"
+    },
+    {
+      "name": "骨髄検査_index",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[骨髄検査.index]]"
+    },
+    {
+      "name": "骨髄浸潤_index",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[骨髄浸潤.index]]"
+    },
+    {
+      "name": "ホジキン_index",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[ホジキン.index]]"
+    },
+    {
+      "name": "B症状_index",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[B症状.index]]"
+    },
+    {
+      "name": "I期_条件1",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( [[リンパ節病変_index]] === 0 && [[病変範囲_index]] === 0 && [[節外病変_index]] === 1 ) ? 1 : 0"
+    },
+    {
+      "name": "I期_条件2",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( [[リンパ節病変_index]] === 1 && [[節外病変_index]] === 0 && [[節外性状_index]] === 0 ) ? 1 : 0"
+    },
+    {
+      "dispname": "I期: 単独リンパ節病変または単独節外限局性病変",
+      "name": "I期",
+      "type": "eval",
+      "formula": "( [[I期_条件1]] || [[I期_条件2]] ) ? 'I期該当' : '非該当'"
+    },
+    {
+      "name": "II期_条件1",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( [[病変範囲_index]] === 1 && [[bulky病変_index]] === 1 ) ? 1 : 0"
+    },
+    {
+      "name": "II期_条件2",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( [[病変範囲_index]] === 0 && [[節外性状_index]] === 1 ) ? 1 : 0"
+    },
+    {
+      "dispname": "II期: 横隔膜同側の複数リンパ節病変",
+      "name": "II期",
+      "type": "eval",
+      "formula": "( [[II期_条件1]] || [[II期_条件2]] ) ? 'II期該当' : '非該当'"
+    },
+    {
+      "dispname": "bulky病変を伴うII期",
+      "name": "II期bulky",
+      "type": "eval",
+      "formula": "( [[病変範囲_index]] === 1 && [[bulky病変_index]] === 0 ) ? 'II期bulky該当' : '非該当'"
+    },
+    {
+      "dispname": "III期: 横隔膜両側のリンパ節病変",
+      "name": "III期",
+      "type": "eval",
+      "formula": "( [[病変範囲_index]] === 2 ) ? 'III期該当' : '非該当'"
+    },
+    {
+      "name": "IV期_条件1",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( [[節外性状_index]] === 2 ) ? 1 : 0"
+    },
+    {
+      "name": "IV期_条件2",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( [[骨髄検査_index]] === 0 && [[骨髄浸潤_index]] === 0 ) ? 1 : 0"
+    },
+    {
+      "dispname": "IV期:非連続性節外病変または骨髄浸潤",
+      "name": "IV期",
+      "type": "eval",
+      "formula": "( [[IV期_条件1]] || [[IV期_条件2]] ) ? 'IV期該当' : '非該当'"
+    },
+    {
+      "name": "I期フラグ",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{I期}} === 'I期該当' ? 1 : 0"
+    },
+    {
+      "name": "II期フラグ",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{II期}} === 'II期該当' ? 1 : 0"
+    },
+    {
+      "name": "II期bulkyフラグ",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{II期bulky}} === 'II期bulky該当' ? 1 : 0"
+    },
+    {
+      "name": "III期フラグ",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{III期}} === 'III期該当' ? 1 : 0"
+    },
+    {
+      "name": "IV期フラグ",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{IV期}} === 'IV期該当' ? 1 : 0"
+    },
+    {
+      "dispname": "Lugano分類(2014)による最終病期",
+      "name": "最終病期",
+      "type": "eval",
+      "formula": "[[IV期フラグ]] ? 'IV期' : ( [[III期フラグ]] ? 'III期' : ( [[II期bulkyフラグ]] ? 'II期bulky' : ( [[II期フラグ]] ? 'II期' : ( [[I期フラグ]] ? 'I期' : '分類不能' ) ) ) )"
+    },
+    {
+      "dispname": "限局期・進行期分類",
+      "name": "期分類",
+      "type": "eval",
+      "formula": "[[IV期フラグ]] || [[III期フラグ]] ? '進行期' : ( [[II期bulkyフラグ]] ? '限局期/進行期(組織型・予後因子により決定)' : ( [[II期フラグ]] || [[I期フラグ]] ? '限局期' : '分類不能' ) )"
+    },
+    {
+      "name": "B症状付記_A",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{最終病期}} + 'A'"
+    },
+    {
+      "name": "B症状付記_B",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{最終病期}} + 'B'"
+    },
+    {
+      "name": "B症状付記_tmp",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[B症状_index]] === 0 ? {{B症状付記_B}} : {{B症状付記_A}}"
+    },
+    {
+      "dispname": "B症状付記",
+      "name": "B症状付記",
+      "type": "eval",
+      "formula": "[[ホジキン_index]] === 0 ? {{B症状付記_tmp}} : {{最終病期}}"
+    }
+  ]
+}

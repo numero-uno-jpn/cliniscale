@@ -1,0 +1,197 @@
+{
+  "_comment": [
+    "Shaffer分類による隅角開大度評価",
+    "緑内障診療における隅角検査で隅角の広さを0-4度で分類",
+    "隅角閉塞のリスク評価に用いられる標準的な分類システム",
+    "出典: 日本眼科学会緑内障診療ガイドライン第5版(2022)",
+    "厚生労働省医薬安全対策課通知(令和元年5月31日)"
+  ],
+  "title": "Shaffer分類による隅角開大度評価",
+  "description": [
+    "隅角検査において隅角の開大度を評価し、緑内障のリスクを判定するためのスケールです。",
+    "隅角とは虹彩と角膜が接する部位で、房水の排出経路となる重要な構造です。"
+  ],
+  "contact": "眼科担当医師",
+  "dept_in_charge": "眼科",
+  "responsible_person": [
+    "眼科医師",
+    "視能訓練士"
+  ],
+  "submit_button_title": "評価結果を送信",
+  "fields": [
+    {
+      "dispname": "患者基本情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "検査実施日",
+      "name": "検査日",
+      "type": "date",
+      "format": "YYYY/MM/DD",
+      "required": true
+    },
+    {
+      "dispname": "検査対象眼",
+      "name": "対象眼",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "右眼|左眼|両眼"
+    },
+    {
+      "dispname": "隅角鏡の種類",
+      "name": "隅角鏡",
+      "type": "radio",
+      "required": true,
+      "selector": "Goldman型3面鏡|直接型隅角鏡|その他"
+    },
+    {
+      "dispname": "Shaffer分類評価",
+      "type": "subsection"
+    },
+    {
+      "dispname": "上方隅角",
+      "name": "上方",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "Grade0（0度）- 閉塞隅角",
+        "Grade1（≤10度）- 狭隅角極度",
+        "Grade2（20度）- 狭隅角軽度",
+        "Grade3（25-35度）- 広隅角",
+        "Grade4（35-45度）- 広隅角"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "description": "隅角線維柱帯と周辺虹彩のなす角度を測定"
+    },
+    {
+      "dispname": "下方隅角",
+      "name": "下方",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "Grade0（0度）- 閉塞隅角",
+        "Grade1（≤10度）- 狭隅角極度",
+        "Grade2（20度）- 狭隅角軽度",
+        "Grade3（25-35度）- 広隅角",
+        "Grade4（35-45度）- 広隅角"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "description": "隅角線維柱帯と周辺虹彩のなす角度を測定"
+    },
+    {
+      "dispname": "鼻側隅角",
+      "name": "鼻側",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "Grade0（0度）- 閉塞隅角",
+        "Grade1（≤10度）- 狭隅角極度",
+        "Grade2（20度）- 狭隅角軽度",
+        "Grade3（25-35度）- 広隅角",
+        "Grade4（35-45度）- 広隅角"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "description": "隅角線維柱帯と周辺虹彩のなす角度を測定"
+    },
+    {
+      "dispname": "耳側隅角",
+      "name": "耳側",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "Grade0（0度）- 閉塞隅角",
+        "Grade1（≤10度）- 狭隅角極度",
+        "Grade2（20度）- 狭隅角軽度",
+        "Grade3（25-35度）- 広隅角",
+        "Grade4（35-45度）- 広隅角"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "description": "隅角線維柱帯と周辺虹彩のなす角度を測定"
+    },
+    {
+      "dispname": "追加所見",
+      "type": "subsection"
+    },
+    {
+      "dispname": "周辺虹彩前癒着（PAS）",
+      "name": "PAS",
+      "type": "radio",
+      "inline": true,
+      "selector": "なし|あり",
+      "required": true
+    },
+    {
+      "dispname": "PAS範囲",
+      "name": "PAS範囲",
+      "type": "text",
+      "parentname": "PAS",
+      "parentsel": "あり",
+      "postfix": "時間分",
+      "description": "時計の針の位置で記載（例: 1-3時間、6-9時間）"
+    },
+    {
+      "dispname": "色素沈着",
+      "name": "色素沈着",
+      "type": "radio",
+      "inline": true,
+      "selector": "なし|軽度|中等度|高度"
+    },
+    {
+      "dispname": "その他の異常所見",
+      "name": "その他所見",
+      "type": "textarea",
+      "rows": 3,
+      "description": "隅角結節、血管新生、炎症細胞など"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "最小Grade",
+      "type": "eval",
+      "formula": "Math.min( ((上方.index)), ((下方.index)), ((鼻側.index)), ((耳側.index)) )",
+      "dispname": "最も狭い隅角のグレード"
+    },
+    {
+      "name": "最大Grade",
+      "type": "eval",
+      "formula": "Math.max( ((上方.index)), ((下方.index)), ((鼻側.index)), ((耳側.index)) )",
+      "dispname": "最も広い隅角のグレード"
+    },
+    {
+      "name": "平均Grade",
+      "type": "eval",
+      "formula": "Math.round( ( ((上方.index)) + ((下方.index)) + ((鼻側.index)) + ((耳側.index)) ) / 4 * 10 ) / 10",
+      "dispname": "4方向の平均グレード"
+    },
+    {
+      "name": "分類判定",
+      "type": "eval",
+      "formula": "[[最小Grade]] == 0 ? '閉塞隅角緑内障' : [[最小Grade]] <= 2 ? '狭隅角' : '開放隅角'",
+      "dispname": "最小グレードに基づく分類"
+    },
+    {
+      "name": "急性発作リスク",
+      "type": "eval",
+      "formula": "[[最小Grade]] == 0 ? '隅角閉塞が生じている' : [[最小Grade]] == 1 ? '隅角閉塞がおそらく起こる' : [[最小Grade]] == 2 ? '隅角閉塞は起こる可能性がある' : '隅角閉塞は起こり得ない'",
+      "dispname": "急性緑内障発作のリスク評価"
+    },
+    {
+      "name": "抗コリン薬使用",
+      "type": "eval",
+      "formula": "[[最小Grade]] <= 2 ? '注意が必要' : '安全に使用可能'",
+      "dispname": "抗コリン薬投与時の注意事項"
+    },
+    {
+      "name": "Warning: 狭隅角 Grade≤1",
+      "formula": "[[最小Grade]] <= 1",
+      "type": "warning"
+    },
+    {
+      "name": "Emergency: 閉塞隅角 Grade0",
+      "formula": "[[最小Grade]] == 0",
+      "type": "emergency"
+    }
+  ]
+}

@@ -1,0 +1,254 @@
+{
+    "_comment": [
+        "Brief Pain Inventory - Short Form (BPI-SF) 日本語版",
+        "原著: Cleeland CS. The Brief Pain Inventory. 1991",
+        "日本語版: Uki J, Mendoza T, Cleeland CS, et al. A brief cancer pain assessment tool in Japanese: the utility of the Japanese Brief Pain Inventory--BPI-J. J Pain Symptom Manage. 1998;16(6):364-73",
+        "公式サイト: https://www.mdanderson.org/research/departments-labs-institutes/departments-divisions/symptom-research/symptom-assessment-tools/brief-pain-inventory.html",
+        "著作権: Charles S. Cleeland, PhD (1991) - 本定義は教育目的でのみ作成されており、実際の使用には著作権者の許可が必要"
+    ],
+    "title": "BPI (Brief Pain Inventory) 簡易疼痛調査票",
+    "description": [
+        "<h3>痛みの強度と生活への影響の評価</h3>",
+        "痛みの強度と日常生活への影響を多面的に評価する自己報告式質問票です。",
+        "過去24時間の痛みについてお答えください。"
+    ],
+    "contact": "担当医師",
+    "dept_in_charge": "医療機関名",
+    "submit_button_title": "回答を送信",
+    "fields": [
+        {
+            "dispname": "痛みのスクリーニング",
+            "name": "痛みスクリーニング",
+            "type": "radio",
+            "required": true,
+            "selector": "はい|いいえ",
+            "description": "日常的な軽い頭痛、ねんざ、歯痛などを除いて、本日何らかの痛みがありましたか"
+        },
+        {
+            "dispname": "痛みの部位図",
+            "name": "痛み部位",
+            "type": "figure",
+            "description": "痛みを感じる部位に印をつけてください。最も痛む部位には×印をつけてください",
+            "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjQwMCI+PHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSI0MDAiIGZpbGw9IiNmOWY5ZjkiLz48dGV4dCB4PSIxNTAiIHk9IjIwIiBmaWxsPSIjMzMzIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7kuZPpnaLjgIjliY08L3RleHQ+PGVsbGlwc2UgY3g9IjEwMCIgY3k9IjEwMCIgcng9IjMwIiByeT0iNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzY2NiIgc3Ryb2tlLXdpZHRoPSIyIi8+PGVsbGlwc2UgY3g9IjEwMCIgY3k9IjE4MCIgcng9IjQwIiByeT0iODAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzY2NiIgc3Ryb2tlLXdpZHRoPSIyIi8+PGxpbmUgeDE9IjEwMCIgeTE9IjI2MCIgeDI9IjEwMCIgeTI9IjM4MCIgc3Ryb2tlPSIjNjY2IiBzdHJva2Utd2lkdGg9IjQiLz48dGV4dCB4PSIyMDAiIHk9IjIwIiBmaWxsPSIjMzMzIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7kuZPpnaLjgIjlvozjgonjgos8L3RleHQ+PGVsbGlwc2UgY3g9IjIwMCIgY3k9IjEwMCIgcng9IjMwIiByeT0iNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzY2NiIgc3Ryb2tlLXdpZHRoPSIyIi8+PGVsbGlwc2UgY3g9IjIwMCIgY3k9IjE4MCIgcng9IjQwIiByeT0iODAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzY2NiIgc3Ryb2tlLXdpZHRoPSIyIi8+PGxpbmUgeDE9IjIwMCIgeTE9IjI2MCIgeDI9IjIwMCIgeTI9IjM4MCIgc3Ryb2tlPSIjNjY2IiBzdHJva2Utd2lkdGg9IjQiLz48L3N2Zz4=",
+            "parentname": "痛みスクリーニング",
+            "parentsel": "はい"
+        },
+        {
+            "dispname": "痛み強度",
+            "type": "subsection",
+            "parentname": "痛みスクリーニング",
+            "parentsel": "はい"
+        },
+        {
+            "dispname": "最も強い痛み",
+            "name": "最も強い痛み",
+            "type": "scale",
+            "min": 0,
+            "max": 10,
+            "starttag": "痛みなし",
+            "endtag": "想像できる最も強い痛み",
+            "description": "過去24時間で最も強かった痛みを評価してください",
+            "required": true,
+            "parentname": "痛みスクリーニング",
+            "parentsel": "はい"
+        },
+        {
+            "dispname": "最も弱い痛み",
+            "name": "最も弱い痛み",
+            "type": "scale",
+            "min": 0,
+            "max": 10,
+            "starttag": "痛みなし",
+            "endtag": "想像できる最も強い痛み",
+            "description": "過去24時間で最も弱かった痛みを評価してください",
+            "required": true,
+            "parentname": "痛みスクリーニング",
+            "parentsel": "はい"
+        },
+        {
+            "dispname": "平均的な痛み",
+            "name": "平均痛み",
+            "type": "scale",
+            "min": 0,
+            "max": 10,
+            "starttag": "痛みなし",
+            "endtag": "想像できる最も強い痛み",
+            "description": "過去24時間の平均的な痛みを評価してください",
+            "required": true,
+            "parentname": "痛みスクリーニング",
+            "parentsel": "はい"
+        },
+        {
+            "dispname": "現在の痛み",
+            "name": "現在痛み",
+            "type": "scale",
+            "min": 0,
+            "max": 10,
+            "starttag": "痛みなし",
+            "endtag": "想像できる最も強い痛み",
+            "description": "今現在の痛みを評価してください",
+            "required": true,
+            "parentname": "痛みスクリーニング",
+            "parentsel": "はい"
+        },
+        {
+            "dispname": "痛みの治療",
+            "name": "痛み治療",
+            "type": "textarea",
+            "rows": 3,
+            "description": "痛みに対してどのような治療や薬を使用していますか",
+            "parentname": "痛みスクリーニング",
+            "parentsel": "はい"
+        },
+        {
+            "dispname": "治療効果",
+            "name": "治療効果",
+            "type": "scale",
+            "min": 0,
+            "max": 100,
+            "unit": "%",
+            "starttag": "全く効果なし",
+            "endtag": "完全に効果あり",
+            "description": "過去24時間で痛みの治療や薬はどの程度効果がありましたか",
+            "required": true,
+            "parentname": "痛みスクリーニング",
+            "parentsel": "はい"
+        },
+        {
+            "dispname": "生活への影響",
+            "type": "subsection",
+            "parentname": "痛みスクリーニング",
+            "parentsel": "はい"
+        },
+        {
+            "dispname": "一般的活動への影響",
+            "name": "一般活動影響",
+            "type": "scale",
+            "min": 0,
+            "max": 10,
+            "starttag": "全く妨げない",
+            "endtag": "完全に妨げる",
+            "description": "過去24時間で痛みが一般的な活動にどの程度影響しましたか",
+            "required": true,
+            "parentname": "痛みスクリーニング",
+            "parentsel": "はい"
+        },
+        {
+            "dispname": "気分への影響",
+            "name": "気分影響",
+            "type": "scale",
+            "min": 0,
+            "max": 10,
+            "starttag": "全く妨げない",
+            "endtag": "完全に妨げる",
+            "description": "過去24時間で痛みが気分にどの程度影響しましたか",
+            "required": true,
+            "parentname": "痛みスクリーニング",
+            "parentsel": "はい"
+        },
+        {
+            "dispname": "歩行能力への影響",
+            "name": "歩行影響",
+            "type": "scale",
+            "min": 0,
+            "max": 10,
+            "starttag": "全く妨げない",
+            "endtag": "完全に妨げる",
+            "description": "過去24時間で痛みが歩行能力にどの程度影響しましたか",
+            "required": true,
+            "parentname": "痛みスクリーニング",
+            "parentsel": "はい"
+        },
+        {
+            "dispname": "通常の仕事への影響",
+            "name": "仕事影響",
+            "type": "scale",
+            "min": 0,
+            "max": 10,
+            "starttag": "全く妨げない",
+            "endtag": "完全に妨げる",
+            "description": "過去24時間で痛みが通常の仕事(家事を含む)にどの程度影響しましたか",
+            "required": true,
+            "parentname": "痛みスクリーニング",
+            "parentsel": "はい"
+        },
+        {
+            "dispname": "他者との関係への影響",
+            "name": "関係影響",
+            "type": "scale",
+            "min": 0,
+            "max": 10,
+            "starttag": "全く妨げない",
+            "endtag": "完全に妨げる",
+            "description": "過去24時間で痛みが他者との関係にどの程度影響しましたか",
+            "required": true,
+            "parentname": "痛みスクリーニング",
+            "parentsel": "はい"
+        },
+        {
+            "dispname": "睡眠への影響",
+            "name": "睡眠影響",
+            "type": "scale",
+            "min": 0,
+            "max": 10,
+            "starttag": "全く妨げない",
+            "endtag": "完全に妨げる",
+            "description": "過去24時間で痛みが睡眠にどの程度影響しましたか",
+            "required": true,
+            "parentname": "痛みスクリーニング",
+            "parentsel": "はい"
+        },
+        {
+            "dispname": "人生の楽しみへの影響",
+            "name": "楽しみ影響",
+            "type": "scale",
+            "min": 0,
+            "max": 10,
+            "starttag": "全く妨げない",
+            "endtag": "完全に妨げる",
+            "description": "過去24時間で痛みが人生の楽しみにどの程度影響しましたか",
+            "required": true,
+            "parentname": "痛みスクリーニング",
+            "parentsel": "はい"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "痛み強度スコア",
+            "type": "eval",
+            "formula": "{{痛みスクリーニング}} == 'はい' ?  ( ((最も強い痛み)) + ((最も弱い痛み)) + ((平均痛み)) + ((現在痛み)) ) / 4: 'N/A'",
+            "dispname": "痛み強度スコア(4項目の平均)"
+        },
+        {
+            "name": "痛み干渉スコア",
+            "type": "eval",
+            "formula": "{{痛みスクリーニング}} == 'はい' ?  ( ( ((一般活動影響)) + ((気分影響)) + ((歩行影響)) + ((仕事影響)) + ((関係影響)) + ((睡眠影響)) + ((楽しみ影響)) ) / 7).toFixed(2): 'N/A'",
+            "dispname": "痛み干渉スコア(7項目の平均)"
+        },
+        {
+            "name": "活動干渉スコア",
+            "type": "eval",
+            "formula": "{{痛みスクリーニング}} == 'はい' ?  ( ( ((歩行影響)) + ((一般活動影響)) + ((仕事影響)) ) / 3).toFixed(2): 'N/A'",
+            "dispname": "活動関連干渉スコア(WAW: 歩行・活動・仕事)"
+        },
+        {
+            "name": "感情干渉スコア",
+            "type": "eval",
+            "formula": "{{痛みスクリーニング}} == 'はい' ?  ( ( ((関係影響)) + ((楽しみ影響)) + ((気分影響)) ) / 3).toFixed(2): 'N/A'",
+            "dispname": "感情関連干渉スコア(REM: 関係・楽しみ・気分)"
+        },
+        {
+            "name": "重度痛み判定",
+            "type": "eval",
+            "formula": "{{痛みスクリーニング}} == 'はい' ?  ( [[痛み強度スコア]] >= 7 ? '重度の痛み' : ( [[痛み強度スコア]] >= 5 ? '中等度の痛み' : ( [[痛み強度スコア]] >= 1 ? '軽度の痛み' : '痛みなし' ) ) ): 'N/A'",
+            "dispname": "痛み強度による重症度分類(1-4:軽度、5-6:中等度、7-10:重度)"
+        },
+        {
+            "name": "機能障害判定",
+            "type": "eval",
+            "formula": "{{痛みスクリーニング}} == 'はい' ?  ( [[痛み干渉スコア]] >= 7 ? '重度の機能障害' : ( [[痛み干渉スコア]] >= 5 ? '中等度の機能障害' : ( [[痛み干渉スコア]] >= 1 ? '軽度の機能障害' : '機能障害なし' ) ) ): 'N/A'",
+            "dispname": "痛み干渉による機能障害分類(1-4:軽度、5-6:中等度、7-10:重度)"
+        }
+    ]
+}

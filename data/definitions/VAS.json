@@ -1,0 +1,250 @@
+{
+    "_comment": [
+        "VAS (Visual Analog Scale) - 視覚的アナログスケール",
+        "痛みの主観的評価のための最も一般的な評価ツール",
+        "10cmの直線上で痛みを0-100mmで評価",
+        "参考: 日本ペインクリニック学会 https://www.jspc.gr.jp/igakusei/igakusei_hyouka.html",
+        "参考文献: Journal of Pain 2003 (Collins et al., PMID: 14622906)",
+        "厚生労働省参考資料: https://www.mhlw.go.jp/topics/2009/05/dl/tp0501-sankou3-3.pdf",
+        "重症度分類は国際標準(Journal of Pain 2003)に準拠"
+    ],
+    "title": "VAS 痛み評価スケール",
+    "description": [
+        "<h3>痛みの視覚的評価</h3>",
+        "現在感じている痛みの程度を、直線上の位置で評価していただきます。",
+        "左端が「全く痛みなし」、右端が「想像できる最大の痛み」を表します。"
+    ],
+    "contact": "担当医師",
+    "dept_in_charge": "痛み治療科",
+    "submit_button_title": "評価結果を送信",
+    "fields": [
+        {
+            "dispname": "患部の選択",
+            "name": "患部",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "頭部",
+                "首・肩",
+                "背中・腰",
+                "胸部",
+                "腹部",
+                "上肢",
+                "下肢",
+                "その他"
+            ],
+            "description": "痛みを感じている部位を選択してください"
+        },
+        {
+            "dispname": "その他の部位",
+            "name": "その他部位",
+            "type": "text",
+            "parentname": "患部",
+            "parentsel": "その他",
+            "description": "具体的な部位を記入してください"
+        },
+        {
+            "dispname": "現在の痛みの程度",
+            "name": "現在痛み",
+            "type": "scale",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "starttag": "痛みなし",
+            "endtag": "最大の痛み",
+            "disprange": true,
+            "required": true,
+            "description": "現在感じている痛みの強さを0から100の範囲で示してください (0: 痛みなし ～ 100: 最大の痛み)"
+        },
+        {
+            "dispname": "一日で最も痛い時の程度",
+            "name": "最大痛み",
+            "type": "scale",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "starttag": "痛みなし",
+            "endtag": "最大の痛み",
+            "disprange": true,
+            "description": "一日のうちで最も痛みが強い時の程度を示してください (0: 痛みなし ～ 100: 最大の痛み)"
+        },
+        {
+            "dispname": "安静時の痛みの程度",
+            "name": "安静時痛み",
+            "type": "scale",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "starttag": "痛みなし",
+            "endtag": "最大の痛み",
+            "disprange": true,
+            "description": "安静にしている時の痛みの程度を示してください (0: 痛みなし ～ 100: 最大の痛み)"
+        },
+        {
+            "dispname": "動作時の痛みの程度",
+            "name": "動作時痛み",
+            "type": "scale",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "starttag": "痛みなし",
+            "endtag": "最大の痛み",
+            "disprange": true,
+            "description": "動作や活動時の痛みの程度を示してください (0: 痛みなし ～ 100: 最大の痛み)"
+        },
+        {
+            "dispname": "痛みの性質",
+            "name": "痛み性質",
+            "type": "checkbox",
+            "selector": [
+                "鈍い痛み",
+                "鋭い痛み",
+                "ズキズキする",
+                "刺すような痛み",
+                "焼けるような痛み",
+                "しびれ",
+                "つっぱり感"
+            ],
+            "description": "痛みの感じ方について当てはまるものを選択してください"
+        },
+        {
+            "dispname": "痛みの継続時間",
+            "name": "痛み継続",
+            "type": "radio",
+            "selector": [
+                "常に痛い",
+                "間欠的に痛い",
+                "特定の動作で痛い",
+                "夜間のみ痛い"
+            ],
+            "description": "痛みがどのような時に感じるかを選択してください"
+        },
+        {
+            "dispname": "痛みの発症時期",
+            "name": "発症時期",
+            "type": "radio",
+            "selector": [
+                "今日",
+                "2-3日前",
+                "1週間前",
+                "1ヶ月前",
+                "3ヶ月前",
+                "6ヶ月以上前"
+            ],
+            "description": "痛みがいつ頃から始まったかを選択してください"
+        },
+        {
+            "dispname": "痛みのきっかけ",
+            "name": "痛みきっかけ",
+            "type": "radio",
+            "selector": [
+                "外傷・けが",
+                "手術後",
+                "特別な原因なし",
+                "ストレス",
+                "過労",
+                "その他"
+            ],
+            "description": "痛みが始まったきっかけを選択してください"
+        },
+        {
+            "dispname": "その他のきっかけ",
+            "name": "その他きっかけ",
+            "type": "textarea",
+            "parentname": "痛みきっかけ",
+            "parentsel": "その他",
+            "description": "具体的なきっかけを記入してください"
+        },
+        {
+            "dispname": "日常生活への影響",
+            "name": "生活影響",
+            "type": "scale",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "starttag": "影響なし",
+            "endtag": "全く動けない",
+            "disprange": true,
+            "description": "痛みによる日常生活への支障の程度を示してください (0: 影響なし ～ 100: 全く動けない)"
+        },
+        {
+            "dispname": "睡眠への影響",
+            "name": "睡眠影響",
+            "type": "scale",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "starttag": "影響なし",
+            "endtag": "全く眠れない",
+            "disprange": true,
+            "description": "痛みによる睡眠への影響の程度を示してください (0: 影響なし ～ 100: 全く眠れない)"
+        },
+        {
+            "dispname": "服用中の痛み止め",
+            "name": "痛み止め",
+            "type": "radio",
+            "selector": [
+                "なし",
+                "市販薬",
+                "処方薬",
+                "両方使用"
+            ],
+            "description": "現在使用している痛み止めについて選択してください"
+        },
+        {
+            "dispname": "薬の効果",
+            "name": "薬効果",
+            "type": "scale",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "starttag": "効果なし",
+            "endtag": "完全に効く",
+            "disprange": true,
+            "parentname": "痛み止め",
+            "parentsel": [
+                "市販薬",
+                "処方薬",
+                "両方使用"
+            ],
+            "description": "痛み止めの効果の程度を示してください (0: 効果なし ～ 100: 完全に効く)"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "VAS評価結果",
+            "type": "eval",
+            "formula": "{{現在痛み}} ? '現在の痛み: ' + {{現在痛み}} : '未評価'",
+            "dispname": "VAS評価による現在の痛みスコア"
+        },
+        {
+            "name": "痛み重症度",
+            "type": "eval",
+            "formula": "[[現在痛み]] >= 75 ? '重度' : ([[現在痛み]] >= 45 ? '中等度' : ([[現在痛み]] >= 5 ? '軽度' : '痛みなし'))",
+            "dispname": "痛みの重症度分類（国際標準準拠: Journal of Pain 2003）"
+        },
+        {
+            "name": "最大痛み評価",
+            "type": "eval",
+            "formula": "{{最大痛み}} ? '最大痛み: ' + {{最大痛み}} : '未評価'",
+            "dispname": "一日で最も痛い時のVASスコア"
+        },
+        {
+            "name": "機能障害評価",
+            "type": "eval",
+            "formula": "{{生活影響}} ? '生活影響度: ' + {{生活影響}} : '未評価'",
+            "dispname": "日常生活機能への影響度"
+        },
+        {
+            "name": "Warning: 中等度以上の痛み",
+            "formula": "[[現在痛み]] >= 45",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 重度の痛み",
+            "formula": "[[現在痛み]] >= 75",
+            "type": "emergency"
+        }
+    ]
+}

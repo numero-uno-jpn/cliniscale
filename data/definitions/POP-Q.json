@@ -1,0 +1,177 @@
+{
+  "_comment": [
+    "POP-Q - Pelvic Organ Prolapse Quantification",
+    "骨盤臓器脱の定量評価システム",
+    "開発者: Richard C. Bump (1996)",
+    "原典: Bump RC, et al. Am J Obstet Gynecol. 1996;175(1):10-7.",
+    "参考URL: https://pubmed.ncbi.nlm.nih.gov/8694032/",
+    "公式URL: https://www.physio-pedia.com/Pelvic_Organ_Prolapse_Quantification_(POP-Q)_System",
+    "評価: 9つの測定点による客観的評価",
+    "分類: ステージ0 (正常) からステージIV (重症) まで"
+  ],
+  "title": "POP-Q",
+  "description": [
+    "骨盤臓器脱の定量的評価を行います",
+    "膣鏡を用いて各測定点を計測してください",
+    "単位はセンチメートル (cm) です",
+    "処女膜を基準点 (0) として、脱出はプラス、内側はマイナスで記録します"
+  ],
+  "fields": [
+    {
+      "type": "subsection",
+      "dispname": "前壁測定点"
+    },
+    {
+      "type": "text",
+      "name": "Aa",
+      "dispname": "Aa: 前壁近位部",
+      "description": "前膣壁の中央線上、処女膜縁から3cm近位の点 (範囲: -3 to +3cm)",
+      "postfix": "cm",
+      "inputmode": "decimal",
+      "testrange": [
+        -3,
+        3
+      ],
+      "required": true
+    },
+    {
+      "type": "text",
+      "name": "Ba",
+      "dispname": "Ba: 前壁遠位部",
+      "description": "前膣壁の最突出点 (Aaまたは子宮頸部前縁のいずれか遠位、範囲: -3 to +15cm)",
+      "postfix": "cm",
+      "inputmode": "decimal",
+      "testrange": [
+        -3,
+        15
+      ],
+      "required": true
+    },
+    {
+      "type": "subsection",
+      "dispname": "頂部測定点"
+    },
+    {
+      "type": "text",
+      "name": "C",
+      "dispname": "C: 子宮頸部または膣円蓋",
+      "description": "子宮頸部の最突出部 (子宮全摘後は膣円蓋の最突出点、範囲: -15 to +15cm)",
+      "postfix": "cm",
+      "inputmode": "decimal",
+      "testrange": [
+        -15,
+        15
+      ],
+      "required": true
+    },
+    {
+      "type": "text",
+      "name": "D",
+      "dispname": "D: 後膣円蓋",
+      "description": "後膣円蓋 (子宮全摘後は測定不可、0と記録、範囲: -15 to +15cm)",
+      "postfix": "cm",
+      "inputmode": "decimal",
+      "testrange": [
+        -15,
+        15
+      ],
+      "required": true
+    },
+    {
+      "type": "subsection",
+      "dispname": "後壁測定点"
+    },
+    {
+      "type": "text",
+      "name": "Ap",
+      "dispname": "Ap: 後壁近位部",
+      "description": "後膣壁の中央線上、処女膜縁から3cm近位の点 (範囲: -3 to +3cm)",
+      "postfix": "cm",
+      "inputmode": "decimal",
+      "testrange": [
+        -3,
+        3
+      ],
+      "required": true
+    },
+    {
+      "type": "text",
+      "name": "Bp",
+      "dispname": "Bp: 後壁遠位部",
+      "description": "後膣壁の最突出点 (Apまたは後膣円蓋のいずれか遠位、範囲: -3 to +15cm)",
+      "postfix": "cm",
+      "inputmode": "decimal",
+      "testrange": [
+        -3,
+        15
+      ],
+      "required": true
+    },
+    {
+      "type": "subsection",
+      "dispname": "その他の測定"
+    },
+    {
+      "type": "text",
+      "name": "TVL",
+      "dispname": "TVL: 総膣長",
+      "description": "膣の総長 (子宮頸部または膣円蓋から処女膜縁まで、範囲: 0 to 20cm)",
+      "postfix": "cm",
+      "inputmode": "decimal",
+      "testrange": [
+        5,
+        12
+      ],
+      "required": true
+    },
+    {
+      "type": "text",
+      "name": "GH",
+      "dispname": "GH: 性器裂孔",
+      "description": "尿道外口中央から後膣円蓋後縁までの長さ (範囲: 0 to 10cm)",
+      "postfix": "cm",
+      "inputmode": "decimal",
+      "testrange": [
+        2,
+        6
+      ],
+      "required": true
+    },
+    {
+      "type": "text",
+      "name": "PB",
+      "dispname": "PB: 会陰体",
+      "description": "後膣円蓋後縁から肛門中央までの長さ (範囲: 0 to 10cm)",
+      "postfix": "cm",
+      "inputmode": "decimal",
+      "testrange": [
+        2,
+        5
+      ],
+      "required": true
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "type": "eval",
+      "name": "最大脱出点",
+      "formula": "Math.max( ((Aa)), ((Ba)), ((C)), ((Ap)), ((Bp)) )"
+    },
+    {
+      "type": "eval",
+      "name": "POPQステージ",
+      "formula": "((最大脱出点)) <= -3 ? 'ステージ0' : ( ((最大脱出点)) <= -1 ? 'ステージI' : ( ((最大脱出点)) <= 1 ? 'ステージII' : ( ((最大脱出点)) <= ( ((TVL)) - 2 ) ? 'ステージIII' : 'ステージIV' ) ) )"
+    },
+    {
+      "type": "warning",
+      "name": "Warning: 中程度脱出 ステージII以上",
+      "formula": "((最大脱出点)) > -1"
+    },
+    {
+      "type": "emergency",
+      "name": "Emergency: 高度脱出 ステージIII以上",
+      "formula": "((最大脱出点)) > 1"
+    }
+  ]
+}

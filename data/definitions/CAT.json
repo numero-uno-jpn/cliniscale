@@ -1,0 +1,165 @@
+{
+    "_comment": [
+        "COPD Assessment Test (CAT) - COPD評価テスト",
+        "原典: Jones PW, et al. Development and first validation of the COPD Assessment Test. Eur Respir J. 2009;34(3):648-54.",
+        "日本語版: Tsuda T, et al. Development of the Japanese version of the COPD assessment Test. Respir Investig. 2012;50:34-39.",
+        "公式サイト: https://www.catestonline.org/",
+        "日本呼吸器学会COPDガイドライン2018推奨",
+        "8項目、各0-5点、40点満点で評価"
+    ],
+    "title": "CAT COPD評価テスト",
+    "description": [
+        "COPDが健康と日常生活にどのような影響を与えているかを評価する質問票です。",
+        "下記の各項目について、あなたの現在の状態を最も適切に表している選択肢を1つ選んでください。"
+    ],
+    "contact": "呼吸器内科担当者",
+    "dept_in_charge": "呼吸器内科",
+    "responsible_person": [
+        "呼吸器内科医師"
+    ],
+    "submit_button_title": "評価結果を送信",
+    "fields": [
+        {
+            "dispname": "咳の状態",
+            "name": "咳",
+            "type": "radio",
+            "required": true,
+            "description": "普段の日常生活における咳の頻度や程度について、現在の状態を評価してください。",
+            "selector": [
+                "咳が全くない",
+                "ほとんど咳が出ない",
+                "時々咳が出る",
+                "しばしば咳が出る",
+                "よく咳が出る",
+                "たくさん咳が出る"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "痰の状態",
+            "name": "痰",
+            "type": "radio",
+            "required": true,
+            "description": "胸の中にある痰の量について、現在感じている状態を評価してください。",
+            "selector": [
+                "痰が全くない",
+                "ほとんど痰がない",
+                "少し痰がある",
+                "ある程度痰がある",
+                "かなり痰がある",
+                "痰でいっぱいである"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "胸の圧迫感",
+            "name": "胸圧迫感",
+            "type": "radio",
+            "required": true,
+            "description": "胸の苦しさや圧迫感について、現在感じている程度を評価してください。",
+            "selector": [
+                "全く苦しくない",
+                "ほとんど苦しくない",
+                "少し苦しい",
+                "ある程度苦しい",
+                "かなり苦しい",
+                "とても苦しい"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "息切れの状態",
+            "name": "息切れ",
+            "type": "radio",
+            "required": true,
+            "description": "坂道や階段を上がる時の息切れの程度について評価してください。",
+            "selector": [
+                "坂道や階段を上がる時、息切れしない",
+                "坂道や階段を上がる時、少し息切れする",
+                "坂道や階段を上がる時、息切れする",
+                "坂道や階段を上がる時、かなり息切れする",
+                "坂道や階段を上がる時、とても息切れする",
+                "息切れのため坂道や階段を上がれない"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "家庭での活動制限",
+            "name": "家庭活動",
+            "type": "radio",
+            "required": true,
+            "description": "肺の症状のために家庭での活動（家事、入浴、着替えなど）にどの程度制限があるかを評価してください。",
+            "selector": [
+                "全く制限がない",
+                "ほとんど制限がない",
+                "少し制限がある",
+                "ある程度制限がある",
+                "かなり制限がある",
+                "全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "外出への自信",
+            "name": "外出自信",
+            "type": "radio",
+            "required": true,
+            "description": "肺の病気があることで、家から外出することに対する不安の程度を評価してください。",
+            "selector": [
+                "外出に全く不安がない",
+                "外出にほとんど不安がない",
+                "外出に少し不安がある",
+                "外出にある程度不安がある",
+                "外出にかなり不安がある",
+                "外出するのがとても不安である"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "睡眠の質",
+            "name": "睡眠",
+            "type": "radio",
+            "required": true,
+            "description": "肺の症状（咳、息苦しさなど）のために睡眠がどの程度妨げられているかを評価してください。",
+            "selector": [
+                "睡眠が妨げられることは全くない",
+                "睡眠が妨げられることはほとんどない",
+                "睡眠が時々妨げられる",
+                "睡眠がしばしば妨げられる",
+                "睡眠がよく妨げられる",
+                "睡眠が非常に妨げられる"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "活力・元気さ",
+            "name": "活力",
+            "type": "radio",
+            "required": true,
+            "description": "全体的な活力や元気さのレベルについて、現在の状態を評価してください。",
+            "selector": [
+                "とても元気である",
+                "かなり元気である",
+                "ある程度元気である",
+                "あまり元気ではない",
+                "全く元気ではない",
+                "全く活力がない"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "CAT合計スコア",
+            "type": "eval",
+            "formula": "[[咳.index]] + [[痰.index]] + [[胸圧迫感.index]] + [[息切れ.index]] + [[家庭活動.index]] + [[外出自信.index]] + [[睡眠.index]] + [[活力.index]]",
+            "dispname": "CAT合計得点 (0-40点)"
+        },
+        {
+            "name": "CAT重症度分類",
+            "type": "eval",
+            "formula": "( [[CAT合計スコア]] ) < 10 ? '軽微な影響' : ( ( [[CAT合計スコア]] ) <= 20 ? '中程度の影響' : ( ( [[CAT合計スコア]] ) <= 30 ? '高度な影響' : '非常に高度な影響' ) )"
+        }
+    ]
+}

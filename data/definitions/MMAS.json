@@ -1,0 +1,119 @@
+{
+    "_comment": [
+        "MMAS (Morisky Medication Adherence Scale) - 8項目版",
+        "開発: Morisky DE, 1986年(MMAS-4), 2008年(MMAS-8)",
+        "参考文献: Morisky DE, Green LW, Levine DM. Med Care. 1986;24(1):67-74. PMID: 3945130",
+        "メタ分析: Moon SJ, et al. PLoS One. 2017;12(11):e0187139. PMID: 29095870",
+        "公式サイト: https://www.moriskyscale.com/",
+        "注意: 著作権保護された尺度のため、使用にはMMARLLC(dba Adherence)の許可が必要",
+        "連絡先: dmorisky@gmail.com または https://adherence.cc/mmas-8"
+    ],
+    "title": "MMAS-8 服薬アドヒアランス評価尺度",
+    "description": [
+        "<h3>服薬アドヒアランス評価尺度</h3>",
+        "患者の服薬遵守行動を評価する自己報告型尺度です。",
+        "最初の7項目は「はい・いいえ」で、最後の1項目は5段階で評価します。"
+    ],
+    "fields": [
+        {
+            "dispname": "質問1",
+            "name": "Q1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "description": "薬を飲み忘れることがありますか",
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "質問2",
+            "name": "Q2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "description": "忘れる以外の理由で薬を飲まなかった日がこの2週間でありましたか",
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "質問3",
+            "name": "Q3",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "description": "気分が悪くなったため、医師に相談せずに薬を減らしたり止めたりしたことがありますか",
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "質問4",
+            "name": "Q4",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "description": "旅行や外出の際に薬を持参し忘れることがありますか",
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "質問5",
+            "name": "Q5",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "description": "前回服薬すべきだった時に、薬を飲みましたか",
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "質問6",
+            "name": "Q6",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "description": "調子が良くなったとき、薬を飲むのを止めることがありますか",
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "質問7",
+            "name": "Q7",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "description": "毎日薬を飲み続けることを面倒に感じることがありますか",
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "質問8",
+            "name": "Q8",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "description": "すべての薬を飲むことを覚えておくのはどのくらい困難ですか",
+            "selector": "全く困難でない|めったに困難でない|ときどき困難|たいてい困難|いつも困難",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "MMAS合計スコア",
+            "type": "eval",
+            "dispname": "MMAS-8総合得点(0-8点)",
+            "formula": "[[Q1.index]] + [[Q2.index]] + [[Q3.index]] + [[Q4.index]] + [[Q5.index]] + [[Q6.index]] + [[Q7.index]] + ([[Q8.index]] / 4)"
+        },
+        {
+            "name": "アドヒアランス判定",
+            "type": "eval",
+            "dispname": "服薬アドヒアランスレベル",
+            "formula": "[[MMAS合計スコア]] == 8 ? '高アドヒアランス' : ( [[MMAS合計スコア]] >= 6 ? '中アドヒアランス' : '低アドヒアランス' )"
+        },
+        {
+            "name": "Warning: 低アドヒアランス",
+            "formula": "[[MMAS合計スコア]] < 6",
+            "type": "warning"
+        }
+    ]
+}

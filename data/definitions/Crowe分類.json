@@ -1,0 +1,134 @@
+{
+  "_comment": [
+    "Crowe分類問診票",
+    "発育性股関節形成不全の分類評価",
+    "原典: Crowe JF, Mani VJ, Ranawat CS. Total hip replacement in congenital dislocation and dysplasia of the hip. J Bone Joint Surg Am. 1979;61(1):15-23",
+    "参考URL: https://www.wheelessonline.com/joints/hip/crowe-classification/"
+  ],
+  "title": "Crowe 発育性股関節形成不全の分類評価",
+  "description": [
+    "発育性股関節形成不全による股関節脱臼の程度を評価します",
+    "両側股関節正面X線像により、大腿骨頭の上方偏位の程度を4段階に分類します"
+  ],
+  "translate": "major",
+  "fields": [
+    {
+      "dispname": "基本情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "検査日",
+      "name": "検査日",
+      "type": "date",
+      "format": "YYYY/MM/DD",
+      "required": true
+    },
+    {
+      "dispname": "対象側",
+      "name": "対象側",
+      "type": "radio",
+      "inline": true,
+      "selector": "右|左|両側",
+      "required": true
+    },
+    {
+      "dispname": "X線画像計測値",
+      "type": "subsection",
+      "description": "すべて小数第1位まで入力してください"
+    },
+    {
+      "dispname": "両側涙痕線から大腿骨頭頸部移行部までの距離（A）",
+      "name": "距離A",
+      "type": "text",
+      "inputmode": "decimal",
+      "postfix": "mm",
+      "testrange": [
+        25,
+        35
+      ],
+      "required": true,
+      "description": "両側の涙痕を結んだ基準線から大腿骨頭頸部移行部の下縁までの垂直距離（例: 30.5）"
+    },
+    {
+      "dispname": "骨盤高（B）",
+      "name": "骨盤高B",
+      "type": "text",
+      "inputmode": "decimal",
+      "postfix": "mm",
+      "testrange": [
+        125,
+        185
+      ],
+      "required": true,
+      "description": "腸骨上縁から坐骨下縁までの垂直距離（例: 150.0）"
+    },
+    {
+      "dispname": "大腿骨頭直径",
+      "name": "骨頭直径",
+      "type": "text",
+      "inputmode": "decimal",
+      "postfix": "mm",
+      "testrange": [
+        36,
+        65
+      ],
+      "required": true,
+      "description": "大腿骨頭の最大直径（例: 45.5）"
+    },
+    {
+      "dispname": "補助情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "寛骨臼の形態",
+      "name": "寛骨臼形態",
+      "type": "radio",
+      "selector": "正常|浅い|深い|偽寛骨臼形成あり"
+    },
+    {
+      "dispname": "真の寛骨臼の認識可能性",
+      "name": "真寛骨臼認識",
+      "type": "radio",
+      "selector": "明瞭|不明瞭|認識困難"
+    },
+    {
+      "dispname": "骨頭の変形",
+      "name": "骨頭変形",
+      "type": "radio",
+      "selector": "なし|軽度|中等度|高度"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "脱臼率",
+      "type": "eval",
+      "formula": "( ( ((距離A)) / ((骨盤高B)) ) * 100).toFixed(1)",
+      "dispname": "A/B×100による脱臼率の計算"
+    },
+    {
+      "name": "骨頭直径比",
+      "type": "eval",
+      "formula": "( ( ((骨頭直径)) / ((骨盤高B)) ) * 100).toFixed(1)",
+      "dispname": "骨頭直径と骨盤高の比率（正常値約20%）"
+    },
+    {
+      "name": "上方偏位度",
+      "type": "eval",
+      "formula": "( ( ((距離A)) / ((骨頭直径)) ) * 100).toFixed(1)",
+      "dispname": "大腿骨頭直径に対する上方偏位の割合"
+    },
+    {
+      "name": "Crowe分類判定",
+      "type": "eval",
+      "formula": "((上方偏位度)) < 50 ? 'Group I（50%未満）' : ((上方偏位度)) < 75 ? 'Group II（50-75%）' : ((上方偏位度)) < 100 ? 'Group III（75-100%）' : 'Group IV（100%以上）'",
+      "dispname": "上方偏位度に基づくCrowe分類判定結果"
+    },
+    {
+      "name": "重症度評価",
+      "type": "eval",
+      "formula": "{{Crowe分類判定}} == 'Group I（50%未満）' ? '軽度' : {{Crowe分類判定}} == 'Group II（50-75%）' ? '中等度' : {{Crowe分類判定}} == 'Group III（75-100%）' ? '重度' : '最重度'",
+      "dispname": "分類に基づく重症度の評価"
+    }
+  ]
+}

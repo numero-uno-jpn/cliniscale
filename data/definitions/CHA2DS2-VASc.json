@@ -1,0 +1,170 @@
+{
+    "_comment": [
+        "CHA₂DS₂-VAScスコア問診票",
+        "参考文献: Camm AJ, et al. Guidelines for the management of atrial fibrillation: The Task Force for the Management of Atrial Fibrillation of the European Society of Cardiology (ESC). Eur Heart J. 2010;31(19):2369-429.",
+        "オリジナル: Lip GY, et al. Refining clinical risk stratification for predicting stroke and thromboembolism in atrial fibrillation using a novel risk factor-based approach: the euro heart survey on atrial fibrillation. Chest. 2010;137(2):263-272."
+    ],
+    "title": "CHA₂DS₂-VASc 非弁膜症性心房細動患者の血栓塞栓症リスクスコア",
+    "description": [
+        "<h3>心房細動患者の脳卒中リスク評価</h3>",
+        "非弁膜症性心房細動患者の血栓塞栓症リスクを評価し、抗凝固療法の適応を検討します。",
+        "各項目について該当するものをお選びください。"
+    ],
+    "contact": "循環器内科",
+    "dept_in_charge": "内科",
+    "submit_button_title": "評価を完了",
+    "fields": [
+        {
+            "dispname": "患者情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "年齢",
+            "name": "年齢",
+            "type": "text",
+            "postfix": "歳",
+            "inputmode": "numeric",
+            "testrange": [
+                18,
+                100
+            ],
+            "required": true
+        },
+        {
+            "dispname": "性別",
+            "name": "性別",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "男性|女性"
+        },
+        {
+            "dispname": "既往歴・合併症",
+            "type": "subsection"
+        },
+        {
+            "dispname": "うっ血性心不全",
+            "name": "心不全",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "なし|あり",
+            "description": "心不全の既往または現在の症状があるか"
+        },
+        {
+            "dispname": "高血圧",
+            "name": "高血圧",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "なし|あり",
+            "description": "高血圧の既往または現在治療中か"
+        },
+        {
+            "dispname": "糖尿病",
+            "name": "糖尿病",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "なし|あり",
+            "description": "糖尿病の既往または現在治療中か"
+        },
+        {
+            "dispname": "脳卒中・一過性脳虚血発作",
+            "name": "脳卒中TIA",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "なし|あり",
+            "description": "脳卒中または一過性脳虚血発作の既往があるか"
+        },
+        {
+            "dispname": "血管疾患",
+            "name": "血管疾患",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "なし|あり",
+            "description": "心筋梗塞の既往、末梢動脈疾患、大動脈プラークなどの血管疾患があるか"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "年齢65-74歳スコア",
+            "type": "eval",
+            "formula": "((年齢)) >= 65 && ((年齢)) <= 74 ? 1 : 0",
+            "noreport": true
+        },
+        {
+            "name": "年齢75歳以上スコア",
+            "type": "eval",
+            "formula": "((年齢)) >= 75 ? 2 : 0",
+            "noreport": true
+        },
+        {
+            "name": "性別スコア",
+            "type": "eval",
+            "formula": "{{性別}} == '女性' ? 1 : 0",
+            "noreport": true
+        },
+        {
+            "name": "心不全スコア",
+            "type": "eval",
+            "formula": "{{心不全}} == 'あり' ? 1 : 0",
+            "noreport": true
+        },
+        {
+            "name": "高血圧スコア",
+            "type": "eval",
+            "formula": "{{高血圧}} == 'あり' ? 1 : 0",
+            "noreport": true
+        },
+        {
+            "name": "糖尿病スコア",
+            "type": "eval",
+            "formula": "{{糖尿病}} == 'あり' ? 1 : 0",
+            "noreport": true
+        },
+        {
+            "name": "脳卒中TIAスコア",
+            "type": "eval",
+            "formula": "{{脳卒中TIA}} == 'あり' ? 2 : 0",
+            "noreport": true
+        },
+        {
+            "name": "血管疾患スコア",
+            "type": "eval",
+            "formula": "{{血管疾患}} == 'あり' ? 1 : 0",
+            "noreport": true
+        },
+        {
+            "name": "CHA2DS2-VAScスコア",
+            "type": "eval",
+            "formula": "[[心不全スコア]] + [[高血圧スコア]] + [[年齢65-74歳スコア]] + [[年齢75歳以上スコア]] + [[糖尿病スコア]] + [[脳卒中TIAスコア]] + [[血管疾患スコア]] + [[性別スコア]]",
+            "dispname": "CHA₂DS₂-VAScスコア合計点数"
+        },
+        {
+            "name": "リスク評価",
+            "type": "eval",
+            "formula": "[[CHA2DS2-VAScスコア]] == 0 ? '低リスク' : ( [[CHA2DS2-VAScスコア]] == 1 ? '中等度リスク' : '高リスク' )",
+            "dispname": "脳卒中リスク評価"
+        },
+        {
+            "name": "抗凝固療法適応",
+            "type": "eval",
+            "formula": "[[CHA2DS2-VAScスコア]] >= 2 ? '推奨' : ( [[CHA2DS2-VAScスコア]] == 1 ? '考慮' : '一般的に不要' )",
+            "dispname": "抗凝固療法の適応"
+        },
+        {
+            "name": "Warning: CHA₂DS₂-VAScスコア3点以上",
+            "type": "warning",
+            "formula": "[[CHA2DS2-VAScスコア]] >= 3"
+        },
+        {
+            "name": "Emergency: CHA₂DS₂-VAScスコア5点以上",
+            "type": "emergency",
+            "formula": "[[CHA2DS2-VAScスコア]] >= 5"
+        }
+    ]
+}

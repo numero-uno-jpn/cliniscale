@@ -1,0 +1,159 @@
+{
+    "_comment": [
+        "糖尿病網膜症国際重症度分類問診票",
+        "Wilkinson CP, et al. Proposed international clinical diabetic retinopathy and diabetic macular edema disease severity scales. Ophthalmology 2003;110:1677-1682",
+        "日本糖尿病眼学会診療ガイドライン委員会. 糖尿病網膜症診療ガイドライン(第1版). 日眼会誌 2020;124(12):955-1014",
+        "眼科医と内科医の連携促進を目的として作成された国際標準の重症度分類",
+        "新生血管への進展リスクに基づいた5段階評価"
+    ],
+    "title": "糖尿病網膜症国際重症度分類",
+    "description": [
+        "<h3>糖尿病網膜症重症度評価問診票</h3>",
+        "糖尿病網膜症の進行度を国際重症度分類に基づいて評価します。",
+        "眼底所見をもとに増殖糖尿病網膜症への進展確率を評価し、適切な治療方針を決定するための分類です。"
+    ],
+    "contact": "眼科主治医",
+    "dept_in_charge": "眼科",
+    "responsible_person": [
+        "眼科医師"
+    ],
+    "submit_button_title": "評価結果を送信",
+    "fields": [
+        {
+            "dispname": "基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "評価眼",
+            "name": "評価眼",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "右眼|左眼|両眼"
+        },
+        {
+            "dispname": "糖尿病網膜症重症度分類",
+            "type": "subsection"
+        },
+        {
+            "dispname": "眼底異常所見の有無",
+            "name": "眼底異常",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "異常所見なし|異常所見あり"
+        },
+        {
+            "dispname": "毛細血管瘤の有無",
+            "name": "毛細血管瘤",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "parentname": "眼底異常",
+            "parentsel": "異常所見あり",
+            "selector": "なし|毛細血管瘤のみ|毛細血管瘤以外の所見あり"
+        },
+        {
+            "dispname": "重症非増殖網膜症の基準",
+            "name": "重症基準",
+            "type": "checkbox",
+            "parentname": "毛細血管瘤",
+            "parentsel": "毛細血管瘤以外の所見あり",
+            "selector": [
+                "眼底4象限で20個以上の網膜内出血",
+                "2象限以上での明瞭な静脈数珠状拡張",
+                "明確な網膜内細小血管異常(IRMA)を1象限以上"
+            ],
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "新生血管または線維血管膜の有無",
+            "name": "新生血管",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "parentname": "眼底異常",
+            "parentsel": "異常所見あり",
+            "selector": "なし|あり"
+        },
+        {
+            "dispname": "硝子体出血・網膜前出血の有無",
+            "name": "硝子体出血",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "parentname": "眼底異常",
+            "parentsel": "異常所見あり",
+            "selector": "なし|あり"
+        },
+        {
+            "dispname": "糖尿病黄斑浮腫の評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "黄斑部の網膜肥厚または硬性白斑",
+            "name": "黄斑浮腫",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "なし|あり"
+        },
+        {
+            "dispname": "黄斑浮腫の重症度",
+            "name": "黄斑浮腫重症度",
+            "type": "radio",
+            "required": true,
+            "parentname": "黄斑浮腫",
+            "parentsel": "あり",
+            "selector": [
+                "軽症 - 黄斑部中心から離れている",
+                "中等症 - 黄斑部中心に近いが含んでいない",
+                "重症 - 黄斑部中心を含む"
+            ],
+            "selectoridx": "1|2|3"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "重症基準_length",
+            "type": "eval",
+            "noreport": true,
+            "formula": "{{毛細血管瘤}} == '毛細血管瘤以外の所見あり'? ([[重症基準.index]] || []).length: 0"
+        },
+        {
+            "name": "網膜症重症度",
+            "type": "eval",
+            "formula": "{{眼底異常}} == '異常所見なし' ? '網膜症なし' : ( {{毛細血管瘤}} == '毛細血管瘤のみ' ? '軽症非増殖糖尿病網膜症' : ( {{新生血管}} == 'あり' || {{硝子体出血}} == 'あり' ? '増殖糖尿病網膜症' : ( [[重症基準_length]] >= 1 ? '重症非増殖糖尿病網膜症' : '中等症非増殖糖尿病網膜症' ) ) )",
+            "dispname": "眼底所見に基づく糖尿病網膜症の重症度分類結果"
+        },
+        {
+            "name": "黄斑浮腫診断",
+            "type": "eval",
+            "formula": "{{黄斑浮腫}} == 'なし' ? '糖尿病黄斑浮腫なし' : ( {{黄斑浮腫重症度}} == '軽症 - 黄斑部中心から離れている' ? '軽症糖尿病黄斑浮腫' : ( {{黄斑浮腫重症度}} == '中等症 - 黄斑部中心に近いが含んでいない' ? '中等症糖尿病黄斑浮腫' : '重症糖尿病黄斑浮腫' ) )",
+            "dispname": "糖尿病黄斑浮腫の重症度分類結果"
+        },
+        {
+            "name": "増殖リスク",
+            "type": "eval",
+            "formula": "{{網膜症重症度}} == '網膜症なし' ? '増殖網膜症リスク：なし' : ( {{網膜症重症度}} == '軽症非増殖糖尿病網膜症' ? '増殖網膜症リスク：低' : ( {{網膜症重症度}} == '中等症非増殖糖尿病網膜症' ? '増殖網膜症リスク：中等度' : ( {{網膜症重症度}} == '重症非増殖糖尿病網膜症' ? '増殖網膜症リスク：高' : '増殖網膜症：発症' ) ) )",
+            "dispname": "増殖糖尿病網膜症への進展リスク"
+        },
+        {
+            "name": "推奨受診間隔",
+            "type": "eval",
+            "formula": "{{網膜症重症度}} == '網膜症なし' ? '1年に1回' : ( {{網膜症重症度}} == '軽症非増殖糖尿病網膜症' || {{網膜症重症度}} == '中等症非増殖糖尿病網膜症' ? '6ヶ月に1回' : ( {{網膜症重症度}} == '重症非増殖糖尿病網膜症' ? '2ヶ月に1回' : '1ヶ月に1回' ) )",
+            "dispname": "推奨される眼科受診間隔"
+        },
+        {
+            "name": "Warning: 重症非増殖糖尿病網膜症",
+            "formula": "{{網膜症重症度}} == '重症非増殖糖尿病網膜症'",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 増殖糖尿病網膜症または重症黄斑浮腫",
+            "formula": "{{網膜症重症度}} == '増殖糖尿病網膜症' || {{黄斑浮腫重症度}} == '重症 - 黄斑部中心を含む'",
+            "type": "emergency"
+        }
+    ]
+}

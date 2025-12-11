@@ -1,0 +1,656 @@
+{
+    "_comment": [
+        "DASH (Disabilities of the Arm, Shoulder and Hand) - 上肢機能評価質問票",
+        "原典: Hudak PL, Amadio PC, Bombardier C. Development of an upper extremity outcome measure: The DASH (disabilities of the arm, shoulder and hand). Am J Ind Med. 1996;29(6):602-8.",
+        "日本語版: 日本手外科学会 DASH-JSSH バージョン",
+        "公式URL: https://dash.iwh.on.ca/",
+        "日本手外科学会URL: https://www.jssh.or.jp/doctor/jp/infomation/dash.html"
+    ],
+    "title": "DASH 上肢機能評価質問票",
+    "description": [
+        "上肢（腕・肩・手）の障害が日常生活に与える影響を評価します",
+        "先週1週間の状態についてお答えください"
+    ],
+    "translate": "major",
+    "fields": [
+        {
+            "dispname": "日常生活動作",
+            "type": "subsection"
+        },
+        {
+            "dispname": "1. きつめのまたは新しいビンのフタを開ける",
+            "name": "Q1",
+            "type": "radio",
+            "inline": true,
+            "selector": [
+                "全く困難なし",
+                "やや困難",
+                "中等度困難",
+                "かなり困難",
+                "できなかった"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "2. 書く",
+            "name": "Q2",
+            "type": "radio",
+            "inline": true,
+            "selector": [
+                "全く困難なし",
+                "やや困難",
+                "中等度困難",
+                "かなり困難",
+                "できなかった"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "3. カギを回す",
+            "name": "Q3",
+            "type": "radio",
+            "inline": true,
+            "selector": [
+                "全く困難なし",
+                "やや困難",
+                "中等度困難",
+                "かなり困難",
+                "できなかった"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "4. 食事の支度をする",
+            "name": "Q4",
+            "type": "radio",
+            "inline": true,
+            "selector": [
+                "全く困難なし",
+                "やや困難",
+                "中等度困難",
+                "かなり困難",
+                "できなかった"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "5. 重いドアを開ける",
+            "name": "Q5",
+            "type": "radio",
+            "inline": true,
+            "selector": [
+                "全く困難なし",
+                "やや困難",
+                "中等度困難",
+                "かなり困難",
+                "できなかった"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "6. 頭上の棚に物を置く",
+            "name": "Q6",
+            "type": "radio",
+            "inline": true,
+            "selector": [
+                "全く困難なし",
+                "やや困難",
+                "中等度困難",
+                "かなり困難",
+                "できなかった"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "7. 重労働の家事をする（壁ふきや床掃除など）",
+            "name": "Q7",
+            "type": "radio",
+            "inline": true,
+            "selector": [
+                "全く困難なし",
+                "やや困難",
+                "中等度困難",
+                "かなり困難",
+                "できなかった"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "8. 庭仕事をする",
+            "name": "Q8",
+            "type": "radio",
+            "inline": true,
+            "selector": [
+                "全く困難なし",
+                "やや困難",
+                "中等度困難",
+                "かなり困難",
+                "できなかった"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "9. ベッドメーキングまたは布団を敷く",
+            "name": "Q9",
+            "type": "radio",
+            "inline": true,
+            "selector": [
+                "全く困難なし",
+                "やや困難",
+                "中等度困難",
+                "かなり困難",
+                "できなかった"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "10. 買い物バックや書類かばんを持ち運ぶ",
+            "name": "Q10",
+            "type": "radio",
+            "inline": true,
+            "selector": [
+                "全く困難なし",
+                "やや困難",
+                "中等度困難",
+                "かなり困難",
+                "できなかった"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "11. 重い物を運ぶ（5kg以上）",
+            "name": "Q11",
+            "type": "radio",
+            "inline": true,
+            "selector": [
+                "全く困難なし",
+                "やや困難",
+                "中等度困難",
+                "かなり困難",
+                "できなかった"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "12. 頭上の電球を交換する",
+            "name": "Q12",
+            "type": "radio",
+            "inline": true,
+            "selector": [
+                "全く困難なし",
+                "やや困難",
+                "中等度困難",
+                "かなり困難",
+                "できなかった"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "13. 洗髪やヘアードライヤーを使用する",
+            "name": "Q13",
+            "type": "radio",
+            "inline": true,
+            "selector": [
+                "全く困難なし",
+                "やや困難",
+                "中等度困難",
+                "かなり困難",
+                "できなかった"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "14. 背中を洗う",
+            "name": "Q14",
+            "type": "radio",
+            "inline": true,
+            "selector": [
+                "全く困難なし",
+                "やや困難",
+                "中等度困難",
+                "かなり困難",
+                "できなかった"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "15. 頭からかぶるセーターを着る",
+            "name": "Q15",
+            "type": "radio",
+            "inline": true,
+            "selector": [
+                "全く困難なし",
+                "やや困難",
+                "中等度困難",
+                "かなり困難",
+                "できなかった"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "16. 食事でナイフを使う",
+            "name": "Q16",
+            "type": "radio",
+            "inline": true,
+            "selector": [
+                "全く困難なし",
+                "やや困難",
+                "中等度困難",
+                "かなり困難",
+                "できなかった"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "17. 軽いレクリエーションをする（例：トランプ、編み物、碁、将棋など）",
+            "name": "Q17",
+            "type": "radio",
+            "inline": true,
+            "selector": [
+                "全く困難なし",
+                "やや困難",
+                "中等度困難",
+                "かなり困難",
+                "できなかった"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "18. 肩、腕や手に筋力を必要とするか、それらに衝撃のかかるレクリエーション活動をする（ゴルフ・テニス・キャッチボールをする、ハンマーを使うなど）",
+            "name": "Q18",
+            "type": "radio",
+            "inline": true,
+            "selector": [
+                "全く困難なし",
+                "やや困難",
+                "中等度困難",
+                "かなり困難",
+                "できなかった"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "19. 腕を自由に動かすレクリエーション活動をする（フリスビー、バドミントンなど）",
+            "name": "Q19",
+            "type": "radio",
+            "inline": true,
+            "selector": [
+                "全く困難なし",
+                "やや困難",
+                "中等度困難",
+                "かなり困難",
+                "できなかった"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "20. 交通機関の利用が自由にできる（移動の際に）",
+            "name": "Q20",
+            "type": "radio",
+            "inline": true,
+            "selector": [
+                "全く困難なし",
+                "やや困難",
+                "中等度困難",
+                "かなり困難",
+                "できなかった"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "21. 性生活をする",
+            "name": "Q21",
+            "type": "radio",
+            "inline": true,
+            "selector": [
+                "全く困難なし",
+                "やや困難",
+                "中等度困難",
+                "かなり困難",
+                "できなかった"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "社会生活・仕事への影響",
+            "type": "subsection"
+        },
+        {
+            "dispname": "22. 腕・肩・手の障害が、家族、友人、隣人、あるいは仲間との正常な社会生活をどの程度妨げましたか",
+            "name": "Q22",
+            "type": "radio",
+            "inline": true,
+            "selector": [
+                "まったくなかった",
+                "ややあった",
+                "中等度あった",
+                "かなりあった",
+                "極度にあった"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "23. 腕・肩・手の障害によって先週の仕事・日常生活に制限がありましたか",
+            "name": "Q23",
+            "type": "radio",
+            "inline": true,
+            "selector": [
+                "制限なし",
+                "やや制限",
+                "中等度制限",
+                "かなり制限",
+                "極度に制限"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "症状について",
+            "type": "subsection"
+        },
+        {
+            "dispname": "24. 腕・肩・手に痛みがある",
+            "name": "Q24",
+            "type": "radio",
+            "inline": true,
+            "selector": [
+                "まったくなかった",
+                "ややあった",
+                "中等度あった",
+                "かなりあった",
+                "何もできないほど"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "25. 特定の運動をしたときに腕・肩・手に痛みがある",
+            "name": "Q25",
+            "type": "radio",
+            "inline": true,
+            "selector": [
+                "まったくなかった",
+                "ややあった",
+                "中等度あった",
+                "かなりあった",
+                "何もできないほど"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "26. 腕・肩・手がチクチク痛む（ピンや針を刺したような痛み）",
+            "name": "Q26",
+            "type": "radio",
+            "inline": true,
+            "selector": [
+                "まったくなかった",
+                "ややあった",
+                "中等度あった",
+                "かなりあった",
+                "何もできないほど"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "27. 腕・肩・手に力がはいらない",
+            "name": "Q27",
+            "type": "radio",
+            "inline": true,
+            "selector": [
+                "まったくなかった",
+                "ややあった",
+                "中等度あった",
+                "かなりあった",
+                "何もできないほど"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "28. 腕・肩・手にこわばり感がある",
+            "name": "Q28",
+            "type": "radio",
+            "inline": true,
+            "selector": [
+                "まったくなかった",
+                "ややあった",
+                "中等度あった",
+                "かなりあった",
+                "何もできないほど"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "29. 腕・肩・手の痛みによって眠れないときがありましたか",
+            "name": "Q29",
+            "type": "radio",
+            "inline": true,
+            "selector": [
+                "まったくなかった",
+                "ややあった",
+                "中等度あった",
+                "かなりあった",
+                "眠れないほど"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "30. 腕・肩・手の障害のために、自分の能力に自信がないとか、使いづらいと思っていますか",
+            "name": "Q30",
+            "type": "radio",
+            "inline": true,
+            "selector": [
+                "まったく思わない",
+                "あまり思わない",
+                "何とも言えない",
+                "そう思う",
+                "非常に思う"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "I1",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q1.index]]"
+        },
+        {
+            "name": "I2",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q2.index]]"
+        },
+        {
+            "name": "I3",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q3.index]]"
+        },
+        {
+            "name": "I4",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q4.index]]"
+        },
+        {
+            "name": "I5",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q5.index]]"
+        },
+        {
+            "name": "I6",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q6.index]]"
+        },
+        {
+            "name": "I7",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q7.index]]"
+        },
+        {
+            "name": "I8",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q8.index]]"
+        },
+        {
+            "name": "I9",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q9.index]]"
+        },
+        {
+            "name": "I10",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q10.index]]"
+        },
+        {
+            "name": "I11",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q11.index]]"
+        },
+        {
+            "name": "I12",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q12.index]]"
+        },
+        {
+            "name": "I13",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q13.index]]"
+        },
+        {
+            "name": "I14",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q14.index]]"
+        },
+        {
+            "name": "I15",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q15.index]]"
+        },
+        {
+            "name": "I16",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q16.index]]"
+        },
+        {
+            "name": "I17",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q17.index]]"
+        },
+        {
+            "name": "I18",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q18.index]]"
+        },
+        {
+            "name": "I19",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q19.index]]"
+        },
+        {
+            "name": "I20",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q20.index]]"
+        },
+        {
+            "name": "I21",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q21.index]]"
+        },
+        {
+            "name": "I22",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q22.index]]"
+        },
+        {
+            "name": "I23",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q23.index]]"
+        },
+        {
+            "name": "I24",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q24.index]]"
+        },
+        {
+            "name": "I25",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q25.index]]"
+        },
+        {
+            "name": "I26",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q26.index]]"
+        },
+        {
+            "name": "I27",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q27.index]]"
+        },
+        {
+            "name": "I28",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q28.index]]"
+        },
+        {
+            "name": "I29",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q29.index]]"
+        },
+        {
+            "name": "I30",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q30.index]]"
+        },
+        {
+            "name": "合計点数",
+            "type": "eval",
+            "dispname": "各項目のスコアの合計",
+            "formula": "[[I1]] + [[I2]] + [[I3]] + [[I4]] + [[I5]] + [[I6]] + [[I7]] + [[I8]] + [[I9]] + [[I10]] + [[I11]] + [[I12]] + [[I13]] + [[I14]] + [[I15]] + [[I16]] + [[I17]] + [[I18]] + [[I19]] + [[I20]] + [[I21]] + [[I22]] + [[I23]] + [[I24]] + [[I25]] + [[I26]] + [[I27]] + [[I28]] + [[I29]] + [[I30]]"
+        },
+        {
+            "name": "回答項目数",
+            "type": "eval",
+            "dispname": "回答された項目数",
+            "formula": "( [[I1]] ? 1 : 0 ) + ( [[I2]] ? 1 : 0 ) + ( [[I3]] ? 1 : 0 ) + ( [[I4]] ? 1 : 0 ) + ( [[I5]] ? 1 : 0 ) + ( [[I6]] ? 1 : 0 ) + ( [[I7]] ? 1 : 0 ) + ( [[I8]] ? 1 : 0 ) + ( [[I9]] ? 1 : 0 ) + ( [[I10]] ? 1 : 0 ) + ( [[I11]] ? 1 : 0 ) + ( [[I12]] ? 1 : 0 ) + ( [[I13]] ? 1 : 0 ) + ( [[I14]] ? 1 : 0 ) + ( [[I15]] ? 1 : 0 ) + ( [[I16]] ? 1 : 0 ) + ( [[I17]] ? 1 : 0 ) + ( [[I18]] ? 1 : 0 ) + ( [[I19]] ? 1 : 0 ) + ( [[I20]] ? 1 : 0 ) + ( [[I21]] ? 1 : 0 ) + ( [[I22]] ? 1 : 0 ) + ( [[I23]] ? 1 : 0 ) + ( [[I24]] ? 1 : 0 ) + ( [[I25]] ? 1 : 0 ) + ( [[I26]] ? 1 : 0 ) + ( [[I27]] ? 1 : 0 ) + ( [[I28]] ? 1 : 0 ) + ( [[I29]] ? 1 : 0 ) + ( [[I30]] ? 1 : 0 )"
+        },
+        {
+            "name": "DASHスコア",
+            "type": "eval",
+            "dispname": "DASH機能障害・症状スコア (0-100点、高いほど障害が大きい)",
+            "formula": "[[回答項目数]] >= 27 ? ( ( ([[合計点数]] / [[回答項目数]]) - 1 ) * 25).toFixed(1) : 'N/A'"
+        },
+        {
+            "name": "スコア評価",
+            "type": "eval",
+            "dispname": "DASHスコアの解釈",
+            "formula": "[[DASHスコア]] == 'N/A' ? '計算不可（回答不足）' : ( [[DASHスコア]] <= 30 ? '軽度の障害' : ( [[DASHスコア]] <= 60 ? '中等度の障害' : '重度の障害' ) )"
+        }
+    ]
+}

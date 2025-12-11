@@ -1,0 +1,67 @@
+{
+  "_comment": [
+    "Gleason Score",
+    "前立腺癌の組織学的グレード評価",
+    "原著論文: Gleason DF. Cancer Chemother Rep. 1966;50(3):125-8.",
+    "ISUP 2014改訂: Epstein JI, et al. Am J Surg Pathol. 2016;40:244.",
+    "参考URL: https://www.ncbi.nlm.nih.gov/books/NBK553178/",
+    "PubMed: https://pubmed.ncbi.nlm.nih.gov/5919684/",
+    "注意: パターン1-2は現在使用せず、最低はパターン3"
+  ],
+  "title": "Gleasonスコア",
+  "description": [
+    "前立腺癌の組織学的悪性度を評価するスコアリングシステムです",
+    "最も多いパターンと2番目に多いパターンの合計で2-10点のスコアを算出します",
+    "ISUPグレード分類（2014年改訂）も併せて表示します"
+  ],
+  "contact": "泌尿器科、病理診断科",
+  "dept_in_charge": "病理診断科",
+  "fields": [
+    {
+      "dispname": "主要パターン",
+      "name": "主要パターン",
+      "type": "radio",
+      "required": true,
+      "description": "最も多く見られる組織パターン（パターン3-5を使用）",
+      "selector": [
+        "パターン3: 腺管の大きさ・形状が不規則",
+        "パターン4: 融合した腺管または篩状構造",
+        "パターン5: 腺管形成なし、充実性増殖または壊死"
+      ],
+      "selectoridx": "3|4|5"
+    },
+    {
+      "dispname": "副次パターン",
+      "name": "副次パターン",
+      "type": "radio",
+      "required": true,
+      "description": "2番目に多く見られる組織パターン（パターン3-5を使用）",
+      "selector": [
+        "パターン3: 腺管の大きさ・形状が不規則",
+        "パターン4: 融合した腺管または篩状構造",
+        "パターン5: 腺管形成なし、充実性増殖または壊死"
+      ],
+      "selectoridx": "3|4|5"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "Gleasonスコア",
+      "type": "eval",
+      "formula": "[[主要パターン.index]] + [[副次パターン.index]]"
+    },
+    {
+      "name": "グレード分類",
+      "type": "eval",
+      "description": "悪性度の一般的分類",
+      "formula": "[[Gleasonスコア]] <= 6 ? '低グレード' : ( [[Gleasonスコア]] == 7 ? '中グレード' : '高グレード' )"
+    },
+    {
+      "name": "ISUPグレード",
+      "type": "eval",
+      "description": "ISUP（国際泌尿器病理学会）グレード分類（2014年改訂）",
+      "formula": "[[Gleasonスコア]] <= 6 ? 'グレード1' : ( [[Gleasonスコア]] == 7 ? ( [[主要パターン.index]] == 3 ? 'グレード2' : 'グレード3' ) : ( [[Gleasonスコア]] == 8 ? 'グレード4' : 'グレード5' ) )"
+    }
+  ]
+}

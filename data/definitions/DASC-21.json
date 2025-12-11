@@ -1,0 +1,440 @@
+{
+    "_comment": [
+        "DASC-21 地域包括ケアシステムにおける認知症アセスメントシート",
+        "開発者: 粟田主一 (東京都健康長寿医療センター研究所)",
+        "原典: https://dasc.jp/",
+        "マニュアル: https://dasc.jp/wp-content/uploads/2018/05/Dementia-Assessment-Sheet-for-the-Community-based-Integrated-Care-System_21itemsDASC-21-Manual.pdf",
+        "目的: 認知機能と生活機能の総合評価により認知症をスクリーニング",
+        "採点方法: 各項目1-4点、合計31点以上で認知症の可能性あり",
+        "修正事項: 論理演算子修正、セクション変更、計算式効率化"
+    ],
+    "title": "DASC-21 地域包括ケアシステムにおける認知症アセスメントシート",
+    "description": [
+        "DASC-21は認知機能と生活機能を総合的に評価する21項目のアセスメントシートです。",
+        "地域での認知症の早期発見と適切な支援調整を目的としています。",
+        "合計点31点以上で認知症の可能性があると判定されます。"
+    ],
+    "responsible_person": [
+        "脳神経内科医師"
+    ],
+    "dept_in_charge": "脳神経内科",
+    "fields": [
+        {
+            "name": "対象者情報",
+            "type": "subsection",
+            "dispname": "対象者基本情報"
+        },
+        {
+            "name": "生年月日",
+            "type": "date",
+            "dispname": "生年月日",
+            "format": "YYYY/MM/DD",
+            "required": true
+        },
+        {
+            "name": "性別",
+            "type": "radio",
+            "dispname": "性別",
+            "selector": [
+                "男性",
+                "女性"
+            ],
+            "required": true
+        },
+        {
+            "name": "居住状況",
+            "type": "radio",
+            "dispname": "居住状況",
+            "selector": [
+                "独居",
+                "同居"
+            ],
+            "required": true
+        },
+        {
+            "name": "回答者氏名",
+            "type": "text",
+            "dispname": "回答者氏名（対象者と異なる場合）",
+            "description": "対象者本人以外が回答する場合にご記入ください"
+        },
+        {
+            "name": "回答者続柄",
+            "type": "text",
+            "dispname": "対象者との関係",
+            "parentname": "回答者氏名",
+            "parentsel": "*"
+        },
+        {
+            "name": "導入質問",
+            "type": "subsection",
+            "dispname": "導入質問（採点対象外）"
+        },
+        {
+            "name": "導入A",
+            "type": "radio",
+            "dispname": "A. 対象者が物忘れをよくするという印象はありますか",
+            "selector": [
+                "いいえ",
+                "少しそう思う",
+                "そう思う",
+                "とてもそう思う"
+            ],
+            "required": true
+        },
+        {
+            "name": "導入B",
+            "type": "radio",
+            "dispname": "B. 去年と比べて、物忘れが多くなったという印象はありますか",
+            "selector": [
+                "いいえ",
+                "少しそう思う",
+                "そう思う",
+                "いつもそう思う"
+            ],
+            "required": true
+        },
+        {
+            "name": "記憶",
+            "type": "subsection",
+            "dispname": "記憶機能の評価"
+        },
+        {
+            "name": "近時記憶1",
+            "type": "radio",
+            "dispname": "1. 財布や鍵などの置き場所を忘れることがありますか",
+            "selector": [
+                "全くない",
+                "時々ある",
+                "頻繁にある",
+                "いつもある"
+            ],
+            "required": true
+        },
+        {
+            "name": "近時記憶2",
+            "type": "radio",
+            "dispname": "2. 5分前の会話を忘れることがありますか",
+            "selector": [
+                "全くない",
+                "時々ある",
+                "頻繁にある",
+                "いつもある"
+            ],
+            "required": true
+        },
+        {
+            "name": "遠隔記憶",
+            "type": "radio",
+            "dispname": "3. 自分の生年月日を忘れることがありますか",
+            "selector": [
+                "全くない",
+                "時々ある",
+                "頻繁にある",
+                "いつもある"
+            ],
+            "required": true
+        },
+        {
+            "name": "見当識",
+            "type": "subsection",
+            "dispname": "見当識の評価"
+        },
+        {
+            "name": "時間見当識",
+            "type": "radio",
+            "dispname": "4. 今日の日付や月を忘れることがありますか",
+            "selector": [
+                "全くない",
+                "時々ある",
+                "頻繁にある",
+                "いつもある"
+            ],
+            "required": true
+        },
+        {
+            "name": "場所見当識",
+            "type": "radio",
+            "dispname": "5. 自分のいる場所がわからなくなることがありますか",
+            "selector": [
+                "全くない",
+                "時々ある",
+                "頻繁にある",
+                "いつもある"
+            ],
+            "required": true
+        },
+        {
+            "name": "道順",
+            "type": "radio",
+            "dispname": "6. 家への帰り方がわからなくなることがありますか",
+            "selector": [
+                "全くない",
+                "時々ある",
+                "頻繁にある",
+                "いつもある"
+            ],
+            "required": true
+        },
+        {
+            "name": "問題解決判断力",
+            "type": "subsection",
+            "dispname": "問題解決・判断力の評価"
+        },
+        {
+            "name": "問題解決",
+            "type": "radio",
+            "dispname": "7. 電気、ガス、水道が止まった時に適切に対処できますか",
+            "selector": [
+                "問題なくできる",
+                "だいたいできる",
+                "あまりできない",
+                "全くできない"
+            ],
+            "required": true
+        },
+        {
+            "name": "計画立案",
+            "type": "radio",
+            "dispname": "8. 一日の計画を立てることができますか",
+            "selector": [
+                "問題なくできる",
+                "だいたいできる",
+                "あまりできない",
+                "全くできない"
+            ],
+            "required": true
+        },
+        {
+            "name": "社会的判断力",
+            "type": "radio",
+            "dispname": "9. 季節や状況に応じて適切な服装を選ぶことができますか",
+            "selector": [
+                "問題なくできる",
+                "だいたいできる",
+                "あまりできない",
+                "全くできない"
+            ],
+            "required": true
+        },
+        {
+            "name": "家庭外IADL",
+            "type": "subsection",
+            "dispname": "家庭外の手段的日常生活動作"
+        },
+        {
+            "name": "買い物",
+            "type": "radio",
+            "dispname": "10. 一人で買い物ができますか",
+            "selector": [
+                "問題なくできる",
+                "だいたいできる",
+                "あまりできない",
+                "全くできない"
+            ],
+            "required": true
+        },
+        {
+            "name": "交通機関",
+            "type": "radio",
+            "dispname": "11. バス、電車、車を一人で利用できますか",
+            "selector": [
+                "問題なくできる",
+                "だいたいできる",
+                "あまりできない",
+                "全くできない"
+            ],
+            "required": true
+        },
+        {
+            "name": "金銭管理",
+            "type": "radio",
+            "dispname": "12. 家賃や公共料金の支払い、銀行での入出金が一人でできますか",
+            "selector": [
+                "問題なくできる",
+                "だいたいできる",
+                "あまりできない",
+                "全くできない"
+            ],
+            "required": true
+        },
+        {
+            "name": "家庭内IADL",
+            "type": "subsection",
+            "dispname": "家庭内の手段的日常生活動作"
+        },
+        {
+            "name": "電話",
+            "type": "radio",
+            "dispname": "13. 電話をかけることができますか",
+            "selector": [
+                "問題なくできる",
+                "だいたいできる",
+                "あまりできない",
+                "全くできない"
+            ],
+            "required": true
+        },
+        {
+            "name": "食事準備",
+            "type": "radio",
+            "dispname": "14. 一人で食事の準備ができますか",
+            "selector": [
+                "問題なくできる",
+                "だいたいできる",
+                "あまりできない",
+                "全くできない"
+            ],
+            "required": true
+        },
+        {
+            "name": "服薬管理",
+            "type": "radio",
+            "dispname": "15. 正しい時間に正しい量の薬を飲むことができますか",
+            "selector": [
+                "問題なくできる",
+                "だいたいできる",
+                "あまりできない",
+                "全くできない"
+            ],
+            "required": true
+        },
+        {
+            "name": "身体的ADL1",
+            "type": "subsection",
+            "dispname": "身体的日常生活動作（1）"
+        },
+        {
+            "name": "入浴",
+            "type": "radio",
+            "dispname": "16. 一人で入浴できますか",
+            "selector": [
+                "問題なくできる",
+                "見守りや指示が必要",
+                "部分的な介助が必要",
+                "全面的な介助が必要"
+            ],
+            "required": true
+        },
+        {
+            "name": "着替え",
+            "type": "radio",
+            "dispname": "17. 一人で着替えができますか",
+            "selector": [
+                "問題なくできる",
+                "見守りや指示が必要",
+                "部分的な介助が必要",
+                "全面的な介助が必要"
+            ],
+            "required": true
+        },
+        {
+            "name": "排泄",
+            "type": "radio",
+            "dispname": "18. 一人でトイレを使用できますか",
+            "selector": [
+                "問題なくできる",
+                "見守りや指示が必要",
+                "部分的な介助が必要",
+                "全面的な介助が必要"
+            ],
+            "required": true
+        },
+        {
+            "name": "身体的ADL2",
+            "type": "subsection",
+            "dispname": "身体的日常生活動作（2）"
+        },
+        {
+            "name": "整容",
+            "type": "radio",
+            "dispname": "19. 自分で身だしなみを整えることができますか",
+            "selector": [
+                "問題なくできる",
+                "見守りや指示が必要",
+                "部分的な介助が必要",
+                "全面的な介助が必要"
+            ],
+            "required": true
+        },
+        {
+            "name": "食事",
+            "type": "radio",
+            "dispname": "20. 一人で食事ができますか",
+            "selector": [
+                "問題なくできる",
+                "見守りや指示が必要",
+                "部分的な介助が必要",
+                "全面的な介助が必要"
+            ],
+            "required": true
+        },
+        {
+            "name": "移動",
+            "type": "radio",
+            "dispname": "21. 家の中を一人で移動できますか",
+            "selector": [
+                "問題なくできる",
+                "見守りや指示が必要",
+                "部分的な介助が必要",
+                "全面的な介助が必要"
+            ],
+            "required": true
+        },
+        {
+            "name": "評価日",
+            "type": "date",
+            "dispname": "評価実施日",
+            "format": "YYYY/MM/DD",
+            "required": true
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "合計得点",
+            "type": "eval",
+            "dispname": "DASC-21合計得点",
+            "formula": "[[近時記憶1.index]] + 1 + [[近時記憶2.index]] + 1 + [[遠隔記憶.index]] + 1 + [[時間見当識.index]] + 1 + [[場所見当識.index]] + 1 + [[道順.index]] + 1 + [[問題解決.index]] + 1 + [[計画立案.index]] + 1 + [[社会的判断力.index]] + 1 + [[買い物.index]] + 1 + [[交通機関.index]] + 1 + [[金銭管理.index]] + 1 + [[電話.index]] + 1 + [[食事準備.index]] + 1 + [[服薬管理.index]] + 1 + [[入浴.index]] + 1 + [[着替え.index]] + 1 + [[排泄.index]] + 1 + [[整容.index]] + 1 + [[食事.index]] + 1 + [[移動.index]] + 1"
+        },
+        {
+            "name": "遠隔記憶点数",
+            "type": "eval",
+            "dispname": "遠隔記憶項目得点",
+            "formula": "[[遠隔記憶.index]] + 1",
+            "noreport": true
+        },
+        {
+            "name": "場所見当識点数",
+            "type": "eval",
+            "dispname": "場所見当識項目得点",
+            "formula": "[[場所見当識.index]] + 1",
+            "noreport": true
+        },
+        {
+            "name": "社会的判断力点数",
+            "type": "eval",
+            "dispname": "社会的判断力項目得点",
+            "formula": "[[社会的判断力.index]] + 1",
+            "noreport": true
+        },
+        {
+            "name": "身体ADL最高点",
+            "type": "eval",
+            "dispname": "身体的ADL項目最高得点",
+            "formula": "Math.max( [[入浴.index]] + 1, [[着替え.index]] + 1, [[排泄.index]] + 1, [[整容.index]] + 1, [[食事.index]] + 1, [[移動.index]] + 1 )",
+            "noreport": true
+        },
+        {
+            "name": "認知症可能性",
+            "type": "eval",
+            "dispname": "DASC-21による認知症スクリーニング結果",
+            "formula": "[[合計得点]] >= 31 ? \"認知症の可能性あり\" : \"認知症の可能性は低い\""
+        },
+        {
+            "name": "重症度判定",
+            "type": "eval",
+            "dispname": "認知症重症度判定",
+            "formula": "[[合計得点]] < 31 ? \"評価対象外\" : ( [[遠隔記憶点数]] <= 2 && [[場所見当識点数]] <= 2 && [[社会的判断力点数]] <= 2 && [[身体ADL最高点]] <= 2 ? \"軽度認知症の可能性\" : ( [[遠隔記憶点数]] >= 3 && [[場所見当識点数]] >= 3 && [[社会的判断力点数]] >= 3 && [[身体ADL最高点]] >= 3 ? \"重度認知症の可能性\" : \"中等度認知症の可能性\" ) )"
+        }
+    ]
+}

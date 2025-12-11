@@ -1,0 +1,347 @@
+{
+    "_comment": [
+        "MSQ（Minnesota Satisfaction Questionnaire）短縮版",
+        "Weiss, D. J., Dawis, R. V., England, G. W., & Lofquist, L. H. (1967). Manual for the Minnesota Satisfaction Questionnaire. Minneapolis: University of Minnesota, Industrial Relations Center.",
+        "https://vpr.psych.umn.edu/node/26",
+        "クリエイティブ・コモンズ Attribution-NonCommercial 4.0 ライセンス適用",
+        "20項目で内発的満足度（12項目）と外発的満足度（8項目）を測定"
+    ],
+    "title": "MSQ 職務満足質問票 (短縮版)",
+    "description": [
+        "職務満足度を測定するための質問票です。",
+        "あなたの現在の仕事について、各項目にどの程度満足しているかをお答えください。"
+    ],
+    "submit_button_title": "回答を送信",
+    "fields": [
+        {
+            "dispname": "基本説明",
+            "type": "note",
+            "description": "以下の各項目について、「この仕事の側面についてどの程度満足していますか」という観点でお答えください。"
+        },
+        {
+            "dispname": "いつも忙しくしていられること",
+            "name": "Q1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "非常に不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "非常に満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "一人で仕事をする機会があること",
+            "name": "Q2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "非常に不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "非常に満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "時々異なったことをする機会があること",
+            "name": "Q3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "非常に不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "非常に満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "地域社会で重要な人物になる機会があること",
+            "name": "Q4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "非常に不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "非常に満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "上司が部下を扱う方法",
+            "name": "Q5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "非常に不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "非常に満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "上司の意思決定における能力",
+            "name": "Q6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "非常に不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "非常に満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "良心に反することをしなくてよいこと",
+            "name": "Q7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "非常に不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "非常に満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "安定した雇用が得られること",
+            "name": "Q8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "非常に不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "非常に満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "他の人のために何かをする機会があること",
+            "name": "Q9",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "非常に不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "非常に満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "人に指示を出す機会があること",
+            "name": "Q10",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "非常に不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "非常に満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "自分の能力を活用する機会があること",
+            "name": "Q11",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "非常に不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "非常に満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "会社の方針が実践される方法",
+            "name": "Q12",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "非常に不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "非常に満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "仕事量に対する給与",
+            "name": "Q13",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "非常に不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "非常に満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "この仕事での昇進の機会",
+            "name": "Q14",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "非常に不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "非常に満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "自分の判断を使う自由があること",
+            "name": "Q15",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "非常に不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "非常に満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "自分なりの方法で仕事をする機会があること",
+            "name": "Q16",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "非常に不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "非常に満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "労働条件",
+            "name": "Q17",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "非常に不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "非常に満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "同僚同士の関係",
+            "name": "Q18",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "非常に不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "非常に満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "良い仕事をした時に受ける称賛",
+            "name": "Q19",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "非常に不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "非常に満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "仕事から得られる達成感",
+            "name": "Q20",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "非常に不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "非常に満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "内発的満足度",
+            "type": "eval",
+            "dispname": "内発的満足度得点（12項目）: 能力活用、達成感、活動性、権限、創造性、独立性、道徳的価値、責任、社会的奉仕、社会的地位、多様性、安定性",
+            "formula": "[[Q1.index]] + [[Q2.index]] + [[Q3.index]] + [[Q7.index]] + [[Q9.index]] + [[Q10.index]] + [[Q11.index]] + [[Q15.index]] + [[Q16.index]] + [[Q20.index]] + [[Q4.index]] + [[Q8.index]]"
+        },
+        {
+            "name": "外発的満足度",
+            "type": "eval",
+            "dispname": "外発的満足度得点（8項目）: 昇進、給与、監督-人間関係、監督-技術的、会社方針、同僚関係、承認、労働条件",
+            "formula": "[[Q5.index]] + [[Q6.index]] + [[Q12.index]] + [[Q13.index]] + [[Q14.index]] + [[Q17.index]] + [[Q18.index]] + [[Q19.index]]"
+        },
+        {
+            "name": "全般的満足度",
+            "type": "eval",
+            "dispname": "全般的満足度得点（全20項目の合計）",
+            "formula": "[[Q1.index]] + [[Q2.index]] + [[Q3.index]] + [[Q4.index]] + [[Q5.index]] + [[Q6.index]] + [[Q7.index]] + [[Q8.index]] + [[Q9.index]] + [[Q10.index]] + [[Q11.index]] + [[Q12.index]] + [[Q13.index]] + [[Q14.index]] + [[Q15.index]] + [[Q16.index]] + [[Q17.index]] + [[Q18.index]] + [[Q19.index]] + [[Q20.index]]"
+        },
+        {
+            "name": "内発的満足度平均",
+            "type": "eval",
+            "dispname": "内発的満足度平均スコア",
+            "formula": "( [[内発的満足度]] / 12).toFixed(1)"
+        },
+        {
+            "name": "外発的満足度平均",
+            "type": "eval",
+            "dispname": "外発的満足度平均スコア",
+            "formula": "( [[外発的満足度]] / 8).toFixed(1)"
+        },
+        {
+            "name": "全般的満足度平均",
+            "type": "eval",
+            "dispname": "全般的満足度平均スコア",
+            "formula": "( [[全般的満足度]] / 20).toFixed(1)"
+        },
+        {
+            "name": "満足度判定",
+            "type": "eval",
+            "dispname": "満足度水準の判定（3.0以上で満足傾向）",
+            "formula": "[[全般的満足度平均]] >= 3.0 ? '満足傾向' : '要改善'"
+        }
+    ]
+}

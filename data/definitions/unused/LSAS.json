@@ -1,0 +1,606 @@
+{
+    "_comment": [
+        "LSAS (Liebowitz Social Anxiety Scale) - 英語原版準拠独自翻訳版",
+        "【重要】本JSONは公式日本語版LSAS-J（朝倉聡版、三京房発行）とは異なります",
+        "原著論文: Liebowitz, M.R. (1987). Social phobia. Modern Problems of Pharmacopsychiatry, 22, 143-171.",
+        "公式マニュアル: Liebowitz, M.R. (2003). Guidelines for Using the LSAS.",
+        "参考URL: https://nationalsocialanxietycenter.com/liebowitz-sa-scale/",
+        "24項目すべて英語原版LSASから直接翻訳",
+        "公式LSAS-Jとは項目4, 12, 18, 19, 20, 21, 22, 23, 24の表現が異なる可能性あり",
+        "パフォーマンス場面13項目、社交場面11項目から構成",
+        "各項目を恐怖感（0-3）と回避（0-3）の2軸で4段階評価",
+        "総得点範囲: 0-144点（恐怖感小計0-72点 + 回避小計0-72点）",
+        "カットオフ値: 30点以上でSADの疑い（Mennin et al., 2002）",
+        "全般性SAD: 60点以上（Mennin et al., 2002）",
+        "使用推奨: 研究・教育目的。臨床診断には公式LSAS-Jの使用を推奨",
+        "社交不安障害の標準的評価尺度として国際的に広く使用"
+    ],
+    "title": "LSAS-J リーボヴィッツ社交不安尺度",
+    "description": [
+        "この尺度は、社交不安障害（社会恐怖）の症状の程度を評価するために開発されました。",
+        "様々な社交場面での恐怖感や不安感、回避行動について、過去1週間の状況をお答えください。",
+        "各場面について2つの質問があります：",
+        "1. どの程度恐怖や不安を感じるか",
+        "2. どの程度その場面を避けるか"
+    ],
+    "fields": [
+        {
+            "name": "説明",
+            "type": "note",
+            "description": "以下の24の場面について、過去1週間のあなたの状態をお答えください。"
+        },
+        {
+            "name": "項目1",
+            "type": "subsection",
+            "dispname": "1. 人がいる場所で電話で話す"
+        },
+        {
+            "name": "電話で話す_恐怖",
+            "type": "radio",
+            "dispname": "恐怖感",
+            "required": true,
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "電話で話す_回避",
+            "type": "radio",
+            "dispname": "回避",
+            "required": true,
+            "inline": true,
+            "selector": "しない|時々|しばしば|いつも",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "項目2",
+            "type": "subsection",
+            "dispname": "2. 小さなグループの活動に参加する"
+        },
+        {
+            "name": "小グループ活動_恐怖",
+            "type": "radio",
+            "dispname": "恐怖感",
+            "required": true,
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "小グループ活動_回避",
+            "type": "radio",
+            "dispname": "回避",
+            "required": true,
+            "inline": true,
+            "selector": "しない|時々|しばしば|いつも",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "項目3",
+            "type": "subsection",
+            "dispname": "3. 公共の場所で食事をする"
+        },
+        {
+            "name": "公共の場で食事_恐怖",
+            "type": "radio",
+            "dispname": "恐怖感",
+            "required": true,
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "公共の場で食事_回避",
+            "type": "radio",
+            "dispname": "回避",
+            "required": true,
+            "inline": true,
+            "selector": "しない|時々|しばしば|いつも",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "項目4",
+            "type": "subsection",
+            "dispname": "4. 他の人と一緒に公共の場所で飲む"
+        },
+        {
+            "name": "他人と飲む_恐怖",
+            "type": "radio",
+            "dispname": "恐怖感",
+            "required": true,
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "他人と飲む_回避",
+            "type": "radio",
+            "dispname": "回避",
+            "required": true,
+            "inline": true,
+            "selector": "しない|時々|しばしば|いつも",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "項目5",
+            "type": "subsection",
+            "dispname": "5. 権威のある人と話をする"
+        },
+        {
+            "name": "権威者と話す_恐怖",
+            "type": "radio",
+            "dispname": "恐怖感",
+            "required": true,
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "権威者と話す_回避",
+            "type": "radio",
+            "dispname": "回避",
+            "required": true,
+            "inline": true,
+            "selector": "しない|時々|しばしば|いつも",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "項目6",
+            "type": "subsection",
+            "dispname": "6. 観客の前で演技・パフォーマンス・講演をする"
+        },
+        {
+            "name": "観客の前で演技_恐怖",
+            "type": "radio",
+            "dispname": "恐怖感",
+            "required": true,
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "観客の前で演技_回避",
+            "type": "radio",
+            "dispname": "回避",
+            "required": true,
+            "inline": true,
+            "selector": "しない|時々|しばしば|いつも",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "項目7",
+            "type": "subsection",
+            "dispname": "7. パーティーに参加する"
+        },
+        {
+            "name": "パーティー参加_恐怖",
+            "type": "radio",
+            "dispname": "恐怖感",
+            "required": true,
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "パーティー参加_回避",
+            "type": "radio",
+            "dispname": "回避",
+            "required": true,
+            "inline": true,
+            "selector": "しない|時々|しばしば|いつも",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "項目8",
+            "type": "subsection",
+            "dispname": "8. 人に見られながら仕事をする"
+        },
+        {
+            "name": "人前で仕事_恐怖",
+            "type": "radio",
+            "dispname": "恐怖感",
+            "required": true,
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "人前で仕事_回避",
+            "type": "radio",
+            "dispname": "回避",
+            "required": true,
+            "inline": true,
+            "selector": "しない|時々|しばしば|いつも",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "項目9",
+            "type": "subsection",
+            "dispname": "9. 人に見られながら文章を書く"
+        },
+        {
+            "name": "人前で文章を書く_恐怖",
+            "type": "radio",
+            "dispname": "恐怖感",
+            "required": true,
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "人前で文章を書く_回避",
+            "type": "radio",
+            "dispname": "回避",
+            "required": true,
+            "inline": true,
+            "selector": "しない|時々|しばしば|いつも",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "項目10",
+            "type": "subsection",
+            "dispname": "10. よく知らない人に電話をかける"
+        },
+        {
+            "name": "知らない人に電話_恐怖",
+            "type": "radio",
+            "dispname": "恐怖感",
+            "required": true,
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "知らない人に電話_回避",
+            "type": "radio",
+            "dispname": "回避",
+            "required": true,
+            "inline": true,
+            "selector": "しない|時々|しばしば|いつも",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "項目11",
+            "type": "subsection",
+            "dispname": "11. よく知らない人と話をする"
+        },
+        {
+            "name": "知らない人と話す_恐怖",
+            "type": "radio",
+            "dispname": "恐怖感",
+            "required": true,
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "知らない人と話す_回避",
+            "type": "radio",
+            "dispname": "回避",
+            "required": true,
+            "inline": true,
+            "selector": "しない|時々|しばしば|いつも",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "項目12",
+            "type": "subsection",
+            "dispname": "12. 初対面の人と会う"
+        },
+        {
+            "name": "初対面の人と会う_恐怖",
+            "type": "radio",
+            "dispname": "恐怖感",
+            "required": true,
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "初対面の人と会う_回避",
+            "type": "radio",
+            "dispname": "回避",
+            "required": true,
+            "inline": true,
+            "selector": "しない|時々|しばしば|いつも",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "項目13",
+            "type": "subsection",
+            "dispname": "13. 公衆トイレで用を足す"
+        },
+        {
+            "name": "公衆トイレ_恐怖",
+            "type": "radio",
+            "dispname": "恐怖感",
+            "required": true,
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "公衆トイレ_回避",
+            "type": "radio",
+            "dispname": "回避",
+            "required": true,
+            "inline": true,
+            "selector": "しない|時々|しばしば|いつも",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "項目14",
+            "type": "subsection",
+            "dispname": "14. 他の人がすでにいる部屋に入る"
+        },
+        {
+            "name": "部屋に入る_恐怖",
+            "type": "radio",
+            "dispname": "恐怖感",
+            "required": true,
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "部屋に入る_回避",
+            "type": "radio",
+            "dispname": "回避",
+            "required": true,
+            "inline": true,
+            "selector": "しない|時々|しばしば|いつも",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "項目15",
+            "type": "subsection",
+            "dispname": "15. 注目の中心になる"
+        },
+        {
+            "name": "注目の中心_恐怖",
+            "type": "radio",
+            "dispname": "恐怖感",
+            "required": true,
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "注目の中心_回避",
+            "type": "radio",
+            "dispname": "回避",
+            "required": true,
+            "inline": true,
+            "selector": "しない|時々|しばしば|いつも",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "項目16",
+            "type": "subsection",
+            "dispname": "16. 準備なしで会議で発言する"
+        },
+        {
+            "name": "準備なし発言_恐怖",
+            "type": "radio",
+            "dispname": "恐怖感",
+            "required": true,
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "準備なし発言_回避",
+            "type": "radio",
+            "dispname": "回避",
+            "required": true,
+            "inline": true,
+            "selector": "しない|時々|しばしば|いつも",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "項目17",
+            "type": "subsection",
+            "dispname": "17. 自分の能力についてのテストを受ける"
+        },
+        {
+            "name": "能力テスト_恐怖",
+            "type": "radio",
+            "dispname": "恐怖感",
+            "required": true,
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "能力テスト_回避",
+            "type": "radio",
+            "dispname": "回避",
+            "required": true,
+            "inline": true,
+            "selector": "しない|時々|しばしば|いつも",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "項目18",
+            "type": "subsection",
+            "dispname": "18. よく知らない人に反対意見や不賛成を表明する"
+        },
+        {
+            "name": "反対意見表明_恐怖",
+            "type": "radio",
+            "dispname": "恐怖感",
+            "required": true,
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "反対意見表明_回避",
+            "type": "radio",
+            "dispname": "回避",
+            "required": true,
+            "inline": true,
+            "selector": "しない|時々|しばしば|いつも",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "項目19",
+            "type": "subsection",
+            "dispname": "19. よく知らない人の目を見る"
+        },
+        {
+            "name": "目を見る_恐怖",
+            "type": "radio",
+            "dispname": "恐怖感",
+            "required": true,
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "目を見る_回避",
+            "type": "radio",
+            "dispname": "回避",
+            "required": true,
+            "inline": true,
+            "selector": "しない|時々|しばしば|いつも",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "項目20",
+            "type": "subsection",
+            "dispname": "20. グループに報告をする"
+        },
+        {
+            "name": "グループ報告_恐怖",
+            "type": "radio",
+            "dispname": "恐怖感",
+            "required": true,
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "グループ報告_回避",
+            "type": "radio",
+            "dispname": "回避",
+            "required": true,
+            "inline": true,
+            "selector": "しない|時々|しばしば|いつも",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "項目21",
+            "type": "subsection",
+            "dispname": "21. 誰かをデートに誘う"
+        },
+        {
+            "name": "デート誘う_恐怖",
+            "type": "radio",
+            "dispname": "恐怖感",
+            "required": true,
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "デート誘う_回避",
+            "type": "radio",
+            "dispname": "回避",
+            "required": true,
+            "inline": true,
+            "selector": "しない|時々|しばしば|いつも",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "項目22",
+            "type": "subsection",
+            "dispname": "22. お店で商品を返品する"
+        },
+        {
+            "name": "商品返品_恐怖",
+            "type": "radio",
+            "dispname": "恐怖感",
+            "required": true,
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "商品返品_回避",
+            "type": "radio",
+            "dispname": "回避",
+            "required": true,
+            "inline": true,
+            "selector": "しない|時々|しばしば|いつも",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "項目23",
+            "type": "subsection",
+            "dispname": "23. パーティーを開く"
+        },
+        {
+            "name": "パーティー開く_恐怖",
+            "type": "radio",
+            "dispname": "恐怖感",
+            "required": true,
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "パーティー開く_回避",
+            "type": "radio",
+            "dispname": "回避",
+            "required": true,
+            "inline": true,
+            "selector": "しない|時々|しばしば|いつも",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "項目24",
+            "type": "subsection",
+            "dispname": "24. しつこい営業の人に断りを言う"
+        },
+        {
+            "name": "営業に断る_恐怖",
+            "type": "radio",
+            "dispname": "恐怖感",
+            "required": true,
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "営業に断る_回避",
+            "type": "radio",
+            "dispname": "回避",
+            "required": true,
+            "inline": true,
+            "selector": "しない|時々|しばしば|いつも",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "恐怖感小計",
+            "type": "eval",
+            "dispname": "恐怖感小計（0-72点）",
+            "formula": "[[電話で話す_恐怖.index]] + [[小グループ活動_恐怖.index]] + [[公共の場で食事_恐怖.index]] + [[他人と飲む_恐怖.index]] + [[権威者と話す_恐怖.index]] + [[観客の前で演技_恐怖.index]] + [[パーティー参加_恐怖.index]] + [[人前で仕事_恐怖.index]] + [[人前で文章を書く_恐怖.index]] + [[知らない人に電話_恐怖.index]] + [[知らない人と話す_恐怖.index]] + [[初対面の人と会う_恐怖.index]] + [[公衆トイレ_恐怖.index]] + [[部屋に入る_恐怖.index]] + [[注目の中心_恐怖.index]] + [[準備なし発言_恐怖.index]] + [[能力テスト_恐怖.index]] + [[反対意見表明_恐怖.index]] + [[目を見る_恐怖.index]] + [[グループ報告_恐怖.index]] + [[デート誘う_恐怖.index]] + [[商品返品_恐怖.index]] + [[パーティー開く_恐怖.index]] + [[営業に断る_恐怖.index]]"
+        },
+        {
+            "name": "回避小計",
+            "type": "eval",
+            "dispname": "回避小計（0-72点）",
+            "formula": "[[電話で話す_回避.index]] + [[小グループ活動_回避.index]] + [[公共の場で食事_回避.index]] + [[他人と飲む_回避.index]] + [[権威者と話す_回避.index]] + [[観客の前で演技_回避.index]] + [[パーティー参加_回避.index]] + [[人前で仕事_回避.index]] + [[人前で文章を書く_回避.index]] + [[知らない人に電話_回避.index]] + [[知らない人と話す_回避.index]] + [[初対面の人と会う_回避.index]] + [[公衆トイレ_回避.index]] + [[部屋に入る_回避.index]] + [[注目の中心_回避.index]] + [[準備なし発言_回避.index]] + [[能力テスト_回避.index]] + [[反対意見表明_回避.index]] + [[目を見る_回避.index]] + [[グループ報告_回避.index]] + [[デート誘う_回避.index]] + [[商品返品_回避.index]] + [[パーティー開く_回避.index]] + [[営業に断る_回避.index]]"
+        },
+        {
+            "name": "総合計",
+            "type": "eval",
+            "dispname": "LSAS-J総得点（0-144点）",
+            "formula": "[[恐怖感小計]] + [[回避小計]]"
+        }
+    ]
+}

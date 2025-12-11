@@ -1,0 +1,128 @@
+{
+  "_comment": [
+    "SHIM - Sexual Health Inventory for Men",
+    "勃起機能障害の評価スケール",
+    "開発者: Raymond C. Rosen (1999)",
+    "IIEFの短縮版",
+    "原典: Rosen RC, et al. Urology. 1999;53(3):623-30.",
+    "参考URL: https://pubmed.ncbi.nlm.nih.gov/10458354/",
+    "公式URL: https://www.baus.org.uk/_userfiles/pages/files/Patients/Leaflets/SHIM.pdf",
+    "評価: 1-25点、低得点ほど重症",
+    "分類: 22-25正常、17-21軽度、8-16中等度、1-7重度"
+  ],
+  "title": "SHIM",
+  "description": [
+    "勃起機能と性交満足度を評価する質問票です",
+    "過去6か月間の性生活についてお答えください"
+  ],
+  "fields": [
+    {
+      "type": "subsection",
+      "dispname": "勃起機能評価"
+    },
+    {
+      "type": "radio",
+      "name": "Q1",
+      "dispname": "Q1. 勃起を達成し維持する自信",
+      "description": "勃起を達成し維持する自信はどの程度ありましたか",
+      "required": true,
+      "selector": [
+        "非常に低い",
+        "低い",
+        "中程度",
+        "高い",
+        "非常に高い"
+      ],
+      "selectoridx": "1|2|3|4|5"
+    },
+    {
+      "type": "radio",
+      "name": "Q2",
+      "dispname": "Q2. 性的刺激による勃起の硬さ",
+      "description": "性的刺激によって勃起した時、どのくらいの頻度で挿入可能な硬さになりましたか",
+      "required": true,
+      "selector": [
+        "性的行為なし",
+        "ほとんどまたは全くならない",
+        "たまに",
+        "時々",
+        "通常",
+        "ほぼいつもまたはいつも"
+      ],
+      "selectoridx": "0|1|2|3|4|5"
+    },
+    {
+      "type": "radio",
+      "name": "Q3",
+      "dispname": "Q3. 挿入後の勃起維持",
+      "description": "性交中、挿入後どのくらいの頻度で勃起を維持できましたか",
+      "required": true,
+      "selector": [
+        "性交を試みなかった",
+        "ほとんどまたは全く維持できない",
+        "たまに",
+        "時々",
+        "通常",
+        "ほぼいつもまたはいつも"
+      ],
+      "selectoridx": "0|1|2|3|4|5"
+    },
+    {
+      "type": "radio",
+      "name": "Q4",
+      "dispname": "Q4. 性交完了までの勃起維持の困難度",
+      "description": "性交中、性交完了まで勃起を維持することはどのくらい困難でしたか",
+      "required": true,
+      "selector": [
+        "性交を試みなかった",
+        "極めて困難",
+        "非常に困難",
+        "困難",
+        "やや困難",
+        "困難でない"
+      ],
+      "selectoridx": "0|1|2|3|4|5"
+    },
+    {
+      "type": "radio",
+      "name": "Q5",
+      "dispname": "Q5. 性交の満足度",
+      "description": "性交を試みた時、どのくらいの頻度で満足できましたか",
+      "required": true,
+      "selector": [
+        "性交を試みなかった",
+        "ほとんどまたは全く満足できない",
+        "たまに",
+        "時々",
+        "通常",
+        "ほぼいつもまたはいつも"
+      ],
+      "selectoridx": "0|1|2|3|4|5"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "type": "eval",
+      "name": "合計スコア",
+      "description": "SHIM合計スコア: 1-25点",
+      "formula": "[[Q1.index]] + [[Q2.index]] + [[Q3.index]] + [[Q4.index]] + [[Q5.index]]"
+    },
+    {
+      "type": "eval",
+      "name": "重症度分類",
+      "description": "勃起機能障害の重症度",
+      "formula": "[[合計スコア]] >= 22 ? '正常' : [[合計スコア]] >= 17 ? '軽度ED' : [[合計スコア]] >= 8 ? '中等度ED' : '重度ED'"
+    },
+    {
+      "type": "warning",
+      "formula": "[[合計スコア]] < 17",
+      "name": "Warning: 軽度-中等度ED（スコア17未満）"
+    },
+    {
+      "type": "emergency",
+      "formula": "[[合計スコア]] < 8",
+      "name": "Emergency: 重度ED（スコア8未満）"
+    }
+  ]
+}

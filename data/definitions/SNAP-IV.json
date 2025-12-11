@@ -1,0 +1,432 @@
+{
+    "_comment": [
+        "SNAP-IV 26項目版 - ADHDおよび反抗挑戦性障害の評価",
+        "原典: Swanson, J. M. (1992). School-Based Assessment and Interventions for ADD Students",
+        "参考URL: https://www.shared-care.ca/files/Scoring_for_SNAP_IV_Guide_26-item.pdf",
+        "DSM-IV基準に基づく26項目の親・教師評価尺度",
+        "不注意(1-9項目)、多動性/衝動性(10-18項目)、反抗挑戦性(19-26項目)の3つのサブスケールで構成"
+    ],
+    "title": "SNAP-IV 26項目版親・教師評価尺度",
+    "description": [
+        "この評価尺度は、お子さんの注意欠如・多動症(ADHD)および反抗挑戦性障害の症状を評価するものです。",
+        "各項目について、お子さんの過去6ヶ月間の日常的な行動をもとに、最も適切な選択肢を選んでください。"
+    ],
+    "fields": [
+        {
+            "name": "section_attention",
+            "type": "subsection",
+            "dispname": "不注意に関する項目"
+        },
+        {
+            "name": "q1",
+            "type": "radio",
+            "dispname": "1. しばしば学業や作業において、細かいところまで注意を払わなかったり、不注意な間違いをしたりする",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "q2",
+            "type": "radio",
+            "dispname": "2. しばしば作業や遊びの活動で注意を持続することが困難である",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "q3",
+            "type": "radio",
+            "dispname": "3. しばしば直接話しかけられているときに聞いていないように見える",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "q4",
+            "type": "radio",
+            "dispname": "4. しばしば指示に従えず、学業、用事、または職場での義務をやり遂げることができない",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "q5",
+            "type": "radio",
+            "dispname": "5. しばしば課題や活動を整理することが困難である",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "q6",
+            "type": "radio",
+            "dispname": "6. しばしば持続的な精神的努力を要する課題を避けたり、嫌がったり、いやいや取り組んだりする",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "q7",
+            "type": "radio",
+            "dispname": "7. しばしば活動に必要なもの（例：おもちゃ、学校の宿題、鉛筆、本）をなくしてしまう",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "q8",
+            "type": "radio",
+            "dispname": "8. しばしば外からの刺激によって気が散ってしまう",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "q9",
+            "type": "radio",
+            "dispname": "9. しばしば日々の活動で忘れっぽい",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "section_hyperactivity",
+            "type": "subsection",
+            "dispname": "多動性・衝動性に関する項目"
+        },
+        {
+            "name": "q10",
+            "type": "radio",
+            "dispname": "10. しばしば手足をそわそわと動かしたり、いすの上でもじもじしたりする",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "q11",
+            "type": "radio",
+            "dispname": "11. しばしば教室や、座っていることを求められる他の状況で席を離れる",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "q12",
+            "type": "radio",
+            "dispname": "12. しばしば不適切な状況で走り回ったり高い所に登ったりする",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "q13",
+            "type": "radio",
+            "dispname": "13. しばしば静かに遊んだり余暇活動に従事したりすることができない",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "q14",
+            "type": "radio",
+            "dispname": "14. しばしば「じっとしていない」、または「エンジンで動かされるように」行動する",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "q15",
+            "type": "radio",
+            "dispname": "15. しばしばしゃべりすぎる",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "q16",
+            "type": "radio",
+            "dispname": "16. しばしば質問が終わる前に出し抜けに答えてしまう",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "q17",
+            "type": "radio",
+            "dispname": "17. しばしば順番を待つことが困難である",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "q18",
+            "type": "radio",
+            "dispname": "18. しばしば他人を妨害し、邪魔をする（例：会話やゲームに割り込む）",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "section_odd",
+            "type": "subsection",
+            "dispname": "反抗・挑戦に関する項目"
+        },
+        {
+            "name": "q19",
+            "type": "radio",
+            "dispname": "19. しばしばかんしゃくを起こす",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "q20",
+            "type": "radio",
+            "dispname": "20. しばしば大人と言い争いをする",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "q21",
+            "type": "radio",
+            "dispname": "21. しばしば大人の要求や規則に能動的に反抗したり従うことを拒否したりする",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "q22",
+            "type": "radio",
+            "dispname": "22. しばしば故意に他人をいらだたせるようなことをする",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "q23",
+            "type": "radio",
+            "dispname": "23. しばしば自分の間違いや不振る舞いを他人のせいにする",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "q24",
+            "type": "radio",
+            "dispname": "24. しばしば神経過敏で他人にいらだたされやすい",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "q25",
+            "type": "radio",
+            "dispname": "25. しばしば怒っていて憤慨している",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "q26",
+            "type": "radio",
+            "dispname": "26. しばしば意地悪で執念深い",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "attention_score",
+            "type": "eval",
+            "dispname": "不注意スコア",
+            "formula": "[[q1.index]] + [[q2.index]] + [[q3.index]] + [[q4.index]] + [[q5.index]] + [[q6.index]] + [[q7.index]] + [[q8.index]] + [[q9.index]]"
+        },
+        {
+            "name": "hyperactivity_score",
+            "type": "eval",
+            "dispname": "多動性・衝動性スコア",
+            "formula": "[[q10.index]] + [[q11.index]] + [[q12.index]] + [[q13.index]] + [[q14.index]] + [[q15.index]] + [[q16.index]] + [[q17.index]] + [[q18.index]]"
+        },
+        {
+            "name": "odd_score",
+            "type": "eval",
+            "dispname": "反抗挑戦性スコア",
+            "formula": "[[q19.index]] + [[q20.index]] + [[q21.index]] + [[q22.index]] + [[q23.index]] + [[q24.index]] + [[q25.index]] + [[q26.index]]"
+        },
+        {
+            "name": "adhd_combined_score",
+            "type": "eval",
+            "dispname": "ADHD合計スコア",
+            "formula": "[[attention_score]] + [[hyperactivity_score]]"
+        },
+        {
+            "name": "attention_severity",
+            "type": "eval",
+            "dispname": "不注意の重症度",
+            "formula": "[[attention_score]] < 13 ? '症状なし' : ([[attention_score]] >= 13 && [[attention_score]] <= 17 ? '軽度' : ([[attention_score]] >= 18 && [[attention_score]] <= 22 ? '中等度' : '重度'))"
+        },
+        {
+            "name": "hyperactivity_severity",
+            "type": "eval",
+            "dispname": "多動性・衝動性の重症度",
+            "formula": "[[hyperactivity_score]] < 13 ? '症状なし' : ([[hyperactivity_score]] >= 13 && [[hyperactivity_score]] <= 17 ? '軽度' : ([[hyperactivity_score]] >= 18 && [[hyperactivity_score]] <= 22 ? '中等度' : '重度'))"
+        },
+        {
+            "name": "odd_severity",
+            "type": "eval",
+            "dispname": "反抗挑戦性の重症度",
+            "formula": "[[odd_score]] < 8 ? '症状なし' : ([[odd_score]] >= 8 && [[odd_score]] <= 13 ? '軽度' : ([[odd_score]] >= 14 && [[odd_score]] <= 18 ? '中等度' : '重度'))"
+        },
+        {
+            "name": "attention_average",
+            "type": "eval",
+            "dispname": "不注意平均スコア",
+            "formula": "( ((attention_score)) / 9).toFixed(2)"
+        },
+        {
+            "name": "hyperactivity_average",
+            "type": "eval",
+            "dispname": "多動性・衝動性平均スコア",
+            "formula": "( ((hyperactivity_score)) / 9).toFixed(2)"
+        },
+        {
+            "name": "odd_average",
+            "type": "eval",
+            "dispname": "反抗挑戦性平均スコア",
+            "formula": "((odd_score)) / 8"
+        }
+    ]
+}

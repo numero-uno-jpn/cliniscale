@@ -1,0 +1,494 @@
+{
+    "_comment": [
+        "CAPS-5 (Clinician-Administered PTSD Scale for DSM-5) 日本語版問診票",
+        "出典: Weathers, F. W., et al. (2018). The Clinician-Administered PTSD Scale for DSM-5 (CAPS-5): Development and initial psychometric evaluation in military veterans. Psychological Assessment, 30(3), 383-395.",
+        "公式URL: https://www.ptsd.va.gov/professional/assessment/adult-int/caps.asp",
+        "PDF資料: https://www.ptsd.va.gov/professional/assessment/documents/CAPS_5_Past_Week.pdf",
+        "注意: 本来は臨床家による構造化面接だが、自記式形式に改変。スコアは医療機関のみ閲覧可能",
+        "評価期間: 過去1週間の症状について評価",
+        "5段階評価: 0=なし、1=軽度/閾値下、2=中等度/閾値、3=重度/著明、4=極度/機能不全"
+    ],
+    "title": "CAPS-5 心的外傷後ストレス障害（PTSD）症状評価尺度 [過去1週間版]",
+    "description": [
+        "PTSD臨床面接尺度(CAPS-5) 過去1週間版",
+        "DSM-5に基づく心的外傷後ストレス障害(PTSD)の症状評価を行います。",
+        "過去1週間に経験した症状についてお答えください。"
+    ],
+    "fields": [
+        {
+            "name": "トラウマ事象",
+            "type": "textarea",
+            "dispname": "トラウマとなった出来事について",
+            "description": "評価の基準となるトラウマ的出来事について簡潔に教えてください",
+            "required": true,
+            "rows": 3
+        },
+        {
+            "name": "section_b",
+            "type": "subsection",
+            "dispname": "B. 侵入症状"
+        },
+        {
+            "name": "B1",
+            "type": "radio",
+            "dispname": "1. そのトラウマ的出来事について、望まない記憶が繰り返し浮かんでくることがありましたか",
+            "description": "起きているときに、そのトラウマ的出来事の記憶が意図せずに侵入的に浮かんできたかどうかをお答えください",
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "B2",
+            "type": "radio",
+            "dispname": "2. そのトラウマ的出来事に関連した苦痛な夢を見ることがありましたか",
+            "description": "そのトラウマ的出来事の内容や、それに関連した感情を含む悪夢について",
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "B3",
+            "type": "radio",
+            "dispname": "3. そのトラウマ的出来事が実際に再び起こっているかのように感じたり行動したりすることがありましたか",
+            "description": "フラッシュバック体験について。単なる記憶や夢とは異なり、実際にその場面を再体験している感覚",
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "B4",
+            "type": "radio",
+            "dispname": "4. そのトラウマ的出来事を思い出させるものに接したときに、強い心理的苦痛を感じることがありましたか",
+            "description": "トラウマ的出来事を象徴したり類似したりする内的・外的手がかりへの反応",
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "B5",
+            "type": "radio",
+            "dispname": "5. そのトラウマ的出来事を思い出させるものに接したときに、身体的な反応が起きることがありましたか",
+            "description": "心拍数の増加、発汗、筋肉の緊張、震えなどの生理的反応",
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "section_c",
+            "type": "subsection",
+            "dispname": "C. 回避症状"
+        },
+        {
+            "name": "C1",
+            "type": "radio",
+            "dispname": "6. そのトラウマ的出来事に関する記憶、思考、感情を避けようとすることがありましたか",
+            "description": "苦痛な記憶、思考、感情を意図的に避ける努力",
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "C2",
+            "type": "radio",
+            "dispname": "7. そのトラウマ的出来事を思い出させる人、場所、会話、活動、物、状況を避けようとすることがありましたか",
+            "description": "外的な手がかりを意図的に避ける努力",
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "section_d",
+            "type": "subsection",
+            "dispname": "D. 認知と気分の陰性変化"
+        },
+        {
+            "name": "D1",
+            "type": "radio",
+            "dispname": "8. そのトラウマ的出来事の重要な部分を思い出すことができませんでしたか",
+            "description": "頭部外傷、アルコール、薬物によるものではない記憶の空白",
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "D2",
+            "type": "radio",
+            "dispname": "9. 自分自身、他者、世界について持続的で誇張された否定的信念がありましたか",
+            "description": "「私は悪い人間だ」「誰も信用できない」「世界は完全に危険だ」などの信念",
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "D3",
+            "type": "radio",
+            "dispname": "10. そのトラウマ的出来事の原因や結果について、自分や他者を責める歪んだ認知がありましたか",
+            "description": "自分や他者への過度な責任帰属や自責的思考",
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "D4",
+            "type": "radio",
+            "dispname": "11. 持続的な否定的感情状態がありましたか",
+            "description": "恐怖、戦慄、怒り、罪悪感、恥などの強い否定的感情が続いた",
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "D5",
+            "type": "radio",
+            "dispname": "12. 重要な活動への興味や参加の著しい減退がありましたか",
+            "description": "以前楽しんでいた活動への興味の喪失",
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "D6",
+            "type": "radio",
+            "dispname": "13. 他者から離脱したり疎外されたりする感情がありましたか",
+            "description": "他の人から距離を感じたり、切り離された感覚",
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "D7",
+            "type": "radio",
+            "dispname": "14. 肯定的感情を体験する能力の持続的な低下がありましたか",
+            "description": "幸福感、満足感、愛情などの肯定的感情を体験する困難",
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "section_e",
+            "type": "subsection",
+            "dispname": "E. 覚醒度と反応性の著しい変化"
+        },
+        {
+            "name": "E1",
+            "type": "radio",
+            "dispname": "15. 易怒性と怒りの爆発がありましたか",
+            "description": "ほとんど誘因なしに、言語的または身体的攻撃として表現される",
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "E2",
+            "type": "radio",
+            "dispname": "16. 無謀で自己破壊的な行動がありましたか",
+            "description": "危険を顧みない行動や自分を害する可能性のある行動",
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "E3",
+            "type": "radio",
+            "dispname": "17. 過度の警戒心がありましたか",
+            "description": "特別な脅威や危険がないときでも、極めて注意深く警戒している状態",
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "E4",
+            "type": "radio",
+            "dispname": "18. 誇張された驚愕反応がありましたか",
+            "description": "通常よりも強い驚愕反応や、回復に時間がかかる驚愕反応",
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "E5",
+            "type": "radio",
+            "dispname": "19. 集中力の問題がありましたか",
+            "description": "集中することの困難、注意を向け続けることができない",
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "E6",
+            "type": "radio",
+            "dispname": "20. 睡眠障害がありましたか",
+            "description": "入眠困難、中途覚醒、早朝覚醒、または不安定な睡眠",
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "section_g",
+            "type": "subsection",
+            "dispname": "G. 機能障害"
+        },
+        {
+            "name": "G1_主観的苦痛",
+            "type": "radio",
+            "dispname": "23. 主観的苦痛",
+            "description": "これらの症状によってどの程度困っていますか",
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "G2_社会機能",
+            "type": "radio",
+            "dispname": "24. 社会機能への影響",
+            "description": "これらの症状が人間関係に影響を与えましたか",
+            "selector": [
+                "影響なし",
+                "軽度の影響",
+                "中等度の影響",
+                "重度の影響",
+                "極度の影響"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "G3_職業機能",
+            "type": "radio",
+            "dispname": "25. 職業・その他重要な機能への影響",
+            "description": "これらの症状が仕事や他の重要な活動に影響を与えましたか",
+            "selector": [
+                "影響なし",
+                "軽度の影響",
+                "中等度の影響",
+                "重度の影響",
+                "極度の影響"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "section_dissociation",
+            "type": "subsection",
+            "dispname": "解離性サブタイプ"
+        },
+        {
+            "name": "離人感",
+            "type": "radio",
+            "dispname": "29. 自分から離れた感覚や、外から自分を観察しているような感覚がありましたか",
+            "description": "夢の中にいるような感覚、自分や身体、時間が非現実的に感じられる",
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "現実感消失",
+            "type": "radio",
+            "dispname": "30. 周囲の状況が非現実的で、夢のようで、遠く、または歪んで体験されることがありましたか",
+            "description": "周りの世界が非現実的に感じられたり、映画のワンシーンのように感じられる",
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "B群合計",
+            "type": "eval",
+            "dispname": "侵入症状群(B群)の合計スコア",
+            "formula": "[[B1.index]] + [[B2.index]] + [[B3.index]] + [[B4.index]] + [[B5.index]]",
+            "noreport": true
+        },
+        {
+            "name": "C群合計",
+            "type": "eval",
+            "dispname": "回避症状群(C群)の合計スコア",
+            "formula": "[[C1.index]] + [[C2.index]]",
+            "noreport": true
+        },
+        {
+            "name": "D群合計",
+            "type": "eval",
+            "dispname": "認知と気分の陰性変化群(D群)の合計スコア",
+            "formula": "[[D1.index]] + [[D2.index]] + [[D3.index]] + [[D4.index]] + [[D5.index]] + [[D6.index]] + [[D7.index]]",
+            "noreport": true
+        },
+        {
+            "name": "E群合計",
+            "type": "eval",
+            "dispname": "覚醒度と反応性の変化群(E群)の合計スコア",
+            "formula": "[[E1.index]] + [[E2.index]] + [[E3.index]] + [[E4.index]] + [[E5.index]] + [[E6.index]]",
+            "noreport": true
+        },
+        {
+            "name": "CAPS5総合計",
+            "type": "eval",
+            "dispname": "CAPS-5総合計スコア 20症状項目の合計(0-80点)",
+            "formula": "[[B群合計]] + [[C群合計]] + [[D群合計]] + [[E群合計]]"
+        },
+        {
+            "name": "解離症状合計",
+            "type": "eval",
+            "dispname": "解離症状合計スコア 離人感と現実感消失の合計",
+            "formula": "[[離人感.index]] + [[現実感消失.index]]"
+        },
+        {
+            "name": "重症度判定",
+            "type": "eval",
+            "dispname": "重症度レベル",
+            "formula": "[[CAPS5総合計]] >= 60 ? '極度' : [[CAPS5総合計]] >= 35 ? '重度' : [[CAPS5総合計]] >= 23 ? '中等度' : [[CAPS5総合計]] >= 1 ? '軽度' : '症状なし'"
+        },
+        {
+            "name": "診断判定",
+            "type": "eval",
+            "dispname": "PTSD診断の可能性",
+            "formula": "[[CAPS5総合計]] < 12 ? '診断不可（寛解レベル）' : [[CAPS5総合計]] >= 26 ? '診断可能性高（専門家評価要）' : [[CAPS5総合計]] >= 23 ? '診断可能性あり（専門家評価要）' : '閾値下（経過観察推奨）'"
+        },
+        {
+            "name": "Warning: 治療必要性",
+            "type": "warning",
+            "formula": "[[CAPS5総合計]] >= 23"
+        },
+        {
+            "name": "Emergency: 緊急対応",
+            "type": "emergency",
+            "formula": "[[CAPS5総合計]] >= 35"
+        }
+    ]
+}

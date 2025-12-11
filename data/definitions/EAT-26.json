@@ -1,0 +1,443 @@
+{
+    "title": "EAT-26 摂食態度調査票",
+    "_comment": [
+        "EAT-26: Eating Attitudes Test-26（摂食態度調査票）",
+        "26項目の摂食障害スクリーニング尺度",
+        "原著: Garner et al. (1982). Psychological Medicine, 12(4), 871-878",
+        "公式サイト: https://www.eat-26.com/",
+        "カットオフ値: 日本では17点以上を推奨（東大2024年研究）、従来15点（中井2003）、原著20点",
+        "3因子構造: ダイエット、過食と食への執着、経口コントロール",
+        "6段階評価: いつも（3点）、非常に頻繁に（2点）、頻繁に（1点）、時々（0点）、まれに（0点）、決して（0点）",
+        "項目26は逆転採点項目"
+    ],
+    "description": [
+        "この質問票は、摂食障害に関連する態度や行動をスクリーニングするために開発されました。",
+        "あなたの食事に対する態度や行動について、最もあてはまるものを選択してください。",
+        "正直にお答えください。正解や不正解はありません。"
+    ],
+    "fields": [
+        {
+            "type": "radio",
+            "name": "Q01",
+            "dispname": "太ることを恐れている",
+            "required": true,
+            "selector": [
+                "決して",
+                "まれに",
+                "時々",
+                "頻繁に",
+                "非常に頻繁に",
+                "いつも"
+            ],
+            "selectoridx": "0|0|0|1|2|3"
+        },
+        {
+            "type": "radio",
+            "name": "Q02",
+            "dispname": "満腹感があっても食べ続けてしまう",
+            "required": true,
+            "selector": [
+                "決して",
+                "まれに",
+                "時々",
+                "頻繁に",
+                "非常に頻繁に",
+                "いつも"
+            ],
+            "selectoridx": "0|0|0|1|2|3"
+        },
+        {
+            "type": "radio",
+            "name": "Q03",
+            "dispname": "食べ物への執着が心配である",
+            "required": true,
+            "selector": [
+                "決して",
+                "まれに",
+                "時々",
+                "頻繁に",
+                "非常に頻繁に",
+                "いつも"
+            ],
+            "selectoridx": "0|0|0|1|2|3"
+        },
+        {
+            "type": "radio",
+            "name": "Q04",
+            "dispname": "食べるのをコントロールできないような食べ方をしたことがある",
+            "required": true,
+            "selector": [
+                "決して",
+                "まれに",
+                "時々",
+                "頻繁に",
+                "非常に頻繁に",
+                "いつも"
+            ],
+            "selectoridx": "0|0|0|1|2|3"
+        },
+        {
+            "type": "radio",
+            "name": "Q05",
+            "dispname": "食べ物を小さく切って食べる",
+            "required": true,
+            "selector": [
+                "決して",
+                "まれに",
+                "時々",
+                "頻繁に",
+                "非常に頻繁に",
+                "いつも"
+            ],
+            "selectoridx": "0|0|0|1|2|3"
+        },
+        {
+            "type": "radio",
+            "name": "Q06",
+            "dispname": "食べ物のカロリーを気にする",
+            "required": true,
+            "selector": [
+                "決して",
+                "まれに",
+                "時々",
+                "頻繁に",
+                "非常に頻繁に",
+                "いつも"
+            ],
+            "selectoridx": "0|0|0|1|2|3"
+        },
+        {
+            "type": "radio",
+            "name": "Q07",
+            "dispname": "炭水化物の多い食べ物（パン、米、ポテトなど）を避ける",
+            "required": true,
+            "selector": [
+                "決して",
+                "まれに",
+                "時々",
+                "頻繁に",
+                "非常に頻繁に",
+                "いつも"
+            ],
+            "selectoridx": "0|0|0|1|2|3"
+        },
+        {
+            "type": "radio",
+            "name": "Q08",
+            "dispname": "他の人が私にもっと食べるよう望んでいると感じる",
+            "required": true,
+            "selector": [
+                "決して",
+                "まれに",
+                "時々",
+                "頻繁に",
+                "非常に頻繁に",
+                "いつも"
+            ],
+            "selectoridx": "0|0|0|1|2|3"
+        },
+        {
+            "type": "radio",
+            "name": "Q09",
+            "dispname": "食べた後に吐く",
+            "required": true,
+            "selector": [
+                "決して",
+                "まれに",
+                "時々",
+                "頻繁に",
+                "非常に頻繁に",
+                "いつも"
+            ],
+            "selectoridx": "0|0|0|1|2|3"
+        },
+        {
+            "type": "radio",
+            "name": "Q10",
+            "dispname": "食べた分だけ太ると思う",
+            "required": true,
+            "selector": [
+                "決して",
+                "まれに",
+                "時々",
+                "頻繁に",
+                "非常に頻繁に",
+                "いつも"
+            ],
+            "selectoridx": "0|0|0|1|2|3"
+        },
+        {
+            "type": "radio",
+            "name": "Q11",
+            "dispname": "ダイエットに夢中である",
+            "required": true,
+            "selector": [
+                "決して",
+                "まれに",
+                "時々",
+                "頻繁に",
+                "非常に頻繁に",
+                "いつも"
+            ],
+            "selectoridx": "0|0|0|1|2|3"
+        },
+        {
+            "type": "radio",
+            "name": "Q12",
+            "dispname": "運動すると気分が良くなるので、食べ過ぎた分を燃焼させるために運動をする",
+            "required": true,
+            "selector": [
+                "決して",
+                "まれに",
+                "時々",
+                "頻繁に",
+                "非常に頻繁に",
+                "いつも"
+            ],
+            "selectoridx": "0|0|0|1|2|3"
+        },
+        {
+            "type": "radio",
+            "name": "Q13",
+            "dispname": "他の人は私がやせすぎだと思っている",
+            "required": true,
+            "selector": [
+                "決して",
+                "まれに",
+                "時々",
+                "頻繁に",
+                "非常に頻繁に",
+                "いつも"
+            ],
+            "selectoridx": "0|0|0|1|2|3"
+        },
+        {
+            "type": "radio",
+            "name": "Q14",
+            "dispname": "体脂肪について心配している",
+            "required": true,
+            "selector": [
+                "決して",
+                "まれに",
+                "時々",
+                "頻繁に",
+                "非常に頻繁に",
+                "いつも"
+            ],
+            "selectoridx": "0|0|0|1|2|3"
+        },
+        {
+            "type": "radio",
+            "name": "Q15",
+            "dispname": "他の人より食べるのに時間がかかる",
+            "required": true,
+            "selector": [
+                "決して",
+                "まれに",
+                "時々",
+                "頻繁に",
+                "非常に頻繁に",
+                "いつも"
+            ],
+            "selectoridx": "0|0|0|1|2|3"
+        },
+        {
+            "type": "radio",
+            "name": "Q16",
+            "dispname": "糖分の多い食べ物を避ける",
+            "required": true,
+            "selector": [
+                "決して",
+                "まれに",
+                "時々",
+                "頻繁に",
+                "非常に頻繁に",
+                "いつも"
+            ],
+            "selectoridx": "0|0|0|1|2|3"
+        },
+        {
+            "type": "radio",
+            "name": "Q17",
+            "dispname": "ダイエット食品を食べる",
+            "required": true,
+            "selector": [
+                "決して",
+                "まれに",
+                "時々",
+                "頻繁に",
+                "非常に頻繁に",
+                "いつも"
+            ],
+            "selectoridx": "0|0|0|1|2|3"
+        },
+        {
+            "type": "radio",
+            "name": "Q18",
+            "dispname": "食べ物が私の生活をコントロールしていると感じる",
+            "required": true,
+            "selector": [
+                "決して",
+                "まれに",
+                "時々",
+                "頻繁に",
+                "非常に頻繁に",
+                "いつも"
+            ],
+            "selectoridx": "0|0|0|1|2|3"
+        },
+        {
+            "type": "radio",
+            "name": "Q19",
+            "dispname": "食事において自制心を示す",
+            "required": true,
+            "selector": [
+                "決して",
+                "まれに",
+                "時々",
+                "頻繁に",
+                "非常に頻繁に",
+                "いつも"
+            ],
+            "selectoridx": "0|0|0|1|2|3"
+        },
+        {
+            "type": "radio",
+            "name": "Q20",
+            "dispname": "他の人が私に食べるよう圧力をかけてくると感じる",
+            "required": true,
+            "selector": [
+                "決して",
+                "まれに",
+                "時々",
+                "頻繁に",
+                "非常に頻繁に",
+                "いつも"
+            ],
+            "selectoridx": "0|0|0|1|2|3"
+        },
+        {
+            "type": "radio",
+            "name": "Q21",
+            "dispname": "食べることに多くの時間と思考を費やしている",
+            "required": true,
+            "selector": [
+                "決して",
+                "まれに",
+                "時々",
+                "頻繁に",
+                "非常に頻繁に",
+                "いつも"
+            ],
+            "selectoridx": "0|0|0|1|2|3"
+        },
+        {
+            "type": "radio",
+            "name": "Q22",
+            "dispname": "甘いものを食べた後に居心地が悪く感じる",
+            "required": true,
+            "selector": [
+                "決して",
+                "まれに",
+                "時々",
+                "頻繁に",
+                "非常に頻繁に",
+                "いつも"
+            ],
+            "selectoridx": "0|0|0|1|2|3"
+        },
+        {
+            "type": "radio",
+            "name": "Q23",
+            "dispname": "ダイエットをしている",
+            "required": true,
+            "selector": [
+                "決して",
+                "まれに",
+                "時々",
+                "頻繁に",
+                "非常に頻繁に",
+                "いつも"
+            ],
+            "selectoridx": "0|0|0|1|2|3"
+        },
+        {
+            "type": "radio",
+            "name": "Q24",
+            "dispname": "空腹の状態でいることが好きだ",
+            "required": true,
+            "selector": [
+                "決して",
+                "まれに",
+                "時々",
+                "頻繁に",
+                "非常に頻繁に",
+                "いつも"
+            ],
+            "selectoridx": "0|0|0|1|2|3"
+        },
+        {
+            "type": "radio",
+            "name": "Q25",
+            "dispname": "食後に吐きたいと思う",
+            "required": true,
+            "selector": [
+                "決して",
+                "まれに",
+                "時々",
+                "頻繁に",
+                "非常に頻繁に",
+                "いつも"
+            ],
+            "selectoridx": "0|0|0|1|2|3"
+        },
+        {
+            "type": "radio",
+            "name": "Q26",
+            "dispname": "新しい豊富な食べ物を試すことが楽しい",
+            "required": true,
+            "selector": [
+                "いつも",
+                "非常に頻繁に",
+                "頻繁に",
+                "時々",
+                "まれに",
+                "決して"
+            ],
+            "selectoridx": "0|0|0|1|2|3"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "type": "eval",
+            "name": "eat26_total_score",
+            "dispname": "EAT-26合計得点",
+            "formula": "[[Q01.index]] + [[Q02.index]] + [[Q03.index]] + [[Q04.index]] + [[Q05.index]] + [[Q06.index]] + [[Q07.index]] + [[Q08.index]] + [[Q09.index]] + [[Q10.index]] + [[Q11.index]] + [[Q12.index]] + [[Q13.index]] + [[Q14.index]] + [[Q15.index]] + [[Q16.index]] + [[Q17.index]] + [[Q18.index]] + [[Q19.index]] + [[Q20.index]] + [[Q21.index]] + [[Q22.index]] + [[Q23.index]] + [[Q24.index]] + [[Q25.index]] + [[Q26.index]]"
+        },
+        {
+            "type": "eval",
+            "name": "eat26_dieting_score",
+            "dispname": "ダイエット下位尺度得点",
+            "formula": "[[Q01.index]] + [[Q06.index]] + [[Q07.index]] + [[Q10.index]] + [[Q11.index]] + [[Q12.index]] + [[Q14.index]] + [[Q16.index]] + [[Q17.index]] + [[Q22.index]] + [[Q23.index]] + [[Q24.index]] + [[Q26.index]]"
+        },
+        {
+            "type": "eval",
+            "name": "eat26_bulimia_score",
+            "dispname": "過食と食への執着下位尺度得点",
+            "formula": "[[Q03.index]] + [[Q04.index]] + [[Q09.index]] + [[Q18.index]] + [[Q21.index]] + [[Q25.index]]"
+        },
+        {
+            "type": "eval",
+            "name": "eat26_oral_control_score",
+            "dispname": "経口コントロール下位尺度得点",
+            "formula": "[[Q02.index]] + [[Q05.index]] + [[Q08.index]] + [[Q13.index]] + [[Q15.index]] + [[Q19.index]] + [[Q20.index]]"
+        },
+        {
+            "type": "eval",
+            "name": "eat26_risk_classification",
+            "dispname": "リスク分類",
+            "formula": "[[eat26_total_score]] >= 17 ? \"摂食障害リスクあり（要詳細評価）\" : \"摂食障害リスク低い\""
+        }
+    ]
+}

@@ -1,0 +1,115 @@
+{
+    "_comment": [
+        "喘息コントロールテスト（ACT: Asthma Control Test）",
+        "原典：Nathan RA, et al. Development of the asthma control test: a survey for assessing asthma control. J Allergy Clin Immunol. 2004;113(1):59-65.",
+        "日本語版：東田有智, 久保裕一, 岩永賢司, 他. 日本語版Asthma Control Test 喘息コントロールテストによる喘息コントロール状態の判定に関する有用性の検討. アレルギー・免疫. 2006;13:716-722.",
+        "GSK公式サイト：https://videos.gskstatic.com/pharma/Health/Japan/asthma/support-tools/act-adult/index.html",
+        "環境再生保全機構：https://www.erca.go.jp/yobou/zensoku/basic/adult/control/condition/control.html"
+    ],
+    "title": "ACT 喘息コントロールテスト",
+    "description": [
+        "この質問票は、過去4週間の喘息のコントロール状態を評価するものです。",
+        "5つの質問に答えることで、現在の喘息のコントロール状態を25点満点で評価できます。",
+        "12歳以上の喘息患者さんが対象です。"
+    ],
+    "responsible_person": [
+        "呼吸器内科医師"
+    ],
+    "dept_in_charge": "呼吸器内科",
+    "submit_button_title": "回答を送信",
+    "fields": [
+        {
+            "dispname": "過去4週間の仕事や家事への影響",
+            "name": "Q1",
+            "type": "radio",
+            "required": true,
+            "description": "この4週間に、喘息のせいで職場や家庭で思うように仕事がはかどらなかったことは時間的にどの程度ありましたか",
+            "selector": [
+                "まったくなかった",
+                "ほとんどなかった",
+                "ときどきあった",
+                "しばしばあった",
+                "いつもあった"
+            ],
+            "selectoridx": "5|4|3|2|1"
+        },
+        {
+            "dispname": "過去4週間の息切れ",
+            "name": "Q2",
+            "type": "radio",
+            "required": true,
+            "description": "この4週間でどのくらい息切れしましたか",
+            "selector": [
+                "まったくなかった",
+                "月に1、2回程度",
+                "週に1回程度",
+                "週に2、3回程度",
+                "毎日のように"
+            ],
+            "selectoridx": "5|4|3|2|1"
+        },
+        {
+            "dispname": "過去4週間の夜間症状",
+            "name": "Q3",
+            "type": "radio",
+            "required": true,
+            "description": "この4週間で、喘息の症状（ゼイゼイ、咳、息切れ、胸が苦しい、痛い）のせいで夜中に目が覚めたり、いつもより朝早く目が覚めてしまうことがどのくらいありましたか",
+            "selector": [
+                "まったくなかった",
+                "月に1、2回程度",
+                "週に1回程度",
+                "週に2、3回程度",
+                "週に4回以上"
+            ],
+            "selectoridx": "5|4|3|2|1"
+        },
+        {
+            "dispname": "過去4週間の救急薬使用",
+            "name": "Q4",
+            "type": "radio",
+            "required": true,
+            "description": "この4週間で、発作止めの吸入薬（サルタノールなど）をどのくらい使いましたか",
+            "selector": [
+                "まったく使わなかった",
+                "月に1、2回程度",
+                "週に1回程度",
+                "週に2、3回程度",
+                "毎日のように"
+            ],
+            "selectoridx": "5|4|3|2|1"
+        },
+        {
+            "dispname": "過去4週間の喘息コントロール自己評価",
+            "name": "Q5",
+            "type": "radio",
+            "required": true,
+            "description": "この4週間で、自分自身の喘息をどの程度コントロールできたと思いますか",
+            "selector": [
+                "全くコントロールできていない",
+                "あまりコントロールできていない",
+                "ある程度コントロールできている",
+                "よくコントロールできている",
+                "完全にコントロールできている"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "ACT合計スコア",
+            "type": "eval",
+            "formula": "[[Q1.index]] + [[Q2.index]] + [[Q3.index]] + [[Q4.index]] + [[Q5.index]]"
+        },
+        {
+            "name": "ACTコントロール判定",
+            "type": "eval",
+            "formula": "[[ACT合計スコア]] == 25 ? 'トータルコントロール（完全にコントロールされた状態）' : ([[ACT合計スコア]] >= 20 ? 'ウェルコントロール（良好にコントロールされた状態）' : 'コントロール不良（コントロールされていない状態）')"
+        },
+        {
+            "name": "Warning コントロール不良 (ACT合計スコア < 20)",
+            "formula": "[[ACT合計スコア]] < 20",
+            "type": "warning"
+        }
+    ]
+}

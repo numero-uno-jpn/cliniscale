@@ -1,0 +1,227 @@
+{
+    "_comment": [
+        "Oxford Knee Score (OKS) - 膝関節機能評価問診票",
+        "原著: Dawson J, Fitzpatrick R, Murray D, Carr A. Questionnaire on the perceptions of patients about total knee replacement. J Bone Joint Surg Br. 1998 Jan;80(1):63-9.",
+        "URL: https://innovation.ox.ac.uk/outcome-measures/oxford-knee-score-oks/",
+        "PubMed: https://pubmed.ncbi.nlm.nih.gov/9460935/",
+        "日本語版開発: 上杉らによる日本語版が開発され、信頼性・妥当性が確認されている",
+        "著作権: Oxford University Innovationが管理。非商用利用は無料だが使用許諾取得が必要",
+        "スコア範囲: 0-48点 (高得点ほど良好)",
+        "評価期間: 過去4週間",
+        "構成: 機能項目5問 (Q2,3,7,11,12)、疼痛項目7問 (Q1,4,5,6,8,9,10)"
+    ],
+    "title": "Oxford Knee Score (OKS) - 膝関節機能評価",
+    "description": [
+        "膝関節の痛みと機能を評価する12項目の質問票です。",
+        "過去4週間の状態について回答してください。"
+    ],
+    "fields": [
+        {
+            "dispname": "Q1. 膝関節の痛み",
+            "name": "Q1",
+            "type": "radio",
+            "required": true,
+            "description": "過去4週間に、通常感じていた膝関節の痛みをどのように表現しますか",
+            "selector": [
+                "なし",
+                "非常に軽度",
+                "軽度",
+                "中等度",
+                "重度"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "Q2. 身体を洗う・拭く動作",
+            "name": "Q2",
+            "type": "radio",
+            "required": true,
+            "description": "過去4週間に、膝関節のために身体全体を洗ったり拭いたりすることに困難がありましたか",
+            "selector": [
+                "全く困難なし",
+                "ごくわずかな困難",
+                "中等度の困難",
+                "極めて困難",
+                "不可能"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "Q3. 車や公共交通機関の乗り降り",
+            "name": "Q3",
+            "type": "radio",
+            "required": true,
+            "description": "過去4週間に、膝関節のために車や公共交通機関の乗り降りに困難がありましたか (普段利用するもの)",
+            "selector": [
+                "全く困難なし",
+                "ごくわずかな困難",
+                "中等度の困難",
+                "極めて困難",
+                "不可能"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "Q4. 歩行可能時間 (痛みが重度になるまで)",
+            "name": "Q4",
+            "type": "radio",
+            "required": true,
+            "description": "過去4週間に、膝関節の痛みが重度になる前にどのくらい歩くことができましたか (杖の使用の有無は問わない)",
+            "selector": [
+                "痛みなし / 60分以上",
+                "16-60分",
+                "5-15分",
+                "家の中のみ",
+                "全く歩けない - 歩行時に重度の痛み"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "Q5. 食後に椅子から立ち上がる",
+            "name": "Q5",
+            "type": "radio",
+            "required": true,
+            "description": "過去4週間に、食事の後 (テーブルに座った状態から)、膝関節のために椅子から立ち上がるのはどの程度痛みがありましたか",
+            "selector": [
+                "全く痛みなし",
+                "わずかに痛む",
+                "中等度に痛む",
+                "非常に痛む",
+                "耐えられない"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "Q6. 歩行時の跛行",
+            "name": "Q6",
+            "type": "radio",
+            "required": true,
+            "description": "過去4週間に、膝関節のために歩行時に跛行 (びっこを引く) がありましたか",
+            "selector": [
+                "まれ / 全くなし",
+                "時々、または歩き始めのみ",
+                "しばしば、歩き始めだけでなく",
+                "ほとんどの時間",
+                "常に"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "Q7. 膝を曲げてしゃがむ・立ち上がる",
+            "name": "Q7",
+            "type": "radio",
+            "required": true,
+            "description": "過去4週間に、膝を曲げてしゃがみ、その後立ち上がることができましたか",
+            "selector": [
+                "はい、容易にできる",
+                "少しの困難あり",
+                "中等度の困難あり",
+                "極めて困難",
+                "いいえ、不可能"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "Q8. 夜間の膝関節痛",
+            "name": "Q8",
+            "type": "radio",
+            "required": true,
+            "description": "過去4週間に、夜間ベッドで膝関節の痛みに悩まされましたか",
+            "selector": [
+                "全くなし",
+                "1-2晩のみ",
+                "何晩か",
+                "ほとんどの晩",
+                "毎晩"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "Q9. 膝関節の痛みによる仕事への支障",
+            "name": "Q9",
+            "type": "radio",
+            "required": true,
+            "description": "過去4週間に、膝関節の痛みは通常の仕事 (家事を含む) にどの程度支障をきたしましたか",
+            "selector": [
+                "全く支障なし",
+                "少し",
+                "中等度",
+                "大いに",
+                "完全に"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "Q10. 膝が突然崩れる感覚",
+            "name": "Q10",
+            "type": "radio",
+            "required": true,
+            "description": "過去4週間に、膝が突然崩れる、またはがくっとする感覚がありましたか",
+            "selector": [
+                "まれ / 全くなし",
+                "時々、または歩き始めのみ",
+                "しばしば、歩き始めだけでなく",
+                "ほとんどの時間",
+                "常に"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "Q11. 買い物",
+            "name": "Q11",
+            "type": "radio",
+            "required": true,
+            "description": "過去4週間に、一人で買い物をすることができましたか",
+            "selector": [
+                "はい、容易にできる",
+                "少しの困難あり",
+                "中等度の困難あり",
+                "極めて困難",
+                "いいえ、不可能"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "Q12. 階段を下りる",
+            "name": "Q12",
+            "type": "radio",
+            "required": true,
+            "description": "過去4週間に、階段を下りることができましたか",
+            "selector": [
+                "はい、容易にできる",
+                "少しの困難あり",
+                "中等度の困難あり",
+                "極めて困難",
+                "いいえ、不可能"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "合計スコア",
+            "dispname": "OKS合計点 (0-48点)",
+            "type": "eval",
+            "formula": "[[Q1.index]] + [[Q2.index]] + [[Q3.index]] + [[Q4.index]] + [[Q5.index]] + [[Q6.index]] + [[Q7.index]] + [[Q8.index]] + [[Q9.index]] + [[Q10.index]] + [[Q11.index]] + [[Q12.index]]"
+        },
+        {
+            "name": "疼痛サブスコア",
+            "type": "eval",
+            "formula": "[[Q1.index]] + [[Q4.index]] + [[Q5.index]] + [[Q6.index]] + [[Q8.index]] + [[Q9.index]] + [[Q10.index]]",
+            "noreport": true
+        },
+        {
+            "name": "機能サブスコア",
+            "type": "eval",
+            "formula": "[[Q2.index]] + [[Q3.index]] + [[Q7.index]] + [[Q11.index]] + [[Q12.index]]",
+            "noreport": true
+        },
+        {
+            "name": "重症度分類",
+            "dispname": "膝関節機能の状態評価",
+            "type": "eval",
+            "formula": "[[合計スコア]] >= 40 ? '良好 (40-48点)' : [[合計スコア]] >= 30 ? '軽度-中等度の問題 (30-39点)' : [[合計スコア]] >= 20 ? '中等度-重度の問題 (20-29点)' : '重度の問題 (0-19点)'"
+        }
+    ]
+}

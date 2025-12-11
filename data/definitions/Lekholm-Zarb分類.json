@@ -1,0 +1,161 @@
+{
+  "_comment": [
+    "Lekholm-Zarb分類 - インプラント治療における顎骨骨質評価スケール",
+    "参考文献: Lekholm U, Zarb GA. Patient selection and preparation. In: Brånemark PI, Zarb GA, Albrektsson T, eds. Tissue Integrated Prostheses: Osseointegration in Clinical Dentistry. Quintessence Publishing 1985: 199-210",
+    "日本口腔インプラント学会: 口腔インプラント治療指針2020",
+    "原典に忠実に再現したインプラント専用骨質評価システム"
+  ],
+  "title": "Lekholm-Zarb インプラント治療における顎骨骨質評価スケール",
+  "description": [
+    "インプラント治療における顎骨の骨質を評価するための分類システムです",
+    "皮質骨と海綿骨の構成により4段階で骨質を分類し、治療計画の参考とします"
+  ],
+  "responsible_person": [
+    "歯科医師"
+  ],
+  "dept_in_charge": "歯科・口腔外科",
+  "contact": "担当歯科医師",
+  "submit_button_title": "評価結果を送信",
+  "fields": [
+    {
+      "dispname": "評価部位",
+      "name": "評価部位",
+      "type": "radio",
+      "required": true,
+      "selector": "上顎前歯部|上顎臼歯部|下顎前歯部|下顎臼歯部",
+      "description": "骨質評価を行う顎骨の部位を選択してください"
+    },
+    {
+      "dispname": "評価方法",
+      "name": "評価方法",
+      "type": "radio",
+      "required": true,
+      "selector": "術中ドリリング感覚|CT画像評価|パノラマX線写真|その他",
+      "description": "骨質判定に使用した評価方法を選択してください"
+    },
+    {
+      "dispname": "Lekholm-Zarb骨質分類",
+      "type": "subsection"
+    },
+    {
+      "dispname": "骨質タイプ",
+      "name": "骨質タイプ",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "完全に均質な皮質骨で構成される",
+        "厚い皮質骨層が密な海綿骨を取り囲む",
+        "薄い皮質骨層が密な海綿骨を取り囲む",
+        "薄い皮質骨層が低密度の海綿骨を取り囲む"
+      ],
+      "selectoridx": "1|2|3|4",
+      "description": "皮質骨と海綿骨の構成に基づいて骨質タイプを選択してください"
+    },
+    {
+      "dispname": "ドリリング時の感覚",
+      "name": "ドリリング感覚",
+      "type": "radio",
+      "selector": [
+        "非常に硬い - 象牙質様の感触",
+        "硬い - 緻密な抵抗感",
+        "普通 - 適度な抵抗感",
+        "軟らかい - 発泡スチロール様の感触"
+      ],
+      "description": "ドリリング時に感じた骨の硬さを選択してください"
+    },
+    {
+      "dispname": "初期固定の評価",
+      "name": "初期固定",
+      "type": "radio",
+      "selector": "良好|やや良好|やや不良|不良",
+      "description": "インプラント埋入時の初期固定性を評価してください"
+    },
+    {
+      "dispname": "挿入トルク値",
+      "name": "挿入トルク",
+      "type": "text",
+      "postfix": "Ncm",
+      "inputmode": "numeric",
+      "testrange": [
+        10,
+        80
+      ],
+      "description": "インプラント挿入時のトルク値を入力してください (半角数字、例: 35)"
+    },
+    {
+      "dispname": "追加所見",
+      "type": "subsection"
+    },
+    {
+      "dispname": "皮質骨の厚さ",
+      "name": "皮質骨厚さ",
+      "type": "text",
+      "postfix": "mm",
+      "inputmode": "decimal",
+      "testrange": [
+        0,
+        5
+      ],
+      "description": "皮質骨の厚さを測定値で入力してください (半角数字、例: 2.5)"
+    },
+    {
+      "dispname": "海綿骨の密度",
+      "name": "海綿骨密度",
+      "type": "radio",
+      "selector": "密|中等度|疎",
+      "description": "海綿骨の密度を評価してください"
+    },
+    {
+      "dispname": "特記事項",
+      "name": "特記事項",
+      "type": "textarea",
+      "rows": 3,
+      "description": "骨質評価に関する特記事項や補足情報があれば記載してください"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "骨質スコア",
+      "type": "eval",
+      "formula": "[[骨質タイプ.index]]",
+      "dispname": "Lekholm-Zarb分類による骨質スコア [1-4]"
+    },
+    {
+      "name": "骨質分類",
+      "type": "eval",
+      "formula": "[[骨質タイプ.index]] == 1 ? 'タイプ1' : ( [[骨質タイプ.index]] == 2 ? 'タイプ2' : ( [[骨質タイプ.index]] == 3 ? 'タイプ3' : 'タイプ4' ) )",
+      "dispname": "骨質分類タイプ"
+    },
+    {
+      "name": "インプラント適合性",
+      "type": "eval",
+      "formula": "[[骨質タイプ.index]] == 2 || [[骨質タイプ.index]] == 3 ? '適合' : ( [[骨質タイプ.index]] == 1 ? '要注意 - 過硬化リスク' : '要注意 - 初期固定困難リスク' )",
+      "dispname": "インプラント治療への適合性評価"
+    },
+    {
+      "name": "治療リスク",
+      "type": "eval",
+      "formula": "[[骨質タイプ.index]] == 1 ? '高リスク - 過硬化・熱損傷' : ( [[骨質タイプ.index]] == 4 ? '高リスク - 初期固定不良' : '標準リスク' )",
+      "dispname": "骨質に基づく治療リスクの評価"
+    },
+    {
+      "name": "予測成功率",
+      "type": "eval",
+      "formula": "[[骨質タイプ.index]] == 1 ? '97.6%' : ( [[骨質タイプ.index]] == 2 ? '96.2%' : ( [[骨質タイプ.index]] == 3 ? '96.5%' : '88.8%' ) )",
+      "dispname": "骨質タイプに基づく文献報告の成功率"
+    },
+    {
+      "name": "Warning: 骨質タイプ1または4",
+      "formula": "[[骨質タイプ.index]] == 1 || [[骨質タイプ.index]] == 4",
+      "type": "warning",
+      "dispname": "骨質タイプ1または4の場合に注意喚起"
+    },
+    {
+      "name": "Emergency: 初期固定不良",
+      "formula": "{{初期固定}} == '不良'",
+      "type": "emergency",
+      "dispname": "初期固定不良の場合の緊急対応指示"
+    }
+  ]
+}

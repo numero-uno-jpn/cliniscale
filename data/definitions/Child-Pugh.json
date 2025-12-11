@@ -1,0 +1,91 @@
+{
+    "_comment": [
+        "Child-Pugh分類 肝硬変の重症度評価スコア",
+        "参考文献: Child CG, Turcotte JG. Surgery and portal hypertension. Major Probl Clin Surg. 1964;1:1-85.",
+        "参考文献: Pugh RN, Murray-Lyon IM, Dawson JL, Pietroni MC, Williams R. Transection of the oesophagus for bleeding oesophageal varices. Br J Surg. 1973;60(8):646-9.",
+        "参考URL: https://www.jsh.or.jp/medical/guidelines/medicalinfo/hepatic_reserve.html"
+    ],
+    "title": "Child-Pugh 分類",
+    "description": [
+        "肝硬変などの慢性肝疾患の重症度を評価するスコアリングシステムです。",
+        "5つの臨床指標を用いて評価し、肝機能の予後予測に使用されます。"
+    ],
+    "fields": [
+        {
+            "dispname": "肝性脳症",
+            "name": "脳症",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "なし|軽度（Grade 1-2）|高度（Grade 3-4）",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "腹水",
+            "name": "腹水",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "なし|軽度（コントロール容易）|中等度以上（コントロール困難）",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "血清ビリルビン値",
+            "name": "ビリルビン値",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "2.0mg/dL未満|2.0-3.0mg/dL|3.0mg/dL超",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "血清アルブミン値",
+            "name": "アルブミン値",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "3.5g/dL超|2.8-3.5g/dL|2.8g/dL未満",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "プロトロンビン時間（INR）",
+            "name": "INR",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "1.7未満|1.7-2.3|2.3超",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "合計スコア",
+            "type": "eval",
+            "formula": "[[脳症.index]] + [[腹水.index]] + [[ビリルビン値.index]] + [[アルブミン値.index]] + [[INR.index]]"
+        },
+        {
+            "name": "重症度分類",
+            "type": "eval",
+            "formula": "[[合計スコア]] <= 6 ? 'Class A（軽度、代償性肝硬変）' : ( [[合計スコア]] <= 9 ? 'Class B（中等度、非代償性肝硬変）' : 'Class C（重度、非代償性肝硬変）' )",
+            "dispname": "重症度分類 合計5-6点: Class A（軽度）、7-9点: Class B（中等度）、10-15点: Class C（重度）"
+        },
+        {
+            "name": "予後評価",
+            "type": "eval",
+            "formula": "[[合計スコア]] <= 6 ? '良好な予後（1年死亡率約0%、手術死亡率10%）' : ( [[合計スコア]] <= 9 ? '中等度の予後（1年死亡率約20%、手術死亡率30%）' : '不良な予後（1年死亡率約55%、手術死亡率70-80%）' )"
+        },
+        {
+            "name": "Warning: 中等度リスク判定 合計スコア >= 7",
+            "type": "warning",
+            "formula": "[[合計スコア]] >= 7",
+            "description": "Class B（中等度）: 医学的管理の強化が必要"
+        },
+        {
+            "name": "Emergency: 高リスク判定 合計スコア >= 10",
+            "type": "emergency",
+            "formula": "[[合計スコア]] >= 10",
+            "description": "Class C（重度）: 肝移植の適応評価が必要"
+        }
+    ]
+}

@@ -1,0 +1,152 @@
+{
+  "_comment": [
+    "Modified Lanza Score - NSAID誘発胃粘膜傷害評価スケール",
+    "開発: 小林絢三、水島裕（1990年、日本）",
+    "原典: Lanza et al. (1984年) - J Clin Pharmacol 24:89-95, 1984",
+    "用途: NSAIDによる内視鏡的胃粘膜傷害の程度を評価",
+    "参考文献: ガストロ用語集2023「胃と腸」47巻5号",
+    "評価範囲: 0-5の6段階評価",
+    "対象: 内視鏡検査実施者、臨床医師",
+    "注: Original Lanza scoreは1984年発表（1971年ではない）"
+  ],
+  "title": "Modified Lanza NSAID誘発胃粘膜傷害評価スケール",
+  "description": [
+    "NSAIDによる胃粘膜傷害の程度を評価する内視鏡スケールです。",
+    "内視鏡観察に基づいて胃粘膜の傷害度を0から5の6段階で評価します。"
+  ],
+  "submit_button_title": "評価を送信",
+  "fields": [
+    {
+      "type": "subsection",
+      "dispname": "患者情報"
+    },
+    {
+      "name": "NSAIDs使用状況",
+      "dispname": "NSAID使用状況",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "使用中",
+        "中止後1週間以内",
+        "中止後1週間以上",
+        "使用歴なし"
+      ],
+      "inline": false,
+      "description": "NSAIDの現在の使用状況をご選択ください"
+    },
+    {
+      "name": "NSAID種類",
+      "dispname": "使用中または使用していたNSAID",
+      "type": "text",
+      "parentname": "NSAIDs使用状況",
+      "parentsel": [
+        "使用中",
+        "中止後1週間以内",
+        "中止後1週間以上"
+      ],
+      "description": "薬剤名をご記入ください（例: ロキソプロフェン、ジクロフェナク）"
+    },
+    {
+      "name": "使用期間",
+      "dispname": "NSAID使用期間",
+      "type": "text",
+      "parentname": "NSAIDs使用状況",
+      "parentsel": [
+        "使用中",
+        "中止後1週間以内",
+        "中止後1週間以上"
+      ],
+      "postfix": "日間",
+      "inputmode": "numeric",
+      "description": "使用開始からの総日数をご記入ください"
+    },
+    {
+      "type": "subsection",
+      "dispname": "内視鏡評価"
+    },
+    {
+      "name": "胃粘膜評価",
+      "dispname": "胃粘膜の内視鏡所見",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "正常または軽微な発赤",
+        "2個以下のびらんまたは出血点（1領域）",
+        "3-5個のびらんまたは出血点（1領域）",
+        "2領域のびらん、または1領域に6-10個",
+        "2領域かつ多数、または11個以上のびらん、または急性潰瘍",
+        "慢性潰瘍"
+      ],
+      "selectoridx": "0|1|2|3|4|5",
+      "description": "内視鏡観察による胃粘膜の最も重篤な所見を選択してください"
+    },
+    {
+      "name": "出血の有無",
+      "dispname": "活動性出血",
+      "type": "radio",
+      "selector": [
+        "なし",
+        "軽度の出血",
+        "中等度の出血",
+        "重度の出血"
+      ],
+      "inline": true,
+      "description": "内視鏡検査時に観察された出血の程度"
+    },
+    {
+      "name": "H_pylori",
+      "dispname": "ヘリコバクター・ピロリ菌",
+      "type": "radio",
+      "selector": [
+        "陰性",
+        "陽性",
+        "未検査"
+      ],
+      "inline": true
+    },
+    {
+      "name": "胃酸抑制薬",
+      "dispname": "胃酸抑制薬の併用",
+      "type": "radio",
+      "selector": [
+        "なし",
+        "H2RA",
+        "PPI",
+        "その他"
+      ],
+      "inline": true,
+      "description": "NSAIDと併用している胃酸抑制薬"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "Lanzaスコア",
+      "type": "eval",
+      "formula": "[[胃粘膜評価.index]]",
+      "dispname": "Lanzaスコア 0-5の6段階評価（高いほど重篤）"
+    },
+    {
+      "name": "重症度分類",
+      "type": "eval",
+      "formula": "[[Lanzaスコア]] == 0 ? '正常' : [[Lanzaスコア]] == 1 ? '軽度（2個以下のびらん）' : [[Lanzaスコア]] == 2 ? '軽度傷害（3-5個のびらん）' : [[Lanzaスコア]] == 3 ? '中等度傷害（複数領域または6-10個）' : [[Lanzaスコア]] == 4 ? '重度傷害（多数のびらんまたは急性潰瘍）' : '慢性潰瘍形成'",
+      "dispname": "重症度判定 Modified Lanza Scoreに基づく重症度分類"
+    },
+    {
+      "name": "臨床的意義",
+      "type": "eval",
+      "formula": "[[Lanzaスコア]] >= 2 ? 'NSAID関連胃粘膜傷害あり（臨床的に意味のある傷害）' : 'NSAID関連胃粘膜傷害なしまたは軽微'",
+      "dispname": "臨床的評価"
+    },
+    {
+      "name": "Warning: 中等度傷害 Modified Lanza Score >= 3",
+      "formula": "[[Lanzaスコア]] >= 3",
+      "type": "warning"
+    },
+    {
+      "name": "Emergency: 重度傷害 Modified Lanza Score >= 4",
+      "formula": "[[Lanzaスコア]] >= 4",
+      "type": "emergency"
+    }
+  ]
+}

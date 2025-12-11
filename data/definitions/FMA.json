@@ -1,0 +1,1074 @@
+{
+    "_comment": [
+        "Fugl-Meyer Assessment (FMA) 脳卒中運動機能評価",
+        "原典: Fugl-Meyer AR, Jääskö L, Leyman I, Olsson S, Steglind S. The post-stroke hemiplegic patient. 1. a method for evaluation of physical performance. Scand J Rehabil Med. 1975;7(1):13-31.",
+        "日本語版: 共田時栄、長尾徹、内田智子、佐藤央基、大西雅俊、岡元貴之、田實真弥（2024年版）",
+        "公式URL: https://www.gu.se/en/neuroscience-physiology/fugl-meyer-assessment",
+        "226点満点の包括的脳卒中機能評価、脳卒中治療ガイドライン2015・2019でグレードB推奨"
+    ],
+    "title": "Fugl-Meyer Assessment (FMA) 脳卒中運動機能評価",
+    "description": [
+        "脳卒中患者の運動機能、感覚機能、バランス、関節可動域、関節痛を包括的に評価する国際的標準評価スケールです。",
+        "各項目は0点（実行できない）、1点（部分的に実行できる）、2点（完全に実行できる）の3段階で評価します。"
+    ],
+    "submit_button_title": "評価結果を送信",
+    "fields": [
+        {
+            "dispname": "A - I. 上肢運動機能 反射活動",
+            "type": "subsection"
+        },
+        {
+            "dispname": "屈筋群（上腕二頭筋かつ手指屈筋群）",
+            "name": "A_I_屈筋群",
+            "type": "radio",
+            "selector": "消失|誘発可能",
+            "selectoridx": "0|2",
+            "required": true
+        },
+        {
+            "dispname": "伸筋群（上腕三頭筋）",
+            "name": "A_I_伸筋群",
+            "type": "radio",
+            "selector": "消失|誘発可能",
+            "selectoridx": "0|2",
+            "required": true
+        },
+        {
+            "dispname": "A - II. 上肢運動機能 随意運動（共同運動パターン）",
+            "type": "subsection"
+        },
+        {
+            "dispname": "屈筋共同運動 - 肩後退",
+            "name": "A_II_肩後退",
+            "type": "radio",
+            "selector": "なし|部分的|完全",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "屈筋共同運動 - 肩挙上",
+            "name": "A_II_肩挙上",
+            "type": "radio",
+            "selector": "なし|部分的|完全",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "屈筋共同運動 - 肩外転90度",
+            "name": "A_II_肩外転",
+            "type": "radio",
+            "selector": "なし|部分的|完全",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "屈筋共同運動 - 肩外旋",
+            "name": "A_II_肩外旋",
+            "type": "radio",
+            "selector": "なし|部分的|完全",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "屈筋共同運動 - 肘屈曲",
+            "name": "A_II_肘屈曲",
+            "type": "radio",
+            "selector": "なし|部分的|完全",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "屈筋共同運動 - 前腕回外",
+            "name": "A_II_前腕回外",
+            "type": "radio",
+            "selector": "なし|部分的|完全",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "伸筋共同運動 - 肩内転・内旋",
+            "name": "A_II_肩内転内旋",
+            "type": "radio",
+            "selector": "なし|部分的|完全",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "伸筋共同運動 - 肘伸展",
+            "name": "A_II_肘伸展",
+            "type": "radio",
+            "selector": "なし|部分的|完全",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "伸筋共同運動 - 前腕回内",
+            "name": "A_II_前腕回内",
+            "type": "radio",
+            "selector": "なし|部分的|完全",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "A - III. 上肢運動機能 随意運動（分離運動が一部出現）",
+            "type": "subsection"
+        },
+        {
+            "dispname": "手を腰椎へ",
+            "name": "A_III_手腰椎",
+            "type": "radio",
+            "selector": "実施できない、または手が上前腸骨棘を越えない|手が上前腸骨棘を越える（代償なし）|手が腰椎まで（代償なし）",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "肩屈曲0-90度（肘0度、前腕中間位）",
+            "name": "A_III_肩屈曲",
+            "type": "radio",
+            "selector": "直ちに、肩外転または肘屈曲|運動中に、肩外転または肘屈曲|肩屈曲90度、肩外転や肘屈曲なし",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "前腕回内・回外（肘90度、肩0度）",
+            "name": "A_III_前腕回内回外",
+            "type": "radio",
+            "selector": "前腕回内・回外なし、開始肢位がとれない|前腕回内・回外制限あり、開始肢位を保持|前腕回内・回外は完全、開始肢位を保持",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "A - IV. 上肢運動機能 随意運動（正常、もしくはほぼ正常）",
+            "type": "subsection"
+        },
+        {
+            "dispname": "肩外転0-90度（肘0度、前腕中間位）",
+            "name": "A_IV_肩外転",
+            "type": "radio",
+            "selector": "直ちに、前腕回外または肘屈曲|運動中に、前腕回外または肘屈曲|肩外転90度、肘伸展かつ前腕回内を保持",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "肩屈曲90-180度（肘0度、前腕中間位）",
+            "name": "A_IV_肩屈曲180",
+            "type": "radio",
+            "selector": "直ちに、肩外転または肘屈曲|運動中に、肩外転または肘屈曲|肩屈曲180度、肩外転や肘屈曲なし",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "前腕回内・回外（肘0度、肩屈曲約30度）",
+            "name": "A_IV_前腕回内回外",
+            "type": "radio",
+            "selector": "前腕回内・回外なし、開始肢位がとれない|前腕回内・回外制限あり、開始肢位を保持|前腕回内・回外は完全、開始肢位を保持",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "V. 正常反射活動（パートIVで満点6点の場合のみ評価）",
+            "name": "A_V_正常反射",
+            "type": "radio",
+            "selector": "3つのうち2つの反射が著明に亢進|1つの反射が著明に亢進、または少なくとも2つの反射が亢進|最大1つの反射が亢進、著明な亢進なし",
+            "selectoridx": "0|1|2",
+            "required": true,
+            "parentname": "A_IV_前腕回内回外",
+            "parentsel": "前腕回内・回外は完全、開始肢位を保持"
+        },
+        {
+            "dispname": "B. 手関節",
+            "type": "subsection"
+        },
+        {
+            "dispname": "背屈15度位の保持（肘90度、前腕回内位、肩0度）",
+            "name": "B_背屈保持90",
+            "type": "radio",
+            "selector": "15度未満の自動背屈|背屈15度、抵抗に耐えられない|抵抗に対して背屈15度を保持",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "背屈・掌屈の反復（肘90度、前腕回内位、肩0度）",
+            "name": "B_背屈掌屈反復90",
+            "type": "radio",
+            "selector": "随意的に行えない|自動可動域に制限あり|全可動域を円滑に運動",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "背屈15度位の保持（肘0度、前腕回内位、肩軽度屈曲・外転位）",
+            "name": "B_背屈保持0",
+            "type": "radio",
+            "selector": "15度未満の自動背屈|背屈15度、抵抗に耐えられない|抵抗に対して背屈15度を保持",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "背屈・掌屈の反復（肘0度、前腕回内位、肩軽度屈曲・外転位）",
+            "name": "B_背屈掌屈反復0",
+            "type": "radio",
+            "selector": "随意的に行えない|自動可動域に制限あり|全可動域を円滑に運動",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "分回し運動（肘90度、前腕回内位、肩0度）",
+            "name": "B_分回し運動",
+            "type": "radio",
+            "selector": "随意的に行えない|拙劣な運動、または不完全|完全で円滑な分回し運動",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "C. 手",
+            "type": "subsection"
+        },
+        {
+            "dispname": "集団屈曲（自動または他動の最大伸展から）",
+            "name": "C_集団屈曲",
+            "type": "radio",
+            "selector": "なし|部分的|完全",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "集団伸展（自動または他動の最大屈曲から）",
+            "name": "C_集団伸展",
+            "type": "radio",
+            "selector": "なし|部分的|完全",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "鉤握り（PIPとDIP屈曲、第2-5指MP伸展）",
+            "name": "C_鉤握り",
+            "type": "radio",
+            "selector": "実施できない|構えを保持できるが弱い|抵抗に対して構えを保持",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "母指内転（母指と示指MP関節の間に紙を挟む）",
+            "name": "C_母指内転",
+            "type": "radio",
+            "selector": "実施できない|紙を保持できるが引っ張りに抗せない|引っ張りに対し紙を保持できる",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "指腹つまみ・対立（母指指腹と示指指腹の対立でペンを上方へ引っ張る）",
+            "name": "C_指腹つまみ",
+            "type": "radio",
+            "selector": "実施できない|ペンを保持できるが引っ張りに抗せない|引っ張りに対しペンを保持できる",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "筒握り（母指と第2-5指を対立、筒状の物品を上方に引く）",
+            "name": "C_筒握り",
+            "type": "radio",
+            "selector": "実施できない|筒を保持できるが引っ張りに抗せない|引っ張りに対し筒を保持できる",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "球握り（手指外転・屈曲、母指対立位でテニスボールを引っ張り出す）",
+            "name": "C_球握り",
+            "type": "radio",
+            "selector": "実施できない|ボールを保持できるが引っ張りに抗せない|引っ張りに対しボールを保持できる",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "D. 協調性・スピード",
+            "type": "subsection"
+        },
+        {
+            "dispname": "振戦（示指の先端を膝から鼻へ、できる限り速く5回）",
+            "name": "D_振戦",
+            "type": "radio",
+            "selector": "著明|軽度|なし",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "測定障害",
+            "name": "D_測定障害",
+            "type": "radio",
+            "selector": "顕著または不規則的|軽度かつ規則的|測定障害なし",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "時間（非麻痺側との比較）",
+            "name": "D_時間",
+            "type": "radio",
+            "selector": "非麻痺側よりも6秒以上遅い|非麻痺側よりも2-5秒遅い|2秒未満の差",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "E - I. 下肢運動機能 反射活動",
+            "type": "subsection"
+        },
+        {
+            "dispname": "屈筋群（膝屈筋群）",
+            "name": "E_I_屈筋群",
+            "type": "radio",
+            "selector": "消失|誘発可能",
+            "selectoridx": "0|2",
+            "required": true
+        },
+        {
+            "dispname": "伸筋群（膝蓋腱、アキレス腱の少なくとも一方）",
+            "name": "E_I_伸筋群",
+            "type": "radio",
+            "selector": "消失|誘発可能",
+            "selectoridx": "0|2",
+            "required": true
+        },
+        {
+            "dispname": "E - II. 下肢運動機能 随意運動（共同運動パターン）",
+            "type": "subsection"
+        },
+        {
+            "dispname": "屈筋共同運動 - 股屈曲",
+            "name": "E_II_股屈曲",
+            "type": "radio",
+            "selector": "なし|部分的|完全",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "屈筋共同運動 - 膝屈曲",
+            "name": "E_II_膝屈曲",
+            "type": "radio",
+            "selector": "なし|部分的|完全",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "屈筋共同運動 - 足背屈",
+            "name": "E_II_足背屈",
+            "type": "radio",
+            "selector": "なし|部分的|完全",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "伸筋共同運動 - 股伸展",
+            "name": "E_II_股伸展",
+            "type": "radio",
+            "selector": "なし|部分的|完全",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "伸筋共同運動 - 股内転",
+            "name": "E_II_股内転",
+            "type": "radio",
+            "selector": "なし|部分的|完全",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "伸筋共同運動 - 膝伸展",
+            "name": "E_II_膝伸展",
+            "type": "radio",
+            "selector": "なし|部分的|完全",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "伸筋共同運動 - 足底屈",
+            "name": "E_II_足底屈",
+            "type": "radio",
+            "selector": "なし|部分的|完全",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "E - III. 下肢運動機能 随意運動（分離運動が一部出現）",
+            "type": "subsection"
+        },
+        {
+            "dispname": "膝屈曲（座位、膝は椅子・ベッドの端から10cm）",
+            "name": "E_III_膝屈曲",
+            "type": "radio",
+            "selector": "自動運動なし|膝自動屈曲90度未満、ハムストリングスの腱を触診|膝自動屈曲が90度を越える",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "足関節背屈（座位、非麻痺側と比較）",
+            "name": "E_III_足関節背屈",
+            "type": "radio",
+            "selector": "自動運動なし|背屈不十分|完全な背屈",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "E - IV. 下肢運動機能 随意運動（正常、もしくはほぼ正常）",
+            "type": "subsection"
+        },
+        {
+            "dispname": "膝90度まで屈曲（立位、股0度、バランス介助は可）",
+            "name": "E_IV_膝屈曲90",
+            "type": "radio",
+            "selector": "自動運動なし、または直ちに、もしくは同時に股屈曲|膝屈曲90度未満かつ・または運動中に股屈曲|運動中の股屈曲がない、膝屈曲少なくとも90度",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "足関節背屈（立位、非麻痺側と比較）",
+            "name": "E_IV_足関節背屈",
+            "type": "radio",
+            "selector": "自動運動なし|背屈不十分|完全な背屈",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "V. 正常反射活動（パートIVで満点4点の場合のみ評価）",
+            "name": "E_V_正常反射",
+            "type": "radio",
+            "selector": "3つのうち2つの反射が著明に亢進|1つの反射が著明に亢進、または少なくとも2つの反射が亢進|最大1つの反射が亢進、著明な亢進なし",
+            "selectoridx": "0|1|2",
+            "required": true,
+            "parentname": "E_IV_足関節背屈",
+            "parentsel": "完全な背屈"
+        },
+        {
+            "dispname": "F. 協調性・スピード（下肢）",
+            "type": "subsection"
+        },
+        {
+            "dispname": "振戦（踵を対側の膝蓋骨へ、できる限り速く5回）",
+            "name": "F_振戦",
+            "type": "radio",
+            "selector": "著明|軽度|なし",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "測定障害",
+            "name": "F_測定障害",
+            "type": "radio",
+            "selector": "顕著または不規則的|軽度かつ規則的|測定障害なし",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "時間（非麻痺側との比較）",
+            "name": "F_時間",
+            "type": "radio",
+            "selector": "非麻痺側よりも6秒以上遅い|非麻痺側よりも2-5秒遅い|2秒未満の差",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "G. バランス",
+            "type": "subsection"
+        },
+        {
+            "dispname": "座位でのバランス（支持なし）",
+            "name": "G_座位バランス",
+            "type": "radio",
+            "selector": "支持が必要、または座位保持不可|軽微な支持で5秒保持|支持なしで5秒以上保持",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "座位反応（麻痺側への圧迫）",
+            "name": "G_座位反応麻痺側",
+            "type": "radio",
+            "selector": "容易にバランスを失う|部分的にバランスを失う|しっかりと押されてもバランスを保持",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "座位反応（非麻痺側への圧迫）",
+            "name": "G_座位反応非麻痺側",
+            "type": "radio",
+            "selector": "容易にバランスを失う|部分的にバランスを失う|しっかりと押されてもバランスを保持",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "立位でのバランス（支持あり）",
+            "name": "G_立位バランス支持",
+            "type": "radio",
+            "selector": "支持があっても立位保持不可|支持ありで立位可能|軽微な支持で立位保持",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "立位でのバランス（支持なし）",
+            "name": "G_立位バランス無支持",
+            "type": "radio",
+            "selector": "支持なしでは立位保持不可|支持なしで3秒未満|支持なしで3秒以上保持",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "麻痺側単脚立位",
+            "name": "G_麻痺側単脚立位",
+            "type": "radio",
+            "selector": "3秒未満の保持|3-4.9秒の保持|5秒以上の保持",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "非麻痺側単脚立位",
+            "name": "G_非麻痺側単脚立位",
+            "type": "radio",
+            "selector": "3秒未満の保持|3-4.9秒の保持|5秒以上の保持",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "H. 感覚機能",
+            "type": "subsection"
+        },
+        {
+            "dispname": "上肢触覚 - 上腕",
+            "name": "H_上肢触覚上腕",
+            "type": "radio",
+            "selector": "感覚消失|感覚鈍麻または異常感覚|正常",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "上肢触覚 - 前腕",
+            "name": "H_上肢触覚前腕",
+            "type": "radio",
+            "selector": "感覚消失|感覚鈍麻または異常感覚|正常",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "上肢触覚 - 手掌",
+            "name": "H_上肢触覚手掌",
+            "type": "radio",
+            "selector": "感覚消失|感覚鈍麻または異常感覚|正常",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "上肢深部感覚 - 肩",
+            "name": "H_上肢深部感覚肩",
+            "type": "radio",
+            "selector": "3/4未満の正答|3/4正答|100%正答",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "上肢深部感覚 - 肘",
+            "name": "H_上肢深部感覚肘",
+            "type": "radio",
+            "selector": "3/4未満の正答|3/4正答|100%正答",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "上肢深部感覚 - 手",
+            "name": "H_上肢深部感覚手",
+            "type": "radio",
+            "selector": "3/4未満の正答|3/4正答|100%正答",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "上肢深部感覚 - 母指IP関節",
+            "name": "H_上肢深部感覚母指",
+            "type": "radio",
+            "selector": "3/4未満の正答|3/4正答|100%正答",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "下肢触覚 - 脚",
+            "name": "H_下肢触覚脚",
+            "type": "radio",
+            "selector": "感覚消失|感覚鈍麻または異常感覚|正常",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "下肢触覚 - 足底",
+            "name": "H_下肢触覚足底",
+            "type": "radio",
+            "selector": "感覚消失|感覚鈍麻または異常感覚|正常",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "下肢深部感覚 - 股",
+            "name": "H_下肢深部感覚股",
+            "type": "radio",
+            "selector": "3/4未満の正答|3/4正答|100%正答",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "下肢深部感覚 - 膝",
+            "name": "H_下肢深部感覚膝",
+            "type": "radio",
+            "selector": "3/4未満の正答|3/4正答|100%正答",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "下肢深部感覚 - 足",
+            "name": "H_下肢深部感覚足",
+            "type": "radio",
+            "selector": "3/4未満の正答|3/4正答|100%正答",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "I. 他動的関節可動域",
+            "type": "subsection"
+        },
+        {
+            "dispname": "上肢 - 肩屈曲",
+            "name": "I_上肢肩屈曲",
+            "type": "radio",
+            "selector": "わずかな可動域（10度未満）|減少|正常",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "上肢 - 肩外転",
+            "name": "I_上肢肩外転",
+            "type": "radio",
+            "selector": "わずかな可動域（10度未満）|減少|正常",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "上肢 - 肩外旋",
+            "name": "I_上肢肩外旋",
+            "type": "radio",
+            "selector": "わずかな可動域（10度未満）|減少|正常",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "上肢 - 肩内旋",
+            "name": "I_上肢肩内旋",
+            "type": "radio",
+            "selector": "わずかな可動域（10度未満）|減少|正常",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "上肢 - 肘屈曲",
+            "name": "I_上肢肘屈曲",
+            "type": "radio",
+            "selector": "わずかな可動域（10度未満）|減少|正常",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "上肢 - 肘伸展",
+            "name": "I_上肢肘伸展",
+            "type": "radio",
+            "selector": "わずかな可動域（10度未満）|減少|正常",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "上肢 - 前腕回内",
+            "name": "I_上肢前腕回内",
+            "type": "radio",
+            "selector": "わずかな可動域（10度未満）|減少|正常",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "上肢 - 前腕回外",
+            "name": "I_上肢前腕回外",
+            "type": "radio",
+            "selector": "わずかな可動域（10度未満）|減少|正常",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "上肢 - 手掌屈",
+            "name": "I_上肢手掌屈",
+            "type": "radio",
+            "selector": "わずかな可動域（10度未満）|減少|正常",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "上肢 - 手背屈",
+            "name": "I_上肢手背屈",
+            "type": "radio",
+            "selector": "わずかな可動域（10度未満）|減少|正常",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "上肢 - 指屈曲",
+            "name": "I_上肢指屈曲",
+            "type": "radio",
+            "selector": "わずかな可動域（10度未満）|減少|正常",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "上肢 - 指伸展",
+            "name": "I_上肢指伸展",
+            "type": "radio",
+            "selector": "わずかな可動域（10度未満）|減少|正常",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "下肢 - 股屈曲",
+            "name": "I_下肢股屈曲",
+            "type": "radio",
+            "selector": "わずかな可動域（10度未満）|減少|正常",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "下肢 - 股外転",
+            "name": "I_下肢股外転",
+            "type": "radio",
+            "selector": "わずかな可動域（10度未満）|減少|正常",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "下肢 - 股外旋",
+            "name": "I_下肢股外旋",
+            "type": "radio",
+            "selector": "わずかな可動域（10度未満）|減少|正常",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "下肢 - 股内旋",
+            "name": "I_下肢股内旋",
+            "type": "radio",
+            "selector": "わずかな可動域（10度未満）|減少|正常",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "下肢 - 膝屈曲",
+            "name": "I_下肢膝屈曲",
+            "type": "radio",
+            "selector": "わずかな可動域（10度未満）|減少|正常",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "下肢 - 膝伸展",
+            "name": "I_下肢膝伸展",
+            "type": "radio",
+            "selector": "わずかな可動域（10度未満）|減少|正常",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "下肢 - 足背屈",
+            "name": "I_下肢足背屈",
+            "type": "radio",
+            "selector": "わずかな可動域（10度未満）|減少|正常",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "下肢 - 足底屈",
+            "name": "I_下肢足底屈",
+            "type": "radio",
+            "selector": "わずかな可動域（10度未満）|減少|正常",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "下肢 - 足部回内",
+            "name": "I_下肢足部回内",
+            "type": "radio",
+            "selector": "わずかな可動域（10度未満）|減少|正常",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "下肢 - 足部回外",
+            "name": "I_下肢足部回外",
+            "type": "radio",
+            "selector": "わずかな可動域（10度未満）|減少|正常",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "J. 関節痛",
+            "type": "subsection"
+        },
+        {
+            "dispname": "上肢 - 肩屈曲",
+            "name": "J_上肢肩屈曲",
+            "type": "radio",
+            "selector": "運動時の著明な疼痛、または激痛があり最終可動域までの運動が困難|疼痛あり|疼痛なし",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "上肢 - 肩外転",
+            "name": "J_上肢肩外転",
+            "type": "radio",
+            "selector": "運動時の著明な疼痛、または激痛があり最終可動域までの運動が困難|疼痛あり|疼痛なし",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "上肢 - 肩外旋",
+            "name": "J_上肢肩外旋",
+            "type": "radio",
+            "selector": "運動時の著明な疼痛、または激痛があり最終可動域までの運動が困難|疼痛あり|疼痛なし",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "上肢 - 肩内旋",
+            "name": "J_上肢肩内旋",
+            "type": "radio",
+            "selector": "運動時の著明な疼痛、または激痛があり最終可動域までの運動が困難|疼痛あり|疼痛なし",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "上肢 - 肘屈曲",
+            "name": "J_上肢肘屈曲",
+            "type": "radio",
+            "selector": "運動時の著明な疼痛、または激痛があり最終可動域までの運動が困難|疼痛あり|疼痛なし",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "上肢 - 肘伸展",
+            "name": "J_上肢肘伸展",
+            "type": "radio",
+            "selector": "運動時の著明な疼痛、または激痛があり最終可動域までの運動が困難|疼痛あり|疼痛なし",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "上肢 - 前腕回内",
+            "name": "J_上肢前腕回内",
+            "type": "radio",
+            "selector": "運動時の著明な疼痛、または激痛があり最終可動域までの運動が困難|疼痛あり|疼痛なし",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "上肢 - 前腕回外",
+            "name": "J_上肢前腕回外",
+            "type": "radio",
+            "selector": "運動時の著明な疼痛、または激痛があり最終可動域までの運動が困難|疼痛あり|疼痛なし",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "上肢 - 手掌屈",
+            "name": "J_上肢手掌屈",
+            "type": "radio",
+            "selector": "運動時の著明な疼痛、または激痛があり最終可動域までの運動が困難|疼痛あり|疼痛なし",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "上肢 - 手背屈",
+            "name": "J_上肢手背屈",
+            "type": "radio",
+            "selector": "運動時の著明な疼痛、または激痛があり最終可動域までの運動が困難|疼痛あり|疼痛なし",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "上肢 - 指屈曲",
+            "name": "J_上肢指屈曲",
+            "type": "radio",
+            "selector": "運動時の著明な疼痛、または激痛があり最終可動域までの運動が困難|疼痛あり|疼痛なし",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "上肢 - 指伸展",
+            "name": "J_上肢指伸展",
+            "type": "radio",
+            "selector": "運動時の著明な疼痛、または激痛があり最終可動域までの運動が困難|疼痛あり|疼痛なし",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "下肢 - 股屈曲",
+            "name": "J_下肢股屈曲",
+            "type": "radio",
+            "selector": "運動時の著明な疼痛、または激痛があり最終可動域までの運動が困難|疼痛あり|疼痛なし",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "下肢 - 股外転",
+            "name": "J_下肢股外転",
+            "type": "radio",
+            "selector": "運動時の著明な疼痛、または激痛があり最終可動域までの運動が困難|疼痛あり|疼痛なし",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "下肢 - 股外旋",
+            "name": "J_下肢股外旋",
+            "type": "radio",
+            "selector": "運動時の著明な疼痛、または激痛があり最終可動域までの運動が困難|疼痛あり|疼痛なし",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "下肢 - 股内旋",
+            "name": "J_下肢股内旋",
+            "type": "radio",
+            "selector": "運動時の著明な疼痛、または激痛があり最終可動域までの運動が困難|疼痛あり|疼痛なし",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "下肢 - 膝屈曲",
+            "name": "J_下肢膝屈曲",
+            "type": "radio",
+            "selector": "運動時の著明な疼痛、または激痛があり最終可動域までの運動が困難|疼痛あり|疼痛なし",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "下肢 - 膝伸展",
+            "name": "J_下肢膝伸展",
+            "type": "radio",
+            "selector": "運動時の著明な疼痛、または激痛があり最終可動域までの運動が困難|疼痛あり|疼痛なし",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "下肢 - 足背屈",
+            "name": "J_下肢足背屈",
+            "type": "radio",
+            "selector": "運動時の著明な疼痛、または激痛があり最終可動域までの運動が困難|疼痛あり|疼痛なし",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "下肢 - 足底屈",
+            "name": "J_下肢足底屈",
+            "type": "radio",
+            "selector": "運動時の著明な疼痛、または激痛があり最終可動域までの運動が困難|疼痛あり|疼痛なし",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "下肢 - 足部回内",
+            "name": "J_下肢足部回内",
+            "type": "radio",
+            "selector": "運動時の著明な疼痛、または激痛があり最終可動域までの運動が困難|疼痛あり|疼痛なし",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "下肢 - 足部回外",
+            "name": "J_下肢足部回外",
+            "type": "radio",
+            "selector": "運動時の著明な疼痛、または激痛があり最終可動域までの運動が困難|疼痛あり|疼痛なし",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "A_V_正常反射_index",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[A_V_正常反射.index]]"
+        },
+        {
+            "name": "E_V_正常反射_index",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[E_V_正常反射.index]]"
+        },
+        {
+            "name": "上肢運動機能合計",
+            "type": "eval",
+            "formula": "[[A_I_屈筋群.index]] + [[A_I_伸筋群.index]] + [[A_II_肩後退.index]] + [[A_II_肩挙上.index]] + [[A_II_肩外転.index]] + [[A_II_肩外旋.index]] + [[A_II_肘屈曲.index]] + [[A_II_前腕回外.index]] + [[A_II_肩内転内旋.index]] + [[A_II_肘伸展.index]] + [[A_II_前腕回内.index]] + [[A_III_手腰椎.index]] + [[A_III_肩屈曲.index]] + [[A_III_前腕回内回外.index]] + [[A_IV_肩外転.index]] + [[A_IV_肩屈曲180.index]] + [[A_IV_前腕回内回外.index]] + [[A_V_正常反射_index]] + [[B_背屈保持90.index]] + [[B_背屈掌屈反復90.index]] + [[B_背屈保持0.index]] + [[B_背屈掌屈反復0.index]] + [[B_分回し運動.index]] + [[C_集団屈曲.index]] + [[C_集団伸展.index]] + [[C_鉤握り.index]] + [[C_母指内転.index]] + [[C_指腹つまみ.index]] + [[C_筒握り.index]] + [[C_球握り.index]] + [[D_振戦.index]] + [[D_測定障害.index]] + [[D_時間.index]]",
+            "dispname": "上肢運動機能合計点数（66点満点）"
+        },
+        {
+            "name": "下肢運動機能合計",
+            "type": "eval",
+            "formula": "[[E_I_屈筋群.index]] + [[E_I_伸筋群.index]] + [[E_II_股屈曲.index]] + [[E_II_膝屈曲.index]] + [[E_II_足背屈.index]] + [[E_II_股伸展.index]] + [[E_II_股内転.index]] + [[E_II_膝伸展.index]] + [[E_II_足底屈.index]] + [[E_III_膝屈曲.index]] + [[E_III_足関節背屈.index]] + [[E_IV_膝屈曲90.index]] + [[E_IV_足関節背屈.index]] + [[E_V_正常反射_index]] + [[F_振戦.index]] + [[F_測定障害.index]] + [[F_時間.index]]",
+            "dispname": "下肢運動機能合計点数（34点満点）"
+        },
+        {
+            "name": "バランス合計",
+            "type": "eval",
+            "formula": "[[G_座位バランス.index]] + [[G_座位反応麻痺側.index]] + [[G_座位反応非麻痺側.index]] + [[G_立位バランス支持.index]] + [[G_立位バランス無支持.index]] + [[G_麻痺側単脚立位.index]] + [[G_非麻痺側単脚立位.index]]",
+            "dispname": "バランス合計点数（14点満点）"
+        },
+        {
+            "name": "感覚機能合計",
+            "type": "eval",
+            "formula": "[[H_上肢触覚上腕.index]] + [[H_上肢触覚前腕.index]] + [[H_上肢触覚手掌.index]] + [[H_上肢深部感覚肩.index]] + [[H_上肢深部感覚肘.index]] + [[H_上肢深部感覚手.index]] + [[H_上肢深部感覚母指.index]] + [[H_下肢触覚脚.index]] + [[H_下肢触覚足底.index]] + [[H_下肢深部感覚股.index]] + [[H_下肢深部感覚膝.index]] + [[H_下肢深部感覚足.index]]",
+            "dispname": "感覚機能合計点数（24点満点）"
+        },
+        {
+            "name": "関節可動域合計",
+            "type": "eval",
+            "formula": "[[I_上肢肩屈曲.index]] + [[I_上肢肩外転.index]] + [[I_上肢肩外旋.index]] + [[I_上肢肩内旋.index]] + [[I_上肢肘屈曲.index]] + [[I_上肢肘伸展.index]] + [[I_上肢前腕回内.index]] + [[I_上肢前腕回外.index]] + [[I_上肢手掌屈.index]] + [[I_上肢手背屈.index]] + [[I_上肢指屈曲.index]] + [[I_上肢指伸展.index]] + [[I_下肢股屈曲.index]] + [[I_下肢股外転.index]] + [[I_下肢股外旋.index]] + [[I_下肢股内旋.index]] + [[I_下肢膝屈曲.index]] + [[I_下肢膝伸展.index]] + [[I_下肢足背屈.index]] + [[I_下肢足底屈.index]] + [[I_下肢足部回内.index]] + [[I_下肢足部回外.index]]",
+            "dispname": "関節可動域合計点数（44点満点）"
+        },
+        {
+            "name": "関節痛合計",
+            "type": "eval",
+            "formula": "[[J_上肢肩屈曲.index]] + [[J_上肢肩外転.index]] + [[J_上肢肩外旋.index]] + [[J_上肢肩内旋.index]] + [[J_上肢肘屈曲.index]] + [[J_上肢肘伸展.index]] + [[J_上肢前腕回内.index]] + [[J_上肢前腕回外.index]] + [[J_上肢手掌屈.index]] + [[J_上肢手背屈.index]] + [[J_上肢指屈曲.index]] + [[J_上肢指伸展.index]] + [[J_下肢股屈曲.index]] + [[J_下肢股外転.index]] + [[J_下肢股外旋.index]] + [[J_下肢股内旋.index]] + [[J_下肢膝屈曲.index]] + [[J_下肢膝伸展.index]] + [[J_下肢足背屈.index]] + [[J_下肢足底屈.index]] + [[J_下肢足部回内.index]] + [[J_下肢足部回外.index]]",
+            "dispname": "関節痛合計点数（44点満点）"
+        },
+        {
+            "name": "運動機能合計",
+            "type": "eval",
+            "formula": "[[上肢運動機能合計]] + [[下肢運動機能合計]]",
+            "dispname": "運動機能合計点数（100点満点）"
+        },
+        {
+            "name": "FMA総合計",
+            "type": "eval",
+            "formula": "[[上肢運動機能合計]] + [[下肢運動機能合計]] + [[バランス合計]] + [[感覚機能合計]] + [[関節可動域合計]] + [[関節痛合計]]",
+            "dispname": "FMA総合計点数（226点満点）"
+        },
+        {
+            "name": "上肢運動機能重症度",
+            "type": "eval",
+            "formula": "[[上肢運動機能合計]] >= 47 ? '軽度' : ( [[上肢運動機能合計]] >= 20 ? '中等度' : '重度' )",
+            "dispname": "上肢運動機能重症度分類"
+        },
+        {
+            "name": "運動機能重症度",
+            "type": "eval",
+            "formula": "[[運動機能合計]] >= 79 ? '軽度' : ( [[運動機能合計]] >= 56 ? '中等度' : ( [[運動機能合計]] >= 36 ? '重度' : '非常に厳しい' ) )",
+            "dispname": "運動機能重症度分類（Duncan分類）"
+        },
+        {
+            "name": "Warning: 上肢運動機能重度",
+            "formula": "[[上肢運動機能合計]] < 20",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 運動機能非常に厳しい",
+            "formula": "[[運動機能合計]] < 36",
+            "type": "emergency"
+        }
+    ]
+}

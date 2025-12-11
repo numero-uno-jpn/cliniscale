@@ -1,0 +1,146 @@
+{
+    "_comment": [
+        "Glasgow Coma Scale (GCS) - 意識レベル評価スケール",
+        "原著：Teasdale G, Jennett B. Assessment of coma and impaired consciousness: A practical scale. Lancet. 1974.",
+        "公式サイト：https://www.glasgowcomascale.org/",
+        "1974年英国グラスゴー大学で開発された世界標準の意識レベル評価指標",
+        "開眼・言語・運動の3項目を点数化し、3-15点で意識障害の重症度を判定",
+        "重症度分類は国際標準（WHO/ATLS: 13-15軽症）と日本救急医学会系（14-15軽症）の両方を表示"
+    ],
+    "title": "GCS (Glasgow Coma Scale) 意識レベル評価スケール",
+    "description": [
+        "<h3>GCS：意識レベル評価</h3>",
+        "開眼反応、言語反応、運動反応の3項目で意識レベルを評価します。",
+        "各項目の最良の反応を選択してください。"
+    ],
+    "submit_button_title": "評価を送信",
+    "fields": [
+        {
+            "dispname": "開眼反応 (Eye Opening Response)",
+            "type": "subsection"
+        },
+        {
+            "dispname": "開眼反応",
+            "name": "開眼反応",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "開眼しない",
+                "痛み刺激で開眼する",
+                "呼びかけで開眼する",
+                "自発的に開眼している"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "言語反応 (Verbal Response)",
+            "type": "subsection"
+        },
+        {
+            "dispname": "言語反応",
+            "name": "言語反応",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "発語なし",
+                "理解不能な音声のみ",
+                "不適切な単語を発する",
+                "混乱した会話をする（見当識障害あり）",
+                "正常な会話ができる（見当識良好）"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "description": "挿管中や発声不可能な場合は「発語なし」を選択"
+        },
+        {
+            "dispname": "運動反応 (Motor Response)",
+            "type": "subsection"
+        },
+        {
+            "dispname": "運動反応",
+            "name": "運動反応",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "反応なし",
+                "異常伸展（除脳硬直）",
+                "異常屈曲（除皮質硬直）",
+                "正常な逃避動作（屈曲逃避）",
+                "痛み刺激部位に正確に反応する（localizing）",
+                "指示に従って動作できる"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "開眼スコア",
+            "type": "eval",
+            "formula": "[[開眼反応.index]]",
+            "noreport": true
+        },
+        {
+            "name": "言語スコア",
+            "type": "eval",
+            "formula": "[[言語反応.index]]",
+            "noreport": true
+        },
+        {
+            "name": "運動スコア",
+            "type": "eval",
+            "formula": "[[運動反応.index]]",
+            "noreport": true
+        },
+        {
+            "dispname": "GCS合計スコア",
+            "name": "GCS合計",
+            "type": "eval",
+            "formula": "[[開眼スコア]] + [[言語スコア]] + [[運動スコア]]"
+        },
+        {
+            "dispname": "GCS詳細",
+            "name": "GCS詳細",
+            "type": "eval",
+            "formula": "'E' + {{開眼スコア}} + ' V' + {{言語スコア}} + ' M' + {{運動スコア}}"
+        },
+        {
+            "dispname": "重症度判定（国際標準: WHO/ATLS）",
+            "name": "重症度_国際標準",
+            "type": "eval",
+            "formula": "[[GCS合計]] >= 13 ? '軽症 (Mild)' : ( [[GCS合計]] >= 9 ? '中等症 (Moderate)' : '重症 (Severe)' )"
+        },
+        {
+            "dispname": "意識状態（国際標準: WHO/ATLS）",
+            "name": "意識状態_国際標準",
+            "type": "eval",
+            "formula": "[[GCS合計]] == 15 ? '意識清明' : ( [[GCS合計]] >= 13 ? '軽度意識障害' : ( [[GCS合計]] >= 9 ? '中等度意識障害' : '重度意識障害（昏睡状態）' ) )"
+        },
+        {
+            "dispname": "重症度判定（日本救急医学会系: JEMS/JATEC）",
+            "name": "重症度_日本",
+            "type": "eval",
+            "formula": "[[GCS合計]] >= 14 ? '軽症 (Mild)' : ( [[GCS合計]] >= 9 ? '中等症 (Moderate)' : '重症 (Severe)' )"
+        },
+        {
+            "dispname": "意識状態（日本救急医学会系: JEMS/JATEC）",
+            "name": "意識状態_日本",
+            "type": "eval",
+            "formula": "[[GCS合計]] == 15 ? '意識清明' : ( [[GCS合計]] >= 14 ? '軽度意識障害' : ( [[GCS合計]] >= 9 ? '中等度意識障害' : '重度意識障害（昏睡状態）' ) )"
+        },
+        {
+            "name": "Emergency: 重度意識障害 GCS≤8",
+            "formula": "[[GCS合計]] <= 8",
+            "type": "emergency"
+        },
+        {
+            "name": "Warning: 中等度意識障害（国際標準） GCS 9-12",
+            "formula": "[[GCS合計]] <= 12 && [[GCS合計]] > 8",
+            "type": "warning"
+        },
+        {
+            "name": "Warning: 中等度意識障害（日本） GCS 9-13",
+            "formula": "[[GCS合計]] <= 13 && [[GCS合計]] > 8",
+            "type": "warning"
+        }
+    ]
+}

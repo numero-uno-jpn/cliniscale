@@ -1,0 +1,107 @@
+{
+    "_comment": [
+        "GAF (Global Assessment of Functioning) スケール",
+        "DSM-IV-TR第34ページに基づく",
+        "心理的、社会的、職業的機能を0-100で評価する臨床医による評価尺度",
+        "参考文献: DSM-IV-TR (2000), American Psychiatric Association",
+        "Endicott et al. (1976). Archives of General Psychiatry, 33(6), 766-771",
+        "URL: https://iaap.org/wp-content/uploads/2023/04/GAF-Scale.pdf",
+        "注: DSM-5(2013)ではWHODAS 2.0に置き換えられたが、臨床現場では継続使用されている"
+    ],
+    "title": "GAF 全般的機能評価",
+    "description": [
+        "<h3>全般的機能評価 (GAF: Global Assessment of Functioning)</h3>",
+        "心理的、社会的、職業的機能を仮想的な精神健康-疾病の連続体で評価してください。",
+        "身体的(または環境的)制限による機能障害は含めないでください。",
+        "<p><strong>重要な使用上の注意:</strong></p>",
+        "<ul>",
+        "<li>信頼性の高い評価には専門的訓練が必須です</li>",
+        "<li>評価者の判断に強く依存する主観的評価です</li>",
+        "<li>DSM-5(2013)で削除されましたが、行政・法的文脈で継続使用されています</li>",
+        "</ul>"
+    ],
+    "responsible_person": [
+        "精神科医"
+    ],
+    "dept_in_charge": "精神科",
+    "fields": [
+        {
+            "name": "評価対象期間",
+            "type": "radio",
+            "dispname": "評価対象となる期間",
+            "description": "どの期間の状態を評価しますか",
+            "selector": "現在|過去1週間|過去1ヶ月|その他",
+            "required": true
+        },
+        {
+            "name": "GAFスコア説明",
+            "type": "note",
+            "description": [
+                "<h4>GAFスコアの評価基準</h4>",
+                "<ul>",
+                "<li><strong>91-100点</strong>: 優秀な機能 - 幅広い活動で優れた機能、症状なし</li>",
+                "<li><strong>81-90点</strong>: 良好な機能 - 症状なしまたは最小限</li>",
+                "<li><strong>71-80点</strong>: 軽度の一時的症状 - 心理社会的ストレス因子への一時的反応</li>",
+                "<li><strong>61-70点</strong>: 軽度の障害 - 軽度の症状または機能の困難</li>",
+                "<li><strong>51-60点</strong>: 中等度の障害 - 中等度の症状または機能の困難</li>",
+                "<li><strong>41-50点</strong>: 重篤な障害 - 重篤な症状または機能の重篤な障害</li>",
+                "<li><strong>31-40点</strong>: 重大な障害 - 現実検討やコミュニケーションの障害</li>",
+                "<li><strong>21-30点</strong>: 重篤な影響 - 妄想・幻覚による行動への著しい影響</li>",
+                "<li><strong>11-20点</strong>: 危険な状態 - 自他への危険性</li>",
+                "<li><strong>1-10点</strong>: 極めて危険 - 持続的な自他への重篤な危険</li>",
+                "<li><strong>0点</strong>: 情報不十分</li>",
+                "</ul>",
+                "<p><em>※ 中間的なコードも使用可能です(例: 45, 68, 72)</em></p>"
+            ]
+        },
+        {
+            "name": "GAFスコア",
+            "type": "scale",
+            "dispname": "全般的機能評価 (GAF) スコア",
+            "description": "0-100の範囲で評価してください",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "value": -1,
+            "inputmode": "numeric",
+            "unit": "点",
+            "required": true
+        },
+        {
+            "name": "症状の詳細",
+            "type": "textarea",
+            "dispname": "症状の詳細",
+            "description": "現在の症状について具体的に記載してください",
+            "rows": 4
+        },
+        {
+            "name": "社会機能",
+            "type": "textarea",
+            "dispname": "社会的機能",
+            "description": "家族、友人、同僚との関係について記載してください",
+            "rows": 3
+        },
+        {
+            "name": "職業機能",
+            "type": "textarea",
+            "dispname": "職業的機能",
+            "description": "仕事、学業の状況について記載してください",
+            "rows": 3
+        },
+        {
+            "name": "評価者所見",
+            "type": "textarea",
+            "dispname": "評価者による総合所見",
+            "description": "評価の根拠や特記事項を記載してください",
+            "rows": 4
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "機能レベル分類",
+            "type": "eval",
+            "formula": "[[GAFスコア]] == 0 ? \"評価不能(情報不十分)\" : [[GAFスコア]] >= 91 ? \"優秀な機能\" : [[GAFスコア]] >= 81 ? \"良好な機能\" : [[GAFスコア]] >= 71 ? \"軽度の問題\" : [[GAFスコア]] >= 61 ? \"軽度の障害\" : [[GAFスコア]] >= 51 ? \"中等度の障害\" : [[GAFスコア]] >= 41 ? \"重篤な障害\" : [[GAFスコア]] >= 31 ? \"重大な障害\" : [[GAFスコア]] >= 21 ? \"重篤な影響\" : [[GAFスコア]] >= 11 ? \"危険な状態\" : [[GAFスコア]] >= 1 ? \"極めて危険\" : \"評価不能\""
+        }
+    ]
+}

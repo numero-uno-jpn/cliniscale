@@ -1,0 +1,405 @@
+{
+    "_comment": [
+        "日本版KABC-II (Kaufman Assessment Battery for Children, Second Edition)",
+        "原著: Alan S. Kaufman & Nadeen L. Kaufman",
+        "日本版制作委員会: 藤田和弘・石隈利紀・青山真二・服部環・熊谷恵子・小野純平",
+        "公式サイト: https://www.maruzen-publishing.co.jp/",
+        "千葉テストセンター: https://www.chibatc.co.jp/",
+        "対象年齢: 2歳6ヶ月-18歳11ヶ月",
+        "実施時間: 約30分-120分",
+        "測定内容: 認知処理能力と基礎学力を測定",
+        "特徴: 知能検査では唯一基礎学力も測定可能"
+    ],
+    "title": "日本版 KABC-II 認知・学習能力評価",
+    "description": [
+        "<h3>日本版KABC-II 認知・学習能力評価</h3>",
+        "子どもの認知処理能力と基礎学力を測定する心理検査です。",
+        "検査者用の結果記録と分析のための質問票です。"
+    ],
+    "contact": "検査実施者",
+    "dept_in_charge": "心理検査部門",
+    "fields": [
+        {
+            "dispname": "基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "生年月日",
+            "name": "生年月日",
+            "type": "date",
+            "format": "YYYY/MM/DD",
+            "required": true
+        },
+        {
+            "dispname": "検査実施日",
+            "name": "検査実施日",
+            "type": "date",
+            "format": "YYYY/MM/DD",
+            "required": true
+        },
+        {
+            "dispname": "検査者氏名",
+            "name": "検査者氏名",
+            "type": "text"
+        },
+        {
+            "dispname": "認知検査 - 継次尺度 (短期記憶尺度)",
+            "type": "subsection"
+        },
+        {
+            "dispname": "数唱",
+            "name": "数唱",
+            "type": "scale",
+            "required": true,
+            "min": 1,
+            "max": 19,
+            "value": 0,
+            "description": "一連の数字を復唱する能力"
+        },
+        {
+            "dispname": "語の配列",
+            "name": "語の配列",
+            "type": "scale",
+            "required": true,
+            "min": 1,
+            "max": 19,
+            "value": 0,
+            "description": "影絵の物を指定された順序で指さす能力"
+        },
+        {
+            "dispname": "手の動作",
+            "name": "手の動作",
+            "type": "scale",
+            "required": true,
+            "min": 1,
+            "max": 19,
+            "value": 0,
+            "description": "一連の手の動作を同じ順序で繰り返す能力"
+        },
+        {
+            "dispname": "認知検査 - 同時尺度 (視覚処理尺度)",
+            "type": "subsection"
+        },
+        {
+            "dispname": "顔さがし",
+            "name": "顔さがし",
+            "type": "scale",
+            "required": true,
+            "min": 1,
+            "max": 19,
+            "value": 0,
+            "description": "写真の中から特定の人を見つける能力"
+        },
+        {
+            "dispname": "絵の統合",
+            "name": "絵の統合",
+            "type": "scale",
+            "required": true,
+            "min": 1,
+            "max": 19,
+            "value": 0,
+            "description": "部分的に欠けている影絵を認識する能力"
+        },
+        {
+            "dispname": "近道さがし",
+            "name": "近道さがし",
+            "type": "scale",
+            "required": true,
+            "min": 1,
+            "max": 19,
+            "value": 0,
+            "description": "庭の図版で最短ルートを見つける能力"
+        },
+        {
+            "dispname": "模様の構成",
+            "name": "模様の構成",
+            "type": "scale",
+            "required": true,
+            "min": 1,
+            "max": 19,
+            "value": 0,
+            "description": "ピースを使って見本と同じ模様を作る能力"
+        },
+        {
+            "dispname": "認知検査 - 計画尺度 (流動性推理尺度)",
+            "type": "subsection"
+        },
+        {
+            "dispname": "物語の完成",
+            "name": "物語の完成",
+            "type": "scale",
+            "required": true,
+            "min": 1,
+            "max": 19,
+            "value": 0,
+            "description": "物語を完成させるために必要な絵カードを選ぶ能力"
+        },
+        {
+            "dispname": "パターン推理",
+            "name": "パターン推理",
+            "type": "scale",
+            "required": true,
+            "min": 1,
+            "max": 19,
+            "value": 0,
+            "description": "規則に従って並んだ図形の欠けた部分を推理する能力"
+        },
+        {
+            "dispname": "認知検査 - 学習尺度 (長期記憶と検索尺度)",
+            "type": "subsection"
+        },
+        {
+            "dispname": "語の学習",
+            "name": "語の学習",
+            "type": "scale",
+            "required": true,
+            "min": 1,
+            "max": 19,
+            "value": 0,
+            "description": "無意味な名前がつけられた絵を学習し記憶する能力"
+        },
+        {
+            "dispname": "語の学習遅延",
+            "name": "語の学習遅延",
+            "type": "scale",
+            "required": true,
+            "min": 1,
+            "max": 19,
+            "value": 0,
+            "description": "約20分後に学習した内容を想起する能力"
+        },
+        {
+            "dispname": "習得検査 - 語彙尺度 (結晶性能力尺度)",
+            "type": "subsection"
+        },
+        {
+            "dispname": "表現語彙",
+            "name": "表現語彙",
+            "type": "scale",
+            "required": true,
+            "min": 1,
+            "max": 19,
+            "value": 0,
+            "description": "絵や写真を見てその名前を答える能力"
+        },
+        {
+            "dispname": "なぞなぞ",
+            "name": "なぞなぞ",
+            "type": "scale",
+            "required": true,
+            "min": 1,
+            "max": 19,
+            "value": 0,
+            "description": "なぞなぞを聞いて答えの絵を指さすまたは単語で答える能力"
+        },
+        {
+            "dispname": "理解語彙",
+            "name": "理解語彙",
+            "type": "scale",
+            "required": true,
+            "min": 1,
+            "max": 19,
+            "value": 0,
+            "description": "単語を聞いてその単語が示す絵を指さす能力"
+        },
+        {
+            "dispname": "習得検査 - 算数尺度 (量的知識尺度)",
+            "type": "subsection"
+        },
+        {
+            "dispname": "数的推論",
+            "name": "数的推論",
+            "type": "scale",
+            "required": true,
+            "min": 1,
+            "max": 19,
+            "value": 0,
+            "description": "絵を見て数学的問題に答える能力"
+        },
+        {
+            "dispname": "計算",
+            "name": "計算",
+            "type": "scale",
+            "required": true,
+            "min": 1,
+            "max": 19,
+            "value": 0,
+            "description": "計算問題を解く能力"
+        },
+        {
+            "dispname": "習得検査 - 読み書き尺度",
+            "type": "subsection"
+        },
+        {
+            "dispname": "ことばの読み",
+            "name": "ことばの読み",
+            "type": "scale",
+            "required": true,
+            "min": 1,
+            "max": 19,
+            "value": 0,
+            "description": "ひらがな、カタカナ、漢字を声に出して読む能力"
+        },
+        {
+            "dispname": "ことばの書き",
+            "name": "ことばの書き",
+            "type": "scale",
+            "required": true,
+            "min": 1,
+            "max": 19,
+            "value": 0,
+            "description": "ひらがな、カタカナ、漢字を書く能力"
+        },
+        {
+            "dispname": "文の理解",
+            "name": "文の理解",
+            "type": "scale",
+            "required": true,
+            "min": 1,
+            "max": 19,
+            "value": 0,
+            "description": "問題文を理解し指示通りの動作を行う能力"
+        },
+        {
+            "dispname": "文の構成",
+            "name": "文の構成",
+            "type": "scale",
+            "required": true,
+            "min": 1,
+            "max": 19,
+            "value": 0,
+            "description": "指定された言葉を使って文を作る能力"
+        },
+        {
+            "dispname": "特記事項",
+            "name": "特記事項",
+            "type": "textarea",
+            "rows": 3,
+            "description": "検査結果に影響する可能性のある要因"
+        },
+        {
+            "dispname": "総合所見",
+            "name": "総合所見",
+            "type": "textarea",
+            "rows": 5,
+            "description": "検査結果の総合的な解釈と今後の支援方針"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "dispname": "継次尺度 標準得点",
+            "name": "継次尺度標準得点",
+            "type": "eval",
+            "formula": "[[数唱]] + [[語の配列]] + [[手の動作]]"
+        },
+        {
+            "dispname": "同時尺度 標準得点",
+            "name": "同時尺度標準得点",
+            "type": "eval",
+            "formula": "[[顔さがし]] + [[絵の統合]] + [[近道さがし]] + [[模様の構成]]"
+        },
+        {
+            "dispname": "計画尺度 標準得点",
+            "name": "計画尺度標準得点",
+            "type": "eval",
+            "formula": "[[物語の完成]] + [[パターン推理]]"
+        },
+        {
+            "dispname": "学習尺度 標準得点",
+            "name": "学習尺度標準得点",
+            "type": "eval",
+            "formula": "[[語の学習]] + [[語の学習遅延]]"
+        },
+        {
+            "dispname": "認知処理指標",
+            "name": "認知処理指標",
+            "type": "eval",
+            "formula": "[[継次尺度標準得点]] + [[同時尺度標準得点]] + [[計画尺度標準得点]] + [[学習尺度標準得点]]"
+        },
+        {
+            "dispname": "語彙尺度 標準得点",
+            "name": "語彙尺度標準得点",
+            "type": "eval",
+            "formula": "[[表現語彙]] + [[なぞなぞ]] + [[理解語彙]]"
+        },
+        {
+            "dispname": "算数尺度 標準得点",
+            "name": "算数尺度標準得点",
+            "type": "eval",
+            "formula": "[[数的推論]] + [[計算]]"
+        },
+        {
+            "dispname": "読み書き尺度 標準得点",
+            "name": "読み書き尺度標準得点",
+            "type": "eval",
+            "formula": "[[ことばの読み]] + [[ことばの書き]] + [[文の理解]] + [[文の構成]]"
+        },
+        {
+            "dispname": "習得度指標",
+            "name": "習得度指標",
+            "type": "eval",
+            "formula": "[[語彙尺度標準得点]] + [[算数尺度標準得点]] + [[読み書き尺度標準得点]]"
+        },
+        {
+            "dispname": "短期記憶尺度 (Gsm)",
+            "name": "短期記憶尺度",
+            "type": "eval",
+            "formula": "[[数唱]] + [[語の配列]] + [[手の動作]]"
+        },
+        {
+            "dispname": "視覚処理尺度 (Gv)",
+            "name": "視覚処理尺度",
+            "type": "eval",
+            "formula": "[[顔さがし]] + [[近道さがし]] + [[模様の構成]]"
+        },
+        {
+            "dispname": "流動性推理尺度 (Gf)",
+            "name": "流動性推理尺度",
+            "type": "eval",
+            "formula": "[[物語の完成]] + [[パターン推理]]"
+        },
+        {
+            "dispname": "長期記憶と検索尺度 (Glr)",
+            "name": "長期記憶と検索尺度",
+            "type": "eval",
+            "formula": "[[語の学習]] + [[語の学習遅延]]"
+        },
+        {
+            "dispname": "精神処理指標 (MPI)",
+            "name": "精神処理指標",
+            "type": "eval",
+            "formula": "[[短期記憶尺度]] + [[視覚処理尺度]] + [[流動性推理尺度]] + [[長期記憶と検索尺度]]"
+        },
+        {
+            "dispname": "結晶性能力尺度 (Gc)",
+            "name": "結晶性能力尺度",
+            "type": "eval",
+            "formula": "[[表現語彙]] + [[なぞなぞ]] + [[理解語彙]]"
+        },
+        {
+            "dispname": "量的知識尺度 (Gq)",
+            "name": "量的知識尺度",
+            "type": "eval",
+            "formula": "[[数的推論]] + [[計算]]"
+        },
+        {
+            "dispname": "読み書き尺度CHC (Grw)",
+            "name": "読み書き尺度CHC",
+            "type": "eval",
+            "formula": "[[ことばの読み]] + [[ことばの書き]] + [[文の理解]] + [[文の構成]]"
+        },
+        {
+            "dispname": "流動-結晶性指標 (FCI)",
+            "name": "流動結晶性指標",
+            "type": "eval",
+            "formula": "[[短期記憶尺度]] + [[視覚処理尺度]] + [[流動性推理尺度]] + [[長期記憶と検索尺度]] + [[結晶性能力尺度]]"
+        },
+        {
+            "dispname": "検査中の行動観察",
+            "name": "行動観察",
+            "type": "textarea",
+            "rows": 5
+        }
+    ]
+}

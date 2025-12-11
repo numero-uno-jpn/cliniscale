@@ -1,0 +1,139 @@
+{
+    "_comment": [
+        "潰瘍性大腸炎臨床的重症度分類問診票",
+        "出典: 厚生労働科学研究費補助金 難治性疾患政策研究事業「難治性炎症性腸管障害に関する調査研究」(久松班) 令和6年度分担研究報告書",
+        "参考URL: http://www.ibdjapan.org/pdf/doc15.pdf",
+        "根拠: 潰瘍性大腸炎診断基準（2025年3月改訂）臨床的重症度による分類"
+    ],
+    "title": "潰瘍性大腸炎臨床的重症度分類",
+    "description": [
+        "潰瘍性大腸炎の臨床的重症度を評価するための問診票です。",
+        "6つの評価項目により軽症、中等症、重症を分類します。"
+    ],
+    "fields": [
+        {
+            "dispname": "臨床的重症度評価項目",
+            "type": "subsection"
+        },
+        {
+            "dispname": "1) 排便回数（1日あたり）",
+            "name": "排便回数",
+            "type": "radio",
+            "selector": "4回以下|5回|6回以上",
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "2) 顕血便",
+            "name": "顕血便",
+            "type": "radio",
+            "selector": "血便なし|排便の半数以下でわずかに血液が付着|ほとんどの排便時に明らかな血液の混入|大部分が血液",
+            "selectoridx": "0|1|2|3",
+            "required": true,
+            "description": "最近の血便の状態を評価してください"
+        },
+        {
+            "dispname": "3) 発熱",
+            "name": "発熱",
+            "type": "radio",
+            "selector": "37.5℃未満|37.5℃以上",
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "dispname": "4) 頻脈",
+            "name": "頻脈",
+            "type": "radio",
+            "selector": "90/分未満|90/分以上",
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "dispname": "5) 貧血（ヘモグロビン値）",
+            "name": "貧血",
+            "type": "radio",
+            "selector": "10g/dL超|10g/dL以下",
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "dispname": "6) 炎症反応",
+            "name": "炎症反応",
+            "type": "radio",
+            "selector": "正常|赤沈30mm/h以上またはCRP3.0mg/dL以上",
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "dispname": "補足情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "備考",
+            "name": "備考",
+            "type": "textarea",
+            "rows": 3,
+            "description": "その他の症状や所見があれば記載してください"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "軽症判定",
+            "type": "eval",
+            "formula": "[[排便回数.index]] == 0 && [[顕血便.index]] <= 1 && [[発熱.index]] == 0 && [[頻脈.index]] == 0 && [[貧血.index]] == 0 && [[炎症反応.index]] == 0 ? '軽症' : '軽症以外'",
+            "dispname": "軽症判定 (6項目すべてを軽症基準で満たす場合)"
+        },
+        {
+            "name": "重症判定条件1",
+            "type": "eval",
+            "formula": "[[排便回数.index]] == 2 && [[顕血便.index]] == 3 ? 1 : 0",
+            "noreport": true
+        },
+        {
+            "name": "重症判定条件2",
+            "type": "eval",
+            "formula": "[[発熱.index]] == 1 || [[頻脈.index]] == 1 ? 1 : 0",
+            "noreport": true
+        },
+        {
+            "name": "重症判定条件3",
+            "type": "eval",
+            "formula": "[[排便回数.index]] + [[顕血便.index]] + [[発熱.index]] + [[頻脈.index]] + [[貧血.index]] + [[炎症反応.index]]",
+            "noreport": true,
+            "description": "6項目中該当項目数の計算"
+        },
+        {
+            "name": "重症判定",
+            "type": "eval",
+            "formula": "[[重症判定条件1]] == 1 && [[重症判定条件2]] == 1 && [[重症判定条件3]] >= 4 ? '重症' : '重症以外'"
+        },
+        {
+            "name": "中等症判定",
+            "type": "eval",
+            "formula": "{{軽症判定}} == '軽症以外' && {{重症判定}} == '重症以外' ? '中等症' : '中等症以外'",
+            "dispname": "中等症判定 (軽症と重症の中間)"
+        },
+        {
+            "name": "最終重症度判定",
+            "type": "eval",
+            "formula": "{{軽症判定}} == '軽症' ? '軽症' : ( {{重症判定}} == '重症' ? '重症' : '中等症' )"
+        },
+        {
+            "name": "重症度スコア",
+            "type": "eval",
+            "formula": "[[重症判定条件3]]",
+            "dispname": "重症度スコア (6項目中該当項目数)"
+        },
+        {
+            "name": "Warning: 重症度スコア3項目以上",
+            "formula": "[[重症判定条件3]] >= 3",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 重症判定",
+            "formula": "{{最終重症度判定}} == '重症'",
+            "type": "emergency"
+        }
+    ]
+}

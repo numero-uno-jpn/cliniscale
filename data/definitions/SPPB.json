@@ -1,0 +1,183 @@
+{
+    "_comment": [
+        "SPPB (Short Physical Performance Battery) 日本語版問診票",
+        "原典: Guralnik JM, et al. A short physical performance battery assessing lower extremity function: association with self-reported disability and prediction of mortality and nursing home admission. Journal of Gerontology. 1994;49(2):M85-M94",
+        "開発: National Institute on Aging (NIA), 1994年",
+        "採点基準: NIA公式マニュアル（ミズーリ大学公式採点シート）に基づく正確な境界値を使用",
+        "参考URL: https://geriatrictoolkit.missouri.edu/SPPB-Score-Tool.pdf",
+        "参考URL: https://www.nia.nih.gov/research/labs/leps/short-physical-performance-battery-sppb",
+        "日本サルコペニア・フレイル学会によりサルコペニア診断基準に採用（AWGS2019: 9点以下で身体機能低下）"
+    ],
+    "title": "SPPB 下肢機能評価",
+    "description": [
+        "Short Physical Performance Battery (SPPB) は、高齢者の下肢機能を評価する包括的なテストです。",
+        "バランス、歩行、下肢筋力の3項目で構成され、各項目0-4点、合計12点で評価します。"
+    ],
+    "fields": [
+        {
+            "dispname": "立位バランステスト",
+            "type": "subsection"
+        },
+        {
+            "dispname": "閉脚立位（両足を揃えて立つ）",
+            "name": "閉脚立位",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "10秒未満",
+                "10秒以上"
+            ],
+            "selectoridx": "0|1",
+            "description": "両足を揃えて立った状態で10秒間保持できるかお答えください"
+        },
+        {
+            "dispname": "セミタンデム立位（前足の踵と後足の母趾を接触）",
+            "name": "セミタンデム立位",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "10秒未満",
+                "10秒以上"
+            ],
+            "selectoridx": "0|1",
+            "description": "前足の踵の内側と後足の母趾の内側を付けて立った状態で10秒間保持できるかお答えください",
+            "parentname": "閉脚立位",
+            "parentsel": "10秒以上"
+        },
+        {
+            "dispname": "タンデム立位（前足の踵に後足のつま先を接触）",
+            "name": "タンデム立位",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "3秒未満",
+                "3秒以上10秒未満",
+                "10秒以上"
+            ],
+            "selectoridx": "0|1|2",
+            "description": "前足の踵に後足のつま先を付けて一直線に立った状態で、どの程度保持できるかお答えください",
+            "parentname": "セミタンデム立位",
+            "parentsel": "10秒以上"
+        },
+        {
+            "dispname": "歩行テスト",
+            "type": "subsection"
+        },
+        {
+            "dispname": "4m歩行時間（秒）",
+            "name": "歩行時間",
+            "type": "text",
+            "required": true,
+            "inputmode": "decimal",
+            "postfix": "秒",
+            "testrange": [
+                3,
+                15
+            ],
+            "description": "普通の速さで4m歩くのにかかった時間をお答えください（2回実施した良い方の時間）。半角数字で入力してください（例: 6.5）"
+        },
+        {
+            "dispname": "歩行補助具の使用",
+            "name": "歩行補助具",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "使用なし",
+                "杖使用",
+                "歩行器使用",
+                "その他の補助具"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "5回立ち上がりテスト",
+            "type": "subsection"
+        },
+        {
+            "dispname": "5回立ち上がり時間（秒）",
+            "name": "立ち上がり時間",
+            "type": "text",
+            "required": true,
+            "inputmode": "decimal",
+            "postfix": "秒",
+            "testrange": [
+                8,
+                30
+            ],
+            "description": "胸の前で腕を組んで、椅子から5回連続で立ち上がり・着座にかかった時間をお答えください。半角数字で入力してください（例: 12.3）"
+        },
+        {
+            "dispname": "テスト実施可否",
+            "name": "立ち上がり実施",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "完遂",
+                "安全上の理由で中止",
+                "実施不可"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "セミタンデム立位_index",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[セミタンデム立位.index]]"
+        },
+        {
+            "name": "タンデム立位_index",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[タンデム立位.index]]"
+        },
+        {
+            "name": "バランススコア",
+            "type": "eval",
+            "dispname": "立位バランステストの得点（0-4点）",
+            "formula": "[[閉脚立位.index]] == 0 ? 0 : ( [[セミタンデム立位_index]] == 0 ? 1 : ( [[タンデム立位_index]] == 0 ? 2 : ( [[タンデム立位_index]] == 1 ? 3 : 4 ) ) )"
+        },
+        {
+            "name": "歩行スコア",
+            "type": "eval",
+            "dispname": "歩行テストの得点（0-4点）",
+            "formula": "[[歩行時間]] == 0 ? 0 : ( [[歩行時間]] > 8.70 ? 1 : ( [[歩行時間]] >= 6.21 ? 2 : ( [[歩行時間]] >= 4.82 ? 3 : 4 ) ) )"
+        },
+        {
+            "name": "立ち上がりスコア",
+            "type": "eval",
+            "dispname": "5回立ち上がりテストの得点（0-4点）",
+            "formula": "[[立ち上がり実施.index]] != 0 ? 0 : ( [[立ち上がり時間]] == 0 ? 0 : ( [[立ち上がり時間]] >= 16.70 ? 1 : ( [[立ち上がり時間]] >= 13.70 ? 2 : ( [[立ち上がり時間]] >= 11.20 ? 3 : 4 ) ) ) )"
+        },
+        {
+            "name": "SPPB総スコア",
+            "type": "eval",
+            "dispname": "SPPB合計得点（0-12点）",
+            "formula": "[[バランススコア]] + [[歩行スコア]] + [[立ち上がりスコア]]"
+        },
+        {
+            "name": "機能レベル判定",
+            "type": "eval",
+            "dispname": "下肢機能レベルの評価",
+            "formula": "[[SPPB総スコア]] <= 3 ? '極めて低運動機能' : ( [[SPPB総スコア]] <= 6 ? '低運動機能' : ( [[SPPB総スコア]] <= 9 ? '中等度運動機能' : '運動機能良好' ) )"
+        },
+        {
+            "name": "サルコペニア判定",
+            "type": "eval",
+            "dispname": "AWGS2019基準による身体機能評価",
+            "formula": "[[SPPB総スコア]] <= 9 ? 'あり（身体機能低下）' : 'なし（身体機能良好）'"
+        },
+        {
+            "name": "Warning: SPPB総スコア ≤ 6 (低運動機能)",
+            "formula": "[[SPPB総スコア]] <= 6",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: SPPB総スコア ≤ 3 (極めて低運動機能)",
+            "formula": "[[SPPB総スコア]] <= 3",
+            "type": "emergency"
+        }
+    ]
+}

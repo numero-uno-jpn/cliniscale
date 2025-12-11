@@ -1,0 +1,3537 @@
+{
+    "_comment": [
+        "NEO Personality Inventory-3 (NEO-PI-3) - ネオ人格検査第3版",
+        "原典: Costa, P.T., Jr., & McCrae, R.R. (2005). NEO-PI-3 Professional Manual",
+        "5因子性格モデル(ビッグファイブ)に基づく包括的人格検査",
+        "各因子は6つの下位因子から構成(計30の下位因子)",
+        "240項目、5段階評価"
+    ],
+    "title": "NEO-PI-3 ネオ人格検査第3版",
+    "description": [
+        "ビッグファイブ理論に基づく性格特性の包括的評価",
+        "5つの主要な性格因子(神経症傾向、外向性、開放性、調和性、誠実性)と30の下位因子を測定します",
+        "各質問について、あなたに当てはまる程度を5段階で評価してください"
+    ],
+    "submit_button_title": "回答を送信",
+    "fields": [
+        {
+            "dispname": "神経症傾向 (N) - 不安",
+            "type": "subsection"
+        },
+        {
+            "dispname": "心配することはない",
+            "name": "N1_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "不安になりやすい",
+            "name": "N1_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "緊張しやすい",
+            "name": "N1_3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "恐怖を感じやすい",
+            "name": "N1_4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "悩みがちである",
+            "name": "N1_5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "神経質である",
+            "name": "N1_6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "ストレスに弱い",
+            "name": "N1_7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "リラックスしている",
+            "name": "N1_8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "神経症傾向 (N) - 敵意",
+            "type": "subsection"
+        },
+        {
+            "dispname": "人の扱いに腹が立つことがよくある",
+            "name": "N2_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "怒りっぽい",
+            "name": "N2_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "苛立ちを感じることが多い",
+            "name": "N2_3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "他人に対して敵意を抱きやすい",
+            "name": "N2_4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "怒りを表に出さない",
+            "name": "N2_5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "短気である",
+            "name": "N2_6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "機嫌が悪くなることが多い",
+            "name": "N2_7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "穏やかな気持ちでいる",
+            "name": "N2_8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "神経症傾向 (N) - 抑うつ",
+            "type": "subsection"
+        },
+        {
+            "dispname": "孤独感や憂鬱感を感じることは稀である",
+            "name": "N3_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "落ち込むことがある",
+            "name": "N3_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "絶望感に襲われることがある",
+            "name": "N3_3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "罪悪感を感じることが多い",
+            "name": "N3_4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "憂鬱になることがある",
+            "name": "N3_5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "悲しい気持ちになることが多い",
+            "name": "N3_6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "希望を失うことがある",
+            "name": "N3_7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "楽観的である",
+            "name": "N3_8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "神経症傾向 (N) - 自意識",
+            "type": "subsection"
+        },
+        {
+            "dispname": "人前でばかなことをするのではないかと心配する",
+            "name": "N4_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "恥ずかしがり屋である",
+            "name": "N4_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "自分の欠点が気になる",
+            "name": "N4_3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "人の目を気にしすぎる",
+            "name": "N4_4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "人前で緊張する",
+            "name": "N4_5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "人にどう思われるか気になる",
+            "name": "N4_6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "注目されるのが嫌である",
+            "name": "N4_7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "人前で堂々としている",
+            "name": "N4_8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "神経症傾向 (N) - 衝動性",
+            "type": "subsection"
+        },
+        {
+            "dispname": "衝動に駆られることは滅多にない",
+            "name": "N5_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "欲望に負けやすい",
+            "name": "N5_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "誘惑に弱い",
+            "name": "N5_3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "食べ過ぎてしまうことがある",
+            "name": "N5_4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "突発的な行動をとることがある",
+            "name": "N5_5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "自制心がある",
+            "name": "N5_6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "感情をコントロールするのが難しい",
+            "name": "N5_7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "節度を保つことができる",
+            "name": "N5_8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "神経症傾向 (N) - 傷つきやすさ",
+            "type": "subsection"
+        },
+        {
+            "dispname": "誰かに問題を解決してもらいたいと思うことがよくある",
+            "name": "N6_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "ストレスに対処するのが上手である",
+            "name": "N6_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "困難な状況では混乱してしまう",
+            "name": "N6_3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "プレッシャーに弱い",
+            "name": "N6_4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "危機的状況で冷静さを保てる",
+            "name": "N6_5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "ちょっとしたことで動揺する",
+            "name": "N6_6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "困った時に誰かに頼りたくなる",
+            "name": "N6_7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "問題に直面しても落ち着いていられる",
+            "name": "N6_8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "外向性 (E) - 温かさ",
+            "type": "subsection"
+        },
+        {
+            "dispname": "初対面の人に微笑みかけたり話しかけたりするのは簡単である",
+            "name": "E1_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "親しみやすい人だと思われている",
+            "name": "E1_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "人との距離を置きたがる",
+            "name": "E1_3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "人に対して愛情深い",
+            "name": "E1_4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "他人に親近感を抱きやすい",
+            "name": "E1_5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "人とのつながりを大切にする",
+            "name": "E1_6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "他人に対して冷たい態度をとることがある",
+            "name": "E1_7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "人懐っこい性格である",
+            "name": "E1_8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "外向性 (E) - 群居性",
+            "type": "subsection"
+        },
+        {
+            "dispname": "一人で作業できる仕事を好む",
+            "name": "E2_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "にぎやかな場所が好きである",
+            "name": "E2_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "大勢の人と一緒にいると楽しい",
+            "name": "E2_3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "パーティーなどの社交的な集まりが好きである",
+            "name": "E2_4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "人が大勢いる場所を避ける",
+            "name": "E2_5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "一人でいることを好む",
+            "name": "E2_6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "人との交流を楽しむ",
+            "name": "E2_7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "静かな環境を好む",
+            "name": "E2_8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "外向性 (E) - 断行性",
+            "type": "subsection"
+        },
+        {
+            "dispname": "支配的で強引で積極的である",
+            "name": "E3_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "リーダーシップを発揮することが多い",
+            "name": "E3_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "自分の意見をはっきりと言う",
+            "name": "E3_3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "他人をリードしたがる",
+            "name": "E3_4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "決断力がある",
+            "name": "E3_5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "控えめな性格である",
+            "name": "E3_6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "積極的に行動する",
+            "name": "E3_7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "遠慮がちである",
+            "name": "E3_8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "外向性 (E) - 活動性",
+            "type": "subsection"
+        },
+        {
+            "dispname": "仕事や遊びでゆったりしたスタイルを持っている",
+            "name": "E4_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "エネルギッシュである",
+            "name": "E4_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "活動的な生活を送っている",
+            "name": "E4_3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "忙しくしていることが多い",
+            "name": "E4_4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "動きが活発である",
+            "name": "E4_5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "のんびりした性格である",
+            "name": "E4_6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "テンポの早い生活をしている",
+            "name": "E4_7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "ゆっくりと落ち着いて行動する",
+            "name": "E4_8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "外向性 (E) - 刺激希求性",
+            "type": "subsection"
+        },
+        {
+            "dispname": "にぎやかな場所にいるのが好きである",
+            "name": "E5_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "スリルを求める",
+            "name": "E5_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "刺激的な経験を求める",
+            "name": "E5_3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "興奮することを楽しむ",
+            "name": "E5_4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "冒険を求める",
+            "name": "E5_5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "平穏な生活を好む",
+            "name": "E5_6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "派手なことを好む",
+            "name": "E5_7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "質素な生活を好む",
+            "name": "E5_8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "外向性 (E) - 良い感情",
+            "type": "subsection"
+        },
+        {
+            "dispname": "喜びで飛び跳ねることは実際にない",
+            "name": "E6_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "楽しいことがあると興奮する",
+            "name": "E6_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "幸福感を感じることが多い",
+            "name": "E6_3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "陽気で機嫌が良いことが多い",
+            "name": "E6_4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "よく笑う",
+            "name": "E6_5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "悲観的な気持ちになることが多い",
+            "name": "E6_6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "毎日を楽しんでいる",
+            "name": "E6_7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "落ち込みがちである",
+            "name": "E6_8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "開放性 (O) - 空想",
+            "type": "subsection"
+        },
+        {
+            "dispname": "非常に活発な想像力を持っている",
+            "name": "O1_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "空想にふけることが多い",
+            "name": "O1_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "現実的な考え方をする",
+            "name": "O1_3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "想像の世界を楽しむ",
+            "name": "O1_4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "白昼夢を見ることがある",
+            "name": "O1_5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "実用的な物事に関心がある",
+            "name": "O1_6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "創造的な想像力がある",
+            "name": "O1_7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "現実を重視する",
+            "name": "O1_8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "開放性 (O) - 審美性",
+            "type": "subsection"
+        },
+        {
+            "dispname": "芸術にはあまり興味がない",
+            "name": "O2_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "美術館や博物館を訪れるのが好きである",
+            "name": "O2_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "美しいものに感動する",
+            "name": "O2_3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "詩に興味がある",
+            "name": "O2_4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "音楽から深い感動を得る",
+            "name": "O2_5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "芸術作品にあまり感動しない",
+            "name": "O2_6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "自然の美しさに感動する",
+            "name": "O2_7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "美的なセンスがある",
+            "name": "O2_8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "開放性 (O) - 感情",
+            "type": "subsection"
+        },
+        {
+            "dispname": "幅広い感情や気持ちを経験する",
+            "name": "O3_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "感情的になることは滅多にない",
+            "name": "O3_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "自分の感情をよく理解している",
+            "name": "O3_3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "感情の変化に敏感である",
+            "name": "O3_4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "感情を大切にする",
+            "name": "O3_5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "感情よりも理性を重視する",
+            "name": "O3_6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "豊かな感情表現をする",
+            "name": "O3_7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "感情を表に出すことは少ない",
+            "name": "O3_8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "開放性 (O) - 行為",
+            "type": "subsection"
+        },
+        {
+            "dispname": "自分のやり方にこだわる",
+            "name": "O4_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "新しい活動を試すのが好きである",
+            "name": "O4_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "変化を好む",
+            "name": "O4_3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "いつもと違うことをするのが好きである",
+            "name": "O4_4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "新しい経験を求める",
+            "name": "O4_5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "決まったパターンを好む",
+            "name": "O4_6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "多様性を求める",
+            "name": "O4_7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "習慣的な行動を好む",
+            "name": "O4_8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "開放性 (O) - アイデア",
+            "type": "subsection"
+        },
+        {
+            "dispname": "理論や抽象的な考えで遊ぶのが好きである",
+            "name": "O5_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "知的な議論を楽しむ",
+            "name": "O5_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "難しい問題について考えるのが好きである",
+            "name": "O5_3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "新しいアイデアに興味がある",
+            "name": "O5_4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "哲学的な問題に関心がある",
+            "name": "O5_5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "複雑な考えを理解するのが得意である",
+            "name": "O5_6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "知的好奇心が強い",
+            "name": "O5_7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "実用的な問題にのみ関心がある",
+            "name": "O5_8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "開放性 (O) - 価値",
+            "type": "subsection"
+        },
+        {
+            "dispname": "道徳的な問題については宗教的権威に従うべきだと思う",
+            "name": "O6_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "既存の権威に疑問を持つことがある",
+            "name": "O6_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "社会の慣習に従うことが大切だと思う",
+            "name": "O6_3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "政治的な問題について独自の見解を持つ",
+            "name": "O6_4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "伝統的な価値観を重視する",
+            "name": "O6_5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "社会的な規範を見直すべきだと思う",
+            "name": "O6_6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "様々な価値観を認める",
+            "name": "O6_7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "確立された価値観を支持する",
+            "name": "O6_8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "調和性 (A) - 信頼",
+            "type": "subsection"
+        },
+        {
+            "dispname": "人は見た目ほど親切でないことが多い",
+            "name": "A1_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "人を信頼する",
+            "name": "A1_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "他人の動機を疑うことがある",
+            "name": "A1_3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "人の善意を信じる",
+            "name": "A1_4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "人は基本的に正直だと思う",
+            "name": "A1_5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "他人に対して疑い深い",
+            "name": "A1_6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "人の言葉を素直に信じる",
+            "name": "A1_7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "人を警戒することが多い",
+            "name": "A1_8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "調和性 (A) - 実直さ",
+            "type": "subsection"
+        },
+        {
+            "dispname": "ずる賢くない",
+            "name": "A2_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "必要であれば人をだますこともある",
+            "name": "A2_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "正直である",
+            "name": "A2_3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "人を操ろうとすることがある",
+            "name": "A2_4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "率直に話す",
+            "name": "A2_5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "お世辞を言うことがある",
+            "name": "A2_6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "素直な性格である",
+            "name": "A2_7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "計算高いところがある",
+            "name": "A2_8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "調和性 (A) - 利他性",
+            "type": "subsection"
+        },
+        {
+            "dispname": "寛大さで知られているわけではない",
+            "name": "A3_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "困っている人を助けようとする",
+            "name": "A3_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "他人のために時間を使う",
+            "name": "A3_3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "他人の幸福を気にかける",
+            "name": "A3_4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "他人に対して思いやりがある",
+            "name": "A3_5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "自分のことを最優先に考える",
+            "name": "A3_6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "人の頼みを聞くことが多い",
+            "name": "A3_7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "利己的である",
+            "name": "A3_8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "調和性 (A) - 応諾",
+            "type": "subsection"
+        },
+        {
+            "dispname": "侮辱されても許そうとする",
+            "name": "A4_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "他人と意見が合わないと議論になる",
+            "name": "A4_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "人との対立を避ける",
+            "name": "A4_3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "人と競争することが好きである",
+            "name": "A4_4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "協調性がある",
+            "name": "A4_5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "他人と対立することがある",
+            "name": "A4_6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "平和を好む",
+            "name": "A4_7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "攻撃的になることがある",
+            "name": "A4_8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "調和性 (A) - 慎み深さ",
+            "type": "subsection"
+        },
+        {
+            "dispname": "自分の才能や業績について自慢するのをためらわない",
+            "name": "A5_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "謙虚である",
+            "name": "A5_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "自分の能力を過大評価することがある",
+            "name": "A5_3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "控えめな性格である",
+            "name": "A5_4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "自分は特別な人間だと思う",
+            "name": "A5_5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "自分の価値を認めてもらいたい",
+            "name": "A5_6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "自分を低く評価しがちである",
+            "name": "A5_7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "優越感を持つことがある",
+            "name": "A5_8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "調和性 (A) - 優しさ",
+            "type": "subsection"
+        },
+        {
+            "dispname": "法律や社会政策を作る時は傷つく人のことを考えるべきである",
+            "name": "A6_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "人の気持ちを理解しようとする",
+            "name": "A6_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "他人の痛みを自分のことのように感じる",
+            "name": "A6_3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "情にもろい",
+            "name": "A6_4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "他人の感情に共感する",
+            "name": "A6_5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "現実的で合理的な判断をする",
+            "name": "A6_6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "他人の苦しみを見ると心が痛む",
+            "name": "A6_7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "厳しい現実を受け入れる",
+            "name": "A6_8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "誠実性 (C) - 有能感",
+            "type": "subsection"
+        },
+        {
+            "dispname": "仕事において効率的で効果的である",
+            "name": "C1_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "準備不足で能率が悪いことがある",
+            "name": "C1_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "有能だと思われている",
+            "name": "C1_3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "課題を上手にこなす",
+            "name": "C1_4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "目標を達成するのが得意である",
+            "name": "C1_5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "自分の能力に自信がない",
+            "name": "C1_6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "問題解決能力がある",
+            "name": "C1_7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "失敗することがよくある",
+            "name": "C1_8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "誠実性 (C) - 秩序",
+            "type": "subsection"
+        },
+        {
+            "dispname": "部屋が少し散らかっていても気にならない",
+            "name": "C2_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "整理整頓を心がけている",
+            "name": "C2_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "きちんと整理されていることを好む",
+            "name": "C2_3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "身の回りをきれいにしている",
+            "name": "C2_4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "几帳面である",
+            "name": "C2_5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "物を置く場所が決まっていない",
+            "name": "C2_6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "規則正しい生活をしている",
+            "name": "C2_7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "だらしない部分がある",
+            "name": "C2_8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "誠実性 (C) - 義務感",
+            "type": "subsection"
+        },
+        {
+            "dispname": "体調が悪くても仕事や学校に行こうとする",
+            "name": "C3_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "だらしない部分がある",
+            "name": "C3_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "約束を守る",
+            "name": "C3_3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "責任感が強い",
+            "name": "C3_4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "義務を果たそうとする",
+            "name": "C3_5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "ルールを破ることがある",
+            "name": "C3_6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "信頼できる人間だと思われている",
+            "name": "C3_7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "約束を破ることがある",
+            "name": "C3_8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "誠実性 (C) - 達成努力",
+            "type": "subsection"
+        },
+        {
+            "dispname": "成功への意欲がそれほど強くない",
+            "name": "C4_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "目標達成に向けて努力する",
+            "name": "C4_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "高い目標を設定する",
+            "name": "C4_3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "野心的である",
+            "name": "C4_4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "向上心がある",
+            "name": "C4_5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "現状に満足している",
+            "name": "C4_6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "成功することを重視する",
+            "name": "C4_7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "競争することにあまり興味がない",
+            "name": "C4_8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "誠実性 (C) - 自己統制",
+            "type": "subsection"
+        },
+        {
+            "dispname": "時間内に物事を終わらせるペース配分が上手である",
+            "name": "C5_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "集中力を保つのが困難である",
+            "name": "C5_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "意志力が強い",
+            "name": "C5_3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "やるべきことを先延ばしにする",
+            "name": "C5_4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "自分をコントロールできる",
+            "name": "C5_5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "すぐに気が散ってしまう",
+            "name": "C5_6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "継続する力がある",
+            "name": "C5_7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "物事を最後まで続けるのが苦手である",
+            "name": "C5_8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "誠実性 (C) - 慎重性",
+            "type": "subsection"
+        },
+        {
+            "dispname": "年月を重ねてきてかなりばかなことをやってきた",
+            "name": "C6_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "行動する前によく考える",
+            "name": "C6_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "慎重に計画を立てる",
+            "name": "C6_3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "衝動的に行動することがある",
+            "name": "C6_4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "思慮深い",
+            "name": "C6_5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "後先考えずに行動することがある",
+            "name": "C6_6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "決定を下す前に十分検討する",
+            "name": "C6_7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "考えなしに行動することがある",
+            "name": "C6_8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くそうでない",
+                "そうでない",
+                "どちらでもない",
+                "そうだ",
+                "非常にそうだ"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "dispname": "神経症傾向 (N) 合計スコア",
+            "name": "神経症傾向_合計",
+            "type": "eval",
+            "formula": "[[N1_1.index]] + [[N1_2.index]] + [[N1_3.index]] + [[N1_4.index]] + [[N1_5.index]] + [[N1_6.index]] + [[N1_7.index]] + [[N1_8.index]] + [[N2_1.index]] + [[N2_2.index]] + [[N2_3.index]] + [[N2_4.index]] + [[N2_5.index]] + [[N2_6.index]] + [[N2_7.index]] + [[N2_8.index]] + [[N3_1.index]] + [[N3_2.index]] + [[N3_3.index]] + [[N3_4.index]] + [[N3_5.index]] + [[N3_6.index]] + [[N3_7.index]] + [[N3_8.index]] + [[N4_1.index]] + [[N4_2.index]] + [[N4_3.index]] + [[N4_4.index]] + [[N4_5.index]] + [[N4_6.index]] + [[N4_7.index]] + [[N4_8.index]] + [[N5_1.index]] + [[N5_2.index]] + [[N5_3.index]] + [[N5_4.index]] + [[N5_5.index]] + [[N5_6.index]] + [[N5_7.index]] + [[N5_8.index]] + [[N6_1.index]] + [[N6_2.index]] + [[N6_3.index]] + [[N6_4.index]] + [[N6_5.index]] + [[N6_6.index]] + [[N6_7.index]] + [[N6_8.index]]"
+        },
+        {
+            "dispname": "外向性 (E) 合計スコア",
+            "name": "外向性_合計",
+            "type": "eval",
+            "formula": "[[E1_1.index]] + [[E1_2.index]] + [[E1_3.index]] + [[E1_4.index]] + [[E1_5.index]] + [[E1_6.index]] + [[E1_7.index]] + [[E1_8.index]] + [[E2_1.index]] + [[E2_2.index]] + [[E2_3.index]] + [[E2_4.index]] + [[E2_5.index]] + [[E2_6.index]] + [[E2_7.index]] + [[E2_8.index]] + [[E3_1.index]] + [[E3_2.index]] + [[E3_3.index]] + [[E3_4.index]] + [[E3_5.index]] + [[E3_6.index]] + [[E3_7.index]] + [[E3_8.index]] + [[E4_1.index]] + [[E4_2.index]] + [[E4_3.index]] + [[E4_4.index]] + [[E4_5.index]] + [[E4_6.index]] + [[E4_7.index]] + [[E4_8.index]] + [[E5_1.index]] + [[E5_2.index]] + [[E5_3.index]] + [[E5_4.index]] + [[E5_5.index]] + [[E5_6.index]] + [[E5_7.index]] + [[E5_8.index]] + [[E6_1.index]] + [[E6_2.index]] + [[E6_3.index]] + [[E6_4.index]] + [[E6_5.index]] + [[E6_6.index]] + [[E6_7.index]] + [[E6_8.index]]"
+        },
+        {
+            "dispname": "開放性 (O) 合計スコア",
+            "name": "開放性_合計",
+            "type": "eval",
+            "formula": "[[O1_1.index]] + [[O1_2.index]] + [[O1_3.index]] + [[O1_4.index]] + [[O1_5.index]] + [[O1_6.index]] + [[O1_7.index]] + [[O1_8.index]] + [[O2_1.index]] + [[O2_2.index]] + [[O2_3.index]] + [[O2_4.index]] + [[O2_5.index]] + [[O2_6.index]] + [[O2_7.index]] + [[O2_8.index]] + [[O3_1.index]] + [[O3_2.index]] + [[O3_3.index]] + [[O3_4.index]] + [[O3_5.index]] + [[O3_6.index]] + [[O3_7.index]] + [[O3_8.index]] + [[O4_1.index]] + [[O4_2.index]] + [[O4_3.index]] + [[O4_4.index]] + [[O4_5.index]] + [[O4_6.index]] + [[O4_7.index]] + [[O4_8.index]] + [[O5_1.index]] + [[O5_2.index]] + [[O5_3.index]] + [[O5_4.index]] + [[O5_5.index]] + [[O5_6.index]] + [[O5_7.index]] + [[O5_8.index]] + [[O6_1.index]] + [[O6_2.index]] + [[O6_3.index]] + [[O6_4.index]] + [[O6_5.index]] + [[O6_6.index]] + [[O6_7.index]] + [[O6_8.index]]"
+        },
+        {
+            "dispname": "調和性 (A) 合計スコア",
+            "name": "調和性_合計",
+            "type": "eval",
+            "formula": "[[A1_1.index]] + [[A1_2.index]] + [[A1_3.index]] + [[A1_4.index]] + [[A1_5.index]] + [[A1_6.index]] + [[A1_7.index]] + [[A1_8.index]] + [[A2_1.index]] + [[A2_2.index]] + [[A2_3.index]] + [[A2_4.index]] + [[A2_5.index]] + [[A2_6.index]] + [[A2_7.index]] + [[A2_8.index]] + [[A3_1.index]] + [[A3_2.index]] + [[A3_3.index]] + [[A3_4.index]] + [[A3_5.index]] + [[A3_6.index]] + [[A3_7.index]] + [[A3_8.index]] + [[A4_1.index]] + [[A4_2.index]] + [[A4_3.index]] + [[A4_4.index]] + [[A4_5.index]] + [[A4_6.index]] + [[A4_7.index]] + [[A4_8.index]] + [[A5_1.index]] + [[A5_2.index]] + [[A5_3.index]] + [[A5_4.index]] + [[A5_5.index]] + [[A5_6.index]] + [[A5_7.index]] + [[A5_8.index]] + [[A6_1.index]] + [[A6_2.index]] + [[A6_3.index]] + [[A6_4.index]] + [[A6_5.index]] + [[A6_6.index]] + [[A6_7.index]] + [[A6_8.index]]"
+        },
+        {
+            "dispname": "誠実性 (C) 合計スコア",
+            "name": "誠実性_合計",
+            "type": "eval",
+            "formula": "[[C1_1.index]] + [[C1_2.index]] + [[C1_3.index]] + [[C1_4.index]] + [[C1_5.index]] + [[C1_6.index]] + [[C1_7.index]] + [[C1_8.index]] + [[C2_1.index]] + [[C2_2.index]] + [[C2_3.index]] + [[C2_4.index]] + [[C2_5.index]] + [[C2_6.index]] + [[C2_7.index]] + [[C2_8.index]] + [[C3_1.index]] + [[C3_2.index]] + [[C3_3.index]] + [[C3_4.index]] + [[C3_5.index]] + [[C3_6.index]] + [[C3_7.index]] + [[C3_8.index]] + [[C4_1.index]] + [[C4_2.index]] + [[C4_3.index]] + [[C4_4.index]] + [[C4_5.index]] + [[C4_6.index]] + [[C4_7.index]] + [[C4_8.index]] + [[C5_1.index]] + [[C5_2.index]] + [[C5_3.index]] + [[C5_4.index]] + [[C5_5.index]] + [[C5_6.index]] + [[C5_7.index]] + [[C5_8.index]] + [[C6_1.index]] + [[C6_2.index]] + [[C6_3.index]] + [[C6_4.index]] + [[C6_5.index]] + [[C6_6.index]] + [[C6_7.index]] + [[C6_8.index]]"
+        },
+        {
+            "dispname": "総合判定",
+            "name": "総合判定",
+            "type": "eval",
+            "formula": "'神経症傾向: ' + ([[神経症傾向_合計]] >= 144 ? '高' : ([[神経症傾向_合計]] >= 96 ? '中' : '低')) + ', 外向性: ' + ([[外向性_合計]] >= 144 ? '高' : ([[外向性_合計]] >= 96 ? '中' : '低')) + ', 開放性: ' + ([[開放性_合計]] >= 144 ? '高' : ([[開放性_合計]] >= 96 ? '中' : '低')) + ', 調和性: ' + ([[調和性_合計]] >= 144 ? '高' : ([[調和性_合計]] >= 96 ? '中' : '低')) + ', 誠実性: ' + ([[誠実性_合計]] >= 144 ? '高' : ([[誠実性_合計]] >= 96 ? '中' : '低'))"
+        }
+    ]
+}

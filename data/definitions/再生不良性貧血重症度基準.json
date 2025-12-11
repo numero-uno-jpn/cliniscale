@@ -1,0 +1,182 @@
+{
+  "_comment": [
+    "再生不良性貧血重症度基準",
+    "出典: 再生不良性貧血診療の参照ガイド 令和4年度改訂版",
+    "厚生労働科学研究費補助金 難治性疾患政策研究事業",
+    "特発性造血障害に関する調査研究班",
+    "研究代表者: 三谷絹子（獨協医科大学）",
+    "改訂版作成責任者: 山﨑宏人（金沢大学）",
+    "令和5年（2023年）3月発行",
+    "注意: 血液検査データに基づく重症度分類のため、臨床判断が必要です"
+  ],
+  "title": "再生不良性貧血重症度基準",
+  "description": [
+    "再生不良性貧血の重症度をStage 1から5に分類し、治療方針決定を支援します",
+    "血液検査結果と輸血の必要性により5段階に分類されます"
+  ],
+  "contact": "血液内科担当医",
+  "dept_in_charge": "血液内科",
+  "responsible_person": [
+    "血液内科医師"
+  ],
+  "fields": [
+    {
+      "dispname": "血液検査データ",
+      "type": "subsection"
+    },
+    {
+      "dispname": "網赤血球数",
+      "name": "網赤血球数",
+      "type": "text",
+      "postfix": "/μL",
+      "inputmode": "numeric",
+      "testrange": [
+        0,
+        80000
+      ],
+      "required": true,
+      "description": "網赤血球数を半角数字で入力してください（例: 50000）"
+    },
+    {
+      "dispname": "好中球数",
+      "name": "好中球数",
+      "type": "text",
+      "postfix": "/μL",
+      "inputmode": "numeric",
+      "testrange": [
+        0,
+        2000
+      ],
+      "required": true,
+      "description": "好中球数を半角数字で入力してください（例: 800）"
+    },
+    {
+      "dispname": "血小板数",
+      "name": "血小板数",
+      "type": "text",
+      "postfix": "/μL",
+      "inputmode": "numeric",
+      "testrange": [
+        0,
+        80000
+      ],
+      "required": true,
+      "description": "血小板数を半角数字で入力してください（例: 30000）"
+    },
+    {
+      "dispname": "輸血に関する情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "赤血球輸血の必要性",
+      "name": "赤血球輸血必要性",
+      "type": "radio",
+      "selector": [
+        "必要なし",
+        "月2単位未満",
+        "月2単位以上"
+      ],
+      "selectoridx": "0|1|2",
+      "required": true,
+      "description": "現在の赤血球輸血の必要性を選択してください"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "網赤血球数_数値",
+      "type": "eval",
+      "noreport": true,
+      "formula": "((網赤血球数))"
+    },
+    {
+      "name": "好中球数_数値",
+      "type": "eval",
+      "noreport": true,
+      "formula": "((好中球数))"
+    },
+    {
+      "name": "血小板数_数値",
+      "type": "eval",
+      "noreport": true,
+      "formula": "((血小板数))"
+    },
+    {
+      "name": "赤血球輸血必要性_index",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[赤血球輸血必要性.index]]"
+    },
+    {
+      "name": "stage4判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( [[網赤血球数_数値]] < 40000 ? 1 : 0 ) + ( [[好中球数_数値]] < 500 ? 1 : 0 ) + ( [[血小板数_数値]] < 20000 ? 1 : 0 ) >= 2 ? 1 : 0",
+      "description": "Stage 4: 網赤血球40,000/μL未満、好中球500/μL未満、血小板20,000/μL未満の2項目以上を満たす"
+    },
+    {
+      "name": "stage5判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[好中球数_数値]] < 200 && ( [[網赤血球数_数値]] < 20000 || [[血小板数_数値]] < 20000 ) ? 1 : 0",
+      "description": "Stage 5: 好中球200/μL未満 + 網赤血球20,000/μL未満または血小板20,000/μL未満"
+    },
+    {
+      "name": "stage23判定条件",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( [[網赤血球数_数値]] < 60000 ? 1 : 0 ) + ( [[好中球数_数値]] < 1000 ? 1 : 0 ) + ( [[血小板数_数値]] < 50000 ? 1 : 0 )",
+      "description": "Stage 2-3判定のための条件数カウント"
+    },
+    {
+      "name": "stage3判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[stage23判定条件]] >= 2 && [[赤血球輸血必要性_index]] == 2 ? 1 : 0",
+      "description": "Stage 3: Stage2-3条件2項目以上 + 月2単位以上の赤血球輸血"
+    },
+    {
+      "name": "stage2判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[stage23判定条件]] >= 2 && [[赤血球輸血必要性_index]] < 2 ? 1 : 0",
+      "description": "Stage 2: Stage2-3条件2項目以上 + 赤血球輸血なしまたは月2単位未満"
+    },
+    {
+      "name": "stage2b判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[stage2判定]] == 1 && [[赤血球輸血必要性_index]] == 1 ? 1 : 0",
+      "description": "Stage 2b: Stage 2で月2単位未満の赤血球輸血を要する"
+    },
+    {
+      "name": "stage2a判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[stage2判定]] == 1 && [[赤血球輸血必要性_index]] == 0 ? 1 : 0",
+      "description": "Stage 2a: Stage 2で赤血球輸血を必要としない"
+    },
+    {
+      "name": "最終重症度判定",
+      "type": "eval",
+      "formula": "[[stage5判定]] == 1 ? 'Stage 5（最重症）' : ( [[stage4判定]] == 1 ? 'Stage 4（重症）' : ( [[stage3判定]] == 1 ? 'Stage 3（やや重症）' : ( [[stage2b判定]] == 1 ? 'Stage 2b（中等症-輸血要）' : ( [[stage2a判定]] == 1 ? 'Stage 2a（中等症-輸血不要）' : 'Stage 1（軽症）' ) ) ) )",
+      "dispname": "重症度分類"
+    },
+    {
+      "name": "治療方針の目安",
+      "type": "eval",
+      "formula": "[[stage5判定]] == 1 || [[stage4判定]] == 1 ? '免疫抑制療法またはHLA一致同胞からの造血幹細胞移植を検討' : ( [[stage3判定]] == 1 || [[stage2b判定]] == 1 ? '免疫抑制療法を検討' : ( [[stage2a判定]] == 1 ? 'シクロスポリンによる治療を検討' : '経過観察または軽度治療' ) )",
+      "dispname": "治療方針"
+    },
+    {
+      "name": "Emergency: Stage 4-5（重症-最重症）",
+      "formula": "[[stage5判定]] == 1 || [[stage4判定]] == 1",
+      "type": "emergency"
+    },
+    {
+      "name": "Warning: Stage 2b-3（中等症-やや重症）",
+      "formula": "[[stage3判定]] == 1 || [[stage2b判定]] == 1",
+      "type": "warning"
+    }
+  ]
+}

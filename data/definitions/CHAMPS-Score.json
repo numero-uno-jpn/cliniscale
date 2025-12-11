@@ -1,0 +1,97 @@
+{
+  "_comment": [
+    "CHAMPS Score - 非静脈瘤性上部消化管出血の入院中死亡予測スコア",
+    "原典論文: Matsuhashi T, et al. J Gastroenterol. 2021 Aug;56(8):758-768",
+    "6つの項目で構成、各項目1点、合計0-6点",
+    "リスク分類: 低リスク(0点:0.2%)、中リスク(1-2点:2.3%)、高リスク(≥3点:26.5%)",
+    "モバイルアプリも利用可能"
+  ],
+  "title": "CHAMPS Score（上部消化管出血死亡予測）",
+  "description": [
+    "非静脈瘤性上部消化管出血の入院中死亡リスクを評価するスコアです。",
+    "6つの項目を評価し、リスク分類を行います。"
+  ],
+  "contact": "担当医師",
+  "dept_in_charge": "消化器内科・救急科",
+  "fields": [
+    {
+      "dispname": "Charlson併存疾患指数",
+      "name": "CCI",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "2以上|2未満",
+      "selectoridx": "1|0",
+      "description": "17の併存疾患について重み付けした指数"
+    },
+    {
+      "dispname": "出血発症の場所",
+      "name": "院内発症",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "院内発症|院外発症",
+      "selectoridx": "1|0",
+      "description": "入院中に発症した消化管出血かどうか"
+    },
+    {
+      "dispname": "血清アルブミン値",
+      "name": "アルブミン",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "2.5 g/dL未満|2.5 g/dL以上",
+      "selectoridx": "1|0",
+      "description": "栄養状態や肝機能の指標"
+    },
+    {
+      "dispname": "意識状態",
+      "name": "意識障害",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "意識障害あり|清明",
+      "selectoridx": "1|0",
+      "description": "意識レベルの変化や混乱の有無"
+    },
+    {
+      "dispname": "ECOG Performance Status",
+      "name": "ECOG",
+      "type": "radio",
+      "required": true,
+      "selector": "2以上|0-1",
+      "selectoridx": "1|0",
+      "description": "日常生活動作の制限度を評価<ul><li>0: 発症前と同様の活動可能</li><li>1: 激しい活動は制限されるが軽作業は可能</li><li>2: 自分の身の回りのことは可能だが作業はできない</li><li>3: 限られた身の回りのことのみ可能、日中の50%以上はベッドや椅子で過ごす</li><li>4: 全く動けない、完全にベッドや椅子で過ごす</li></ul>"
+    },
+    {
+      "dispname": "ステロイド使用",
+      "name": "ステロイド",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "使用あり|使用なし",
+      "selectoridx": "1|0",
+      "description": "全身性ステロイド薬の使用歴"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "dispname": "CHAMPS Score合計",
+      "name": "CHAMPS合計",
+      "type": "eval",
+      "formula": "[[CCI.index]] + [[院内発症.index]] + [[アルブミン.index]] + [[意識障害.index]] + [[ECOG.index]] + [[ステロイド.index]]"
+    },
+    {
+      "dispname": "入院中死亡リスクの分類",
+      "name": "リスク分類",
+      "type": "eval",
+      "formula": "[[CHAMPS合計]] == 0 ? '低リスク (0.2%)' : ( [[CHAMPS合計]] >= 1 && [[CHAMPS合計]] <= 2 ? '中リスク (2.3%)' : '高リスク (26.5%)' )"
+    },
+    {
+      "name": "Warning: 高リスク - CHAMPS Score ≥3点",
+      "formula": "[[CHAMPS合計]] >= 3",
+      "type": "warning"
+    }
+  ]
+}

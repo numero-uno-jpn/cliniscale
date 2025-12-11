@@ -1,0 +1,713 @@
+{
+    "_comment": [
+        "PDQ-39 Parkinson's Disease Questionnaire - パーキンソン病患者のQOL評価",
+        "参考URL: https://www.parkinsons.org.uk/professionals/resources/parkinsons-disease-questionnaire-pdq-39",
+        "参考URL: https://innovation.ox.ac.uk/outcome-measures/parkinsons-disease-questionnaire-pdq-39-pdq-8/",
+        "日本語版参考: 河本ら（2003）日本人におけるParkinson's Disease Questionnaire-39の信頼性評価",
+        "39項目、8次元、0-4点評価、合計156点満点、点数が低いほどQOLが高い"
+    ],
+    "title": "PDQ-39 パーキンソン病QOL質問票",
+    "description": [
+        "パーキンソン病患者の生活の質を評価する質問票です。",
+        "過去1か月の状況について、最も当てはまるものを選択してください。"
+    ],
+    "fields": [
+        {
+            "type": "subsection",
+            "name": "intro",
+            "dispname": "運動機能について"
+        },
+        {
+            "type": "radio",
+            "name": "q1",
+            "dispname": "100メートル歩くのに困難を感じることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q2",
+            "dispname": "1マイル歩くのに困難を感じることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q3",
+            "dispname": "身の回りのことをするのに困難を感じることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q4",
+            "dispname": "公共の場で困難を感じることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q5",
+            "dispname": "外出時に介助が必要だと感じることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q6",
+            "dispname": "人前で歩くことを恥ずかしく感じることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q7",
+            "dispname": "杖や歩行器に頼ることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q8",
+            "dispname": "家の中での移動に困難を感じることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q9",
+            "dispname": "転倒への心配を感じることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q10",
+            "dispname": "家に閉じこもることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "subsection",
+            "name": "adl_section",
+            "dispname": "日常生活動作について"
+        },
+        {
+            "type": "radio",
+            "name": "q11",
+            "dispname": "衣服の着脱に困難を感じることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q12",
+            "dispname": "入浴や身づくろいに困難を感じることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q13",
+            "dispname": "字を書くことに困難を感じることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q14",
+            "dispname": "食物を切ることに困難を感じることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q15",
+            "dispname": "飲み物を持って運ぶことに困難を感じることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q16",
+            "dispname": "家事をすることに困難を感じることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "subsection",
+            "name": "emotional_section",
+            "dispname": "情緒の安定について"
+        },
+        {
+            "type": "radio",
+            "name": "q17",
+            "dispname": "落ち込んだり憂鬱に感じることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q18",
+            "dispname": "孤立感や疎外感を感じることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q19",
+            "dispname": "泣いたり涙もろくなることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q20",
+            "dispname": "怒りっぽくなったりイライラすることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q21",
+            "dispname": "不安に感じることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q22",
+            "dispname": "将来への心配を感じることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "subsection",
+            "name": "stigma_section",
+            "dispname": "精神的負い目について"
+        },
+        {
+            "type": "radio",
+            "name": "q23",
+            "dispname": "自分の病気を他人に隠したいと感じることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q24",
+            "dispname": "人付き合いを避けることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q25",
+            "dispname": "他人に恥ずかしい思いをさせてしまうと感じることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q26",
+            "dispname": "他人があなたに対して異なった反応をすると感じることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "subsection",
+            "name": "social_section",
+            "dispname": "社会的支援について"
+        },
+        {
+            "type": "radio",
+            "name": "q27",
+            "dispname": "家族からの支援不足を感じることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q28",
+            "dispname": "友人からの支援不足を感じることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q29",
+            "dispname": "配偶者やパートナーからの支援不足を感じることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "subsection",
+            "name": "cognition_section",
+            "dispname": "認知機能について"
+        },
+        {
+            "type": "radio",
+            "name": "q30",
+            "dispname": "読書やテレビ視聴時に集中できないことがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q31",
+            "dispname": "記憶に問題があると感じることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q32",
+            "dispname": "悪夢や幻覚に悩まされることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q33",
+            "dispname": "日中に突然眠ってしまうことがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "subsection",
+            "name": "communication_section",
+            "dispname": "コミュニケーションについて"
+        },
+        {
+            "type": "radio",
+            "name": "q34",
+            "dispname": "話すことに困難を感じることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q35",
+            "dispname": "人とのコミュニケーションがうまくいかないと感じることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q36",
+            "dispname": "無視されていると感じることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "subsection",
+            "name": "discomfort_section",
+            "dispname": "身体的不具合について"
+        },
+        {
+            "type": "radio",
+            "name": "q37",
+            "dispname": "筋肉のけいれんや痛みがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q38",
+            "dispname": "関節や体の痛みがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q39",
+            "dispname": "不快な暑さや寒さを感じることがありましたか",
+            "required": true,
+            "selector": [
+                "全くない",
+                "たまにある",
+                "時々ある",
+                "しばしばある",
+                "常にある、または全くできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "type": "eval",
+            "name": "mobility_score",
+            "dispname": "運動機能スコア（0-40点）",
+            "formula": "[[q1.index]] + [[q2.index]] + [[q3.index]] + [[q4.index]] + [[q5.index]] + [[q6.index]] + [[q7.index]] + [[q8.index]] + [[q9.index]] + [[q10.index]]"
+        },
+        {
+            "type": "eval",
+            "name": "adl_score",
+            "dispname": "日常生活動作スコア（0-24点）",
+            "formula": "[[q11.index]] + [[q12.index]] + [[q13.index]] + [[q14.index]] + [[q15.index]] + [[q16.index]]"
+        },
+        {
+            "type": "eval",
+            "name": "emotional_score",
+            "dispname": "情緒の安定スコア（0-24点）",
+            "formula": "[[q17.index]] + [[q18.index]] + [[q19.index]] + [[q20.index]] + [[q21.index]] + [[q22.index]]"
+        },
+        {
+            "type": "eval",
+            "name": "stigma_score",
+            "dispname": "精神的負い目スコア（0-16点）",
+            "formula": "[[q23.index]] + [[q24.index]] + [[q25.index]] + [[q26.index]]"
+        },
+        {
+            "type": "eval",
+            "name": "social_score",
+            "dispname": "社会的支援スコア（0-12点）",
+            "formula": "[[q27.index]] + [[q28.index]] + [[q29.index]]"
+        },
+        {
+            "type": "eval",
+            "name": "cognition_score",
+            "dispname": "認知機能スコア（0-16点）",
+            "formula": "[[q30.index]] + [[q31.index]] + [[q32.index]] + [[q33.index]]"
+        },
+        {
+            "type": "eval",
+            "name": "communication_score",
+            "dispname": "コミュニケーションスコア（0-12点）",
+            "formula": "[[q34.index]] + [[q35.index]] + [[q36.index]]"
+        },
+        {
+            "type": "eval",
+            "name": "discomfort_score",
+            "dispname": "身体的不具合スコア（0-12点）",
+            "formula": "[[q37.index]] + [[q38.index]] + [[q39.index]]"
+        },
+        {
+            "type": "eval",
+            "name": "total_score",
+            "dispname": "PDQ-39総合スコア（0-156点、点数が低いほどQOLが高い）",
+            "formula": "[[mobility_score]] + [[adl_score]] + [[emotional_score]] + [[stigma_score]] + [[social_score]] + [[cognition_score]] + [[communication_score]] + [[discomfort_score]]"
+        },
+        {
+            "type": "eval",
+            "name": "mobility_percent",
+            "dispname": "運動機能百分率スコア（0-100%）",
+            "formula": "(([[mobility_score]] / 40) * 100).toFixed(2)"
+        },
+        {
+            "type": "eval",
+            "name": "adl_percent",
+            "dispname": "日常生活動作百分率スコア（0-100%）",
+            "formula": "([[adl_score]] / 24 * 100).toFixed(2)"
+        },
+        {
+            "type": "eval",
+            "name": "emotional_percent",
+            "dispname": "情緒の安定百分率スコア（0-100%）",
+            "formula": "([[emotional_score]] / 24 * 100).toFixed(2)"
+        },
+        {
+            "type": "eval",
+            "name": "stigma_percent",
+            "dispname": "精神的負い目百分率スコア（0-100%）",
+            "formula": "(([[stigma_score]] / 16) * 100).toFixed(2)"
+        },
+        {
+            "type": "eval",
+            "name": "social_percent",
+            "dispname": "社会的支援百分率スコア（0-100%）",
+            "formula": "([[social_score]] / 12 * 100).toFixed(2)"
+        },
+        {
+            "type": "eval",
+            "name": "cognition_percent",
+            "dispname": "認知機能百分率スコア（0-100%）",
+            "formula": "([[cognition_score]] / 16 * 100).toFixed(2)"
+        },
+        {
+            "type": "eval",
+            "name": "communication_percent",
+            "dispname": "コミュニケーション百分率スコア（0-100%）",
+            "formula": "([[communication_score]] / 12 * 100).toFixed(2)"
+        },
+        {
+            "type": "eval",
+            "name": "discomfort_percent",
+            "dispname": "身体的不具合百分率スコア（0-100%）",
+            "formula": "([[discomfort_score]] / 12 * 100).toFixed(2)"
+        },
+        {
+            "type": "eval",
+            "name": "summary_index",
+            "dispname": "PDQ-39サマリーインデックス（0-100%、低いほどQOLが高い）",
+            "formula": "( ( ((mobility_percent)) + ((adl_percent)) + ((emotional_percent)) + ((stigma_percent)) + ((social_percent)) + ((cognition_percent)) + ((communication_percent)) + ((discomfort_percent)) ) / 8 ).toFixed(2)"
+        }
+    ]
+}

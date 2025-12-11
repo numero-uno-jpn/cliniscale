@@ -1,0 +1,113 @@
+{
+    "_comment": [
+        "FAST (Functional Assessment Staging) 認知症進行度評価尺度",
+        "原著: Reisberg B et al. Functional staging of dementia of the Alzheimer type. Ann NY Acad Sci 1984; 435(1): 481-3",
+        "開発者: Barry Reisberg, M.D.",
+        "参考URL: https://www.compassus.com/healthcare-professionals/determining-eligibility/functional-assessment-staging-tool-fast-scale-for-dementia/",
+        "日本語参考: https://knowledge.nurse-senka.jp/500221"
+    ],
+    "title": "FAST (Functional Assessment Staging) 認知症進行度評価尺度",
+    "description": [
+        "FAST（Functional Assessment Staging）は、アルツハイマー型認知症の進行度・重症度を評価するための観察式評価尺度です。",
+        "患者さんの日常生活動作の観察と家族・介護者からの情報に基づいて、機能的能力を7段階で評価します。",
+        "回答は患者さん本人への質問ではなく、観察情報や家族・介護者からの聞き取りに基づいて行ってください。"
+    ],
+    "fields": [
+        {
+            "name": "評価者",
+            "type": "text",
+            "dispname": "評価者",
+            "required": true,
+            "description": "評価を実施する方の氏名・職種を記入してください"
+        },
+        {
+            "name": "評価日",
+            "type": "date",
+            "dispname": "評価実施日",
+            "required": true,
+            "description": "評価を実施した日付を選択してください"
+        },
+        {
+            "name": "主要ステージ",
+            "type": "radio",
+            "dispname": "FAST主要ステージ評価",
+            "required": true,
+            "description": "観察される機能状態に最も適合するステージを選択してください",
+            "selector": [
+                "Stage 1: 正常 - 主観的にも客観的にも困難なし",
+                "Stage 2: 年相応の変化 - 物の置き忘れ、主観的な言葉探しの困難",
+                "Stage 3: 境界状態 - 同僚にも明らかな職務機能の低下、新しい場所への旅行困難",
+                "Stage 4: 軽度認知症 - 複雑な作業能力の低下（客の接待準備、家計管理、買い物等）",
+                "Stage 5: 中等度認知症 - 適切な服装選択に介助が必要",
+                "Stage 6: やや高度認知症 - 着衣、入浴、トイレに関する問題",
+                "Stage 7: 高度認知症 - 言語機能、運動機能、意識の重篤な障害"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7"
+        },
+        {
+            "name": "ステージ6詳細",
+            "type": "checkbox",
+            "dispname": "Stage 6 詳細評価",
+            "description": "Stage 6に該当する場合、観察される症状を選択してください（複数選択可）",
+            "selector": [
+                "6a: 不適切な着衣（夜着の上に外出着、靴を間違った足に履く、ボタンかけ困難等）",
+                "6b: 入浴困難（水温調節困難等）",
+                "6c: トイレ動作困難（水を流し忘れ、適切に拭けない、トイレットペーパー処理困難等）",
+                "6d: 尿失禁（時々またはより頻繁）",
+                "6e: 便失禁（時々またはより頻繁）"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "parentname": "主要ステージ",
+            "parentsel": "Stage 6: やや高度認知症 - 着衣、入浴、トイレに関する問題"
+        },
+        {
+            "name": "ステージ7詳細",
+            "type": "checkbox",
+            "dispname": "Stage 7 詳細評価",
+            "description": "Stage 7に該当する場合、観察される症状を選択してください（複数選択可）",
+            "selector": [
+                "7a: 言語機能の制限（理解可能な単語が約6個以下に制限）",
+                "7b: 単語機能の著明な制限（理解可能な語彙が1つの単語のみ）",
+                "7c: 歩行能力の喪失（個人的な介助なしには歩行できない）",
+                "7d: 着座能力の喪失（介助なしには座位を保持できない）",
+                "7e: 笑う能力の喪失（微笑みの代わりに顔をしかめる動作のみ）",
+                "7f: 頭部保持能力の喪失（独立して頭部を保持できない）"
+            ],
+            "selectoridx": "0|1|2|3|4|5",
+            "parentname": "主要ステージ",
+            "parentsel": "Stage 7: 高度認知症 - 言語機能、運動機能、意識の重篤な障害"
+        },
+        {
+            "name": "所見",
+            "type": "textarea",
+            "dispname": "特記事項・所見",
+            "description": "評価時に気づいた点や特記すべき事項があれば記入してください",
+            "rows": 4
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "ステージ6詳細_index",
+            "type": "eval",
+            "noreport": true,
+            "formula": "([[ステージ6詳細.index]] || []).length"
+        },
+        {
+            "name": "ステージ7詳細_index",
+            "type": "eval",
+            "noreport": true,
+            "formula": "([[ステージ7詳細.index]] || []).length"
+        },
+        {
+            "name": "Stage 6 サブステージ該当数",
+            "type": "eval",
+            "formula": "([[主要ステージ.index]] == 6) ? [[ステージ6詳細_index]]: 'N/A'"
+        },
+        {
+            "name": "Stage 7 サブステージ該当数",
+            "type": "eval",
+            "formula": "([[主要ステージ.index]] == 7) ? [[ステージ7詳細_index]]: 'N/A'"
+        }
+    ]
+}

@@ -1,0 +1,296 @@
+{
+  "_comment": [
+    "POSSUM - Physiological and Operative Severity Score for the enUmeration of Mortality and Morbidity",
+    "手術リスク評価スコア",
+    "開発者: G. P. Copeland (1991)",
+    "原典: Copeland GP, et al. Br J Surg. 1991;78(3):355-60.",
+    "参考URL: https://pubmed.ncbi.nlm.nih.gov/2021848/",
+    "公式URL: https://www.mdcalc.com/calc/3927/possum-operative-morbidity-mortality-risk",
+    "評価: 生理学的12項目 + 手術的6項目",
+    "死亡率・合併症率を予測"
+  ],
+  "title": "POSSUM",
+  "description": [
+    "手術リスク評価スコア",
+    "生理学的要因と手術の重症度から死亡率と合併症率を予測します"
+  ],
+  "fields": [
+    {
+      "type": "subsection",
+      "dispname": "生理学的スコア"
+    },
+    {
+      "type": "radio",
+      "name": "年齢",
+      "dispname": "年齢",
+      "required": true,
+      "selector": [
+        "60歳以下",
+        "61-70歳",
+        "71歳以上"
+      ],
+      "selectoridx": "1|2|4"
+    },
+    {
+      "type": "radio",
+      "name": "心不全徴候",
+      "dispname": "心不全徴候",
+      "required": true,
+      "selector": [
+        "なし",
+        "利尿薬・ジギタリス・抗狭心症薬・降圧薬",
+        "末梢性浮腫、頸静脈怒張、肺野ラ音",
+        "心不全の上昇"
+      ],
+      "selectoridx": "1|2|4|8"
+    },
+    {
+      "type": "radio",
+      "name": "呼吸器系",
+      "dispname": "呼吸器系",
+      "required": true,
+      "selector": [
+        "呼吸困難なし",
+        "労作時呼吸困難",
+        "安静時呼吸困難 (気管支拡張薬)",
+        "安静時呼吸困難 (在宅酸素)"
+      ],
+      "selectoridx": "1|2|4|8"
+    },
+    {
+      "type": "radio",
+      "name": "収縮期血圧",
+      "dispname": "収縮期血圧 (mmHg)",
+      "required": true,
+      "selector": [
+        "110-130",
+        "100-109または131-170",
+        "90-99または171以上",
+        "89以下"
+      ],
+      "selectoridx": "1|2|4|8"
+    },
+    {
+      "type": "radio",
+      "name": "脈拍",
+      "dispname": "脈拍 (回/分)",
+      "required": true,
+      "selector": [
+        "50-80",
+        "40-49または81-100",
+        "101-120",
+        "39以下または121以上"
+      ],
+      "selectoridx": "1|2|4|8"
+    },
+    {
+      "type": "radio",
+      "name": "GCS",
+      "dispname": "Glasgow Coma Scale",
+      "required": true,
+      "selector": [
+        "15",
+        "12-14",
+        "9-11",
+        "8以下"
+      ],
+      "selectoridx": "1|2|4|8"
+    },
+    {
+      "type": "radio",
+      "name": "ヘモグロビン",
+      "dispname": "ヘモグロビン (g/dL)",
+      "required": true,
+      "selector": [
+        "13-16",
+        "11.5-12.9または16.1-17.0",
+        "10.0-11.4または17.1-18.0",
+        "10.0未満または18.1以上"
+      ],
+      "selectoridx": "1|2|4|8"
+    },
+    {
+      "type": "radio",
+      "name": "白血球",
+      "dispname": "白血球数 (×10^9/L)",
+      "required": true,
+      "selector": [
+        "4-10",
+        "3.0-3.9または10.1-20.0",
+        "20.1以上",
+        "3.0未満"
+      ],
+      "selectoridx": "1|2|4|8"
+    },
+    {
+      "type": "radio",
+      "name": "尿素",
+      "dispname": "血中尿素窒素 (mmol/L)",
+      "required": true,
+      "selector": [
+        "7.5以下",
+        "7.6-10.0",
+        "10.1-15.0",
+        "15.1以上"
+      ],
+      "selectoridx": "1|2|4|8"
+    },
+    {
+      "type": "radio",
+      "name": "ナトリウム",
+      "dispname": "血清ナトリウム (mmol/L)",
+      "required": true,
+      "selector": [
+        "136以上",
+        "131-135",
+        "126-130",
+        "125以下"
+      ],
+      "selectoridx": "1|2|4|8"
+    },
+    {
+      "type": "radio",
+      "name": "カリウム",
+      "dispname": "血清カリウム (mmol/L)",
+      "required": true,
+      "selector": [
+        "3.5-5.0",
+        "3.2-3.4または5.1-5.3",
+        "2.9-3.1または5.4-5.9",
+        "2.8以下または6.0以上"
+      ],
+      "selectoridx": "1|2|4|8"
+    },
+    {
+      "type": "radio",
+      "name": "心電図",
+      "dispname": "心電図所見",
+      "required": true,
+      "selector": [
+        "正常",
+        "心房細動 (60-90/分)",
+        "その他の異常",
+        "心房細動 (他)"
+      ],
+      "selectoridx": "1|2|4|8"
+    },
+    {
+      "type": "subsection",
+      "dispname": "手術的スコア"
+    },
+    {
+      "type": "radio",
+      "name": "手術の種類",
+      "dispname": "手術の種類",
+      "required": true,
+      "selector": [
+        "小手術",
+        "中等度手術",
+        "大手術",
+        "大手術プラス"
+      ],
+      "selectoridx": "1|2|4|8"
+    },
+    {
+      "type": "radio",
+      "name": "手術の複数性",
+      "dispname": "手術の複数性",
+      "required": true,
+      "selector": [
+        "1つ",
+        "2つ以上"
+      ],
+      "selectoridx": "1|2"
+    },
+    {
+      "type": "radio",
+      "name": "術中出血量",
+      "dispname": "術中出血量 (mL)",
+      "required": true,
+      "selector": [
+        "100以下",
+        "101-500",
+        "501-999",
+        "1000以上"
+      ],
+      "selectoridx": "1|2|4|8"
+    },
+    {
+      "type": "radio",
+      "name": "腹膜汚染",
+      "dispname": "腹膜汚染の程度",
+      "required": true,
+      "selector": [
+        "なし",
+        "軽度 (漿液性液体)",
+        "局所性膿",
+        "遊離性腸内容物・膿・血液"
+      ],
+      "selectoridx": "1|2|4|8"
+    },
+    {
+      "type": "radio",
+      "name": "悪性腫瘍",
+      "dispname": "悪性腫瘍の存在",
+      "required": true,
+      "selector": [
+        "なし",
+        "原発性のみ",
+        "リンパ節転移",
+        "遠隔転移"
+      ],
+      "selectoridx": "1|2|4|8"
+    },
+    {
+      "type": "radio",
+      "name": "手術の緊急度",
+      "dispname": "手術の緊急度",
+      "required": true,
+      "selector": [
+        "待機手術",
+        "予定緊急 (通常の入院中に)",
+        "緊急 (24時間以内)",
+        "即時 (2時間以内、蘇生同時)"
+      ],
+      "selectoridx": "1|2|4|8"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "type": "eval",
+      "name": "生理学的スコア",
+      "formula": "[[年齢.index]] + [[心不全徴候.index]] + [[呼吸器系.index]] + [[収縮期血圧.index]] + [[脈拍.index]] + [[GCS.index]] + [[ヘモグロビン.index]] + [[白血球.index]] + [[尿素.index]] + [[ナトリウム.index]] + [[カリウム.index]] + [[心電図.index]]"
+    },
+    {
+      "type": "eval",
+      "name": "手術的スコア",
+      "formula": "[[手術の種類.index]] + [[手術の複数性.index]] + [[術中出血量.index]] + [[腹膜汚染.index]] + [[悪性腫瘍.index]] + [[手術の緊急度.index]]"
+    },
+    {
+      "type": "eval",
+      "name": "死亡率パーセント",
+      "formula": "Math.round( 100 / ( 1 + Math.exp( -( -7.04 + 0.13 * ((生理学的スコア)) + 0.16 * ((手術的スコア)) ) ) ) * 10 ) / 10"
+    },
+    {
+      "type": "eval",
+      "name": "合併症率パーセント",
+      "formula": "Math.round( 100 / ( 1 + Math.exp( -( -5.91 + 0.16 * ((生理学的スコア)) + 0.19 * ((手術的スコア)) ) ) ) * 10 ) / 10"
+    },
+    {
+      "type": "eval",
+      "name": "リスク分類",
+      "formula": "((死亡率パーセント)) < 5 ? '低リスク' : ( ((死亡率パーセント)) < 20 ? '中リスク' : '高リスク' )"
+    },
+    {
+      "type": "warning",
+      "name": "Warning: 中リスク POSSUMスコア 5-20%",
+      "formula": "((死亡率パーセント)) >= 5"
+    },
+    {
+      "type": "emergency",
+      "name": "Emergency: 高リスク POSSUMスコア >= 20%",
+      "formula": "((死亡率パーセント)) >= 20"
+    }
+  ]
+}

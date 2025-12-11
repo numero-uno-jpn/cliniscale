@@ -1,0 +1,356 @@
+{
+    "_comment": [
+        "McGill Pain Questionnaire (MPQ) - 日本語版",
+        "原典: Melzack, R. The McGill Pain Questionnaire: major properties and scoring methods. Pain 1975; 1(3): 277-299",
+        "日本語版: 佐藤陽子ら. 痛み質問紙の開発—McGill Pain Questionnaire (MPQ) の作成と検証. 看護研究 1995; 28(2): 133-141",
+        "構造確認: 長谷川守ら. 日本語版McGill Pain Questionnaireの信頼性と妥当性の検討. 日本ペインクリニック学会誌 1996; 3(2): 85-91",
+        "佐藤らのJMPQの20サブカテゴリー構造に厳密準拠",
+        "78語の痛み表現語を4つのカテゴリー（感覚的1-10、感情的11-15、評価的16、その他17-20）に分類",
+        "Present Pain Intensityは臨床的実用性のため0-5スケール（0=痛みなし）を採用"
+    ],
+    "title": "MPQ (McGill Pain Questionnaire) 疼痛質評価",
+    "description": [
+        "痛みの質と強度を多次元的に評価する問診票です。",
+        "痛みを表現する78の語句から、あなたの痛みに最も適した表現を選択してください。",
+        "各グループから最も適切な表現を1つずつお選びください。"
+    ],
+    "submit_button_title": "回答を送信",
+    "fields": [
+        {
+            "dispname": "感覚的側面（痛みの感覚的特徴）",
+            "type": "subsection"
+        },
+        {
+            "dispname": "1. どのような時間的パターンの痛みですか",
+            "name": "時間的",
+            "type": "radio",
+            "selector": [
+                "該当なし",
+                "ひらめくような",
+                "震えるような",
+                "脈打つような",
+                "ずきずきする",
+                "ドキドキする",
+                "がんがんする"
+            ],
+            "selectoridx": "0|1|2|3|4|5|6"
+        },
+        {
+            "dispname": "2. 発作的な痛みの特徴",
+            "name": "発作的",
+            "type": "radio",
+            "selector": [
+                "該当なし",
+                "飛び跳ねるような",
+                "一瞬走るような",
+                "電撃のような"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "3. 鋭い圧迫感",
+            "name": "刺すような",
+            "type": "radio",
+            "selector": [
+                "該当なし",
+                "針で刺すような",
+                "穿つような",
+                "きりで刺すような",
+                "鋭く突き抜けるような"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "4. 鋭い切れ味",
+            "name": "切るような",
+            "type": "radio",
+            "selector": [
+                "該当なし",
+                "鋭い",
+                "切るような",
+                "裂けるような"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "5. 圧迫・挟まれる感覚",
+            "name": "つまむような",
+            "type": "radio",
+            "selector": [
+                "該当なし",
+                "つまむような",
+                "押しつぶすような",
+                "かみつくような",
+                "締めつけるような",
+                "ぎゅっと握られるような"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "6. 引っ張られる感覚",
+            "name": "引っ張られる",
+            "type": "radio",
+            "selector": [
+                "該当なし",
+                "引っ張られるような",
+                "引きちぎられるような",
+                "ねじられるような"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "7. 熱い感覚",
+            "name": "熱い",
+            "type": "radio",
+            "selector": [
+                "該当なし",
+                "熱い",
+                "焼けるような",
+                "焼けただれるような",
+                "沸騰するような"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "8. ちくちくする感覚",
+            "name": "ちくちく",
+            "type": "radio",
+            "selector": [
+                "該当なし",
+                "ちくちくする",
+                "ひりひりする",
+                "焼けつくような",
+                "うずくような"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "9. 鈍い痛み",
+            "name": "鈍い",
+            "type": "radio",
+            "selector": [
+                "該当なし",
+                "鈍い",
+                "重苦しい",
+                "重い",
+                "鉛のような"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "10. 敏感さ",
+            "name": "敏感",
+            "type": "radio",
+            "selector": [
+                "該当なし",
+                "過敏な",
+                "ひりひりする",
+                "割れるような",
+                "ずきんずきんする"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "感情的側面（痛みの情動的影響）",
+            "type": "subsection"
+        },
+        {
+            "dispname": "11. 疲労感",
+            "name": "疲労",
+            "type": "radio",
+            "selector": [
+                "該当なし",
+                "疲れる",
+                "消耗する",
+                "衰弱させる"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "12. 不快感",
+            "name": "不快",
+            "type": "radio",
+            "selector": [
+                "該当なし",
+                "気分が悪くなる",
+                "窒息しそうな"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "13. 恐怖感",
+            "name": "恐怖",
+            "type": "radio",
+            "selector": [
+                "該当なし",
+                "恐ろしい",
+                "ぞっとする",
+                "怖い"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "14. 罰的感覚",
+            "name": "罰的",
+            "type": "radio",
+            "selector": [
+                "該当なし",
+                "懲らしめるような",
+                "罰するような",
+                "残酷な",
+                "殺すような",
+                "むごい"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "15. みじめさ",
+            "name": "みじめ",
+            "type": "radio",
+            "selector": [
+                "該当なし",
+                "みじめな",
+                "目がくらむような"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "評価的側面（痛みの全体的強度）",
+            "type": "subsection"
+        },
+        {
+            "dispname": "16. 全体的な痛みの程度",
+            "name": "強度評価",
+            "type": "radio",
+            "selector": [
+                "該当なし",
+                "軽い",
+                "不快な",
+                "苦しい",
+                "ひどい",
+                "耐えられない"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "その他の特徴",
+            "type": "subsection"
+        },
+        {
+            "dispname": "17. 広がり・浸透性",
+            "name": "広がり",
+            "type": "radio",
+            "selector": [
+                "該当なし",
+                "広がる",
+                "放散する",
+                "貫通する",
+                "突き抜ける"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "18. 締めつけ感",
+            "name": "締めつけ",
+            "type": "radio",
+            "selector": [
+                "該当なし",
+                "きつい",
+                "しびれる",
+                "締めつける",
+                "裂ける",
+                "引き裂く"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "19. 冷たさ",
+            "name": "冷たい",
+            "type": "radio",
+            "selector": [
+                "該当なし",
+                "冷たい",
+                "冷える",
+                "凍るような"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "20. 持続的な不快感",
+            "name": "持続的",
+            "type": "radio",
+            "selector": [
+                "該当なし",
+                "つきまとう",
+                "苦しめる",
+                "拷問のような",
+                "責めさいなむ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "現在の痛みの強度",
+            "type": "subsection"
+        },
+        {
+            "dispname": "現在の痛みの程度",
+            "name": "現在痛み",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "痛みなし",
+                "軽い",
+                "不快",
+                "苦痛",
+                "ひどい",
+                "耐えられない"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "感覚スコア",
+            "type": "eval",
+            "formula": "[[時間的.index]] + [[発作的.index]] + [[刺すような.index]] + [[切るような.index]] + [[つまむような.index]] + [[引っ張られる.index]] + [[熱い.index]] + [[ちくちく.index]] + [[鈍い.index]] + [[敏感.index]]",
+            "dispname": "感覚的側面の合計スコア (PRI-S): 痛みの感覚的特徴"
+        },
+        {
+            "name": "感情スコア",
+            "type": "eval",
+            "formula": "[[疲労.index]] + [[不快.index]] + [[恐怖.index]] + [[罰的.index]] + [[みじめ.index]]",
+            "dispname": "感情的側面の合計スコア (PRI-A): 痛みの情動的影響"
+        },
+        {
+            "name": "評価スコア",
+            "type": "eval",
+            "formula": "[[強度評価.index]]",
+            "dispname": "評価的側面のスコア (PRI-E): 痛みの全体的強度評価"
+        },
+        {
+            "name": "その他スコア",
+            "type": "eval",
+            "formula": "[[広がり.index]] + [[締めつけ.index]] + [[冷たい.index]] + [[持続的.index]]",
+            "dispname": "その他の特徴スコア (PRI-M): 分類困難な痛み特徴"
+        },
+        {
+            "name": "総合スコア",
+            "type": "eval",
+            "formula": "[[感覚スコア]] + [[感情スコア]] + [[評価スコア]] + [[その他スコア]]",
+            "dispname": "Pain Rating Index 総合スコア (PRI-T): 全カテゴリーの合計スコア (0-78点)"
+        },
+        {
+            "name": "選択語数",
+            "type": "eval",
+            "formula": "( [[時間的.index]] > 0 ? 1 : 0 ) + ( [[発作的.index]] > 0 ? 1 : 0 ) + ( [[刺すような.index]] > 0 ? 1 : 0 ) + ( [[切るような.index]] > 0 ? 1 : 0 ) + ( [[つまむような.index]] > 0 ? 1 : 0 ) + ( [[引っ張られる.index]] > 0 ? 1 : 0 ) + ( [[熱い.index]] > 0 ? 1 : 0 ) + ( [[ちくちく.index]] > 0 ? 1 : 0 ) + ( [[鈍い.index]] > 0 ? 1 : 0 ) + ( [[敏感.index]] > 0 ? 1 : 0 ) + ( [[疲労.index]] > 0 ? 1 : 0 ) + ( [[不快.index]] > 0 ? 1 : 0 ) + ( [[恐怖.index]] > 0 ? 1 : 0 ) + ( [[罰的.index]] > 0 ? 1 : 0 ) + ( [[みじめ.index]] > 0 ? 1 : 0 ) + ( [[強度評価.index]] > 0 ? 1 : 0 ) + ( [[広がり.index]] > 0 ? 1 : 0 ) + ( [[締めつけ.index]] > 0 ? 1 : 0 ) + ( [[冷たい.index]] > 0 ? 1 : 0 ) + ( [[持続的.index]] > 0 ? 1 : 0 )",
+            "dispname": "選択された痛み表現語の総数 (NWC: Number of Words Chosen)"
+        },
+        {
+            "name": "重症度判定",
+            "type": "eval",
+            "formula": "[[総合スコア]] >= 25 ? '重度' : ( [[総合スコア]] >= 12 ? '中等度' : '軽度' )",
+            "dispname": "痛みの重症度分類（軽度: 0-11点、中等度: 12-24点、重度: 25点以上）"
+        }
+    ]
+}

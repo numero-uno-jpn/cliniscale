@@ -1,0 +1,420 @@
+{
+    "_comment": [
+        "WOMAC（Western Ontario and McMaster Universities Arthritis Index）",
+        "変形性関節症の疼痛、こわばり、身体機能を評価する24項目の自己記入式尺度",
+        "1982年にBellamyらによって開発、現在の標準版は24項目（LK3.1版）",
+        "原典論文: Bellamy N, et al. Validation study of WOMAC: a health status instrument for measuring clinically important patient relevant outcomes to antirheumatic drug therapy in patients with osteoarthritis of the hip or knee. J Rheumatol. 1988;15(12):1833-40.",
+        "日本語版の信頼性・妥当性は確認済み（藤田ら，2007年）",
+        "得点化：なし0点、軽度1点、中等度2点、重度3点、極度4点"
+    ],
+    "title": "WOMAC 変形性関節症指標",
+    "description": [
+        "この質問票は、変形性膝関節症や股関節症の症状を評価するものです。",
+        "過去48時間の症状について、最も当てはまるものを選択してください。"
+    ],
+    "responsible_person": [
+        "整形外科医"
+    ],
+    "dept_in_charge": "整形外科",
+    "fields": [
+        {
+            "dispname": "疼痛評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "歩行時の痛み",
+            "name": "歩行時痛み",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "平地を歩いているときの痛みはどの程度ですか"
+        },
+        {
+            "dispname": "階段昇降時の痛み",
+            "name": "階段昇降時痛み",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "階段を上がったり下りたりするときの痛みはどの程度ですか"
+        },
+        {
+            "dispname": "夜間就寝時の痛み",
+            "name": "夜間痛み",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "夜間寝ているときの痛みはどの程度ですか"
+        },
+        {
+            "dispname": "座る・横になるときの痛み",
+            "name": "安静時痛み",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "座ったり横になったりするときの痛みはどの程度ですか"
+        },
+        {
+            "dispname": "立位時の痛み",
+            "name": "立位時痛み",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "まっすぐ立っているときの痛みはどの程度ですか"
+        },
+        {
+            "dispname": "関節のこわばり評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "朝のこわばり",
+            "name": "朝のこわばり",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "朝最初に目を覚ましたときの関節のこわばりはどの程度ですか"
+        },
+        {
+            "dispname": "日中のこわばり",
+            "name": "日中のこわばり",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "その日の後の時間における関節のこわばりはどの程度ですか"
+        },
+        {
+            "dispname": "身体機能評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "階段を下りる",
+            "name": "階段下り",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "困難なし",
+                "軽度の困難",
+                "中等度の困難",
+                "重度の困難",
+                "極度の困難"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "階段を下りることはどの程度困難ですか"
+        },
+        {
+            "dispname": "階段を上がる",
+            "name": "階段上り",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "困難なし",
+                "軽度の困難",
+                "中等度の困難",
+                "重度の困難",
+                "極度の困難"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "階段を上がることはどの程度困難ですか"
+        },
+        {
+            "dispname": "座った状態から立ち上がる",
+            "name": "立ち上がり",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "困難なし",
+                "軽度の困難",
+                "中等度の困難",
+                "重度の困難",
+                "極度の困難"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "座った状態から立ち上がることはどの程度困難ですか"
+        },
+        {
+            "dispname": "立っている",
+            "name": "立位保持",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "困難なし",
+                "軽度の困難",
+                "中等度の困難",
+                "重度の困難",
+                "極度の困難"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "立っていることはどの程度困難ですか"
+        },
+        {
+            "dispname": "床の物を拾うために身をかがめる",
+            "name": "身をかがめる",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "困難なし",
+                "軽度の困難",
+                "中等度の困難",
+                "重度の困難",
+                "極度の困難"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "床の物を拾うために身をかがめることはどの程度困難ですか"
+        },
+        {
+            "dispname": "平地を歩く",
+            "name": "平地歩行",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "困難なし",
+                "軽度の困難",
+                "中等度の困難",
+                "重度の困難",
+                "極度の困難"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "平地を歩くことはどの程度困難ですか"
+        },
+        {
+            "dispname": "車の乗り降り",
+            "name": "車乗り降り",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "困難なし",
+                "軽度の困難",
+                "中等度の困難",
+                "重度の困難",
+                "極度の困難"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "車に乗ったり降りたりすることはどの程度困難ですか"
+        },
+        {
+            "dispname": "買い物に行く",
+            "name": "買い物",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "困難なし",
+                "軽度の困難",
+                "中等度の困難",
+                "重度の困難",
+                "極度の困難"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "買い物に行くことはどの程度困難ですか"
+        },
+        {
+            "dispname": "靴下やストッキングを履く",
+            "name": "靴下履く",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "困難なし",
+                "軽度の困難",
+                "中等度の困難",
+                "重度の困難",
+                "極度の困難"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "靴下やストッキングを履くことはどの程度困難ですか"
+        },
+        {
+            "dispname": "ベッドから起き上がる",
+            "name": "ベッド起き上がり",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "困難なし",
+                "軽度の困難",
+                "中等度の困難",
+                "重度の困難",
+                "極度の困難"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "ベッドから起き上がることはどの程度困難ですか"
+        },
+        {
+            "dispname": "靴下やストッキングを脱ぐ",
+            "name": "靴下脱ぐ",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "困難なし",
+                "軽度の困難",
+                "中等度の困難",
+                "重度の困難",
+                "極度の困難"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "靴下やストッキングを脱ぐことはどの程度困難ですか"
+        },
+        {
+            "dispname": "ベッドに横になっている",
+            "name": "ベッド臥位",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "困難なし",
+                "軽度の困難",
+                "中等度の困難",
+                "重度の困難",
+                "極度の困難"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "ベッドに横になっていることはどの程度困難ですか"
+        },
+        {
+            "dispname": "浴槽の出入り",
+            "name": "入浴",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "困難なし",
+                "軽度の困難",
+                "中等度の困難",
+                "重度の困難",
+                "極度の困難"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "浴槽に入ったり出たりすることはどの程度困難ですか"
+        },
+        {
+            "dispname": "座っている",
+            "name": "座位保持",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "困難なし",
+                "軽度の困難",
+                "中等度の困難",
+                "重度の困難",
+                "極度の困難"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "座っていることはどの程度困難ですか"
+        },
+        {
+            "dispname": "洋式トイレの利用",
+            "name": "トイレ利用",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "困難なし",
+                "軽度の困難",
+                "中等度の困難",
+                "重度の困難",
+                "極度の困難"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "洋式トイレに座ったり立ったりすることはどの程度困難ですか"
+        },
+        {
+            "dispname": "大変な家事（床掃除、家具移動など）",
+            "name": "重い家事",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "困難なし",
+                "軽度の困難",
+                "中等度の困難",
+                "重度の困難",
+                "極度の困難"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "大変な家事（床掃除、家具移動など）はどの程度困難ですか"
+        },
+        {
+            "dispname": "軽い家事（料理、掃除など）",
+            "name": "軽い家事",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "困難なし",
+                "軽度の困難",
+                "中等度の困難",
+                "重度の困難",
+                "極度の困難"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "軽い家事（料理、掃除など）はどの程度困難ですか"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "痛み小計",
+            "type": "eval",
+            "dispname": "痛みスコア（0-20点）",
+            "formula": "[[歩行時痛み.index]] + [[階段昇降時痛み.index]] + [[夜間痛み.index]] + [[安静時痛み.index]] + [[立位時痛み.index]]"
+        },
+        {
+            "name": "こわばり小計",
+            "type": "eval",
+            "dispname": "こわばりスコア（0-8点）",
+            "formula": "[[朝のこわばり.index]] + [[日中のこわばり.index]]"
+        },
+        {
+            "name": "身体機能小計",
+            "type": "eval",
+            "dispname": "身体機能スコア（0-68点）",
+            "formula": "[[階段下り.index]] + [[階段上り.index]] + [[立ち上がり.index]] + [[立位保持.index]] + [[身をかがめる.index]] + [[平地歩行.index]] + [[車乗り降り.index]] + [[買い物.index]] + [[靴下履く.index]] + [[ベッド起き上がり.index]] + [[靴下脱ぐ.index]] + [[ベッド臥位.index]] + [[入浴.index]] + [[座位保持.index]] + [[トイレ利用.index]] + [[重い家事.index]] + [[軽い家事.index]]"
+        },
+        {
+            "name": "WOMAC総スコア",
+            "type": "eval",
+            "dispname": "WOMAC総合計点数（0-96点）",
+            "formula": "[[痛み小計]] + [[こわばり小計]] + [[身体機能小計]]"
+        }
+    ]
+}

@@ -1,0 +1,177 @@
+{
+  "_comment": [
+    "Miller&Jones分類による喀痰検体品質評価問診票",
+    "原典：A study of techniques for the examination of sputum in a field survey of chronic bronchitis. Am Rev Respir Dis. 1963 Oct;88:473-83. PMID: 14068432",
+    "参考URL：https://knowledge.nurse-senka.jp/500787",
+    "参考URL：http://data.medience.co.jp/compendium/chart_pdf/A11070.pdf"
+  ],
+  "title": "Miller&Jones 喀痰検体品質評価分類",
+  "description": [
+    "喀痰検体の品質を膿性部分の割合と唾液混入度により評価し、細菌検査の適性を判定します。"
+  ],
+  "contact": "検査室",
+  "dept_in_charge": "臨床検査科",
+  "submit_button_title": "評価結果を送信",
+  "fields": [
+    {
+      "dispname": "基本情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "検体採取日",
+      "name": "採取日時",
+      "type": "date",
+      "required": true,
+      "format": "YYYY/MM/DD"
+    },
+    {
+      "dispname": "検体採取時刻",
+      "name": "採取時刻",
+      "type": "time",
+      "format": "HH:mm"
+    },
+    {
+      "dispname": "検査目的",
+      "name": "検査目的",
+      "type": "checkbox",
+      "selector": [
+        "細菌検査",
+        "抗酸菌検査",
+        "真菌検査",
+        "細胞診",
+        "その他"
+      ]
+    },
+    {
+      "type": "separator"
+    },
+    {
+      "dispname": "Miller&Jones分類評価",
+      "type": "subsection"
+    },
+    {
+      "dispname": "喀痰の肉眼的所見",
+      "name": "肉眼所見",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "M1：唾液、完全な粘性痰",
+        "M2：粘性痰のなかに膿性痰が少量含まれる",
+        "P1：膿性痰で膿性部分が1/3以下",
+        "P2：膿性痰で膿性部分が1/3～2/3",
+        "P3：膿性痰で膿性部分が2/3以上"
+      ],
+      "selectoridx": "1|2|3|4|5",
+      "description": "膿性部分の割合を目視評価"
+    },
+    {
+      "dispname": "検体の色調",
+      "name": "色調",
+      "type": "radio",
+      "selector": [
+        "無色透明",
+        "白色",
+        "黄色",
+        "緑色",
+        "褐色",
+        "血性",
+        "その他"
+      ]
+    },
+    {
+      "dispname": "検体の粘稠度",
+      "name": "粘稠度",
+      "type": "radio",
+      "selector": [
+        "水様",
+        "粘液様",
+        "膿様",
+        "粘膿様"
+      ]
+    },
+    {
+      "dispname": "血液の混入",
+      "name": "血液混入",
+      "type": "radio",
+      "inline": true,
+      "selector": [
+        "なし",
+        "わずか",
+        "中等度",
+        "多量"
+      ]
+    },
+    {
+      "type": "separator"
+    },
+    {
+      "dispname": "追加情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "採取方法",
+      "name": "採取方法",
+      "type": "radio",
+      "selector": [
+        "自然喀出",
+        "誘発喀痰",
+        "気管吸引",
+        "気管支洗浄",
+        "その他"
+      ]
+    },
+    {
+      "dispname": "患者の症状",
+      "name": "症状",
+      "type": "checkbox",
+      "selector": [
+        "発熱",
+        "咳嗽",
+        "喀痰",
+        "呼吸困難",
+        "胸痛",
+        "その他",
+        "無症状"
+      ]
+    },
+    {
+      "dispname": "特記事項",
+      "name": "特記事項",
+      "type": "textarea",
+      "rows": 3,
+      "description": "その他の所見や注意事項"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "肉眼所見_index",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[肉眼所見.index]]"
+    },
+    {
+      "name": "分類結果",
+      "type": "eval",
+      "formula": "[[肉眼所見_index]] === 1 ? 'M1' : ( [[肉眼所見_index]] === 2 ? 'M2' : ( [[肉眼所見_index]] === 3 ? 'P1' : ( [[肉眼所見_index]] === 4 ? 'P2' : 'P3' ) ) )",
+      "dispname": "Miller&Jones分類による検体分類"
+    },
+    {
+      "name": "検査適性",
+      "type": "eval",
+      "formula": "[[肉眼所見_index]] <= 2 ? '検査に適さない（不良検体）' : '検査に適する（良質検体）'",
+      "dispname": "細菌検査への適性判定"
+    },
+    {
+      "name": "推奨対応",
+      "type": "eval",
+      "formula": "[[肉眼所見_index]] <= 2 ? '再採取を推奨（ただし重症肺炎・結核では膿性痰が出ないことがあるため臨床症状を考慮）' : '検査実施可能'",
+      "dispname": "推奨される対応"
+    },
+    {
+      "name": "Warning: 不良検体（M1またはM2）",
+      "formula": "[[肉眼所見_index]] <= 2",
+      "type": "warning"
+    }
+  ]
+}

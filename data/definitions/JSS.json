@@ -1,0 +1,696 @@
+{
+    "_comment": [
+        "Job Satisfaction Survey (JSS) - 医療従事者職満足度評価",
+        "開発者: Paul E. Spector (1985)",
+        "原著論文: Spector, P. E. (1985). Measurement of human service staff satisfaction: Development of the Job Satisfaction Survey. American Journal of Community Psychology, 13, 693-713.",
+        "公式サイト: https://paulspector.com/assessments/pauls-no-cost-assessments/job-satisfaction-survey-jss/",
+        "36項目、9次元構造 - 各次元4項目",
+        "6段階評価: 1=非常に不同意 〜 6=非常に同意",
+        "逆転採点項目: 2,4,6,8,10,12,14,16,18,19,21,23,24,26,29,31,32,34,36",
+        "Copyright Paul E. Spector 1994, All rights reserved."
+    ],
+    "title": "Job Satisfaction Survey (JSS) 職務満足度調査",
+    "description": [
+        "<h3>職務満足度調査 (Job Satisfaction Survey)</h3>",
+        "この調査は、あなたの職場や仕事に対する満足度を評価するものです。",
+        "各質問について、あなたの意見に最も近い番号を選んでください。",
+        "回答に正解・不正解はありませんので、率直にお答えください。"
+    ],
+    "fields": [
+        {
+            "dispname": "基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "職種",
+            "name": "職種",
+            "type": "text",
+            "required": true,
+            "description": "現在の職種をご記入ください"
+        },
+        {
+            "dispname": "勤務年数",
+            "name": "勤務年数",
+            "type": "text",
+            "required": true,
+            "postfix": "年",
+            "testrange": [
+                0.5,
+                45
+            ],
+            "description": "現在の職場での勤務年数（例: 5.5）"
+        },
+        {
+            "type": "separator"
+        },
+        {
+            "dispname": "職務満足度評価項目",
+            "type": "subsection"
+        },
+        {
+            "dispname": "1. 私の仕事に対して公正な報酬を受けていると感じる",
+            "name": "Q1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "2. 私の仕事では昇進の機会が本当に少ない",
+            "name": "Q2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "3. 私の上司は仕事を遂行する上で十分有能である",
+            "name": "Q3",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "4. 私が受けている福利厚生に満足していない",
+            "name": "Q4",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "5. 良い仕事をしたとき、当然受けるべき評価を受けている",
+            "name": "Q5",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "6. 多くの規則や手続きが良い仕事をするのを困難にしている",
+            "name": "Q6",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "7. 一緒に働く人たちが好きである",
+            "name": "Q7",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "8. 時々、自分の仕事が無意味に感じられる",
+            "name": "Q8",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "9. この組織内でのコミュニケーションは良好に思える",
+            "name": "Q9",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "10. 昇給はあまりにも少なく、間隔も長すぎる",
+            "name": "Q10",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "11. 仕事で成果を上げた人は公正に昇進の機会を得ている",
+            "name": "Q11",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "12. 私の上司は私に対して不公平である",
+            "name": "Q12",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "13. 我々が受けている福利厚生は他の多くの組織と同程度に良い",
+            "name": "Q13",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "14. 自分の仕事が評価されていると感じない",
+            "name": "Q14",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "15. 良い仕事をしようとする私の努力が官僚的手続きで妨げられることはほとんどない",
+            "name": "Q15",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "16. 一緒に働く人たちの無能さのために、より懸命に働かなければならない",
+            "name": "Q16",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "17. 職場で行っていることが好きである",
+            "name": "Q17",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "18. この組織の目標が明確でない",
+            "name": "Q18",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "19. 給与について考えると、組織から過小評価されていると感じる",
+            "name": "Q19",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "20. ここでは他の場所と同じように早く出世できる",
+            "name": "Q20",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "21. 私の上司は部下の感情にあまりにも関心を示さない",
+            "name": "Q21",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "22. 我々の福利厚生パッケージは公平である",
+            "name": "Q22",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "23. ここで働く人々への報酬は少ない",
+            "name": "Q23",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "24. 職場でやることが多すぎる",
+            "name": "Q24",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "25. 同僚を楽しく思う",
+            "name": "Q25",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "26. 組織で何が起こっているかわからないことがよくある",
+            "name": "Q26",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "27. 自分の仕事に誇りを感じる",
+            "name": "Q27",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "28. 昇給の機会に満足している",
+            "name": "Q28",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "29. 我々が持っていない福利厚生で、あるべきものがある",
+            "name": "Q29",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "30. 私の上司が好きである",
+            "name": "Q30",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "31. 書類作業が多すぎる",
+            "name": "Q31",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "32. 自分の努力が適切に報われていると感じない",
+            "name": "Q32",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "33. 昇進の機会に満足している",
+            "name": "Q33",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "34. 職場で口論や争いが多すぎる",
+            "name": "Q34",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "35. 私の仕事は楽しい",
+            "name": "Q35",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "36. 業務の割り当てが十分に説明されていない",
+            "name": "Q36",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "非常に不同意",
+                "不同意",
+                "やや不同意",
+                "やや同意",
+                "同意",
+                "非常に同意"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "dispname": "報酬満足度スコア（項目1,10,19,28）",
+            "name": "報酬満足度",
+            "type": "eval",
+            "formula": "[[Q1.index]] + (7 - [[Q10.index]]) + (7 - [[Q19.index]]) + [[Q28.index]]"
+        },
+        {
+            "dispname": "昇進満足度スコア（項目2,11,20,33）",
+            "name": "昇進満足度",
+            "type": "eval",
+            "formula": "(7 - [[Q2.index]]) + [[Q11.index]] + [[Q20.index]] + [[Q33.index]]"
+        },
+        {
+            "dispname": "監督満足度スコア（項目3,12,21,30）",
+            "name": "監督満足度",
+            "type": "eval",
+            "formula": "[[Q3.index]] + (7 - [[Q12.index]]) + (7 - [[Q21.index]]) + [[Q30.index]]"
+        },
+        {
+            "dispname": "福利厚生満足度スコア（項目4,13,22,29）",
+            "name": "福利厚生満足度",
+            "type": "eval",
+            "formula": "(7 - [[Q4.index]]) + [[Q13.index]] + [[Q22.index]] + (7 - [[Q29.index]])"
+        },
+        {
+            "dispname": "成果報酬満足度スコア（項目5,14,23,32）",
+            "name": "成果報酬満足度",
+            "type": "eval",
+            "formula": "[[Q5.index]] + (7 - [[Q14.index]]) + (7 - [[Q23.index]]) + (7 - [[Q32.index]])"
+        },
+        {
+            "dispname": "手続き満足度スコア（項目6,15,24,31）",
+            "name": "手続き満足度",
+            "type": "eval",
+            "formula": "(7 - [[Q6.index]]) + [[Q15.index]] + (7 - [[Q24.index]]) + (7 - [[Q31.index]])"
+        },
+        {
+            "dispname": "同僚満足度スコア（項目7,16,25,34）",
+            "name": "同僚満足度",
+            "type": "eval",
+            "formula": "[[Q7.index]] + (7 - [[Q16.index]]) + [[Q25.index]] + (7 - [[Q34.index]])"
+        },
+        {
+            "dispname": "仕事の性質満足度スコア（項目8,17,27,35）",
+            "name": "仕事の性質満足度",
+            "type": "eval",
+            "formula": "(7 - [[Q8.index]]) + [[Q17.index]] + [[Q27.index]] + [[Q35.index]]"
+        },
+        {
+            "dispname": "コミュニケーション満足度スコア（項目9,18,26,36）",
+            "name": "コミュニケーション満足度",
+            "type": "eval",
+            "formula": "[[Q9.index]] + (7 - [[Q18.index]]) + (7 - [[Q26.index]]) + (7 - [[Q36.index]])"
+        },
+        {
+            "dispname": "総合満足度スコア（全36項目の合計）",
+            "name": "総合満足度",
+            "type": "eval",
+            "formula": "[[報酬満足度]] + [[昇進満足度]] + [[監督満足度]] + [[福利厚生満足度]] + [[成果報酬満足度]] + [[手続き満足度]] + [[同僚満足度]] + [[仕事の性質満足度]] + [[コミュニケーション満足度]]"
+        },
+        {
+            "dispname": "満足度レベル判定",
+            "name": "満足度レベル",
+            "type": "eval",
+            "formula": "[[総合満足度]] >= 144 ? '満足' : ( [[総合満足度]] >= 108 ? '中立' : '不満足' )"
+        }
+    ]
+}

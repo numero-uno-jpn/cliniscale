@@ -1,0 +1,186 @@
+{
+  "_comment": [
+    "modified Japanese Orthopaedic Association Score (mJOA)",
+    "Benzel EC, Lancon J, Kesterson L, Hadden T. Cervical laminectomy and dentate ligament section for cervical spondylotic myelopathy. J Spinal Disord. 1991;4(3):286-95.",
+    "https://pubmed.ncbi.nlm.nih.gov/1802159/",
+    "脊髄症の機能評価スコア",
+    "0-18点で評価、上肢・下肢運動機能、感覚、膀胱機能を評価"
+  ],
+  "title": "mJOA (改訂日本整形外科学会スコア)",
+  "description": [
+    "頚椎脊髄症の機能評価",
+    "運動機能、感覚、膀胱機能を評価します"
+  ],
+  "fields": [
+    {
+      "type": "subsection",
+      "dispname": "上肢運動機能"
+    },
+    {
+      "type": "radio",
+      "name": "食事動作",
+      "dispname": "食事 (箸またはスプーン)",
+      "selector": [
+        "不能",
+        "可能だが不器用",
+        "軽度の不器用さ",
+        "正常"
+      ],
+      "selectoridx": "0|1|2|3",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "ボタン操作",
+      "dispname": "ボタンのかけはずし",
+      "selector": [
+        "不能",
+        "可能だが不器用",
+        "軽度の不器用さ",
+        "正常"
+      ],
+      "selectoridx": "0|1|2|3",
+      "required": true
+    },
+    {
+      "type": "subsection",
+      "dispname": "下肢運動機能"
+    },
+    {
+      "type": "radio",
+      "name": "歩行",
+      "dispname": "歩行",
+      "selector": [
+        "不能",
+        "平地で杖または支持が必要",
+        "平地で支持なく可能だが階段では手すりが必要",
+        "支持なく可能"
+      ],
+      "selectoridx": "0|1|2|3",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "階段昇降",
+      "dispname": "階段昇降",
+      "selector": [
+        "不能",
+        "手すりにつかまれば可能",
+        "やや不安定だが手すりなしで可能",
+        "正常"
+      ],
+      "selectoridx": "0|1|2|3",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "走行",
+      "dispname": "走行",
+      "selector": [
+        "不能",
+        "やや不安定だが可能",
+        "正常"
+      ],
+      "selectoridx": "0|1|2",
+      "required": true
+    },
+    {
+      "type": "subsection",
+      "dispname": "感覚"
+    },
+    {
+      "type": "radio",
+      "name": "上肢感覚",
+      "dispname": "上肢の感覚",
+      "selector": [
+        "明らかな感覚障害",
+        "軽度の感覚障害",
+        "正常"
+      ],
+      "selectoridx": "0|1|2",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "下肢感覚",
+      "dispname": "下肢の感覚",
+      "selector": [
+        "明らかな感覚障害",
+        "軽度の感覚障害",
+        "正常"
+      ],
+      "selectoridx": "0|1|2",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "体幹感覚",
+      "dispname": "体幹の感覚",
+      "selector": [
+        "明らかな感覚障害",
+        "軽度の感覚障害",
+        "正常"
+      ],
+      "selectoridx": "0|1|2",
+      "required": true
+    },
+    {
+      "type": "subsection",
+      "dispname": "膀胱機能"
+    },
+    {
+      "type": "radio",
+      "name": "膀胱機能",
+      "dispname": "膀胱機能",
+      "selector": [
+        "尿閉または完全失禁",
+        "排尿困難、残尿感、尿失禁",
+        "軽度の排尿障害",
+        "正常"
+      ],
+      "selectoridx": "0|1|2|3",
+      "required": true
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "type": "eval",
+      "name": "上肢運動合計",
+      "formula": "[[食事動作.index]] + [[ボタン操作.index]]",
+      "noreport": true
+    },
+    {
+      "type": "eval",
+      "name": "下肢運動合計",
+      "formula": "[[歩行.index]] + [[階段昇降.index]] + [[走行.index]]",
+      "noreport": true
+    },
+    {
+      "type": "eval",
+      "name": "感覚合計",
+      "formula": "[[上肢感覚.index]] + [[下肢感覚.index]] + [[体幹感覚.index]]",
+      "noreport": true
+    },
+    {
+      "type": "eval",
+      "name": "合計スコア",
+      "formula": "[[上肢運動合計]] + [[下肢運動合計]] + [[感覚合計]] + [[膀胱機能.index]]"
+    },
+    {
+      "type": "eval",
+      "name": "重症度分類",
+      "formula": "[[合計スコア]] >= 15 ? '軽度' : ( [[合計スコア]] >= 12 ? '中等度' : '重度')"
+    },
+    {
+      "type": "warning",
+      "formula": "[[合計スコア]] < 15",
+      "name": "Warning: 中等度リスク"
+    },
+    {
+      "type": "emergency",
+      "formula": "[[合計スコア]] < 12",
+      "name": "Emergency: 高度リスク"
+    }
+  ]
+}

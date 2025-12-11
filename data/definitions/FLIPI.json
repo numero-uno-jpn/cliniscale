@@ -1,0 +1,73 @@
+{
+  "_comment": [
+    "Follicular Lymphoma International Prognostic Index (FLIPI)",
+    "濾胞性リンパ腫国際予後指数",
+    "原著論文: Solal-Celigny P, et al. Blood. 2004;104(5):1258-65.",
+    "公式URL: https://ashpublications.org/blood/article/104/5/1258/18907/Follicular-Lymphoma-International-Prognostic-Index",
+    "PubMed: https://pubmed.ncbi.nlm.nih.gov/15138165/"
+  ],
+  "title": "濾胞性リンパ腫国際予後指数",
+  "description": [
+    "濾胞性リンパ腫の予後を予測する指数です",
+    "5つの因子から低・中・高リスクを判定します"
+  ],
+  "contact": "血液内科",
+  "dept_in_charge": "血液内科",
+  "fields": [
+    {
+      "dispname": "年齢",
+      "name": "年齢",
+      "type": "radio",
+      "required": true,
+      "selector": ["60歳以下", "60歳超"],
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "病期",
+      "name": "病期",
+      "type": "radio",
+      "required": true,
+      "selector": ["I-II期", "III-IV期"],
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "ヘモグロビン値",
+      "name": "Hb",
+      "type": "radio",
+      "required": true,
+      "selector": ["12 g/dL以上", "12 g/dL未満"],
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "LDH",
+      "name": "LDH",
+      "type": "radio",
+      "required": true,
+      "selector": ["正常値以下", "正常値超"],
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "節外病変数",
+      "name": "節外病変",
+      "type": "radio",
+      "required": true,
+      "selector": ["4箇所以下", "5箇所以上"],
+      "selectoridx": "0|1"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "FLIPIスコア",
+      "type": "eval",
+      "description": "危険因子の合計 (0-5点)",
+      "formula": "[[年齢.index]] + [[病期.index]] + [[Hb.index]] + [[LDH.index]] + [[節外病変.index]]"
+    },
+    {
+      "name": "リスク分類",
+      "type": "eval",
+      "description": "予後リスクグループ",
+      "formula": "[[FLIPIスコア]] <= 1 ? '低リスク' : ([[FLIPIスコア]] == 2 ? '中リスク' : '高リスク')"
+    }
+  ]
+}

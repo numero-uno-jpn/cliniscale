@@ -1,0 +1,407 @@
+{
+  "_comment": [
+    "Sunderland分類に基づく末梢神経損傷 臨床所見記録ツール",
+    "Sydney Sunderland (1951年) による末梢神経損傷の詳細分類（5段階）",
+    "本ツールは臨床所見と検査結果を記録し、専門医が最終判定を行うための補助ツールです",
+    "主要文献: Sunderland S. A classification of peripheral nerve injuries producing loss of function. Brain. 1951;74(4):491-516. PMID: 14895767",
+    "日本神経治療学会ガイドライン「標準的神経治療：Bell麻痺」2019年参照",
+    "https://www.jsnt.gr.jp/guideline/img/bellmahi2019.pdf"
+  ],
+  "title": "Sunderland 分類準拠 末梢神経損傷 臨床所見記録",
+  "description": [
+    "末梢神経損傷の臨床所見と検査結果を記録するための評価ツールです",
+    "<strong>重要事項</strong>",
+    "・本評価は臨床情報の記録を目的としています",
+    "・Sunderland分類の最終判定は、神経学的診察および電気生理学的検査に習熟した専門医が行う必要があります",
+    "・解剖学的損傷程度は、神経伝導検査、筋電図、画像検査などの客観的検査結果に基づいて判定されます"
+  ],
+  "fields": [
+    {
+      "dispname": "基本情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "損傷神経名",
+      "name": "損傷神経名",
+      "type": "text",
+      "required": true,
+      "description": "損傷を受けた末梢神経名を記載してください（例：正中神経、橈骨神経、顔面神経など）"
+    },
+    {
+      "dispname": "損傷部位",
+      "name": "損傷部位",
+      "type": "text",
+      "required": true,
+      "description": "解剖学的な損傷部位を記載してください（例：手関節部、上腕中部、顔面神経管など）"
+    },
+    {
+      "dispname": "損傷原因",
+      "name": "損傷原因",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "外傷（鋭的損傷）",
+        "外傷（鈍的損傷）",
+        "手術操作",
+        "圧迫・絞扼",
+        "牽引",
+        "感染",
+        "虚血",
+        "その他"
+      ],
+      "description": "神経損傷の主な原因を選択してください"
+    },
+    {
+      "dispname": "その他の損傷原因詳細",
+      "name": "損傷原因詳細",
+      "type": "text",
+      "parentname": "損傷原因",
+      "parentsel": "その他",
+      "description": "その他を選択した場合、詳細を記載してください"
+    },
+    {
+      "dispname": "受傷日・発症日",
+      "name": "受傷日",
+      "type": "date",
+      "required": true,
+      "format": "YYYY年MM月DD日",
+      "description": "神経損傷の発生日を入力してください"
+    },
+    {
+      "dispname": "初診日",
+      "name": "初診日",
+      "type": "date",
+      "required": true,
+      "format": "YYYY年MM月DD日",
+      "description": "本評価時点の日付を入力してください"
+    },
+    {
+      "dispname": "臨床症状の評価",
+      "type": "subsection"
+    },
+    {
+      "dispname": "運動機能の状態",
+      "name": "運動機能",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "正常（MMT 5）",
+        "軽度低下（MMT 4）",
+        "中等度低下（MMT 3）",
+        "高度低下（MMT 2）",
+        "わずかな収縮のみ（MMT 1）",
+        "完全麻痺（MMT 0）"
+      ],
+      "selectoridx": "0|1|2|3|4|5",
+      "description": "支配筋の徒手筋力テスト（MMT）による運動機能評価を選択してください"
+    },
+    {
+      "dispname": "感覚機能の状態",
+      "name": "感覚機能",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "正常",
+        "軽度低下（感覚鈍麻）",
+        "中等度低下（明らかな感覚鈍麻）",
+        "高度低下（ほぼ無感覚）",
+        "完全脱失"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "description": "支配領域の感覚機能を評価してください（触覚、痛覚、温度覚）"
+    },
+    {
+      "dispname": "自律神経機能の状態",
+      "name": "自律神経機能",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "正常",
+        "軽度障害",
+        "中等度障害",
+        "高度障害",
+        "完全障害"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "description": "発汗、血管運動、皮膚栄養状態などの自律神経機能を評価してください"
+    },
+    {
+      "dispname": "筋萎縮の程度",
+      "name": "筋萎縮",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "軽度",
+        "中等度",
+        "高度"
+      ],
+      "selectoridx": "0|1|2|3",
+      "description": "支配筋の筋萎縮の程度を評価してください"
+    },
+    {
+      "dispname": "Tinel徴候",
+      "name": "Tinel徴候",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "陰性",
+        "陽性（損傷部位）",
+        "陽性（進行性・遠位移動あり）",
+        "評価困難"
+      ],
+      "selectoridx": "0|1|2|3",
+      "description": "損傷部位の叩打によるTinel徴候を評価してください。陽性で遠位への移動がある場合は神経再生を示唆します"
+    },
+    {
+      "dispname": "電気生理学的検査",
+      "type": "subsection"
+    },
+    {
+      "dispname": "神経伝導検査実施日",
+      "name": "神経伝導検査日",
+      "type": "date",
+      "format": "YYYY年MM月DD日",
+      "description": "神経伝導検査（NCS）を実施した日付（実施していない場合は空欄）"
+    },
+    {
+      "dispname": "複合筋活動電位（CMAP）",
+      "name": "CMAP所見",
+      "type": "radio",
+      "selector": [
+        "正常",
+        "振幅低下（50%以上残存）",
+        "高度振幅低下（50%未満）",
+        "導出不能",
+        "未実施"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "description": "損傷部遠位刺激での複合筋活動電位（CMAP）の状態を選択してください"
+    },
+    {
+      "dispname": "感覚神経活動電位（SNAP）",
+      "name": "SNAP所見",
+      "type": "radio",
+      "selector": [
+        "正常",
+        "振幅低下",
+        "導出不能",
+        "未実施"
+      ],
+      "selectoridx": "0|1|2|3",
+      "description": "感覚神経活動電位（SNAP）の状態を選択してください"
+    },
+    {
+      "dispname": "伝導ブロックの有無",
+      "name": "伝導ブロック",
+      "type": "radio",
+      "selector": [
+        "なし",
+        "部分的伝導ブロック",
+        "完全伝導ブロック",
+        "評価困難",
+        "未実施"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "description": "損傷部位における伝導ブロックの有無を選択してください"
+    },
+    {
+      "dispname": "針筋電図検査実施日",
+      "name": "針筋電図検査日",
+      "type": "date",
+      "format": "YYYY年MM月DD日",
+      "description": "針筋電図検査（EMG）を実施した日付（実施していない場合は空欄）"
+    },
+    {
+      "dispname": "安静時自発電位",
+      "name": "自発電位",
+      "type": "checkbox",
+      "selector": [
+        "線維自発電位（fibrillation）",
+        "陽性鋭波（positive sharp wave）",
+        "線維束性収縮（fasciculation）",
+        "なし",
+        "未実施"
+      ],
+      "description": "針筋電図で観察された安静時自発電位を選択してください（複数選択可）"
+    },
+    {
+      "dispname": "随意収縮時の運動単位電位",
+      "name": "運動単位電位",
+      "type": "radio",
+      "selector": [
+        "正常パターン",
+        "減少・脱落あり",
+        "神経原性変化（高振幅・多相性）",
+        "動員不能",
+        "未実施"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "description": "随意収縮時の運動単位電位のパターンを選択してください"
+    },
+    {
+      "dispname": "画像検査所見",
+      "type": "subsection"
+    },
+    {
+      "dispname": "画像検査種類",
+      "name": "画像検査種類",
+      "type": "checkbox",
+      "selector": [
+        "MRI",
+        "超音波検査",
+        "CT",
+        "実施なし"
+      ],
+      "description": "実施した画像検査を選択してください（複数選択可）"
+    },
+    {
+      "dispname": "画像検査所見詳細",
+      "name": "画像所見",
+      "type": "textarea",
+      "rows": 4,
+      "description": "MRI、超音波検査、CTなどの画像検査所見を記載してください（神経の連続性、神経腫の有無、周囲組織との関係など）"
+    },
+    {
+      "dispname": "専門医による最終判定",
+      "type": "subsection"
+    },
+    {
+      "dispname": "Sunderland分類",
+      "name": "Sunderland分類",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "Ⅰ度（神経伝導障害のみ、髄鞘障害、軸索保持）",
+        "Ⅱ度（軸索断裂、神経内膜保持）",
+        "Ⅲ度（軸索・神経内膜断裂、神経周膜保持）",
+        "Ⅳ度（軸索・神経内膜・神経周膜断裂、神経上膜保持）",
+        "Ⅴ度（神経完全断裂、神経上膜断裂）",
+        "判定保留（追加検査必要）"
+      ],
+      "selectoridx": "1|2|3|4|5|0",
+      "description": "臨床所見および電気生理学的検査、画像検査の結果を総合的に判断し、Sunderland分類を選択してください"
+    },
+    {
+      "dispname": "判定の根拠",
+      "name": "判定根拠",
+      "type": "textarea",
+      "rows": 4,
+      "required": true,
+      "description": "Sunderland分類の判定根拠となった所見を記載してください（検査結果、臨床経過、文献的根拠など）"
+    },
+    {
+      "dispname": "実際の治療方針",
+      "name": "治療方針",
+      "type": "textarea",
+      "rows": 4,
+      "required": true,
+      "description": "患者の年齢、全身状態、社会的背景などを考慮した実際の治療方針を記載してください"
+    },
+    {
+      "dispname": "次回評価予定日",
+      "name": "次回評価日",
+      "type": "date",
+      "format": "YYYY年MM月DD日",
+      "description": "次回の神経学的評価または電気生理学的検査の予定日を入力してください"
+    },
+    {
+      "dispname": "補足情報・特記事項",
+      "type": "subsection"
+    },
+    {
+      "dispname": "合併損傷",
+      "name": "合併損傷",
+      "type": "textarea",
+      "rows": 3,
+      "description": "血管損傷、骨折、軟部組織損傷などの合併損傷があれば記載してください"
+    },
+    {
+      "dispname": "既往歴・併存疾患",
+      "name": "既往歴",
+      "type": "textarea",
+      "rows": 3,
+      "description": "神経再生に影響する可能性のある疾患（糖尿病、喫煙歴、栄養状態など）を記載してください"
+    },
+    {
+      "dispname": "その他特記事項",
+      "name": "特記事項",
+      "type": "textarea",
+      "rows": 4,
+      "description": "診断や治療方針決定に重要なその他の情報を記載してください"
+    },
+    {
+      "dispname": "評価医師情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "評価医師名",
+      "name": "評価医師名",
+      "type": "text",
+      "required": true,
+      "description": "本評価を実施した医師名を記載してください"
+    },
+    {
+      "dispname": "専門資格",
+      "name": "専門資格",
+      "type": "checkbox",
+      "selector": [
+        "神経内科専門医",
+        "整形外科専門医",
+        "形成外科専門医",
+        "脳神経外科専門医",
+        "臨床神経生理学会専門医（筋電図・神経伝導）",
+        "その他専門医"
+      ],
+      "description": "評価医師の専門資格を選択してください（複数選択可）"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "経過日数",
+      "type": "eval",
+      "dispname": "発症からの経過日数",
+      "formula": "Math.floor( ( new Date( {{初診日}} ) - new Date( {{受傷日}} ) ) / (1000 * 60 * 60 * 24) )"
+    },
+    {
+      "name": "予後判定_自動",
+      "type": "eval",
+      "dispname": "Sunderland分類に基づく予後の目安",
+      "formula": "{{Sunderland分類}}.includes('Ⅰ度') ? '完全回復期待（数週～数ヶ月）' : ( {{Sunderland分類}}.includes('Ⅱ度') ? '良好な回復期待（数ヶ月～1年、軸索再生速度 1-3mm/日）' : ( {{Sunderland分類}}.includes('Ⅲ度') ? '不完全回復の可能性（1-2年、神経過誤支配による機能障害あり）' : ( {{Sunderland分類}}.includes('Ⅳ度（') ? '自然回復困難（外科的治療検討）' : ( {{Sunderland分類}}.includes('Ⅴ度') ? '自然回復不可（外科的治療必須）' : '判定保留' ) ) ) )"
+    },
+    {
+      "name": "治療方針_自動",
+      "type": "eval",
+      "dispname": "Sunderland分類に基づく治療方針の目安",
+      "formula": "{{Sunderland分類}}.includes('Ⅰ度') ? '保存的治療、経過観察、リハビリテーション' : ( {{Sunderland分類}}.includes('Ⅱ度') ? '保存的治療、慎重な経過観察（3-6ヶ月）、電気生理学的検査でのモニタリング、リハビリテーション' : ( {{Sunderland分類}}.includes('Ⅲ度') ? '3-6ヶ月の保存的治療後、回復不十分なら外科的治療検討' : ( {{Sunderland分類}}.includes('Ⅳ度（') || {{Sunderland分類}}.includes('Ⅴ度') ? '早期の外科的治療（神経縫合、神経移植、神経移行術など）' : '治療方針保留' ) ) )"
+    },
+    {
+      "name": "臨床症状重症度スコア",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[運動機能.index]] + [[感覚機能.index]] + [[自律神経機能.index]] + [[筋萎縮.index]]"
+    },
+    {
+      "name": "臨床重症度判定",
+      "type": "eval",
+      "dispname": "臨床症状に基づく重症度評価",
+      "formula": "[[臨床症状重症度スコア]] <= 3 ? '軽症' : ( [[臨床症状重症度スコア]] <= 8 ? '中等症' : '重症' )"
+    },
+    {
+      "name": "Warning: 電気生理学的検査未実施 (CMAP・自発電位とも未実施)",
+      "type": "warning",
+      "formula": "{{CMAP所見}}.includes('未実施') && {{自発電位}}.includes('未実施')"
+    },
+    {
+      "name": "Warning: 経過日数 < 14日 (II-Ⅲ度判定には経過観察必要)",
+      "type": "warning",
+      "formula": "[[経過日数]] < 14 && ( {{Sunderland分類}}.includes('Ⅱ度') || {{Sunderland分類}}.includes('Ⅲ度') )"
+    },
+    {
+      "name": "Emergency: Sunderland IV-Ⅴ度 (早期手術検討)",
+      "type": "emergency",
+      "formula": "{{Sunderland分類}}.includes('Ⅴ度') || ( {{Sunderland分類}}.includes('Ⅳ度') && [[経過日数]] < 90 )"
+    }
+  ]
+}

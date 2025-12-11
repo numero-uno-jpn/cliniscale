@@ -1,0 +1,286 @@
+{
+  "_comment": [
+    "バージャー病重症度分類",
+    "令和6年4月1日改訂版に基づく",
+    "selectoridxによるindex判定、中間変数で判定ロジック明確化",
+    "参考: 厚生労働省「バージャー病(指定難病47)」令和6年4月版"
+  ],
+  "title": "バージャー病重症度分類",
+  "description": [
+    "バージャー病(閉塞性血栓血管炎)の重症度を評価する分類です。",
+    "虚血症状の程度に応じて1度から5度までの5段階で評価します。"
+  ],
+  "contact": "担当医師",
+  "dept_in_charge": "血管外科",
+  "responsible_person": [
+    "血管外科医師"
+  ],
+  "staffs": [
+    "血管外科スタッフ"
+  ],
+  "submit_button_title": "評価を送信",
+  "mail_notification": false,
+  "fields": [
+    {
+      "dispname": "皮膚温の低下",
+      "name": "皮膚温低下",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "selectoridx": "0|1",
+      "description": "患肢の皮膚温の低下の有無"
+    },
+    {
+      "dispname": "しびれ感",
+      "name": "しびれ感",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "selectoridx": "0|1",
+      "description": "患肢のしびれ感の有無"
+    },
+    {
+      "dispname": "冷感",
+      "name": "冷感",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "selectoridx": "0|1",
+      "description": "患肢の冷感の有無"
+    },
+    {
+      "dispname": "皮膚色調変化",
+      "name": "皮膚色調変化",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": [
+        "なし",
+        "蒼白",
+        "虚血性紅潮",
+        "その他"
+      ],
+      "selectoridx": "0|1|2|3",
+      "description": "患肢の皮膚色調変化の有無と種類"
+    },
+    {
+      "dispname": "間欠性跛行",
+      "name": "間欠性跛行",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": [
+        "なし",
+        "軽度",
+        "中等度",
+        "重度"
+      ],
+      "selectoridx": "0|1|2|3",
+      "description": "歩行時の下肢痛の程度(重度: 社会生活に許容範囲を超える支障)"
+    },
+    {
+      "dispname": "間欠性跛行の部位",
+      "name": "跛行部位",
+      "type": "checkbox",
+      "selector": [
+        "足底筋群",
+        "足部",
+        "下腿筋",
+        "その他"
+      ],
+      "parentname": "間欠性跛行",
+      "parentsel": "1|2|3",
+      "description": "間欠性跛行の生じる部位"
+    },
+    {
+      "dispname": "指趾の色調変化",
+      "name": "指趾色調変化",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": [
+        "なし",
+        "蒼白",
+        "チアノーゼ",
+        "その他"
+      ],
+      "selectoridx": "0|1|2|3",
+      "description": "手指・足趾の色調変化の有無と種類"
+    },
+    {
+      "dispname": "安静時疼痛",
+      "name": "安静時疼痛",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": [
+        "なし",
+        "軽度",
+        "中等度",
+        "強度",
+        "激痛"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "description": "安静時の疼痛の程度"
+    },
+    {
+      "dispname": "潰瘍の有無",
+      "name": "潰瘍",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": [
+        "なし",
+        "限局性小潰瘍",
+        "広範囲潰瘍"
+      ],
+      "selectoridx": "0|1|2",
+      "description": "指趾の潰瘍の有無と程度"
+    },
+    {
+      "dispname": "壊死の有無",
+      "name": "壊死",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": [
+        "なし",
+        "限局性",
+        "広範囲"
+      ],
+      "selectoridx": "0|1|2",
+      "description": "指趾の壊死の有無と程度"
+    },
+    {
+      "dispname": "切断歴",
+      "name": "切断歴",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": [
+        "なし",
+        "手・足関節より末梢側(1肢以上)",
+        "手・足関節より中枢側(1肢)",
+        "手・足関節より中枢側(2肢以上)"
+      ],
+      "selectoridx": "0|1|2|3",
+      "description": "過去の切断歴の有無と部位・範囲"
+    },
+    {
+      "dispname": "日常生活への影響",
+      "name": "日常生活影響",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": [
+        "支障なし",
+        "許容範囲内",
+        "許容範囲超える",
+        "著しく支障",
+        "日常生活困難"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "description": "症状による日常生活・社会生活への影響の程度"
+    },
+    {
+      "dispname": "入院治療の必要性",
+      "name": "入院治療",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": [
+        "不要",
+        "検討",
+        "必要"
+      ],
+      "selectoridx": "0|1|2",
+      "description": "入院による集中治療の必要性"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "基本症状あり",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[皮膚温低下.index]] > 0 || [[しびれ感.index]] > 0 || [[冷感.index]] > 0 || [[皮膚色調変化.index]] > 0 ? 1 : 0"
+    },
+    {
+      "name": "5度判定A",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[安静時疼痛.index]] == 4 && ( [[潰瘍.index]] == 2 || [[壊死.index]] == 2 ) && [[入院治療.index]] == 2 ? 1 : 0"
+    },
+    {
+      "name": "5度判定B",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[切断歴.index]] == 3 && ( [[日常生活影響.index]] == 3 || [[日常生活影響.index]] == 4 ) ? 1 : 0"
+    },
+    {
+      "name": "4度判定A",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[安静時疼痛.index]] >= 3 && [[潰瘍.index]] > 0 && ( [[日常生活影響.index]] == 3 || [[日常生活影響.index]] == 4 ) ? 1 : 0"
+    },
+    {
+      "name": "4度判定B",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[切断歴.index]] == 2 && [[日常生活影響.index]] >= 2 ? 1 : 0"
+    },
+    {
+      "name": "3度判定A",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( ( [[指趾色調変化.index]] > 0 && ( [[潰瘍.index]] == 1 || [[壊死.index]] == 1 ) ) || [[間欠性跛行.index]] == 3 ) && [[日常生活影響.index]] >= 2 ? 1 : 0"
+    },
+    {
+      "name": "3度判定B",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[切断歴.index]] == 1 && [[日常生活影響.index]] >= 2 ? 1 : 0"
+    },
+    {
+      "name": "2度判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[間欠性跛行.index]] > 0 && [[日常生活影響.index]] == 1 ? 1 : 0"
+    },
+    {
+      "name": "1度判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[基本症状あり]] == 1 && [[日常生活影響.index]] == 0 ? 1 : 0"
+    },
+    {
+      "name": "重症度判定",
+      "type": "eval",
+      "dispname": "重症度判定",
+      "formula": "[[5度判定A]] == 1 || [[5度判定B]] == 1 ? '5度' : ( [[4度判定A]] == 1 || [[4度判定B]] == 1 ? '4度' : ( [[3度判定A]] == 1 || [[3度判定B]] == 1 ? '3度' : ( [[2度判定]] == 1 ? '2度' : ( [[1度判定]] == 1 ? '1度' : '判定条件に該当せず(要精査)' ) ) ) )"
+    },
+    {
+      "name": "Warning: 医療費助成対象",
+      "type": "warning",
+      "formula": "[[重症度判定]] >= 3"
+    },
+    {
+      "name": "治療方針",
+      "type": "eval",
+      "dispname": "治療方針",
+      "formula": "{{重症度判定}} == '5度' ? '強力な内科的・外科的治療、入院加療必須' : ( {{重症度判定}} == '4度' ? '薬物療法・外科療法、入院加療検討' : ( {{重症度判定}} == '3度' ? '外科療法検討' : ( {{重症度判定}} == '2度' ? '禁煙・薬物療法' : ( {{重症度判定}} == '1度' ? '禁煙・保存的治療' : '専門医による総合的評価が必要' ) ) ) )"
+    }
+  ]
+}

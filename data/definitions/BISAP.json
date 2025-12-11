@@ -1,0 +1,104 @@
+{
+    "_comment": [
+        "Bedside Index for Severity in Acute Pancreatitis (2008)",
+        "原著論文: https://pubmed.ncbi.nlm.nih.gov/18953276/",
+        "公式URL: https://www.mdcalc.com/calc/1735/bisap-score-pancreatitis-mortality"
+    ],
+    "title": "BISAPスコア",
+    "description": [
+        "急性膵炎の重症度を予測する簡易スコアです",
+        "ベッドサイドで評価可能な5項目により死亡リスクを評価します"
+    ],
+    "fields": [
+        {
+            "dispname": "BISAP評価項目",
+            "type": "subsection"
+        },
+        {
+            "dispname": "BUN (血中尿素窒素)",
+            "name": "BUN",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "25 mg/dL未満",
+                "25 mg/dL以上"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "意識障害",
+            "name": "意識障害",
+            "type": "radio",
+            "required": true,
+            "description": "Glasgow Coma Scale < 15 または見当識障害あり",
+            "selector": [
+                "なし",
+                "あり"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "SIRS (全身性炎症反応症候群)",
+            "name": "SIRS",
+            "type": "radio",
+            "required": true,
+            "description": "2項目以上該当: 体温<36℃または>38℃、心拍数>90、呼吸数>20、WBC<4000または>12000",
+            "selector": [
+                "なし (1項目以下)",
+                "あり (2項目以上)"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "年齢",
+            "name": "年齢",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "60歳未満",
+                "60歳以上"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "胸水",
+            "name": "胸水",
+            "type": "radio",
+            "required": true,
+            "description": "胸部X線またはCTで確認",
+            "selector": [
+                "なし",
+                "あり"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "BISAP総合スコア",
+            "type": "eval",
+            "formula": "[[BUN.index]] + [[意識障害.index]] + [[SIRS.index]] + [[年齢.index]] + [[胸水.index]]"
+        },
+        {
+            "name": "リスク分類",
+            "type": "eval",
+            "formula": "[[BISAP総合スコア]] <= 2 ? '低リスク' : '高リスク'"
+        },
+        {
+            "name": "死亡率予測",
+            "type": "eval",
+            "formula": "[[BISAP総合スコア]] == 0 ? '死亡率 <1%' : ( [[BISAP総合スコア]] == 1 ? '死亡率 <3%' : ( [[BISAP総合スコア]] == 2 ? '死亡率 3-8%' : ( [[BISAP総合スコア]] == 3 ? '死亡率 8-15%' : ( [[BISAP総合スコア]] == 4 ? '死亡率 15-25%' : '死亡率 >25%' ) ) ) )"
+        },
+        {
+            "name": "Warning: 高リスク BISAP ≥ 3",
+            "formula": "[[BISAP総合スコア]] >= 3",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 最高リスク BISAP ≥ 4",
+            "formula": "[[BISAP総合スコア]] >= 4",
+            "type": "emergency"
+        }
+    ]
+}

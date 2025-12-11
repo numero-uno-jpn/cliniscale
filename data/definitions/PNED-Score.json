@@ -1,0 +1,214 @@
+{
+  "_comment": [
+    "PNED Score (Progetto Nazionale Emorragia Digestiva Score)",
+    "非静脈瘤性上部消化管出血患者の30日死亡率予測スコア",
+    "イタリアで開発・検証された10点満点のスコアリングシステム",
+    "原典: Marmo R, et al. Am J Gastroenterol. 2010;105(6):1284-91. PMID: 20051943",
+    "外部検証: Contreras-Omaña R, et al. Rev Gastroenterol Mex. 2017;82(2):123-128.",
+    "リスク分類: 低リスク(0-4点)、中等度リスク(5-8点)、高リスク(9-10点)",
+    "修正履歴:",
+    "- ASA5選択肢を追加(最重症患者の評価を可能に)",
+    "- ヘモグロビン・年齢入力をscale型からtext型に変更(ユーザビリティ向上)",
+    "- warning/emergencyにname属性を追加(技術仕様準拠)",
+    "- testrange設定を追加(ランダムテストデータ生成用)"
+  ],
+  "title": "PNED Score 非静脈瘤性上部消化管出血死亡予測",
+  "description": [
+    "非静脈瘤性上部消化管出血患者の30日死亡率を予測するスコアです",
+    "入院時の臨床情報から死亡リスクを評価します"
+  ],
+  "translate": "major",
+  "fields": [
+    {
+      "dispname": "ASA分類",
+      "name": "ASA分類",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "ASA1",
+        "ASA2",
+        "ASA3",
+        "ASA4",
+        "ASA5"
+      ],
+      "description": "American Society of Anesthesiologists身体状態分類<br>ASA1: 健康、ASA2: 軽度全身疾患、ASA3: 重度全身疾患、ASA4: 生命を脅かす重度全身疾患、ASA5: 瀕死状態"
+    },
+    {
+      "dispname": "来院までの時間",
+      "name": "来院時間",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "8時間以上",
+        "8時間未満"
+      ],
+      "description": "症状発症から来院までの時間"
+    },
+    {
+      "dispname": "ヘモグロビン値",
+      "name": "ヘモグロビン",
+      "type": "text",
+      "postfix": "g/dL",
+      "inputmode": "decimal",
+      "testrange": [
+        3,
+        20
+      ],
+      "required": true,
+      "description": "入院時のヘモグロビン値を半角数字で入力してください(例: 10.5)"
+    },
+    {
+      "dispname": "年齢",
+      "name": "年齢",
+      "type": "text",
+      "postfix": "歳",
+      "inputmode": "numeric",
+      "testrange": [
+        18,
+        120
+      ],
+      "required": true,
+      "description": "半角数字で入力してください(例: 75)"
+    },
+    {
+      "dispname": "腎不全の有無",
+      "name": "腎不全",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "description": "慢性腎不全の既往"
+    },
+    {
+      "dispname": "再出血の有無",
+      "name": "再出血",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "description": "入院中の再出血"
+    },
+    {
+      "dispname": "悪性腫瘍の有無",
+      "name": "悪性腫瘍",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "description": "活動性悪性腫瘍の既往"
+    },
+    {
+      "dispname": "肝硬変の有無",
+      "name": "肝硬変",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "description": "肝硬変の既往"
+    },
+    {
+      "dispname": "内視鏡治療の失敗",
+      "name": "内視鏡治療失敗",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "description": "内視鏡的止血治療の失敗"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "ASA3点数",
+      "type": "eval",
+      "formula": "{{ASA分類}} == 'ASA3' ? 1 : 0",
+      "noreport": true
+    },
+    {
+      "name": "来院時間点数",
+      "type": "eval",
+      "formula": "{{来院時間}} == '8時間未満' ? 1 : 0",
+      "noreport": true
+    },
+    {
+      "name": "ヘモグロビン点数",
+      "type": "eval",
+      "formula": "((ヘモグロビン)) <= 7 ? 2 : 0",
+      "noreport": true
+    },
+    {
+      "name": "年齢点数",
+      "type": "eval",
+      "formula": "((年齢)) >= 80 ? 2 : 0",
+      "noreport": true
+    },
+    {
+      "name": "腎不全点数",
+      "type": "eval",
+      "formula": "{{腎不全}} == 'あり' ? 2 : 0",
+      "noreport": true
+    },
+    {
+      "name": "ASA4以上点数",
+      "type": "eval",
+      "formula": "{{ASA分類}} == 'ASA4' || {{ASA分類}} == 'ASA5' ? 3 : 0",
+      "noreport": true
+    },
+    {
+      "name": "再出血点数",
+      "type": "eval",
+      "formula": "{{再出血}} == 'あり' ? 3 : 0",
+      "noreport": true
+    },
+    {
+      "name": "悪性腫瘍点数",
+      "type": "eval",
+      "formula": "{{悪性腫瘍}} == 'あり' ? 3 : 0",
+      "noreport": true
+    },
+    {
+      "name": "肝硬変点数",
+      "type": "eval",
+      "formula": "{{肝硬変}} == 'あり' ? 3 : 0",
+      "noreport": true
+    },
+    {
+      "name": "内視鏡治療失敗点数",
+      "type": "eval",
+      "formula": "{{内視鏡治療失敗}} == 'あり' ? 4 : 0",
+      "noreport": true
+    },
+    {
+      "name": "PNED総合点",
+      "type": "eval",
+      "formula": "[[ASA3点数]] + [[来院時間点数]] + [[ヘモグロビン点数]] + [[年齢点数]] + [[腎不全点数]] + [[ASA4以上点数]] + [[再出血点数]] + [[悪性腫瘍点数]] + [[肝硬変点数]] + [[内視鏡治療失敗点数]]",
+      "dispname": "PNED総合点"
+    },
+    {
+      "name": "リスク分類",
+      "type": "eval",
+      "formula": "[[PNED総合点]] <= 4 ? '低リスク' : ( [[PNED総合点]] <= 8 ? '中等度リスク' : '高リスク' )",
+      "dispname": "30日死亡リスク分類 (低リスク: 0-4点、中等度リスク: 5-8点、高リスク: 9-10点)"
+    },
+    {
+      "name": "Warning: PNED Score 中等度リスク",
+      "formula": "[[PNED総合点]] >= 5",
+      "type": "warning"
+    },
+    {
+      "name": "Emergency: PNED Score 高リスク",
+      "formula": "[[PNED総合点]] >= 9",
+      "type": "emergency"
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "_comment": [
+    "Cleveland Clinic Incontinence Score (Wexner Score)",
+    "Wexnerスコア(便失禁スコア)",
+    "0-20点: 便失禁の重症度評価",
+    "原著: Jorge JM, Wexner SD. Dis Colon Rectum. 1993;36(1):77-9.",
+    "参考URL: https://pubmed.ncbi.nlm.nih.gov/8416784/"
+  ],
+  "title": "Wexnerスコア",
+  "description": [
+    "便失禁の頻度と種類を評価する0-20点のスケール",
+    "治療効果測定や手術前後比較に広く用いられます"
+  ],
+  "contact": "外科・消化器科担当医",
+  "dept_in_charge": "外科",
+  "fields": [
+    {
+      "dispname": "評価項目",
+      "type": "subsection"
+    },
+    {
+      "dispname": "固形便の失禁頻度",
+      "name": "固形便失禁",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "月に1回未満",
+        "月に1回以上、週に1回未満",
+        "週に1回以上、日に1回未満",
+        "日に1回以上"
+      ],
+      "selectoridx": "0|1|2|3|4"
+    },
+    {
+      "dispname": "液体便の失禁頻度",
+      "name": "液体便失禁",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "月に1回未満",
+        "月に1回以上、週に1回未満",
+        "週に1回以上、日に1回未満",
+        "日に1回以上"
+      ],
+      "selectoridx": "0|1|2|3|4"
+    },
+    {
+      "dispname": "ガス(おなら)の失禁頻度",
+      "name": "ガス失禁",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "月に1回未満",
+        "月に1回以上、週に1回未満",
+        "週に1回以上、日に1回未満",
+        "日に1回以上"
+      ],
+      "selectoridx": "0|1|2|3|4"
+    },
+    {
+      "dispname": "パッドやおむつの使用状況",
+      "name": "パッド使用",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "使用していない",
+        "週に1回未満",
+        "週に1回以上、日に1回未満",
+        "日に1回",
+        "日に2回以上"
+      ],
+      "selectoridx": "0|1|2|3|4"
+    },
+    {
+      "dispname": "便失禁が生活に与える影響の程度",
+      "name": "生活影響",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "影響なし",
+        "わずかに影響",
+        "中程度の影響",
+        "かなりの影響",
+        "非常に大きな影響"
+      ],
+      "selectoridx": "0|1|2|3|4"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "合計スコア",
+      "type": "eval",
+      "dispname": "Wexnerスコア",
+      "formula": "[[固形便失禁.index]] + [[液体便失禁.index]] + [[ガス失禁.index]] + [[パッド使用.index]] + [[生活影響.index]]"
+    },
+    {
+      "name": "重症度判定",
+      "type": "eval",
+      "dispname": "重症度の評価",
+      "formula": "[[合計スコア]] == 0 ? '完全禁制' : ( [[合計スコア]] <= 7 ? '軽度' : ( [[合計スコア]] <= 13 ? '中度' : '重度' ) )"
+    },
+    {
+      "name": "Warning: 中等度以上便失禁",
+      "formula": "[[合計スコア]] >= 8",
+      "type": "warning"
+    },
+    {
+      "name": "Emergency: 重度便失禁",
+      "formula": "[[合計スコア]] >= 14",
+      "type": "emergency"
+    },
+    {
+      "dispname": "備考",
+      "name": "備考",
+      "type": "textarea",
+      "rows": 3,
+      "description": "追加の所見や特記事項"
+    },
+    {
+      "dispname": "署名",
+      "name": "署名",
+      "type": "signpad",
+      "required": true,
+      "description": "回答内容を確認し署名してください"
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+    "_comment": [
+        "PAINAD: Pain Assessment in Advanced Dementia",
+        "原著: Warden V, Hurley AC, Volicer L. Development and psychometric evaluation of the Pain Assessment in Advanced Dementia (PAINAD) scale. J Am Med Dir Assoc. 2003;4(1):9-15.",
+        "重度認知症患者の疼痛を行動観察により評価する5項目スケール",
+        "各項目を0-2点で評価し、合計0-10点で疼痛の程度を判定",
+        "参考URL: https://hign.org/consultgeri/try-this-series/assessing-pain-older-adults-dementia"
+    ],
+    "title": "PAINAD 重度認知症における疼痛評価",
+    "description": [
+        "<h3>PAINAD: Pain Assessment in Advanced Dementia</h3>",
+        "重度認知症患者の疼痛を評価するための行動観察スケールです。",
+        "言語によるコミュニケーションが困難な患者の疼痛を客観的に評価できます。",
+        "5つの行動領域を2分間観察し、各項目を0-2点で評価してください。"
+    ],
+    "contact": "疼痛管理担当者",
+    "dept_in_charge": "緩和ケア科",
+    "responsible_person": [
+        "主治医",
+        "看護師長"
+    ],
+    "staffs": [
+        "病棟看護師",
+        "疼痛管理チーム"
+    ],
+    "submit_button_title": "評価結果を送信",
+    "translate": "major",
+    "mail_notification": true,
+    "fields": [
+        {
+            "dispname": "基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "観察状況",
+            "name": "観察状況",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "安静時|活動時|ケア中"
+        },
+        {
+            "dispname": "PAINAD評価項目",
+            "type": "subsection",
+            "description": "以下の5項目について、2分間観察して最も適切な状態を選択してください"
+        },
+        {
+            "dispname": "1. 呼吸",
+            "name": "呼吸",
+            "type": "radio",
+            "required": true,
+            "description": "発声とは独立した呼吸パターンを評価",
+            "selector": [
+                "正常な呼吸 - 楽で静かなリズミカルな呼吸",
+                "時々の努力呼吸 - 断続的な苦しそうで困難な呼吸、短時間の過呼吸",
+                "雑音を伴う努力呼吸 - 吸気・呼吸時の負の音、長時間の過呼吸、チェーン・ストークス呼吸"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "2. 負の発声",
+            "name": "負の発声",
+            "type": "radio",
+            "required": true,
+            "description": "痛みを示唆する音声表現を評価",
+            "selector": [
+                "なし - 中性的または快い音質の発声",
+                "時々のうめき声やぶつぶつ言う - 悲しげな音、低い音量での否定的な発言",
+                "繰り返し困った様子で叫ぶ - 大きなうめき声やうなり声、泣き声"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "3. 表情",
+            "name": "表情",
+            "type": "radio",
+            "required": true,
+            "description": "顔の表情による痛みの表現を評価",
+            "selector": [
+                "笑顔または無表情 - 穏やかで落ち着いた、リラックスした表情",
+                "悲しい、怖がっている、眉をひそめる - 不幸そうで孤独な、恐れを表す表情",
+                "顔をしかめる - 歪んだ苦悶の表情、眉や口の周りのしわの増加"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "4. 身体言語",
+            "name": "身体言語",
+            "type": "radio",
+            "required": true,
+            "description": "身体の動きや姿勢による痛みの表現を評価",
+            "selector": [
+                "リラックスしている - 穏やかで落ち着いた様子、安らいでいる",
+                "緊張している、苦悶の歩行、そわそわしている - 緊張した不安そうな様子",
+                "硬直している、握りこぶし、膝を抱える、抵抗や暴力 - 身体の硬直、攻撃的な動き"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "5. 慰められやすさ",
+            "name": "慰められやすさ",
+            "type": "radio",
+            "required": true,
+            "description": "声かけや接触により慰められる程度を評価",
+            "selector": [
+                "慰める必要がない - 安らぎ感があり、慰めを必要としない",
+                "気を逸らしたり安心させることで慰められる - 声かけや接触で行動が中断される",
+                "慰めることができない - 声かけや身体的接触でも行動を鎮静化できない"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "追加情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "観察時の特記事項",
+            "name": "特記事項",
+            "type": "textarea",
+            "rows": 3,
+            "description": "評価時に気づいた点や特別な状況があれば記録してください"
+        },
+        {
+            "dispname": "疼痛の可能性がある部位",
+            "name": "疼痛部位",
+            "type": "checkbox",
+            "inline": true,
+            "selector": [
+                "頭部",
+                "首・肩",
+                "胸部",
+                "腹部",
+                "腰部",
+                "上肢",
+                "下肢",
+                "全身",
+                "不明"
+            ]
+        },
+        {
+            "dispname": "評価者署名",
+            "name": "評価者署名",
+            "type": "signpad",
+            "required": true,
+            "description": "上記の評価結果に責任を持ちます"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "PAINAD合計スコア",
+            "type": "eval",
+            "formula": "[[呼吸.index]] + [[負の発声.index]] + [[表情.index]] + [[身体言語.index]] + [[慰められやすさ.index]]",
+            "dispname": "PAINAD合計スコア"
+        },
+        {
+            "name": "疼痛評価",
+            "type": "eval",
+            "formula": "[[PAINAD合計スコア]] == 0 ? '疼痛の兆候なし' : ([[PAINAD合計スコア]] == 1 ? '疼痛の可能性に注意' : '疼痛の可能性が高い - 疼痛治療の検討が必要')",
+            "dispname": "疼痛の評価と対応指針"
+        },
+        {
+            "name": "Warning: PAINAD合計スコア >= 2",
+            "formula": "[[PAINAD合計スコア]] >= 2",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: PAINAD合計スコア >= 7",
+            "formula": "[[PAINAD合計スコア]] >= 7",
+            "type": "emergency"
+        }
+    ]
+}

@@ -1,0 +1,291 @@
+{
+  "_comment": [
+    "CREDO-Kyoto Risk Score問診票定義",
+    "PCI治療後の血栓リスクと出血リスクを評価するための日本発のリスクスコア",
+    "原典文献: Natsuaki M, et al. Prediction of Thrombotic and Bleeding Events After Percutaneous Coronary Intervention: CREDO-Kyoto Thrombotic and Bleeding Risk Scores. J Am Heart Assoc. 2018;7(11):e008708",
+    "日本循環器学会ガイドライン: 2020年JCSガイドライン フォーカスアップデート版 冠動脈疾患患者における抗血栓療法",
+    "参考URL: https://www.j-circ.or.jp/cms/wp-content/uploads/2020/04/JCS2020_Kimura_Nakamura.pdf"
+  ],
+  "title": "CREDO-Kyoto Risk Score 経皮的冠動脈インターベンション治療後の血栓・リスクスコア",
+  "description": [
+    "経皮的冠動脈インターベンション(PCI)治療後の血栓リスクと出血リスクを評価するためのスコアです。",
+    "日本人のデータをもとに開発され、血栓リスクと出血リスクを個別に評価します。"
+  ],
+  "fields": [
+    {
+      "dispname": "基本情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "年齢",
+      "name": "年齢",
+      "type": "text",
+      "inputmode": "numeric",
+      "postfix": "歳",
+      "testrange": [
+        60,
+        100
+      ],
+      "required": true
+    },
+    {
+      "dispname": "性別",
+      "name": "性別",
+      "type": "radio",
+      "inline": true,
+      "selector": "男性|女性",
+      "required": true
+    },
+    {
+      "dispname": "血栓リスク評価因子",
+      "type": "subsection"
+    },
+    {
+      "dispname": "慢性腎臓病",
+      "name": "CKD血栓",
+      "type": "radio",
+      "selector": "なし|透析中|eGFR 30未満",
+      "description": "透析またはeGFR <30 mL/分/1.73m²の慢性腎臓病",
+      "required": true
+    },
+    {
+      "dispname": "心房細動",
+      "name": "心房細動血栓",
+      "type": "radio",
+      "inline": true,
+      "selector": "なし|あり",
+      "required": true
+    },
+    {
+      "dispname": "末梢血管疾患",
+      "name": "PVD血栓",
+      "type": "radio",
+      "inline": true,
+      "selector": "なし|あり",
+      "required": true
+    },
+    {
+      "dispname": "貧血",
+      "name": "貧血血栓",
+      "type": "radio",
+      "selector": "なし|あり(ヘモグロビン値 11g/dL未満)",
+      "required": true
+    },
+    {
+      "dispname": "高齢(75歳以上)",
+      "name": "高齢血栓",
+      "type": "eval",
+      "formula": "[[年齢]] >= 75 ? 'あり' : 'なし'"
+    },
+    {
+      "dispname": "心不全",
+      "name": "心不全血栓",
+      "type": "radio",
+      "inline": true,
+      "selector": "なし|あり",
+      "required": true
+    },
+    {
+      "dispname": "糖尿病",
+      "name": "糖尿病血栓",
+      "type": "radio",
+      "inline": true,
+      "selector": "なし|あり",
+      "required": true
+    },
+    {
+      "dispname": "慢性完全閉塞(CTO)",
+      "name": "CTO",
+      "type": "radio",
+      "inline": true,
+      "selector": "なし|あり",
+      "required": true
+    },
+    {
+      "dispname": "出血リスク評価因子",
+      "type": "subsection"
+    },
+    {
+      "dispname": "血小板減少",
+      "name": "血小板減少",
+      "type": "radio",
+      "selector": "なし|あり(10万/μL未満)",
+      "required": true
+    },
+    {
+      "dispname": "慢性腎臓病",
+      "name": "CKD出血",
+      "type": "radio",
+      "selector": "なし|透析中|eGFR 30未満",
+      "description": "透析またはeGFR <30 mL/分/1.73m²の慢性腎臓病",
+      "required": true
+    },
+    {
+      "dispname": "末梢血管疾患",
+      "name": "PVD出血",
+      "type": "radio",
+      "inline": true,
+      "selector": "なし|あり",
+      "required": true
+    },
+    {
+      "dispname": "心不全",
+      "name": "心不全出血",
+      "type": "radio",
+      "inline": true,
+      "selector": "なし|あり",
+      "required": true
+    },
+    {
+      "dispname": "心筋梗塞の既往",
+      "name": "心筋梗塞既往",
+      "type": "radio",
+      "inline": true,
+      "selector": "なし|あり",
+      "required": true
+    },
+    {
+      "dispname": "悪性腫瘍の合併",
+      "name": "悪性腫瘍",
+      "type": "radio",
+      "inline": true,
+      "selector": "なし|あり",
+      "required": true
+    },
+    {
+      "dispname": "心房細動",
+      "name": "心房細動出血",
+      "type": "radio",
+      "inline": true,
+      "selector": "なし|あり",
+      "required": true
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "血栓リスク_CKDポイント",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{CKD血栓}} === 'なし' ? 0 : 2"
+    },
+    {
+      "name": "血栓リスク_心房細動ポイント",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{心房細動血栓}} === 'あり' ? 2 : 0"
+    },
+    {
+      "name": "血栓リスク_PVDポイント",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{PVD血栓}} === 'あり' ? 2 : 0"
+    },
+    {
+      "name": "血栓リスク_貧血ポイント",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{貧血血栓}} === 'なし' ? 0 : 2"
+    },
+    {
+      "name": "血栓リスク_高齢ポイント",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[年齢]] >= 75 ? 1 : 0"
+    },
+    {
+      "name": "血栓リスク_心不全ポイント",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{心不全血栓}} === 'あり' ? 1 : 0"
+    },
+    {
+      "name": "血栓リスク_糖尿病ポイント",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{糖尿病血栓}} === 'あり' ? 1 : 0"
+    },
+    {
+      "name": "血栓リスク_CTOポイント",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{CTO}} === 'あり' ? 1 : 0"
+    },
+    {
+      "name": "血栓リスクスコア",
+      "type": "eval",
+      "dispname": "血栓リスクスコア",
+      "formula": "[[血栓リスク_CKDポイント]] + [[血栓リスク_心房細動ポイント]] + [[血栓リスク_PVDポイント]] + [[血栓リスク_貧血ポイント]] + [[血栓リスク_高齢ポイント]] + [[血栓リスク_心不全ポイント]] + [[血栓リスク_糖尿病ポイント]] + [[血栓リスク_CTOポイント]]"
+    },
+    {
+      "name": "出血リスク_血小板ポイント",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{血小板減少}} === 'なし' ? 0 : 2"
+    },
+    {
+      "name": "出血リスク_CKDポイント",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{CKD出血}} === 'なし' ? 0 : 2"
+    },
+    {
+      "name": "出血リスク_PVDポイント",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{PVD出血}} === 'あり' ? 2 : 0"
+    },
+    {
+      "name": "出血リスク_心不全ポイント",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{心不全出血}} === 'あり' ? 2 : 0"
+    },
+    {
+      "name": "出血リスク_心筋梗塞ポイント",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{心筋梗塞既往}} === 'あり' ? 1 : 0"
+    },
+    {
+      "name": "出血リスク_悪性腫瘍ポイント",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{悪性腫瘍}} === 'あり' ? 1 : 0"
+    },
+    {
+      "name": "出血リスク_心房細動ポイント",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{心房細動出血}} === 'あり' ? 1 : 0"
+    },
+    {
+      "name": "出血リスクスコア",
+      "type": "eval",
+      "dispname": "出血リスクスコア",
+      "formula": "[[出血リスク_血小板ポイント]] + [[出血リスク_CKDポイント]] + [[出血リスク_PVDポイント]] + [[出血リスク_心不全ポイント]] + [[出血リスク_心筋梗塞ポイント]] + [[出血リスク_悪性腫瘍ポイント]] + [[出血リスク_心房細動ポイント]]"
+    },
+    {
+      "name": "血栓リスク判定",
+      "type": "eval",
+      "dispname": "血栓リスク分類 0-1点:低リスク、2-3点:中リスク、4点以上:高リスク",
+      "formula": "[[血栓リスクスコア]] >= 4 ? '高リスク' : ( [[血栓リスクスコア]] >= 2 ? '中リスク' : '低リスク' )"
+    },
+    {
+      "name": "出血リスク判定",
+      "type": "eval",
+      "dispname": "出血リスク分類 0点:低リスク、1-2点:中リスク、3点以上:高リスク",
+      "formula": "[[出血リスクスコア]] >= 3 ? '高リスク' : ( [[出血リスクスコア]] >= 1 ? '中リスク' : '低リスク' )"
+    },
+    {
+      "name": "Warning: 血栓高リスク",
+      "formula": "[[血栓リスクスコア]] >= 4",
+      "type": "warning"
+    },
+    {
+      "name": "Emergency: 出血高リスク",
+      "formula": "[[出血リスクスコア]] >= 3",
+      "type": "emergency"
+    }
+  ]
+}

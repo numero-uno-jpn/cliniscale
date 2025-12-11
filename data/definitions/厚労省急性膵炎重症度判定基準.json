@@ -1,0 +1,217 @@
+{
+  "_comment": [
+    "厚生労働省急性膵炎重症度判定基準（2008年）",
+    "9項目の予後因子スコアと造影CT Gradeによる判定",
+    "原典：厚生労働省難治性膵疾患に関する調査研究班 2008年",
+    "参考文献：急性膵炎診療ガイドライン2021 第5版",
+    "URL: https://www.suizou.org/APCGL2010/APCGL2021.pdf"
+  ],
+  "title": "厚生労働省急性膵炎重症度判定基準（2008年）",
+  "description": [
+    "急性膵炎の重症度を9項目の予後因子と造影CT所見により評価する基準です。",
+    "発症早期の的確な重症度評価により救命率向上を図ります。"
+  ],
+  "translate": "major",
+  "disable_privacyitems": false,
+  "fields": [
+    {
+      "dispname": "A. 予後因子（各1点）",
+      "type": "subsection"
+    },
+    {
+      "dispname": "予後因子1",
+      "name": "Q1",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "description": "Base Excess≦-3mEq/L、またはショック（収縮期血圧≦80mmHg）"
+    },
+    {
+      "dispname": "予後因子2",
+      "name": "Q2",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "description": "PaO2≦60mmHg（room air）、または呼吸不全（人工呼吸管理が必要）"
+    },
+    {
+      "dispname": "予後因子3",
+      "name": "Q3",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "description": "BUN≧40mg/dL（or Cr≧2mg/dL）、または乏尿（輸液後も1日尿量が400mL以下）"
+    },
+    {
+      "dispname": "予後因子4",
+      "name": "Q4",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "description": "LDH≧基準値上限の2倍"
+    },
+    {
+      "dispname": "予後因子5",
+      "name": "Q5",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "description": "血小板数≦10万/mm3"
+    },
+    {
+      "dispname": "予後因子6",
+      "name": "Q6",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "description": "総Ca≦7.5mg/dL"
+    },
+    {
+      "dispname": "予後因子7",
+      "name": "Q7",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "description": "CRP≧15mg/dL"
+    },
+    {
+      "dispname": "予後因子8",
+      "name": "Q8",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "description": "SIRS診断基準における陽性項目数≧3"
+    },
+    {
+      "dispname": "予後因子9",
+      "name": "Q9",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "description": "年齢≧70歳"
+    },
+    {
+      "type": "separator"
+    },
+    {
+      "dispname": "B. 造影CT Grade",
+      "type": "subsection"
+    },
+    {
+      "dispname": "炎症の膵外進展度",
+      "name": "膵外進展",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "前腎傍腔",
+        "結腸間膜根部",
+        "腎下極以遠"
+      ],
+      "selectoridx": "0|1|2",
+      "description": "CTにおける炎症の波及範囲を評価してください"
+    },
+    {
+      "dispname": "膵の造影不良域",
+      "name": "造影不良域",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "各区域に限局している場合、または膵の周辺のみの場合",
+        "2つの区域にかかる場合",
+        "2つの区域全体を占める、またはそれ以上の場合"
+      ],
+      "selectoridx": "0|1|2",
+      "description": "膵を3つの区域（膵頭部、膵体部、膵尾部）に分けて判定してください"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "予後因子合計",
+      "type": "eval",
+      "formula": "[[Q1.index]] + [[Q2.index]] + [[Q3.index]] + [[Q4.index]] + [[Q5.index]] + [[Q6.index]] + [[Q7.index]] + [[Q8.index]] + [[Q9.index]]",
+      "dispname": "9項目の予後因子の合計点数"
+    },
+    {
+      "name": "CT Grade合計",
+      "type": "eval",
+      "formula": "[[膵外進展.index]] + [[造影不良域.index]]",
+      "dispname": "造影CT Gradeの合計点数"
+    },
+    {
+      "name": "CT Grade判定",
+      "type": "eval",
+      "formula": "[[CT Grade合計]] <= 1 ? 'Grade 1' : ( [[CT Grade合計]] == 2 ? 'Grade 2' : 'Grade 3' )",
+      "dispname": "造影CT Gradeの分類"
+    },
+    {
+      "name": "予後因子による重症度",
+      "type": "eval",
+      "formula": "[[予後因子合計]] >= 3 ? '重症' : '軽症'",
+      "dispname": "予後因子スコアによる重症度判定"
+    },
+    {
+      "name": "CT Gradeによる重症度",
+      "type": "eval",
+      "formula": "[[CT Grade合計]] >= 2 ? '重症' : '軽症'",
+      "dispname": "造影CT Gradeによる重症度判定"
+    },
+    {
+      "name": "最終重症度判定",
+      "type": "eval",
+      "formula": "[[予後因子合計]] >= 3 || [[CT Grade合計]] >= 2 ? '重症' : '軽症'",
+      "dispname": "最終的な重症度判定（予後因子3点以上またはCT Grade 2以上で重症）"
+    },
+    {
+      "name": "Warning: 予後因子3点以上",
+      "formula": "[[予後因子合計]] >= 3",
+      "type": "warning"
+    },
+    {
+      "name": "Warning: CT Grade 2以上",
+      "formula": "[[CT Grade合計]] >= 2",
+      "type": "warning"
+    },
+    {
+      "name": "Emergency: 重症急性膵炎",
+      "formula": "[[予後因子合計]] >= 3 || [[CT Grade合計]] >= 2",
+      "type": "emergency"
+    }
+  ]
+}

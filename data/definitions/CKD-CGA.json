@@ -1,0 +1,271 @@
+{
+    "_comment": [
+        "CKD-CGA分類問診票（修正版）",
+        "慢性腎臓病（CKD）の重症度分類システム",
+        "原疾患（Cause）、腎機能（GFR）、蛋白尿・アルブミン尿（Albuminuria）の3要素で評価",
+        "参考文献：日本腎臓学会編 エビデンスに基づくCKD診療ガイドライン2023",
+        "参考URL：https://jsn.or.jp/medic/guideline/",
+        "修正項目：eGFR計算式、蛋白尿基準値、技術仕様準拠"
+    ],
+    "title": "CKD-CGA 慢性腎臓病の重症度分類",
+    "description": [
+        "<h3>慢性腎臓病（CKD）重症度分類評価</h3>",
+        "本問診票は、慢性腎臓病の重症度をCGA分類（原疾患-腎機能-蛋白尿）で評価するものです。",
+        "血液検査結果と尿検査結果をご記入ください。"
+    ],
+    "submit_button_title": "評価結果を送信",
+    "fields": [
+        {
+            "dispname": "基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "年齢",
+            "name": "年齢",
+            "type": "text",
+            "postfix": "歳",
+            "inputmode": "numeric",
+            "testrange": [
+                20,
+                90
+            ],
+            "required": true,
+            "description": "満年齢をご記入ください"
+        },
+        {
+            "dispname": "性別",
+            "name": "性別",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "男性|女性"
+        },
+        {
+            "dispname": "体重",
+            "name": "体重",
+            "type": "text",
+            "inputmode": "numeric",
+            "postfix": "kg",
+            "required": true
+        },
+        {
+            "dispname": "身長",
+            "name": "身長",
+            "type": "text",
+            "inputmode": "numeric",
+            "postfix": "cm",
+            "required": true
+        },
+        {
+            "dispname": "原疾患（Cause）評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "糖尿病の診断を受けていますか",
+            "name": "糖尿病診断",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "はい|いいえ"
+        },
+        {
+            "dispname": "糖尿病の病歴年数",
+            "name": "糖尿病年数",
+            "type": "text",
+            "inputmode": "numeric",
+            "postfix": "年",
+            "parentname": "糖尿病診断",
+            "parentsel": "はい",
+            "description": "糖尿病と診断されてからの年数"
+        },
+        {
+            "dispname": "高血圧の診断を受けていますか",
+            "name": "高血圧診断",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "はい|いいえ"
+        },
+        {
+            "dispname": "腎疾患の既往歴がありますか",
+            "name": "腎疾患既往",
+            "type": "checkbox",
+            "selector": [
+                "IgA腎症",
+                "慢性糸球体腎炎",
+                "多発性嚢胞腎",
+                "腎硬化症",
+                "その他"
+            ]
+        },
+        {
+            "dispname": "その他の腎疾患",
+            "name": "その他腎疾患",
+            "type": "text",
+            "parentname": "腎疾患既往",
+            "parentsel": "その他",
+            "description": "具体的な疾患名をご記入ください"
+        },
+        {
+            "dispname": "腎機能（GFR）評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "血清クレアチニン値",
+            "name": "血清クレアチニン",
+            "type": "text",
+            "inputmode": "numeric",
+            "postfix": "mg/dL",
+            "testrange": [
+                0.5,
+                3.0
+            ],
+            "required": true,
+            "description": "最新の血液検査結果をご記入ください"
+        },
+        {
+            "dispname": "推算糸球体濾過量（eGFR）",
+            "name": "eGFR",
+            "type": "eval",
+            "formula": "( {{性別}} == '男性' ? ( 194 * ( ((血清クレアチニン)) ** (-1.094)) * ([[年齢]] ** (-0.287)) ) : ( 194 * ( ((血清クレアチニン)) ** (-1.094)) * ([[年齢]] ** (-0.287)) * 0.739 ) ).toFixed(2)",
+            "description": "血清クレアチニン値、年齢、性別から自動計算されます（単位：mL/分/1.73m²）"
+        },
+        {
+            "dispname": "GFR区分",
+            "name": "GFR区分",
+            "type": "eval",
+            "formula": "((eGFR)) >= 90 ? 'G1（正常または高値）' : ( ((eGFR)) >= 60 ? 'G2（正常または軽度低下）' : ( ((eGFR)) >= 45 ? 'G3a（軽度〜中等度低下）' : ( ((eGFR)) >= 30 ? 'G3b（中等度〜高度低下）' : ( ((eGFR)) >= 15 ? 'G4（高度低下）' : 'G5（末期腎不全）' ) ) ) )",
+            "description": "eGFR値に基づく腎機能区分"
+        },
+        {
+            "dispname": "蛋白尿・アルブミン尿（Albuminuria）評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "尿検査の方法",
+            "name": "尿検査方法",
+            "type": "radio",
+            "required": true,
+            "selector": "尿蛋白/クレアチニン比|尿アルブミン/クレアチニン比|24時間蓄尿|試験紙法のみ",
+            "description": "実施された尿検査の種類を選択してください"
+        },
+        {
+            "dispname": "尿蛋白/クレアチニン比",
+            "name": "尿蛋白クレアチニン比",
+            "type": "text",
+            "postfix": "g/gCr",
+            "inputmode": "numeric",
+            "parentname": "尿検査方法",
+            "parentsel": "尿蛋白/クレアチニン比",
+            "required": true,
+            "description": "検査結果をご記入ください"
+        },
+        {
+            "dispname": "尿アルブミン/クレアチニン比",
+            "name": "尿アルブミン比",
+            "type": "text",
+            "postfix": "mg/gCr",
+            "inputmode": "numeric",
+            "parentname": "尿検査方法",
+            "parentsel": "尿アルブミン/クレアチニン比",
+            "required": true,
+            "description": "検査結果をご記入ください"
+        },
+        {
+            "dispname": "24時間尿蛋白量",
+            "name": "24時間尿蛋白",
+            "type": "text",
+            "postfix": "g/日",
+            "inputmode": "numeric",
+            "parentname": "尿検査方法",
+            "parentsel": "24時間蓄尿",
+            "required": true,
+            "description": "24時間蓄尿による蛋白量"
+        },
+        {
+            "dispname": "尿蛋白定性検査結果",
+            "name": "尿蛋白定性",
+            "type": "radio",
+            "inline": true,
+            "parentname": "尿検査方法",
+            "parentsel": "試験紙法のみ",
+            "required": true,
+            "selector": "陰性|±|1+|2+|3+|4+"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "_尿蛋白クレアチニン比",
+            "type": "eval",
+            "formula": "((尿蛋白クレアチニン比))",
+            "noreport": true
+        },
+        {
+            "name": "_尿アルブミン比",
+            "type": "eval",
+            "formula": "((尿アルブミン比))",
+            "noreport": true
+        },
+        {
+            "name": "_24時間尿蛋白",
+            "type": "eval",
+            "formula": "((24時間尿蛋白))",
+            "noreport": true
+        },
+        {
+            "dispname": "蛋白尿区分（糖尿病の場合）",
+            "name": "蛋白尿区分糖尿病",
+            "type": "eval",
+            "formula": "{{糖尿病診断}} == 'はい' ? ( {{尿検査方法}} == '尿アルブミン/クレアチニン比' ? ( ((_尿アルブミン比)) < 30 ? 'A1（正常〜軽度増加）' : ( ((_尿アルブミン比)) < 300 ? 'A2（中等度増加）' : 'A3（高度増加）' ) ) : ( {{尿検査方法}} == '尿蛋白/クレアチニン比' ? ( ((_尿蛋白クレアチニン比)) < 0.15 ? 'A1（正常〜軽度増加）' : ( ((_尿蛋白クレアチニン比)) < 0.50 ? 'A2（中等度増加）' : 'A3（高度増加）' ) ) : ( {{尿検査方法}} == '24時間蓄尿' ? ( ((_24時間尿蛋白)) < 0.15 ? 'A1（正常〜軽度増加）' : ( ((_24時間尿蛋白)) < 0.50 ? 'A2（中等度増加）' : 'A3（高度増加）' ) ) : '定性検査のため詳細区分不可' ) ) ) : ''",
+            "noreport": true
+        },
+        {
+            "dispname": "蛋白尿区分（非糖尿病の場合）",
+            "name": "蛋白尿区分非糖尿病",
+            "type": "eval",
+            "formula": "{{糖尿病診断}} == 'いいえ' ? ( {{尿検査方法}} == '尿蛋白/クレアチニン比' ? ( ((_尿蛋白クレアチニン比)) < 0.15 ? 'A1（正常〜軽度増加）' : ( ((_尿蛋白クレアチニン比)) < 0.50 ? 'A2（中等度増加）' : 'A3（高度増加）' ) ) : ( {{尿検査方法}} == '24時間蓄尿' ? ( ((_24時間尿蛋白)) < 0.15 ? 'A1（正常〜軽度増加）' : ( ((_24時間尿蛋白)) < 0.50 ? 'A2（中等度増加）' : 'A3（高度増加）' ) ) : ( {{尿検査方法}} == '尿アルブミン/クレアチニン比' ? ( ((_尿アルブミン比)) < 30 ? 'A1（正常〜軽度増加）' : ( ((_尿アルブミン比)) < 300 ? 'A2（中等度増加）' : 'A3（高度増加）' ) ) : '定性検査のため詳細区分不可' ) ) ) : ''",
+            "noreport": true
+        },
+        {
+            "dispname": "蛋白尿区分",
+            "name": "蛋白尿区分",
+            "type": "eval",
+            "formula": "{{糖尿病診断}} == 'はい' ? {{蛋白尿区分糖尿病}} : {{蛋白尿区分非糖尿病}}",
+            "description": "糖尿病の有無に応じた蛋白尿区分"
+        },
+        {
+            "name": "原疾患分類",
+            "type": "eval",
+            "formula": "{{糖尿病診断}} == 'はい' ? '糖尿病' : '非糖尿病'"
+        },
+        {
+            "dispname": "CKD診断 (eGFR 60未満または蛋白尿陽性でCKDと診断)",
+            "name": "CKD診断",
+            "type": "eval",
+            "formula": "( ((eGFR)) < 60 ) || ( {{蛋白尿区分}} != 'A1（正常〜軽度増加）' ) ? 'CKDあり' : 'CKDなし'"
+        },
+        {
+            "dispname": "CGA分類表記",
+            "name": "CGA分類",
+            "type": "eval",
+            "formula": "{{CKD診断}} == 'CKDあり' ? ( {{原疾患分類}} + ' ' + {{GFR区分}}.split('（')[0] + {{蛋白尿区分}}.split('（')[0] ) : 'CKDなし'"
+        },
+        {
+            "dispname": "重症度評価",
+            "name": "重症度評価",
+            "type": "eval",
+            "formula": "{{CKD診断}} == 'CKDなし' ? '正常' : ( {{GFR区分}}.includes('G5') ? '最重症' : ( {{GFR区分}}.includes('G4') ? '重症' : ( {{GFR区分}}.includes('G3b') ? '中等症' : ( {{蛋白尿区分}}.includes('A3') ? '中等症' : '軽症' ) ) ) )"
+        },
+        {
+            "name": "Warning: 中等度リスク",
+            "formula": "{{蛋白尿区分}}.includes('A2') && ( ((eGFR)) < 60 )",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 高リスク",
+            "formula": "{{蛋白尿区分}}.includes('A3') || ( ((eGFR)) < 30 )",
+            "type": "emergency"
+        }
+    ]
+}

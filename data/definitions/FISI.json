@@ -1,0 +1,93 @@
+{
+  "_comment": [
+    "Fecal Incontinence Severity Index (FISI) - 修正版",
+    "原著論文: Rockwood TH, et al. Dis Colon Rectum. 1999;42(12):1525-32.",
+    "患者版スコアリングテーブル（Table 1）を使用",
+    "スコア範囲: 0-61点",
+    "頻度を6段階に修正し、原著論文のスコアリングに準拠",
+    "参考URL: https://eprovide.mapi-trust.org/instruments/fecal-incontinence-severity-index"
+  ],
+  "title": "便失禁重症度指数（FISI）",
+  "description": [
+    "便失禁の重症度を評価する指数です",
+    "失禁の種類と頻度から0-61点で重症度を算出します"
+  ],
+  "contact": "外科、消化器科",
+  "dept_in_charge": "外科",
+  "fields": [
+    {
+      "dispname": "ガスの失禁頻度",
+      "name": "ガス",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "月1〜3回",
+        "週1回",
+        "週2回以上",
+        "1日1回",
+        "1日2回以上"
+      ],
+      "selectoridx": "0|4|6|8|11|12"
+    },
+    {
+      "dispname": "粘液の失禁頻度",
+      "name": "粘液",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "月1〜3回",
+        "週1回",
+        "週2回以上",
+        "1日1回",
+        "1日2回以上"
+      ],
+      "selectoridx": "0|3|5|7|10|12"
+    },
+    {
+      "dispname": "液状便の失禁頻度",
+      "name": "液状便",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "月1〜3回",
+        "週1回",
+        "週2回以上",
+        "1日1回",
+        "1日2回以上"
+      ],
+      "selectoridx": "0|8|10|13|17|19"
+    },
+    {
+      "dispname": "固形便の失禁頻度",
+      "name": "固形便",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "月1〜3回",
+        "週1回",
+        "週2回以上",
+        "1日1回",
+        "1日2回以上"
+      ],
+      "selectoridx": "0|8|10|13|16|18"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "FISIスコア",
+      "type": "eval",
+      "formula": "[[ガス.index]] + [[粘液.index]] + [[液状便.index]] + [[固形便.index]]"
+    },
+    {
+      "name": "重症度評価",
+      "type": "eval",
+      "description": "便失禁の重症度（スコアが高いほど重症）",
+      "formula": "[[FISIスコア]] == 0 ? '失禁なし' : ( [[FISIスコア]] < 30 ? '軽度〜中等度（スコア: ' + [[FISIスコア]] + '点）' : '重度 - QOL低下リスク高（スコア: ' + [[FISIスコア]] + '点）' )"
+    }
+  ]
+}

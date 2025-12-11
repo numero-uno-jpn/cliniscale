@@ -1,0 +1,196 @@
+{
+  "_comment": [
+    "PNH(発作性夜間ヘモグロビン尿症)重症度分類問診票",
+    "参考資料: 発作性夜間ヘモグロビン尿症診療の参照ガイド 令和4年度改訂版",
+    "厚生労働科学研究費補助金難治性疾患政策研究事業",
+    "URL: http://zoketsushogaihan.umin.jp/file/2022/Paroxysmal_nocturnal_hemoglobinuria2022.pdf",
+    "注: LDH正常上限値は施設により異なります(一般的に120-240 U/L程度)",
+    "本問診票では222 U/Lを基準としていますが、各施設の正常上限値に応じて評価式の調整が必要です"
+  ],
+  "title": "PNH 発作性夜間ヘモグロビン尿症重症度分類",
+  "description": [
+    "発作性夜間ヘモグロビン尿症(PNH)の重症度を評価する問診票です。",
+    "溶血所見に基づいた重症度分類により、軽症・中等症・重症に分類します。"
+  ],
+  "contact": "血液内科担当医",
+  "dept_in_charge": "血液内科",
+  "responsible_person": [
+    "血液内科医師"
+  ],
+  "staffs": [
+    "血液内科医師",
+    "看護師"
+  ],
+  "submit_button_title": "評価結果を送信",
+  "mail_notification": true,
+  "fields": [
+    {
+      "dispname": "溶血の評価",
+      "type": "subsection"
+    },
+    {
+      "dispname": "血清LDH値",
+      "name": "LDH値",
+      "type": "text",
+      "postfix": "U/L",
+      "inputmode": "decimal",
+      "testrange": [
+        100,
+        2500
+      ],
+      "required": true,
+      "description": "血清LDH値を入力してください。正常上限値は施設により異なります（一般的に120-240 U/L程度）。本評価では222 U/Lを正常上限として計算します。"
+    },
+    {
+      "dispname": "溶血発作の頻度",
+      "name": "溶血発作頻度",
+      "type": "radio",
+      "selector": [
+        "なし",
+        "時々（年に1-2回程度）",
+        "頻回（年に3回以上）"
+      ],
+      "selectoridx": "0|1|2",
+      "required": true,
+      "description": "溶血発作とは肉眼的ヘモグロビン尿を認める状態を指します"
+    },
+    {
+      "dispname": "肉眼的ヘモグロビン尿の状況",
+      "name": "ヘモグロビン尿",
+      "type": "radio",
+      "selector": [
+        "なし",
+        "時々認める",
+        "恒常的に認める"
+      ],
+      "selectoridx": "0|1|2",
+      "required": true
+    },
+    {
+      "dispname": "輸血の必要性",
+      "name": "輸血必要性",
+      "type": "radio",
+      "selector": [
+        "不要",
+        "時々必要",
+        "定期的な輸血が必要"
+      ],
+      "selectoridx": "0|1|2",
+      "required": true,
+      "description": "定期的な赤血球輸血とは毎月2単位以上の輸血が必要なときを指します"
+    },
+    {
+      "dispname": "合併症の評価",
+      "type": "subsection"
+    },
+    {
+      "dispname": "血栓症またはその既往",
+      "name": "血栓症",
+      "type": "radio",
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "selectoridx": "0|1",
+      "required": true
+    },
+    {
+      "dispname": "妊娠の有無",
+      "name": "妊娠",
+      "type": "radio",
+      "selector": [
+        "該当しない",
+        "妊娠中"
+      ],
+      "selectoridx": "0|1",
+      "required": true,
+      "description": "妊娠は溶血発作、血栓症のリスクを高めるため重症として扱います"
+    },
+    {
+      "dispname": "透析が必要な腎障害",
+      "name": "透析必要腎障害",
+      "type": "radio",
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "selectoridx": "0|1",
+      "required": true
+    },
+    {
+      "dispname": "平滑筋調節障害による症状",
+      "name": "平滑筋障害",
+      "type": "radio",
+      "selector": [
+        "なし",
+        "軽度（日常生活可能）",
+        "重度（入院を必要とする）"
+      ],
+      "selectoridx": "0|1|2",
+      "required": true,
+      "description": "胸腹部痛や嚥下障害（嚥下痛、嚥下困難）、男性機能不全など"
+    },
+    {
+      "dispname": "肺高血圧症",
+      "name": "肺高血圧症",
+      "type": "radio",
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "selectoridx": "0|1",
+      "required": true,
+      "description": "右心カテーテル検査にて安静仰臥位での平均肺動脈圧が25mmHg以上"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "LDH評価",
+      "type": "eval",
+      "dispname": "血清LDH値の評価（正常上限222 U/L基準）",
+      "formula": "((LDH値)) <= 333 ? '正常範囲' : ((LDH値)) <= 666 ? '軽度上昇（1.5-3倍）' : ((LDH値)) <= 1110 ? '中等度上昇（3-5倍）' : ((LDH値)) <= 1776 ? '5-8倍' : ((LDH値)) <= 2220 ? '高度上昇（8-10倍）' : '著明上昇（10倍以上）'"
+    },
+    {
+      "name": "溶血重症度",
+      "type": "eval",
+      "dispname": "LDH値による溶血の程度評価",
+      "formula": "((LDH値)) >= 1776 ? '高度溶血（8倍以上）' : ((LDH値)) >= 666 ? '中等度溶血（3倍以上）' : '軽度溶血'"
+    },
+    {
+      "name": "中等症判定_溶血",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( ((LDH値)) >= 666 && ((LDH値)) <= 1110 ) || [[溶血発作頻度.index]] == 1 ? 1 : 0"
+    },
+    {
+      "name": "重症判定_溶血",
+      "type": "eval",
+      "noreport": true,
+      "formula": "((LDH値)) >= 1776 || [[ヘモグロビン尿.index]] == 2 || [[溶血発作頻度.index]] == 2 || [[輸血必要性.index]] == 2 ? 1 : 0"
+    },
+    {
+      "name": "重症判定_合併症",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[血栓症.index]] == 1 || [[妊娠.index]] == 1 || [[透析必要腎障害.index]] == 1 || [[平滑筋障害.index]] == 2 || [[肺高血圧症.index]] == 1 ? 1 : 0"
+    },
+    {
+      "name": "重症度分類",
+      "type": "eval",
+      "dispname": "重症度分類",
+      "formula": "[[重症判定_溶血]] == 1 || [[重症判定_合併症]] == 1 ? '重症' : [[中等症判定_溶血]] == 1 ? '中等症' : '軽症'"
+    },
+    {
+      "name": "助成対象",
+      "type": "eval",
+      "dispname": "難病医療費助成対象",
+      "formula": "{{重症度分類}} == '軽症' ? '対象外' : '対象'"
+    },
+    {
+      "name": "Warning: PNH重症度分類が重症",
+      "type": "warning",
+      "formula": "{{重症度分類}} == '重症'"
+    }
+  ]
+}

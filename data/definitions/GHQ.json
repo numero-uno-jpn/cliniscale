@@ -1,0 +1,203 @@
+{
+    "_comment": [
+        "GHQ精神健康調査票12項目版（GHQ-12）",
+        "原著者: David Goldberg",
+        "日本版作成者: 中川泰彬、大坊郁夫",
+        "参考文献: Goldberg, D. P. (1972). The detection of psychiatric illness by questionnaire.",
+        "日本文化科学社版およびWHO版に準拠",
+        "4段階評価、2-3週間前から現在までの精神的・身体的健康状態を評価",
+        "ポジティブ項目（1,3,4,7,8,12）とネガティブ項目（2,5,6,9,10,11）で逆転スコアリング",
+        "スコア: リカート方式0-36点、GHQ方式0-12点",
+        "カットオフ値: GHQ方式2/3点以上で精神的問題の可能性あり",
+        "https://www.nichibun.co.jp/seek/kensa/ghq.html",
+        "https://www.chibatc.co.jp/cgi/web/index.cgi?c=catalogue-zoom&pk=149"
+    ],
+    "title": "GHQ 精神健康調査票 12項目版",
+    "description": [
+        "この調査票は、あなたの最近2〜3週間の健康状態についてお尋ねするものです。",
+        "各質問について、最近のあなたの状態に最もあてはまるものを1つ選んでください。"
+    ],
+    "responsible_person": [
+        "担当医師"
+    ],
+    "dept_in_charge": "精神科・心療内科",
+    "fields": [
+        {
+            "name": "concentration",
+            "type": "radio",
+            "dispname": "最近、やっていることに集中できましたか",
+            "required": true,
+            "selector": [
+                "いつもより良くできた",
+                "いつも通りにできた",
+                "いつもよりできなかった",
+                "全然できなかった"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "sleep_problems",
+            "type": "radio",
+            "dispname": "最近、心配事があって、よく眠れないことがありましたか",
+            "required": true,
+            "selector": [
+                "全然なかった",
+                "いつもより少なかった",
+                "いつもより多かった",
+                "非常に多かった"
+            ],
+            "selectoridx": "3|2|1|0"
+        },
+        {
+            "name": "useful_role",
+            "type": "radio",
+            "dispname": "最近、自分が役に立つ人間だと思えましたか",
+            "required": true,
+            "selector": [
+                "いつもより多く思えた",
+                "いつも通りに思えた",
+                "いつもより少なかった",
+                "全然思えなかった"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "decision_making",
+            "type": "radio",
+            "dispname": "最近、物事を決めることができましたか",
+            "required": true,
+            "selector": [
+                "いつもより早くできた",
+                "いつも通りにできた",
+                "いつもより時間がかかった",
+                "全然できなかった"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "stress_strain",
+            "type": "radio",
+            "dispname": "最近、いつも緊張して、イライラしていましたか",
+            "required": true,
+            "selector": [
+                "全然なかった",
+                "いつもより少なかった",
+                "いつもより多かった",
+                "非常に多かった"
+            ],
+            "selectoridx": "3|2|1|0"
+        },
+        {
+            "name": "overcome_difficulties",
+            "type": "radio",
+            "dispname": "最近、困難を乗り越えられないと感じることがありましたか",
+            "required": true,
+            "selector": [
+                "全然なかった",
+                "いつもより少なかった",
+                "いつもより多かった",
+                "非常に多かった"
+            ],
+            "selectoridx": "3|2|1|0"
+        },
+        {
+            "name": "enjoy_activities",
+            "type": "radio",
+            "dispname": "最近、日常の活動を楽しめましたか",
+            "required": true,
+            "selector": [
+                "いつもより多く楽しめた",
+                "いつも通りに楽しめた",
+                "いつもより少なかった",
+                "全然楽しめなかった"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "face_problems",
+            "type": "radio",
+            "dispname": "最近、問題に立ち向かえましたか",
+            "required": true,
+            "selector": [
+                "いつもより良くできた",
+                "いつも通りにできた",
+                "いつもよりできなかった",
+                "全然できなかった"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "unhappy_depressed",
+            "type": "radio",
+            "dispname": "最近、不幸だとか憂うつだと感じましたか",
+            "required": true,
+            "selector": [
+                "全然なかった",
+                "いつもより少なかった",
+                "いつもより多かった",
+                "非常に多かった"
+            ],
+            "selectoridx": "3|2|1|0"
+        },
+        {
+            "name": "confidence",
+            "type": "radio",
+            "dispname": "最近、自分に自信を失いましたか",
+            "required": true,
+            "selector": [
+                "全然なかった",
+                "いつもより少なかった",
+                "いつもより多かった",
+                "非常に多かった"
+            ],
+            "selectoridx": "3|2|1|0"
+        },
+        {
+            "name": "worthless",
+            "type": "radio",
+            "dispname": "最近、自分を価値のない人間だと思いましたか",
+            "required": true,
+            "selector": [
+                "全然思わなかった",
+                "いつもより少なかった",
+                "いつもより多かった",
+                "非常に多かった"
+            ],
+            "selectoridx": "3|2|1|0"
+        },
+        {
+            "name": "general_happiness",
+            "type": "radio",
+            "dispname": "最近、幸福だと感じましたか",
+            "required": true,
+            "selector": [
+                "いつもより多く感じた",
+                "いつも通りに感じた",
+                "いつもより少なかった",
+                "全然感じなかった"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "total_score",
+            "type": "eval",
+            "dispname": "GHQ-12合計得点（リカート方式 0-36点）",
+            "formula": "[[concentration.index]] + [[sleep_problems.index]] + [[useful_role.index]] + [[decision_making.index]] + [[stress_strain.index]] + [[overcome_difficulties.index]] + [[enjoy_activities.index]] + [[face_problems.index]] + [[unhappy_depressed.index]] + [[confidence.index]] + [[worthless.index]] + [[general_happiness.index]]"
+        },
+        {
+            "name": "ghq_score",
+            "type": "eval",
+            "dispname": "GHQ-12合計得点（GHQ採点方式 0-12点）",
+            "formula": "( [[concentration.index]] >= 2 ? 1 : 0 ) + ( [[sleep_problems.index]] >= 2 ? 1 : 0 ) + ( [[useful_role.index]] >= 2 ? 1 : 0 ) + ( [[decision_making.index]] >= 2 ? 1 : 0 ) + ( [[stress_strain.index]] >= 2 ? 1 : 0 ) + ( [[overcome_difficulties.index]] >= 2 ? 1 : 0 ) + ( [[enjoy_activities.index]] >= 2 ? 1 : 0 ) + ( [[face_problems.index]] >= 2 ? 1 : 0 ) + ( [[unhappy_depressed.index]] >= 2 ? 1 : 0 ) + ( [[confidence.index]] >= 2 ? 1 : 0 ) + ( [[worthless.index]] >= 2 ? 1 : 0 ) + ( [[general_happiness.index]] >= 2 ? 1 : 0 )"
+        },
+        {
+            "name": "severity_assessment",
+            "type": "eval",
+            "dispname": "重症度評価",
+            "formula": "[[ghq_score]] >= 4 ? '中等度以上の精神的問題の可能性あり（要詳細評価）' : [[ghq_score]] >= 2 ? '軽度の精神的問題の可能性あり' : '正常範囲'"
+        }
+    ]
+}

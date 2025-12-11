@@ -1,0 +1,203 @@
+{
+    "_comment": [
+        "Model for End-Stage Liver Disease (MELD) 3.0 スコア",
+        "2023年7月13日よりUNOS/OPTNで公式採用されたMELD 3.0に対応",
+        "原典: Kim WR, et al. MELD 3.0: The Model for End-Stage Liver Disease Updated for the Modern Era. Gastroenterology. 2021;161:1887-95.",
+        "公式URL: https://optn.transplant.hrsa.gov/data/allocation-calculators/meld-calculator/",
+        "計算式: 1.33×(Female) + 4.56×ln(bilirubin) + 0.82×(137-sodium) - 0.24×(137-sodium)×ln(bilirubin) + 9.09×ln(INR) + 11.14×ln(creatinine) + 1.85×(3.5-albumin) - 1.83×(3.5-albumin)×ln(creatinine) + 6"
+    ],
+    "title": "MELD 3.0 (Model for End-Stage Liver Disease) 末期肝疾患モデルスコア",
+    "description": [
+        "末期肝疾患の重症度評価および肝移植優先度決定に使用される最新のスコアです。",
+        "2023年7月より性別とアルブミン値を含む新しい計算式（MELD 3.0）が導入されました。",
+        "18歳以上の成人が対象で、3ヶ月生存率の予測に有用です。"
+    ],
+    "contact": "消化器内科・肝臓専門医",
+    "dept_in_charge": "消化器内科",
+    "submit_button_title": "MELD 3.0 スコアを計算",
+    "fields": [
+        {
+            "dispname": "基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "年齢",
+            "name": "年齢",
+            "type": "text",
+            "inputmode": "numeric",
+            "postfix": "歳",
+            "testrange": [
+                18,
+                100
+            ],
+            "required": true,
+            "description": "MELD 3.0は18歳以上が対象です。半角数字で入力してください（例: 65）"
+        },
+        {
+            "dispname": "性別（MELD計算用）",
+            "name": "性別",
+            "type": "radio",
+            "inline": true,
+            "selector": "男性|女性",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "MELD 3.0計算に使用する性別を選択してください"
+        },
+        {
+            "dispname": "血液検査値",
+            "type": "subsection"
+        },
+        {
+            "dispname": "総ビリルビン値",
+            "name": "総ビリルビン",
+            "type": "text",
+            "inputmode": "decimal",
+            "postfix": "mg/dL",
+            "testrange": [
+                0.3,
+                30
+            ],
+            "required": true,
+            "description": "総ビリルビン値を半角数字で入力してください（例: 2.5）。最小値1.0として計算されます"
+        },
+        {
+            "dispname": "INR",
+            "name": "INR",
+            "type": "text",
+            "inputmode": "decimal",
+            "testrange": [
+                0.8,
+                5
+            ],
+            "required": true,
+            "description": "プロトロンビン時間の国際標準化比を半角数字で入力してください（例: 1.3）。最小値1.0として計算されます"
+        },
+        {
+            "dispname": "血清クレアチニン値",
+            "name": "クレアチニン",
+            "type": "text",
+            "inputmode": "decimal",
+            "postfix": "mg/dL",
+            "testrange": [
+                0.5,
+                8
+            ],
+            "required": true,
+            "description": "血清クレアチニン値を半角数字で入力してください（例: 1.2）。上限3.0mg/dLとして計算されます"
+        },
+        {
+            "dispname": "血清アルブミン値",
+            "name": "アルブミン",
+            "type": "text",
+            "inputmode": "decimal",
+            "postfix": "g/dL",
+            "testrange": [
+                1.5,
+                4.5
+            ],
+            "required": true,
+            "description": "血清アルブミン値を半角数字で入力してください（例: 3.2）。計算範囲1.5-3.5g/dL"
+        },
+        {
+            "dispname": "血清ナトリウム値",
+            "name": "ナトリウム",
+            "type": "text",
+            "inputmode": "numeric",
+            "postfix": "mEq/L",
+            "testrange": [
+                120,
+                145
+            ],
+            "required": true,
+            "description": "血清ナトリウム値を半角数字で入力してください（例: 135）。計算範囲125-137mEq/L"
+        },
+        {
+            "dispname": "透析歴",
+            "name": "透析",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|過去7日以内に2回以上の透析あり",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "過去7日以内に血液透析を2回以上実施した場合は「あり」を選択"
+        },
+        {
+            "dispname": "結果の解釈",
+            "type": "note",
+            "description": "**MELD 3.0スコアの意義（2023年版）:**\n\n- 6-9: 軽度の肝機能障害\n- 10-14: 軽度-中等度の肝機能障害\n- 15-19: 中等度の肝機能障害、肝移植検討\n- 20-24: 重篤な肝機能障害\n- 25-29: 非常に重篤な肝機能障害\n- 30以上: 移植緊急適応\n\n**MELD 3.0の特徴:**\n- 性別による補正で女性のアクセス改善\n- アルブミン値による栄養状態反映\n- ナトリウムとの相互作用項で精度向上\n\n**注意事項:**\n- スコアが15以上で肝移植の検討が推奨されます\n- 透析患者ではクレアチニン値は3.0mg/dLとして計算されます\n- 18歳以上が対象、17歳以下はPELD Creatinineを使用"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "女性フラグ",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[性別.index]]"
+        },
+        {
+            "name": "ビリルビン調整値",
+            "type": "eval",
+            "noreport": true,
+            "formula": "Math.max(1.0, ((総ビリルビン)) )"
+        },
+        {
+            "name": "INR調整値",
+            "type": "eval",
+            "noreport": true,
+            "formula": "Math.max(1.0, ((INR)) )"
+        },
+        {
+            "name": "クレアチニン調整値",
+            "type": "eval",
+            "noreport": true,
+            "formula": "{{透析}} == 'なし' ? Math.min(3.0, Math.max(1.0, ((クレアチニン)) ) ) : 3.0"
+        },
+        {
+            "name": "アルブミン調整値",
+            "type": "eval",
+            "noreport": true,
+            "formula": "Math.min(3.5, Math.max(1.5, ((アルブミン)) ) )"
+        },
+        {
+            "name": "ナトリウム調整値",
+            "type": "eval",
+            "noreport": true,
+            "formula": "Math.min(137, Math.max(125, ((ナトリウム)) ) )"
+        },
+        {
+            "dispname": "MELD 3.0 スコア",
+            "name": "MELD30スコア",
+            "type": "eval",
+            "formula": "Math.round( 1.33 * ((女性フラグ)) + 4.56 * Math.log( ((ビリルビン調整値)) ) + 0.82 * ( 137 - ((ナトリウム調整値)) ) - 0.24 * ( 137 - ((ナトリウム調整値)) ) * Math.log( ((ビリルビン調整値)) ) + 9.09 * Math.log( ((INR調整値)) ) + 11.14 * Math.log( ((クレアチニン調整値)) ) + 1.85 * ( 3.5 - ((アルブミン調整値)) ) - 1.83 * ( 3.5 - ((アルブミン調整値)) ) * Math.log( ((クレアチニン調整値)) ) + 6 )"
+        },
+        {
+            "dispname": "MELD 3.0スコア（6-40範囲）",
+            "name": "MELD30表示",
+            "type": "eval",
+            "formula": "Math.max(6, Math.min(40, ((MELD30スコア)) ) )"
+        },
+        {
+            "dispname": "重症度評価",
+            "name": "重症度",
+            "type": "eval",
+            "formula": "( ((MELD30表示)) >= 30 ? '非常に重篤（移植緊急適応）' : ( ((MELD30表示)) >= 20 ? '重篤' : ( ((MELD30表示)) >= 15 ? '中等度（移植検討）' : ( ((MELD30表示)) >= 10 ? '軽度-中等度' : '軽度' ) ) ) )"
+        },
+        {
+            "dispname": "3ヶ月死亡率推定（MELD 3.0基準）",
+            "name": "死亡率",
+            "type": "eval",
+            "formula": "( ((MELD30表示)) >= 30 ? '40%以上' : ( ((MELD30表示)) >= 25 ? '25-40%' : ( ((MELD30表示)) >= 20 ? '10-25%' : ( ((MELD30表示)) >= 15 ? '5-10%' : ( ((MELD30表示)) >= 10 ? '2-5%' : '2%未満' ) ) ) ) )"
+        },
+        {
+            "name": "Warning: 重篤な肝機能障害が疑われます（MELD 3.0スコア≥20）",
+            "type": "warning",
+            "formula": "((MELD30表示)) >= 20"
+        },
+        {
+            "name": "Emergency: 緊急の肝移植適応が考慮されます（MELD 3.0スコア≥30）",
+            "type": "emergency",
+            "formula": "((MELD30表示)) >= 30"
+        }
+    ]
+}

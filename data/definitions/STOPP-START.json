@@ -1,0 +1,421 @@
+{
+    "_comment": [
+        "STOPP/START Criteria Version 3を使用した高齢者薬剤適正評価問診票",
+        "【重要】本問診票は完全な190項目の評価ツールではなく、専門家が評価を行うための患者情報収集ツールです",
+        "完全な評価には、薬剤師・医師による133項目のSTOPPクライテリアと57項目のSTARTクライテリアの適用が必要です",
+        "原典: O'Mahony D, et al. STOPP/START criteria for potentially inappropriate prescribing in older people: version 3. Eur Geriatr Med. 2023;14(4):625-632.",
+        "URL: https://pubmed.ncbi.nlm.nih.gov/37256475/",
+        "対象: 65歳以上の高齢者",
+        "目的: 潜在的不適切薬剤（PIM）と潜在的処方省略（PPO）評価のための情報収集"
+    ],
+    "title": "STOPP/START Criteria 高齢者薬剤適正評価",
+    "description": [
+        "<h3>高齢者の薬剤処方適正化評価</h3>",
+        "65歳以上の方を対象とした薬剤の適正使用を評価する問診票です。",
+        "現在服用中のお薬と健康状態について詳しくお聞きします。",
+        "※本問診票は情報収集が目的です。専門家による詳細な薬剤評価が別途必要となります。"
+    ],
+    "contact": "薬剤師・医師",
+    "dept_in_charge": "薬剤部・内科",
+    "responsible_person": [
+        "主治医",
+        "薬剤師"
+    ],
+    "submit_button_title": "薬剤評価を提出",
+    "translate": "major",
+    "fields": [
+        {
+            "dispname": "基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "年齢",
+            "name": "年齢",
+            "type": "text",
+            "postfix": "歳",
+            "inputmode": "numeric",
+            "required": true,
+            "description": "現在の年齢をお答えください"
+        },
+        {
+            "dispname": "性別",
+            "name": "性別",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "男性|女性"
+        },
+        {
+            "dispname": "現在の服薬状況",
+            "type": "subsection"
+        },
+        {
+            "dispname": "現在服用している薬の種類数",
+            "name": "服薬数",
+            "type": "text",
+            "postfix": "種類",
+            "inputmode": "numeric",
+            "testrange": [
+                0,
+                20
+            ],
+            "required": true,
+            "description": "処方薬・市販薬・漢方薬を含む全ての薬の種類数"
+        },
+        {
+            "dispname": "お薬手帳の写真",
+            "name": "お薬手帳",
+            "type": "getphoto",
+            "description": "お薬手帳の全ページを撮影してください"
+        },
+        {
+            "dispname": "現在服用中の薬剤名",
+            "name": "薬剤名",
+            "type": "textarea",
+            "rows": 8,
+            "required": true,
+            "description": "服用中の全ての薬剤名を記載してください（商品名・一般名どちらでも可）"
+        },
+        {
+            "dispname": "心血管系疾患",
+            "type": "subsection"
+        },
+        {
+            "dispname": "心不全の診断",
+            "name": "心不全",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|あり|不明"
+        },
+        {
+            "dispname": "高血圧の診断",
+            "name": "高血圧",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|あり|不明"
+        },
+        {
+            "dispname": "心房細動の診断",
+            "name": "心房細動",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|あり|不明"
+        },
+        {
+            "dispname": "狭心症・心筋梗塞の既往",
+            "name": "冠動脈疾患",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|あり|不明"
+        },
+        {
+            "dispname": "脳血管疾患",
+            "type": "subsection"
+        },
+        {
+            "dispname": "脳梗塞・脳出血の既往",
+            "name": "脳血管疾患",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|あり|不明"
+        },
+        {
+            "dispname": "消化器系疾患",
+            "type": "subsection"
+        },
+        {
+            "dispname": "消化性潰瘍の既往",
+            "name": "消化性潰瘍",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|あり|不明"
+        },
+        {
+            "dispname": "炎症性腸疾患の診断",
+            "name": "炎症性腸疾患",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|あり|不明"
+        },
+        {
+            "dispname": "腎・泌尿器系疾患",
+            "type": "subsection"
+        },
+        {
+            "dispname": "慢性腎臓病の診断",
+            "name": "慢性腎臓病",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度|不明"
+        },
+        {
+            "dispname": "前立腺肥大症の診断",
+            "name": "前立腺肥大症",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|あり|不明",
+            "parentname": "性別",
+            "parentsel": "男性"
+        },
+        {
+            "dispname": "内分泌系疾患",
+            "type": "subsection"
+        },
+        {
+            "dispname": "糖尿病の診断",
+            "name": "糖尿病",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|1型|2型|不明"
+        },
+        {
+            "dispname": "甲状腺疾患の診断",
+            "name": "甲状腺疾患",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|甲状腺機能亢進症|甲状腺機能低下症|不明"
+        },
+        {
+            "dispname": "精神神経系疾患",
+            "type": "subsection"
+        },
+        {
+            "dispname": "認知症の診断",
+            "name": "認知症",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度|不明"
+        },
+        {
+            "dispname": "うつ病の診断",
+            "name": "うつ病",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|あり|不明"
+        },
+        {
+            "dispname": "睡眠障害",
+            "name": "睡眠障害",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|あり|不明"
+        },
+        {
+            "dispname": "てんかんの診断",
+            "name": "てんかん",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|あり|不明"
+        },
+        {
+            "dispname": "運動器・感覚器疾患",
+            "type": "subsection"
+        },
+        {
+            "dispname": "骨粗鬆症の診断",
+            "name": "骨粗鬆症",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|あり|不明"
+        },
+        {
+            "dispname": "関節リウマチの診断",
+            "name": "関節リウマチ",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|あり|不明"
+        },
+        {
+            "dispname": "緑内障の診断",
+            "name": "緑内障",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|開放隅角|閉塞隅角|不明"
+        },
+        {
+            "dispname": "症状・機能評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "転倒リスク",
+            "name": "転倒リスク",
+            "type": "radio",
+            "inline": true,
+            "selector": "低い|やや高い|高い|非常に高い"
+        },
+        {
+            "dispname": "過去1年間の転倒回数",
+            "name": "転倒回数",
+            "type": "text",
+            "postfix": "回",
+            "testrange": [
+                0,
+                5
+            ],
+            "inputmode": "numeric",
+            "description": "過去1年間に転倒した回数"
+        },
+        {
+            "dispname": "便秘の症状",
+            "name": "便秘",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度"
+        },
+        {
+            "dispname": "起立性低血圧の症状",
+            "name": "起立性低血圧",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|あり|不明"
+        },
+        {
+            "dispname": "嚥下障害",
+            "name": "嚥下障害",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度"
+        },
+        {
+            "dispname": "検査値情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "最新のクレアチニン値",
+            "name": "クレアチニン",
+            "type": "text",
+            "testrange": [
+                0.3,
+                5.0
+            ],
+            "postfix": "mg/dL",
+            "inputmode": "decimal",
+            "description": "最近の血液検査値（不明の場合は空欄）"
+        },
+        {
+            "dispname": "最新のeGFR値",
+            "name": "eGFR",
+            "type": "text",
+            "testrange": [
+                15,
+                120
+            ],
+            "postfix": "mL/min/1.73m²",
+            "inputmode": "decimal",
+            "description": "最近の血液検査値（不明の場合は空欄）"
+        },
+        {
+            "dispname": "最新のHbA1c値",
+            "name": "HbA1c",
+            "type": "text",
+            "testrange": [
+                4.0,
+                12.0
+            ],
+            "postfix": "%",
+            "inputmode": "decimal",
+            "description": "糖尿病がある場合の最近の検査値"
+        },
+        {
+            "dispname": "薬剤関連症状",
+            "type": "subsection"
+        },
+        {
+            "dispname": "薬剤による副作用経験",
+            "name": "副作用経験",
+            "type": "checkbox",
+            "selector": [
+                "なし",
+                "眠気・ふらつき",
+                "消化器症状",
+                "アレルギー",
+                "低血糖",
+                "出血",
+                "その他"
+            ]
+        },
+        {
+            "dispname": "副作用の詳細",
+            "name": "副作用詳細",
+            "type": "textarea",
+            "rows": 4,
+            "parentname": "副作用経験",
+            "parentsel": "眠気・ふらつき|消化器症状|アレルギー|低血糖|出血|その他",
+            "description": "副作用の具体的な内容と発生時期"
+        },
+        {
+            "dispname": "ワクチン接種歴",
+            "type": "subsection"
+        },
+        {
+            "dispname": "インフルエンザワクチン接種",
+            "name": "インフルエンザワクチン",
+            "type": "radio",
+            "inline": true,
+            "selector": "未接種|今年度接種済み|昨年度まで接種"
+        },
+        {
+            "dispname": "肺炎球菌ワクチン接種",
+            "name": "肺炎球菌ワクチン",
+            "type": "radio",
+            "inline": true,
+            "selector": "未接種|接種済み|不明"
+        },
+        {
+            "dispname": "COVID-19ワクチン接種",
+            "name": "COVIDワクチン",
+            "type": "radio",
+            "inline": true,
+            "selector": "未接種|1-2回|3回以上"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "服薬数_数値",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[服薬数]]"
+        },
+        {
+            "name": "転倒回数_数値",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[転倒回数]]"
+        },
+        {
+            "dispname": "多剤併用判定",
+            "name": "多剤併用判定",
+            "type": "eval",
+            "formula": "[[服薬数_数値]] >= 5 ? '多剤併用あり（5剤以上）' : '多剤併用なし'"
+        },
+        {
+            "dispname": "転倒リスク評価",
+            "name": "転倒リスク評価",
+            "type": "eval",
+            "formula": "[[転倒回数_数値]] >= 2 ? '高い転倒リスク' : ( [[転倒回数_数値]] == 1 ? '中等度転倒リスク' : '低い転倒リスク' )"
+        },
+        {
+            "dispname": "腎機能評価",
+            "name": "腎機能評価",
+            "type": "eval",
+            "formula": "{{クレアチニン}} != '' ? ( 'Cr値: ' + {{クレアチニン}} + 'mg/dL' ) : '腎機能データなし'"
+        },
+        {
+            "dispname": "総合評価コメント",
+            "name": "総合評価コメント",
+            "type": "eval",
+            "formula": "[[服薬数_数値]] >= 10 ? 'STOPPクライテリア適用を強く推奨' : ( [[服薬数_数値]] >= 5 ? 'STOPPクライテリア適用を推奨' : '定期的な服薬見直しを推奨' )"
+        },
+        {
+            "name": "Warning: 10剤以上の多剤併用",
+            "formula": "[[服薬数_数値]] >= 10",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 年3回以上の転倒",
+            "formula": "[[転倒回数_数値]] >= 3",
+            "type": "emergency"
+        }
+    ]
+}

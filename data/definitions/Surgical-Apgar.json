@@ -1,0 +1,90 @@
+{
+  "_comment": [
+    "Surgical Apgar Score (SAS) 問診票定義",
+    "原典: Gawande AA, Kwaan MR, Regenbogen SE, Lipsitz SA, Zinner MJ. An Apgar score for surgery. J Am Coll Surg. 2007;204(2):201-8.",
+    "術中の3つのパラメータから術後合併症リスクを予測",
+    "10点満点スコア。低スコアほど高リスク",
+    "URL: http://www.atulgawande.com/documents/AnApgarScoreforSurgery.pdf"
+  ],
+  "title": "Surgical Apgar Score 術後合併症予測",
+  "description": [
+    "術中のリスク評価スコア",
+    "手術中の出血量、血圧、心拍数から術後合併症リスクを評価します"
+  ],
+  "fields": [
+    {
+      "name": "推定出血量",
+      "dispname": "推定出血量",
+      "type": "radio",
+      "selector": [
+        "100mL以下",
+        "101-600mL",
+        "601-1000mL",
+        "1000mL超"
+      ],
+      "selectoridx": "4|3|2|0",
+      "required": true,
+      "description": "術中の推定出血量を選択してください"
+    },
+    {
+      "name": "最低平均動脈圧",
+      "dispname": "最低平均動脈圧",
+      "type": "radio",
+      "selector": [
+        "40mmHg未満",
+        "40-54mmHg",
+        "55-69mmHg",
+        "70mmHg以上"
+      ],
+      "selectoridx": "0|2|3|4",
+      "required": true,
+      "description": "術中の最低平均動脈圧を選択してください"
+    },
+    {
+      "name": "最低心拍数",
+      "dispname": "最低心拍数",
+      "type": "radio",
+      "selector": [
+        "85回/分超",
+        "76-85回/分",
+        "66-75回/分",
+        "56-65回/分",
+        "55回/分以下"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "required": true,
+      "description": "術中の最低心拍数を選択してください。病的徐脈不整脈(洞停止、房室ブロック、房室解離、接合部調律、心室調律、心停止)がある場合は「55回/分以下」を選択"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "合計スコア",
+      "type": "eval",
+      "formula": "[[推定出血量.index]] + [[最低平均動脈圧.index]] + [[最低心拍数.index]]",
+      "dispname": "Surgical Apgar Score 合計点(0-10点)"
+    },
+    {
+      "name": "リスク分類",
+      "type": "eval",
+      "formula": "[[合計スコア]] >= 9 ? '低リスク(9-10点)' : ( [[合計スコア]] >= 7 ? '中リスク(7-8点)' : ( [[合計スコア]] >= 5 ? '中高リスク(5-6点)' : '高リスク(0-4点)') )",
+      "dispname": "合併症リスク分類"
+    },
+    {
+      "name": "合併症リスク",
+      "type": "eval",
+      "formula": "[[合計スコア]] >= 9 ? '約4%' : ( [[合計スコア]] >= 7 ? '約6%' : ( [[合計スコア]] >= 5 ? '約16%' : '約59%') )",
+      "dispname": "30日以内の主要合併症または死亡のリスク"
+    },
+    {
+      "name": "Emergency: 高リスク",
+      "formula": "[[合計スコア]] <= 4",
+      "type": "emergency"
+    },
+    {
+      "name": "Warning: 中高リスク",
+      "formula": "[[合計スコア]] >= 5 && [[合計スコア]] <= 6",
+      "type": "warning"
+    }
+  ]
+}

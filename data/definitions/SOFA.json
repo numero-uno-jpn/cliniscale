@@ -1,0 +1,232 @@
+{
+    "_comment": [
+        "Sequential Organ Failure Assessment (SOFA) スコア",
+        "ICUにおける重症患者の臓器不全の程度と予後を評価するスコア",
+        "原著: Vincent JL et al. Intensive Care Med. 1996;22(7):707-710 (PMID: 8844239)",
+        "6項目の臓器機能を0-4点で評価し、合計0-24点で算出",
+        "敗血症診断基準としても使用される (Sepsis-3)",
+        "修正履歴: 2025年9月 - 予後予測死亡率を90%に修正、循環機能計算式修正、UI改善"
+    ],
+    "title": "SOFA (Sequential Organ Failure Assessment) 臓器不全評価スコア",
+    "description": [
+        "重症患者の臓器不全の程度と予後を評価するスコアです。",
+        "呼吸器、凝固能、肝機能、循環機能、中枢神経系、腎機能の6項目を評価します。",
+        "各項目0-4点、合計0-24点で計算されます。"
+    ],
+    "responsible_person": [
+        "集中治療科医師"
+    ],
+    "dept_in_charge": "集中治療科",
+    "fields": [
+        {
+            "dispname": "評価タイミング",
+            "type": "subsection"
+        },
+        {
+            "dispname": "評価時点",
+            "name": "評価時点",
+            "type": "radio",
+            "required": true,
+            "selector": "ICU入室時|ICU入室後48時間|ICU入室後72時間|その他",
+            "description": "SOFAスコアを評価するタイミングを選択してください"
+        },
+        {
+            "dispname": "1. 呼吸器機能",
+            "type": "subsection"
+        },
+        {
+            "dispname": "PaO2/FiO2比 (mmHg)",
+            "name": "PaO2_FiO2",
+            "type": "text",
+            "required": true,
+            "min": 50,
+            "max": 500,
+            "value": -1,
+            "postfix": "mmHg",
+            "inputmode": "numeric",
+            "description": "動脈血酸素分圧/吸入酸素濃度比を入力してください"
+        },
+        {
+            "dispname": "人工呼吸器使用",
+            "name": "人工呼吸器",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "なし|あり",
+            "description": "人工呼吸器または補助呼吸の使用状況"
+        },
+        {
+            "dispname": "2. 凝固能",
+            "type": "subsection"
+        },
+        {
+            "dispname": "血小板数（×10³/μL）",
+            "name": "血小板数",
+            "type": "text",
+            "required": true,
+            "min": 10,
+            "max": 500,
+            "value": -1,
+            "postfix": "×10³/μL",
+            "inputmode": "numeric",
+            "description": "血小板数を入力してください"
+        },
+        {
+            "dispname": "3. 肝機能",
+            "type": "subsection"
+        },
+        {
+            "dispname": "総ビリルビン値(mg/dL)",
+            "name": "ビリルビン",
+            "type": "text",
+            "required": true,
+            "min": 0.1,
+            "max": 20.0,
+            "step": 0.1,
+            "value": -1,
+            "postfix": "mg/dL",
+            "inputmode": "numeric",
+            "description": "総ビリルビン値を入力してください"
+        },
+        {
+            "dispname": "4. 循環機能",
+            "type": "subsection"
+        },
+        {
+            "dispname": "平均動脈圧(mmHg)",
+            "name": "平均動脈圧",
+            "type": "text",
+            "required": true,
+            "min": 30,
+            "max": 150,
+            "value": -1,
+            "postfix": "mmHg",
+            "inputmode": "numeric",
+            "description": "平均動脈圧（MAP）を入力してください"
+        },
+        {
+            "dispname": "昇圧剤使用",
+            "name": "昇圧剤",
+            "type": "radio",
+            "required": true,
+            "selector": "なし|ドパミン≤5またはドブタミン|ドパミン>5またはエピネフリン≤0.1またはノルエピネフリン≤0.1|ドパミン>15またはエピネフリン>0.1またはノルエピネフリン>0.1",
+            "description": "使用している昇圧剤の種類と用量（μg/kg/分）"
+        },
+        {
+            "dispname": "5. 中枢神経系",
+            "type": "subsection"
+        },
+        {
+            "dispname": "GCS",
+            "name": "GCS",
+            "required": true,
+            "type": "text",
+            "min": 3,
+            "max": 15,
+            "value": -1,
+            "inputmode": "numeric",
+            "description": "Glasgow Coma Scaleの合計点を入力してください"
+        },
+        {
+            "dispname": "6. 腎機能",
+            "type": "subsection"
+        },
+        {
+            "dispname": "血清クレアチニン値(mg/dL)",
+            "name": "クレアチニン",
+            "type": "text",
+            "required": true,
+            "min": 0.1,
+            "max": 10.0,
+            "step": 0.1,
+            "value": -1,
+            "postfix": "mg/dL",
+            "inputmode": "numeric",
+            "description": "血清クレアチニン値を入力してください"
+        },
+        {
+            "dispname": "尿量(mL/日)",
+            "name": "尿量",
+            "type": "text",
+            "min": 0,
+            "max": 3000,
+            "value": -1,
+            "postfix": "mL/日",
+            "inputmode": "numeric",
+            "description": "24時間尿量を入力してください（任意）"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "呼吸器スコア",
+            "type": "eval",
+            "formula": "((PaO2_FiO2)) >= 400 ? 0 : ( ((PaO2_FiO2)) >= 300 ? 1 : ( ((PaO2_FiO2)) >= 200 ? 2 : ( ((PaO2_FiO2)) >= 100 && {{人工呼吸器}} == 'あり' ? 3 : ( ((PaO2_FiO2)) < 100 && {{人工呼吸器}} == 'あり' ? 4 : 2 ) ) ) )",
+            "dispname": "呼吸器機能スコア（0-4点）"
+        },
+        {
+            "name": "凝固スコア",
+            "type": "eval",
+            "formula": "((血小板数)) >= 150 ? 0 : ( ((血小板数)) >= 100 ? 1 : ( ((血小板数)) >= 50 ? 2 : ( ((血小板数)) >= 20 ? 3 : 4 ) ) )",
+            "dispname": "凝固能スコア（0-4点）"
+        },
+        {
+            "name": "肝機能スコア",
+            "type": "eval",
+            "formula": "((ビリルビン)) < 1.2 ? 0 : ( ((ビリルビン)) <= 1.9 ? 1 : ( ((ビリルビン)) <= 5.9 ? 2 : ( ((ビリルビン)) <= 11.9 ? 3 : 4 ) ) )",
+            "dispname": "肝機能スコア（0-4点）"
+        },
+        {
+            "name": "昇圧剤index",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[昇圧剤.index]]"
+        },
+        {
+            "name": "循環スコア",
+            "type": "eval",
+            "formula": "{{昇圧剤}} == 'なし' ? ( ((平均動脈圧)) >= 70 ? 0 : 1 ) : ( [[昇圧剤index]] + 1 )",
+            "dispname": "循環機能スコア（0-4点）"
+        },
+        {
+            "name": "中枢神経スコア",
+            "type": "eval",
+            "formula": "[[GCS]] == 15 ? 0 : ( [[GCS]] >= 13 ? 1 : ( [[GCS]] >= 10 ? 2 : ( [[GCS]] >= 6 ? 3 : 4 ) ) )",
+            "dispname": "中枢神経系スコア（0-4点）"
+        },
+        {
+            "name": "腎機能スコア",
+            "type": "eval",
+            "formula": "((クレアチニン)) < 1.2 ? 0 : ( ((クレアチニン)) <= 1.9 ? 1 : ( ((クレアチニン)) <= 3.4 ? 2 : ( ((クレアチニン)) <= 4.9 ? 3 : 4 ) ) )",
+            "dispname": "腎機能スコア（0-4点）"
+        },
+        {
+            "name": "SOFAスコア合計",
+            "type": "eval",
+            "formula": "[[呼吸器スコア]] + [[凝固スコア]] + [[肝機能スコア]] + [[循環スコア]] + [[中枢神経スコア]] + [[腎機能スコア]]",
+            "dispname": "SOFAスコア合計点（0-24点）"
+        },
+        {
+            "name": "重症度評価",
+            "type": "eval",
+            "formula": "[[SOFAスコア合計]] <= 6 ? '軽症' : ( [[SOFAスコア合計]] <= 9 ? '中等症' : ( [[SOFAスコア合計]] <= 12 ? '重症' : '最重症' ) )",
+            "dispname": "重症度分類"
+        },
+        {
+            "name": "予後予測",
+            "type": "eval",
+            "formula": "[[SOFAスコア合計]] <= 6 ? '死亡率10%未満' : ( [[SOFAスコア合計]] <= 9 ? '死亡率15-20%' : ( [[SOFAスコア合計]] <= 12 ? '死亡率40-50%' : ( [[SOFAスコア合計]] <= 14 ? '死亡率50-80%' : '死亡率90%以上' ) ) )",
+            "dispname": "予後予測（ICU入室時評価の場合）"
+        },
+        {
+            "name": "Warning: 中程度リスク SOFAスコア 10-12",
+            "formula": "[[SOFAスコア合計]] >= 10 && [[SOFAスコア合計]] <= 12",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 高リスク SOFAスコア ≥ 13",
+            "formula": "[[SOFAスコア合計]] >= 13",
+            "type": "emergency"
+        }
+    ]
+}

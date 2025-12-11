@@ -1,0 +1,105 @@
+{
+    "_comment": [
+        "Clavien-Dindo Classification of Surgical Complications (2004)",
+        "原著論文: https://pubmed.ncbi.nlm.nih.gov/15273542/",
+        "参考URL: https://www.assessurgery.com/clavien-dindo-classification/"
+    ],
+    "title": "Clavien-Dindo合併症分類",
+    "description": [
+        "手術後の合併症を治療介入の程度により分類するシステムです",
+        "グレードI (軽微) からV (死亡) まで標準化された評価を提供します"
+    ],
+    "fields": [
+        {
+            "dispname": "合併症の内容",
+            "type": "subsection"
+        },
+        {
+            "dispname": "発生した合併症",
+            "name": "合併症名",
+            "type": "textarea",
+            "required": true,
+            "description": "発生した合併症を具体的に記載してください",
+            "rows": 3
+        },
+        {
+            "dispname": "治療介入の評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "薬物療法の必要性",
+            "name": "薬物療法",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "不要",
+                "制吐剤・解熱剤・鎮痛剤・利尿剤・電解質補正のみ",
+                "抗生剤・輸血・高カロリー輸液などが必要"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "侵襲的処置の必要性",
+            "name": "侵襲的処置",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "不要",
+                "局所麻酔下での処置が必要",
+                "全身麻酔下での処置が必要"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "臓器不全の有無",
+            "name": "臓器不全",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "なし",
+                "単一臓器不全 (人工呼吸管理や持続透析を含む)",
+                "多臓器不全"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "転帰",
+            "name": "転帰",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "生存",
+                "死亡"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "グレード判定",
+            "type": "eval",
+            "formula": "[[転帰.index]] == 1 ? 'Grade V - 死亡' : ( [[臓器不全.index]] == 2 ? 'Grade IVb - 多臓器不全' : ( [[臓器不全.index]] == 1 ? 'Grade IVa - 単一臓器不全' : ( [[侵襲的処置.index]] == 2 ? 'Grade IIIb - 全身麻酔下での処置' : ( [[侵襲的処置.index]] == 1 ? 'Grade IIIa - 局所麻酔下での処置' : ( [[薬物療法.index]] == 2 ? 'Grade II - 薬物療法が必要' : 'Grade I - 軽微な合併症' ) ) ) ) )"
+        },
+        {
+            "name": "重症度評価",
+            "type": "eval",
+            "formula": "{{グレード判定}}.includes('V') || {{グレード判定}}.includes('IV') ? '重症合併症 - 生命に関わる' : ( {{グレード判定}}.includes('III') ? '中等度合併症 - 侵襲的介入が必要' : '軽度合併症 - 保存的治療で対応可能' )"
+        },
+        {
+            "name": "臨床的意義",
+            "type": "eval",
+            "formula": "{{グレード判定}}.includes('Grade V') ? '致命的な合併症' : ( {{グレード判定}}.includes('IVb') ? '集中治療室での多臓器管理が必要' : ( {{グレード判定}}.includes('IVa') ? '集中治療室での管理が必要' : ( {{グレード判定}}.includes('IIIb') ? '再手術または全身麻酔下での処置が必要' : ( {{グレード判定}}.includes('IIIa') ? '内視鏡的処置や局所麻酔下での処置が必要' : ( {{グレード判定}}.includes('II') ? '入院期間の延長または追加治療が必要' : '通常の術後経過からの逸脱だが追加治療は不要' ) ) ) ) )"
+        },
+        {
+            "name": "Warning: 侵襲的介入必要",
+            "formula": "{{グレード判定}}.includes('III')",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 生命に関わる合併症",
+            "formula": "{{グレード判定}}.includes('IV') || {{グレード判定}}.includes('V')",
+            "type": "emergency"
+        }
+    ]
+}

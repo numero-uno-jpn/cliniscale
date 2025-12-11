@@ -1,0 +1,155 @@
+{
+  "_comment": [
+    "Revised Cardiac Risk Index（RCRI）問診票定義",
+    "原典: Lee TH, et al. Derivation and prospective validation of a simple index for prediction of cardiac risk of major noncardiac surgery. Circulation. 1999;100:1043-1049. PMID: 10477528",
+    "参考: 非心臓手術における合併心疾患の評価と管理に関するガイドライン 2022年改訂版",
+    "6つの独立した危険因子を評価し、非心臓手術における周術期心血管イベントのリスクを層別化"
+  ],
+  "title": "RCRI 改訂心臓リスク指数",
+  "description": [
+    "<h3>非心臓手術における周術期心血管イベントのリスク評価</h3>",
+    "以下の6つの危険因子について該当するものをお答えください。"
+  ],
+  "fields": [
+    {
+      "type": "subsection",
+      "name": "リスク因子評価",
+      "dispname": "リスク因子評価"
+    },
+    {
+      "name": "手術種類",
+      "type": "radio",
+      "dispname": "1. 高リスク手術",
+      "required": true,
+      "selector": [
+        "該当する",
+        "該当しない"
+      ],
+      "selectoridx": "1|0",
+      "description": [
+        "以下のいずれかに該当する場合は「該当する」を選択してください：",
+        "• 腹腔内手術（胃切除、肝切除、大腸切除、膵頭十二指腸切除等）",
+        "• 胸腔内手術（肺切除、食道切除等）",
+        "• 鼠径部より中枢側の血管手術（腹部大動脈瘤手術、下肢血管バイパス等）"
+      ]
+    },
+    {
+      "name": "虚血性心疾患",
+      "type": "radio",
+      "dispname": "2. 虚血性心疾患の既往",
+      "required": true,
+      "selector": [
+        "該当する",
+        "該当しない"
+      ],
+      "selectoridx": "1|0",
+      "description": [
+        "以下のいずれかに該当する場合は「該当する」を選択してください：",
+        "• 心筋梗塞の既往がある",
+        "• 現在狭心症がある",
+        "• 硝酸薬を服用している",
+        "• 心電図でQ波を指摘されている",
+        "• 運動負荷試験陽性の既往がある"
+      ]
+    },
+    {
+      "name": "心不全",
+      "type": "radio",
+      "dispname": "3. うっ血性心不全の既往",
+      "required": true,
+      "selector": [
+        "該当する",
+        "該当しない"
+      ],
+      "selectoridx": "1|0",
+      "description": [
+        "以下のいずれかに該当する場合は「該当する」を選択してください：",
+        "• 心不全の既往がある",
+        "• 肺水腫の既往がある",
+        "• 夜間発作性呼吸困難の既往がある",
+        "• 両側ラ音を聴取したことがある",
+        "• 胸部X線で肺うっ血を指摘されたことがある"
+      ]
+    },
+    {
+      "name": "脳血管疾患",
+      "type": "radio",
+      "dispname": "4. 脳血管疾患の既往",
+      "required": true,
+      "selector": [
+        "該当する",
+        "該当しない"
+      ],
+      "selectoridx": "1|0",
+      "description": [
+        "以下のいずれかに該当する場合は「該当する」を選択してください：",
+        "• 脳梗塞の既往がある",
+        "• 脳出血の既往がある",
+        "• 一過性脳虚血発作（TIA）の既往がある"
+      ]
+    },
+    {
+      "name": "糖尿病",
+      "type": "radio",
+      "dispname": "5. インスリン治療を要する糖尿病",
+      "required": true,
+      "selector": [
+        "インスリン注射を使用している",
+        "糖尿病があるがインスリンは使用していない",
+        "糖尿病はない"
+      ],
+      "selectoridx": "1|0|0",
+      "description": "インスリン治療が必要な糖尿病の場合のみ該当します"
+    },
+    {
+      "name": "腎機能",
+      "type": "radio",
+      "dispname": "6. 術前血清クレアチニン値",
+      "required": true,
+      "selector": [
+        "2.0mg/dL以上",
+        "2.0mg/dL未満",
+        "不明"
+      ],
+      "selectoridx": "1|0|0",
+      "description": "血清クレアチニン値が2.0mg/dL以上の場合は該当します"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "RCRIスコア",
+      "type": "eval",
+      "dispname": "RCRI総スコア 危険因子の合計（0～6点）",
+      "formula": "[[手術種類.index]] + [[虚血性心疾患.index]] + [[心不全.index]] + [[脳血管疾患.index]] + [[糖尿病.index]] + [[腎機能.index]]"
+    },
+    {
+      "name": "リスク分類",
+      "type": "eval",
+      "formula": "[[RCRIスコア]] == 0 ? 'Class I（低リスク）' : ( [[RCRIスコア]] == 1 ? 'Class II（低リスク）' : ( [[RCRIスコア]] == 2 ? 'Class III（中等度リスク）' : 'Class IV（高リスク）' ) )",
+      "dispname": "周術期心血管イベントリスク分類"
+    },
+    {
+      "name": "心血管イベント発生率_非血管手術",
+      "type": "eval",
+      "formula": "[[RCRIスコア]] == 0 ? '0.4%' : ( [[RCRIスコア]] == 1 ? '0.9%' : ( [[RCRIスコア]] == 2 ? '6.6%' : '11.0%以上' ) )",
+      "dispname": "術後30日以内の心筋梗塞、肺水腫、心室細動、心停止、完全房室ブロックの発生率"
+    },
+    {
+      "name": "心血管イベント発生率_血管手術",
+      "type": "eval",
+      "formula": "[[手術種類.index]] == 1 ? ( [[RCRIスコア]] == 0 ? '1.0%' : ( [[RCRIスコア]] == 1 ? '4.2%' : ( [[RCRIスコア]] == 2 ? '10.6%' : '15.0%以上' ) ) ) : '非血管手術のため該当なし'",
+      "dispname": "血管手術における術後30日以内の心血管イベント発生率"
+    },
+    {
+      "name": "Warning: 中等度リスク RCRIスコア >= 2",
+      "formula": "[[RCRIスコア]] >= 2",
+      "type": "warning"
+    },
+    {
+      "name": "Emergency: 高リスク RCRIスコア >= 3",
+      "formula": "[[RCRIスコア]] >= 3",
+      "type": "emergency"
+    }
+  ]
+}

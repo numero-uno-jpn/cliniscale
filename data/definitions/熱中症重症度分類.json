@@ -1,0 +1,242 @@
+{
+    "_comment": [
+        "熱中症重症度分類（2024年版）",
+        "日本救急医学会 熱中症診療ガイドライン2024準拠",
+        "I度（軽症）からIV度（最重症）の4段階評価",
+        "Deep core temperature 40.0℃以上かつGCS≦8をIV度として新設",
+        "quick IV度（qIV度）は現場での迅速判定用",
+        "原典：日本救急医学会 熱中症診療ガイドライン2024"
+    ],
+    "title": "熱中症重症度分類（2024年版）",
+    "description": [
+        "暑熱環境での症状評価により、熱中症重症度を判定します",
+        "I度からIV度の4段階分類で治療方針を決定します"
+    ],
+    "fields": [
+        {
+            "dispname": "基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "暑熱環境への曝露",
+            "name": "暑熱環境",
+            "type": "radio",
+            "required": true,
+            "description": "発症前に暑熱環境にいた、または暑熱環境にいた直後の症状",
+            "selector": "あり|なし",
+            "inline": true
+        },
+        {
+            "dispname": "意識レベル（JCS）",
+            "name": "JCS",
+            "type": "radio",
+            "required": true,
+            "description": "現在の意識レベルを評価してください",
+            "selector": "清明（0）|軽度混濁（1桁）|中度混濁（2桁）|昏睡（3桁）",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "意識レベル（GCS）",
+            "name": "GCS_total",
+            "type": "text",
+            "inputmode": "numeric",
+            "postfix": "点",
+            "testrange": [
+                3,
+                15
+            ],
+            "required": true,
+            "description": "グラスゴー昏睡尺度の合計点（3-15点）"
+        },
+        {
+            "dispname": "グラスゴー昏睡尺度（GCS）の評価方法",
+            "type": "note",
+            "description": "**GCS = E（開眼）+ V（言語）+ M（運動）の合計点（3-15点）**\n- **E（開眼反応）1-4点**: 自発的開眼4点、呼びかけ3点、痛み刺激2点、なし1点\n- **V（言語反応）1-5点**: 見当識あり5点、混乱した会話4点、不適切な言葉3点、理解不能な音声2点、なし1点\n- **M（運動反応）1-6点**: 命令に従う6点、痛み刺激部位認識5点、逃避4点、屈曲3点、伸展2点、なし1点"
+        },
+        {
+            "dispname": "体温測定",
+            "type": "subsection"
+        },
+        {
+            "dispname": "表面体温",
+            "name": "表面体温",
+            "type": "text",
+            "inputmode": "decimal",
+            "postfix": "℃",
+            "testrange": [
+                35,
+                42
+            ],
+            "description": "腋窩温等の表面体温を入力してください"
+        },
+        {
+            "dispname": "皮膚の熱感",
+            "name": "皮膚熱感",
+            "type": "radio",
+            "description": "皮膚に明らかな熱感があるか",
+            "selector": "なし|あり",
+            "inline": true
+        },
+        {
+            "dispname": "深部体温",
+            "name": "深部体温",
+            "type": "text",
+            "inputmode": "decimal",
+            "postfix": "℃",
+            "testrange": [
+                35,
+                42
+            ],
+            "description": "膀胱温・直腸温等の深部体温を入力してください"
+        },
+        {
+            "dispname": "症状評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "I度症状",
+            "name": "I度症状",
+            "type": "checkbox",
+            "description": "該当する症状をすべて選択してください",
+            "selector": [
+                "めまい",
+                "失神（立ちくらみ）",
+                "生あくび",
+                "大量の発汗",
+                "筋肉痛",
+                "筋肉の硬直（こむら返り）"
+            ]
+        },
+        {
+            "dispname": "II度症状",
+            "name": "II度症状",
+            "type": "checkbox",
+            "description": "該当する症状をすべて選択してください",
+            "selector": [
+                "頭痛",
+                "嘔吐",
+                "倦怠感",
+                "虚脱感",
+                "集中力の低下",
+                "判断力の低下"
+            ]
+        },
+        {
+            "dispname": "III度症状（中枢神経症状）",
+            "name": "中枢神経症状",
+            "type": "checkbox",
+            "description": "該当する症状をすべて選択してください",
+            "selector": [
+                "意識障害（JCS≧2）",
+                "小脳症状",
+                "痙攣発作"
+            ]
+        },
+        {
+            "dispname": "III度症状（臓器障害）",
+            "name": "臓器障害",
+            "type": "checkbox",
+            "description": "該当する所見をすべて選択してください",
+            "selector": [
+                "肝機能障害（入院を要する程度）",
+                "腎機能障害（入院を要する程度）",
+                "血液凝固異常（急性DIC診断基準にてDICと診断）"
+            ]
+        },
+        {
+            "dispname": "注意事項",
+            "type": "note",
+            "description": "**重要事項**\n- IV度は2024年版で新設された最重症分類（深部体温40.0℃以上かつGCS≦8）\n- qIV度は現場での迅速判定用、深部体温測定によりIV度を確定\n- 深部体温測定はガイドライン2024で強く推奨\n- 診断には暑熱環境への曝露歴が必須\n- 感染症・悪性症候群・甲状腺クリーゼ等の除外診断が必要"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "I度症状_length",
+            "type": "eval",
+            "formula": "([[I度症状.index]] || []).length",
+            "noreport": true
+        },
+        {
+            "name": "II度判定_length",
+            "type": "eval",
+            "formula": "([[II度症状.index]] || []).length",
+            "noreport": true
+        },
+        {
+            "name": "中枢神経症状_length",
+            "type": "eval",
+            "formula": "([[中枢神経症状.index]] || []).length",
+            "noreport": true
+        },
+        {
+            "name": "臓器障害_length",
+            "type": "eval",
+            "formula": "([[臓器障害.index]] || []).length",
+            "noreport": true
+        },
+        {
+            "name": "qIV度判定",
+            "type": "eval",
+            "dispname": "quick IV度判定（現場での迅速判定用）",
+            "formula": "( ([[表面体温]] >= 40.0) || ([[皮膚熱感.index]] == 1) ) && ( ([[JCS.index]] == 3) || ([[GCS_total]] <= 8) ) ? 1 : 0",
+            "noreport": true
+        },
+        {
+            "name": "IV度判定",
+            "type": "eval",
+            "dispname": "IV度判定（深部体温測定必要）",
+            "formula": "([[深部体温]] >= 40.0) && ([[GCS_total]] <= 8) ? 1 : 0",
+            "noreport": true
+        },
+        {
+            "name": "III度判定",
+            "type": "eval",
+            "dispname": "III度判定",
+            "formula": "([[中枢神経症状_length]] > 0) || ([[臓器障害_length]] > 0) ? 1 : 0",
+            "noreport": true
+        },
+        {
+            "name": "II度判定",
+            "type": "eval",
+            "dispname": "II度判定",
+            "formula": "([[II度判定_length]] > 0) || ([[JCS.index]] == 1) ? 1 : 0",
+            "noreport": true
+        },
+        {
+            "name": "I度判定",
+            "type": "eval",
+            "dispname": "I度判定",
+            "formula": "([[I度症状_length]] > 0) && ([[JCS.index]] == 0) ? 1 : 0",
+            "noreport": true
+        },
+        {
+            "name": "最終重症度",
+            "type": "eval",
+            "dispname": "熱中症重症度分類2024による最終判定",
+            "formula": "[[IV度判定]] ? 'IV度（最重症）- Active Coolingを含めた集学的治療を早急に開始' : [[III度判定]] ? 'III度（重症）- 入院治療の上、Active Coolingを含めた集学的治療を考慮' : [[II度判定]] ? 'II度（中等症）- 医療機関での診察を必要とし、十分な水分と電解質の補給' : [[I度判定]] ? 'I度（軽症）- 通常は現場で対応可能、Passive Coolingと水分・電解質補給' : '評価不能'"
+        },
+        {
+            "name": "治療方針",
+            "type": "eval",
+            "dispname": "重症度に応じた治療方針",
+            "formula": "[[IV度判定]] ? 'Active Cooling（冷水浸漬・蒸散冷却・血管内体温管理等）+ 集学的治療' : [[III度判定]] ? 'Active Cooling + 入院治療 + 集学的治療の考慮' : [[II度判定]] ? 'Passive Cooling + 水分・電解質補給（経口困難時は点滴）' : 'Passive Cooling + 経口的水分・電解質補給'"
+        },
+        {
+            "name": "目標体温",
+            "type": "eval",
+            "dispname": "Active Cooling実施時の目標体温",
+            "formula": "[[IV度判定]] || [[III度判定]] ? '深部体温38.0℃まで速やかに冷却' : ''"
+        },
+        {
+            "name": "Emergency: IV度判定 深部体温≧40.0℃ かつ GCS≦8",
+            "formula": "[[qIV度判定]] || [[IV度判定]]",
+            "type": "emergency"
+        },
+        {
+            "name": "Warning: III度判定 中枢神経症状または臓器障害あり",
+            "formula": "[[III度判定]]",
+            "type": "warning"
+        }
+    ]
+}

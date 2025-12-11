@@ -1,0 +1,141 @@
+{
+  "_comment": [
+    "Gustilo-Anderson Classification for Open Fractures",
+    "開放骨折の分類",
+    "原著論文: Gustilo RB, Anderson JT. J Bone Joint Surg Am. 1976;58(4):453-8.",
+    "改訂版: Gustilo RB, et al. J Trauma. 1984;24(8):742-6.",
+    "PubMed: https://pubmed.ncbi.nlm.nih.gov/773941/",
+    "Wikipedia: https://en.wikipedia.org/wiki/Gustilo_open_fracture_classification"
+  ],
+  "title": "Gustilo分類",
+  "description": [
+    "開放骨折の汚染度、軟部組織損傷、骨折形態を分類します",
+    "治療方針の決定と感染リスク評価に使用されます"
+  ],
+  "responsible_person": [
+    "整形外科医"
+  ],
+  "dept_in_charge": "整形外科",
+  "fields": [
+    {
+      "dispname": "基本情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "評価日",
+      "name": "評価日",
+      "type": "date",
+      "format": "YYYY/MM/DD"
+    },
+    {
+      "dispname": "骨折部位",
+      "name": "骨折部位",
+      "type": "text",
+      "required": true,
+      "description": "骨折部位を記載してください"
+    },
+    {
+      "dispname": "Gustilo分類評価",
+      "type": "subsection"
+    },
+    {
+      "dispname": "Gustilo分類タイプ",
+      "name": "Gustilo分類",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "Type I: 創1cm未満、低エネルギー損傷、軽度汚染",
+        "Type II: 創1cm以上、中等度軟部組織損傷、中等度汚染",
+        "Type IIIA: 高エネルギー損傷、広範囲軟部組織損傷、被覆可能",
+        "Type IIIB: 高エネルギー損傷、広範囲軟部組織損傷、被覆不可、骨膜剥離",
+        "Type IIIC: 高エネルギー損傷、動脈損傷を伴う"
+      ],
+      "selectoridx": "1|2|3|4|5",
+      "description": "開放骨折のタイプを選択してください"
+    },
+    {
+      "dispname": "創傷長",
+      "name": "創傷長",
+      "type": "text",
+      "postfix": "cm",
+      "inputmode": "decimal",
+      "testrange": [
+        0.1,
+        20
+      ],
+      "description": "創の長さを記載してください（例: 0.5）"
+    },
+    {
+      "dispname": "汚染の程度",
+      "name": "汚染の程度",
+      "type": "radio",
+      "inline": true,
+      "selector": "軽度|中等度|高度",
+      "selectoridx": "1|2|3"
+    },
+    {
+      "dispname": "軟部組織損傷の程度",
+      "name": "軟部組織損傷",
+      "type": "radio",
+      "inline": true,
+      "selector": "軽度|中等度|高度",
+      "selectoridx": "1|2|3"
+    },
+    {
+      "dispname": "動脈損傷",
+      "name": "動脈損傷",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "骨膜剥離",
+      "name": "骨膜剥離",
+      "type": "radio",
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "追加所見・コメント",
+      "type": "subsection"
+    },
+    {
+      "dispname": "追加所見",
+      "name": "追加所見",
+      "type": "textarea",
+      "rows": 5,
+      "description": "その他の所見や特記事項を記載してください"
+    },
+    {
+      "dispname": "治療計画",
+      "name": "治療計画",
+      "type": "textarea",
+      "rows": 5,
+      "description": "初期治療計画を記載してください"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "リスク分類",
+      "type": "eval",
+      "formula": "[[Gustilo分類.index]] <= 2 ? '低リスク' : '高リスク'",
+      "description": "Type I-IIは低リスク、Type IIIは高リスク（感染、切断リスク）"
+    },
+    {
+      "name": "Warning: Type III以上",
+      "formula": "[[Gustilo分類.index]] >= 3",
+      "type": "warning",
+      "description": "Type III以上で警告"
+    },
+    {
+      "name": "Emergency: Type IIIC",
+      "formula": "[[Gustilo分類.index]] == 5",
+      "type": "emergency",
+      "description": "Type IIICで緊急対応"
+    }
+  ]
+}

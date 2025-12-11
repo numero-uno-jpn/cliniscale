@@ -1,0 +1,410 @@
+{
+    "_comment": [
+        "EORTC QLQ-C30 (version 3) - がん患者の生活の質評価問診票",
+        "欧州がん研究治療機構が開発した30項目の自己報告型QOL尺度",
+        "5つの機能領域、3つの症状領域、全般的健康状態、6つの単項目から構成",
+        "原典: Aaronson NK, et al. J Natl Cancer Inst 1993;85:365-376",
+        "日本語版: https://www.eortc.be/qol/C30/QLQ-C30%20Japanese.pdf",
+        "スコアリングマニュアル: https://www.eortc.org/app/uploads/sites/2/2018/02/SCmanual.pdf"
+    ],
+    "title": "EORTC QLQ-C30 がん患者の生活の質評価票",
+    "description": [
+        "がん患者さんの健康状態と生活の質について評価する質問票です",
+        "この質問票には正しい答えや間違った答えはありません",
+        "あなたの状態にもっともよく当てはまる番号を選択してください"
+    ],
+    "submit_button_title": "回答を送信",
+    "responsible_person": [
+        "がん専門医"
+    ],
+    "dept_in_charge": "腫瘍内科",
+    "fields": [
+        {
+            "dispname": "身体機能",
+            "type": "subsection"
+        },
+        {
+            "dispname": "重い買い物袋やスーツケースを運ぶなどの力仕事に支障がありますか",
+            "name": "PF1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "まったくない|少しある|多い|とても多い",
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "長い距離を歩くことに支障がありますか",
+            "name": "PF2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "まったくない|少しある|多い|とても多い",
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "屋外の短い距離を歩くことに支障がありますか",
+            "name": "PF3",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "まったくない|少しある|多い|とても多い",
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "一日中ベッドやイスで過ごさなければなりませんか",
+            "name": "PF4",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "まったくない|少しある|多い|とても多い",
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "食べること、衣類を着ること、顔や体を洗うこと、トイレを使うことに人の手を借りる必要がありますか",
+            "name": "PF5",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "まったくない|少しある|多い|とても多い",
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "この一週間について",
+            "type": "subsection"
+        },
+        {
+            "dispname": "仕事をすることや日常生活活動に支障がありましたか",
+            "name": "RF1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "まったくない|少しある|多い|とても多い",
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "趣味やレジャーをするのに支障がありましたか",
+            "name": "RF2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "まったくない|少しある|多い|とても多い",
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "身体症状",
+            "type": "subsection"
+        },
+        {
+            "dispname": "息切れがありましたか",
+            "name": "DY",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "まったくない|少しある|多い|とても多い",
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "痛みがありましたか",
+            "name": "PA1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "まったくない|少しある|多い|とても多い",
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "休息をとる必要がありましたか",
+            "name": "FA1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "まったくない|少しある|多い|とても多い",
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "睡眠に支障がありましたか",
+            "name": "SL",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "まったくない|少しある|多い|とても多い",
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "体力が弱くなったと感じましたか",
+            "name": "FA2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "まったくない|少しある|多い|とても多い",
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "食欲がないと感じましたか",
+            "name": "AP",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "まったくない|少しある|多い|とても多い",
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "吐き気がありましたか",
+            "name": "NV1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "まったくない|少しある|多い|とても多い",
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "吐きましたか",
+            "name": "NV2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "まったくない|少しある|多い|とても多い",
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "便秘がありましたか",
+            "name": "CO",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "まったくない|少しある|多い|とても多い",
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "下痢がありましたか",
+            "name": "DI",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "まったくない|少しある|多い|とても多い",
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "疲れていましたか",
+            "name": "FA3",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "まったくない|少しある|多い|とても多い",
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "痛みがあなたの日々の活動のさまたげになりましたか",
+            "name": "PA2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "まったくない|少しある|多い|とても多い",
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "認知機能・精神状態",
+            "type": "subsection"
+        },
+        {
+            "dispname": "ものごとに集中しにくいことがありましたか（例：新聞を読むときや、テレビを見るとき）",
+            "name": "CF1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "まったくない|少しある|多い|とても多い",
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "緊張した気分でしたか",
+            "name": "EF1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "まったくない|少しある|多い|とても多い",
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "心配がありましたか",
+            "name": "EF2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "まったくない|少しある|多い|とても多い",
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "怒りっぽい気分でしたか",
+            "name": "EF3",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "まったくない|少しある|多い|とても多い",
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "落ち込んだ気分でしたか",
+            "name": "EF4",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "まったくない|少しある|多い|とても多い",
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "もの覚えが悪くなったと思いましたか",
+            "name": "CF2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "まったくない|少しある|多い|とても多い",
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "社会機能・経済面",
+            "type": "subsection"
+        },
+        {
+            "dispname": "身体の調子や治療の実施が、家族の一員としてのあなたの生活のさまたげになりましたか",
+            "name": "SF1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "まったくない|少しある|多い|とても多い",
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "身体の調子や治療の実施が、あなたの社会的な活動のさまたげになりましたか",
+            "name": "SF2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "まったくない|少しある|多い|とても多い",
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "身体の調子や治療の実施が、あなたの経済上の問題になりましたか",
+            "name": "FI",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "まったくない|少しある|多い|とても多い",
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "全般的健康状態・生活の質",
+            "type": "subsection"
+        },
+        {
+            "dispname": "この一週間のあなたの健康状態は全体としてどの程度だったでしょうか",
+            "name": "QL1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "1|2|3|4|5|6|7",
+            "description": "1：とても悪い ～ 7：とてもよい"
+        },
+        {
+            "dispname": "この一週間、あなたの全体的な生活の質はどの程度だったでしょうか",
+            "name": "QL2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "1|2|3|4|5|6|7",
+            "description": "1：とても悪い ～ 7：とてもよい"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "身体機能スコア",
+            "type": "eval",
+            "formula": "Math.round( 100 - ( ( [[PF1.index]] + [[PF2.index]] + [[PF3.index]] + [[PF4.index]] + [[PF5.index]] ) / 5 - 1 ) / 3 * 100)",
+            "dispname": "身体機能スコア: 身体的活動における制限の程度（0-100点、高いほど良い機能）"
+        },
+        {
+            "name": "役割機能スコア",
+            "type": "eval",
+            "formula": "Math.round( 100 - ( ( [[RF1.index]] + [[RF2.index]] ) / 2 - 1 ) / 3 * 100)",
+            "dispname": "役割機能スコア: 仕事や日常活動における制限の程度（0-100点、高いほど良い機能）"
+        },
+        {
+            "name": "情緒機能スコア",
+            "type": "eval",
+            "formula": "Math.round( 100 - ( ( [[EF1.index]] + [[EF2.index]] + [[EF3.index]] + [[EF4.index]] ) / 4 - 1 ) / 3 * 100)",
+            "dispname": "情緒機能スコア: 感情的な問題の程度（0-100点、高いほど良い機能）"
+        },
+        {
+            "name": "認知機能スコア",
+            "type": "eval",
+            "formula": "Math.round( 100 - ( ( [[CF1.index]] + [[CF2.index]] ) / 2 - 1 ) / 3 * 100)",
+            "dispname": "認知機能スコア: 集中力や記憶力の問題の程度（0-100点、高いほど良い機能）"
+        },
+        {
+            "name": "社会機能スコア",
+            "type": "eval",
+            "formula": "Math.round( 100 - ( ( [[SF1.index]] + [[SF2.index]] ) / 2 - 1 ) / 3 * 100)",
+            "dispname": "社会機能スコア: 家族・社会生活への影響の程度（0-100点、高いほど良い機能）"
+        },
+        {
+            "name": "全般的健康状態・QOLスコア",
+            "type": "eval",
+            "formula": "Math.round( ( ( [[QL1]] + [[QL2]] ) / 2 - 1 ) / 6 * 100)",
+            "dispname": "全般的健康状態・QOLスコア: 全般的な健康状態と生活の質（0-100点、高いほど良い状態）"
+        },
+        {
+            "name": "疲労スコア",
+            "type": "eval",
+            "formula": "Math.round( ( ( [[FA1.index]] + [[FA2.index]] + [[FA3.index]] ) / 3 - 1 ) / 3 * 100)",
+            "dispname": "疲労スコア: 疲労の程度（0-100点、高いほど症状が強い）"
+        },
+        {
+            "name": "悪心・嘔吐スコア",
+            "type": "eval",
+            "formula": "Math.round( ( ( [[NV1.index]] + [[NV2.index]] ) / 2 - 1 ) / 3 * 100)",
+            "dispname": "悪心・嘔吐スコア: 悪心・嘔吐の程度（0-100点、高いほど症状が強い）"
+        },
+        {
+            "name": "疼痛スコア",
+            "type": "eval",
+            "formula": "Math.round( ( ( [[PA1.index]] + [[PA2.index]] ) / 2 - 1 ) / 3 * 100)",
+            "dispname": "疼痛スコア: 疼痛の程度（0-100点、高いほど症状が強い）"
+        },
+        {
+            "name": "呼吸困難スコア",
+            "type": "eval",
+            "formula": "Math.round( ( [[DY.index]] - 1 ) / 3 * 100)",
+            "dispname": "呼吸困難スコア: 呼吸困難の程度（0-100点、高いほど症状が強い）"
+        },
+        {
+            "name": "不眠スコア",
+            "type": "eval",
+            "formula": "Math.round( ( [[SL.index]] - 1 ) / 3 * 100)",
+            "dispname": "不眠スコア: 睡眠障害の程度（0-100点、高いほど症状が強い）"
+        },
+        {
+            "name": "食欲不振スコア",
+            "type": "eval",
+            "formula": "Math.round( ( [[AP.index]] - 1 ) / 3 * 100)",
+            "dispname": "食欲不振スコア: 食欲不振の程度（0-100点、高いほど症状が強い）"
+        },
+        {
+            "name": "便秘スコア",
+            "type": "eval",
+            "formula": "Math.round( ( [[CO.index]] - 1 ) / 3 * 100)",
+            "dispname": "便秘スコア: 便秘の程度（0-100点、高いほど症状が強い）"
+        },
+        {
+            "name": "下痢スコア",
+            "type": "eval",
+            "formula": "Math.round( ( [[DI.index]] - 1 ) / 3 * 100)",
+            "dispname": "下痢スコア: 下痢の程度（0-100点、高いほど症状が強い）"
+        },
+        {
+            "name": "経済的困難スコア",
+            "type": "eval",
+            "formula": "Math.round( ( [[FI.index]] - 1 ) / 3 * 100)",
+            "dispname": "経済的困難スコア: 経済的な困難の程度（0-100点、高いほど困難が大きい）"
+        }
+    ]
+}

@@ -1122,9 +1122,9 @@
                     } else {
                         // AJAX で読み込み
                         console.log('axisios loading questionnaire data for', key);
-                        const jsonResponse = await axios.get('https://api.emuyn.net/getDocuments.php', {
+                        const jsonResponse = await axios.get('https://api.emuyn.net/getCliniscaleDefinitions.php', {
                             params: {
-                                filename: `emuyn/cliniscale/definitions/${key}.json`
+                                filename: `${key}.json`
                             }
                         });
 
@@ -1257,9 +1257,9 @@
                 // AJAX で読み込み
                 try {
                     console.log('axisios loading markdown data for', key);
-                    const mdResponse = await axios.get('https://api.emuyn.net/getDocuments.php', {
+                    const mdResponse = await axios.get('https://api.emuyn.net/getCliniscaleDefinitions.php', {
                         params: {
-                            filename: `emuyn/cliniscale/definitions/${key}.md`
+                            filename: `${key}.md`
                         }
                     });
                     this.markdownContent = mdResponse.data;

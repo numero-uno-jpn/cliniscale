@@ -1,0 +1,334 @@
+{
+    "_comment": [
+        "強迫症状評価改訂版(OCI-R) - Obsessive-Compulsive Inventory-Revised",
+        "原著: Foa, E.B., Huppert, J.D., Leiberg, S., Hajcak, G., Langner, R., et al. (2002). The Obsessive-Compulsive Inventory: Development and validation of a short version. Psychological Assessment, 14, 485-496.",
+        "18項目・6サブスケール(洗浄・確認・順序・強迫観念・中和・溜め込み)で構成",
+        "各項目0-4点、合計0-72点",
+        "【カットオフ値】",
+        "・18項目全体: 21点(感度65.6%、特異度63.9%) - Foa et al. 2002",
+        "・OCD成分15項目(1,7,13を除く): 12点(感度82%、特異度83%) - Wootton et al. 2015",
+        "・溜め込み成分3項目(1,7,13): 6点(感度92%、特異度93%) - Wootton et al. 2015",
+        "※DSM-5では溜め込み障害が独立診断となったため、2成分評価が推奨される",
+        "参考URL: https://novopsych.com/assessments/diagnosis/obsessional-compulsive-inventory-revised-oci-r/"
+    ],
+    "title": "OCI-R 強迫症状評価改訂版",
+    "description": [
+        "過去1か月間に経験した症状について、どの程度困ったり悩まされたりしたかを評価してください。"
+    ],
+    "fields": [
+        {
+            "name": "section_instruction",
+            "type": "note",
+            "description": "以下の項目は、多くの人が日常生活で経験することです。過去1か月間にその経験がどの程度あなたを困らせたり悩ませたりしたかを最もよく表す数字に○をつけてください。"
+        },
+        {
+            "name": "q1_hoarding",
+            "type": "radio",
+            "dispname": "物を溜め込んで邪魔になるほど多く保管している",
+            "selector": [
+                "全くない",
+                "少し",
+                "中程度",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "q2_checking",
+            "type": "radio",
+            "dispname": "必要以上に何度も確認してしまう",
+            "selector": [
+                "全くない",
+                "少し",
+                "中程度",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "q3_ordering",
+            "type": "radio",
+            "dispname": "物が適切に整理されていないと気になってしまう",
+            "selector": [
+                "全くない",
+                "少し",
+                "中程度",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "q4_neutralizing",
+            "type": "radio",
+            "dispname": "何かをしているときに数を数えたくなる衝動を感じる",
+            "selector": [
+                "全くない",
+                "少し",
+                "中程度",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "q5_washing",
+            "type": "radio",
+            "dispname": "他人や特定の人が触ったものに触ることが困難だと感じる",
+            "selector": [
+                "全くない",
+                "少し",
+                "中程度",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "q6_obsessing",
+            "type": "radio",
+            "dispname": "自分の考えをコントロールすることが困難だと感じる",
+            "selector": [
+                "全くない",
+                "少し",
+                "中程度",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "q7_hoarding",
+            "type": "radio",
+            "dispname": "必要のないものを集めてしまう",
+            "selector": [
+                "全くない",
+                "少し",
+                "中程度",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "q8_checking",
+            "type": "radio",
+            "dispname": "ドア、窓、引き出しなどを繰り返し確認してしまう",
+            "selector": [
+                "全くない",
+                "少し",
+                "中程度",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "q9_ordering",
+            "type": "radio",
+            "dispname": "物の配置を他人に変えられると気になってしまう",
+            "selector": [
+                "全くない",
+                "少し",
+                "中程度",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "q10_neutralizing",
+            "type": "radio",
+            "dispname": "特定の数字を繰り返さなければならないと感じる",
+            "selector": [
+                "全くない",
+                "少し",
+                "中程度",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "q11_washing",
+            "type": "radio",
+            "dispname": "汚れたと感じて手や体を洗わなければならないことがある",
+            "selector": [
+                "全くない",
+                "少し",
+                "中程度",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "q12_obsessing",
+            "type": "radio",
+            "dispname": "意に反して頭に浮かぶ不快な考えに悩まされる",
+            "selector": [
+                "全くない",
+                "少し",
+                "中程度",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "q13_hoarding",
+            "type": "radio",
+            "dispname": "後で必要になるかもしれないという理由で物を捨てることを避ける",
+            "selector": [
+                "全くない",
+                "少し",
+                "中程度",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "q14_checking",
+            "type": "radio",
+            "dispname": "ガス栓や水道の蛇口、電気のスイッチを切った後に繰り返し確認してしまう",
+            "selector": [
+                "全くない",
+                "少し",
+                "中程度",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "q15_ordering",
+            "type": "radio",
+            "dispname": "物事を特定の方法で配置する必要があると感じる",
+            "selector": [
+                "全くない",
+                "少し",
+                "中程度",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "q16_neutralizing",
+            "type": "radio",
+            "dispname": "良い数字と悪い数字があると感じる",
+            "selector": [
+                "全くない",
+                "少し",
+                "中程度",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "q17_washing",
+            "type": "radio",
+            "dispname": "必要以上に頻繁に、そして長時間手を洗ってしまう",
+            "selector": [
+                "全くない",
+                "少し",
+                "中程度",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "q18_obsessing",
+            "type": "radio",
+            "dispname": "嫌な考えが頻繁に浮かび、それを取り除くのに苦労する",
+            "selector": [
+                "全くない",
+                "少し",
+                "中程度",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "washing_score",
+            "type": "eval",
+            "dispname": "洗浄サブスケール得点(項目5,11,17)",
+            "formula": "[[q5_washing.index]] + [[q11_washing.index]] + [[q17_washing.index]]"
+        },
+        {
+            "name": "checking_score",
+            "type": "eval",
+            "dispname": "確認サブスケール得点(項目2,8,14)",
+            "formula": "[[q2_checking.index]] + [[q8_checking.index]] + [[q14_checking.index]]"
+        },
+        {
+            "name": "ordering_score",
+            "type": "eval",
+            "dispname": "順序サブスケール得点(項目3,9,15)",
+            "formula": "[[q3_ordering.index]] + [[q9_ordering.index]] + [[q15_ordering.index]]"
+        },
+        {
+            "name": "obsessing_score",
+            "type": "eval",
+            "dispname": "強迫観念サブスケール得点(項目6,12,18)",
+            "formula": "[[q6_obsessing.index]] + [[q12_obsessing.index]] + [[q18_obsessing.index]]"
+        },
+        {
+            "name": "neutralizing_score",
+            "type": "eval",
+            "dispname": "中和サブスケール得点(項目4,10,16)",
+            "formula": "[[q4_neutralizing.index]] + [[q10_neutralizing.index]] + [[q16_neutralizing.index]]"
+        },
+        {
+            "name": "hoarding_score",
+            "type": "eval",
+            "dispname": "溜め込みサブスケール得点(項目1,7,13)",
+            "formula": "[[q1_hoarding.index]] + [[q7_hoarding.index]] + [[q13_hoarding.index]]"
+        },
+        {
+            "name": "ocd_component_score",
+            "type": "eval",
+            "dispname": "OCD成分得点(15項目: 溜め込み除く、0-60点、カットオフ12点)",
+            "formula": "[[washing_score]] + [[checking_score]] + [[ordering_score]] + [[obsessing_score]] + [[neutralizing_score]]"
+        },
+        {
+            "name": "hoarding_component_score",
+            "type": "eval",
+            "dispname": "溜め込み成分得点(3項目: 1,7,13、0-12点、カットオフ6点)",
+            "formula": "[[hoarding_score]]"
+        },
+        {
+            "name": "total_score",
+            "type": "eval",
+            "dispname": "OCI-R総得点(18項目全体、0-72点、カットオフ21点)",
+            "formula": "[[washing_score]] + [[checking_score]] + [[ordering_score]] + [[obsessing_score]] + [[neutralizing_score]] + [[hoarding_score]]"
+        }
+    ]
+}

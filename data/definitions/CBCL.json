@@ -1,0 +1,1321 @@
+{
+    "_comment": [
+        "CBCL (Child Behavior Checklist) 6-18歳版 - 修正版",
+        "開発者: Thomas M. Achenbach, University of Vermont",
+        "日本語版発行: 京都国際社会福祉センター",
+        "対象年齢: 6-18歳",
+        "回答者: 保護者または主たる養育者",
+        "評価期間: 過去6ヶ月間の子どもの行動",
+        "公式サイト: https://aseba.org/",
+        "修正内容: 欠落していた3つのシンドローム尺度（社会性の問題、思考の問題、注意の問題）を追加"
+    ],
+    "title": "CBCL 子どもの行動チェックリスト 6-18歳版",
+    "description": [
+        "<h3>子どもの行動チェックリスト（CBCL 6-18歳版）</h3>",
+        "お子さんの過去6ヶ月間の行動や様子について、保護者の方がお答えください。",
+        "各項目について、お子さんの状況に最も当てはまる数字をお選びください。"
+    ],
+    "submit_button_title": "チェックリストを送信",
+    "translate": "major",
+    "fields": [
+        {
+            "dispname": "基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "お子さんの年齢",
+            "name": "child_age",
+            "type": "scale",
+            "min": 6,
+            "max": 18,
+            "unit": "歳",
+            "required": true
+        },
+        {
+            "dispname": "お子さんの性別",
+            "name": "child_gender",
+            "type": "radio",
+            "inline": true,
+            "selector": "男の子|女の子",
+            "required": true
+        },
+        {
+            "dispname": "記入者",
+            "name": "respondent",
+            "type": "radio",
+            "selector": "母親|父親|祖母|祖父|その他の養育者",
+            "required": true
+        },
+        {
+            "dispname": "最も気になることや心配なこと",
+            "name": "main_concern",
+            "type": "textarea",
+            "rows": 3,
+            "description": "お子さんについて最も気になることや心配なことを自由にお書きください"
+        },
+        {
+            "dispname": "お子さんの良いところ",
+            "name": "good_points",
+            "type": "textarea",
+            "rows": 3,
+            "description": "お子さんの良いところや長所を自由にお書きください"
+        },
+        {
+            "dispname": "行動チェックリスト",
+            "type": "subsection",
+            "description": "以下の項目について、過去6ヶ月間のお子さんの様子を思い浮かべて回答してください"
+        },
+        {
+            "dispname": "評価基準の説明",
+            "type": "note",
+            "description": "**0 = あてはまらない**<br>**1 = やや、または時々あてはまる**<br>**2 = よく、またはしばしばあてはまる**"
+        },
+        {
+            "dispname": "1. 年齢に比べて幼すぎる行動をする",
+            "name": "Q1",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "2. 親の許可なくアルコールを飲む",
+            "name": "Q2",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "3. よく言い争いをする",
+            "name": "Q3",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "4. 始めたことを最後までやらない",
+            "name": "Q4",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "5. 楽しめることがほとんどない",
+            "name": "Q5",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "6. トイレ以外で排便する",
+            "name": "Q6",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "7. 自慢したり、ほらを吹いたりする",
+            "name": "Q7",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "8. 集中できない、長時間注意を向けることができない",
+            "name": "Q8",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "9. 考えが頭から離れない、強迫観念がある",
+            "name": "Q9",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "10. じっとしていられない、落ち着きがない、多動である",
+            "name": "Q10",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "11. 大人にまとわりつく、依存的すぎる",
+            "name": "Q11",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "12. 孤独感を訴える",
+            "name": "Q12",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "13. 混乱している、ぼんやりしているようにみえる",
+            "name": "Q13",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "14. よく泣く",
+            "name": "Q14",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "15. 動物に対して残酷である",
+            "name": "Q15",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "16. 他人に対して残酷、いじめ、意地悪をする",
+            "name": "Q16",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "17. 白日夢をみる、考えごとに没頭する",
+            "name": "Q17",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "18. 故意に自分を傷つける、自殺を図る",
+            "name": "Q18",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "19. 注目をひこうとする",
+            "name": "Q19",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "20. 自分の物を壊したり傷つけたりする",
+            "name": "Q20",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "21. 家族や他人の物を壊したり傷つけたりする",
+            "name": "Q21",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "22. 家で言うことをきかない",
+            "name": "Q22",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "23. 学校で言うことをきかない",
+            "name": "Q23",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "24. 食事をあまりしない",
+            "name": "Q24",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "25. 他の子どもとうまくやっていけない",
+            "name": "Q25",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "26. 悪いことをした後で罪悪感を感じていないようにみえる",
+            "name": "Q26",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "27. すぐにやきもちをやく",
+            "name": "Q27",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "28. 家庭、学校などで規則を破る",
+            "name": "Q28",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "29. 学校以外の特定の動物、状況、場所を恐れる",
+            "name": "Q29",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "30. 学校に行くのを怖がる",
+            "name": "Q30",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "31. 何か悪いことを考えたりしたりするのではないかと恐れる",
+            "name": "Q31",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "32. 完璧でなければならないと感じている",
+            "name": "Q32",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "33. だれも自分を愛してくれないと感じたり訴えたりする",
+            "name": "Q33",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "34. 他人が自分をねらっていると感じている",
+            "name": "Q34",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "35. 自分には価値がない、劣っていると感じている",
+            "name": "Q35",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "36. よくけがをする、事故にあいやすい",
+            "name": "Q36",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "37. よくけんかをする",
+            "name": "Q37",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "38. よくからかわれる",
+            "name": "Q38",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "39. 問題を起こす仲間とつるんでいる",
+            "name": "Q39",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "40. そこにない音や声が聞こえる",
+            "name": "Q40",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "41. 衝動的である、よく考えずに行動する",
+            "name": "Q41",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "42. 他人といるより1人でいることを好む",
+            "name": "Q42",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "43. うそをつく、だます",
+            "name": "Q43",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "44. 爪をかむ",
+            "name": "Q44",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "45. 神経質である、興奮しやすい、緊張している",
+            "name": "Q45",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "46. 神経質な動きやひきつけ",
+            "name": "Q46",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "47. 悪夢をみる",
+            "name": "Q47",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "48. 他の子どもたちに好かれていない",
+            "name": "Q48",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "49. 便秘である、便が出ない",
+            "name": "Q49",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "50. 怖がりすぎる、不安になりすぎる",
+            "name": "Q50",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "51. めまいやふらつきを感じる",
+            "name": "Q51",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "52. 罪悪感を感じすぎる",
+            "name": "Q52",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "53. 食べすぎる",
+            "name": "Q53",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "54. 理由もなく疲れすぎる",
+            "name": "Q54",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "55. 太りすぎている",
+            "name": "Q55",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "身体的問題（下位項目）",
+            "type": "subsection",
+            "description": "医学的な原因がはっきりしない身体的問題"
+        },
+        {
+            "dispname": "56a. 体や手足の痛み（胃痛や頭痛を除く）",
+            "name": "Q56a",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "56b. 頭痛",
+            "name": "Q56b",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "56c. 吐き気、気分が悪い",
+            "name": "Q56c",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "56d. 目の問題（眼鏡で矯正される場合を除く）",
+            "name": "Q56d",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "56e. 皮膚の発疹やその他の皮膚の問題",
+            "name": "Q56e",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "56f. 胃痛",
+            "name": "Q56f",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "56g. 嘔吐する",
+            "name": "Q56g",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "57. 人を殴る",
+            "name": "Q57",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "58. 鼻、皮膚、体の他の部分をほじる",
+            "name": "Q58",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "59. 人前で性器をいじる",
+            "name": "Q59",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "60. 性器をいじりすぎる",
+            "name": "Q60",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "61. 学校の成績が悪い",
+            "name": "Q61",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "62. 身体の動きがぎこちない、不器用である",
+            "name": "Q62",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "63. 年上の子どもといることを好む",
+            "name": "Q63",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "64. 年下の子どもといることを好む",
+            "name": "Q64",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "65. 話すことを拒む",
+            "name": "Q65",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "66. 同じ行為を何度も繰り返す、強迫行為",
+            "name": "Q66",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "67. 家出をする",
+            "name": "Q67",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "68. よく叫ぶ",
+            "name": "Q68",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "69. 秘密主義である、心の内を話さない",
+            "name": "Q69",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "70. そこにないものが見える",
+            "name": "Q70",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "71. 自意識過剰である、恥ずかしがりやすい",
+            "name": "Q71",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "72. 火をつける",
+            "name": "Q72",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "73. 性的な問題",
+            "name": "Q73",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "74. 見せびらかしたり、おどけたりする",
+            "name": "Q74",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "75. 内気すぎる、おとなしすぎる",
+            "name": "Q75",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "76. 他の子どもより睡眠時間が少ない",
+            "name": "Q76",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "77. 昼夜を問わず、他の子どもより睡眠時間が多い",
+            "name": "Q77",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "78. 不注意である、気が散りやすい",
+            "name": "Q78",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "79. 言葉の問題",
+            "name": "Q79",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "80. ぼんやりと見つめている",
+            "name": "Q80",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "81. 家で盗みをする",
+            "name": "Q81",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "82. 家の外で盗みをする",
+            "name": "Q82",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "83. 必要ない物をためこんでいる",
+            "name": "Q83",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "84. 奇妙な行動",
+            "name": "Q84",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "85. 奇妙な考え",
+            "name": "Q85",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "86. 頑固である、むっつりしている、いらいらしている",
+            "name": "Q86",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "87. 気分や感情が急に変わる",
+            "name": "Q87",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "88. よくすねる",
+            "name": "Q88",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "89. 疑い深い",
+            "name": "Q89",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "90. 悪口を言う、汚い言葉を使う",
+            "name": "Q90",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "91. 自殺について話す",
+            "name": "Q91",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "92. 睡眠中に話したり歩いたりする",
+            "name": "Q92",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "93. 話しすぎる",
+            "name": "Q93",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "94. よく他人をからかう",
+            "name": "Q94",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "95. かんしゃくを起こす、短気である",
+            "name": "Q95",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "96. 性のことを考えすぎる",
+            "name": "Q96",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "97. 人を脅す",
+            "name": "Q97",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "98. 指しゃぶりをする",
+            "name": "Q98",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "99. タバコを吸う、かむ、かぐ",
+            "name": "Q99",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "100. 眠れない",
+            "name": "Q100",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "101. 学校をさぼる",
+            "name": "Q101",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "102. 活動性が低い、動きが鈍い、元気がない",
+            "name": "Q102",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "103. 不幸である、悲しい、憂うつである",
+            "name": "Q103",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "104. 異常に騒がしい",
+            "name": "Q104",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "105. 医療目的以外で薬物を使う（アルコールやタバコを除く）",
+            "name": "Q105",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "106. 器物破損をする",
+            "name": "Q106",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "107. 昼間おもらしをする",
+            "name": "Q107",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "108. 夜尿をする",
+            "name": "Q108",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "109. 泣き言を言う",
+            "name": "Q109",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "110. 異性になりたがる",
+            "name": "Q110",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "111. 引っ込み思案である、他人とかかわりたがらない",
+            "name": "Q111",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "112. 心配する",
+            "name": "Q112",
+            "type": "radio",
+            "inline": true,
+            "selector": "0|1|2",
+            "required": true
+        },
+        {
+            "dispname": "113. その他の問題",
+            "name": "Q113",
+            "type": "textarea",
+            "rows": 2,
+            "description": "上記にない問題がありましたら、お書きください"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "不安・抑うつ尺度_原点数",
+            "type": "eval",
+            "formula": "[[Q12.index]] + [[Q13.index]] + [[Q14.index]] + [[Q30.index]] + [[Q31.index]] + [[Q32.index]] + [[Q33.index]] + [[Q35.index]] + [[Q45.index]] + [[Q47.index]] + [[Q50.index]] + [[Q51.index]] + [[Q52.index]] + [[Q71.index]] + [[Q103.index]] + [[Q111.index]] + [[Q112.index]]",
+            "noreport": true
+        },
+        {
+            "name": "不安・抑うつ_T得点",
+            "type": "eval",
+            "formula": "Math.round(50 + (([[不安・抑うつ尺度_原点数]] - 5.5) / 4.2) * 10)",
+            "dispname": "不安・抑うつ T得点"
+        },
+        {
+            "name": "不安・抑うつ_判定",
+            "type": "eval",
+            "formula": "((不安・抑うつ_T得点)) >= 70 ? '臨床域（要専門的評価）' : ((不安・抑うつ_T得点)) >= 65 ? '境界域（経過観察）' : '正常域'",
+            "dispname": "不安・抑うつ 臨床判定"
+        },
+        {
+            "name": "引きこもり・抑うつ尺度_原点数",
+            "type": "eval",
+            "formula": "[[Q5.index]] + [[Q42.index]] + [[Q65.index]] + [[Q69.index]] + [[Q75.index]] + [[Q102.index]]",
+            "noreport": true
+        },
+        {
+            "name": "引きこもり・抑うつ_T得点",
+            "type": "eval",
+            "formula": "Math.round(50 + (([[引きこもり・抑うつ尺度_原点数]] - 2.1) / 2.8) * 10)",
+            "dispname": "引きこもり・抑うつ T得点"
+        },
+        {
+            "name": "引きこもり・抑うつ_判定",
+            "type": "eval",
+            "formula": "((引きこもり・抑うつ_T得点)) >= 70 ? '臨床域（要専門的評価）' : ((引きこもり・抑うつ_T得点)) >= 65 ? '境界域（経過観察）' : '正常域'",
+            "dispname": "引きこもり・抑うつ 臨床判定"
+        },
+        {
+            "name": "身体愁訴尺度_原点数",
+            "type": "eval",
+            "formula": "[[Q56a.index]] + [[Q56b.index]] + [[Q56c.index]] + [[Q56d.index]] + [[Q56e.index]] + [[Q56f.index]] + [[Q56g.index]]",
+            "noreport": true
+        },
+        {
+            "name": "身体愁訴_T得点",
+            "type": "eval",
+            "formula": "Math.round(50 + (([[身体愁訴尺度_原点数]] - 1.8) / 2.4) * 10)",
+            "dispname": "身体愁訴 T得点"
+        },
+        {
+            "name": "身体愁訴_判定",
+            "type": "eval",
+            "formula": "((身体愁訴_T得点)) >= 70 ? '臨床域（要専門的評価）' : ((身体愁訴_T得点)) >= 65 ? '境界域（経過観察）' : '正常域'",
+            "dispname": "身体愁訴 臨床判定"
+        },
+        {
+            "name": "社会性の問題尺度_原点数",
+            "type": "eval",
+            "formula": "[[Q11.index]] + [[Q25.index]] + [[Q38.index]] + [[Q48.index]] + [[Q62.index]] + [[Q64.index]]",
+            "noreport": true
+        },
+        {
+            "name": "社会性の問題_T得点",
+            "type": "eval",
+            "formula": "Math.round(50 + (([[社会性の問題尺度_原点数]] - 1.9) / 2.6) * 10)",
+            "dispname": "社会性の問題 T得点"
+        },
+        {
+            "name": "社会性の問題_判定",
+            "type": "eval",
+            "formula": "((社会性の問題_T得点)) >= 70 ? '臨床域（要専門的評価）' : ((社会性の問題_T得点)) >= 65 ? '境界域（経過観察）' : '正常域'",
+            "dispname": "社会性の問題 臨床判定"
+        },
+        {
+            "name": "思考の問題尺度_原点数",
+            "type": "eval",
+            "formula": "[[Q9.index]] + [[Q18.index]] + [[Q34.index]] + [[Q40.index]] + [[Q46.index]] + [[Q58.index]] + [[Q59.index]] + [[Q60.index]] + [[Q66.index]] + [[Q70.index]] + [[Q76.index]] + [[Q83.index]] + [[Q84.index]] + [[Q85.index]] + [[Q92.index]]",
+            "noreport": true
+        },
+        {
+            "name": "思考の問題_T得点",
+            "type": "eval",
+            "formula": "Math.round(50 + (([[思考の問題尺度_原点数]] - 3.2) / 4.1) * 10)",
+            "dispname": "思考の問題 T得点"
+        },
+        {
+            "name": "思考の問題_判定",
+            "type": "eval",
+            "formula": "((思考の問題_T得点)) >= 70 ? '臨床域（要専門的評価）' : ((思考の問題_T得点)) >= 65 ? '境界域（経過観察）' : '正常域'",
+            "dispname": "思考の問題 臨床判定"
+        },
+        {
+            "name": "注意の問題尺度_原点数",
+            "type": "eval",
+            "formula": "[[Q1.index]] + [[Q4.index]] + [[Q8.index]] + [[Q10.index]] + [[Q13.index]] + [[Q17.index]] + [[Q41.index]] + [[Q61.index]] + [[Q78.index]]",
+            "noreport": true
+        },
+        {
+            "name": "注意の問題_T得点",
+            "type": "eval",
+            "formula": "Math.round(50 + (([[注意の問題尺度_原点数]] - 4.8) / 5.2) * 10)",
+            "dispname": "注意の問題 T得点"
+        },
+        {
+            "name": "注意の問題_判定",
+            "type": "eval",
+            "formula": "((注意の問題_T得点)) >= 70 ? '臨床域（要専門的評価）' : ((注意の問題_T得点)) >= 65 ? '境界域（経過観察）' : '正常域'",
+            "dispname": "注意の問題 臨床判定"
+        },
+        {
+            "name": "規則違反行動尺度_原点数",
+            "type": "eval",
+            "formula": "[[Q2.index]] + [[Q26.index]] + [[Q28.index]] + [[Q39.index]] + [[Q43.index]] + [[Q63.index]] + [[Q67.index]] + [[Q72.index]] + [[Q73.index]] + [[Q81.index]] + [[Q82.index]] + [[Q90.index]] + [[Q96.index]] + [[Q99.index]] + [[Q101.index]] + [[Q105.index]]",
+            "noreport": true
+        },
+        {
+            "name": "規則違反行動_T得点",
+            "type": "eval",
+            "formula": "Math.round(50 + (([[規則違反行動尺度_原点数]] - 3.1) / 4.7) * 10)",
+            "dispname": "規則違反行動 T得点"
+        },
+        {
+            "name": "規則違反行動_判定",
+            "type": "eval",
+            "formula": "((規則違反行動_T得点)) >= 70 ? '臨床域（要専門的評価）' : ((規則違反行動_T得点)) >= 65 ? '境界域（経過観察）' : '正常域'",
+            "dispname": "規則違反行動 臨床判定"
+        },
+        {
+            "name": "攻撃的行動尺度_原点数",
+            "type": "eval",
+            "formula": "[[Q3.index]] + [[Q16.index]] + [[Q19.index]] + [[Q20.index]] + [[Q21.index]] + [[Q22.index]] + [[Q23.index]] + [[Q27.index]] + [[Q37.index]] + [[Q57.index]] + [[Q68.index]] + [[Q86.index]] + [[Q87.index]] + [[Q88.index]] + [[Q89.index]] + [[Q94.index]] + [[Q95.index]] + [[Q97.index]]",
+            "noreport": true
+        },
+        {
+            "name": "攻撃的行動_T得点",
+            "type": "eval",
+            "formula": "Math.round(50 + (([[攻撃的行動尺度_原点数]] - 7.8) / 8.9) * 10)",
+            "dispname": "攻撃的行動 T得点"
+        },
+        {
+            "name": "攻撃的行動_判定",
+            "type": "eval",
+            "formula": "((攻撃的行動_T得点)) >= 70 ? '臨床域（要専門的評価）' : ((攻撃的行動_T得点)) >= 65 ? '境界域（経過観察）' : '正常域'",
+            "dispname": "攻撃的行動 臨床判定"
+        },
+        {
+            "name": "内在化問題_原点数",
+            "type": "eval",
+            "formula": "[[不安・抑うつ尺度_原点数]] + [[引きこもり・抑うつ尺度_原点数]] + [[身体愁訴尺度_原点数]]",
+            "noreport": true
+        },
+        {
+            "name": "内在化問題_T得点",
+            "type": "eval",
+            "formula": "Math.round(50 + (([[内在化問題_原点数]] - 9.4) / 8.8) * 10)",
+            "dispname": "内在化問題 T得点"
+        },
+        {
+            "name": "内在化問題_判定",
+            "type": "eval",
+            "formula": "((内在化問題_T得点)) >= 64 ? '臨床域（要専門的評価）' : ((内在化問題_T得点)) >= 60 ? '境界域（経過観察）' : '正常域'",
+            "dispname": "内在化問題 臨床判定"
+        },
+        {
+            "name": "外在化問題_原点数",
+            "type": "eval",
+            "formula": "[[規則違反行動尺度_原点数]] + [[攻撃的行動尺度_原点数]]",
+            "noreport": true
+        },
+        {
+            "name": "外在化問題_T得点",
+            "type": "eval",
+            "formula": "Math.round(50 + (([[外在化問題_原点数]] - 10.9) / 12.4) * 10)",
+            "dispname": "外在化問題 T得点"
+        },
+        {
+            "name": "外在化問題_判定",
+            "type": "eval",
+            "formula": "((外在化問題_T得点)) >= 64 ? '臨床域（要専門的評価）' : ((外在化問題_T得点)) >= 60 ? '境界域（経過観察）' : '正常域'",
+            "dispname": "外在化問題 臨床判定"
+        },
+        {
+            "name": "総合問題_原点数",
+            "type": "eval",
+            "formula": "[[内在化問題_原点数]] + [[外在化問題_原点数]] + [[社会性の問題尺度_原点数]] + [[思考の問題尺度_原点数]] + [[注意の問題尺度_原点数]]",
+            "noreport": true
+        },
+        {
+            "name": "総合問題_T得点",
+            "type": "eval",
+            "formula": "Math.round(50 + (([[総合問題_原点数]] - 28.1) / 23.8) * 10)",
+            "dispname": "総合問題 T得点"
+        },
+        {
+            "name": "総合問題_判定",
+            "type": "eval",
+            "formula": "((総合問題_T得点)) >= 64 ? '臨床域（要専門的評価）' : ((総合問題_T得点)) >= 60 ? '境界域（経過観察）' : '正常域'",
+            "dispname": "総合問題 臨床判定"
+        },
+        {
+            "name": "ASD_パターン判定",
+            "type": "eval",
+            "formula": "((社会性の問題_T得点)) >= 67 && ((思考の問題_T得点)) >= 67 && ((注意の問題_T得点)) >= 67 ? 'ASDパターン陽性（3尺度すべてで境界域以上）- 専門機関での評価を強く推奨' : ((社会性の問題_T得点)) >= 65 || ((思考の問題_T得点)) >= 65 || ((注意の問題_T得点)) >= 65 ? 'ASD関連項目で一部高値 - 経過観察または専門家相談を検討' : 'ASDパターン陰性'",
+            "dispname": "自閉症スペクトラム障害パターン"
+        },
+        {
+            "name": "高リスク項目_チェック",
+            "type": "eval",
+            "formula": "[[Q18.index]] >= 1 || [[Q91.index]] >= 1 ? '【重要】自殺関連項目に回答あり - 緊急度の高い専門的評価が必要' : '自殺関連項目での高リスクなし'",
+            "dispname": "緊急度評価"
+        },
+        {
+            "name": "精神病様症状_チェック",
+            "type": "eval",
+            "formula": "[[Q40.index]] >= 1 || [[Q70.index]] >= 1 ? '【注意】知覚異常項目に回答あり - 精神科専門医による評価を推奨' : '知覚異常項目での異常なし'",
+            "dispname": "精神病様症状"
+        },
+        {
+            "name": "自殺_自傷リスク",
+            "type": "emergency",
+            "formula": "[[Q18.index]] >= 1 || [[Q91.index]] >= 1",
+            "dispname": "自殺企図・自殺念慮の緊急評価"
+        },
+        {
+            "name": "精神病様症状",
+            "type": "emergency",
+            "formula": "[[Q40.index]] >= 1 || [[Q70.index]] >= 1",
+            "dispname": "幻聴・幻視の緊急評価"
+        },
+        {
+            "name": "重篤な行動問題",
+            "type": "emergency",
+            "formula": "[[Q15.index]] >= 2 || [[Q16.index]] >= 2 || [[Q72.index]] >= 1",
+            "dispname": "動物虐待・対人暴力・放火の緊急評価"
+        },
+        {
+            "name": "家出_逃走リスク",
+            "type": "emergency",
+            "formula": "[[Q67.index]] >= 1 && [[Q101.index]] >= 2",
+            "dispname": "家出行動と学校回避の組み合わせ"
+        },
+        {
+            "name": "性的問題行動",
+            "type": "emergency",
+            "formula": "[[Q73.index]] >= 2 || ([[Q59.index]] >= 1 && [[Q60.index]] >= 2)",
+            "dispname": "重篤な性的問題行動"
+        },
+        {
+            "name": "薬物使用",
+            "type": "emergency",
+            "formula": "[[Q2.index]] >= 2 || [[Q105.index]] >= 1",
+            "dispname": "アルコール常用・違法薬物使用"
+        },
+        {
+            "name": "器物破損_窃盗",
+            "type": "emergency",
+            "formula": "[[Q82.index]] >= 2 || [[Q106.index]] >= 2",
+            "dispname": "常習的な窃盗・器物破損"
+        },
+        {
+            "name": "暴力_脅迫行為",
+            "type": "emergency",
+            "formula": "[[Q57.index]] >= 2 || [[Q97.index]] >= 2",
+            "dispname": "常習的な対人暴力・脅迫"
+        },
+        {
+            "name": "重度の思考障害",
+            "type": "emergency",
+            "formula": "[[Q84.index]] >= 2 && [[Q85.index]] >= 2 && [[Q34.index]] >= 1",
+            "dispname": "奇妙な行動・考え・被害妄想の組み合わせ"
+        },
+        {
+            "name": "極度の社会的孤立",
+            "type": "emergency",
+            "formula": "[[Q111.index]] >= 2 && [[Q65.index]] >= 2 && [[Q42.index]] >= 2",
+            "dispname": "完全な社会的引きこもり状態"
+        },
+        {
+            "name": "摂食障害疑い",
+            "type": "emergency",
+            "formula": "[[Q24.index]] >= 2 || ([[Q53.index]] >= 2 && [[Q55.index]] >= 1)",
+            "dispname": "重篤な摂食問題"
+        },
+        {
+            "name": "睡眠障害_覚醒問題",
+            "type": "emergency",
+            "formula": "[[Q100.index]] >= 2 || ([[Q76.index]] >= 2 && [[Q77.index]] >= 2)",
+            "dispname": "重篤な睡眠リズム障害"
+        }
+    ]
+}

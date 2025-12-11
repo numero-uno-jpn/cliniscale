@@ -1,0 +1,275 @@
+{
+    "_comment": [
+        "NIHSS (National Institutes of Health Stroke Scale)問診票定義",
+        "脳卒中重症度評価スケール",
+        "参考資料: NIH公式サイト https://www.ninds.nih.gov/health-information/stroke/assess-and-treat/nih-stroke-scale",
+        "原著論文: Brott T, Adams HP Jr, Olinger CP, et al. Measurements of acute cerebral infarction: a clinical examination scale. Stroke. 1989;20(7):864-870.",
+        "11項目、0-42点のスケール、点数が高いほど重症"
+    ],
+    "title": "NIHSS 脳卒中重症度評価スケール",
+    "description": [
+        "NIHSSは脳卒中の重症度を評価する国際標準スケールです。",
+        "意識レベル、運動機能、感覚機能、言語機能など11項目を評価し、0-42点で重症度を判定します。",
+        "評価は必ず項目順に実施し、一度評価した項目は修正しないでください。"
+    ],
+    "dept_in_charge": "脳神経内科",
+    "responsible_person": [
+        "脳神経内科医師"
+    ],
+    "fields": [
+        {
+            "name": "evaluation_date",
+            "type": "date",
+            "dispname": "評価日",
+            "required": true,
+            "format": "YYYY/MM/DD"
+        },
+        {
+            "name": "evaluator",
+            "type": "text",
+            "dispname": "評価者",
+            "required": true,
+            "description": "評価を実施した医療従事者名"
+        },
+        {
+            "name": "1a_consciousness",
+            "type": "radio",
+            "dispname": "1a. 意識水準",
+            "required": true,
+            "selector": [
+                "完全覚醒",
+                "簡単な刺激で覚醒",
+                "繰り返し刺激・強い刺激で覚醒",
+                "完全に無反応"
+            ],
+            "selectoridx": "0|1|2|3",
+            "description": "言語刺激、痛み刺激により覚醒レベルを検査する"
+        },
+        {
+            "name": "1b_questions",
+            "type": "radio",
+            "dispname": "1b. 意識障害:質問",
+            "required": true,
+            "selector": [
+                "両方正解",
+                "片方正解",
+                "両方不正解"
+            ],
+            "selectoridx": "0|1|2",
+            "description": "「今の月」と「年齢」を質問し、見当識と記憶を検査する"
+        },
+        {
+            "name": "1c_commands",
+            "type": "radio",
+            "dispname": "1c. 意識障害:従命",
+            "required": true,
+            "selector": [
+                "両方可",
+                "片方可",
+                "両方不可"
+            ],
+            "selectoridx": "0|1|2",
+            "description": "眼を「閉じる・開ける」、手を「握る・開く」を指示し、1段階命令に対する従命の可否を検査する"
+        },
+        {
+            "name": "2_gaze",
+            "type": "radio",
+            "dispname": "2. 最良の注視",
+            "required": true,
+            "selector": [
+                "正常",
+                "部分的注視麻痺",
+                "頭位変換眼球反射でも克服できない固定した偏視や完全注視麻痺"
+            ],
+            "selectoridx": "0|1|2",
+            "description": "随意的または頭位変換眼球反射による水平眼球運動を検査する"
+        },
+        {
+            "name": "3_visual_field",
+            "type": "radio",
+            "dispname": "3. 視野",
+            "required": true,
+            "selector": [
+                "視野欠損なし",
+                "部分的半盲",
+                "完全半盲",
+                "両側性半盲"
+            ],
+            "selectoridx": "0|1|2|3",
+            "description": "対座法で片眼ずつ、上下1/4視野を検査する"
+        },
+        {
+            "name": "4_facial_palsy",
+            "type": "radio",
+            "dispname": "4. 顔面麻痺",
+            "required": true,
+            "selector": [
+                "正常",
+                "軽度の麻痺",
+                "部分的麻痺",
+                "完全麻痺"
+            ],
+            "selectoridx": "0|1|2|3",
+            "description": "歯を見せる、眉を挙げる、目をギュッと閉じるなどで評価"
+        },
+        {
+            "name": "5a_left_arm",
+            "type": "radio",
+            "dispname": "5a. 左上肢",
+            "required": true,
+            "selector": [
+                "下垂なし",
+                "10秒以内に下垂するがベッドまでは落ちない",
+                "重力に抗して動きはあるが10秒以内に下垂しベッドまで落ちる",
+                "重力に抗して動かない",
+                "全く動きがみられない",
+                "切断・関節癒合"
+            ],
+            "selectoridx": "0|1|2|3|4|0",
+            "description": "座位90度または仰臥位45度に拳上した状態で10秒間保持"
+        },
+        {
+            "name": "5b_right_arm",
+            "type": "radio",
+            "dispname": "5b. 右上肢",
+            "required": true,
+            "selector": [
+                "下垂なし",
+                "10秒以内に下垂するがベッドまでは落ちない",
+                "重力に抗して動きはあるが10秒以内に下垂しベッドまで落ちる",
+                "重力に抗して動かない",
+                "全く動きがみられない",
+                "切断・関節癒合"
+            ],
+            "selectoridx": "0|1|2|3|4|0",
+            "description": "座位90度または仰臥位45度に拳上した状態で10秒間保持"
+        },
+        {
+            "name": "6a_left_leg",
+            "type": "radio",
+            "dispname": "6a. 左下肢",
+            "required": true,
+            "selector": [
+                "下垂なし",
+                "5秒以内に下垂するがベッドまでは落ちない",
+                "重力に抗して動きはあるが5秒以内に下垂しベッドまで落ちる",
+                "重力に抗して動かない",
+                "全く動きがみられない",
+                "切断・関節癒合"
+            ],
+            "selectoridx": "0|1|2|3|4|0",
+            "description": "仰臥位で膝を伸ばし、下肢を30度拳上した状態で5秒間保持"
+        },
+        {
+            "name": "6b_right_leg",
+            "type": "radio",
+            "dispname": "6b. 右下肢",
+            "required": true,
+            "selector": [
+                "下垂なし",
+                "5秒以内に下垂するがベッドまでは落ちない",
+                "重力に抗して動きはあるが5秒以内に下垂しベッドまで落ちる",
+                "重力に抗して動かない",
+                "全く動きがみられない",
+                "切断・関節癒合"
+            ],
+            "selectoridx": "0|1|2|3|4|0",
+            "description": "仰臥位で膝を伸ばし、下肢を30度拳上した状態で5秒間保持"
+        },
+        {
+            "name": "7_ataxia",
+            "type": "radio",
+            "dispname": "7. 運動失調",
+            "required": true,
+            "selector": [
+                "なし",
+                "1肢に存在",
+                "2肢に存在",
+                "切断・関節癒合"
+            ],
+            "selectoridx": "0|1|2|0",
+            "description": "上肢:鼻-指-鼻試験、下肢:踵-脛試験を左右両側で行う"
+        },
+        {
+            "name": "8_sensory",
+            "type": "radio",
+            "dispname": "8. 感覚",
+            "required": true,
+            "selector": [
+                "障害なし",
+                "軽度～中等度の感覚障害",
+                "重度～完全感覚障害"
+            ],
+            "selectoridx": "0|1|2",
+            "description": "左右の顔面・上肢・下肢・体幹に針刺激を与え、痛覚の有無・左右差をみる"
+        },
+        {
+            "name": "9_language",
+            "type": "radio",
+            "dispname": "9. 最良の言語",
+            "required": true,
+            "selector": [
+                "失語なし",
+                "軽度～中等度失語",
+                "重度失語",
+                "無言・全失語"
+            ],
+            "selectoridx": "0|1|2|3",
+            "description": "絵カード・呼称カード・文章カードを用いて失語症の有無と程度を評価"
+        },
+        {
+            "name": "10_dysarthria",
+            "type": "radio",
+            "dispname": "10. 構音障害",
+            "required": true,
+            "selector": [
+                "正常",
+                "軽度～中等度構音障害",
+                "重度構音障害",
+                "挿管または身体的障壁"
+            ],
+            "selectoridx": "0|1|2|0",
+            "description": "単語カードを読んでもらい構音の明瞭さを評価"
+        },
+        {
+            "name": "11_extinction",
+            "type": "radio",
+            "dispname": "11. 消去現象と注意障害",
+            "required": true,
+            "selector": [
+                "異常なし",
+                "視覚・触覚・聴覚・視空間・自己身体に対する不注意または消去現象",
+                "重度の半側不注意または2つ以上の感覚様式に対する消去現象"
+            ],
+            "selectoridx": "0|1|2",
+            "description": "両側同時刺激による消去現象検査、半側不注意の評価"
+        },
+        {
+            "name": "memo",
+            "type": "textarea",
+            "dispname": "備考",
+            "rows": 3,
+            "description": "特記事項があれば記載してください"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "total_score",
+            "type": "eval",
+            "formula": "[[1a_consciousness.index]] + [[1b_questions.index]] + [[1c_commands.index]] + [[2_gaze.index]] + [[3_visual_field.index]] + [[4_facial_palsy.index]] + [[5a_left_arm.index]] + [[5b_right_arm.index]] + [[6a_left_leg.index]] + [[6b_right_leg.index]] + [[7_ataxia.index]] + [[8_sensory.index]] + [[9_language.index]] + [[10_dysarthria.index]] + [[11_extinction.index]]",
+            "dispname": "NIHSS総合計点数"
+        },
+        {
+            "name": "severity_level",
+            "type": "eval",
+            "formula": "[[total_score]] <= 1 ? \"症状なし～軽微\" : [[total_score]] <= 4 ? \"軽症\" : [[total_score]] <= 15 ? \"中等症\" : [[total_score]] <= 20 ? \"中等症～重症\" : [[total_score]] <= 42 ? \"重症\" : \"計算エラー\"",
+            "dispname": "重症度分類"
+        },
+        {
+            "name": "Warning: 死亡率高い可能性 (16点以上)",
+            "type": "warning",
+            "formula": "[[total_score]] >= 16"
+        }
+    ]
+}

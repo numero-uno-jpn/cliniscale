@@ -1,0 +1,318 @@
+{
+    "_comment": [
+        "参考文献: Zung WW. A rating instrument for anxiety disorders. Psychosomatics. 1971;12(6):371-9.",
+        "原典URL: https://psychology-tools.com/test/zung-anxiety-scale",
+        "開発者: William W. K. Zung (1971)",
+        "日本語版研究: 岡村仁. 自己評価式不安尺度(SAS)の信頼性と妥当性の検討. 精神科診断学. 1991;2:113-119.",
+        "20項目、4段階評価、総得点20-80点",
+        "カットオフ値: 40点（標準化得点では50点）"
+    ],
+    "title": "SAS 不安自己評価尺度",
+    "description": [
+        "この質問票は、あなたの不安の程度を評価するためのものです。",
+        "過去数日間のあなたの気持ちや行動について、最もあてはまるものを選んでください。"
+    ],
+    "fields": [
+        {
+            "name": "nervous_anxious",
+            "type": "radio",
+            "dispname": "いつもより神経質になったり、不安になったりする",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "全くない",
+                "時々ある",
+                "かなりある",
+                "いつもある"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "name": "afraid_no_reason",
+            "type": "radio",
+            "dispname": "理由もなく恐怖を感じる",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "全くない",
+                "時々ある",
+                "かなりある",
+                "いつもある"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "name": "upset_panicky",
+            "type": "radio",
+            "dispname": "動揺しやすい、またはパニックになりそうになる",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "全くない",
+                "時々ある",
+                "かなりある",
+                "いつもある"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "name": "falling_apart",
+            "type": "radio",
+            "dispname": "ばらばらに壊れてしまいそうな気がする",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "全くない",
+                "時々ある",
+                "かなりある",
+                "いつもある"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "name": "everything_alright",
+            "type": "radio",
+            "dispname": "すべてがうまくいっており、悪いことは起こらないと思う",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "全くない",
+                "時々ある",
+                "かなりある",
+                "いつもある"
+            ],
+            "selectoridx": "4|3|2|1"
+        },
+        {
+            "name": "shake_tremble",
+            "type": "radio",
+            "dispname": "手足が震える",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "全くない",
+                "時々ある",
+                "かなりある",
+                "いつもある"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "name": "headache_pain",
+            "type": "radio",
+            "dispname": "頭痛、首や背中の痛みに悩まされる",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "全くない",
+                "時々ある",
+                "かなりある",
+                "いつもある"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "name": "weak_tired",
+            "type": "radio",
+            "dispname": "弱々しく、疲れやすいと感じる",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "全くない",
+                "時々ある",
+                "かなりある",
+                "いつもある"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "name": "calm_still",
+            "type": "radio",
+            "dispname": "落ち着いていて、じっと座っていられる",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "全くない",
+                "時々ある",
+                "かなりある",
+                "いつもある"
+            ],
+            "selectoridx": "4|3|2|1"
+        },
+        {
+            "name": "heart_beating",
+            "type": "radio",
+            "dispname": "心臓がドキドキするのを感じる",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "全くない",
+                "時々ある",
+                "かなりある",
+                "いつもある"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "name": "dizzy_spells",
+            "type": "radio",
+            "dispname": "めまいに悩まされる",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "全くない",
+                "時々ある",
+                "かなりある",
+                "いつもある"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "name": "fainting_spells",
+            "type": "radio",
+            "dispname": "失神発作を起こす、または起こしそうになる",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "全くない",
+                "時々ある",
+                "かなりある",
+                "いつもある"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "name": "breathe_easily",
+            "type": "radio",
+            "dispname": "呼吸が楽にできる",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "全くない",
+                "時々ある",
+                "かなりある",
+                "いつもある"
+            ],
+            "selectoridx": "4|3|2|1"
+        },
+        {
+            "name": "numbness_tingling",
+            "type": "radio",
+            "dispname": "手足がしびれたり、うずいたりする",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "全くない",
+                "時々ある",
+                "かなりある",
+                "いつもある"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "name": "stomach_indigestion",
+            "type": "radio",
+            "dispname": "胃痛や消化不良に悩まされる",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "全くない",
+                "時々ある",
+                "かなりある",
+                "いつもある"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "name": "bladder_often",
+            "type": "radio",
+            "dispname": "尿意を頻繁に感じる",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "全くない",
+                "時々ある",
+                "かなりある",
+                "いつもある"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "name": "hands_dry_warm",
+            "type": "radio",
+            "dispname": "手はいつも乾いていて暖かい",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "全くない",
+                "時々ある",
+                "かなりある",
+                "いつもある"
+            ],
+            "selectoridx": "4|3|2|1"
+        },
+        {
+            "name": "face_hot_blush",
+            "type": "radio",
+            "dispname": "顔が熱くなったり、赤くなったりする",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "全くない",
+                "時々ある",
+                "かなりある",
+                "いつもある"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "name": "sleep_easily",
+            "type": "radio",
+            "dispname": "簡単に眠りにつけて、よく眠れる",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "全くない",
+                "時々ある",
+                "かなりある",
+                "いつもある"
+            ],
+            "selectoridx": "4|3|2|1"
+        },
+        {
+            "name": "nightmares",
+            "type": "radio",
+            "dispname": "悪夢をみる",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "全くない",
+                "時々ある",
+                "かなりある",
+                "いつもある"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "raw_score",
+            "type": "eval",
+            "dispname": "SAS粗点（20-80点）",
+            "formula": "[[nervous_anxious.index]] + [[afraid_no_reason.index]] + [[upset_panicky.index]] + [[falling_apart.index]] + [[everything_alright.index]] + [[shake_tremble.index]] + [[headache_pain.index]] + [[weak_tired.index]] + [[calm_still.index]] + [[heart_beating.index]] + [[dizzy_spells.index]] + [[fainting_spells.index]] + [[breathe_easily.index]] + [[numbness_tingling.index]] + [[stomach_indigestion.index]] + [[bladder_often.index]] + [[hands_dry_warm.index]] + [[face_hot_blush.index]] + [[sleep_easily.index]] + [[nightmares.index]]"
+        },
+        {
+            "name": "standard_score",
+            "type": "eval",
+            "dispname": "SAS標準得点",
+            "formula": "Math.floor([[raw_score]] * 1.25)"
+        },
+        {
+            "name": "anxiety_level",
+            "type": "eval",
+            "dispname": "不安レベル判定",
+            "formula": "[[standard_score]] < 50 ? '正常範囲' : [[standard_score]] < 60 ? '軽度の不安' : [[standard_score]] < 70 ? '中等度の不安' : '重度の不安'"
+        }
+    ]
+}

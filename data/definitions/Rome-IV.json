@@ -1,0 +1,342 @@
+{
+    "_comment": [
+        "Rome IV診断基準に基づく機能性消化管疾患問診票",
+        "参考文献: Drossman DA, et al. Gastroenterology 2016;150:1257-1261",
+        "Mearin F, et al. Gastroenterology 2016;150:1393-1407",
+        "Stanghellini V, et al. Gastroenterology 2016;150:1380-1392",
+        "公式サイト: https://theromefoundation.org/rome-iv/rome-iv-criteria/",
+        "対象疾患: 過敏性腸症候群、機能性ディスペプシア、機能性便秘",
+        "診断には症状の発症が6ヶ月以上前、最近3ヶ月間の基準満足が必要"
+    ],
+    "title": "Rome IV基準 機能性消化管疾患診断問診票",
+    "description": [
+        "<h3>機能性消化管疾患の診断のための問診票</h3>",
+        "過敏性腸症候群、機能性ディスペプシア、機能性便秘などの診断に使用します。",
+        "症状について正確にお答えください。"
+    ],
+    "contact": "消化器内科",
+    "dept_in_charge": "消化器内科",
+    "responsible_person": [
+        "消化器内科医師"
+    ],
+    "submit_button_title": "診断問診票を送信",
+    "mail_notification": true,
+    "fields": [
+        {
+            "dispname": "基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "年齢",
+            "name": "年齢",
+            "type": "text",
+            "inputmode": "numeric",
+            "postfix": "歳",
+            "testrange": [
+                18,
+                100
+            ],
+            "required": true,
+            "description": "半角数字で入力してください（例: 45）"
+        },
+        {
+            "dispname": "性別",
+            "name": "性別",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "男性|女性|その他"
+        },
+        {
+            "dispname": "過敏性腸症候群（IBS）診断項目",
+            "type": "subsection"
+        },
+        {
+            "dispname": "過去3ヶ月間、少なくとも週に1日以上腹痛がありましたか",
+            "name": "IBS_腹痛頻度",
+            "type": "radio",
+            "required": true,
+            "selector": "はい|いいえ"
+        },
+        {
+            "dispname": "腹痛は排便することで改善しますか",
+            "name": "IBS_排便関連",
+            "type": "radio",
+            "required": true,
+            "selector": "はい|いいえ|わからない",
+            "parentname": "IBS_腹痛頻度",
+            "parentsel": "はい"
+        },
+        {
+            "dispname": "腹痛が始まった時期に排便頻度の変化がありましたか",
+            "name": "IBS_排便頻度変化",
+            "type": "radio",
+            "required": true,
+            "selector": "はい|いいえ|わからない",
+            "parentname": "IBS_腹痛頻度",
+            "parentsel": "はい"
+        },
+        {
+            "dispname": "腹痛が始まった時期に便の形状（外観）の変化がありましたか",
+            "name": "IBS_便形状変化",
+            "type": "radio",
+            "required": true,
+            "selector": "はい|いいえ|わからない",
+            "parentname": "IBS_腹痛頻度",
+            "parentsel": "はい"
+        },
+        {
+            "dispname": "症状が続いている期間はどのくらいですか",
+            "name": "IBS_症状開始時期",
+            "type": "radio",
+            "required": true,
+            "selector": "6ヶ月未満|6ヶ月以上1年未満|1年以上",
+            "parentname": "IBS_腹痛頻度",
+            "parentsel": "はい"
+        },
+        {
+            "dispname": "便性状による分類",
+            "name": "便性状分類",
+            "type": "radio",
+            "required": true,
+            "selector": "硬い便が多い（便秘型）|軟便・下痢が多い（下痢型）|硬い便と軟便が混在（混合型）|分類困難",
+            "parentname": "IBS_腹痛頻度",
+            "parentsel": "はい"
+        },
+        {
+            "type": "separator"
+        },
+        {
+            "dispname": "機能性ディスペプシア（FD）診断項目",
+            "type": "subsection"
+        },
+        {
+            "dispname": "過去3ヶ月間に以下の症状がありましたか",
+            "name": "FD_症状有無",
+            "type": "checkbox",
+            "selector": [
+                "食後のもたれ感",
+                "早期飽満感",
+                "心窩部痛",
+                "心窩部灼熱感"
+            ],
+            "description": "みぞおち周辺の症状について（該当する症状がなければ何もチェックしないでください）"
+        },
+        {
+            "dispname": "食後のもたれ感は週に何日程度ありますか",
+            "name": "FD_もたれ頻度",
+            "type": "radio",
+            "required": true,
+            "selector": "週3日以上|週1〜2日|週1日未満",
+            "parentname": "FD_症状有無",
+            "parentsel": "食後のもたれ感"
+        },
+        {
+            "dispname": "早期飽満感（食事開始後すぐに満腹になる）は週に何日程度ありますか",
+            "name": "FD_早期飽満感頻度",
+            "type": "radio",
+            "required": true,
+            "selector": "週3日以上|週1〜2日|週1日未満",
+            "parentname": "FD_症状有無",
+            "parentsel": "早期飽満感"
+        },
+        {
+            "dispname": "心窩部痛（みぞおちの痛み）は週に何日程度ありますか",
+            "name": "FD_心窩部痛頻度",
+            "type": "radio",
+            "required": true,
+            "selector": "週1日以上|週1日未満",
+            "parentname": "FD_症状有無",
+            "parentsel": "心窩部痛"
+        },
+        {
+            "dispname": "心窩部灼熱感（みぞおちの焼けるような感じ）は週に何日程度ありますか",
+            "name": "FD_心窩部灼熱感頻度",
+            "type": "radio",
+            "required": true,
+            "selector": "週1日以上|週1日未満",
+            "parentname": "FD_症状有無",
+            "parentsel": "心窩部灼熱感"
+        },
+        {
+            "dispname": "心窩部痛は排便やガスの排出で改善しますか",
+            "name": "FD_排便改善",
+            "type": "radio",
+            "required": true,
+            "selector": "改善する|改善しない|わからない",
+            "parentname": "FD_症状有無",
+            "parentsel": "心窩部痛"
+        },
+        {
+            "dispname": "症状が続いている期間はどのくらいですか",
+            "name": "FD_症状開始時期",
+            "type": "radio",
+            "required": true,
+            "selector": "6ヶ月未満|6ヶ月以上1年未満|1年以上",
+            "parentname": "FD_症状有無",
+            "parentsel": [
+                "食後のもたれ感",
+                "早期飽満感",
+                "心窩部痛",
+                "心窩部灼熱感"
+            ]
+        },
+        {
+            "type": "separator"
+        },
+        {
+            "dispname": "機能性便秘診断項目",
+            "type": "subsection"
+        },
+        {
+            "dispname": "便秘症状はありますか",
+            "name": "便秘症状",
+            "type": "radio",
+            "required": true,
+            "selector": "はい|いいえ"
+        },
+        {
+            "dispname": "以下の症状に該当するものを選択してください",
+            "name": "便秘症状詳細",
+            "type": "checkbox",
+            "selector": [
+                "排便回数が週3回未満",
+                "便が硬い",
+                "強くいきむ必要がある",
+                "残便感がある",
+                "肛門直腸の閉塞感",
+                "手指による排便補助が必要"
+            ],
+            "parentname": "便秘症状",
+            "parentsel": "はい"
+        },
+        {
+            "dispname": "下剤なしで軟便や水様便が出ることはありますか",
+            "name": "自然軟便",
+            "type": "radio",
+            "required": true,
+            "selector": "はい|いいえ",
+            "parentname": "便秘症状",
+            "parentsel": "はい"
+        },
+        {
+            "type": "separator"
+        },
+        {
+            "dispname": "以下の症状がありますか",
+            "name": "アラーム症状",
+            "type": "checkbox",
+            "selector": [
+                "体重減少",
+                "血便",
+                "発熱",
+                "夜間症状（夜間の下痢、夜間の腹痛など）",
+                "50歳以降の新規発症",
+                "家族歴（大腸がん、炎症性腸疾患など）"
+            ],
+            "description": "該当する症状があればチェックしてください"
+        },
+        {
+            "dispname": "現在服用中の薬剤",
+            "name": "服用薬剤",
+            "type": "checkbox",
+            "selector": [
+                "オピオイド系鎮痛薬",
+                "抗コリン薬",
+                "カルシウム拮抗薬",
+                "抗うつ薬",
+                "その他"
+            ]
+        },
+        {
+            "dispname": "その他の薬剤の詳細",
+            "name": "その他薬剤詳細",
+            "type": "textarea",
+            "rows": 3,
+            "parentname": "服用薬剤",
+            "parentsel": "その他",
+            "description": "その他の薬剤名を具体的にご記入ください"
+        },
+        {
+            "type": "separator"
+        },
+        {
+            "dispname": "生活の質への影響",
+            "type": "subsection"
+        },
+        {
+            "dispname": "症状は日常生活に支障をきたしていますか",
+            "name": "QOL影響",
+            "type": "radio",
+            "required": true,
+            "selector": "大いに支障がある|やや支障がある|軽微な支障|支障はない"
+        },
+        {
+            "dispname": "症状により医療機関への受診が必要と感じますか",
+            "name": "受診必要性",
+            "type": "radio",
+            "selector": "強く必要|やや必要|あまり必要でない|必要でない"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "IBS_関連項目数",
+            "type": "eval",
+            "noreport": true,
+            "formula": "( {{IBS_排便関連}} == 'はい' ? 1 : 0 ) + ( {{IBS_排便頻度変化}} == 'はい' ? 1 : 0 ) + ( {{IBS_便形状変化}} == 'はい' ? 1 : 0 )"
+        },
+        {
+            "name": "IBS診断基準",
+            "type": "eval",
+            "dispname": "Rome IV基準に基づくIBS診断判定",
+            "formula": "( {{IBS_腹痛頻度}} == 'はい' ) && ( [[IBS_関連項目数]] >= 2 ) && ( {{IBS_症状開始時期}} != '6ヶ月未満' ) ? 'Rome IV IBS基準を満たす（腹痛週1回以上+2項目以上該当+6ヶ月以上前発症）' : 'IBS基準を満たさない'"
+        },
+        {
+            "name": "FD_PDS基準",
+            "type": "eval",
+            "dispname": "食後愁訴症候群の診断判定",
+            "formula": "( ( {{FD_症状有無}}.indexOf('食後のもたれ感') >= 0 && {{FD_もたれ頻度}} == '週3日以上' ) || ( {{FD_症状有無}}.indexOf('早期飽満感') >= 0 && {{FD_早期飽満感頻度}} == '週3日以上' ) ) && ( {{FD_症状開始時期}} != '6ヶ月未満' ) ? '食後愁訴症候群（PDS）基準を満たす' : 'PDS基準を満たさない'"
+        },
+        {
+            "name": "FD_EPS基準",
+            "type": "eval",
+            "dispname": "心窩部痛症候群の診断判定",
+            "formula": "( ( {{FD_症状有無}}.indexOf('心窩部痛') >= 0 && {{FD_心窩部痛頻度}} == '週1日以上' ) || ( {{FD_症状有無}}.indexOf('心窩部灼熱感') >= 0 && {{FD_心窩部灼熱感頻度}} == '週1日以上' ) ) && ( {{FD_症状開始時期}} != '6ヶ月未満' ) ? '心窩部痛症候群（EPS）基準を満たす' : 'EPS基準を満たさない'"
+        },
+        {
+            "name": "便秘症状詳細_index_length",
+            "type": "eval",
+            "noreport": true,
+            "formula": "( [[便秘症状詳細.index]] || [] ).length"
+        },
+        {
+            "name": "FC診断基準",
+            "type": "eval",
+            "dispname": "Rome IV基準に基づくFC診断判定",
+            "formula": "[[便秘症状詳細_index_length]] >= 2 && {{自然軟便}} == 'いいえ' && {{IBS診断基準}}.indexOf('満たさない') >= 0 ? '機能性便秘（FC）基準を満たす（6項目中2項目以上該当+自然軟便なし+IBS基準非該当）' : 'FC基準を満たさない'"
+        },
+        {
+            "name": "アラーム症状_index_length",
+            "type": "eval",
+            "noreport": true,
+            "formula": "( [[アラーム症状.index]] || [] ).length"
+        },
+        {
+            "name": "アラーム症状チェック",
+            "type": "eval",
+            "dispname": "器質的疾患除外のためのアラーム症状評価",
+            "formula": "[[アラーム症状_index_length]] > 0 ? 'アラーム症状あり - 精査必要' : 'アラーム症状なし'"
+        },
+        {
+            "name": "Warning: アラーム症状あり",
+            "type": "warning",
+            "formula": "[[アラーム症状_index_length]] > 0"
+        },
+        {
+            "name": "Emergency: 血便・体重減少あり",
+            "type": "emergency",
+            "formula": "{{アラーム症状}}.indexOf('血便') >= 0 || {{アラーム症状}}.indexOf('体重減少') >= 0"
+        }
+    ]
+}

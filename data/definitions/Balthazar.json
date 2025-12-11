@@ -1,0 +1,89 @@
+{
+    "_comment": [
+        "Balthazar CT Severity Index for Acute Pancreatitis (1985, revised 1990)",
+        "原著論文: https://pubmed.ncbi.nlm.nih.gov/4023241/ (1985), https://pubmed.ncbi.nlm.nih.gov/2296641/ (1990)",
+        "参考URL: https://radiopaedia.org/articles/balthazar-score-acute-pancreatitis"
+    ],
+    "title": "Balthazar CT重症度指数",
+    "description": [
+        "急性膵炎のCT所見に基づく重症度評価スコアです",
+        "膵周囲の炎症と壊死の程度を評価し、予後を予測します"
+    ],
+    "fields": [
+        {
+            "dispname": "CT炎症グレード",
+            "type": "subsection"
+        },
+        {
+            "dispname": "膵とその周囲の炎症所見",
+            "name": "炎症グレード",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "グレードA - 正常膵",
+                "グレードB - 膵腫大",
+                "グレードC - 膵周囲の炎症",
+                "グレードD - 1箇所の液体貯留",
+                "グレードE - 2箇所以上の液体貯留またはガス像"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "膵壊死の程度",
+            "type": "subsection"
+        },
+        {
+            "dispname": "造影CTで評価した壊死の範囲",
+            "name": "壊死範囲",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "壊死なし",
+                "壊死30%未満",
+                "壊死30-50%",
+                "壊死50%以上"
+            ],
+            "selectoridx": "0|2|4|6"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "炎症スコア",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[炎症グレード.index]]"
+        },
+        {
+            "name": "壊死スコア",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[壊死範囲.index]]"
+        },
+        {
+            "name": "CTSI総合スコア",
+            "type": "eval",
+            "formula": "[[炎症スコア]] + [[壊死スコア]]"
+        },
+        {
+            "name": "重症度分類",
+            "type": "eval",
+            "formula": "[[CTSI総合スコア]] <= 3 ? '軽度膵炎' : ( [[CTSI総合スコア]] <= 6 ? '中等度膵炎' : '重度膵炎' )"
+        },
+        {
+            "name": "合併症リスク",
+            "type": "eval",
+            "formula": "[[CTSI総合スコア]] <= 3 ? '合併症率8%未満、死亡率3%未満' : ( [[CTSI総合スコア]] <= 6 ? '合併症率35%、死亡率6%' : '合併症率92%、死亡率17%' )"
+        },
+        {
+            "name": "Warning: 中等度リスク CTSI ≥ 4",
+            "formula": "[[CTSI総合スコア]] >= 4",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 重度リスク CTSI ≥ 7",
+            "formula": "[[CTSI総合スコア]] >= 7",
+            "type": "emergency"
+        }
+    ]
+}

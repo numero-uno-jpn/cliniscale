@@ -1,0 +1,97 @@
+{
+    "title": "CAGE アルコール依存症スクリーニングテスト",
+    "_comment": [
+        "CAGE Questionnaire for Alcohol Use Disorder Screening",
+        "開発者: Dr. John A. Ewing",
+        "開発年: 1968年（North Carolina Memorial Hospital）",
+        "論文発表: 1984年（JAMA誌）",
+        "原典論文: Detecting alcoholism. The CAGE questionnaire. JAMA. 1984;252(14):1905-7.",
+        "参考URL: https://kurihama.hosp.go.jp/hospital/screening/cage.html",
+        "参考URL: https://academic.oup.com/occmed/article/64/6/473/1432970",
+        "参考URL: https://www.mhlw.go.jp/kokoro/speciality/detail_alcohol_test1.html",
+        "4項目のスクリーニングテスト、2項目以上「はい」でアルコール依存症の可能性",
+        "CAGEは Cut down, Annoyed, Guilty, Eye-opener の頭文字"
+    ],
+    "description": [
+        "CAGEは、アルコール依存症のスクリーニングを目的とした4項目の簡易テストです。",
+        "質問項目の頭文字（Cut down、Annoyed、Guilty、Eye-opener）からCAGEと名付けられています。",
+        "これまでの人生全体を振り返って、各質問にお答えください。"
+    ],
+    "fields": [
+        {
+            "name": "cut_down",
+            "type": "radio",
+            "dispname": "1. 飲酒量を減らさなければいけないと感じたことがありますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "annoyed",
+            "type": "radio",
+            "dispname": "2. 他人があなたの飲酒を非難するので気にさわったことがありますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "guilty",
+            "type": "radio",
+            "dispname": "3. 自分の飲酒について悪いとか申し訳ないと感じたことがありますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "eye_opener",
+            "type": "radio",
+            "dispname": "4. 神経を落ち着かせたり、二日酔いを治すために迎え酒をしたことがありますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "cage_total",
+            "type": "eval",
+            "dispname": "CAGE合計点",
+            "formula": "[[cut_down.index]] + [[annoyed.index]] + [[guilty.index]] + [[eye_opener.index]]",
+            "noreport": false
+        },
+        {
+            "name": "cage_assessment",
+            "type": "eval",
+            "dispname": "評価結果",
+            "formula": "[[cage_total]] >= 2 ? \"アルコール依存症の可能性があります。専門医療機関への受診をお勧めします。\" : [[cage_total]] == 1 ? \"要注意です。飲酒について見直しを検討してください。\" : \"現時点では問題ありません。\"",
+            "noreport": false
+        },
+        {
+            "name": "Warning: CAGE 1点（要注意）",
+            "type": "warning",
+            "formula": "[[cage_total]] == 1"
+        },
+        {
+            "name": "Emergency: CAGE 2点以上（受診推奨）",
+            "type": "emergency",
+            "formula": "[[cage_total]] >= 2"
+        }
+    ]
+}

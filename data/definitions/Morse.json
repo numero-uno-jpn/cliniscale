@@ -1,0 +1,95 @@
+{
+    "_comment": [
+        "Morse Fall Scale（MFS）転倒リスク評価尺度",
+        "開発者: Janice M. Morse et al. (1989)",
+        "6項目による転倒リスク予測ツール",
+        "Morse JM, Morse RM, Tylko SJ. Development of a Scale to Identify the Fall-Prone Patient. Can J Aging. 1989;8:366-7.",
+        "https://www.ahrq.gov/sites/default/files/wysiwyg/professionals/systems/hospital/fallpxtoolkit/fallpxtk-tool3h.pdf"
+    ],
+    "title": "Morse Fall Scale（MFS）転倒リスク評価",
+    "description": [
+        "患者の転倒リスクを迅速かつ簡単に評価するためのツールです。",
+        "6つの項目に基づいて転倒の可能性を数値化し、予防策の必要性を判断します。"
+    ],
+    "fields": [
+        {
+            "dispname": "転倒歴",
+            "name": "転倒歴",
+            "type": "radio",
+            "required": true,
+            "selector": "なし|あり",
+            "selectoridx": "0|25",
+            "description": "現在の入院中または入院前3カ月以内の転倒歴"
+        },
+        {
+            "dispname": "副診断",
+            "name": "副診断",
+            "type": "radio",
+            "required": true,
+            "selector": "1つの診断のみ|2つ以上の診断",
+            "selectoridx": "0|15",
+            "description": "患者のカルテに記載されている医学的診断の数"
+        },
+        {
+            "dispname": "歩行補助具の使用",
+            "name": "歩行補助具",
+            "type": "radio",
+            "required": true,
+            "selector": "なし・ベッド上安静・看護師による介助|杖・松葉杖・歩行器|家具や壁につかまる",
+            "selectoridx": "0|15|30",
+            "description": "歩行時に使用している補助具の種類"
+        },
+        {
+            "dispname": "静脈内治療・ヘパリンロック",
+            "name": "静脈内治療",
+            "type": "radio",
+            "required": true,
+            "selector": "なし|あり",
+            "selectoridx": "0|20",
+            "description": "静脈内点滴またはヘパリンロックの有無"
+        },
+        {
+            "dispname": "歩行状態",
+            "name": "歩行状態",
+            "type": "radio",
+            "required": true,
+            "selector": "正常歩行・ベッド上安静・車椅子|歩行不安定|歩行障害",
+            "selectoridx": "0|10|20",
+            "description": "患者の歩行能力とバランスの評価"
+        },
+        {
+            "dispname": "精神状態",
+            "name": "精神状態",
+            "type": "radio",
+            "required": true,
+            "selector": "自分の能力を適切に判断|能力を過大評価・制限を忘れる",
+            "selectoridx": "0|15",
+            "description": "自分の移動能力に対する現実的な認識の有無"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "合計スコア",
+            "type": "eval",
+            "formula": "[[転倒歴.index]] + [[副診断.index]] + [[歩行補助具.index]] + [[静脈内治療.index]] + [[歩行状態.index]] + [[精神状態.index]]",
+            "dispname": "Morse Fall Scale 合計スコア（0-125点）"
+        },
+        {
+            "name": "リスク分類",
+            "type": "eval",
+            "formula": "[[合計スコア]] < 25 ? '低リスク' : ([[合計スコア]] < 45 ? '中等度リスク' : '高リスク')",
+            "dispname": "転倒リスクの分類"
+        },
+        {
+            "name": "Warning: 中等度リスク MFSスコア ≥ 25",
+            "formula": "[[合計スコア]] >= 25",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 高リスク MFSスコア ≥ 45",
+            "formula": "[[合計スコア]] >= 45",
+            "type": "emergency"
+        }
+    ]
+}

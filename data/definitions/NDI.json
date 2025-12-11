@@ -1,0 +1,188 @@
+{
+    "_comment": [
+        "Neck Disability Index (NDI) - 日本語版",
+        "原典: Vernon H, Mior S. The Neck Disability Index: A study of reliability and validity. J Manipulative Physiol Ther. 1991;14(7):409-415.",
+        "日本語版: 中丸宏二ら. 頸部痛患者における日本語版Neck Disability Indexの信頼性・妥当性・反応性の検討. 理学療法学. 2012;39(4):199-205.",
+        "URL: https://eprovide.mapi-trust.org/instruments/neck-disability-index",
+        "各項目0-5点、合計0-50点で評価。点数が高いほど障害が大きい。",
+        "MCID: 一般的5点、機械的頸部痛10点、頸椎神経根症7.5-13点（疾患により異なる）"
+    ],
+    "title": "NDI 頸部機能障害指数",
+    "description": [
+        "首の痛みが日常生活にどのような影響を及ぼしているかを評価する質問票です。",
+        "それぞれの質問について、現在の状態に一番近いものを選択してください。"
+    ],
+    "fields": [
+        {
+            "dispname": "痛みの強さ",
+            "name": "pain_intensity",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "現在、首は痛くない",
+                "非常に軽い痛みがある",
+                "中程度の痛みがある",
+                "強い痛みがある",
+                "非常に強い痛みがある",
+                "考えられる中で一番強い痛みがある"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "身の回りのこと",
+            "name": "personal_care",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "首の痛みなく、身の回りのことは自分でできる",
+                "首は痛くなるが、身の回りのことは自分でできる",
+                "身の回りのことをすると首が痛くなるので、ゆっくりと気をつけて行っている",
+                "多少手伝ってもらうが、ほとんどの身の回りのことは何とか自分でできる",
+                "ほとんどの身の回りのことは、毎日手伝ってもらう必要がある",
+                "着替えや洗髪をすることが難しく、ベッドに寝ている"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "物の持ち上げ",
+            "name": "lifting",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "首の痛みなく、重い物を持ち上げることができる",
+                "首は痛くなるが、重い物を持ち上げることができる",
+                "首の痛みのため、床から重い物を持ち上げられないが、テーブルの上などにあれば持ち上げることができる",
+                "首の痛みのため、重い物を持ち上げられないが、持ち上げやすい場所にあれば、軽い物ならば持ち上げることができる",
+                "非常に軽い物ならば持ち上げることができる",
+                "持ち上げたり、運んだりすることがまったくできない"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "読書",
+            "name": "reading",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "首の痛みなく、好きなだけ読書ができる",
+                "軽い首の痛みはあるが、好きなだけ読書ができる",
+                "中程度の首の痛みはあるが、好きなだけ読書ができる",
+                "中程度の首の痛みのため、長時間の読書ができない",
+                "強い首の痛みのため、長時間の読書ができない",
+                "まったく読書ができない"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "頭痛",
+            "name": "headaches",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "頭痛はまったくない",
+                "たまに軽い頭痛がする",
+                "たまに中程度の頭痛がする",
+                "頻繁に中程度の頭痛がする",
+                "頻繁に強い頭痛がする",
+                "ほとんど常に頭痛がする"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "集中力",
+            "name": "concentration",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "問題なく十分に集中することができる",
+                "多少の問題はあるが、十分に集中することができる",
+                "集中するのが難しい",
+                "集中するのがかなり難しい",
+                "集中するのが非常に難しい",
+                "全く集中できない"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "仕事",
+            "name": "work",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "思う存分仕事ができる",
+                "通常の仕事はできる",
+                "通常の仕事のほとんどはできる",
+                "通常の仕事ができない",
+                "ほとんど仕事ができない",
+                "まったく仕事ができない"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "運転",
+            "name": "driving",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "首の痛みなく、車の運転ができる",
+                "軽い首の痛みはあるが、運転できる",
+                "中程度の首の痛みはあるが、運転できる",
+                "中程度の首の痛みのため、長時間の運転はできない",
+                "強い首の痛みのため、ほとんど運転できない",
+                "首の痛みのため、まったく運転できない"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "睡眠",
+            "name": "sleeping",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "眠るのは問題ない",
+                "睡眠障害はわずかで、眠れない時間は1時間未満である",
+                "睡眠障害は軽く、眠れない時間は1～2時間である",
+                "睡眠障害は中程度で、眠れない時間は2～3時間である",
+                "睡眠障害は重く、眠れない時間は3～5時間である",
+                "睡眠障害は非常に重く、眠れない時間は5～7時間で、ほとんど眠れない"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "レクリエーション",
+            "name": "recreation",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "首の痛みなく、すべての余暇活動を行える",
+                "首は少し痛いが、すべての余暇活動を行える",
+                "ほとんどの余暇活動を行えるが、首の痛みのため、すべては行えない",
+                "首の痛みのため、わずかな余暇活動しか行えない",
+                "首の痛みのため、ほとんどの余暇活動が行えない",
+                "首の痛みのため、まったく余暇活動が行えない"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "total_score",
+            "type": "eval",
+            "dispname": "NDI合計スコア",
+            "formula": "[[pain_intensity.index]] + [[personal_care.index]] + [[lifting.index]] + [[reading.index]] + [[headaches.index]] + [[concentration.index]] + [[work.index]] + [[driving.index]] + [[sleeping.index]] + [[recreation.index]]"
+        },
+        {
+            "name": "ndi_percentage",
+            "type": "eval",
+            "dispname": "NDI機能障害度（パーセンテージ）",
+            "formula": "Math.round( ([[total_score]] / 50) * 100 )"
+        },
+        {
+            "name": "disability_level",
+            "type": "eval",
+            "dispname": "機能障害レベル",
+            "formula": "[[total_score]] <= 4 ? '障害なし（0-4点）' : ( [[total_score]] <= 14 ? '軽度（5-14点）' : ( [[total_score]] <= 24 ? '中等度（15-24点）' : ( [[total_score]] <= 34 ? '重度（25-34点）' : '完全障害（35点以上）' ) ) )"
+        }
+    ]
+}

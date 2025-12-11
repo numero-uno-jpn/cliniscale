@@ -1,0 +1,536 @@
+{
+    "_comment": [
+        "OAB-q (Overactive Bladder Questionnaire) - 過活動膀胱質問票",
+        "原著: Coyne KS, et al. Psychometric validation of an overactive bladder symptom and health-related quality of life questionnaire: the OAB-q. Qual Life Res. 2002;11(6):563-574",
+        "32項目版の質問票で、症状困窮度7項目と健康関連QOL25項目を評価",
+        "症状困窮度・QOL項目ともに6段階評価（1-6点）を使用"
+    ],
+    "title": "OAB-q 過活動膀胱質問票",
+    "description": [
+        "この質問票は、過活動膀胱の症状が日常生活に与える影響について評価するものです。",
+        "症状の困窮度と生活の質への影響について、過去4週間の状況をお答えください。"
+    ],
+    "fields": [
+        {
+            "dispname": "症状困窮度",
+            "type": "subsection"
+        },
+        {
+            "dispname": "過去4週間で、急な尿意はどの程度お困りでしたか",
+            "name": "症状困窮1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少し困る",
+                "まあまあ困る",
+                "とても困る",
+                "大変困る",
+                "極めて困る"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "過去4週間で、頻繁な排尿はどの程度お困りでしたか",
+            "name": "症状困窮2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少し困る",
+                "まあまあ困る",
+                "とても困る",
+                "大変困る",
+                "極めて困る"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "過去4週間で、尿が漏れることはどの程度お困りでしたか",
+            "name": "症状困窮3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少し困る",
+                "まあまあ困る",
+                "とても困る",
+                "大変困る",
+                "極めて困る"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "過去4週間で、夜間の排尿はどの程度お困りでしたか",
+            "name": "症状困窮4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少し困る",
+                "まあまあ困る",
+                "とても困る",
+                "大変困る",
+                "極めて困る"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "過去4週間で、尿意を感じてからトイレまでの時間はどの程度お困りでしたか",
+            "name": "症状困窮5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少し困る",
+                "まあまあ困る",
+                "とても困る",
+                "大変困る",
+                "極めて困る"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "過去4週間で、膀胱の具合はどの程度お困りでしたか",
+            "name": "症状困窮6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少し困る",
+                "まあまあ困る",
+                "とても困る",
+                "大変困る",
+                "極めて困る"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "過去4週間で、膀胱の症状全般はどの程度お困りでしたか",
+            "name": "症状困窮7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少し困る",
+                "まあまあ困る",
+                "とても困る",
+                "大変困る",
+                "極めて困る"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "生活の質への影響",
+            "type": "subsection"
+        },
+        {
+            "dispname": "膀胱の問題のために、仕事に影響が出ることがある",
+            "name": "QOL1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "わずかに",
+                "まあまあ",
+                "かなり",
+                "非常に",
+                "極めて"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "膀胱の問題のために、家事に影響が出ることがある",
+            "name": "QOL2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "わずかに",
+                "まあまあ",
+                "かなり",
+                "非常に",
+                "極めて"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "膀胱の問題のために、外出を控えることがある",
+            "name": "QOL3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "わずかに",
+                "まあまあ",
+                "かなり",
+                "非常に",
+                "極めて"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "膀胱の問題のために、車での外出を控えることがある",
+            "name": "QOL4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "わずかに",
+                "まあまあ",
+                "かなり",
+                "非常に",
+                "極めて"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "膀胱の問題のために、活動の計画が困難である",
+            "name": "QOL5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "わずかに",
+                "まあまあ",
+                "かなり",
+                "非常に",
+                "極めて"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "膀胱の問題のために、睡眠が妨げられることがある",
+            "name": "QOL6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "わずかに",
+                "まあまあ",
+                "かなり",
+                "非常に",
+                "極めて"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "膀胱の問題のために、気分が落ち込むことがある",
+            "name": "QOL7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "わずかに",
+                "まあまあ",
+                "かなり",
+                "非常に",
+                "極めて"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "膀胱の問題のために、社会活動に参加しづらいことがある",
+            "name": "QOL8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "わずかに",
+                "まあまあ",
+                "かなり",
+                "非常に",
+                "極めて"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "膀胱の問題のために、友人や家族と過ごす時間が制限されることがある",
+            "name": "QOL9",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "わずかに",
+                "まあまあ",
+                "かなり",
+                "非常に",
+                "極めて"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "膀胱の問題のために、恥ずかしい思いをすることがある",
+            "name": "QOL10",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "わずかに",
+                "まあまあ",
+                "かなり",
+                "非常に",
+                "極めて"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "膀胱の問題のために、不安になることがある",
+            "name": "QOL11",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "わずかに",
+                "まあまあ",
+                "かなり",
+                "非常に",
+                "極めて"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "膀胱の問題のために、イライラすることがある",
+            "name": "QOL12",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "わずかに",
+                "まあまあ",
+                "かなり",
+                "非常に",
+                "極めて"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "膀胱の問題のために、体調が悪いと感じることがある",
+            "name": "QOL13",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "わずかに",
+                "まあまあ",
+                "かなり",
+                "非常に",
+                "極めて"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "膀胱の問題のために、運動や活動に制限があることがある",
+            "name": "QOL14",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "わずかに",
+                "まあまあ",
+                "かなり",
+                "非常に",
+                "極めて"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "膀胱の問題のために、外での食事を控えることがある",
+            "name": "QOL15",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "わずかに",
+                "まあまあ",
+                "かなり",
+                "非常に",
+                "極めて"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "膀胱の問題のために、映画やコンサートなどの娯楽を控えることがある",
+            "name": "QOL16",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "わずかに",
+                "まあまあ",
+                "かなり",
+                "非常に",
+                "極めて"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "膀胱の問題のために、旅行を控えることがある",
+            "name": "QOL17",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "わずかに",
+                "まあまあ",
+                "かなり",
+                "非常に",
+                "極めて"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "膀胱の問題のために、水分摂取を控えることがある",
+            "name": "QOL18",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "わずかに",
+                "まあまあ",
+                "かなり",
+                "非常に",
+                "極めて"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "膀胱の問題のために、性的関係に影響があることがある",
+            "name": "QOL19",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "わずかに",
+                "まあまあ",
+                "かなり",
+                "非常に",
+                "極めて"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "膀胱の問題のために、自分に自信が持てないことがある",
+            "name": "QOL20",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "わずかに",
+                "まあまあ",
+                "かなり",
+                "非常に",
+                "極めて"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "膀胱の問題のために、人生を楽しめないことがある",
+            "name": "QOL21",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "わずかに",
+                "まあまあ",
+                "かなり",
+                "非常に",
+                "極めて"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "膀胱の問題のために、特別なパッドや下着を着用する必要がある",
+            "name": "QOL22",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "わずかに",
+                "まあまあ",
+                "かなり",
+                "非常に",
+                "極めて"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "膀胱の問題のために、下着を頻繁に取り替える必要がある",
+            "name": "QOL23",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "わずかに",
+                "まあまあ",
+                "かなり",
+                "非常に",
+                "極めて"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "膀胱の問題のために、トイレの場所を常に把握している必要がある",
+            "name": "QOL24",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "わずかに",
+                "まあまあ",
+                "かなり",
+                "非常に",
+                "極めて"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "膀胱の問題のために、疲れやすいと感じることがある",
+            "name": "QOL25",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "わずかに",
+                "まあまあ",
+                "かなり",
+                "非常に",
+                "極めて"
+            ],
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "dispname": "症状困窮度スコア",
+            "name": "症状困窮度スコア",
+            "type": "eval",
+            "formula": "[[症状困窮1.index]] + [[症状困窮2.index]] + [[症状困窮3.index]] + [[症状困窮4.index]] + [[症状困窮5.index]] + [[症状困窮6.index]] + [[症状困窮7.index]]"
+        },
+        {
+            "dispname": "QOLスコア",
+            "name": "QOLスコア",
+            "type": "eval",
+            "formula": "[[QOL1.index]] + [[QOL2.index]] + [[QOL3.index]] + [[QOL4.index]] + [[QOL5.index]] + [[QOL6.index]] + [[QOL7.index]] + [[QOL8.index]] + [[QOL9.index]] + [[QOL10.index]] + [[QOL11.index]] + [[QOL12.index]] + [[QOL13.index]] + [[QOL14.index]] + [[QOL15.index]] + [[QOL16.index]] + [[QOL17.index]] + [[QOL18.index]] + [[QOL19.index]] + [[QOL20.index]] + [[QOL21.index]] + [[QOL22.index]] + [[QOL23.index]] + [[QOL24.index]] + [[QOL25.index]]"
+        },
+        {
+            "dispname": "症状困窮度標準化スコア（高いほど困窮度が高い）",
+            "name": "症状困窮度標準化スコア",
+            "type": "eval",
+            "formula": "Math.round( ( [[症状困窮度スコア]] - 7 ) / 35 * 100 )"
+        },
+        {
+            "dispname": "QOL標準化スコア（高いほどQOLへの影響が大きい）",
+            "name": "QOL標準化スコア",
+            "type": "eval",
+            "formula": "Math.round( ( [[QOLスコア]] - 25 ) / 125 * 100 )"
+        },
+        {
+            "dispname": "総合評価",
+            "name": "総合評価",
+            "type": "eval",
+            "formula": "[[症状困窮度標準化スコア]] >= 50 ? '症状困窮度高' : '症状困窮度低'"
+        }
+    ]
+}

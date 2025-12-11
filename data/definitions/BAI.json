@@ -1,0 +1,304 @@
+{
+    "_comment": [
+        "Beck Anxiety Inventory (BAI) 問診票",
+        "原著: Beck, A. T., Epstein, N., Brown, G., & Steer, R. A. (1988). An inventory for measuring clinical anxiety: Psychometric properties. Journal of Consulting and Clinical Psychology, 56(6), 893-897.",
+        "21項目、4段階評価、過去1週間の不安症状評価",
+        "得点範囲: 0-63点",
+        "カットオフ値: 0-7点(最小限), 8-15点(軽度), 16-25点(中等度), 26-63点(重度)"
+    ],
+    "title": "Beck Anxiety Inventory (BAI)",
+    "description": [
+        "この質問票は、過去1週間における不安症状の程度を評価するものです。",
+        "各質問について、あなたがどの程度その症状に悩まされたかを選択してください。"
+    ],
+    "fields": [
+        {
+            "name": "item1",
+            "type": "radio",
+            "dispname": "しびれ感やうずき",
+            "selector": [
+                "全くない",
+                "軽度 - それほど気にならなかった",
+                "中等度 - 時々不快だった",
+                "重度 - ほとんど我慢できなかった"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "item2",
+            "type": "radio",
+            "dispname": "ほてり",
+            "selector": [
+                "全くない",
+                "軽度 - それほど気にならなかった",
+                "中等度 - 時々不快だった",
+                "重度 - ほとんど我慢できなかった"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "item3",
+            "type": "radio",
+            "dispname": "足のふらつき",
+            "selector": [
+                "全くない",
+                "軽度 - それほど気にならなかった",
+                "中等度 - 時々不快だった",
+                "重度 - ほとんど我慢できなかった"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "item4",
+            "type": "radio",
+            "dispname": "リラックスできない",
+            "selector": [
+                "全くない",
+                "軽度 - それほど気にならなかった",
+                "中等度 - 時々不快だった",
+                "重度 - ほとんど我慢できなかった"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "item5",
+            "type": "radio",
+            "dispname": "最悪の事態が起こることへの恐怖",
+            "selector": [
+                "全くない",
+                "軽度 - それほど気にならなかった",
+                "中等度 - 時々不快だった",
+                "重度 - ほとんど我慢できなかった"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "item6",
+            "type": "radio",
+            "dispname": "めまいやふらつき",
+            "selector": [
+                "全くない",
+                "軽度 - それほど気にならなかった",
+                "中等度 - 時々不快だった",
+                "重度 - ほとんど我慢できなかった"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "item7",
+            "type": "radio",
+            "dispname": "動悸や心拍の増加",
+            "selector": [
+                "全くない",
+                "軽度 - それほど気にならなかった",
+                "中等度 - 時々不快だった",
+                "重度 - ほとんど我慢できなかった"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "item8",
+            "type": "radio",
+            "dispname": "不安定感",
+            "selector": [
+                "全くない",
+                "軽度 - それほど気にならなかった",
+                "中等度 - 時々不快だった",
+                "重度 - ほとんど我慢できなかった"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "item9",
+            "type": "radio",
+            "dispname": "恐怖感",
+            "selector": [
+                "全くない",
+                "軽度 - それほど気にならなかった",
+                "中等度 - 時々不快だった",
+                "重度 - ほとんど我慢できなかった"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "item10",
+            "type": "radio",
+            "dispname": "神経過敏",
+            "selector": [
+                "全くない",
+                "軽度 - それほど気にならなかった",
+                "中等度 - 時々不快だった",
+                "重度 - ほとんど我慢できなかった"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "item11",
+            "type": "radio",
+            "dispname": "窒息感",
+            "selector": [
+                "全くない",
+                "軽度 - それほど気にならなかった",
+                "中等度 - 時々不快だった",
+                "重度 - ほとんど我慢できなかった"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "item12",
+            "type": "radio",
+            "dispname": "手の震え",
+            "selector": [
+                "全くない",
+                "軽度 - それほど気にならなかった",
+                "中等度 - 時々不快だった",
+                "重度 - ほとんど我慢できなかった"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "item13",
+            "type": "radio",
+            "dispname": "震え",
+            "selector": [
+                "全くない",
+                "軽度 - それほど気にならなかった",
+                "中等度 - 時々不快だった",
+                "重度 - ほとんど我慢できなかった"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "item14",
+            "type": "radio",
+            "dispname": "コントロールを失うことへの恐怖",
+            "selector": [
+                "全くない",
+                "軽度 - それほど気にならなかった",
+                "中等度 - 時々不快だった",
+                "重度 - ほとんど我慢できなかった"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "item15",
+            "type": "radio",
+            "dispname": "呼吸困難",
+            "selector": [
+                "全くない",
+                "軽度 - それほど気にならなかった",
+                "中等度 - 時々不快だった",
+                "重度 - ほとんど我慢できなかった"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "item16",
+            "type": "radio",
+            "dispname": "死ぬことへの恐怖",
+            "selector": [
+                "全くない",
+                "軽度 - それほど気にならなかった",
+                "中等度 - 時々不快だった",
+                "重度 - ほとんど我慢できなかった"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "item17",
+            "type": "radio",
+            "dispname": "恐れ",
+            "selector": [
+                "全くない",
+                "軽度 - それほど気にならなかった",
+                "中等度 - 時々不快だった",
+                "重度 - ほとんど我慢できなかった"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "item18",
+            "type": "radio",
+            "dispname": "消化不良や腹部の不快感",
+            "selector": [
+                "全くない",
+                "軽度 - それほど気にならなかった",
+                "中等度 - 時々不快だった",
+                "重度 - ほとんど我慢できなかった"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "item19",
+            "type": "radio",
+            "dispname": "失神感",
+            "selector": [
+                "全くない",
+                "軽度 - それほど気にならなかった",
+                "中等度 - 時々不快だった",
+                "重度 - ほとんど我慢できなかった"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "item20",
+            "type": "radio",
+            "dispname": "顔の紅潮",
+            "selector": [
+                "全くない",
+                "軽度 - それほど気にならなかった",
+                "中等度 - 時々不快だった",
+                "重度 - ほとんど我慢できなかった"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "item21",
+            "type": "radio",
+            "dispname": "発汗(暑さによるものではない)",
+            "selector": [
+                "全くない",
+                "軽度 - それほど気にならなかった",
+                "中等度 - 時々不快だった",
+                "重度 - ほとんど我慢できなかった"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "total_score",
+            "type": "eval",
+            "formula": "[[item1.index]] + [[item2.index]] + [[item3.index]] + [[item4.index]] + [[item5.index]] + [[item6.index]] + [[item7.index]] + [[item8.index]] + [[item9.index]] + [[item10.index]] + [[item11.index]] + [[item12.index]] + [[item13.index]] + [[item14.index]] + [[item15.index]] + [[item16.index]] + [[item17.index]] + [[item18.index]] + [[item19.index]] + [[item20.index]] + [[item21.index]]",
+            "dispname": "BAI総得点"
+        },
+        {
+            "name": "severity_level",
+            "type": "eval",
+            "formula": "[[total_score]] <= 7 ? '最小限' : [[total_score]] <= 15 ? '軽度' : [[total_score]] <= 25 ? '中等度' : '重度'",
+            "dispname": "不安レベル分類"
+        }
+    ]
+}

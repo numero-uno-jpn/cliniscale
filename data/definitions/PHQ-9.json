@@ -1,0 +1,179 @@
+{
+    "_comment": "PHQ-9 日本語版(JSAD版)に基づくうつ病スクリーニング問診票",
+    "contact": "医療機関にお問い合わせください",
+    "dept_in_charge": "精神科・心療内科",
+    "description": [
+        "Patient Health Questionnaire-9 (PHQ-9) は、うつ病のスクリーニングと重症度評価のための標準的な自己評価式質問票です。",
+        "過去2週間の症状について、9つの質問にお答えください。",
+        "本問診票は、医師による診断の補助として使用されます。"
+    ],
+    "fields": [
+        {
+            "description": "この2週間、次のような問題にどのくらい頻繁に悩まされていますか？最もよくあてはまる選択肢を一つ選んでください。",
+            "dispname": "PHQ-9 うつ病スクリーニング",
+            "name": "phq9_intro",
+            "type": "subsection"
+        },
+        {
+            "dispname": "1. 物事に対してほとんど興味がない、または楽しめない",
+            "name": "q1_anhedonia",
+            "required": true,
+            "selector": [
+                "全くない",
+                "数日",
+                "半分以上",
+                "ほとんど毎日"
+            ],
+            "selectoridx": "0|1|2|3",
+            "type": "radio"
+        },
+        {
+            "dispname": "2. 気分が落ち込む、憂うつになる、または絶望的な気持ちになる",
+            "name": "q2_depressed_mood",
+            "required": true,
+            "selector": [
+                "全くない",
+                "数日",
+                "半分以上",
+                "ほとんど毎日"
+            ],
+            "selectoridx": "0|1|2|3",
+            "type": "radio"
+        },
+        {
+            "dispname": "3. 寝付きが悪い、途中で目がさめる、または逆に眠り過ぎる",
+            "name": "q3_sleep",
+            "required": true,
+            "selector": [
+                "全くない",
+                "数日",
+                "半分以上",
+                "ほとんど毎日"
+            ],
+            "selectoridx": "0|1|2|3",
+            "type": "radio"
+        },
+        {
+            "dispname": "4. 疲れた感じがする、または気力がない",
+            "name": "q4_fatigue",
+            "required": true,
+            "selector": [
+                "全くない",
+                "数日",
+                "半分以上",
+                "ほとんど毎日"
+            ],
+            "selectoridx": "0|1|2|3",
+            "type": "radio"
+        },
+        {
+            "dispname": "5. あまり食欲がない、または食べ過ぎる",
+            "name": "q5_appetite",
+            "required": true,
+            "selector": [
+                "全くない",
+                "数日",
+                "半分以上",
+                "ほとんど毎日"
+            ],
+            "selectoridx": "0|1|2|3",
+            "type": "radio"
+        },
+        {
+            "dispname": "6. 自分はダメな人間だ、人生の敗北者だと気に病む、または、自分自身あるいは家族に申し訳がないと感じる",
+            "name": "q6_worthlessness",
+            "required": true,
+            "selector": [
+                "全くない",
+                "数日",
+                "半分以上",
+                "ほとんど毎日"
+            ],
+            "selectoridx": "0|1|2|3",
+            "type": "radio"
+        },
+        {
+            "dispname": "7. 新聞を読む、またはテレビを見ることなどに集中することが難しい",
+            "name": "q7_concentration",
+            "required": true,
+            "selector": [
+                "全くない",
+                "数日",
+                "半分以上",
+                "ほとんど毎日"
+            ],
+            "selectoridx": "0|1|2|3",
+            "type": "radio"
+        },
+        {
+            "dispname": "8. 他人が気づくぐらいに動きや話し方が遅くなる、あるいは反対に、そわそわしたり、落ちつかず、ふだんよりも動き回ることがある",
+            "name": "q8_psychomotor",
+            "required": true,
+            "selector": [
+                "全くない",
+                "数日",
+                "半分以上",
+                "ほとんど毎日"
+            ],
+            "selectoridx": "0|1|2|3",
+            "type": "radio"
+        },
+        {
+            "dispname": "9. 死んだ方がましだ、あるいは自分を何らかの方法で傷つけようと思ったことがある",
+            "name": "q9_suicidal",
+            "required": true,
+            "selector": [
+                "全くない",
+                "数日",
+                "半分以上",
+                "ほとんど毎日"
+            ],
+            "selectoridx": "0|1|2|3",
+            "type": "radio"
+        },
+        {
+            "dispname": "10. いずれかの問題に1つでもチェックしているなら、それらの問題によって仕事をしたり、家事をしたり、他の人と仲良くやっていくことがどのくらい困難になっていますか？",
+            "name": "q10_functioning",
+            "required": true,
+            "selector": [
+                "全く困難でない",
+                "やや困難",
+                "困難",
+                "極端に困難"
+            ],
+            "selectoridx": "0|1|2|3",
+            "type": "radio"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "dispname": "PHQ-9の9項目の合計スコア（0-27点）",
+            "formula": "[[q1_anhedonia.index]] + [[q2_depressed_mood.index]] + [[q3_sleep.index]] + [[q4_fatigue.index]] + [[q5_appetite.index]] + [[q6_worthlessness.index]] + [[q7_concentration.index]] + [[q8_psychomotor.index]] + [[q9_suicidal.index]]",
+            "name": "phq9_total_score",
+            "type": "eval"
+        },
+        {
+            "dispname": "PHQ-9スコアに基づく重症度分類",
+            "formula": "[[phq9_total_score]] >= 20 ? \"重度（20-27点）\" : [[phq9_total_score]] >= 15 ? \"中等度〜重度（15-19点）\" : [[phq9_total_score]] >= 10 ? \"中等度（10-14点）\" : [[phq9_total_score]] >= 5 ? \"軽度（5-9点）\" : \"軽微（0-4点）\"",
+            "name": "severity_level",
+            "type": "eval"
+        },
+        {
+            "formula": "[[phq9_total_score]] >= 10",
+            "name": "Warning: PHQ-9スコア10点以上",
+            "type": "warning"
+        },
+        {
+            "formula": "[[q9_suicidal.index]] >= 1",
+            "name": "Emergency: 自殺念慮",
+            "type": "emergency"
+        }
+    ],
+    "message": "PHQ-9問診票への回答をありがとうございました。結果は医師が確認いたします。",
+    "responsible_person": [
+        "担当医師"
+    ],
+    "submit_button_title": "結果を送信",
+    "title": "PHQ-9 うつ病スクリーニング問診票"
+}

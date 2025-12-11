@@ -1,0 +1,121 @@
+{
+    "_comment": [
+        "CAM (Confusion Assessment Method) - せん妄評価",
+        "参考文献: Inouye SK, et al. Clarifying confusion: the confusion assessment method. Ann Intern Med. 1990;113(12):941-948",
+        "原典妥当性: 感度94-100%, 特異度90-95%",
+        "評価時間: 約3-5分",
+        "診断アルゴリズム: 特徴1AND特徴2AND(特徴3OR特徴4)でせん妄と診断"
+    ],
+    "title": "CAM せん妄評価",
+    "description": [
+        "<h3>混乱評価方法 (Confusion Assessment Method)</h3>",
+        "せん妄の診断に用いられる標準的な評価ツールです。",
+        "4つの特徴を評価し、診断アルゴリズムに基づいてせん妄の有無を判定します。"
+    ],
+    "translate": "major",
+    "fields": [
+        {
+            "dispname": "特徴1. 精神状態変化の急性発症または変動性の経過",
+            "name": "特徴1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "なし",
+                "あり"
+            ],
+            "selectoridx": "0|1",
+            "description": "患者の精神状態に急激な変化があったか、または症状の程度が1日の中で変動するかを評価してください"
+        },
+        {
+            "dispname": "特徴2. 注意力の欠如",
+            "name": "特徴2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "なし",
+                "あり"
+            ],
+            "selectoridx": "0|1",
+            "description": "患者が注意を集中したり維持することが困難である、または容易に気が散るかを評価してください"
+        },
+        {
+            "dispname": "特徴3. 意識レベルの変化",
+            "name": "特徴3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "なし",
+                "あり"
+            ],
+            "selectoridx": "0|1",
+            "description": "患者の意識レベルが正常な覚醒状態以外（過度に注意深い、嗜眠状態、昏迷状態など）かを評価してください"
+        },
+        {
+            "dispname": "特徴4. 無秩序な思考",
+            "name": "特徴4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "なし",
+                "あり"
+            ],
+            "selectoridx": "0|1",
+            "description": "患者の思考が無秩序または一貫性がない（支離滅裂な会話、論理性の欠如、話題の予測不能な変化など）かを評価してください"
+        },
+        {
+            "dispname": "追加情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "観察された症状",
+            "name": "症状詳細",
+            "type": "textarea",
+            "rows": 4,
+            "description": "せん妄に関連する具体的な症状や行動を記録してください"
+        },
+        {
+            "dispname": "発症要因",
+            "name": "要因",
+            "type": "checkbox",
+            "selector": [
+                "感染症",
+                "薬物",
+                "脱水",
+                "電解質異常",
+                "手術後",
+                "環境変化",
+                "睡眠不足",
+                "その他"
+            ],
+            "description": "考えられるせん妄の発症要因を選択してください"
+        },
+        {
+            "dispname": "その他の要因",
+            "name": "その他要因",
+            "type": "text",
+            "parentname": "要因",
+            "parentsel": "その他",
+            "description": "その他の要因について具体的に記載してください"
+        },
+        {
+            "dispname": "推奨される対応",
+            "name": "推奨対応",
+            "type": "textarea",
+            "rows": 3,
+            "description": "今後の観察点や推奨される治療方針を記載してください"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "CAM診断",
+            "type": "eval",
+            "formula": "( [[特徴1.index]] == 1 && [[特徴2.index]] == 1 && ( [[特徴3.index]] == 1 || [[特徴4.index]] == 1 ) ) ? 'せん妄あり': 'せん妄なし'"
+        },
+        {
+            "name": "Warning: せん妄検出",
+            "formula": "{{CAM診断}} == 'せん妄あり'",
+            "type": "warning"
+        }
+    ]
+}

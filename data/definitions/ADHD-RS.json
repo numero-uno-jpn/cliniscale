@@ -1,0 +1,291 @@
+{
+    "_comment": [
+        "ADHD-RS (ADHD Rating Scale-IV) 日本語版",
+        "DSM-IV-TR（DSM-5でも同じ18項目を使用）に基づくADHD症状評価尺度",
+        "不注意9項目、多動性・衝動性9項目の計18項目",
+        "4段階評価：0=ほとんどない、1=ときどきある、2=しばしばある、3=非常にしばしばある",
+        "対象年齢：5-18歳（主に小児対象）",
+        "家庭版・学校版の2種類あり",
+        "合計点、不注意サブスケール得点、多動性・衝動性サブスケール得点を算出",
+        "参考文献：DuPaul, G.J., et al. (1998). ADHD Rating Scale-IV",
+        "日本語版：市川宏伸ら (2008) による標準化",
+        "診断補助・治療効果評価に使用",
+        "診断確定には他の評価と総合的判断が必要",
+        "カットオフ値は年齢・性別・評価目的により調整が必要"
+    ],
+    "title": "ADHD-RS (ADHD評価スケール)",
+    "description": [
+        "この評価尺度は、ADHD（注意欠如多動症）の症状を評価するためのものです。",
+        "お子様の最近6か月間の行動について、最もよく当てはまるものを選択してください。",
+        "回答は保護者の方または教師の方にお願いします。"
+    ],
+    "fields": [
+        {
+            "name": "evaluation_period",
+            "type": "note",
+            "description": "**評価期間：最近6か月間の行動について評価してください**"
+        },
+        {
+            "name": "section_inattention",
+            "type": "subsection",
+            "dispname": "不注意に関する項目"
+        },
+        {
+            "name": "inattention_1",
+            "type": "radio",
+            "dispname": "学業、仕事、その他の活動で、細かいところまで注意を払うことができない、または不注意な間違いをする",
+            "selector": [
+                "ほとんどない",
+                "ときどきある",
+                "しばしばある",
+                "非常にしばしばある"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "inattention_2",
+            "type": "radio",
+            "dispname": "課題や遊びの活動で注意を持続することが困難である",
+            "selector": [
+                "ほとんどない",
+                "ときどきある",
+                "しばしばある",
+                "非常にしばしばある"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "inattention_3",
+            "type": "radio",
+            "dispname": "直接話しかけられているのに聞いていないようにみえる",
+            "selector": [
+                "ほとんどない",
+                "ときどきある",
+                "しばしばある",
+                "非常にしばしばある"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "inattention_4",
+            "type": "radio",
+            "dispname": "指示に従えず、学業、用事、職場での義務をやり遂げることができない",
+            "selector": [
+                "ほとんどない",
+                "ときどきある",
+                "しばしばある",
+                "非常にしばしばある"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "inattention_5",
+            "type": "radio",
+            "dispname": "課題や活動を順序立てることが困難である",
+            "selector": [
+                "ほとんどない",
+                "ときどきある",
+                "しばしばある",
+                "非常にしばしばある"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "inattention_6",
+            "type": "radio",
+            "dispname": "精神的努力の持続を要する課題を避ける、嫌う、またはいやいや従事する",
+            "selector": [
+                "ほとんどない",
+                "ときどきある",
+                "しばしばある",
+                "非常にしばしばある"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "inattention_7",
+            "type": "radio",
+            "dispname": "課題や活動に必要なものをなくしてしまう",
+            "selector": [
+                "ほとんどない",
+                "ときどきある",
+                "しばしばある",
+                "非常にしばしばある"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "inattention_8",
+            "type": "radio",
+            "dispname": "外からの刺激によって容易に注意をそらされる",
+            "selector": [
+                "ほとんどない",
+                "ときどきある",
+                "しばしばある",
+                "非常にしばしばある"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "inattention_9",
+            "type": "radio",
+            "dispname": "日々の活動で忘れっぽい",
+            "selector": [
+                "ほとんどない",
+                "ときどきある",
+                "しばしばある",
+                "非常にしばしばある"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "section_hyperactivity",
+            "type": "subsection",
+            "dispname": "多動性・衝動性に関する項目"
+        },
+        {
+            "name": "hyperactivity_1",
+            "type": "radio",
+            "dispname": "手足をそわそわと動かしたり、椅子の上でもじもじしたりする",
+            "selector": [
+                "ほとんどない",
+                "ときどきある",
+                "しばしばある",
+                "非常にしばしばある"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "hyperactivity_2",
+            "type": "radio",
+            "dispname": "授業中や座っていることを期待される他の状況で、席を離れる",
+            "selector": [
+                "ほとんどない",
+                "ときどきある",
+                "しばしばある",
+                "非常にしばしばある"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "hyperactivity_3",
+            "type": "radio",
+            "dispname": "不適切な状況で走り回ったり、高いところに登ったりする",
+            "selector": [
+                "ほとんどない",
+                "ときどきある",
+                "しばしばある",
+                "非常にしばしばある"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "hyperactivity_4",
+            "type": "radio",
+            "dispname": "静かに遊んだり余暇活動に従事したりすることができない",
+            "selector": [
+                "ほとんどない",
+                "ときどきある",
+                "しばしばある",
+                "非常にしばしばある"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "hyperactivity_5",
+            "type": "radio",
+            "dispname": "じっとしていない、またはエンジンで動かされるように行動する",
+            "selector": [
+                "ほとんどない",
+                "ときどきある",
+                "しばしばある",
+                "非常にしばしばある"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "hyperactivity_6",
+            "type": "radio",
+            "dispname": "しゃべりすぎる",
+            "selector": [
+                "ほとんどない",
+                "ときどきある",
+                "しばしばある",
+                "非常にしばしばある"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "hyperactivity_7",
+            "type": "radio",
+            "dispname": "質問が終わる前に出し抜けに答えてしまう",
+            "selector": [
+                "ほとんどない",
+                "ときどきある",
+                "しばしばある",
+                "非常にしばしばある"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "hyperactivity_8",
+            "type": "radio",
+            "dispname": "自分の順番を待つことが困難である",
+            "selector": [
+                "ほとんどない",
+                "ときどきある",
+                "しばしばある",
+                "非常にしばしばある"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "hyperactivity_9",
+            "type": "radio",
+            "dispname": "他人を妨害し、邪魔をする",
+            "selector": [
+                "ほとんどない",
+                "ときどきある",
+                "しばしばある",
+                "非常にしばしばある"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "inattention_score",
+            "type": "eval",
+            "dispname": "不注意サブスケール得点",
+            "formula": "[[inattention_1.index]] + [[inattention_2.index]] + [[inattention_3.index]] + [[inattention_4.index]] + [[inattention_5.index]] + [[inattention_6.index]] + [[inattention_7.index]] + [[inattention_8.index]] + [[inattention_9.index]]"
+        },
+        {
+            "name": "hyperactivity_score",
+            "type": "eval",
+            "dispname": "多動性・衝動性サブスケール得点",
+            "formula": "[[hyperactivity_1.index]] + [[hyperactivity_2.index]] + [[hyperactivity_3.index]] + [[hyperactivity_4.index]] + [[hyperactivity_5.index]] + [[hyperactivity_6.index]] + [[hyperactivity_7.index]] + [[hyperactivity_8.index]] + [[hyperactivity_9.index]]"
+        },
+        {
+            "name": "total_score",
+            "type": "eval",
+            "dispname": "ADHD-RS総得点",
+            "formula": "[[inattention_score]] + [[hyperactivity_score]]"
+        }
+    ]
+}

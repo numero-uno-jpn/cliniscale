@@ -1,0 +1,125 @@
+{
+  "_comment": [
+    "自己免疫性溶血性貧血(AIHA)重症度分類",
+    "厚生労働省 特発性造血障害に関する調査研究班 2022年度改定版",
+    "原典: 自己免疫性溶血性貧血診療の参照ガイド 令和4年度改訂版",
+    "URL: https://zoketsushogaihan.umin.jp/file/2022/Autoimmune_hemolytic_anemia.pdf",
+    "実用版: 医師が臨床データを入力し、システムが自動判定"
+  ],
+  "title": "AIHA 自己免疫性溶血性貧血重症度分類",
+  "description": [
+    "自己免疫性溶血性貧血(AIHA)の重症度を評価する分類です。",
+    "治療状況とヘモグロビン濃度から自動的に重症度を判定します。"
+  ],
+  "submit_button_title": "重症度判定結果を送信",
+  "fields": [
+    {
+      "dispname": "基本情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "評価日",
+      "name": "評価日",
+      "type": "date",
+      "format": "YYYY/MM/DD",
+      "required": true
+    },
+    {
+      "dispname": "治療・検査データ",
+      "type": "subsection"
+    },
+    {
+      "dispname": "薬物療法の実施状況",
+      "name": "薬物療法",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "実施していない|実施している",
+      "selectoridx": "0|1",
+      "description": "副腎皮質ステロイド薬、免疫抑制薬、抗体医薬等による治療"
+    },
+    {
+      "dispname": "輸血の実施状況",
+      "name": "輸血",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "実施していない|実施している",
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "ヘモグロビン濃度範囲",
+      "name": "Hb範囲",
+      "type": "radio",
+      "required": true,
+      "selector": "10 g/dL以上|7以上10未満 g/dL|7 g/dL未満",
+      "selectoridx": "0|1|2",
+      "description": "現在のヘモグロビン濃度をg/dL単位で選択してください"
+    },
+    {
+      "dispname": "臨床情報（任意）",
+      "type": "subsection"
+    },
+    {
+      "dispname": "具体的なヘモグロビン値",
+      "name": "Hb値",
+      "type": "text",
+      "postfix": "g/dL",
+      "inputmode": "decimal",
+      "testrange": [
+        5,
+        15
+      ],
+      "description": "参考として具体的な数値を記録する場合（任意）"
+    },
+    {
+      "dispname": "基礎疾患",
+      "name": "基礎疾患",
+      "type": "textarea",
+      "rows": 2,
+      "description": "SLE、悪性リンパ腫、慢性リンパ性白血病等があれば記載"
+    },
+    {
+      "dispname": "臨床所見",
+      "name": "臨床所見",
+      "type": "textarea",
+      "rows": 2,
+      "description": "黄疸、脾腫、その他の重要な所見があれば記載"
+    },
+    {
+      "dispname": "検査所見",
+      "name": "検査所見",
+      "type": "textarea",
+      "rows": 2,
+      "description": "直接クームス試験、間接ビリルビン、ハプトグロビン等の結果"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "重症度ステージ",
+      "type": "eval",
+      "formula": "[[薬物療法.index]] == 0 && [[輸血.index]] == 0 ? 'Stage 1: 軽症' : ( [[薬物療法.index]] == 1 && [[Hb範囲.index]] == 0 ? 'Stage 2: 中等症' : ( ( [[薬物療法.index]] == 1 || [[輸血.index]] == 1 ) && [[Hb範囲.index]] == 1 ? 'Stage 3: やや重症' : ( [[薬物療法.index]] == 1 && [[輸血.index]] == 1 && [[Hb範囲.index]] == 2 ? 'Stage 4: 重症' : '判定不能' ) ) )"
+    },
+    {
+      "name": "判定根拠",
+      "type": "eval",
+      "formula": "{{重症度ステージ}}.includes('Stage 1') ? '薬物療法・輸血ともに不要' : ( {{重症度ステージ}}.includes('Stage 2') ? '薬物療法が必要、Hb≥10g/dL' : ( {{重症度ステージ}}.includes('Stage 3') ? '薬物療法または輸血が必要、Hb 7-10g/dL' : ( {{重症度ステージ}}.includes('Stage 4') ? '薬物療法・輸血ともに必要、Hb<7g/dL' : '条件が合致しません' ) ) )"
+    },
+    {
+      "name": "難病指定対象",
+      "type": "eval",
+      "formula": "{{重症度ステージ}}.includes('Stage 3') || {{重症度ステージ}}.includes('Stage 4') ? 'あり（医療費助成対象）' : 'なし'"
+    },
+    {
+      "name": "Warning: やや重症以上",
+      "formula": "{{重症度ステージ}}.includes('Stage 3') || {{重症度ステージ}}.includes('Stage 4')",
+      "type": "warning"
+    },
+    {
+      "name": "Emergency: 重症",
+      "formula": "{{重症度ステージ}}.includes('Stage 4')",
+      "type": "emergency"
+    }
+  ]
+}

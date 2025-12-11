@@ -1,0 +1,451 @@
+{
+  "_comment": [
+    "NOBLADSスコア（下部消化管出血重症度予測スコア）",
+    "原典: Aoki T, Nagata N, et al. Development and Validation of a Risk Scoring System for Severe Acute Lower Gastrointestinal Bleeding. Clin Gastroenterol Hepatol. 2016 Nov;14(11):1562-1570.e2. PMID: 27311620",
+    "外部検証: Aoki T, et al. External validation of the NOBLADS score. PLoS One. 2018 Apr 26;13(4):e0196514. PMID: 29698506",
+    "下部消化管出血の重症化リスクを8項目で評価",
+    "各項目1点、合計0-8点で重症度を予測",
+    "スコア4点以上で高リスクとされる"
+  ],
+  "title": "NOBLADS 下部消化管出血重症度予測スコア",
+  "description": [
+    "下部消化管出血の重症化リスクを評価するスコアです。",
+    "8つの項目について該当する場合にチェックしてください。"
+  ],
+  "fields": [
+    {
+      "dispname": "NSAIDs（非ステロイド性抗炎症薬）の使用",
+      "name": "NSAIDs使用",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1",
+      "description": "アスピリン、イブプロフェン、ロキソニンなどの痛み止め"
+    },
+    {
+      "dispname": "下痢の症状",
+      "name": "下痢症状",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1",
+      "description": "1日3回以下の場合は「なし」を選択"
+    },
+    {
+      "dispname": "腹部の圧痛",
+      "name": "腹部圧痛",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1",
+      "description": "お腹を押した時の痛み"
+    },
+    {
+      "dispname": "収縮期血圧",
+      "name": "収縮期血圧",
+      "type": "text",
+      "required": true,
+      "inputmode": "numeric",
+      "postfix": "mmHg",
+      "testrange": [
+        60,
+        200
+      ],
+      "description": "最新の血圧測定値の上の値を半角数字で入力してください（例: 120）"
+    },
+    {
+      "dispname": "抗血小板薬の使用",
+      "name": "抗血小板薬使用",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1",
+      "description": "アスピリン以外の抗血小板薬（クロピドグレル、チクロピジン、シロスタゾール等）"
+    },
+    {
+      "dispname": "血清アルブミン値",
+      "name": "アルブミン値",
+      "type": "text",
+      "required": true,
+      "inputmode": "decimal",
+      "postfix": "g/dL",
+      "testrange": [
+        1.5,
+        5
+      ],
+      "description": "最新の血液検査結果を半角数字で入力してください（例: 3.5）"
+    },
+    {
+      "dispname": "併存疾患の有無",
+      "name": "併存疾患評価",
+      "type": "subsection",
+      "description": "以下の疾患について該当するものをすべてお答えください"
+    },
+    {
+      "dispname": "心筋梗塞の既往",
+      "name": "心筋梗塞",
+      "type": "radio",
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "心不全の既往",
+      "name": "心不全",
+      "type": "radio",
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "末梢血管疾患",
+      "name": "末梢血管疾患",
+      "type": "radio",
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1",
+      "description": "閉塞性動脈硬化症、大動脈瘤など"
+    },
+    {
+      "dispname": "脳血管疾患の既往",
+      "name": "脳血管疾患",
+      "type": "radio",
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1",
+      "description": "脳梗塞、脳出血など"
+    },
+    {
+      "dispname": "認知症",
+      "name": "認知症",
+      "type": "radio",
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1",
+      "description": "アルツハイマー型認知症、血管性認知症など"
+    },
+    {
+      "dispname": "慢性肺疾患",
+      "name": "慢性肺疾患",
+      "type": "radio",
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1",
+      "description": "COPD、間質性肺炎など"
+    },
+    {
+      "dispname": "結合組織疾患",
+      "name": "結合組織疾患",
+      "type": "radio",
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1",
+      "description": "関節リウマチ、全身性エリテマトーデスなど"
+    },
+    {
+      "dispname": "消化性潰瘍",
+      "name": "消化性潰瘍",
+      "type": "radio",
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1",
+      "description": "胃潰瘍、十二指腸潰瘍"
+    },
+    {
+      "dispname": "軽度肝疾患",
+      "name": "軽度肝疾患",
+      "type": "radio",
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1",
+      "description": "慢性肝炎、肝硬変（腹水なし）など"
+    },
+    {
+      "dispname": "糖尿病（合併症なし）",
+      "name": "糖尿病単純",
+      "type": "radio",
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "片麻痺",
+      "name": "片麻痺",
+      "type": "radio",
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|2",
+      "description": "半身の運動麻痺"
+    },
+    {
+      "dispname": "腎疾患",
+      "name": "腎疾患",
+      "type": "radio",
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|2",
+      "description": "慢性腎不全、透析など"
+    },
+    {
+      "dispname": "糖尿病（臓器障害あり）",
+      "name": "糖尿病合併症",
+      "type": "radio",
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|2",
+      "description": "糖尿病性腎症、網膜症、神経症など"
+    },
+    {
+      "dispname": "悪性腫瘍（転移なし）",
+      "name": "悪性腫瘍",
+      "type": "radio",
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|2"
+    },
+    {
+      "dispname": "白血病",
+      "name": "白血病",
+      "type": "radio",
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|2"
+    },
+    {
+      "dispname": "リンパ腫",
+      "name": "リンパ腫",
+      "type": "radio",
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|2"
+    },
+    {
+      "dispname": "中等度から重度の肝疾患",
+      "name": "重度肝疾患",
+      "type": "radio",
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|3",
+      "description": "肝硬変（腹水あり）、肝不全など"
+    },
+    {
+      "dispname": "転移性悪性腫瘍",
+      "name": "転移性腫瘍",
+      "type": "radio",
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|6"
+    },
+    {
+      "dispname": "AIDS",
+      "name": "AIDS",
+      "type": "radio",
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|6",
+      "description": "後天性免疫不全症候群"
+    },
+    {
+      "dispname": "失神の有無",
+      "name": "失神",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1",
+      "description": "意識を失って倒れること"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "NSAIDs点数",
+      "type": "eval",
+      "formula": "([[NSAIDs使用.index]] || 0)",
+      "noreport": true
+    },
+    {
+      "name": "下痢点数",
+      "type": "eval",
+      "formula": "([[下痢症状.index]] || 0) == 0 ? 1 : 0",
+      "noreport": true
+    },
+    {
+      "name": "圧痛点数",
+      "type": "eval",
+      "formula": "([[腹部圧痛.index]] || 0) == 0 ? 1 : 0",
+      "noreport": true
+    },
+    {
+      "name": "血圧点数",
+      "type": "eval",
+      "formula": "((収縮期血圧)) <= 100 ? 1 : 0",
+      "noreport": true
+    },
+    {
+      "name": "抗血小板薬点数",
+      "type": "eval",
+      "formula": "([[抗血小板薬使用.index]] || 0)",
+      "noreport": true
+    },
+    {
+      "name": "アルブミン点数",
+      "type": "eval",
+      "formula": "((アルブミン値)) < 3.0 ? 1 : 0",
+      "noreport": true
+    },
+    {
+      "name": "心筋梗塞_点数",
+      "type": "eval",
+      "formula": "([[心筋梗塞.index]] || 0)",
+      "noreport": true
+    },
+    {
+      "name": "心不全_点数",
+      "type": "eval",
+      "formula": "([[心不全.index]] || 0)",
+      "noreport": true
+    },
+    {
+      "name": "末梢血管疾患_点数",
+      "type": "eval",
+      "formula": "([[末梢血管疾患.index]] || 0)",
+      "noreport": true
+    },
+    {
+      "name": "脳血管疾患_点数",
+      "type": "eval",
+      "formula": "([[脳血管疾患.index]] || 0)",
+      "noreport": true
+    },
+    {
+      "name": "認知症_点数",
+      "type": "eval",
+      "formula": "([[認知症.index]] || 0)",
+      "noreport": true
+    },
+    {
+      "name": "慢性肺疾患_点数",
+      "type": "eval",
+      "formula": "([[慢性肺疾患.index]] || 0)",
+      "noreport": true
+    },
+    {
+      "name": "結合組織疾患_点数",
+      "type": "eval",
+      "formula": "([[結合組織疾患.index]] || 0)",
+      "noreport": true
+    },
+    {
+      "name": "消化性潰瘍_点数",
+      "type": "eval",
+      "formula": "([[消化性潰瘍.index]] || 0)",
+      "noreport": true
+    },
+    {
+      "name": "軽度肝疾患_点数",
+      "type": "eval",
+      "formula": "([[軽度肝疾患.index]] || 0)",
+      "noreport": true
+    },
+    {
+      "name": "糖尿病単純_点数",
+      "type": "eval",
+      "formula": "([[糖尿病単純.index]] || 0)",
+      "noreport": true
+    },
+    {
+      "name": "片麻痺_点数",
+      "type": "eval",
+      "formula": "([[片麻痺.index]] || 0)",
+      "noreport": true
+    },
+    {
+      "name": "腎疾患_点数",
+      "type": "eval",
+      "formula": "([[腎疾患.index]] || 0)",
+      "noreport": true
+    },
+    {
+      "name": "糖尿病合併症_点数",
+      "type": "eval",
+      "formula": "([[糖尿病合併症.index]] || 0)",
+      "noreport": true
+    },
+    {
+      "name": "悪性腫瘍_点数",
+      "type": "eval",
+      "formula": "([[悪性腫瘍.index]] || 0)",
+      "noreport": true
+    },
+    {
+      "name": "白血病_点数",
+      "type": "eval",
+      "formula": "([[白血病.index]] || 0)",
+      "noreport": true
+    },
+    {
+      "name": "リンパ腫_点数",
+      "type": "eval",
+      "formula": "([[リンパ腫.index]] || 0)",
+      "noreport": true
+    },
+    {
+      "name": "重度肝疾患_点数",
+      "type": "eval",
+      "formula": "([[重度肝疾患.index]] || 0)",
+      "noreport": true
+    },
+    {
+      "name": "転移性腫瘍_点数",
+      "type": "eval",
+      "formula": "([[転移性腫瘍.index]] || 0)",
+      "noreport": true
+    },
+    {
+      "name": "AIDS_点数",
+      "type": "eval",
+      "formula": "([[AIDS.index]] || 0)",
+      "noreport": true
+    },
+    {
+      "name": "Charlsonスコア",
+      "type": "eval",
+      "formula": "[[心筋梗塞_点数]] + [[心不全_点数]] + [[末梢血管疾患_点数]] + [[脳血管疾患_点数]] + [[認知症_点数]] + [[慢性肺疾患_点数]] + [[結合組織疾患_点数]] + [[消化性潰瘍_点数]] + [[軽度肝疾患_点数]] + [[糖尿病単純_点数]] + [[片麻痺_点数]] + [[腎疾患_点数]] + [[糖尿病合併症_点数]] + [[悪性腫瘍_点数]] + [[白血病_点数]] + [[リンパ腫_点数]] + [[重度肝疾患_点数]] + [[転移性腫瘍_点数]] + [[AIDS_点数]]",
+      "noreport": true
+    },
+    {
+      "name": "併存疾患点数",
+      "type": "eval",
+      "formula": "[[Charlsonスコア]] >= 2 ? 1 : 0",
+      "noreport": true
+    },
+    {
+      "name": "失神点数",
+      "type": "eval",
+      "formula": "([[失神.index]] || 0)",
+      "noreport": true
+    },
+    {
+      "dispname": "NOBLADSスコア (8項目の合計点数 0-8点)",
+      "name": "NOBLADSスコア",
+      "type": "eval",
+      "formula": "[[NSAIDs点数]] + [[下痢点数]] + [[圧痛点数]] + [[血圧点数]] + [[抗血小板薬点数]] + [[アルブミン点数]] + [[併存疾患点数]] + [[失神点数]]"
+    },
+    {
+      "dispname": "重症化リスク (4点以上: 高リスク、2-3点: 中リスク、0-1点: 低リスク)",
+      "name": "リスク評価",
+      "type": "eval",
+      "formula": "[[NOBLADSスコア]] >= 4 ? '高リスク' : ( [[NOBLADSスコア]] >= 2 ? '中リスク' : '低リスク' )"
+    },
+    {
+      "name": "Warning: 高リスク NOBLADSスコア ≧ 4",
+      "formula": "[[NOBLADSスコア]] >= 4",
+      "type": "warning"
+    }
+  ]
+}

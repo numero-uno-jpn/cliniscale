@@ -1,0 +1,230 @@
+{
+    "_comment": [
+        "AKIN基準 (Acute Kidney Injury Network Criteria) 問診票定義",
+        "原典: Mehta RL, et al. Acute Kidney Injury Network: report of an initiative to improve outcomes in acute kidney injury. Crit Care 2007;11:R31.",
+        "参考URL: https://ccforum.com/articles/10.1186/cc5713",
+        "日本腎臓学会 AKI診療ガイドライン2016準拠",
+        "修正点: 数値入力をscale→textに変更、論理演算子修正、section→subsection変更、warning/emergencyにname追加"
+    ],
+    "title": "AKIN基準 急性腎障害評価",
+    "description": [
+        "AKIN基準による急性腎障害の診断と重症度分類を行います。",
+        "血清クレアチニン値と尿量の変化から評価します。"
+    ],
+    "responsible_person": [
+        "腎臓内科医"
+    ],
+    "staffs": [
+        "看護師",
+        "臨床検査技師"
+    ],
+    "dept_in_charge": "腎臓内科",
+    "contact": "腎臓内科外来",
+    "submit_button_title": "AKIN基準評価を送信",
+    "fields": [
+        {
+            "dispname": "患者基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "体重",
+            "name": "体重",
+            "type": "text",
+            "required": true,
+            "postfix": "kg",
+            "testrange": [
+                30,
+                90
+            ],
+            "inputmode": "decimal",
+            "description": "尿量計算に必要な正確な体重"
+        },
+        {
+            "dispname": "血清クレアチニン値評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "基準値血清クレアチニン",
+            "name": "基準値Cr",
+            "type": "text",
+            "required": true,
+            "postfix": "mg/dL",
+            "testrange": [
+                0.8,
+                2.4
+            ],
+            "inputmode": "decimal",
+            "description": "ベースライン又は評価開始前の血清クレアチニン値"
+        },
+        {
+            "dispname": "現在の血清クレアチニン",
+            "name": "現在Cr",
+            "type": "text",
+            "required": true,
+            "postfix": "mg/dL",
+            "testrange": [
+                0.8,
+                2.4
+            ],
+            "inputmode": "decimal",
+            "description": "最新の血清クレアチニン値"
+        },
+        {
+            "dispname": "血清クレアチニン変化時間",
+            "name": "Cr変化時間",
+            "type": "radio",
+            "required": true,
+            "selector": "48時間以内|48時間を超える",
+            "description": "血清クレアチニン上昇が48時間以内に起こったか"
+        },
+        {
+            "dispname": "尿量評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "最近6時間の尿量",
+            "name": "6時間尿量",
+            "type": "text",
+            "postfix": "mL",
+            "testrange": [
+                0,
+                500
+            ],
+            "inputmode": "numeric",
+            "description": "最近6時間の総尿量"
+        },
+        {
+            "dispname": "最近12時間の尿量",
+            "name": "12時間尿量",
+            "type": "text",
+            "postfix": "mL",
+            "testrange": [
+                0,
+                800
+            ],
+            "inputmode": "numeric",
+            "description": "最近12時間の総尿量"
+        },
+        {
+            "dispname": "最近24時間の尿量",
+            "name": "24時間尿量",
+            "type": "text",
+            "postfix": "mL",
+            "testrange": [
+                0,
+                1000
+            ],
+            "inputmode": "numeric",
+            "description": "最近24時間の総尿量"
+        },
+        {
+            "dispname": "無尿状態",
+            "name": "無尿",
+            "type": "radio",
+            "selector": "なし|12時間以上の無尿",
+            "description": "12時間以上の無尿状態の有無"
+        },
+        {
+            "dispname": "腎代替療法",
+            "type": "subsection"
+        },
+        {
+            "dispname": "腎代替療法開始",
+            "name": "RRT開始",
+            "type": "radio",
+            "selector": "なし|開始済み",
+            "description": "透析等の腎代替療法の開始状況"
+        },
+        {
+            "dispname": "備考・所見",
+            "type": "subsection"
+        },
+        {
+            "dispname": "",
+            "name": "備考",
+            "type": "textarea",
+            "rows": 3,
+            "description": "追加の臨床所見や特記事項があれば記載"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "Cr変化値",
+            "type": "eval",
+            "formula": "((現在Cr)) - ((基準値Cr))",
+            "noreport": true
+        },
+        {
+            "name": "Cr変化倍率",
+            "type": "eval",
+            "formula": "( ((現在Cr)) / ((基準値Cr)) ).toFixed(2)",
+            "noreport": true
+        },
+        {
+            "name": "6時間尿量率",
+            "type": "eval",
+            "formula": "( ((6時間尿量)) / ((体重)) / 6).toFixed(2)",
+            "noreport": true
+        },
+        {
+            "name": "12時間尿量率",
+            "type": "eval",
+            "formula": "( ((12時間尿量)) / ((体重)) / 12).toFixed(2)",
+            "noreport": true
+        },
+        {
+            "name": "24時間尿量率",
+            "type": "eval",
+            "formula": "( ((24時間尿量)) / ((体重)) / 24).toFixed(2)",
+            "noreport": true
+        },
+        {
+            "name": "AKI診断",
+            "type": "eval",
+            "formula": "( ([[Cr変化時間.index]] == 0) && ( ((Cr変化値)) >= 0.3 || ((Cr変化倍率)) >= 1.5 ) ) || ( ((6時間尿量率)) < 0.5 && [[6時間尿量]] > 0 ) ? 'AKI診断' : 'AKI基準に該当せず'"
+        },
+        {
+            "name": "血清Cr基準ステージ",
+            "type": "eval",
+            "formula": "[[RRT開始.index]] == 1 ? 3 : ( ((Cr変化倍率)) >= 3.0 || ((現在Cr)) >= 4.0 ) ? 3 : ( ((Cr変化倍率)) >= 2.0 ) ? 2 : ( ((Cr変化値)) >= 0.3 || ((Cr変化倍率)) >= 1.5 ) ? 1 : 0",
+            "noreport": true
+        },
+        {
+            "name": "尿量基準ステージ",
+            "type": "eval",
+            "formula": "[[無尿.index]] == 1 ? 3 : ( ((24時間尿量率)) < 0.3 && [[24時間尿量]] > 0 ) ? 3 : ( ((12時間尿量率)) < 0.5 && [[12時間尿量]] > 0 ) ? 2 : ( ((6時間尿量率)) < 0.5 && [[6時間尿量]] > 0 ) ? 1 : 0",
+            "noreport": true
+        },
+        {
+            "name": "AKIN最終ステージ",
+            "type": "eval",
+            "formula": "[[血清Cr基準ステージ]] > [[尿量基準ステージ]] ? [[血清Cr基準ステージ]] : [[尿量基準ステージ]]"
+        },
+        {
+            "name": "AKIN分類結果",
+            "type": "eval",
+            "formula": "[[AKIN最終ステージ]] == 0 ? 'AKI基準に該当せず' : [[AKIN最終ステージ]] == 1 ? 'AKIN Stage 1' : [[AKIN最終ステージ]] == 2 ? 'AKIN Stage 2' : 'AKIN Stage 3'"
+        },
+        {
+            "name": "重症度評価",
+            "type": "eval",
+            "formula": "[[AKIN最終ステージ]] == 1 ? '軽度急性腎障害' : [[AKIN最終ステージ]] == 2 ? '中等度急性腎障害' : [[AKIN最終ステージ]] == 3 ? '重度急性腎障害' : '正常範囲'"
+        },
+        {
+            "name": "Warning: 中等度以上のAKI",
+            "formula": "[[AKIN最終ステージ]] >= 2",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 重度AKI",
+            "formula": "[[AKIN最終ステージ]] >= 3",
+            "type": "emergency"
+        },
+        {
+            "name": "Warning: 尿量測定値入力ミスの可能性",
+            "formula": "!([[6時間尿量]] > 0 && [[12時間尿量]] > 0 && [[24時間尿量]] > 0 && [[24時間尿量]] >= [[12時間尿量]] && [[12時間尿量]] >= [[6時間尿量]])",
+            "type": "warning"
+        }
+    ]
+}

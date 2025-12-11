@@ -1,0 +1,209 @@
+{
+    "_comment": [
+        "ETDRS視力問診票定義",
+        "原典: Bailey IL, Lovie JE. New Design Principles for visual acuity letter charts. Am J Optom Physiol Opt 1976; 53: 740-745",
+        "ETDRS改良版: Ferris FL, Kassoff A, Bresnick GH, Bailey I. New visual acuity charts for clinical research. Am J Ophthalmol 1982; 94: 91-96",
+        "参考URL: https://en.wikipedia.org/wiki/LogMAR_chart",
+        "LogMAR値: 0.0が標準視力(1.0)、正値は視力低下、負値は良好視力を示す",
+        "測定方法: 4m距離でETDRSチャートを使用、1文字あたり0.02logMAR単位で計算"
+    ],
+    "title": "ETDRS視力測定問診票",
+    "description": [
+        "<h3>ETDRS視力測定記録</h3>",
+        "ETDRSチャートを用いた標準化視力測定の結果を記録します。",
+        "LogMAR値での記録により、より精密な視力評価が可能です。"
+    ],
+    "responsible_person": [
+        "眼科医"
+    ],
+    "dept_in_charge": "眼科",
+    "submit_button_title": "測定結果を送信",
+    "fields": [
+        {
+            "dispname": "基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "測定日",
+            "name": "測定日",
+            "type": "date",
+            "format": "YYYY/MM/DD",
+            "required": true
+        },
+        {
+            "dispname": "測定距離",
+            "name": "測定距離",
+            "type": "radio",
+            "selector": "4m|その他",
+            "required": true,
+            "description": "標準測定距離は4mです"
+        },
+        {
+            "dispname": "測定距離(その他)",
+            "name": "測定距離その他",
+            "type": "text",
+            "parentname": "測定距離",
+            "parentsel": "その他",
+            "postfix": "m",
+            "inputmode": "decimal",
+            "description": "半角数字で入力してください"
+        },
+        {
+            "dispname": "右眼視力測定",
+            "type": "subsection"
+        },
+        {
+            "dispname": "右眼裸眼視力(LogMAR)",
+            "name": "右眼裸眼LogMAR",
+            "type": "text",
+            "inputmode": "decimal",
+            "testrange": [
+                -0.3,
+                1.6
+            ],
+            "description": "0.0が標準視力(小数視力1.0)です。範囲: -0.3〜1.6（例: 0.00, 0.52, 1.20）"
+        },
+        {
+            "dispname": "右眼矯正視力(LogMAR)",
+            "name": "右眼矯正LogMAR",
+            "type": "text",
+            "inputmode": "decimal",
+            "testrange": [
+                -0.3,
+                1.6
+            ],
+            "description": "眼鏡またはコンタクトレンズ装用時。範囲: -0.3〜1.6（例: 0.00, 0.52, 1.20）"
+        },
+        {
+            "dispname": "右眼読み取れた文字数",
+            "name": "右眼文字数",
+            "type": "text",
+            "inputmode": "numeric",
+            "postfix": "文字",
+            "testrange": [
+                0,
+                70
+            ],
+            "description": "最大70文字まで（14行×5文字）。半角数字で入力してください"
+        },
+        {
+            "dispname": "左眼視力測定",
+            "type": "subsection"
+        },
+        {
+            "dispname": "左眼裸眼視力(LogMAR)",
+            "name": "左眼裸眼LogMAR",
+            "type": "text",
+            "inputmode": "decimal",
+            "testrange": [
+                -0.3,
+                1.6
+            ],
+            "description": "0.0が標準視力(小数視力1.0)です。範囲: -0.3〜1.6（例: 0.00, 0.52, 1.20）"
+        },
+        {
+            "dispname": "左眼矯正視力(LogMAR)",
+            "name": "左眼矯正LogMAR",
+            "type": "text",
+            "inputmode": "decimal",
+            "testrange": [
+                -0.3,
+                1.6
+            ],
+            "description": "眼鏡またはコンタクトレンズ装用時。範囲: -0.3〜1.6（例: 0.00, 0.52, 1.20）"
+        },
+        {
+            "dispname": "左眼読み取れた文字数",
+            "name": "左眼文字数",
+            "type": "text",
+            "inputmode": "numeric",
+            "postfix": "文字",
+            "testrange": [
+                0,
+                70
+            ],
+            "description": "最大70文字まで（14行×5文字）。半角数字で入力してください"
+        },
+        {
+            "dispname": "両眼視力測定",
+            "type": "subsection"
+        },
+        {
+            "dispname": "両眼裸眼視力(LogMAR)",
+            "name": "両眼裸眼LogMAR",
+            "type": "text",
+            "inputmode": "decimal",
+            "testrange": [
+                -0.3,
+                1.6
+            ],
+            "description": "両眼同時測定。範囲: -0.3〜1.6（例: 0.00, 0.52, 1.20）"
+        },
+        {
+            "dispname": "両眼矯正視力(LogMAR)",
+            "name": "両眼矯正LogMAR",
+            "type": "text",
+            "inputmode": "decimal",
+            "testrange": [
+                -0.3,
+                1.6
+            ],
+            "description": "眼鏡またはコンタクトレンズ装用時。範囲: -0.3〜1.6（例: 0.00, 0.52, 1.20）"
+        },
+        {
+            "dispname": "備考",
+            "name": "備考",
+            "type": "textarea",
+            "rows": 3,
+            "description": "測定時の特記事項があれば記載してください"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "右眼裸眼小数視力",
+            "type": "eval",
+            "formula": "{{右眼裸眼LogMAR}} !== '' ? Math.pow( 0.1, ((右眼裸眼LogMAR)) ).toFixed(2)  : '未測定'"
+        },
+        {
+            "name": "左眼裸眼小数視力",
+            "type": "eval",
+            "formula": "{{左眼裸眼LogMAR}} !== '' ? Math.pow( 0.1, ((左眼裸眼LogMAR)) ).toFixed(2)  : '未測定'"
+        },
+        {
+            "name": "右眼矯正小数視力",
+            "type": "eval",
+            "formula": "{{右眼矯正LogMAR}} !== '' ? Math.pow( 0.1, ((右眼矯正LogMAR)) ).toFixed(2)  : '未測定'"
+        },
+        {
+            "name": "左眼矯正小数視力",
+            "type": "eval",
+            "formula": "{{左眼矯正LogMAR}} !== '' ? Math.pow( 0.1, ((左眼矯正LogMAR)) ).toFixed(2)  : '未測定'"
+        },
+        {
+            "name": "両眼裸眼小数視力",
+            "type": "eval",
+            "formula": "{{両眼裸眼LogMAR}} !== '' ? Math.pow( 0.1, ((両眼裸眼LogMAR)) ).toFixed(2)  : '未測定'"
+        },
+        {
+            "name": "両眼矯正小数視力",
+            "type": "eval",
+            "formula": "{{両眼矯正LogMAR}} !== '' ? Math.pow( 0.1, ((両眼矯正LogMAR)) ).toFixed(2)  : '未測定'"
+        },
+        {
+            "name": "視力判定",
+            "type": "eval",
+            "formula": "{{右眼矯正LogMAR}} !== '' && {{左眼矯正LogMAR}} !== '' ? ( ( ((右眼矯正LogMAR)) <= 0.3 && ((左眼矯正LogMAR)) <= 0.3 ) ? '正常視力' : ( ( ((右眼矯正LogMAR)) > 0.5 || ((左眼矯正LogMAR)) > 0.5 ) ? '低視力' : '軽度視力低下' ) ) : '測定データ不足'"
+        },
+        {
+            "name": "Warning: 視力低下注意",
+            "type": "warning",
+            "formula": "( {{右眼矯正LogMAR}} !== '' && ((右眼矯正LogMAR)) > 0.3 ) || ( {{左眼矯正LogMAR}} !== '' && ((左眼矯正LogMAR)) > 0.3 )"
+        },
+        {
+            "name": "Emergency: 低視力要精査",
+            "type": "emergency",
+            "formula": "( {{右眼矯正LogMAR}} !== '' && ((右眼矯正LogMAR)) > 0.5 ) || ( {{左眼矯正LogMAR}} !== '' && ((左眼矯正LogMAR)) > 0.5 )"
+        }
+    ]
+}

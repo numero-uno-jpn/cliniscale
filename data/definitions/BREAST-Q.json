@@ -1,0 +1,250 @@
+{
+    "_comment": [
+        "BREAST-Q: Patient-Reported Outcome Measure for Breast Surgery (2009)",
+        "原著論文: https://pubmed.ncbi.nlm.nih.gov/19644346/",
+        "公式URL: https://qportfolio.org/breast-q/",
+        "ライセンス: Memorial Sloan Kettering Cancer Center所有、使用にはライセンス登録が必要（非営利研究・臨床使用は無料）"
+    ],
+    "title": "BREAST-Q",
+    "description": [
+        "乳房手術後の患者満足度とQOLを評価する質問票です",
+        "乳房再建、縮小術、増大術などの結果を多面的に評価します"
+    ],
+    "fields": [
+        {
+            "dispname": "手術の種類",
+            "type": "subsection"
+        },
+        {
+            "dispname": "受けた手術",
+            "name": "手術種類",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "乳房再建術",
+                "乳房縮小術",
+                "乳房増大術",
+                "乳房温存術",
+                "その他"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "乳房の満足度",
+            "type": "subsection"
+        },
+        {
+            "dispname": "乳房の外見に満足していますか",
+            "name": "外見満足度",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "非常に不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "非常に満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "乳房のサイズに満足していますか",
+            "name": "サイズ満足度",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "非常に不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "非常に満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "乳房の柔らかさに満足していますか",
+            "name": "柔らかさ満足度",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "非常に不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "非常に満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "心理的ウェルビーイング",
+            "type": "subsection"
+        },
+        {
+            "dispname": "乳房について考えると不安を感じますか",
+            "name": "不安",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "わずかに",
+                "時々",
+                "よくある",
+                "常にある"
+            ],
+            "selectoridx": "5|4|3|2|1"
+        },
+        {
+            "dispname": "自分の体に自信を持てますか",
+            "name": "自信",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全く持てない",
+                "あまり持てない",
+                "どちらでもない",
+                "やや持てる",
+                "とても持てる"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "外見について満足していますか",
+            "name": "外見自信",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全く満足していない",
+                "あまり満足していない",
+                "どちらでもない",
+                "やや満足",
+                "とても満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "身体的ウェルビーイング",
+            "type": "subsection"
+        },
+        {
+            "dispname": "乳房に痛みがありますか",
+            "name": "痛み",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "わずかに",
+                "中程度",
+                "かなりある",
+                "非常に強い"
+            ],
+            "selectoridx": "5|4|3|2|1"
+        },
+        {
+            "dispname": "乳房の感覚はいかがですか",
+            "name": "感覚",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "正常",
+                "やや低下",
+                "中程度低下",
+                "かなり低下",
+                "完全に消失"
+            ],
+            "selectoridx": "5|4|3|2|1"
+        },
+        {
+            "dispname": "日常生活への影響はありますか",
+            "name": "日常生活",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "わずかに",
+                "中程度",
+                "かなりある",
+                "非常に大きい"
+            ],
+            "selectoridx": "5|4|3|2|1"
+        },
+        {
+            "dispname": "性的ウェルビーイング",
+            "type": "subsection"
+        },
+        {
+            "dispname": "パートナーとの親密さに満足していますか",
+            "name": "親密さ",
+            "type": "radio",
+            "selector": [
+                "該当しない",
+                "非常に不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "非常に満足"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "性的魅力を感じますか",
+            "name": "性的魅力",
+            "type": "radio",
+            "selector": [
+                "該当しない",
+                "全く感じない",
+                "あまり感じない",
+                "どちらでもない",
+                "やや感じる",
+                "とても感じる"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "乳房満足度スコア",
+            "type": "eval",
+            "formula": "sum( [[外見満足度.index]], [[サイズ満足度.index]], [[柔らかさ満足度.index]] )",
+            "noreport": true
+        },
+        {
+            "name": "心理スコア",
+            "type": "eval",
+            "formula": "sum( [[不安.index]], [[自信.index]], [[外見自信.index]] )",
+            "noreport": true
+        },
+        {
+            "name": "身体スコア",
+            "type": "eval",
+            "formula": "sum( [[痛み.index]], [[感覚.index]], [[日常生活.index]] )",
+            "noreport": true
+        },
+        {
+            "name": "性的スコア",
+            "type": "eval",
+            "formula": "[[親密さ.index]] > 0 && [[性的魅力.index]] > 0 ? sum( [[親密さ.index]], [[性的魅力.index]] ) : 0",
+            "noreport": true
+        },
+        {
+            "name": "乳房満足度変換スコア",
+            "type": "eval",
+            "formula": "Math.round( ( [[乳房満足度スコア]] - 3 ) / 12 * 100 )"
+        },
+        {
+            "name": "心理的QOL変換スコア",
+            "type": "eval",
+            "formula": "Math.round( ( [[心理スコア]] - 3 ) / 12 * 100 )"
+        },
+        {
+            "name": "身体的QOL変換スコア",
+            "type": "eval",
+            "formula": "Math.round( ( [[身体スコア]] - 3 ) / 12 * 100 )"
+        },
+        {
+            "name": "性的QOL変換スコア",
+            "type": "eval",
+            "formula": "[[性的スコア]] > 0 ? Math.round( ( [[性的スコア]] - 2 ) / 8 * 100 ) : 0"
+        }
+    ]
+}

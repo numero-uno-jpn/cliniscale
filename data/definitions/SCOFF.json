@@ -1,0 +1,100 @@
+{
+    "title": "SCOFF 摂食障害スクリーニング質問票",
+    "_comment": [
+        "SCOFF質問票: 摂食障害のスクリーニングツール",
+        "原典: Morgan JF, Reid F, Lacey JH. The SCOFF questionnaire: assessment of a new screening tool for eating disorders. BMJ 1999;319:1467-1468",
+        "参考URL: https://pubmed.ncbi.nlm.nih.gov/10582927/",
+        "対象: 摂食障害のスクリーニング（神経性無食欲症・神経性過食症）",
+        "カットオフ値: 2点以上で摂食障害の疑いあり",
+        "感度: 100%、特異度: 87.5%",
+        "【注意】Q3: 原典「one stone (6.35kg)」を「6kg」に丸め",
+        "【注意】Q5: 原典「Food」に「体重に関する考えや不安」を追加（臨床的妥当性あり）",
+        "【参考】日本語版 (Hosoda 2021): 2.5kg版の方が感度高い (69.5% vs 65.2%)"
+    ],
+    "description": [
+        "この質問票は、摂食障害の可能性をスクリーニングするための簡易的な評価ツールです。",
+        "以下の5つの質問にお答えください。"
+    ],
+    "fields": [
+        {
+            "type": "radio",
+            "name": "sick",
+            "dispname": "お腹がいっぱいで不快に感じたときに、自分で吐いてしまうことがありますか",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "radio",
+            "name": "control",
+            "dispname": "自分の食べる量をコントロールできなくなってしまったのではないかと心配になることがありますか",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "radio",
+            "name": "one_stone",
+            "dispname": "最近3か月間で6kg以上体重が減ったことがありますか",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "radio",
+            "name": "fat",
+            "dispname": "周りの人があなたは痩せすぎていると言うのに、自分では太っていると思いますか",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "radio",
+            "name": "food",
+            "dispname": "食べ物や体重に関する考えや不安が、あなたの生活を支配していますか",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "type": "eval",
+            "name": "scoff_total",
+            "dispname": "SCOFF合計スコア",
+            "formula": "[[sick.index]] + [[control.index]] + [[one_stone.index]] + [[fat.index]] + [[food.index]]"
+        },
+        {
+            "type": "eval",
+            "name": "scoff_interpretation",
+            "dispname": "SCOFF評価結果",
+            "formula": "[[scoff_total]] >= 2 ? \"摂食障害の疑いあり（専門医への相談を推奨）\" : \"スクリーニング陰性\""
+        },
+        {
+            "type": "warning",
+            "name": "Warning: 摂食障害リスク SCOFFスコア ≥ 2",
+            "formula": "[[scoff_total]] >= 2"
+        }
+    ]
+}

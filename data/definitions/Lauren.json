@@ -1,0 +1,186 @@
+{
+  "_comment": [
+    "Lauren Classification for Gastric Cancer",
+    "胃癌の組織型分類",
+    "原著論文: Lauren P. Acta Pathol Microbiol Scand. 1965;64:31-49.",
+    "PubMed: https://pubmed.ncbi.nlm.nih.gov/14260976/",
+    "参考: https://www.sciencedirect.com/science/article/abs/pii/S2352396422001676"
+  ],
+  "title": "Lauren分類",
+  "description": [
+    "胃癌を組織形態により腸型とびまん型に分類します",
+    "予後と治療選択に影響する重要な分類です"
+  ],
+  "responsible_person": [
+    "病理医"
+  ],
+  "dept_in_charge": "病理診断科",
+  "fields": [
+    {
+      "dispname": "基本情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "評価日",
+      "name": "評価日",
+      "type": "date",
+      "format": "YYYY/MM/DD"
+    },
+    {
+      "dispname": "標本番号",
+      "name": "標本番号",
+      "type": "text",
+      "required": true,
+      "description": "病理標本の識別番号"
+    },
+    {
+      "dispname": "採取部位",
+      "name": "採取部位",
+      "type": "text",
+      "required": true,
+      "description": "胃のどの部位から採取したか"
+    },
+    {
+      "dispname": "Lauren分類評価",
+      "type": "subsection"
+    },
+    {
+      "dispname": "組織型",
+      "name": "Lauren分類",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "腸型: 腺管形成あり、良分化型、癌胞巣が結合性",
+        "びまん型: 腺管形成なし、低分化型、癌細胞が散在性浸潤",
+        "混合型: 腸型とびまん型の両方の特徴を有する"
+      ],
+      "selectoridx": "0|1|2",
+      "description": "組織学的特徴に基づいて分類してください"
+    },
+    {
+      "dispname": "組織学的特徴",
+      "type": "subsection"
+    },
+    {
+      "dispname": "腺管形成",
+      "name": "腺管形成",
+      "type": "radio",
+      "inline": true,
+      "selector": [
+        "あり",
+        "なし",
+        "一部あり"
+      ],
+      "selectoridx": "0|1|2"
+    },
+    {
+      "dispname": "分化度",
+      "name": "分化度",
+      "type": "radio",
+      "inline": true,
+      "selector": [
+        "高分化",
+        "中分化",
+        "低分化",
+        "未分化"
+      ],
+      "selectoridx": "0|1|2|3"
+    },
+    {
+      "dispname": "浸潤様式",
+      "name": "浸潤様式",
+      "type": "radio",
+      "inline": true,
+      "selector": [
+        "膨張性",
+        "中間型",
+        "浸潤性"
+      ],
+      "selectoridx": "0|1|2"
+    },
+    {
+      "dispname": "印環細胞",
+      "name": "印環細胞",
+      "type": "radio",
+      "inline": true,
+      "selector": [
+        "なし",
+        "少数",
+        "多数"
+      ],
+      "selectoridx": "0|1|2",
+      "description": "びまん型の特徴"
+    },
+    {
+      "dispname": "間質反応",
+      "name": "間質反応",
+      "type": "radio",
+      "inline": true,
+      "selector": [
+        "軽度",
+        "中等度",
+        "高度"
+      ],
+      "selectoridx": "0|1|2"
+    },
+    {
+      "dispname": "追加所見",
+      "type": "subsection"
+    },
+    {
+      "dispname": "組織学的詳細所見",
+      "name": "詳細所見",
+      "type": "textarea",
+      "rows": 5,
+      "description": "組織学的所見の詳細を記載してください"
+    },
+    {
+      "dispname": "免疫組織化学所見",
+      "name": "免疫組織化学",
+      "type": "textarea",
+      "rows": 3,
+      "description": "実施した場合、結果を記載してください"
+    },
+    {
+      "dispname": "その他のコメント",
+      "name": "その他所見",
+      "type": "textarea",
+      "rows": 5
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "Lauren分類index",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[Lauren分類.index]]"
+    },
+    {
+      "name": "印環細胞index",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[印環細胞.index]]"
+    },
+    {
+      "name": "予後評価",
+      "type": "eval",
+      "formula": "[[Lauren分類index]] == 0 ? '比較的良好な予後' : ( [[Lauren分類index]] == 1 ? '不良な予後' : '中間的予後' )"
+    },
+    {
+      "name": "疫学的特徴",
+      "type": "eval",
+      "formula": "[[Lauren分類index]] == 0 ? '環境因子関連、発生率減少傾向' : ( [[Lauren分類index]] == 1 ? '遺伝因子関連、発生率一定' : '両方の要素' )"
+    },
+    {
+      "name": "Warning: びまん型",
+      "formula": "[[Lauren分類index]] == 1",
+      "type": "warning"
+    },
+    {
+      "name": "Emergency: びまん型で印環細胞多数",
+      "formula": "[[Lauren分類index]] == 1 && [[印環細胞index]] == 2",
+      "type": "emergency"
+    }
+  ]
+}

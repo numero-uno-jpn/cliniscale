@@ -1,0 +1,164 @@
+{
+    "_comment": [
+        "Apgarスコア（アプガースコア）問診票定義",
+        "出生直後の新生児状態を評価する世界標準のツール",
+        "原典: Apgar V. A proposal for a new method of evaluation of the newborn infant. Curr Res Anesth Analg. 1953;32(4):260-7.",
+        "開発者: ヴァージニア・アプガー医師（1952年）",
+        "評価項目: 皮膚色、心拍数、刺激に対する反射、筋緊張、呼吸の5項目",
+        "各項目0-2点で評価、合計10点満点",
+        "評価時期: 生後1分、5分（必要に応じて10分）"
+    ],
+    "title": "Apgarスコア新生児評価",
+    "description": [
+        "出生直後の新生児の状態を客観的に評価するApgarスコアです。",
+        "皮膚色、心拍数、刺激に対する反射、筋緊張、呼吸の5項目を評価します。"
+    ],
+    "contact": "新生児科担当医師",
+    "dept_in_charge": "新生児科・産科",
+    "submit_button_title": "評価結果を記録",
+    "fields": [
+        {
+            "dispname": "基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "出生日時",
+            "name": "出生日時",
+            "type": "date",
+            "required": true,
+            "format": "YYYY/MM/DD"
+        },
+        {
+            "dispname": "在胎週数",
+            "name": "在胎週数",
+            "type": "text",
+            "required": true,
+            "postfix": "週",
+            "testrange": [
+                22,
+                44
+            ],
+            "inputmode": "numeric"
+        },
+        {
+            "dispname": "分娩方法",
+            "name": "分娩方法",
+            "type": "radio",
+            "inline": true,
+            "selector": "経腟分娩|帝王切開|吸引分娩|鉗子分娩"
+        },
+        {
+            "dispname": "評価時期",
+            "name": "評価時期",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "1分後|5分後|10分後"
+        },
+        {
+            "type": "separator"
+        },
+        {
+            "dispname": "Apgarスコア評価項目",
+            "type": "subsection"
+        },
+        {
+            "dispname": "1. 皮膚色（Appearance）",
+            "name": "皮膚色",
+            "type": "radio",
+            "required": true,
+            "selector": "全身蒼白またはチアノーゼ|体幹はピンク色、四肢にチアノーゼ|全身ピンク色",
+            "selectoridx": "0|1|2",
+            "description": "新生児の皮膚の色調を評価します"
+        },
+        {
+            "dispname": "2. 心拍数（Pulse）",
+            "name": "心拍数",
+            "type": "radio",
+            "required": true,
+            "selector": "心拍なし|100回/分未満|100回/分以上",
+            "selectoridx": "0|1|2",
+            "description": "聴診または触診で心拍数を評価します"
+        },
+        {
+            "dispname": "3. 刺激に対する反射（Grimace）",
+            "name": "刺激反射",
+            "type": "radio",
+            "required": true,
+            "selector": "反応なし|顔をしかめる程度|咳、くしゃみ、啼泣",
+            "selectoridx": "0|1|2",
+            "description": "鼻腔カテーテルや触覚刺激に対する反応を評価します"
+        },
+        {
+            "dispname": "4. 筋緊張（Activity）",
+            "name": "筋緊張",
+            "type": "radio",
+            "required": true,
+            "selector": "四肢完全弛緩|四肢軽度屈曲|活発な四肢運動",
+            "selectoridx": "0|1|2",
+            "description": "新生児の筋緊張と運動性を評価します"
+        },
+        {
+            "dispname": "5. 呼吸（Respiration）",
+            "name": "呼吸",
+            "type": "radio",
+            "required": true,
+            "selector": "呼吸なし|緩徐・不規則な呼吸|強い啼泣・規則的呼吸",
+            "selectoridx": "0|1|2",
+            "description": "呼吸の状態と啼泣の強さを評価します"
+        },
+        {
+            "dispname": "追加情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "蘇生処置の有無",
+            "name": "蘇生処置",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|酸素投与|バッグマスク換気|気管挿管|胸骨圧迫|薬物投与"
+        },
+        {
+            "dispname": "特記事項",
+            "name": "特記事項",
+            "type": "textarea",
+            "rows": 3,
+            "description": "評価時の特記すべき所見や処置について記載してください"
+        },
+        {
+            "dispname": "評価者",
+            "name": "評価者",
+            "type": "text",
+            "required": true,
+            "description": "評価を実施した医師・助産師名"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "Apgarスコア合計",
+            "type": "eval",
+            "formula": "[[皮膚色.index]] + [[心拍数.index]] + [[刺激反射.index]] + [[筋緊張.index]] + [[呼吸.index]]"
+        },
+        {
+            "name": "新生児状態判定",
+            "type": "eval",
+            "formula": "[[Apgarスコア合計]] >= 7 ? '正常' : ([[Apgarスコア合計]] >= 4 ? '軽症新生児仮死' : '重症新生児仮死')"
+        },
+        {
+            "name": "緊急度評価",
+            "type": "eval",
+            "formula": "[[Apgarスコア合計]] >= 7 ? '正常範囲' : ([[Apgarスコア合計]] >= 4 ? '注意観察' : '緊急対応必要')"
+        },
+        {
+            "name": "Warning: Apgarスコア 4-6点",
+            "formula": "[[Apgarスコア合計]] >= 4 && [[Apgarスコア合計]] < 7",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: Apgarスコア 0-3点",
+            "formula": "[[Apgarスコア合計]] <= 3",
+            "type": "emergency"
+        }
+    ]
+}

@@ -1,0 +1,473 @@
+{
+    "_comment": [
+        "Pittsburgh Sleep Quality Index (PSQI) - ピッツバーグ睡眠質問票",
+        "原典: Buysse DJ, Reynolds CF 3rd, Monk TH, Berman SR, Kupfer DJ. The Pittsburgh Sleep Quality Index (PSQI): A new instrument for psychiatric research and practice. Psychiatry Research. 1989; 28(2): 193-213.",
+        "日本語版: 土井由利子, 簑輪眞澄, 大川匡子, 内山真: ピッツバーグ睡眠質問票日本語版の作成. 精神科治療学 1998; 13(6): 755-769.",
+        "過去1か月間の睡眠の質を評価する自記式質問票",
+        "19項目(本人回答) + 5項目(同居者回答) = 24項目から構成",
+        "7つのコンポーネント: 睡眠の質、入眠時間、睡眠時間、睡眠効率、睡眠困難、睡眠薬使用、日中機能障害",
+        "各コンポーネント0-3点、総得点0-21点",
+        "カットオフ値: 5.5点(6点以上で睡眠障害疑い)"
+    ],
+    "title": "PSQI ピッツバーグ睡眠質問票",
+    "description": [
+        "過去1か月間における、あなたの通常の睡眠の習慣についておたずねします。",
+        "過去1か月間について大部分の日の昼と夜を考えて、以下のすべての質問項目にできる限り正確にお答えください。"
+    ],
+    "fields": [
+        {
+            "dispname": "基本的な睡眠習慣",
+            "type": "subsection"
+        },
+        {
+            "dispname": "1. 就寝時刻",
+            "name": "Q1",
+            "type": "time",
+            "format": "HH:mm",
+            "description": "過去1か月間において、通常何時ごろ寝床につきましたか？",
+            "required": true
+        },
+        {
+            "dispname": "2. 入眠に要する時間",
+            "name": "Q2",
+            "type": "text",
+            "inputmode": "numeric",
+            "postfix": "分",
+            "testrange": [
+                0,
+                180
+            ],
+            "description": "過去1か月間において、寝床についてから眠るまでにどれくらい時間を要しましたか？",
+            "required": true
+        },
+        {
+            "dispname": "3. 起床時刻",
+            "name": "Q3",
+            "type": "time",
+            "format": "HH:mm",
+            "description": "過去1か月間において、通常何時ごろ起床しましたか？",
+            "required": true
+        },
+        {
+            "dispname": "4. 実際の睡眠時間",
+            "name": "Q4",
+            "type": "text",
+            "inputmode": "decimal",
+            "postfix": "時間",
+            "testrange": [
+                0,
+                12
+            ],
+            "description": "過去1か月間において、実際の睡眠時間は何時間くらいでしたか？これは、あなたが寝床の中にいた時間とは異なる場合があるかもしれません。",
+            "required": true
+        },
+        {
+            "dispname": "睡眠困難の要因",
+            "type": "subsection"
+        },
+        {
+            "description": "過去1か月間において、どれくらいの頻度で、以下の理由のために睡眠が困難でしたか？",
+            "type": "note"
+        },
+        {
+            "dispname": "5a. 30分以内に眠れなかった",
+            "name": "Q5a",
+            "type": "radio",
+            "selector": [
+                "なし",
+                "1週間に1回未満",
+                "1週間に1-2回",
+                "1週間に3回以上"
+            ],
+            "selectoridx": "0|1|2|3",
+            "description": "寝床についてから30分以内に眠ることができなかったため",
+            "required": true
+        },
+        {
+            "dispname": "5b. 夜間または早朝の覚醒",
+            "name": "Q5b",
+            "type": "radio",
+            "selector": [
+                "なし",
+                "1週間に1回未満",
+                "1週間に1-2回",
+                "1週間に3回以上"
+            ],
+            "selectoridx": "0|1|2|3",
+            "description": "夜間または早朝に目が覚めたため",
+            "required": true
+        },
+        {
+            "dispname": "5c. トイレのための覚醒",
+            "name": "Q5c",
+            "type": "radio",
+            "selector": [
+                "なし",
+                "1週間に1回未満",
+                "1週間に1-2回",
+                "1週間に3回以上"
+            ],
+            "selectoridx": "0|1|2|3",
+            "description": "トイレに起きたため",
+            "required": true
+        },
+        {
+            "dispname": "5d. 息苦しさ",
+            "name": "Q5d",
+            "type": "radio",
+            "selector": [
+                "なし",
+                "1週間に1回未満",
+                "1週間に1-2回",
+                "1週間に3回以上"
+            ],
+            "selectoridx": "0|1|2|3",
+            "description": "息苦しかったため",
+            "required": true
+        },
+        {
+            "dispname": "5e. 咳やいびき",
+            "name": "Q5e",
+            "type": "radio",
+            "selector": [
+                "なし",
+                "1週間に1回未満",
+                "1週間に1-2回",
+                "1週間に3回以上"
+            ],
+            "selectoridx": "0|1|2|3",
+            "description": "咳が出たり、大きないびきをかいたため",
+            "required": true
+        },
+        {
+            "dispname": "5f. 寒さ",
+            "name": "Q5f",
+            "type": "radio",
+            "selector": [
+                "なし",
+                "1週間に1回未満",
+                "1週間に1-2回",
+                "1週間に3回以上"
+            ],
+            "selectoridx": "0|1|2|3",
+            "description": "ひどく寒く感じたため",
+            "required": true
+        },
+        {
+            "dispname": "5g. 暑さ",
+            "name": "Q5g",
+            "type": "radio",
+            "selector": [
+                "なし",
+                "1週間に1回未満",
+                "1週間に1-2回",
+                "1週間に3回以上"
+            ],
+            "selectoridx": "0|1|2|3",
+            "description": "ひどく暑く感じたため",
+            "required": true
+        },
+        {
+            "dispname": "5h. 悪夢",
+            "name": "Q5h",
+            "type": "radio",
+            "selector": [
+                "なし",
+                "1週間に1回未満",
+                "1週間に1-2回",
+                "1週間に3回以上"
+            ],
+            "selectoridx": "0|1|2|3",
+            "description": "悪い夢をみたため",
+            "required": true
+        },
+        {
+            "dispname": "5i. 痛み",
+            "name": "Q5i",
+            "type": "radio",
+            "selector": [
+                "なし",
+                "1週間に1回未満",
+                "1週間に1-2回",
+                "1週間に3回以上"
+            ],
+            "selectoridx": "0|1|2|3",
+            "description": "痛みがあったため",
+            "required": true
+        },
+        {
+            "dispname": "5j. その他の理由による睡眠困難の頻度",
+            "name": "Q5j",
+            "type": "radio",
+            "selector": [
+                "なし",
+                "1週間に1回未満",
+                "1週間に1-2回",
+                "1週間に3回以上"
+            ],
+            "selectoridx": "0|1|2|3",
+            "description": "上記以外の理由により睡眠が困難だった頻度"
+        },
+        {
+            "dispname": "5j. その他の理由の詳細",
+            "name": "Q5j_reason",
+            "type": "textarea",
+            "description": "どのような理由で睡眠が困難でしたか？",
+            "parentname": "Q5j",
+            "parentsel": "1週間に1回未満|1週間に1-2回|1週間に3回以上"
+        },
+        {
+            "dispname": "睡眠の質・薬物使用・日中機能",
+            "type": "subsection"
+        },
+        {
+            "dispname": "6. 睡眠の質の主観的評価",
+            "name": "Q6",
+            "type": "radio",
+            "selector": [
+                "非常によい",
+                "かなりよい",
+                "かなりわるい",
+                "非常にわるい"
+            ],
+            "selectoridx": "0|1|2|3",
+            "description": "過去1か月間において、ご自分の睡眠の質を全体として、どのように評価しますか？",
+            "required": true
+        },
+        {
+            "dispname": "7. 睡眠薬の使用頻度",
+            "name": "Q7",
+            "type": "radio",
+            "selector": [
+                "なし",
+                "1週間に1回未満",
+                "1週間に1-2回",
+                "1週間に3回以上"
+            ],
+            "selectoridx": "0|1|2|3",
+            "description": "過去1か月間において、どのくらいの頻度で、眠るために薬を服用しましたか（医師から処方された薬あるいは薬屋で買った薬）",
+            "required": true
+        },
+        {
+            "dispname": "8. 日中の眠気による問題",
+            "name": "Q8",
+            "type": "radio",
+            "selector": [
+                "なし",
+                "1週間に1回未満",
+                "1週間に1-2回",
+                "1週間に3回以上"
+            ],
+            "selectoridx": "0|1|2|3",
+            "description": "過去1か月間において、どれくらいの頻度で、車の運転中や食事中や社会活動中など眠ってはいけない時に、起きていられなくなり困ったことがありましたか？",
+            "required": true
+        },
+        {
+            "dispname": "9. やる気の問題",
+            "name": "Q9",
+            "type": "radio",
+            "selector": [
+                "まったく問題なし",
+                "ほんのわずかに問題",
+                "やや問題",
+                "非常に大きな問題"
+            ],
+            "selectoridx": "0|1|2|3",
+            "description": "過去1か月間において、物事をやり遂げるのに必要な意欲を持続するうえで、どのくらい問題がありましたか？",
+            "required": true
+        },
+        {
+            "dispname": "同居者による観察項目",
+            "type": "subsection",
+            "description": "以下の項目は、同じ部屋や同じベッドで寝ている人がいる場合にお答えください。該当する人がいない場合は「該当なし」を選択してください。"
+        },
+        {
+            "dispname": "10. いびきの大きさ",
+            "name": "Q10",
+            "type": "radio",
+            "selector": [
+                "該当なし",
+                "いびきなし",
+                "軽いいびき",
+                "大きないびき",
+                "非常に大きないびき"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "過去1か月間において、あなたのいびきの大きさは？"
+        },
+        {
+            "dispname": "11. 足の痙攣・ぴくつき",
+            "name": "Q11",
+            "type": "radio",
+            "selector": [
+                "該当なし",
+                "なし",
+                "1週間に1回未満",
+                "1週間に1-2回",
+                "1週間に3回以上"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "過去1か月間において、睡眠中に足がぴくぴく動いたり、足がつったりした頻度は？"
+        },
+        {
+            "dispname": "12. 見当識障害・錯乱",
+            "name": "Q12",
+            "type": "radio",
+            "selector": [
+                "該当なし",
+                "なし",
+                "1週間に1回未満",
+                "1週間に1-2回",
+                "1週間に3回以上"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "過去1か月間において、睡眠中に見当識がなくなったり、錯乱状態になった頻度は？"
+        },
+        {
+            "dispname": "13. 呼吸停止",
+            "name": "Q13",
+            "type": "radio",
+            "selector": [
+                "該当なし",
+                "なし",
+                "1週間に1回未満",
+                "1週間に1-2回",
+                "1週間に3回以上"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "過去1か月間において、睡眠中に息が止まっていた頻度は？"
+        },
+        {
+            "dispname": "14. その他の異常行動の頻度",
+            "name": "Q14",
+            "type": "radio",
+            "selector": [
+                "該当なし",
+                "なし",
+                "1週間に1回未満",
+                "1週間に1-2回",
+                "1週間に3回以上"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "上記以外に睡眠中の異常行動があった頻度"
+        },
+        {
+            "dispname": "14. その他の異常行動の詳細",
+            "name": "Q14_reason",
+            "type": "textarea",
+            "description": "どのような異常行動でしたか？",
+            "rows": 2,
+            "parentname": "Q14",
+            "parentsel": "1週間に1回未満|1週間に1-2回|1週間に3回以上"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "comp1_sleep_quality",
+            "type": "eval",
+            "formula": "[[Q6.index]]",
+            "dispname": "コンポーネント1: 睡眠の質"
+        },
+        {
+            "name": "comp2_sleep_latency",
+            "type": "eval",
+            "formula": "( ( ((Q2)) <= 15 ? 0 : ( ((Q2)) <= 30 ? 1 : ( ((Q2)) <= 60 ? 2 : 3 ) ) ) + [[Q5a.index]] ) == 0 ? 0 : ( ( ( ((Q2)) <= 15 ? 0 : ( ((Q2)) <= 30 ? 1 : ( ((Q2)) <= 60 ? 2 : 3 ) ) ) + [[Q5a.index]] ) <= 2 ? 1 : ( ( ( ((Q2)) <= 15 ? 0 : ( ((Q2)) <= 30 ? 1 : ( ((Q2)) <= 60 ? 2 : 3 ) ) ) + [[Q5a.index]] ) <= 4 ? 2 : 3 ) )",
+            "dispname": "コンポーネント2: 入眠時間"
+        },
+        {
+            "name": "sleep_duration_hours",
+            "type": "eval",
+            "formula": "{{Q4}}",
+            "noreport": true,
+            "description": "睡眠時間（時間）"
+        },
+        {
+            "name": "comp3_sleep_duration",
+            "type": "eval",
+            "formula": "((sleep_duration_hours)) > 7 ? 0 : ( ((sleep_duration_hours)) > 6 ? 1 : ( ((sleep_duration_hours)) > 5 ? 2 : 3 ) )",
+            "dispname": "コンポーネント3: 睡眠時間"
+        },
+        {
+            "name": "bedtime_minutes",
+            "type": "eval",
+            "formula": "parseInt( {{Q1}}.split(':')[0] ) * 60 + parseInt( {{Q1}}.split(':')[1] )",
+            "noreport": true,
+            "description": "就寝時刻（分）"
+        },
+        {
+            "name": "waketime_minutes",
+            "type": "eval",
+            "formula": "parseInt( {{Q3}}.split(':')[0] ) * 60 + parseInt( {{Q3}}.split(':')[1] )",
+            "noreport": true,
+            "description": "起床時刻（分）"
+        },
+        {
+            "name": "time_in_bed_minutes",
+            "type": "eval",
+            "formula": "[[waketime_minutes]] <= [[bedtime_minutes]] ? ( [[waketime_minutes]] + 24 * 60 - [[bedtime_minutes]] ) : ( [[waketime_minutes]] - [[bedtime_minutes]] )",
+            "noreport": true,
+            "description": "床上時間（分）"
+        },
+        {
+            "name": "sleep_efficiency",
+            "type": "eval",
+            "formula": "([[sleep_duration_hours]] * 60 / [[time_in_bed_minutes]] * 100).toFixed(2)",
+            "noreport": true,
+            "description": "睡眠効率（%）"
+        },
+        {
+            "name": "comp4_sleep_efficiency",
+            "type": "eval",
+            "formula": "[[sleep_efficiency]] >= 85 ? 0 : ( [[sleep_efficiency]] >= 75 ? 1 : ( [[sleep_efficiency]] >= 65 ? 2 : 3 ) )",
+            "dispname": "コンポーネント4: 睡眠効率"
+        },
+        {
+            "name": "sleep_disturbance_sum",
+            "type": "eval",
+            "formula": "[[Q5b.index]] + [[Q5c.index]] + [[Q5d.index]] + [[Q5e.index]] + [[Q5f.index]] + [[Q5g.index]] + [[Q5h.index]] + [[Q5i.index]] + ( [[Q5j.index]] ? [[Q5j.index]] : 0 )",
+            "noreport": true,
+            "description": "睡眠困難項目の合計"
+        },
+        {
+            "name": "comp5_sleep_disturbance",
+            "type": "eval",
+            "formula": "[[sleep_disturbance_sum]] == 0 ? 0 : ( [[sleep_disturbance_sum]] <= 9 ? 1 : ( [[sleep_disturbance_sum]] <= 18 ? 2 : 3 ) )",
+            "dispname": "コンポーネント5: 睡眠困難"
+        },
+        {
+            "name": "comp6_sleep_medication",
+            "type": "eval",
+            "formula": "[[Q7.index]]",
+            "dispname": "コンポーネント6: 睡眠薬の使用"
+        },
+        {
+            "name": "comp7_daytime_dysfunction",
+            "type": "eval",
+            "formula": "( [[Q8.index]] + [[Q9.index]] ) == 0 ? 0 : ( ( [[Q8.index]] + [[Q9.index]] ) <= 2 ? 1 : ( ( [[Q8.index]] + [[Q9.index]] ) <= 4 ? 2 : 3 ) )",
+            "dispname": "コンポーネント7: 日中機能障害"
+        },
+        {
+            "name": "total_score",
+            "type": "eval",
+            "formula": "[[comp1_sleep_quality]] + [[comp2_sleep_latency]] + [[comp3_sleep_duration]] + [[comp4_sleep_efficiency]] + [[comp5_sleep_disturbance]] + [[comp6_sleep_medication]] + [[comp7_daytime_dysfunction]]",
+            "dispname": "PSQI総得点（0-21点）"
+        },
+        {
+            "name": "sleep_quality_assessment",
+            "type": "eval",
+            "formula": "[[total_score]] <= 5 ? '睡眠障害なし' : ( [[total_score]] <= 8 ? '軽度睡眠障害' : '高度睡眠障害' )",
+            "dispname": "睡眠の質評価"
+        },
+        {
+            "name": "Warning: 睡眠障害の可能性",
+            "formula": "[[total_score]] >= 6",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 高度睡眠障害",
+            "formula": "[[total_score]] >= 9",
+            "type": "emergency"
+        }
+    ]
+}

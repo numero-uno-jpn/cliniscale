@@ -1,0 +1,169 @@
+{
+  "_comment": [
+    "NSQIP-MICA (Gupta Perioperative Risk for Myocardial Infarction or Cardiac Arrest)問診票",
+    "開発者: Prateek K. Gupta et al.",
+    "原論文: Development and validation of a risk calculator for prediction of cardiac risk after surgery. Circulation. 2011;124(4):381-7.",
+    "計算式: cardiac risk [%] = e^x / (1 + e^x), where x = age × 0.02 + status + asa + creatinine + type - 5.25",
+    "対象: 術後30日以内の心筋梗塞・心停止リスク評価",
+    "データベース: ACS NSQIP 2007年（211,410例）および2008年（257,385例）で検証",
+    "C統計量: 0.884 (2007年), 0.874 (2008年)",
+    "公式計算機: https://riskcalculator.facs.org/"
+  ],
+  "title": "NSQIP-MICA 周術期心筋梗塞・心停止リスク評価",
+  "description": [
+    "術後30日以内の心筋梗塞または心停止のリスクを予測するスコアです。",
+    "非心臓手術を受ける患者の周術期心血管リスク評価に使用されます。"
+  ],
+  "fields": [
+    {
+      "dispname": "年齢",
+      "name": "年齢",
+      "type": "text",
+      "postfix": "歳",
+      "inputmode": "numeric",
+      "testrange": [
+        18,
+        120
+      ],
+      "required": true,
+      "description": "半角数字で入力してください（例: 65）"
+    },
+    {
+      "dispname": "機能的状態",
+      "name": "機能的状態",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "完全に自立",
+        "部分的に依存",
+        "完全に依存"
+      ],
+      "selectoridx": "0|1|2",
+      "description": "日常生活動作における自立度"
+    },
+    {
+      "dispname": "ASA分類",
+      "name": "ASA分類",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "ASA 1: 健康",
+        "ASA 2: 軽度の全身疾患",
+        "ASA 3: 重篤な全身疾患",
+        "ASA 4: 生命に関わる重篤な全身疾患",
+        "ASA 5: 手術なしでは生存困難"
+      ],
+      "selectoridx": "1|2|3|4|5",
+      "description": "米国麻酔科学会身体状態分類"
+    },
+    {
+      "dispname": "クレアチニン値",
+      "name": "クレアチニン値",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "正常（≤1.5 mg/dL）",
+        "異常（>1.5 mg/dL）"
+      ],
+      "selectoridx": "0|1",
+      "description": "術前血清クレアチニン値"
+    },
+    {
+      "dispname": "手術の種類",
+      "name": "手術の種類",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "ヘルニア（鼠径・大腿・腹壁など）",
+        "肛門直腸",
+        "大動脈",
+        "減量外科",
+        "脳外科",
+        "乳腺外科",
+        "心臓外科",
+        "耳鼻咽喉科（甲状腺・副甲状腺除く）",
+        "上部消化管・肝胆膵外科（胆嚢摘出以外）",
+        "胆嚢・虫垂・副腎・脾臓",
+        "腸管外科（十二指腸以下）",
+        "頸部外科（甲状腺・副甲状腺含む）",
+        "産婦人科",
+        "整形外科",
+        "その他腹部外科",
+        "末梢血管外科（大動脈・静脈以外）",
+        "皮膚外科",
+        "脊椎外科",
+        "胸部外科（食道・心臓除く）",
+        "静脈外科",
+        "泌尿器科"
+      ],
+      "selectoridx": "0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "年齢スコア",
+      "type": "eval",
+      "formula": "((年齢)) * 0.02",
+      "noreport": true,
+      "description": "年齢に0.02を乗じた値"
+    },
+    {
+      "name": "機能的状態スコア",
+      "type": "eval",
+      "formula": "[[機能的状態.index]] == 0 ? 0 : ( [[機能的状態.index]] == 1 ? 0.65 : 1.03 )",
+      "noreport": true,
+      "description": "機能的状態のスコア変換"
+    },
+    {
+      "name": "ASAスコア",
+      "type": "eval",
+      "formula": "[[ASA分類.index]] == 1 ? -5.17 : ( [[ASA分類.index]] == 2 ? -3.29 : ( [[ASA分類.index]] == 3 ? -1.92 : ( [[ASA分類.index]] == 4 ? -0.95 : 0 ) ) )",
+      "noreport": true,
+      "description": "ASA分類のスコア変換"
+    },
+    {
+      "name": "クレアチニンスコア",
+      "type": "eval",
+      "formula": "[[クレアチニン値.index]] == 0 ? 0 : 0.61",
+      "noreport": true,
+      "description": "クレアチニン値のスコア変換"
+    },
+    {
+      "name": "手術タイプスコア",
+      "type": "eval",
+      "formula": "[[手術の種類.index]] == 0 ? 0 : ( [[手術の種類.index]] == 1 ? -0.16 : ( [[手術の種類.index]] == 2 ? 1.6 : ( [[手術の種類.index]] == 3 ? -0.25 : ( [[手術の種類.index]] == 4 ? 1.4 : ( [[手術の種類.index]] == 5 ? -1.61 : ( [[手術の種類.index]] == 6 ? 1.01 : ( [[手術の種類.index]] == 7 ? 0.71 : ( [[手術の種類.index]] == 8 ? 1.39 : ( [[手術の種類.index]] == 9 ? 0.59 : ( [[手術の種類.index]] == 10 ? 1.14 : ( [[手術の種類.index]] == 11 ? 0.18 : ( [[手術の種類.index]] == 12 ? 0.76 : ( [[手術の種類.index]] == 13 ? 0.8 : ( [[手術の種類.index]] == 14 ? 1.13 : ( [[手術の種類.index]] == 15 ? 0.86 : ( [[手術の種類.index]] == 16 ? 0.54 : ( [[手術の種類.index]] == 17 ? 0.21 : ( [[手術の種類.index]] == 18 ? 0.4 : ( [[手術の種類.index]] == 19 ? -1.09 : -0.26 ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) )",
+      "noreport": true,
+      "description": "手術の種類のスコア変換"
+    },
+    {
+      "name": "X値",
+      "type": "eval",
+      "formula": "( ((年齢スコア)) + ((機能的状態スコア)) + ((ASAスコア)) + ((クレアチニンスコア)) + ((手術タイプスコア)) - 5.25).toFixed(2)",
+      "noreport": true,
+      "description": "線形予測子の計算"
+    },
+    {
+      "dispname": "MICA リスク (%) 術後30日以内の心筋梗塞または心停止のリスク",
+      "name": "MICAリスク",
+      "type": "eval",
+      "formula": "( ( Math.exp( ((X値)) ) / ( 1 + Math.exp( ((X値)) ) ) ) * 100).toFixed(2)"
+    },
+    {
+      "dispname": "リスク分類",
+      "name": "リスク分類",
+      "type": "eval",
+      "formula": "((MICAリスク)) < 0.05 ? '低リスク（<25パーセンタイル）' : ( ((MICAリスク)) < 0.14 ? '低リスク（25-50パーセンタイル）' : ( ((MICAリスク)) < 1.47 ? '中等度リスク（50-90パーセンタイル）' : ( ((MICAリスク)) < 2.60 ? '高リスク（90-95パーセンタイル）' : ( ((MICAリスク)) < 7.69 ? '高リスク（95-99パーセンタイル）' : '最高リスク（>99パーセンタイル）' ) ) ) )"
+    },
+    {
+      "name": "Warning: 追加の心血管評価を要する MICAリスク ≥1.0%",
+      "formula": "((MICAリスク)) >= 1.0",
+      "type": "warning"
+    },
+    {
+      "name": "Emergency: 厳重な周術期監視が必要 MICAリスク ≥2.60%",
+      "formula": "((MICAリスク)) >= 2.60",
+      "type": "emergency"
+    }
+  ]
+}

@@ -1,0 +1,279 @@
+{
+    "_comment": [
+        "M-CHAT-R/F - Modified Checklist for Autism in Toddlers, Revised with Follow-Up",
+        "開発者: Diana Robins, Deborah Fein, Marianne Barton (2009年発表)",
+        "対象年齢: 16-30ヶ月（研究により48ヶ月まで使用可能）",
+        "項目数: 20項目",
+        "評価方式: はい/いいえの二択",
+        "スコアリング: 0-2点=低リスク、3-7点=中リスク（フォローアップ必要）、8-20点=高リスク（即時紹介）",
+        "精度: 感度0.83-0.85、特異度0.95-0.99、陽性的中率47.5%（2段階後）",
+        "公式サイト: http://mchatscreen.com/",
+        "文献: Robins et al. (2014) Pediatrics, 133(1):37-45. PMID: 24366990",
+        "著作権: © 2009 Diana Robins, Deborah Fein, & Marianne Barton",
+        "注意: 本システムでは第1段階スクリーニングのみ実装。第2段階フォローアップ面接は別途実施が必要"
+    ],
+    "title": "M-CHAT-R/F（改訂版乳幼児期自閉症チェックリスト）",
+    "description": [
+        "お子さんの日頃のご様子について、最も質問にあてはまるものを選択してください。",
+        "すべての質問にご回答くださるようにお願いいたします。",
+        "もし質問の行動をめったにしないと思われる場合は（たとえば1、2度しか見た覚えがないなど）、お子さんはそのような行動をしない（「いいえ」を選ぶ）とご回答ください。",
+        "<strong>注意</strong>: 本版は2009年発表の改訂版（20項目）です。オリジナル版（23項目）とは異なります。"
+    ],
+    "responsible_person": [
+        "発達小児科医師"
+    ],
+    "dept_in_charge": "小児科",
+    "disable_privacyitem_requirement": true,
+    "fields": [
+        {
+            "name": "note1",
+            "type": "note",
+            "description": "**対象年齢**: 16-30ヶ月のお子さん（研究により48ヶ月まで使用可能）<br>**回答者**: 保護者の方<br>**実施時間**: 約5分<br>**スクリーニング方式**: 2段階式（陽性の場合は第2段階フォローアップ面接が必要）"
+        },
+        {
+            "name": "mchatr1",
+            "type": "radio",
+            "dispname": "1. お部屋の向こう側にあるものを指さすと、お子さんはそちらを見ますか？（例：おもちゃや動物を指さすと、そのおもちゃや動物を見ますか？）",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchatr2",
+            "type": "radio",
+            "dispname": "2. お子さんが耳が聞こえないのではないかと思ったことがありますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true
+        },
+        {
+            "name": "mchatr3",
+            "type": "radio",
+            "dispname": "3. お子さんはごっこ遊びやふり遊びをしますか？（例：空のコップから飲むふり、電話で話すふり、人形やぬいぐるみに食べさせるふりなど）",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchatr4",
+            "type": "radio",
+            "dispname": "4. お子さんは何かによじ登ることが好きですか？（例：家具、遊具、階段など）",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchatr5",
+            "type": "radio",
+            "dispname": "5. お子さんは目の近くで指を不思議な動かし方をしますか？（例：目の近くで指をひらひらさせますか？）",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true
+        },
+        {
+            "name": "mchatr6",
+            "type": "radio",
+            "dispname": "6. お子さんは1本の指で指さして、何かを求めたり助けを求めたりしますか？（例：手の届かないおやつやおもちゃを指さす）",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchatr7",
+            "type": "radio",
+            "dispname": "7. お子さんは1本の指で指さして、面白いものを見せようとしますか？（例：空の飛行機や道路の大きなトラックを指さす）",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchatr8",
+            "type": "radio",
+            "dispname": "8. お子さんは他の子どもに興味がありますか？（例：他の子どもを見たり、微笑んだり、近づいたりしますか？）",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchatr9",
+            "type": "radio",
+            "dispname": "9. お子さんは物を持ってきたり、見せるために差し出したりしますか？助けを求めるためではなく、ただ共有するために（例：花、ぬいぐるみ、おもちゃのトラックなどを見せる）",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchatr10",
+            "type": "radio",
+            "dispname": "10. お子さんの名前を呼ぶと反応しますか？（例：見上げたり、話したり、喃語を発したり、していることをやめたりしますか？）",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchatr11",
+            "type": "radio",
+            "dispname": "11. お子さんに微笑みかけると、微笑み返してくれますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchatr12",
+            "type": "radio",
+            "dispname": "12. お子さんは日常的な音で動揺しますか？（例：掃除機やうるさい音楽などで叫んだり泣いたりしますか？）",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true
+        },
+        {
+            "name": "mchatr13",
+            "type": "radio",
+            "dispname": "13. お子さんは歩きますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchatr14",
+            "type": "radio",
+            "dispname": "14. お子さんに話しかけたり、一緒に遊んだり、着替えさせたりするとき、目を見ますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchatr15",
+            "type": "radio",
+            "dispname": "15. お子さんはあなたのすることを真似しようとしますか？（例：バイバイと手を振る、拍手する、あなたが変な音を出すと真似する）",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchatr16",
+            "type": "radio",
+            "dispname": "16. あなたが頭を回して何かを見ると、お子さんはあなたが見ているものを見ようと周りを見回しますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchatr17",
+            "type": "radio",
+            "dispname": "17. お子さんはあなたに見てもらおうとしますか？（例：褒めてもらおうとあなたを見たり、「見て」や「見てて」と言ったりしますか？）",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchatr18",
+            "type": "radio",
+            "dispname": "18. お子さんに何かをするように言うと理解しますか？（例：指さしをしなくても、「本を椅子の上に置いて」や「毛布を持ってきて」を理解しますか？）",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchatr19",
+            "type": "radio",
+            "dispname": "19. 何か新しいことが起こると、お子さんはあなたの顔を見てあなたの気持ちを確かめますか？（例：変な音や面白い音を聞いたり、新しいおもちゃを見たりすると、あなたの顔を見ますか？）",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchatr20",
+            "type": "radio",
+            "dispname": "20. お子さんは動きのある遊びが好きですか？（例：ブランコに乗せたり、膝の上で揺らしたりすること）",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "mchatr_score",
+            "type": "eval",
+            "dispname": "M-CHAT-R スコア（リスク項目数）",
+            "formula": "[[mchatr1.index]] + [[mchatr2.index]] + [[mchatr3.index]] + [[mchatr4.index]] + [[mchatr5.index]] + [[mchatr6.index]] + [[mchatr7.index]] + [[mchatr8.index]] + [[mchatr9.index]] + [[mchatr10.index]] + [[mchatr11.index]] + [[mchatr12.index]] + [[mchatr13.index]] + [[mchatr14.index]] + [[mchatr15.index]] + [[mchatr16.index]] + [[mchatr17.index]] + [[mchatr18.index]] + [[mchatr19.index]] + [[mchatr20.index]]"
+        },
+        {
+            "name": "mchatr_risk_level",
+            "type": "eval",
+            "dispname": "M-CHAT-R リスクレベル",
+            "formula": "[[mchatr_score]] >= 8 ? \"高リスク（即時紹介推奨）\" : [[mchatr_score]] >= 3 ? \"中リスク（第2段階フォローアップ必要）\" : \"低リスク（24ヶ月未満は再スクリーニング推奨）\""
+        },
+        {
+            "name": "Warning: 中リスク（第2段階フォローアップ必要）",
+            "type": "warning",
+            "formula": "[[mchatr_score]] >= 3 && [[mchatr_score]] <= 7"
+        },
+        {
+            "name": "Emergency: 高リスク（即時紹介推奨）",
+            "type": "emergency",
+            "formula": "[[mchatr_score]] >= 8"
+        }
+    ]
+}

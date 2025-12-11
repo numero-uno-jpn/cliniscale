@@ -1,0 +1,374 @@
+{
+    "_comment": [
+        "改訂長谷川式簡易知能評価スケール(HDS-R)",
+        "開発者: 長谷川和夫",
+        "原典: 加藤伸司他：改訂長谷川式簡易知能評価スケール(HDS-R)の作成．老年精神医学雑誌 2(11) 1339-1347, 1991",
+        "参考URL: https://www.jpn-geriat-soc.or.jp/tool/pdf/tool_05.pdf",
+        "認知症スクリーニング用の日本独自の標準的評価ツール",
+        "30点満点: カットオフ値20/21点"
+    ],
+    "title": "HDS-R 改訂長谷川式簡易知能評価スケール",
+    "description": [
+        "改訂長谷川式簡易知能評価スケール(HDS-R)は、認知症の疑いや認知機能の低下を早期に発見することができるスクリーニングテストです。",
+        "9つの項目で構成され、見当識、記憶力、計算能力などの認知機能を評価します。30点満点で、20点以下の場合に認知症の疑いがあるとされます。"
+    ],
+    "dept_in_charge": "脳神経内科",
+    "fields": [
+        {
+            "name": "section1",
+            "type": "subsection",
+            "dispname": "見当識・記憶評価"
+        },
+        {
+            "name": "年齢",
+            "type": "text",
+            "dispname": "1. お歳はいくつですか",
+            "description": "2年までの誤差は正解とします",
+            "required": true,
+            "inputmode": "numeric",
+            "testrange": [
+                40,
+                90
+            ]
+        },
+        {
+            "name": "年齢正答",
+            "type": "radio",
+            "dispname": "年齢回答の評価",
+            "selector": [
+                "年齢正解",
+                "年齢不正解"
+            ],
+            "selectoridx": "1|0",
+            "required": true
+        },
+        {
+            "name": "今年",
+            "type": "text",
+            "dispname": "2a. 今年は何年ですか",
+            "required": true,
+            "inputmode": "numeric",
+            "testrange": [
+                2020,
+                2030
+            ]
+        },
+        {
+            "name": "今年正答",
+            "type": "radio",
+            "dispname": "今年回答の評価",
+            "selector": [
+                "今年正解",
+                "今年不正解"
+            ],
+            "selectoridx": "1|0",
+            "required": true
+        },
+        {
+            "name": "今月",
+            "type": "text",
+            "dispname": "2b. 今は何月ですか",
+            "required": true,
+            "inputmode": "numeric",
+            "testrange": [
+                1,
+                12
+            ]
+        },
+        {
+            "name": "今月正答",
+            "type": "radio",
+            "dispname": "今月回答の評価",
+            "selector": [
+                "今月正解",
+                "今月不正解"
+            ],
+            "selectoridx": "1|0",
+            "required": true
+        },
+        {
+            "name": "今日",
+            "type": "text",
+            "dispname": "2c. 今日は何日ですか",
+            "required": true,
+            "inputmode": "numeric",
+            "testrange": [
+                1,
+                31
+            ]
+        },
+        {
+            "name": "今日正答",
+            "type": "radio",
+            "dispname": "今日回答の評価",
+            "selector": [
+                "今日正解",
+                "今日不正解"
+            ],
+            "selectoridx": "1|0",
+            "required": true
+        },
+        {
+            "name": "曜日",
+            "type": "text",
+            "dispname": "2d. 今日は何曜日ですか",
+            "required": true
+        },
+        {
+            "name": "曜日正答",
+            "type": "radio",
+            "dispname": "曜日回答の評価",
+            "selector": [
+                "曜日正解",
+                "曜日不正解"
+            ],
+            "selectoridx": "1|0",
+            "required": true
+        },
+        {
+            "name": "場所",
+            "type": "text",
+            "dispname": "3. 私たちがいまいるところはどこですか",
+            "required": true
+        },
+        {
+            "name": "場所正答",
+            "type": "radio",
+            "dispname": "場所回答の評価",
+            "selector": [
+                "自発的に正解 病院名+科名",
+                "自発的に正解 病院名のみ",
+                "自発的に正解 科名のみ",
+                "ヒントで正解",
+                "場所不正解"
+            ],
+            "selectoridx": "2|2|1|1|0",
+            "required": true
+        },
+        {
+            "name": "section2",
+            "type": "subsection",
+            "dispname": "即時記憶・計算・逆唱"
+        },
+        {
+            "name": "単語セット",
+            "type": "radio",
+            "dispname": "4. 3つの言葉の記銘 - 使用した単語セット",
+            "description": "これから言う3つの言葉を言ってみてください。後でまた聞きますのでよく覚えておいてください",
+            "selector": [
+                "桜・猫・電車",
+                "梅・犬・自動車"
+            ],
+            "required": true
+        },
+        {
+            "name": "記銘1",
+            "type": "radio",
+            "dispname": "4a. 1つ目の単語の記銘",
+            "selector": [
+                "記銘1正解",
+                "記銘1不正解"
+            ],
+            "selectoridx": "1|0",
+            "required": true
+        },
+        {
+            "name": "記銘2",
+            "type": "radio",
+            "dispname": "4b. 2つ目の単語の記銘",
+            "selector": [
+                "記銘2正解",
+                "記銘2不正解"
+            ],
+            "selectoridx": "1|0",
+            "required": true
+        },
+        {
+            "name": "記銘3",
+            "type": "radio",
+            "dispname": "4c. 3つ目の単語の記銘",
+            "selector": [
+                "記銘3正解",
+                "記銘3不正解"
+            ],
+            "selectoridx": "1|0",
+            "required": true
+        },
+        {
+            "name": "計算1",
+            "type": "text",
+            "dispname": "5a. 100から7を引くといくつですか",
+            "description": "100から7を順番に引いてください",
+            "required": true,
+            "inputmode": "numeric",
+            "testrange": [
+                80,
+                100
+            ]
+        },
+        {
+            "name": "計算1正答",
+            "type": "radio",
+            "dispname": "100-7の評価",
+            "selector": [
+                "計算1正解 93",
+                "計算1不正解"
+            ],
+            "selectoridx": "1|0",
+            "required": true
+        },
+        {
+            "name": "計算2",
+            "type": "text",
+            "dispname": "5b. それからまた7を引くといくつですか",
+            "required": true,
+            "inputmode": "numeric",
+            "testrange": [
+                70,
+                95
+            ]
+        },
+        {
+            "name": "計算2正答",
+            "type": "radio",
+            "dispname": "93-7の評価",
+            "selector": [
+                "計算2正解 86",
+                "計算2不正解"
+            ],
+            "selectoridx": "1|0",
+            "required": true
+        },
+        {
+            "name": "逆唱1",
+            "type": "text",
+            "dispname": "6a. 数字の逆唱 6-8-2",
+            "description": "私がこれから言う数字を逆から言ってください: 6-8-2",
+            "required": true
+        },
+        {
+            "name": "逆唱1正答",
+            "type": "radio",
+            "dispname": "6-8-2の逆唱評価",
+            "selector": [
+                "逆唱1正解 2-8-6",
+                "逆唱1不正解"
+            ],
+            "selectoridx": "1|0",
+            "required": true
+        },
+        {
+            "name": "逆唱2",
+            "type": "text",
+            "dispname": "6b. 数字の逆唱 3-5-2-9",
+            "description": "3-5-2-9を逆から言ってください",
+            "required": true
+        },
+        {
+            "name": "逆唱2正答",
+            "type": "radio",
+            "dispname": "3-5-2-9の逆唱評価",
+            "selector": [
+                "逆唱2正解 9-2-5-3",
+                "逆唱2不正解"
+            ],
+            "selectoridx": "1|0",
+            "required": true
+        },
+        {
+            "name": "section3",
+            "type": "subsection",
+            "dispname": "遅延再生・語流暢性"
+        },
+        {
+            "name": "再生1",
+            "type": "radio",
+            "dispname": "7a. 先ほど覚えた言葉 - 1つ目",
+            "description": "先ほど覚えてもらった言葉をもう一度言ってみてください",
+            "selector": [
+                "再生1自発的正解",
+                "再生1ヒント 植物で正解",
+                "再生1不正解"
+            ],
+            "selectoridx": "2|1|0",
+            "required": true
+        },
+        {
+            "name": "再生2",
+            "type": "radio",
+            "dispname": "7b. 先ほど覚えた言葉 - 2つ目",
+            "selector": [
+                "再生2自発的正解",
+                "再生2ヒント 動物で正解",
+                "再生2不正解"
+            ],
+            "selectoridx": "2|1|0",
+            "required": true
+        },
+        {
+            "name": "再生3",
+            "type": "radio",
+            "dispname": "7c. 先ほど覚えた言葉 - 3つ目",
+            "selector": [
+                "再生3自発的正解",
+                "再生3ヒント 乗り物で正解",
+                "再生3不正解"
+            ],
+            "selectoridx": "2|1|0",
+            "required": true
+        },
+        {
+            "name": "物品再生数",
+            "type": "radio",
+            "dispname": "8. 知っているものの名前 - 正答数",
+            "description": "5つの品物（時計、鍵、タバコ、ペン、硬貨など相互に無関係なもの）を見せて隠した後、正しく答えられた数",
+            "selector": [
+                "0個",
+                "1個",
+                "2個",
+                "3個",
+                "4個",
+                "5個"
+            ],
+            "selectoridx": "0|1|2|3|4|5",
+            "required": true
+        },
+        {
+            "name": "語流暢性数",
+            "type": "radio",
+            "dispname": "9. 野菜の名前をできるだけ多く言ってください",
+            "description": "1分間で言えた野菜の数（重複除く）",
+            "selector": [
+                "0-5個",
+                "6個",
+                "7個",
+                "8個",
+                "9個",
+                "10個以上"
+            ],
+            "selectoridx": "0|1|2|3|4|5",
+            "required": true
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "合計点",
+            "type": "eval",
+            "dispname": "HDS-R合計得点",
+            "formula": "[[年齢正答.index]] + [[今年正答.index]] + [[今月正答.index]] + [[今日正答.index]] + [[曜日正答.index]] + [[場所正答.index]] + [[記銘1.index]] + [[記銘2.index]] + [[記銘3.index]] + [[計算1正答.index]] + [[計算2正答.index]] + [[逆唱1正答.index]] + [[逆唱2正答.index]] + [[再生1.index]] + [[再生2.index]] + [[再生3.index]] + [[物品再生数.index]] + [[語流暢性数.index]]"
+        },
+        {
+            "name": "Warning: 認知症の疑い",
+            "type": "warning",
+            "dispname": "認知症の疑いあり（20点以下）",
+            "formula": "[[合計点]] <= 20"
+        },
+        {
+            "name": "判定結果",
+            "type": "eval",
+            "dispname": "判定結果",
+            "formula": "[[合計点]] > 20 ? '正常範囲' : '認知症の疑いあり'"
+        }
+    ]
+}

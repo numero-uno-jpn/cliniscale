@@ -1,0 +1,435 @@
+{
+    "_comment": [
+        "Pediatric Symptom Checklist (PSC-35) 日本語版問診票",
+        "出典: Jellinek MS, Murphy JM. Pediatric Symptom Checklist. Massachusetts General Hospital.",
+        "URL: https://www.massgeneral.org/psychiatry/treatments-and-services/pediatric-symptom-checklist",
+        "原著論文: Jellinek MS, Murphy JM, Robinson J, et al. Pediatric Symptom Checklist: Screening school-age children for psychosocial dysfunction. J Pediatr. 1988;112:201-209.",
+        "4-18歳の子どもの感情・行動問題をスクリーニングする35項目の親記入式質問票",
+        "注意問題、内在化問題、外在化問題の3つの下位尺度を含む",
+        "カットオフ値: 6-17歳 28点以上、4-5歳 24点以上で要注意"
+    ],
+    "title": "PSC-35 小児症状チェックリスト",
+    "description": [
+        "お子さまの感情と行動の問題を早期に発見するための質問票です。",
+        "お子さまの最近6か月間の様子について、最も当てはまるものを選んでください。"
+    ],
+    "contact": "小児科医師",
+    "dept_in_charge": "小児科",
+    "responsible_person": [
+        "担当医師"
+    ],
+    "staffs": [
+        "看護師",
+        "医療スタッフ"
+    ],
+    "submit_button_title": "回答を送信",
+    "translate": "major",
+    "fields": [
+        {
+            "dispname": "基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "お子さまの年齢",
+            "name": "子ども年齢",
+            "type": "text",
+            "required": true,
+            "postfix": "歳",
+            "inputmode": "numeric",
+            "testrange": [
+                3,
+                19
+            ],
+            "description": "対象年齢は4歳から18歳です"
+        },
+        {
+            "dispname": "回答者",
+            "name": "回答者",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "母親|父親|その他の養育者"
+        },
+        {
+            "dispname": "症状チェックリスト",
+            "type": "subsection",
+            "description": "お子さまの行動や感情について、最近の様子を評価してください。各項目について、お子さまにどの程度当てはまるかを選んでください。"
+        },
+        {
+            "dispname": "1. 痛みや不調を訴える",
+            "name": "Q1",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "2. ひとりで過ごす時間が多い",
+            "name": "Q2",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "3. 疲れやすく、元気がない",
+            "name": "Q3",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "4. そわそわして、じっと座っていられない",
+            "name": "Q4",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "5. 先生とのトラブルがある",
+            "name": "Q5",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "6. 学校への関心が少ない",
+            "name": "Q6",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "7. 自分でコントロールできずに動き回る",
+            "name": "Q7",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "8. 空想にふけることが多い",
+            "name": "Q8",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "9. 気が散りやすい",
+            "name": "Q9",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "10. 新しい状況を怖がる",
+            "name": "Q10",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "11. 悲しい、幸せでないと思う",
+            "name": "Q11",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "12. イライラしやすい、怒りっぽい",
+            "name": "Q12",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "13. 希望がないように見える",
+            "name": "Q13",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "14. 一つのことに集中できない",
+            "name": "Q14",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "15. 友達への関心が少ない",
+            "name": "Q15",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "16. 他の子どもと喧嘩をする",
+            "name": "Q16",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "17. 学校を休む",
+            "name": "Q17",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "18. 学校の成績が下がっている",
+            "name": "Q18",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "19. 自分を卑下する",
+            "name": "Q19",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "20. 医師の診察で異常がないのに体調不良を訴える",
+            "name": "Q20",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "21. 眠りにくい",
+            "name": "Q21",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "22. 心配性である",
+            "name": "Q22",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "23. 以前よりも甘えたがる",
+            "name": "Q23",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "24. 自分は悪い子だと思っている",
+            "name": "Q24",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "25. 不必要な危険を冒す",
+            "name": "Q25",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "26. 頻繁にけがをする",
+            "name": "Q26",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "27. あまり楽しそうに見えない",
+            "name": "Q27",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "28. 同年齢の子どもより幼く振る舞う",
+            "name": "Q28",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "29. 規則を守らない",
+            "name": "Q29",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "30. 感情を表さない",
+            "name": "Q30",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "31. 他の人の気持ちを理解しない",
+            "name": "Q31",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "32. 他の人をからかう",
+            "name": "Q32",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "33. 都合の悪いことを人のせいにする",
+            "name": "Q33",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "34. 他人の物をとる",
+            "name": "Q34",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "35. 物を分けあうのをいやがる",
+            "name": "Q35",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "全くない|時々ある|しばしばある",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "総合得点",
+            "type": "eval",
+            "formula": "[[Q1.index]] + [[Q2.index]] + [[Q3.index]] + [[Q4.index]] + [[Q5.index]] + [[Q6.index]] + [[Q7.index]] + [[Q8.index]] + [[Q9.index]] + [[Q10.index]] + [[Q11.index]] + [[Q12.index]] + [[Q13.index]] + [[Q14.index]] + [[Q15.index]] + [[Q16.index]] + [[Q17.index]] + [[Q18.index]] + [[Q19.index]] + [[Q20.index]] + [[Q21.index]] + [[Q22.index]] + [[Q23.index]] + [[Q24.index]] + [[Q25.index]] + [[Q26.index]] + [[Q27.index]] + [[Q28.index]] + [[Q29.index]] + [[Q30.index]] + [[Q31.index]] + [[Q32.index]] + [[Q33.index]] + [[Q34.index]] + [[Q35.index]]",
+            "dispname": "35項目の合計得点（0-70点）"
+        },
+        {
+            "name": "注意問題下位尺度",
+            "type": "eval",
+            "formula": "[[Q4.index]] + [[Q8.index]] + [[Q9.index]] + [[Q14.index]] + [[Q7.index]]",
+            "dispname": "注意問題下位尺度得点（0-10点）"
+        },
+        {
+            "name": "内在化問題下位尺度",
+            "type": "eval",
+            "formula": "[[Q11.index]] + [[Q13.index]] + [[Q19.index]] + [[Q22.index]] + [[Q27.index]]",
+            "dispname": "内在化問題下位尺度得点（0-10点）"
+        },
+        {
+            "name": "外在化問題下位尺度",
+            "type": "eval",
+            "formula": "[[Q16.index]] + [[Q29.index]] + [[Q31.index]] + [[Q32.index]] + [[Q33.index]] + [[Q34.index]] + [[Q35.index]]",
+            "dispname": "外在化問題下位尺度得点（0-14点）"
+        },
+        {
+            "name": "年齢別カットオフ判定",
+            "type": "eval",
+            "formula": "[[子ども年齢]] >= 6 ? ([[総合得点]] >= 28 ? '要注意' : '正常範囲') : ([[総合得点]] >= 24 ? '要注意' : '正常範囲')",
+            "dispname": "年齢別カットオフ値による判定"
+        },
+        {
+            "name": "注意問題リスク",
+            "type": "eval",
+            "formula": "[[注意問題下位尺度]] >= 7 ? '高リスク' : '正常範囲'",
+            "dispname": "注意問題のリスク評価"
+        },
+        {
+            "name": "内在化問題リスク",
+            "type": "eval",
+            "formula": "[[内在化問題下位尺度]] >= 5 ? '高リスク' : '正常範囲'",
+            "dispname": "内在化問題のリスク評価"
+        },
+        {
+            "name": "外在化問題リスク",
+            "type": "eval",
+            "formula": "[[外在化問題下位尺度]] >= 7 ? '高リスク' : '正常範囲'",
+            "dispname": "外在化問題のリスク評価"
+        },
+        {
+            "name": "Warning: 総合得点が基準値以上",
+            "formula": "[[総合得点]] >= ([[子ども年齢]] >= 6 ? 28 : 24)",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: いずれかの下位尺度が高リスク",
+            "formula": "[[注意問題下位尺度]] >= 7 || [[内在化問題下位尺度]] >= 5 || [[外在化問題下位尺度]] >= 7",
+            "type": "emergency"
+        }
+    ]
+}

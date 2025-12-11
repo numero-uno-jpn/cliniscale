@@ -1,0 +1,259 @@
+{
+    "_comment": [
+        "SCORAD（SCORing Atopic Dermatitis）アトピー性皮膚炎重症度評価",
+        "European Task Force on Atopic Dermatitis（ETFAD）により1993年開発",
+        "範囲（A）/5 + 7×症状の程度（B）/2 + 自覚症状（C）の計算式",
+        "最大103点満点、25点未満：軽度、25-50点：中等度、50点以上：重度",
+        "範囲評価のselectoridxは原典の2倍値で整数化、evalで2で割って正規化",
+        "evalフィールド間の参照は(())を使用して小数点を維持",
+        "原典: Severity scoring of atopic dermatitis: the SCORAD index. Dermatology. 1993;186(1):23-31. PMID: 8435513",
+        "参考URL: https://pubmed.ncbi.nlm.nih.gov/8435513/"
+    ],
+    "title": "SCORAD (SCORing Atopic Dermatitis) アトピー性皮膚炎重症度評価",
+    "description": [
+        "アトピー性皮膚炎重症度評価（SCORAD）",
+        "European Task Force on Atopic Dermatitis開発の国際標準指標です。",
+        "範囲、症状の程度、自覚症状を総合的に評価します。"
+    ],
+    "fields": [
+        {
+            "dispname": "皮疹の範囲評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "頭部前面",
+            "name": "頭部前面",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "なし|あり",
+            "selectoridx": "0|9"
+        },
+        {
+            "dispname": "頭部後面",
+            "name": "頭部後面",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "なし|あり",
+            "selectoridx": "0|9"
+        },
+        {
+            "dispname": "右腕前面",
+            "name": "右腕前面",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "なし|あり",
+            "selectoridx": "0|9"
+        },
+        {
+            "dispname": "右腕後面",
+            "name": "右腕後面",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "なし|あり",
+            "selectoridx": "0|9"
+        },
+        {
+            "dispname": "左腕前面",
+            "name": "左腕前面",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "なし|あり",
+            "selectoridx": "0|9"
+        },
+        {
+            "dispname": "左腕後面",
+            "name": "左腕後面",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "なし|あり",
+            "selectoridx": "0|9"
+        },
+        {
+            "dispname": "胸腹部",
+            "name": "胸腹部",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "なし|あり",
+            "selectoridx": "0|36"
+        },
+        {
+            "dispname": "背部",
+            "name": "背部",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "なし|あり",
+            "selectoridx": "0|36"
+        },
+        {
+            "dispname": "右下肢前面",
+            "name": "右下肢前面",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "なし|あり",
+            "selectoridx": "0|18"
+        },
+        {
+            "dispname": "右下肢後面",
+            "name": "右下肢後面",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "なし|あり",
+            "selectoridx": "0|18"
+        },
+        {
+            "dispname": "左下肢前面",
+            "name": "左下肢前面",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "なし|あり",
+            "selectoridx": "0|18"
+        },
+        {
+            "dispname": "左下肢後面",
+            "name": "左下肢後面",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "なし|あり",
+            "selectoridx": "0|18"
+        },
+        {
+            "dispname": "外陰部",
+            "name": "外陰部",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "なし|あり",
+            "selectoridx": "0|2"
+        },
+        {
+            "dispname": "症状の程度評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "紅斑",
+            "name": "紅斑",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "浮腫/丘疹",
+            "name": "浮腫丘疹",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "浸出液/痂皮",
+            "name": "浸出液痂皮",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "掻破痕",
+            "name": "掻破痕",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "苔癬化",
+            "name": "苔癬化",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "皮膚の乾燥",
+            "name": "皮膚乾燥",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度",
+            "selectoridx": "0|1|2|3",
+            "description": "炎症のない部位での評価"
+        },
+        {
+            "dispname": "自覚症状評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "過去3日間のかゆみの程度",
+            "name": "かゆみ",
+            "type": "scale",
+            "min": 0,
+            "max": 10,
+            "step": 1,
+            "starttag": "かゆみなし",
+            "endtag": "想像しうる最悪のかゆみ",
+            "value": 0
+        },
+        {
+            "dispname": "過去3日間の睡眠障害の程度",
+            "name": "睡眠障害",
+            "type": "scale",
+            "min": 0,
+            "max": 10,
+            "step": 1,
+            "starttag": "睡眠障害なし",
+            "endtag": "想像しうる最悪の睡眠障害",
+            "value": 0
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "範囲合計A",
+            "type": "eval",
+            "formula": "( [[頭部前面.index]] + [[頭部後面.index]] + [[右腕前面.index]] + [[右腕後面.index]] + [[左腕前面.index]] + [[左腕後面.index]] + [[胸腹部.index]] + [[背部.index]] + [[右下肢前面.index]] + [[右下肢後面.index]] + [[左下肢前面.index]] + [[左下肢後面.index]] + [[外陰部.index]] ) / 2",
+            "dispname": "皮疹の範囲（A）"
+        },
+        {
+            "name": "症状程度合計B",
+            "type": "eval",
+            "formula": "[[紅斑.index]] + [[浮腫丘疹.index]] + [[浸出液痂皮.index]] + [[掻破痕.index]] + [[苔癬化.index]] + [[皮膚乾燥.index]]",
+            "dispname": "症状の程度（B）"
+        },
+        {
+            "name": "自覚症状合計C",
+            "type": "eval",
+            "formula": "[[かゆみ]] + [[睡眠障害]]",
+            "dispname": "自覚症状（C）"
+        },
+        {
+            "name": "SCORADスコア",
+            "type": "eval",
+            "formula": "((範囲合計A)) / 5 + 7 * [[症状程度合計B]] / 2 + [[自覚症状合計C]]",
+            "dispname": "SCORAD総スコア（最大103点）"
+        },
+        {
+            "name": "重症度分類",
+            "type": "eval",
+            "formula": "((SCORADスコア)) < 25 ? '軽度' : ( ((SCORADスコア)) < 50 ? '中等度' : '重度' )",
+            "dispname": "重症度判定"
+        }
+    ]
+}

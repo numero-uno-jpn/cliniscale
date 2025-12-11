@@ -1,0 +1,142 @@
+{
+    "_comment": [
+        "Framingham Risk Score (2008年版) - 10年心血管疾患リスク評価",
+        "原典: D'Agostino RB Sr, Vasan RS, Pencina MJ, et al. General cardiovascular risk profile for use in primary care: the Framingham Heart Study. Circulation. 2008;117(6):743-753.",
+        "URL: https://www.framinghamheartstudy.org/fhs-risk-functions/cardiovascular-disease-10-year-risk/",
+        "評価対象: 30-74歳の心血管疾患既往なし者",
+        "使用モデル: Laboratory-Based Model (Primary Model) - 総コレステロール・HDL使用",
+        "注意: 2023年以降はPREVENT equations使用が推奨されています"
+    ],
+    "title": "Framingham 心血管疾患リスクスコア (2008年版)",
+    "description": [
+        "10年間の心血管疾患発症リスクを評価する問診票です。",
+        "冠動脈疾患、脳血管疾患、末梢動脈疾患、心不全の発症リスクを総合的に評価します。",
+        "注意：2023年以降はより新しいPREVENT equationsの使用が推奨されています。"
+    ],
+    "fields": [
+        {
+            "dispname": "年齢",
+            "name": "年齢",
+            "type": "text",
+            "postfix": "歳",
+            "inputmode": "numeric",
+            "testrange": [
+                30,
+                74
+            ],
+            "required": true,
+            "description": "30-74歳の範囲で入力してください（例: 55）"
+        },
+        {
+            "dispname": "性別",
+            "name": "性別",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "男性|女性"
+        },
+        {
+            "dispname": "総コレステロール",
+            "name": "総コレステロール",
+            "type": "text",
+            "postfix": "mg/dL",
+            "inputmode": "numeric",
+            "testrange": [
+                100,
+                400
+            ],
+            "required": true,
+            "description": "最近の血液検査結果を入力してください（例: 200）"
+        },
+        {
+            "dispname": "HDLコレステロール",
+            "name": "HDLコレステロール",
+            "type": "text",
+            "postfix": "mg/dL",
+            "inputmode": "numeric",
+            "testrange": [
+                20,
+                100
+            ],
+            "required": true,
+            "description": "善玉コレステロール値を入力してください（例: 50）"
+        },
+        {
+            "dispname": "収縮期血圧",
+            "name": "収縮期血圧",
+            "type": "text",
+            "postfix": "mmHg",
+            "inputmode": "numeric",
+            "testrange": [
+                90,
+                200
+            ],
+            "required": true,
+            "description": "上の血圧値を入力してください（例: 120）"
+        },
+        {
+            "dispname": "高血圧の治療を受けていますか",
+            "name": "高血圧治療",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いいえ|はい",
+            "description": "降圧薬を服用している場合は「はい」を選択してください"
+        },
+        {
+            "dispname": "現在喫煙していますか",
+            "name": "喫煙",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いいえ|はい",
+            "description": "過去1年以内に喫煙歴がある場合は「はい」を選択してください"
+        },
+        {
+            "dispname": "糖尿病と診断されていますか",
+            "name": "糖尿病",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いいえ|はい",
+            "description": "医師から糖尿病の診断を受けている場合は「はい」を選択してください"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "リスク計算_男性",
+            "type": "eval",
+            "formula": "{{性別}} == '男性' && [[年齢]] >= 30 && [[年齢]] <= 74 ? ( 3.06117 * Math.log( [[年齢]] ) + 1.12370 * Math.log( [[総コレステロール]] ) - 0.93263 * Math.log( [[HDLコレステロール]] ) + 1.93303 * Math.log( [[収縮期血圧]] ) * ( [[高血圧治療.index]] == 0 ? 1 : 0 ) + 1.99881 * Math.log( [[収縮期血圧]] ) * ( [[高血圧治療.index]] == 1 ? 1 : 0 ) + 0.65451 * [[喫煙.index]] + 0.57367 * [[糖尿病.index]] - 23.9802 ) : 0",
+            "noreport": true
+        },
+        {
+            "name": "リスク計算_女性",
+            "type": "eval",
+            "formula": "{{性別}} == '女性' && [[年齢]] >= 30 && [[年齢]] <= 74 ? ( 2.32888 * Math.log( [[年齢]] ) + 1.20904 * Math.log( [[総コレステロール]] ) - 0.70833 * Math.log( [[HDLコレステロール]] ) + 2.76157 * Math.log( [[収縮期血圧]] ) * ( [[高血圧治療.index]] == 0 ? 1 : 0 ) + 2.82263 * Math.log( [[収縮期血圧]] ) * ( [[高血圧治療.index]] == 1 ? 1 : 0 ) + 0.52873 * [[喫煙.index]] + 0.69154 * [[糖尿病.index]] - 26.1931 ) : 0",
+            "noreport": true
+        },
+        {
+            "name": "10年心血管疾患リスク_パーセント",
+            "type": "eval",
+            "formula": "( [[年齢]] >= 30 && [[年齢]] <= 74 ? ( {{性別}} == '男性' ? ( 100 * ( 1 - Math.pow( 0.88936, Math.exp( [[リスク計算_男性]] ) ) ) ) : ( 100 * ( 1 - Math.pow( 0.95012, Math.exp( [[リスク計算_女性]] ) ) ) ) ) : 0 ).toFixed(2)",
+            "dispname": "10年心血管疾患リスク（%）"
+        },
+        {
+            "name": "リスク分類",
+            "type": "eval",
+            "formula": "[[年齢]] >= 30 && [[年齢]] <= 74 ? ( [[10年心血管疾患リスク_パーセント]] < 10 ? '低リスク' : ( [[10年心血管疾患リスク_パーセント]] < 20 ? '中等度リスク' : '高リスク' ) ) : '評価対象外'",
+            "dispname": "リスク評価分類"
+        },
+        {
+            "name": "Warning: 10年リスク 10%以上",
+            "formula": "[[10年心血管疾患リスク_パーセント]] >= 10",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 10年リスク 20%以上",
+            "formula": "[[10年心血管疾患リスク_パーセント]] >= 20",
+            "type": "emergency"
+        }
+    ]
+}

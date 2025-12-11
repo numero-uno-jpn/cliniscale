@@ -1,0 +1,103 @@
+{
+    "_comment": [
+        "RASS (Richmond Agitation-Sedation Scale) 問診票定義",
+        "原著: Sessler CN, et al. The Richmond Agitation-Sedation Scale: validity and reliability in adult intensive care unit patients. Am J Respir Crit Care Med. 2002;166(10):1338-44",
+        "目的: ICU患者の鎮静レベルと興奮レベルの評価",
+        "対象: 主に人工呼吸器装着患者、その他の入院患者でも使用可能",
+        "評価方法: 観察による3段階評価（基本観察→音声刺激→身体刺激）",
+        "URL: https://www.mdcalc.com/calc/1872/richmond-agitation-sedation-scale-rass"
+    ],
+    "title": "RASS ICU患者の鎮静・興奮レベル評価",
+    "description": [
+        "ICU患者の鎮静と興奮レベルを評価する10段階スケールです。",
+        "観察により約30-60秒で評価できます。"
+    ],
+    "fields": [
+        {
+            "dispname": "RASS評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "RASS評価結果",
+            "name": "RASS_score",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "+4 極度に攻撃的（暴力的、スタッフに即座の危険）",
+                "+3 非常に興奮（チューブ・カテーテルを引き抜く、攻撃的）",
+                "+2 興奮（頻繁に目的のない動き、人工呼吸器と同調しない）",
+                "+1 落ち着きなし（不安または軽い興奮があるが暴力的ではない）",
+                "0 覚醒して落ち着いている",
+                "-1 傾眠（完全に覚醒していないが、呼名で10秒以上開眼し目を合わせる）",
+                "-2 軽度鎮静（呼名で短時間開眼し目を合わせるが10秒未満）",
+                "-3 中等度鎮静（呼名で動きや開眼があるが目を合わせない）",
+                "-4 深度鎮静（呼名に反応しないが身体刺激で動きや開眼）",
+                "-5 昏睡（音声や身体刺激に反応しない）"
+            ],
+            "selectoridx": "4|3|2|1|0|-1|-2|-3|-4|-5",
+            "description": "患者の覚醒度と興奮レベルを観察して該当する項目を選択してください"
+        },
+        {
+            "dispname": "人工呼吸器装着",
+            "name": "人工呼吸器",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|あり",
+            "description": "人工呼吸器を装着していますか"
+        },
+        {
+            "dispname": "鎮静薬使用",
+            "name": "鎮静薬使用",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|あり",
+            "description": "鎮静薬を使用していますか"
+        },
+        {
+            "dispname": "鎮静薬の種類",
+            "name": "鎮静薬種類",
+            "type": "text",
+            "parentname": "鎮静薬使用",
+            "parentsel": "あり",
+            "description": "使用している鎮静薬名を記入してください"
+        },
+        {
+            "dispname": "観察所見",
+            "name": "観察所見",
+            "type": "textarea",
+            "rows": 3,
+            "description": "特記すべき観察事項があれば記入してください"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "RASS_numeric",
+            "type": "eval",
+            "formula": "[[RASS_score.index]]",
+            "dispname": "RASSスコア（数値）"
+        },
+        {
+            "name": "sedation_level",
+            "type": "eval",
+            "formula": "[[RASS_numeric]] >= 1 ? '興奮状態' : ( [[RASS_numeric]] == 0 ? '覚醒・落ち着き' : '鎮静状態' )",
+            "dispname": "鎮静レベル分類"
+        },
+        {
+            "name": "recommended_action",
+            "type": "eval",
+            "formula": "[[RASS_numeric]] >= 3 ? '鎮静が必要' : ( [[RASS_numeric]] >= 1 ? '痛み・不安・せん妄の評価を検討' : ( [[RASS_numeric]] <= -3 ? '鎮静薬の減量を検討' : '適切なレベル' ) )",
+            "dispname": "推奨される対応"
+        },
+        {
+            "name": "Warning: RASSスコア >= +3（中程度以上の興奮状態）",
+            "formula": "[[RASS_numeric]] >= 3",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: RASSスコア = +4（極度の攻撃的状態）",
+            "formula": "[[RASS_numeric]] == 4",
+            "type": "emergency"
+        }
+    ]
+}

@@ -1,0 +1,260 @@
+{
+    "_comment": [
+        "Minnesota Living with Heart Failure Questionnaire (MLHFQ) 日本語版",
+        "原典: Rector TS, Kubo SH, Cohn JN. Patients' self-assessment of their congestive heart failure. Part 2: Content, reliability and validity of a new measure, the Minnesota Living with Heart Failure Questionnaire. Heart Failure. 1987 Oct/Nov:198-209.",
+        "公式サイト: https://license.umn.edu/product/minnesota-living-with-heart-failure-questionnaire-mlhfq",
+        "心不全患者のQOL評価に使用される21項目の自己記入式質問票",
+        "Physical dimension (8項目), Emotional dimension (5項目), その他8項目から構成",
+        "0-5点のリッカート尺度、総得点0-105点、高得点ほどQOLの低下を示す"
+    ],
+    "title": "MLHFQ ミネソタ心不全生活質問票",
+    "description": [
+        "<h3>心不全生活質問票</h3>",
+        "心不全があなたの生活にどのような影響を与えているかを評価します。",
+        "過去4週間のあなたの状況について、各項目にお答えください。"
+    ],
+    "fields": [
+        {
+            "dispname": "説明",
+            "type": "note",
+            "description": "下記の各項目について、過去4週間において、あなたの心不全がどの程度あなたの望む生活をすることを妨げたかを評価してください。0から5の数字を選んでください。"
+        },
+        {
+            "dispname": "足首、脚、足の腫れ",
+            "name": "Q1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|ほとんどない|少し|やや多い|多い|非常に多い",
+            "selectoridx": "0|1|2|3|4|5",
+            "description": "足首、脚、足の腫れによって"
+        },
+        {
+            "dispname": "安楽な椅子やベッドに座ったり横になること",
+            "name": "Q2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|ほとんどない|少し|やや多い|多い|非常に多い",
+            "selectoridx": "0|1|2|3|4|5",
+            "description": "安楽な椅子やベッドに座ったり横になることを困難にすることによって"
+        },
+        {
+            "dispname": "歩いたり階段を昇ること",
+            "name": "Q3",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|ほとんどない|少し|やや多い|多い|非常に多い",
+            "selectoridx": "0|1|2|3|4|5",
+            "description": "歩いたり階段を昇ることを困難にすることによって"
+        },
+        {
+            "dispname": "家事労働",
+            "name": "Q4",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|ほとんどない|少し|やや多い|多い|非常に多い",
+            "selectoridx": "0|1|2|3|4|5",
+            "description": "家事労働を困難にすることによって"
+        },
+        {
+            "dispname": "近所や外出",
+            "name": "Q5",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|ほとんどない|少し|やや多い|多い|非常に多い",
+            "selectoridx": "0|1|2|3|4|5",
+            "description": "近所や外出を困難にすることによって"
+        },
+        {
+            "dispname": "夜間の良い睡眠",
+            "name": "Q6",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|ほとんどない|少し|やや多い|多い|非常に多い",
+            "selectoridx": "0|1|2|3|4|5",
+            "description": "夜間の良い睡眠を困難にすることによって"
+        },
+        {
+            "dispname": "家族や友人との関係",
+            "name": "Q7",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|ほとんどない|少し|やや多い|多い|非常に多い",
+            "selectoridx": "0|1|2|3|4|5",
+            "description": "家族や友人との関係を困難にすることによって"
+        },
+        {
+            "dispname": "職場での仕事",
+            "name": "Q8",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|ほとんどない|少し|やや多い|多い|非常に多い",
+            "selectoridx": "0|1|2|3|4|5",
+            "description": "職場での仕事を困難にすることによって"
+        },
+        {
+            "dispname": "趣味、娯楽、レクリエーション活動",
+            "name": "Q9",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|ほとんどない|少し|やや多い|多い|非常に多い",
+            "selectoridx": "0|1|2|3|4|5",
+            "description": "趣味、娯楽、レクリエーション活動を困難にすることによって"
+        },
+        {
+            "dispname": "性的活動",
+            "name": "Q10",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|ほとんどない|少し|やや多い|多い|非常に多い",
+            "selectoridx": "0|1|2|3|4|5",
+            "description": "性的活動を困難にすることによって"
+        },
+        {
+            "dispname": "好きな食べ物を食べること",
+            "name": "Q11",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|ほとんどない|少し|やや多い|多い|非常に多い",
+            "selectoridx": "0|1|2|3|4|5",
+            "description": "好きな食べ物を食べることを困難にすることによって"
+        },
+        {
+            "dispname": "息切れ",
+            "name": "Q12",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|ほとんどない|少し|やや多い|多い|非常に多い",
+            "selectoridx": "0|1|2|3|4|5",
+            "description": "息切れによって"
+        },
+        {
+            "dispname": "疲労感、活力不足、エネルギー不足",
+            "name": "Q13",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|ほとんどない|少し|やや多い|多い|非常に多い",
+            "selectoridx": "0|1|2|3|4|5",
+            "description": "疲労感、活力不足、エネルギー不足によって"
+        },
+        {
+            "dispname": "入院",
+            "name": "Q14",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|ほとんどない|少し|やや多い|多い|非常に多い",
+            "selectoridx": "0|1|2|3|4|5",
+            "description": "入院を必要とすることによって"
+        },
+        {
+            "dispname": "医療費",
+            "name": "Q15",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|ほとんどない|少し|やや多い|多い|非常に多い",
+            "selectoridx": "0|1|2|3|4|5",
+            "description": "医療費がかかることによって"
+        },
+        {
+            "dispname": "治療による副作用",
+            "name": "Q16",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|ほとんどない|少し|やや多い|多い|非常に多い",
+            "selectoridx": "0|1|2|3|4|5",
+            "description": "治療による副作用によって"
+        },
+        {
+            "dispname": "家族や友人の負担",
+            "name": "Q17",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|ほとんどない|少し|やや多い|多い|非常に多い",
+            "selectoridx": "0|1|2|3|4|5",
+            "description": "家族や友人に負担をかけていると感じることによって"
+        },
+        {
+            "dispname": "自分の状態への理解不足",
+            "name": "Q18",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|ほとんどない|少し|やや多い|多い|非常に多い",
+            "selectoridx": "0|1|2|3|4|5",
+            "description": "自分の状態を理解していないと感じることによって"
+        },
+        {
+            "dispname": "うつ的気分",
+            "name": "Q19",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|ほとんどない|少し|やや多い|多い|非常に多い",
+            "selectoridx": "0|1|2|3|4|5",
+            "description": "うつ的気分になることによって"
+        },
+        {
+            "dispname": "物事に集中する能力",
+            "name": "Q20",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|ほとんどない|少し|やや多い|多い|非常に多い",
+            "selectoridx": "0|1|2|3|4|5",
+            "description": "物事に集中することができないと感じることによって"
+        },
+        {
+            "dispname": "物忘れ",
+            "name": "Q21",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|ほとんどない|少し|やや多い|多い|非常に多い",
+            "selectoridx": "0|1|2|3|4|5",
+            "description": "物忘れをすることによって"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "Physical_score",
+            "type": "eval",
+            "formula": "[[Q3.index]] + [[Q4.index]] + [[Q5.index]] + [[Q6.index]] + [[Q7.index]] + [[Q12.index]] + [[Q13.index]] + [[Q14.index]]",
+            "dispname": "身体スコア (0-40点)"
+        },
+        {
+            "name": "Emotional_score",
+            "type": "eval",
+            "formula": "[[Q17.index]] + [[Q18.index]] + [[Q19.index]] + [[Q20.index]] + [[Q21.index]]",
+            "dispname": "情緒スコア (0-25点)"
+        },
+        {
+            "name": "Total_score",
+            "type": "eval",
+            "formula": "[[Q1.index]] + [[Q2.index]] + [[Q3.index]] + [[Q4.index]] + [[Q5.index]] + [[Q6.index]] + [[Q7.index]] + [[Q8.index]] + [[Q9.index]] + [[Q10.index]] + [[Q11.index]] + [[Q12.index]] + [[Q13.index]] + [[Q14.index]] + [[Q15.index]] + [[Q16.index]] + [[Q17.index]] + [[Q18.index]] + [[Q19.index]] + [[Q20.index]] + [[Q21.index]]",
+            "dispname": "総合スコア (0-105点) - 高得点ほどQOLの低下を示す"
+        },
+        {
+            "name": "QOL_level",
+            "type": "eval",
+            "formula": "[[Total_score]] >= 46 ? '重度のQOL障害' : ([[Total_score]] >= 24 ? '中等度のQOL障害' : '軽度のQOL障害')",
+            "dispname": "QOL障害レベルの評価"
+        }
+    ]
+}

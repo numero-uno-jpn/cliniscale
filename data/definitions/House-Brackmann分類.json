@@ -1,0 +1,309 @@
+{
+  "_comment": [
+    "House-Brackmann顔面神経麻痺分類スケール",
+    "HouseとBrackmannにより1985年に開発された顔面神経機能評価システム",
+    "6段階でI度（正常）からVI度（完全麻痺）まで評価",
+    "原典: House JW, Brackmann DE. Facial nerve grading system. Otolaryngol Head Neck Surg. 1985;93(2):146-7. PMID: 3921901",
+    "評価方式: 安静時・動作時・全体印象の3要素による総合評価"
+  ],
+  "title": "House-Brackmann 顔面神経麻痺分類スケール",
+  "description": [
+    "<h3>House-Brackmann顔面神経麻痺分類</h3>",
+    "顔面神経麻痺の重症度を評価するための国際標準分類システムです。",
+    "安静時の対称性、動作時の機能、全体的な印象の3要素を総合的に観察してI-VIのグレードを判定します。"
+  ],
+  "contact": "神経内科・脳神経外科・耳鼻咽喉科",
+  "dept_in_charge": "神経系診療科",
+  "responsible_person": [
+    "担当医師",
+    "看護師長"
+  ],
+  "staffs": [
+    "神経内科医",
+    "脳神経外科医",
+    "耳鼻咽喉科医"
+  ],
+  "submit_button_title": "評価結果を送信",
+  "translate": "major",
+  "mail_notification": true,
+  "fields": [
+    {
+      "dispname": "患者基本情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "年齢",
+      "name": "年齢",
+      "type": "text",
+      "required": true,
+      "postfix": "歳",
+      "inputmode": "numeric",
+      "testrange": [
+        20,
+        90
+      ],
+      "description": "半角数字で入力してください"
+    },
+    {
+      "dispname": "性別",
+      "name": "性別",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": [
+        "男性",
+        "女性"
+      ]
+    },
+    {
+      "dispname": "顔面麻痺の原因",
+      "name": "原因",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "Bell麻痺",
+        "Ramsay Hunt症候群",
+        "聴神経腫瘍術後",
+        "外傷",
+        "脳血管障害",
+        "その他"
+      ]
+    },
+    {
+      "dispname": "発症からの期間",
+      "name": "発症期間",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "1週間未満",
+        "1-4週間",
+        "1-3ヶ月",
+        "3ヶ月以上"
+      ]
+    },
+    {
+      "dispname": "House-Brackmann分類評価",
+      "type": "subsection",
+      "description": "以下の3要素を観察し、総合的にグレードを判定してください<br><br><strong>安静時の評価</strong><br>患者が表情を作らない安静時の顔面を観察"
+    },
+    {
+      "dispname": "安静時の対称性と筋緊張",
+      "name": "安静時対称性",
+      "type": "radio",
+      "required": true,
+      "description": "表情を作らない状態での顔面の対称性を評価",
+      "selector": [
+        "正常な対称性と筋緊張",
+        "非対称あり"
+      ]
+    },
+    {
+      "type": "subsection",
+      "description": "<strong>動作時の評価</strong><br>患者に表情動作を指示して観察"
+    },
+    {
+      "dispname": "額の動き",
+      "name": "額動き",
+      "type": "radio",
+      "required": true,
+      "description": "額にしわを寄せるよう指示",
+      "selector": [
+        "正常",
+        "中等度から良好な機能",
+        "わずかから中等度の動き",
+        "動きなし"
+      ],
+      "selectoridx": "0|1|2|3"
+    },
+    {
+      "dispname": "閉眼",
+      "name": "閉眼",
+      "type": "radio",
+      "required": true,
+      "description": "完全に目を閉じるよう指示",
+      "selector": [
+        "正常（努力なく完全閉眼）",
+        "最小努力で完全閉眼",
+        "努力により完全閉眼",
+        "不完全閉眼"
+      ],
+      "selectoridx": "0|1|2|3"
+    },
+    {
+      "dispname": "口の動き",
+      "name": "口動き",
+      "type": "radio",
+      "required": true,
+      "description": "笑顔を作るよう指示",
+      "selector": [
+        "正常",
+        "わずかな非対称",
+        "最大努力でわずかな脱力",
+        "最大努力で非対称",
+        "わずかな動き"
+      ],
+      "selectoridx": "0|1|2|3|4"
+    },
+    {
+      "type": "subsection",
+      "description": "<strong>全体印象の評価</strong><br>安静時と動作時の観察を総合して判断"
+    },
+    {
+      "dispname": "全体的な印象（Gross）",
+      "name": "全体印象",
+      "type": "radio",
+      "required": true,
+      "description": "顔面全体を見た際の総合的な機能障害の程度",
+      "selector": [
+        "正常",
+        "わずかな脱力、注意深い観察で判別可能",
+        "明らかだが醜形を伴わない、病的共同運動は軽度",
+        "明らかな脱力または醜形を伴う非対称",
+        "わずかに知覚可能な動きのみ",
+        "動きなし"
+      ],
+      "selectoridx": "0|1|2|3|4|5"
+    },
+    {
+      "dispname": "病的共同運動・拘縮",
+      "name": "病的共同運動",
+      "type": "radio",
+      "required": false,
+      "description": "閉眼時の口角の動き、口の動作時の眼の動きなど（該当する場合のみ）",
+      "selector": [
+        "なし",
+        "わずか",
+        "軽度から中等度",
+        "明らか、重度"
+      ],
+      "selectoridx": "0|1|2|3"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "額動きインデックス",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[額動き.index]]"
+    },
+    {
+      "name": "閉眼インデックス",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[閉眼.index]]"
+    },
+    {
+      "name": "口動きインデックス",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[口動き.index]]"
+    },
+    {
+      "name": "全体印象インデックス",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[全体印象.index]]"
+    },
+    {
+      "name": "HB_Grade",
+      "type": "eval",
+      "dispname": "House-Brackmann Grade",
+      "formula": "[[全体印象インデックス]] == 0 ? 'I' : ( [[全体印象インデックス]] == 1 ? 'II' : ( [[全体印象インデックス]] == 2 ? 'III' : ( [[全体印象インデックス]] == 3 ? 'IV' : ( [[全体印象インデックス]] == 4 ? 'V' : ( [[全体印象インデックス]] == 5 ? 'VI' : '評価エラー' ) ) ) ) )"
+    },
+    {
+      "name": "GradeI矛盾",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( {{HB_Grade}} == 'I' && ( [[額動きインデックス]] != 0 || [[閉眼インデックス]] != 0 || [[口動きインデックス]] != 0 ) ) ? 1 : 0"
+    },
+    {
+      "name": "重大矛盾_軽度全体で重度動作",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( [[全体印象インデックス]] <= 1 && ( [[閉眼インデックス]] >= 3 || [[額動きインデックス]] >= 3 ) ) ? 1 : 0"
+    },
+    {
+      "name": "重大矛盾_重度全体で軽度動作",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( [[全体印象インデックス]] >= 4 && ( [[閉眼インデックス]] <= 1 && [[額動きインデックス]] <= 1 ) ) ? 1 : 0"
+    },
+    {
+      "name": "安静時矛盾_GradeII",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( {{HB_Grade}} == 'II' && {{安静時対称性}} == '非対称あり' ) ? 1 : 0"
+    },
+    {
+      "name": "安静時矛盾_GradeIII",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( {{HB_Grade}} == 'III' && {{安静時対称性}} == '非対称あり' ) ? 1 : 0"
+    },
+    {
+      "name": "安静時矛盾_GradeIV",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( {{HB_Grade}} == 'IV' && {{安静時対称性}} == '非対称あり' ) ? 1 : 0"
+    },
+    {
+      "name": "閉眼矛盾_GradeII",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( {{HB_Grade}} == 'II' && [[閉眼インデックス]] >= 2 ) ? 1 : 0"
+    },
+    {
+      "name": "閉眼矛盾_GradeIII",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( {{HB_Grade}} == 'III' && [[閉眼インデックス]] != 2 ) ? 1 : 0"
+    },
+    {
+      "name": "閉眼矛盾_GradeIV",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( {{HB_Grade}} == 'IV' && [[閉眼インデックス]] != 3 ) ? 1 : 0"
+    },
+    {
+      "name": "額動き矛盾_GradeIV",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( {{HB_Grade}} == 'IV' && [[額動きインデックス]] != 3 ) ? 1 : 0"
+    },
+    {
+      "name": "GradeV矛盾",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( {{HB_Grade}} == 'V' && ( [[額動きインデックス]] != 3 || [[閉眼インデックス]] != 3 ) ) ? 1 : 0"
+    },
+    {
+      "name": "整合性チェック",
+      "type": "eval",
+      "dispname": "評価の整合性確認",
+      "formula": "[[GradeI矛盾]] == 1 ? '警告: Grade Iは全ての動作が正常である必要があります。再評価してください' : ( [[重大矛盾_軽度全体で重度動作]] == 1 ? '警告: 全体印象（軽度）と動作評価（重度）に重大な矛盾があります。再評価してください' : ( [[重大矛盾_重度全体で軽度動作]] == 1 ? '警告: 全体印象（重度）と動作評価（軽度）に重大な矛盾があります。再評価してください' : ( [[安静時矛盾_GradeII]] == 1 ? '注意: Grade IIは通常、安静時に正常な対称性を示します' : ( [[安静時矛盾_GradeIII]] == 1 ? '注意: Grade IIIは通常、安静時に正常な対称性を示します（拘縮・後遺症の可能性）' : ( [[安静時矛盾_GradeIV]] == 1 ? '注意: Grade IVは通常、安静時に正常な対称性を示します' : ( [[閉眼矛盾_GradeII]] == 1 ? '注意: Grade IIは通常、最小努力で完全閉眼可能です' : ( [[閉眼矛盾_GradeIII]] == 1 ? '注意: Grade IIIは通常、努力により完全閉眼可能です' : ( [[閉眼矛盾_GradeIV]] == 1 ? '注意: Grade IVは通常、不完全閉眼を示します' : ( [[額動き矛盾_GradeIV]] == 1 ? '注意: Grade IVは通常、額の動きがありません' : ( [[GradeV矛盾]] == 1 ? '注意: Grade Vは通常、額の動きなし・不完全閉眼を示します' : '評価は典型的なパターンと一致しています' ) ) ) ) ) ) ) ) ) )"
+    },
+    {
+      "name": "HB_詳細説明",
+      "type": "eval",
+      "dispname": "分類の詳細",
+      "formula": "{{HB_Grade}} == 'I' ? 'Grade I - 正常: すべての領域で正常な顔面機能' : ( {{HB_Grade}} == 'II' ? 'Grade II - 軽度機能障害: わずかな脱力、安静時は正常な対称性、努力なしに完全閉眼可能、口にわずかな非対称' : ( {{HB_Grade}} == 'III' ? 'Grade III - 中等度機能障害: 明らかだが醜形を伴わない脱力、努力により完全閉眼可能、額はわずかから中等度の動き、口は最大努力でわずかな脱力' : ( {{HB_Grade}} == 'IV' ? 'Grade IV - やや高度機能障害: 明らかな脱力または醜形、不完全閉眼、額の動きなし、口は最大努力で非対称' : ( {{HB_Grade}} == 'V' ? 'Grade V - 高度機能障害: わずかに知覚可能な動きのみ、安静時非対称、不完全閉眼' : ( {{HB_Grade}} == 'VI' ? 'Grade VI - 完全麻痺: 動きなし' : '評価エラー' ) ) ) ) )"
+    },
+    {
+      "name": "重症度判定",
+      "type": "eval",
+      "dispname": "治療必要性の判定",
+      "formula": "{{HB_Grade}} == 'I' ? '正常（治療不要）' : ( {{HB_Grade}} == 'II' ? '軽症（経過観察）' : ( {{HB_Grade}} == 'III' ? '中等症（積極的治療適応）' : ( {{HB_Grade}} == 'IV' || {{HB_Grade}} == 'V' || {{HB_Grade}} == 'VI' ? '重症（外科的治療検討）' : '要再評価' ) ) )"
+    },
+    {
+      "name": "Warning: 治療介入検討",
+      "type": "warning",
+      "formula": "{{HB_Grade}} == 'III' || {{HB_Grade}} == 'IV'"
+    },
+    {
+      "name": "Emergency: 緊急対応必要",
+      "type": "emergency",
+      "formula": "{{HB_Grade}} == 'V' || {{HB_Grade}} == 'VI'"
+    }
+  ]
+}

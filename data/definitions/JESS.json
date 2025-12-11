@@ -1,0 +1,157 @@
+{
+    "_comment": [
+        "JESS（Japanese version of the Epworth Sleepiness Scale）",
+        "日本呼吸器学会 睡眠時無呼吸症候群に関する検討委員会 委嘱版",
+        "原著: Johns MW. A new method for measuring daytime sleepiness: The Epworth sleepiness scale. Sleep. 1991;14:540-545",
+        "日本語版開発: 福原俊一, 竹上未紗, 鈴鴨よしみ, 他. 日本語版 the Epworth Sleepiness Scale（JESS）. 日呼吸会誌. 2006;44:896-898",
+        "項目応答理論による検証: Takegami M, et al. Development of a Japanese version of the Epworth Sleepiness Scale (JESS) based on Item Response Theory. Sleep Med. 2009;10:556-565",
+        "Copyright: Murray W. Johns and Shunichi Fukuhara. 2006",
+        "権利者: Johns M, Qualitest株式会社, 福原俊一",
+        "※使用には事前申請が必要です（営利・非営利問わず）",
+        "公式サイト: http://www.i-hope.jp/tool/ess.html"
+    ],
+    "title": "JESS：日本語版エプワース眠気尺度",
+    "description": [
+        "もし、以下の状況になったとしたら、どのくらい<b>うとうとする</b>（数秒～数分眠ってしまう）と思いますか。最近の日常生活を思いうかべてお答えください。",
+        "",
+        "以下の状況になったことが実際になくても、その状況になればどうなるかを想像してお答え下さい。",
+        "",
+        "<b>すべての項目にお答えしていただくことが大切です。できる限りすべての項目にお答えください。</b>"
+    ],
+    "submit_button_title": "回答を送信",
+    "fields": [
+        {
+            "dispname": "すわって何かを読んでいるとき（新聞、雑誌、本、書類など）",
+            "name": "Q1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "うとうとする可能性はほとんどない",
+                "うとうとする可能性は少しある",
+                "うとうとする可能性は半々くらい",
+                "うとうとする可能性が高い"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "すわってテレビを見ているとき",
+            "name": "Q2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "うとうとする可能性はほとんどない",
+                "うとうとする可能性は少しある",
+                "うとうとする可能性は半々くらい",
+                "うとうとする可能性が高い"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "会議、映画館、劇場などで静かにすわっているとき",
+            "name": "Q3",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "うとうとする可能性はほとんどない",
+                "うとうとする可能性は少しある",
+                "うとうとする可能性は半々くらい",
+                "うとうとする可能性が高い"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "乗客として1時間続けて自動車に乗っているとき",
+            "name": "Q4",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "うとうとする可能性はほとんどない",
+                "うとうとする可能性は少しある",
+                "うとうとする可能性は半々くらい",
+                "うとうとする可能性が高い"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "午後に横になって、休息をとっているとき",
+            "name": "Q5",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "うとうとする可能性はほとんどない",
+                "うとうとする可能性は少しある",
+                "うとうとする可能性は半々くらい",
+                "うとうとする可能性が高い"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "すわって人と話をしているとき",
+            "name": "Q6",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "うとうとする可能性はほとんどない",
+                "うとうとする可能性は少しある",
+                "うとうとする可能性は半々くらい",
+                "うとうとする可能性が高い"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "昼食をとった後（飲酒なし）、静かにすわっているとき",
+            "name": "Q7",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "うとうとする可能性はほとんどない",
+                "うとうとする可能性は少しある",
+                "うとうとする可能性は半々くらい",
+                "うとうとする可能性が高い"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "すわって手紙や書類などを書いているとき",
+            "name": "Q8",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "うとうとする可能性はほとんどない",
+                "うとうとする可能性は少しある",
+                "うとうとする可能性は半々くらい",
+                "うとうとする可能性が高い"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "合計スコア",
+            "type": "eval",
+            "dispname": "JESS合計スコア（0-24点）",
+            "formula": "[[Q1.index]] + [[Q2.index]] + [[Q3.index]] + [[Q4.index]] + [[Q5.index]] + [[Q6.index]] + [[Q7.index]] + [[Q8.index]]"
+        },
+        {
+            "name": "評価",
+            "type": "eval",
+            "dispname": "評価",
+            "formula": "[[合計スコア]] >= 11 ? '11点以上：睡眠時無呼吸症候群等の可能性が高い' : '10点以下：可能性は低い'"
+        },
+        {
+            "name": "Warning: 過度眠気警告",
+            "type": "warning",
+            "description": "11点以上は睡眠時無呼吸症候群等の可能性があります。医療機関の受診をお勧めします。",
+            "formula": "[[合計スコア]] >= 11"
+        }
+    ]
+}

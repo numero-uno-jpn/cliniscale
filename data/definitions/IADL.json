@@ -1,0 +1,128 @@
+{
+    "_comment": [
+        "Lawton Instrumental Activities of Daily Living Scale (IADL)",
+        "開発者: Lawton, M.P. & Brody, E.M. (1969)",
+        "原典: Assessment of older people: self-maintaining and instrumental activities of daily living. Gerontologist. 9(3):179-86",
+        "手段的日常生活動作評価尺度 - 自立した地域生活に必要な複雑な日常生活動作を評価",
+        "8項目で構成、各項目3-5段階評価、できる(1点)/できない(0点)で採点"
+    ],
+    "title": "IADL Lawton 手段的日常生活動作評価尺度",
+    "description": [
+        "手段的日常生活動作(IADL)の自立度を評価します",
+        "電話使用、買い物、調理、家事、洗濯、外出、服薬管理、金銭管理の8項目について、現在の状況に最も近いものを選んでください"
+    ],
+    "fields": [
+        {
+            "dispname": "A. 電話を使用する能力",
+            "name": "電話使用",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "操作に全く支障がない",
+                "よく知っている番号にかけることができる",
+                "かかってきた電話に出ることはできるが、かけることはできない",
+                "電話を使うことが全くできない"
+            ],
+            "selectoridx": "1|1|1|0"
+        },
+        {
+            "dispname": "B. 買い物",
+            "name": "買い物",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "必要な物を独立して買うことができる",
+                "少数の品物なら独立して買い物ができる",
+                "誰かが一緒であれば買い物ができる",
+                "買い物は全くできない"
+            ],
+            "selectoridx": "1|0|0|0"
+        },
+        {
+            "dispname": "C. 食事の準備",
+            "name": "食事準備",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "適切な食事を計画し、料理し、配膳することができる",
+                "適切な食事を準備できるが、栄養の十分な食事を毎日準備することはできない",
+                "加熱したり、缶詰を開けたり、冷凍食品を準備することはできるが、食事を計画することはできない",
+                "食事を準備することは全くできない"
+            ],
+            "selectoridx": "1|0|0|0"
+        },
+        {
+            "dispname": "D. 家事",
+            "name": "家事",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "家を独立して維持管理することができる",
+                "軽い日常の作業はできるが、重い作業は時々しかできない",
+                "軽い日常の作業はできるが、清潔さを保つことはできない",
+                "日常の作業にあらゆる面で手助けが必要",
+                "家事に全く参加しない"
+            ],
+            "selectoridx": "1|1|1|1|0"
+        },
+        {
+            "dispname": "E. 洗濯",
+            "name": "洗濯",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "完全に自分でできる",
+                "小さなものなら洗える",
+                "洗濯は全くできない"
+            ],
+            "selectoridx": "1|1|0"
+        },
+        {
+            "dispname": "F. 移動手段",
+            "name": "移動手段",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "公共交通機関を独立して利用でき、自分で車を運転する",
+                "タクシーは利用できるが、公共交通機関は利用できない",
+                "公共交通機関を誰かと一緒でなければ利用できない",
+                "タクシーや自動車での移動も誰かと一緒でなければできない",
+                "移動は全くできない"
+            ],
+            "selectoridx": "1|1|1|0|0"
+        },
+        {
+            "dispname": "G. 服薬管理",
+            "name": "服薬管理",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "薬を正しい時間に正しい量を自分で服用できる",
+                "薬が事前に準備されていれば正しく服用できる",
+                "薬を自分で服用することができない"
+            ],
+            "selectoridx": "1|0|0"
+        },
+        {
+            "dispname": "H. 金銭管理",
+            "name": "金銭管理",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "財産、予算、保険料、税金などを独立して管理できる",
+                "日常の買い物はできるが、大きな買い物や銀行業務には手助けが必要",
+                "金銭の管理ができない"
+            ],
+            "selectoridx": "1|1|0"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "IADL合計スコア",
+            "type": "eval",
+            "formula": "[[電話使用.index]] + [[買い物.index]] + [[食事準備.index]] + [[家事.index]] + [[洗濯.index]] + [[移動手段.index]] + [[服薬管理.index]] + [[金銭管理.index]]",
+            "dispname": "IADL合計スコア（0-8点、スコアが高いほど自立度が高い）"
+        }
+    ]
+}

@@ -1,0 +1,268 @@
+{
+    "_comment": [
+        "高齢者用うつ尺度短縮版（GDS-15）",
+        "原典：Sheikh JI, Yesavage JA. Geriatric Depression Scale (GDS): recent evidence and development of a shorter version. Clin Gerontol. 1986;5(1/2):165-173.",
+        "日本版：杉下守弘, 朝田隆. 高齢者用うつ尺度短縮版—日本版（Geriatric Depression Scale − Short Version-Japanese, GDS-S-J）の作成について. 認知神経科学. 2009;11(1):87-90.",
+        "参考URL：https://integrationacademy.ahrq.gov/sites/default/files/2020-07/Update_Geriatric_Depression_Scale-15.pdf",
+        "スコア：0-4点正常、5-9点軽度うつ、10-15点重度うつ",
+        "項目1,5,7,11,13は逆転項目（「いいえ」で1点）、その他は「はい」で1点"
+    ],
+    "title": "高齢者用うつ尺度短縮版（GDS-15）",
+    "description": [
+        "<h3>高齢者用うつ尺度（GDS-15）</h3>",
+        "過去1週間のお気持ちについて、「はい」「いいえ」でお答えください。"
+    ],
+    "fields": [
+        {
+            "name": "q1",
+            "type": "radio",
+            "dispname": "あなたは基本的に生活に満足していますか",
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": [
+                "0",
+                "1"
+            ],
+            "required": true
+        },
+        {
+            "name": "q2",
+            "type": "radio",
+            "dispname": "これまでやってきたことや興味があったことの多くをやめてしまいましたか",
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": [
+                "1",
+                "0"
+            ],
+            "required": true
+        },
+        {
+            "name": "q3",
+            "type": "radio",
+            "dispname": "あなたの人生は空しいと感じますか",
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": [
+                "1",
+                "0"
+            ],
+            "required": true
+        },
+        {
+            "name": "q4",
+            "type": "radio",
+            "dispname": "しばしば退屈だと感じますか",
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": [
+                "1",
+                "0"
+            ],
+            "required": true
+        },
+        {
+            "name": "q5",
+            "type": "radio",
+            "dispname": "たいてい機嫌よく過ごしていますか",
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": [
+                "0",
+                "1"
+            ],
+            "required": true
+        },
+        {
+            "name": "q6",
+            "type": "radio",
+            "dispname": "何か悪いことが起こるのではないかと心配ですか",
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": [
+                "1",
+                "0"
+            ],
+            "required": true
+        },
+        {
+            "name": "q7",
+            "type": "radio",
+            "dispname": "たいてい幸せだと感じますか",
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": [
+                "0",
+                "1"
+            ],
+            "required": true
+        },
+        {
+            "name": "q8",
+            "type": "radio",
+            "dispname": "しばしば無力感を感じますか",
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": [
+                "1",
+                "0"
+            ],
+            "required": true
+        },
+        {
+            "name": "q9",
+            "type": "radio",
+            "dispname": "外出して新しいことをするよりも、家にいる方がよいですか",
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": [
+                "1",
+                "0"
+            ],
+            "required": true
+        },
+        {
+            "name": "q10",
+            "type": "radio",
+            "dispname": "他の人より記憶力の問題が多いと感じますか",
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": [
+                "1",
+                "0"
+            ],
+            "required": true
+        },
+        {
+            "name": "q11",
+            "type": "radio",
+            "dispname": "生きていることは素晴らしいと思いますか",
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": [
+                "0",
+                "1"
+            ],
+            "required": true
+        },
+        {
+            "name": "q12",
+            "type": "radio",
+            "dispname": "自分は価値がないと感じますか",
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": [
+                "1",
+                "0"
+            ],
+            "required": true
+        },
+        {
+            "name": "q13",
+            "type": "radio",
+            "dispname": "活力に満ちていると感じますか",
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": [
+                "0",
+                "1"
+            ],
+            "required": true
+        },
+        {
+            "name": "q14",
+            "type": "radio",
+            "dispname": "あなたの状況は絶望的だと感じますか",
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": [
+                "1",
+                "0"
+            ],
+            "required": true
+        },
+        {
+            "name": "q15",
+            "type": "radio",
+            "dispname": "ほとんどの人があなたより良い暮らしをしていると思いますか",
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": [
+                "1",
+                "0"
+            ],
+            "required": true
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "gds_total",
+            "type": "eval",
+            "dispname": "GDS-15合計得点（0-15点）",
+            "formula": "[[q1.index]] + [[q2.index]] + [[q3.index]] + [[q4.index]] + [[q5.index]] + [[q6.index]] + [[q7.index]] + [[q8.index]] + [[q9.index]] + [[q10.index]] + [[q11.index]] + [[q12.index]] + [[q13.index]] + [[q14.index]] + [[q15.index]]"
+        },
+        {
+            "name": "gds_category",
+            "type": "eval",
+            "dispname": "GDS-15判定",
+            "formula": "[[gds_total]] <= 4 ? \"正常\" : [[gds_total]] <= 8 ? \"軽度うつ\" : [[gds_total]] <= 11 ? \"中等度うつ\" : \"重度うつ\""
+        },
+        {
+            "name": "Warning: 軽度〜中等度うつ GDS-15スコア 5-11点",
+            "type": "warning",
+            "formula": "[[gds_total]] >= 5 && [[gds_total]] <= 11"
+        },
+        {
+            "name": "Emergency: 重度うつ GDS-15スコア ≥12点",
+            "type": "emergency",
+            "dispname": "重度うつの緊急警告",
+            "formula": "[[gds_total]] >= 12"
+        }
+    ]
+}

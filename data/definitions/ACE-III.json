@@ -1,0 +1,1211 @@
+{
+    "_comment": [
+        "ACE-III (Addenbrooke's Cognitive Examination III) 日本語版",
+        "参考文献: Hsieh S, et al. Validation of the Addenbrooke's Cognitive Examination III in frontotemporal dementia and Alzheimer's disease. Dement Geriatr Cogn Disord. 2013;36(3-4):242-50.",
+        "日本語版: Takenoshita S, et al. Validation of Addenbrooke's cognitive examination III for detecting mild cognitive impairment and dementia in Japan. BMC Geriatrics 2019; 19(1): 123.",
+        "公式サイト: https://frontierftd.org/",
+        "カットオフ値: MCI 88/89点（感度0.77, 特異度0.92）, 認知症 75/76点（感度0.82, 特異度0.90）"
+    ],
+    "title": "ACE-III 日本語版認知機能検査",
+    "description": [
+        "ACE-IIIは5つの認知領域（注意、記憶、言語流暢性、言語、視空間認知）を評価する認知機能検査です。",
+        "総得点は100点で、より高い得点がより良い認知機能を示します。",
+        "施行時間: 約15分、採点時間: 約5分"
+    ],
+    "fields": [
+        {
+            "name": "section_attention",
+            "type": "note",
+            "description": "注意・見当識 (18点)"
+        },
+        {
+            "name": "subsection_orientation",
+            "type": "subsection",
+            "dispname": "見当識"
+        },
+        {
+            "name": "year",
+            "type": "radio",
+            "dispname": "今年は何年ですか",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "month",
+            "type": "radio",
+            "dispname": "今は何月ですか",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "date",
+            "type": "radio",
+            "dispname": "今日は何日ですか",
+            "description": "前後2日の間違いは許容",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "day",
+            "type": "radio",
+            "dispname": "今日は何曜日ですか",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "season",
+            "type": "radio",
+            "dispname": "今の季節は何ですか",
+            "description": "春3-5月、夏6-8月、秋9-11月、冬12-2月",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "prefecture",
+            "type": "radio",
+            "dispname": "ここは何県ですか",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "city",
+            "type": "radio",
+            "dispname": "何市（区、郡）ですか",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "building",
+            "type": "radio",
+            "dispname": "この建物の名前は何ですか",
+            "description": "建物の種類や略称・通称も正答",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "floor",
+            "type": "radio",
+            "dispname": "何階（部屋の種類、番地）ですか",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "region",
+            "type": "radio",
+            "dispname": "ここは何地方ですか",
+            "description": "東北、関東、中部、近畿、中国、四国、九州",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "subsection_registration",
+            "type": "subsection",
+            "dispname": "3項目の記銘"
+        },
+        {
+            "name": "registration_apple",
+            "type": "radio",
+            "dispname": "りんご",
+            "description": "最初の施行のみ採点",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "registration_pen",
+            "type": "radio",
+            "dispname": "ペン",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "registration_clock",
+            "type": "radio",
+            "dispname": "時計",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "subsection_calculation",
+            "type": "subsection",
+            "dispname": "7の連続引き算"
+        },
+        {
+            "name": "calc_100_93",
+            "type": "radio",
+            "dispname": "100から7を引くと",
+            "description": "93",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "calc_93_86",
+            "type": "radio",
+            "dispname": "93から7を引くと",
+            "description": "86",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "calc_86_79",
+            "type": "radio",
+            "dispname": "86から7を引くと",
+            "description": "79",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "calc_79_72",
+            "type": "radio",
+            "dispname": "79から7を引くと",
+            "description": "72",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "calc_72_65",
+            "type": "radio",
+            "dispname": "72から7を引くと",
+            "description": "65",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "section_memory",
+            "type": "note",
+            "description": "記憶 (26点)"
+        },
+        {
+            "name": "subsection_recall",
+            "type": "subsection",
+            "dispname": "3項目の再生"
+        },
+        {
+            "name": "recall_apple",
+            "type": "radio",
+            "dispname": "りんご",
+            "description": "ヒントなしで思い出し",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "recall_pen",
+            "type": "radio",
+            "dispname": "ペン",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "recall_clock",
+            "type": "radio",
+            "dispname": "時計",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "subsection_address",
+            "type": "subsection",
+            "dispname": "前向性記憶 - 住所と名前"
+        },
+        {
+            "name": "address_prefecture_trial3",
+            "type": "radio",
+            "dispname": "山口県",
+            "description": "3回目の施行のみ採点",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "address_city_trial3",
+            "type": "radio",
+            "dispname": "宇部市",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "address_town_trial3",
+            "type": "radio",
+            "dispname": "松島町",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "address_number_trial3",
+            "type": "radio",
+            "dispname": "7の3",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "address_lastname_trial3",
+            "type": "radio",
+            "dispname": "中村",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "address_firstname_trial3",
+            "type": "radio",
+            "dispname": "太郎",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "name_trial3_total",
+            "type": "radio",
+            "dispname": "姓名セット",
+            "description": "姓と名両方正答で1点",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "subsection_famous",
+            "type": "subsection",
+            "dispname": "逆向性記憶 - 有名人"
+        },
+        {
+            "name": "current_pm",
+            "type": "radio",
+            "dispname": "現在の日本の総理大臣",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "previous_pm",
+            "type": "radio",
+            "dispname": "前の日本の総理大臣",
+            "description": "2代前まで正答",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "us_president",
+            "type": "radio",
+            "dispname": "現在のアメリカ大統領",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "kennedy",
+            "type": "radio",
+            "dispname": "1960年代に暗殺されたアメリカ大統領",
+            "description": "ケネディ",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "section_fluency",
+            "type": "note",
+            "description": "言語流暢性 (14点)"
+        },
+        {
+            "name": "subsection_letter_fluency",
+            "type": "subsection",
+            "dispname": "文字流暢性"
+        },
+        {
+            "name": "letter_ka_count",
+            "type": "text",
+            "dispname": "「か」で始まる言葉の数",
+            "description": "1分間で回答した正答数を入力",
+            "required": true,
+            "inputmode": "numeric"
+        },
+        {
+            "name": "letter_ka_score",
+            "type": "radio",
+            "dispname": "文字流暢性得点",
+            "description": "換算表: 18以上=7点, 14-17=6点, 11-13=5点, 8-10=4点, 6-7=3点, 4-5=2点, 2-3=1点, 0-1=0点",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "0点",
+                "1点",
+                "2点",
+                "3点",
+                "4点",
+                "5点",
+                "6点",
+                "7点"
+            ],
+            "selectoridx": "0|1|2|3|4|5|6|7"
+        },
+        {
+            "name": "subsection_animal_fluency",
+            "type": "subsection",
+            "dispname": "動物流暢性"
+        },
+        {
+            "name": "animal_count",
+            "type": "text",
+            "dispname": "動物の名前の数",
+            "description": "1分間で回答した正答数を入力",
+            "required": true,
+            "inputmode": "numeric"
+        },
+        {
+            "name": "animal_score",
+            "type": "radio",
+            "dispname": "動物流暢性得点",
+            "description": "換算表: 22以上=7点, 17-21=6点, 14-16=5点, 11-13=4点, 9-10=3点, 7-8=2点, 5-6=1点, 5未満=0点",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "0点",
+                "1点",
+                "2点",
+                "3点",
+                "4点",
+                "5点",
+                "6点",
+                "7点"
+            ],
+            "selectoridx": "0|1|2|3|4|5|6|7"
+        },
+        {
+            "name": "section_language",
+            "type": "note",
+            "description": "言語 (26点)"
+        },
+        {
+            "name": "subsection_comprehension",
+            "type": "subsection",
+            "dispname": "理解"
+        },
+        {
+            "name": "comprehension1",
+            "type": "radio",
+            "dispname": "紙を持ち上げてから、鉛筆を持ち上げてください",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "comprehension2",
+            "type": "radio",
+            "dispname": "鉛筆を紙の上に置いてから、紙を裏返してください",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "comprehension3",
+            "type": "radio",
+            "dispname": "紙を持ち上げて、鉛筆に触ってから、紙を裏返してください",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "subsection_writing",
+            "type": "subsection",
+            "dispname": "文を書く"
+        },
+        {
+            "name": "writing_score",
+            "type": "radio",
+            "dispname": "文章作成の得点",
+            "description": "2点: 誤字脱字・文法誤りなし2文、1点: 誤字脱字・文法誤りあり2文または誤りなし1文、0点: 誤字脱字・文法誤りあり1文または作成不可",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "0点",
+                "1点",
+                "2点"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "name": "subsection_repetition",
+            "type": "subsection",
+            "dispname": "復唱"
+        },
+        {
+            "name": "repetition_words",
+            "type": "radio",
+            "dispname": "単語の復唱",
+            "description": "4語すべて正答2点、3語正答1点、2語以下0点",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "0点",
+                "1点",
+                "2点"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "name": "repetition_proverb1",
+            "type": "radio",
+            "dispname": "石の上にも三年",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "repetition_proverb2",
+            "type": "radio",
+            "dispname": "朱に交われば赤くなる",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "subsection_naming",
+            "type": "subsection",
+            "dispname": "呼称"
+        },
+        {
+            "name": "naming_spoon",
+            "type": "radio",
+            "dispname": "スプーン（さじ）",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "naming_book",
+            "type": "radio",
+            "dispname": "本（辞書、事典）",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "naming_kangaroo",
+            "type": "radio",
+            "dispname": "カンガルー（ワラビー）",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "naming_penguin",
+            "type": "radio",
+            "dispname": "ペンギン",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "naming_anchor",
+            "type": "radio",
+            "dispname": "いかり",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "naming_camel",
+            "type": "radio",
+            "dispname": "ラクダ（ヒトコブラクダ）",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "naming_trumpet",
+            "type": "radio",
+            "dispname": "トランペット（らっぱ）",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "naming_rhino",
+            "type": "radio",
+            "dispname": "サイ",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "naming_bulb",
+            "type": "radio",
+            "dispname": "でんきゅう（はくねつ電球、はだか電球）",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "naming_crown",
+            "type": "radio",
+            "dispname": "おうかん（かんむり）",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "naming_crocodile",
+            "type": "radio",
+            "dispname": "ワニ",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "naming_accordion",
+            "type": "radio",
+            "dispname": "アコーディオン（てふうきん）",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "subsection_lang_comprehension",
+            "type": "subsection",
+            "dispname": "言語理解"
+        },
+        {
+            "name": "lang_comp_crown",
+            "type": "radio",
+            "dispname": "王や女王がかぶるもの",
+            "description": "おうかん",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "lang_comp_crocodile",
+            "type": "radio",
+            "dispname": "オーストラリアの動物で水陸両生で危険なもの",
+            "description": "ワニ",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "lang_comp_penguin",
+            "type": "radio",
+            "dispname": "南極の黒と白の鳥",
+            "description": "ペンギン",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "lang_comp_anchor",
+            "type": "radio",
+            "dispname": "船を海底につなぎとめるもの",
+            "description": "いかり",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "subsection_reading",
+            "type": "subsection",
+            "dispname": "読字"
+        },
+        {
+            "name": "reading_score",
+            "type": "radio",
+            "dispname": "すもう、たばこ、むすこ、いなか、やおや",
+            "description": "すべて正答で1点",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "section_visuospatial",
+            "type": "note",
+            "description": "視空間認知 (16点)"
+        },
+        {
+            "name": "subsection_copying",
+            "type": "subsection",
+            "dispname": "模写"
+        },
+        {
+            "name": "infinity_copy",
+            "type": "radio",
+            "dispname": "交わる無限大記号の模写",
+            "description": "2つの無限大記号が1点で交差",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "cube_copy",
+            "type": "radio",
+            "dispname": "透視立方体の模写",
+            "description": "2点: 12の辺、1点: 12未満だが全体形保持、0点: その他",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "0点",
+                "1点",
+                "2点"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "name": "subsection_clock",
+            "type": "subsection",
+            "dispname": "時計描画"
+        },
+        {
+            "name": "clock_circle",
+            "type": "radio",
+            "dispname": "外枠",
+            "description": "ほぼ正円",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "clock_numbers",
+            "type": "radio",
+            "dispname": "数字",
+            "description": "2点: 全て均等配置、1点: 全てあるが不均等、0点: 不完全",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "0点",
+                "1点",
+                "2点"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "name": "clock_hands",
+            "type": "radio",
+            "dispname": "針（5時10分）",
+            "description": "2点: 2本正しい長さ・位置、1点: 1本正しい、0点: その他",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "0点",
+                "1点",
+                "2点"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "name": "subsection_perception",
+            "type": "subsection",
+            "dispname": "視知覚"
+        },
+        {
+            "name": "dot_count1",
+            "type": "radio",
+            "dispname": "点数え 左上",
+            "description": "8個",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "dot_count2",
+            "type": "radio",
+            "dispname": "点数え 右上",
+            "description": "10個",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "dot_count3",
+            "type": "radio",
+            "dispname": "点数え 右下",
+            "description": "9個",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "dot_count4",
+            "type": "radio",
+            "dispname": "点数え 左下",
+            "description": "7個",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "letter_id1",
+            "type": "radio",
+            "dispname": "文字同定 左上",
+            "description": "ケ",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "letter_id2",
+            "type": "radio",
+            "dispname": "文字同定 右上",
+            "description": "マ",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "letter_id3",
+            "type": "radio",
+            "dispname": "文字同定 右下",
+            "description": "ナ",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "letter_id4",
+            "type": "radio",
+            "dispname": "文字同定 左下",
+            "description": "ム",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "section_memory_delayed",
+            "type": "note",
+            "description": "遅延記憶 (12点)"
+        },
+        {
+            "name": "subsection_address_recall",
+            "type": "subsection",
+            "dispname": "住所と名前の再生"
+        },
+        {
+            "name": "delayed_prefecture",
+            "type": "radio",
+            "dispname": "山口県",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "delayed_city",
+            "type": "radio",
+            "dispname": "宇部市",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "delayed_town",
+            "type": "radio",
+            "dispname": "松島町",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "delayed_number",
+            "type": "radio",
+            "dispname": "7の3",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "delayed_lastname",
+            "type": "radio",
+            "dispname": "中村",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "delayed_firstname",
+            "type": "radio",
+            "dispname": "太郎",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "delayed_name_total",
+            "type": "radio",
+            "dispname": "姓名セット",
+            "description": "姓と名両方正答で1点",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "誤答",
+                "正答"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "subsection_recognition",
+            "type": "subsection",
+            "dispname": "住所と名前の再認"
+        },
+        {
+            "name": "recognition_score",
+            "type": "radio",
+            "dispname": "再認課題得点",
+            "description": "再生項目1点+再認項目1点、最高5点",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "0点",
+                "1点",
+                "2点",
+                "3点",
+                "4点",
+                "5点"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "attention_total",
+            "type": "eval",
+            "dispname": "注意・見当識合計（18点満点）",
+            "formula": "[[year.index]] + [[month.index]] + [[date.index]] + [[day.index]] + [[season.index]] + [[prefecture.index]] + [[city.index]] + [[building.index]] + [[floor.index]] + [[region.index]] + [[registration_apple.index]] + [[registration_pen.index]] + [[registration_clock.index]] + [[calc_100_93.index]] + [[calc_93_86.index]] + [[calc_86_79.index]] + [[calc_79_72.index]] + [[calc_72_65.index]]"
+        },
+        {
+            "name": "memory_total",
+            "type": "eval",
+            "dispname": "記憶合計（26点満点）",
+            "formula": "[[recall_apple.index]] + [[recall_pen.index]] + [[recall_clock.index]] + [[address_prefecture_trial3.index]] + [[address_city_trial3.index]] + [[address_town_trial3.index]] + [[address_number_trial3.index]] + [[address_lastname_trial3.index]] + [[address_firstname_trial3.index]] + [[name_trial3_total.index]] + [[current_pm.index]] + [[previous_pm.index]] + [[us_president.index]] + [[kennedy.index]] + [[delayed_prefecture.index]] + [[delayed_city.index]] + [[delayed_town.index]] + [[delayed_number.index]] + [[delayed_lastname.index]] + [[delayed_firstname.index]] + [[delayed_name_total.index]] + [[recognition_score.index]]"
+        },
+        {
+            "name": "fluency_total",
+            "type": "eval",
+            "dispname": "言語流暢性合計（14点満点）",
+            "formula": "[[letter_ka_score.index]] + [[animal_score.index]]"
+        },
+        {
+            "name": "language_total",
+            "type": "eval",
+            "dispname": "言語合計（26点満点）",
+            "formula": "[[comprehension1.index]] + [[comprehension2.index]] + [[comprehension3.index]] + [[writing_score.index]] + [[repetition_words.index]] + [[repetition_proverb1.index]] + [[repetition_proverb2.index]] + [[naming_spoon.index]] + [[naming_book.index]] + [[naming_kangaroo.index]] + [[naming_penguin.index]] + [[naming_anchor.index]] + [[naming_camel.index]] + [[naming_trumpet.index]] + [[naming_rhino.index]] + [[naming_bulb.index]] + [[naming_crown.index]] + [[naming_crocodile.index]] + [[naming_accordion.index]] + [[lang_comp_crown.index]] + [[lang_comp_crocodile.index]] + [[lang_comp_penguin.index]] + [[lang_comp_anchor.index]] + [[reading_score.index]]"
+        },
+        {
+            "name": "visuospatial_total",
+            "type": "eval",
+            "dispname": "視空間認知合計（16点満点）",
+            "formula": "[[infinity_copy.index]] + [[cube_copy.index]] + [[clock_circle.index]] + [[clock_numbers.index]] + [[clock_hands.index]] + [[dot_count1.index]] + [[dot_count2.index]] + [[dot_count3.index]] + [[dot_count4.index]] + [[letter_id1.index]] + [[letter_id2.index]] + [[letter_id3.index]] + [[letter_id4.index]]"
+        },
+        {
+            "name": "ace_total",
+            "type": "eval",
+            "dispname": "ACE-III総得点（100点満点）",
+            "formula": "[[attention_total]] + [[memory_total]] + [[fluency_total]] + [[language_total]] + [[visuospatial_total]]"
+        },
+        {
+            "name": "cognitive_status",
+            "type": "eval",
+            "dispname": "認知機能判定",
+            "formula": "[[ace_total]] <= 75 ? \"認知症疑い\" : [[ace_total]] <= 88 ? \"MCI疑い\" : \"正常範囲\""
+        }
+    ]
+}

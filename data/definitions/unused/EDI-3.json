@@ -1,0 +1,1589 @@
+{
+    "_comment": [
+        "EDI-3 (Eating Disorder Inventory-3) 摂食障害インベントリー第3版 完全版",
+        "原著者: David M. Garner, PhD",
+        "日本語版著者: 西園マーハ文",
+        "版権: Psychological Assessment Resources (PAR)",
+        "日本語版発行: 千葉テストセンター (2024年9月)",
+        "参考URL: https://www.parinc.com/products/EDI-3",
+        "日本語版URL: https://www.chibatc.co.jp/cgi/web/index.cgi?c=catalogue-zoom&pk=336",
+        "項目数: 90項目, 12サブスケール (摂食障害特異的3スケール + 心理的特性9スケール)",
+        "対象年齢: 13-53歳女性",
+        "実施時間: 約20分",
+        "回答形式: 6件法 (いつも・たいてい・しばしば・ときどき・めったにない・全くない)",
+        "スコアリング: 0-4点評価",
+        "注意: この実装は構造のみを示し、具体的項目内容は著作権により省略"
+    ],
+    "title": "EDI-3 摂食障害インベントリー第3版",
+    "description": [
+        "このアンケートは、食事や体重、身体に関する考えや行動、および関連する心理的特性を評価するものです。",
+        "各質問について、あなたの現在の状況に最も当てはまるものを選択してください。",
+        "正しい答えや間違った答えはありません。率直にお答えください。"
+    ],
+    "translate": "major",
+    "submit_button_title": "送信",
+    "fields": [
+        {
+            "name": "dt_title",
+            "type": "subsection",
+            "dispname": "やせ願望 (Drive for Thinness) - 7項目"
+        },
+        {
+            "name": "DT1",
+            "type": "radio",
+            "dispname": "ダイエットについて考える",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "DT2",
+            "type": "radio",
+            "dispname": "体重が増えることが恐ろしい",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "DT3",
+            "type": "radio",
+            "dispname": "やせたいという願望がある",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "DT4",
+            "type": "radio",
+            "dispname": "食べ物に対して罪悪感を感じる",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "DT5",
+            "type": "radio",
+            "dispname": "食べることに関して自分をコントロールしたい",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "DT6",
+            "type": "radio",
+            "dispname": "より細くなりたいという気持ちに支配される",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "DT7",
+            "type": "radio",
+            "dispname": "体重に関することが頭から離れない",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "b_title",
+            "type": "subsection",
+            "dispname": "過食 (Bulimia) - 8項目"
+        },
+        {
+            "name": "B1",
+            "type": "radio",
+            "dispname": "動揺すると食べてしまう",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "B2",
+            "type": "radio",
+            "dispname": "大量に食べ物を詰め込んでしまう",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "B3",
+            "type": "radio",
+            "dispname": "食べることがやめられなくなることがある",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "B4",
+            "type": "radio",
+            "dispname": "一度に大量の食べ物を食べてしまう",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "B5",
+            "type": "radio",
+            "dispname": "過食した後、嘔吐したいと思う",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "B6",
+            "type": "radio",
+            "dispname": "食べ物のことを考え続けている",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "B7",
+            "type": "radio",
+            "dispname": "食べ過ぎた後、極度の罪悪感を感じる",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "B8",
+            "type": "radio",
+            "dispname": "過食の行動をコントロールできない",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "bd_title",
+            "type": "subsection",
+            "dispname": "身体不満足 (Body Dissatisfaction) - 10項目"
+        },
+        {
+            "name": "BD1",
+            "type": "radio",
+            "dispname": "自分のお腹の大きさが気になる",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "BD2",
+            "type": "radio",
+            "dispname": "自分の太ももが太すぎると思う",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "BD3",
+            "type": "radio",
+            "dispname": "自分のお尻の大きさに満足している",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "0|0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "BD4",
+            "type": "radio",
+            "dispname": "自分の体型に満足している",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "0|0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "BD5",
+            "type": "radio",
+            "dispname": "自分の腰回りの大きさが気になる",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "BD6",
+            "type": "radio",
+            "dispname": "自分の体重に満足している",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "0|0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "BD7",
+            "type": "radio",
+            "dispname": "身体の特定の部分が嫌い",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "BD8",
+            "type": "radio",
+            "dispname": "自分の胃の大きさが適切だと思う",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "0|0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "BD9",
+            "type": "radio",
+            "dispname": "身体の形について考えすぎる",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "BD10",
+            "type": "radio",
+            "dispname": "自分の身体についてもっと満足したい",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "section_psychological",
+            "type": "subsection",
+            "dispname": "心理的特性スケール"
+        },
+        {
+            "name": "lse_title",
+            "type": "subsection",
+            "dispname": "低自尊心 (Low Self-Esteem) - 6項目"
+        },
+        {
+            "name": "LSE1",
+            "type": "radio",
+            "dispname": "自分は価値のない人間だと思う",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "LSE2",
+            "type": "radio",
+            "dispname": "自分に自信がない",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "LSE3",
+            "type": "radio",
+            "dispname": "自分について否定的に考える",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "LSE4",
+            "type": "radio",
+            "dispname": "人として無力だと感じる",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "LSE5",
+            "type": "radio",
+            "dispname": "自分が嫌い",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "LSE6",
+            "type": "radio",
+            "dispname": "自分の能力に確信が持てない",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "pa_title",
+            "type": "subsection",
+            "dispname": "個人的疎外感 (Personal Alienation) - 7項目"
+        },
+        {
+            "name": "PA1",
+            "type": "radio",
+            "dispname": "孤独だと感じる",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "PA2",
+            "type": "radio",
+            "dispname": "感情的に空っぽな感じがする",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "PA3",
+            "type": "radio",
+            "dispname": "他の誰かになりたいと思う",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "PA4",
+            "type": "radio",
+            "dispname": "自分が何者かわからない",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "PA5",
+            "type": "radio",
+            "dispname": "自分の人生をコントロールできていない",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "PA6",
+            "type": "radio",
+            "dispname": "世界から切り離された感じがする",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "PA7",
+            "type": "radio",
+            "dispname": "満足感を感じることがまれ",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "ii_title",
+            "type": "subsection",
+            "dispname": "対人不安 (Interpersonal Insecurity) - 7項目"
+        },
+        {
+            "name": "II1",
+            "type": "radio",
+            "dispname": "自分の気持ちを人に伝えるのが苦手",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "II2",
+            "type": "radio",
+            "dispname": "人と話をするときに緊張する",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "II3",
+            "type": "radio",
+            "dispname": "人前で恥をかくことを恐れる",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "II4",
+            "type": "radio",
+            "dispname": "他人の評価が気になりすぎる",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "II5",
+            "type": "radio",
+            "dispname": "社交的な場面を避けたがる",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "II6",
+            "type": "radio",
+            "dispname": "他人に自分をさらけ出すのが怖い",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "II7",
+            "type": "radio",
+            "dispname": "人間関係で不安を感じることが多い",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "ia_title",
+            "type": "subsection",
+            "dispname": "対人疎外感 (Interpersonal Alienation) - 7項目"
+        },
+        {
+            "name": "IA1",
+            "type": "radio",
+            "dispname": "人間関係に失望することが多い",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "IA2",
+            "type": "radio",
+            "dispname": "人は本当の私を理解してくれない",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "IA3",
+            "type": "radio",
+            "dispname": "他人を信頼することができない",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "IA4",
+            "type": "radio",
+            "dispname": "近い関係を築くのが困難",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "IA5",
+            "type": "radio",
+            "dispname": "愛されている実感がない",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "IA6",
+            "type": "radio",
+            "dispname": "友情関係が長続きしない",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "IA7",
+            "type": "radio",
+            "dispname": "他人との距離感がわからない",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "id_title",
+            "type": "subsection",
+            "dispname": "内受容欠損 (Interoceptive Deficits) - 9項目"
+        },
+        {
+            "name": "ID1",
+            "type": "radio",
+            "dispname": "お腹がすいているかどうかわからない",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "ID2",
+            "type": "radio",
+            "dispname": "自分の感情がよくわからない",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "ID3",
+            "type": "radio",
+            "dispname": "満腹感がわからない",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "ID4",
+            "type": "radio",
+            "dispname": "身体の感覚を認識するのが困難",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "ID5",
+            "type": "radio",
+            "dispname": "強い感情になると怖くなる",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "ID6",
+            "type": "radio",
+            "dispname": "感情と身体感覚を混同してしまう",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "ID7",
+            "type": "radio",
+            "dispname": "自分がどう感じているのか識別が困難",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "ID8",
+            "type": "radio",
+            "dispname": "心の痛みと身体の痛みを区別できない",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "ID9",
+            "type": "radio",
+            "dispname": "感覚や感情に混乱することが多い",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "ed_title",
+            "type": "subsection",
+            "dispname": "感情調節困難 (Emotional Dysregulation) - 8項目"
+        },
+        {
+            "name": "ED1",
+            "type": "radio",
+            "dispname": "怒りっぽい",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "ED2",
+            "type": "radio",
+            "dispname": "気分の浮き沈みが激しい",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "ED3",
+            "type": "radio",
+            "dispname": "衝動的に行動してしまう",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "ED4",
+            "type": "radio",
+            "dispname": "感情のコントロールができない",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "ED5",
+            "type": "radio",
+            "dispname": "自分を傷つけたくなることがある",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "ED6",
+            "type": "radio",
+            "dispname": "極端な気分変動に悩まされる",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "ED7",
+            "type": "radio",
+            "dispname": "破壊的な行動をとりたくなる",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "ED8",
+            "type": "radio",
+            "dispname": "感情が予測できずに変化する",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "p_title",
+            "type": "subsection",
+            "dispname": "完全主義 (Perfectionism) - 6項目"
+        },
+        {
+            "name": "P1",
+            "type": "radio",
+            "dispname": "自分に完璧さを求める",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "P2",
+            "type": "radio",
+            "dispname": "両親は私に高い成果を期待している",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "P3",
+            "type": "radio",
+            "dispname": "優秀な成績でないと満足できない",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "P4",
+            "type": "radio",
+            "dispname": "何事も完璧にやらなければならない",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "P5",
+            "type": "radio",
+            "dispname": "高い基準を自分に課している",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "P6",
+            "type": "radio",
+            "dispname": "失敗が許せない",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "a_title",
+            "type": "subsection",
+            "dispname": "禁欲主義 (Asceticism) - 7項目"
+        },
+        {
+            "name": "A1",
+            "type": "radio",
+            "dispname": "楽しむことは恥ずかしいことだと思う",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "A2",
+            "type": "radio",
+            "dispname": "苦労することで人はより強くなる",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "A3",
+            "type": "radio",
+            "dispname": "自己否定は美徳である",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "A4",
+            "type": "radio",
+            "dispname": "物質的な快楽は避けるべき",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "A5",
+            "type": "radio",
+            "dispname": "自分を律することが大切",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "A6",
+            "type": "radio",
+            "dispname": "道徳的な弱さは受け入れられない",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "A7",
+            "type": "radio",
+            "dispname": "自己犠牲により良い人になれる",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "mf_title",
+            "type": "subsection",
+            "dispname": "成熟恐怖 (Maturity Fears) - 8項目"
+        },
+        {
+            "name": "MF1",
+            "type": "radio",
+            "dispname": "子どもの頃に戻りたい",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "MF2",
+            "type": "radio",
+            "dispname": "大人になることの要求が怖い",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "MF3",
+            "type": "radio",
+            "dispname": "子ども時代が人生で最も幸せな時期",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "MF4",
+            "type": "radio",
+            "dispname": "もっと若くありたいと願う",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "MF5",
+            "type": "radio",
+            "dispname": "大人の責任から逃れたい",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "MF6",
+            "type": "radio",
+            "dispname": "将来に対する不安が強い",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "MF7",
+            "type": "radio",
+            "dispname": "大人の世界は複雑すぎる",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "name": "MF8",
+            "type": "radio",
+            "dispname": "自立することに不安を感じる",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "しばしば",
+                "ときどき",
+                "めったにない",
+                "全くない"
+            ],
+            "selectoridx": "4|3|2|1|0|0",
+            "required": true
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "DT_score",
+            "type": "eval",
+            "formula": "[[DT1.index]] + [[DT2.index]] + [[DT3.index]] + [[DT4.index]] + [[DT5.index]] + [[DT6.index]] + [[DT7.index]]",
+            "noreport": true
+        },
+        {
+            "name": "B_score",
+            "type": "eval",
+            "formula": "[[B1.index]] + [[B2.index]] + [[B3.index]] + [[B4.index]] + [[B5.index]] + [[B6.index]] + [[B7.index]] + [[B8.index]]",
+            "noreport": true
+        },
+        {
+            "name": "BD_score",
+            "type": "eval",
+            "formula": "[[BD1.index]] + [[BD2.index]] + [[BD3.index]] + [[BD4.index]] + [[BD5.index]] + [[BD6.index]] + [[BD7.index]] + [[BD8.index]] + [[BD9.index]] + [[BD10.index]]",
+            "noreport": true
+        },
+        {
+            "name": "LSE_score",
+            "type": "eval",
+            "formula": "[[LSE1.index]] + [[LSE2.index]] + [[LSE3.index]] + [[LSE4.index]] + [[LSE5.index]] + [[LSE6.index]]",
+            "noreport": true
+        },
+        {
+            "name": "PA_score",
+            "type": "eval",
+            "formula": "[[PA1.index]] + [[PA2.index]] + [[PA3.index]] + [[PA4.index]] + [[PA5.index]] + [[PA6.index]] + [[PA7.index]]",
+            "noreport": true
+        },
+        {
+            "name": "II_score",
+            "type": "eval",
+            "formula": "[[II1.index]] + [[II2.index]] + [[II3.index]] + [[II4.index]] + [[II5.index]] + [[II6.index]] + [[II7.index]]",
+            "noreport": true
+        },
+        {
+            "name": "IA_score",
+            "type": "eval",
+            "formula": "[[IA1.index]] + [[IA2.index]] + [[IA3.index]] + [[IA4.index]] + [[IA5.index]] + [[IA6.index]] + [[IA7.index]]",
+            "noreport": true
+        },
+        {
+            "name": "ID_score",
+            "type": "eval",
+            "formula": "[[ID1.index]] + [[ID2.index]] + [[ID3.index]] + [[ID4.index]] + [[ID5.index]] + [[ID6.index]] + [[ID7.index]] + [[ID8.index]] + [[ID9.index]]",
+            "noreport": true
+        },
+        {
+            "name": "ED_score",
+            "type": "eval",
+            "formula": "[[ED1.index]] + [[ED2.index]] + [[ED3.index]] + [[ED4.index]] + [[ED5.index]] + [[ED6.index]] + [[ED7.index]] + [[ED8.index]]",
+            "noreport": true
+        },
+        {
+            "name": "P_score",
+            "type": "eval",
+            "formula": "[[P1.index]] + [[P2.index]] + [[P3.index]] + [[P4.index]] + [[P5.index]] + [[P6.index]]",
+            "noreport": true
+        },
+        {
+            "name": "A_score",
+            "type": "eval",
+            "formula": "[[A1.index]] + [[A2.index]] + [[A3.index]] + [[A4.index]] + [[A5.index]] + [[A6.index]] + [[A7.index]]",
+            "noreport": true
+        },
+        {
+            "name": "MF_score",
+            "type": "eval",
+            "formula": "[[MF1.index]] + [[MF2.index]] + [[MF3.index]] + [[MF4.index]] + [[MF5.index]] + [[MF6.index]] + [[MF7.index]] + [[MF8.index]]",
+            "noreport": true
+        },
+        {
+            "name": "EDRC_score",
+            "type": "eval",
+            "dispname": "摂食障害リスク複合得点 (Eating Disorder Risk Composite)",
+            "formula": "[[DT_score]] + [[B_score]] + [[BD_score]]"
+        },
+        {
+            "name": "IC_score",
+            "type": "eval",
+            "dispname": "無力感複合得点 (Ineffectiveness Composite)",
+            "formula": "[[LSE_score]] + [[PA_score]]"
+        },
+        {
+            "name": "IPC_score",
+            "type": "eval",
+            "dispname": "対人問題複合得点 (Interpersonal Problems Composite)",
+            "formula": "[[II_score]] + [[IA_score]]"
+        },
+        {
+            "name": "APC_score",
+            "type": "eval",
+            "dispname": "感情問題複合得点 (Affective Problems Composite)",
+            "formula": "[[ID_score]] + [[ED_score]]"
+        },
+        {
+            "name": "OC_score",
+            "type": "eval",
+            "dispname": "過統制複合得点 (Overcontrol Composite)",
+            "formula": "[[P_score]] + [[A_score]]"
+        },
+        {
+            "name": "GPMC_score",
+            "type": "eval",
+            "dispname": "全般的心理的不適応複合得点 (General Psychological Maladjustment Composite)",
+            "formula": "[[LSE_score]] + [[PA_score]] + [[II_score]] + [[IA_score]] + [[ID_score]] + [[ED_score]] + [[P_score]] + [[A_score]] + [[MF_score]]"
+        },
+        {
+            "name": "EDRC_interpretation",
+            "type": "eval",
+            "dispname": "摂食障害リスク判定",
+            "formula": "[[EDRC_score]] >= 40 ? (([[EDRC_score]] >= 60) ? '高リスク（専門医紹介推奨）' : '中リスク（継続観察）') : '低リスク'"
+        },
+        {
+            "name": "DT_risk_level",
+            "type": "eval",
+            "dispname": "やせ願望リスクレベル",
+            "formula": "[[DT_score]] >= 20 ? '高' : ([[DT_score]] >= 10 ? '中' : '低')"
+        },
+        {
+            "name": "B_risk_level",
+            "type": "eval",
+            "dispname": "過食リスクレベル",
+            "formula": "[[B_score]] >= 15 ? '高' : ([[B_score]] >= 8 ? '中' : '低')"
+        },
+        {
+            "name": "BD_risk_level",
+            "type": "eval",
+            "dispname": "身体不満足リスクレベル",
+            "formula": "[[BD_score]] >= 25 ? '高' : ([[BD_score]] >= 15 ? '中' : '低')"
+        },
+        {
+            "name": "psychological_risk",
+            "type": "eval",
+            "dispname": "心理的リスク総合評価",
+            "formula": "[[GPMC_score]] >= 80 ? '高リスク（心理的支援必要）' : ([[GPMC_score]] >= 50 ? '中リスク（要注意）' : '低リスク')"
+        },
+        {
+            "name": "overall_assessment",
+            "type": "eval",
+            "dispname": "総合評価",
+            "formula": "([[EDRC_score]] >= 40 || [[GPMC_score]] >= 60) ? '専門的評価が必要です。医療機関での詳細な評価をお勧めします。' : '現時点では大きな問題は認められませんが、気になる症状があれば専門家にご相談ください。'"
+        }
+    ]
+}

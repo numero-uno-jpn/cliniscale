@@ -1,0 +1,359 @@
+{
+  "_comment": [
+    "SES-CD - Simple Endoscopic Score for Crohn's Disease",
+    "クローン病の簡易内視鏡スコア",
+    "開発者: Geboes K (2004)",
+    "CDEISの簡易版",
+    "原典: Daperno M, et al. Gastrointest Endosc. 2004;60(4):505-12.",
+    "参考URL: https://pubmed.ncbi.nlm.nih.gov/15017631/",
+    "公式URL: https://www.gastrojournal.org/article/S0016-5085(04)00014-3/abstract",
+    "評価: 0-56点、5部位×4変数",
+    "部位: 回腸、右側結腸、横行結腸、左側結腸、直腸"
+  ],
+  "title": "SES-CD",
+  "description": [
+    "クローン病の内視鏡的活動性を評価します",
+    "各部位について4つの変数を評価してください"
+  ],
+  "fields": [
+    {
+      "type": "subsection",
+      "dispname": "回腸"
+    },
+    {
+      "type": "radio",
+      "name": "回腸_潰瘍サイズ",
+      "dispname": "潰瘍サイズ",
+      "description": "最大の潰瘍のサイズ",
+      "required": true,
+      "selector": [
+        "なし",
+        "アフタ性潰瘍 (0.1-0.5cm)",
+        "大きな潰瘍 (0.5-2cm)",
+        "非常に大きな潰瘍 (>2cm)"
+      ],
+      "selectoridx": "0|1|2|3"
+    },
+    {
+      "type": "radio",
+      "name": "回腸_潰瘍表面",
+      "dispname": "潰瘍表面",
+      "description": "潰瘍に覆われた粘膜表面の割合",
+      "required": true,
+      "selector": [
+        "なし",
+        "<10%",
+        "10-30%",
+        ">30%"
+      ],
+      "selectoridx": "0|1|2|3"
+    },
+    {
+      "type": "radio",
+      "name": "回腸_病変範囲",
+      "dispname": "病変範囲",
+      "description": "病変の長さ",
+      "required": true,
+      "selector": [
+        "なし",
+        "<5cm",
+        "5-15cm",
+        ">15cm"
+      ],
+      "selectoridx": "0|1|2|3"
+    },
+    {
+      "type": "radio",
+      "name": "回腸_狭窄",
+      "dispname": "狭窄",
+      "description": "狭窄の有無と通過性",
+      "required": true,
+      "selector": [
+        "なし",
+        "単独、通過可能",
+        "複数、通過可能",
+        "通過不可能"
+      ],
+      "selectoridx": "0|1|2|3"
+    },
+    {
+      "type": "subsection",
+      "dispname": "右側結腸"
+    },
+    {
+      "type": "radio",
+      "name": "右側結腸_潰瘍サイズ",
+      "dispname": "潰瘍サイズ",
+      "required": true,
+      "selector": [
+        "なし",
+        "アフタ性潰瘍 (0.1-0.5cm)",
+        "大きな潰瘍 (0.5-2cm)",
+        "非常に大きな潰瘍 (>2cm)"
+      ],
+      "selectoridx": "0|1|2|3"
+    },
+    {
+      "type": "radio",
+      "name": "右側結腸_潰瘍表面",
+      "dispname": "潰瘍表面",
+      "required": true,
+      "selector": [
+        "なし",
+        "<10%",
+        "10-30%",
+        ">30%"
+      ],
+      "selectoridx": "0|1|2|3"
+    },
+    {
+      "type": "radio",
+      "name": "右側結腸_病変範囲",
+      "dispname": "病変範囲",
+      "required": true,
+      "selector": [
+        "なし",
+        "<5cm",
+        "5-15cm",
+        ">15cm"
+      ],
+      "selectoridx": "0|1|2|3"
+    },
+    {
+      "type": "radio",
+      "name": "右側結腸_狭窄",
+      "dispname": "狭窄",
+      "required": true,
+      "selector": [
+        "なし",
+        "単独、通過可能",
+        "複数、通過可能",
+        "通過不可能"
+      ],
+      "selectoridx": "0|1|2|3"
+    },
+    {
+      "type": "subsection",
+      "dispname": "横行結腸"
+    },
+    {
+      "type": "radio",
+      "name": "横行結腸_潰瘍サイズ",
+      "dispname": "潰瘍サイズ",
+      "required": true,
+      "selector": [
+        "なし",
+        "アフタ性潰瘍 (0.1-0.5cm)",
+        "大きな潰瘍 (0.5-2cm)",
+        "非常に大きな潰瘍 (>2cm)"
+      ],
+      "selectoridx": "0|1|2|3"
+    },
+    {
+      "type": "radio",
+      "name": "横行結腸_潰瘍表面",
+      "dispname": "潰瘍表面",
+      "required": true,
+      "selector": [
+        "なし",
+        "<10%",
+        "10-30%",
+        ">30%"
+      ],
+      "selectoridx": "0|1|2|3"
+    },
+    {
+      "type": "radio",
+      "name": "横行結腸_病変範囲",
+      "dispname": "病変範囲",
+      "required": true,
+      "selector": [
+        "なし",
+        "<5cm",
+        "5-15cm",
+        ">15cm"
+      ],
+      "selectoridx": "0|1|2|3"
+    },
+    {
+      "type": "radio",
+      "name": "横行結腸_狭窄",
+      "dispname": "狭窄",
+      "required": true,
+      "selector": [
+        "なし",
+        "単独、通過可能",
+        "複数、通過可能",
+        "通過不可能"
+      ],
+      "selectoridx": "0|1|2|3"
+    },
+    {
+      "type": "subsection",
+      "dispname": "左側結腸"
+    },
+    {
+      "type": "radio",
+      "name": "左側結腸_潰瘍サイズ",
+      "dispname": "潰瘍サイズ",
+      "required": true,
+      "selector": [
+        "なし",
+        "アフタ性潰瘍 (0.1-0.5cm)",
+        "大きな潰瘍 (0.5-2cm)",
+        "非常に大きな潰瘍 (>2cm)"
+      ],
+      "selectoridx": "0|1|2|3"
+    },
+    {
+      "type": "radio",
+      "name": "左側結腸_潰瘍表面",
+      "dispname": "潰瘍表面",
+      "required": true,
+      "selector": [
+        "なし",
+        "<10%",
+        "10-30%",
+        ">30%"
+      ],
+      "selectoridx": "0|1|2|3"
+    },
+    {
+      "type": "radio",
+      "name": "左側結腸_病変範囲",
+      "dispname": "病変範囲",
+      "required": true,
+      "selector": [
+        "なし",
+        "<5cm",
+        "5-15cm",
+        ">15cm"
+      ],
+      "selectoridx": "0|1|2|3"
+    },
+    {
+      "type": "radio",
+      "name": "左側結腸_狭窄",
+      "dispname": "狭窄",
+      "required": true,
+      "selector": [
+        "なし",
+        "単独、通過可能",
+        "複数、通過可能",
+        "通過不可能"
+      ],
+      "selectoridx": "0|1|2|3"
+    },
+    {
+      "type": "subsection",
+      "dispname": "直腸"
+    },
+    {
+      "type": "radio",
+      "name": "直腸_潰瘍サイズ",
+      "dispname": "潰瘍サイズ",
+      "required": true,
+      "selector": [
+        "なし",
+        "アフタ性潰瘍 (0.1-0.5cm)",
+        "大きな潰瘍 (0.5-2cm)",
+        "非常に大きな潰瘍 (>2cm)"
+      ],
+      "selectoridx": "0|1|2|3"
+    },
+    {
+      "type": "radio",
+      "name": "直腸_潰瘍表面",
+      "dispname": "潰瘍表面",
+      "required": true,
+      "selector": [
+        "なし",
+        "<10%",
+        "10-30%",
+        ">30%"
+      ],
+      "selectoridx": "0|1|2|3"
+    },
+    {
+      "type": "radio",
+      "name": "直腸_病変範囲",
+      "dispname": "病変範囲",
+      "required": true,
+      "selector": [
+        "なし",
+        "<5cm",
+        "5-15cm",
+        ">15cm"
+      ],
+      "selectoridx": "0|1|2|3"
+    },
+    {
+      "type": "radio",
+      "name": "直腸_狭窄",
+      "dispname": "狭窄",
+      "required": true,
+      "selector": [
+        "なし",
+        "単独、通過可能",
+        "複数、通過可能",
+        "通過不可能"
+      ],
+      "selectoridx": "0|1|2|3"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "type": "eval",
+      "name": "回腸スコア",
+      "formula": "[[回腸_潰瘍サイズ.index]] + [[回腸_潰瘍表面.index]] + [[回腸_病変範囲.index]] + [[回腸_狭窄.index]]",
+      "noreport": true
+    },
+    {
+      "type": "eval",
+      "name": "右側結腸スコア",
+      "formula": "[[右側結腸_潰瘍サイズ.index]] + [[右側結腸_潰瘍表面.index]] + [[右側結腸_病変範囲.index]] + [[右側結腸_狭窄.index]]",
+      "noreport": true
+    },
+    {
+      "type": "eval",
+      "name": "横行結腸スコア",
+      "formula": "[[横行結腸_潰瘍サイズ.index]] + [[横行結腸_潰瘍表面.index]] + [[横行結腸_病変範囲.index]] + [[横行結腸_狭窄.index]]",
+      "noreport": true
+    },
+    {
+      "type": "eval",
+      "name": "左側結腸スコア",
+      "formula": "[[左側結腸_潰瘍サイズ.index]] + [[左側結腸_潰瘍表面.index]] + [[左側結腸_病変範囲.index]] + [[左側結腸_狭窄.index]]",
+      "noreport": true
+    },
+    {
+      "type": "eval",
+      "name": "直腸スコア",
+      "formula": "[[直腸_潰瘍サイズ.index]] + [[直腸_潰瘍表面.index]] + [[直腸_病変範囲.index]] + [[直腸_狭窄.index]]",
+      "noreport": true
+    },
+    {
+      "type": "eval",
+      "name": "SES_CD合計",
+      "description": "SES-CD総スコア (0-56点)",
+      "formula": "[[回腸スコア]] + [[右側結腸スコア]] + [[横行結腸スコア]] + [[左側結腸スコア]] + [[直腸スコア]]"
+    },
+    {
+      "type": "eval",
+      "name": "活動性分類",
+      "description": "クローン病の活動性",
+      "formula": "[[SES_CD合計]] <= 2 ? '寛解' : [[SES_CD合計]] <= 6 ? '軽度活動性' : [[SES_CD合計]] <= 15 ? '中等度活動性' : '重度活動性'"
+    },
+    {
+      "type": "warning",
+      "formula": "[[SES_CD合計]] > 6",
+      "name": "Warning: スコア7以上（中等度以上）"
+    },
+    {
+      "type": "emergency",
+      "formula": "[[SES_CD合計]] > 15",
+      "name": "Emergency: スコア16以上（重度活動性）"
+    }
+  ]
+}

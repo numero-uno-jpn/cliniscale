@@ -13,7 +13,7 @@ class MarkdownParser
     public function __construct()
     {
         // Composerのautoloadを読み込み
-        require_once '/home/medeputize/scripts/stats/vendor/autoload.php';
+        require_once __DIR__ . "/vendor/autoload.php";
 
         // CommonMarkの設定
         $config = [
@@ -24,7 +24,7 @@ class MarkdownParser
         // コンバーターを初期化
         $environment = new \League\CommonMark\Environment\Environment($config);
         $environment->addExtension(new \League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension());
-        
+
         $this->converter = new \League\CommonMark\MarkdownConverter($environment);
     }
 

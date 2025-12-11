@@ -1,0 +1,181 @@
+{
+    "_comment": [
+        "厚生労働省研究班による潰瘍性大腸炎活動期内視鏡所見による分類の評価問診票",
+        "参考文献: 厚生労働科学研究費補助金 難治性疾患政策研究事業「難治性炎症性腸管障害に関する調査研究」（久松班）令和6年度分担研究報告書",
+        "URL: http://www.ibdjapan.org/pdf/doc15.pdf",
+        "令和7年3月31日公開版に基づく"
+    ],
+    "title": "UC活動期内視鏡分類",
+    "description": [
+        "<h3>潰瘍性大腸炎活動期内視鏡分類評価</h3>",
+        "潰瘍性大腸炎の活動性を内視鏡所見により3段階に分類する厚生労働省研究班基準による評価です。"
+    ],
+    "responsible_person": [
+        "消化器科医師"
+    ],
+    "staffs": [
+        "内視鏡技師"
+    ],
+    "dept_in_charge": "消化器科",
+    "fields": [
+        {
+            "dispname": "患者基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "患者年齢",
+            "name": "年齢",
+            "type": "text",
+            "required": true,
+            "postfix": "歳",
+            "inputmode": "numeric",
+            "testrange": [
+                10,
+                90
+            ],
+            "description": "半角数字で入力してください"
+        },
+        {
+            "dispname": "性別",
+            "name": "性別",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "男性|女性"
+        },
+        {
+            "dispname": "病型分類",
+            "name": "病型分類",
+            "type": "radio",
+            "required": true,
+            "selector": "直腸炎型|左側大腸炎型|全大腸炎型",
+            "description": "病変の拡がりによる分類"
+        },
+        {
+            "dispname": "内視鏡所見評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "活動期内視鏡分類",
+            "name": "内視鏡分類",
+            "type": "radio",
+            "required": true,
+            "selector": "軽度|中等度|強度",
+            "description": "内視鏡で観察した範囲で最も所見の強いところで診断してください"
+        },
+        {
+            "dispname": "血管透見像の有無",
+            "name": "血管透見像",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "消失|残存"
+        },
+        {
+            "dispname": "粘膜性状",
+            "name": "粘膜性状",
+            "type": "checkbox",
+            "selector": [
+                "細顆粒状",
+                "粗ぞう",
+                "発赤",
+                "浮腫",
+                "アフタ",
+                "小黄色点"
+            ],
+            "description": "該当する粘膜の性状を選択してください"
+        },
+        {
+            "dispname": "びらん・潰瘍の有無",
+            "name": "びらん潰瘍",
+            "type": "radio",
+            "required": true,
+            "selector": "なし|びらん|小潰瘍|広汎な潰瘍"
+        },
+        {
+            "dispname": "出血性所見",
+            "name": "出血性所見",
+            "type": "radio",
+            "required": true,
+            "selector": "なし|易出血性（接触出血）|著明な自然出血"
+        },
+        {
+            "dispname": "分泌物・付着物",
+            "name": "分泌物",
+            "type": "checkbox",
+            "selector": [
+                "なし",
+                "粘血膿性分泌物付着",
+                "膿性粘液",
+                "その他分泌物"
+            ]
+        },
+        {
+            "dispname": "その他の内視鏡所見",
+            "name": "その他所見",
+            "type": "textarea",
+            "rows": 3,
+            "description": "上記以外の特記すべき内視鏡所見があれば記載してください"
+        },
+        {
+            "dispname": "検査実施者・コメント",
+            "type": "subsection"
+        },
+        {
+            "dispname": "検査実施医師",
+            "name": "実施医師",
+            "type": "text",
+            "required": true
+        },
+        {
+            "dispname": "追加コメント",
+            "name": "追加コメント",
+            "type": "textarea",
+            "rows": 4,
+            "description": "診断や治療方針に関する追加的なコメントがあれば記載してください"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "軽度判定",
+            "type": "eval",
+            "formula": "[[内視鏡分類.index]] == 0 ? 1 : 0",
+            "noreport": true
+        },
+        {
+            "name": "中等度判定",
+            "type": "eval",
+            "formula": "[[内視鏡分類.index]] == 1 ? 1 : 0",
+            "noreport": true
+        },
+        {
+            "name": "強度判定",
+            "type": "eval",
+            "formula": "[[内視鏡分類.index]] == 2 ? 1 : 0",
+            "noreport": true
+        },
+        {
+            "dispname": "内視鏡活動性評価",
+            "name": "活動性評価",
+            "type": "eval",
+            "formula": "[[内視鏡分類.index]] == 0 ? '軽度: 血管透見像消失、粘膜細顆粒状、発赤、アフタ、小黄色点' : ( [[内視鏡分類.index]] == 1 ? '中等度: 粘膜粗ぞう、びらん、小潰瘍、易出血性（接触出血）、粘血膿性分泌物付着' : '強度: 広汎な潰瘍、著明な自然出血' )"
+        },
+        {
+            "dispname": "治療方針への示唆",
+            "name": "治療示唆",
+            "type": "eval",
+            "formula": "[[内視鏡分類.index]] == 0 ? '軽微な炎症所見。局所治療や経口5-ASA製剤を検討' : ( [[内視鏡分類.index]] == 1 ? '中等度の炎症所見。全身治療の検討が必要' : '高度な炎症所見。積極的な全身治療が必要' )"
+        },
+        {
+            "name": "Warning: 中等度以上の炎症所見",
+            "type": "warning",
+            "formula": "[[内視鏡分類.index]] >= 1"
+        },
+        {
+            "name": "Emergency: 強度の炎症所見",
+            "type": "emergency",
+            "formula": "[[内視鏡分類.index]] == 2"
+        }
+    ]
+}

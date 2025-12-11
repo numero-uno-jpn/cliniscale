@@ -1,0 +1,158 @@
+{
+    "_comment": [
+        "Canadian Cardiovascular Society Angina Classification (CCS)",
+        "カナダ心血管学会狭心症分類",
+        "原典: Campeau L. Grading of angina pectoris. Circulation 1976;54:522-3",
+        "https://ccs.ca/",
+        "4段階で労作性狭心症の重症度を分類する医療用評価スケール",
+        "各クラスは運動負荷に対する症状の閾値によって定義される"
+    ],
+    "title": "CCS 狭心症分類",
+    "description": [
+        "カナダ心血管学会狭心症分類による狭心症重症度評価",
+        "運動負荷による症状の程度を4段階で評価します"
+    ],
+    "contact": "循環器内科",
+    "dept_in_charge": "循環器内科",
+    "fields": [
+        {
+            "dispname": "患者基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "年齢",
+            "name": "年齢",
+            "type": "text",
+            "postfix": "歳",
+            "inputmode": "numeric",
+            "testrange": [
+                18,
+                100
+            ],
+            "required": true
+        },
+        {
+            "dispname": "性別",
+            "name": "性別",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "男性|女性"
+        },
+        {
+            "dispname": "評価日",
+            "name": "評価日",
+            "type": "date",
+            "format": "YYYY/MM/DD",
+            "required": true
+        },
+        {
+            "dispname": "CCS狭心症分類評価",
+            "type": "subsection"
+        },
+        {
+            "description": "以下の各項目から、患者さんの現在の状態に最も当てはまるものを1つ選択してください",
+            "type": "note"
+        },
+        {
+            "dispname": "狭心症の重症度分類",
+            "name": "CCS分類",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "Class I: 通常の身体活動では狭心症は起こらない。激しい運動、急速な運動、または長時間の運動でのみ狭心症が生じる",
+                "Class II: 通常の身体活動がわずかに制限される。急速な歩行や階段昇降、坂道歩行、食後、寒冷時、風の中、情緒的ストレス下、または起床後数時間以内にのみ狭心症が生じる。平地を200m以上歩行、または通常のペースで1階分以上の階段昇降で狭心症が生じる",
+                "Class III: 通常の身体活動が著明に制限される。平地を100-200m歩行、または通常の条件下で通常のペースでの1階分の階段昇降で狭心症が生じる",
+                "Class IV: いかなる身体活動も不快感なしには行えない。安静時にも狭心症症状が出現することがある"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "症状の詳細確認",
+            "type": "subsection"
+        },
+        {
+            "dispname": "胸部症状の特徴",
+            "name": "症状特徴",
+            "type": "checkbox",
+            "selector": [
+                "胸部圧迫感",
+                "胸痛",
+                "息切れ",
+                "左肩・腕への放散痛",
+                "顎の痛み",
+                "背部痛",
+                "その他"
+            ]
+        },
+        {
+            "dispname": "症状特徴の詳細",
+            "name": "症状特徴詳細",
+            "type": "textarea",
+            "parentname": "症状特徴",
+            "parentsel": "その他",
+            "description": "その他の症状特徴について記載してください",
+            "rows": 3
+        },
+        {
+            "dispname": "症状を誘発する活動",
+            "name": "誘発活動",
+            "type": "checkbox",
+            "selector": [
+                "階段昇降",
+                "坂道歩行",
+                "急いで歩く",
+                "重いものを持つ",
+                "食後の活動",
+                "寒冷時の活動",
+                "情緒的ストレス",
+                "安静時"
+            ]
+        },
+        {
+            "dispname": "ニトログリセリンの使用",
+            "name": "ニトログリセリン使用",
+            "type": "radio",
+            "inline": true,
+            "selector": "使用していない|使用している|処方されているが使用していない"
+        },
+        {
+            "dispname": "ニトログリセリン使用時の効果",
+            "name": "ニトログリセリン効果",
+            "type": "radio",
+            "parentname": "ニトログリセリン使用",
+            "parentsel": "使用している",
+            "inline": true,
+            "selector": "症状が改善する|効果が不明|効果がない"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "CCS数値",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[CCS分類.index]]"
+        },
+        {
+            "name": "CCS分類結果",
+            "type": "eval",
+            "formula": "[[CCS数値]] == 1 ? 'Class I (軽度)' : ([[CCS数値]] == 2 ? 'Class II (軽度-中等度)' : ([[CCS数値]] == 3 ? 'Class III (中等度-重度)' : 'Class IV (重度)'))"
+        },
+        {
+            "name": "重症度判定",
+            "type": "eval",
+            "formula": "[[CCS数値]] <= 2 ? '軽度-中等度' : '中等度-重度'"
+        },
+        {
+            "name": "Warning: CCS Class III以上",
+            "formula": "[[CCS数値]] >= 3",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: CCS Class IV",
+            "formula": "[[CCS数値]] == 4",
+            "type": "emergency"
+        }
+    ]
+}

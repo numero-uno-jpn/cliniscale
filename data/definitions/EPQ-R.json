@@ -1,0 +1,1070 @@
+{
+    "_comment": [
+        "EPQ-R（Eysenck Personality Questionnaire-Revised）原著準拠版",
+        "Eysenck, S. B. G., Eysenck, H. J., & Barrett, P. (1985)",
+        "A revised version of the psychoticism scale. Personality and Individual Differences, 6(1), 21-29",
+        "100項目版、原著論文Appendix 1およびTable 4に完全準拠",
+        "E尺度23項目、N尺度24項目、P尺度32項目、L尺度21項目",
+        "スコアリング方式: YESリスト項目は selectoridx 1|0、NOリスト項目は selectoridx 0|1"
+    ],
+    "title": "EPQ-R アイゼンク性格質問紙改訂版（原著準拠版）",
+    "description": [
+        "この質問紙は、あなたの性格特性を測定するためのものです。",
+        "100の質問について、それぞれ「はい」か「いいえ」で答えてください。",
+        "正しい答えや間違った答えはありません。深く考えず、直感的に答えてください。"
+    ],
+    "submit_button_title": "回答を送信",
+    "fields": [
+        {
+            "dispname": "1",
+            "name": "Q1",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "あなたは多くの異なる趣味を持っていますか"
+        },
+        {
+            "dispname": "2",
+            "name": "Q2",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "何かをする前に立ち止まって考えますか"
+        },
+        {
+            "dispname": "3",
+            "name": "Q3",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "あなたの気分はよく上がったり下がったりしますか"
+        },
+        {
+            "dispname": "4",
+            "name": "Q4",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "他の誰かが本当にしたことなのに、あなたが褒められたことがありますか"
+        },
+        {
+            "dispname": "5",
+            "name": "Q5",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "人々があなたをどう思っているか、とても気にしますか"
+        },
+        {
+            "dispname": "6",
+            "name": "Q6",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "あなたはおしゃべりな人ですか"
+        },
+        {
+            "dispname": "7",
+            "name": "Q7",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "借金があると心配になりますか"
+        },
+        {
+            "dispname": "8",
+            "name": "Q8",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "理由もなく「みじめ」な気持ちになることがありますか"
+        },
+        {
+            "dispname": "9",
+            "name": "Q9",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "慈善団体に寄付をしますか"
+        },
+        {
+            "dispname": "10",
+            "name": "Q10",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "自分の分け前以上のものを取って貪欲になったことがありますか"
+        },
+        {
+            "dispname": "11",
+            "name": "Q11",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "あなたはかなり生き生きとした人ですか"
+        },
+        {
+            "dispname": "12",
+            "name": "Q12",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "子供や動物が苦しんでいるのを見ると、とても心が痛みますか"
+        },
+        {
+            "dispname": "13",
+            "name": "Q13",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "すべきでなかったことや言うべきでなかったことについてよく心配しますか"
+        },
+        {
+            "dispname": "14",
+            "name": "Q14",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "どのように振る舞うべきか知らない人々を嫌いですか"
+        },
+        {
+            "dispname": "15",
+            "name": "Q15",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "何かをすると言ったら、どんなに不便でも必ずその約束を守りますか"
+        },
+        {
+            "dispname": "16",
+            "name": "Q16",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "賑やかなパーティーで自分を解放して楽しむことができますか"
+        },
+        {
+            "dispname": "17",
+            "name": "Q17",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "あなたはいらいらしやすい人ですか"
+        },
+        {
+            "dispname": "18",
+            "name": "Q18",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "人は常に法律を尊重すべきだと思いますか"
+        },
+        {
+            "dispname": "19",
+            "name": "Q19",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "本当は自分の失敗なのに、誰かのせいにしたことがありますか"
+        },
+        {
+            "dispname": "20",
+            "name": "Q20",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "新しい人に会うのを楽しみますか"
+        },
+        {
+            "dispname": "21",
+            "name": "Q21",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "礼儀作法はとても重要だと思いますか"
+        },
+        {
+            "dispname": "22",
+            "name": "Q22",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "あなたの感情は傷つきやすいですか"
+        },
+        {
+            "dispname": "23",
+            "name": "Q23",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "あなたの習慣はすべて良いもので望ましいものですか"
+        },
+        {
+            "dispname": "24",
+            "name": "Q24",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "社交の場では控えめにしている傾向がありますか"
+        },
+        {
+            "dispname": "25",
+            "name": "Q25",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "奇妙な効果や危険な効果があるかもしれない薬を飲みますか"
+        },
+        {
+            "dispname": "26",
+            "name": "Q26",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "よく「うんざりした」気分になりますか"
+        },
+        {
+            "dispname": "27",
+            "name": "Q27",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "他人のもの（ピン一本でも）を取ったことがありますか"
+        },
+        {
+            "dispname": "28",
+            "name": "Q28",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "外出するのが好きですか"
+        },
+        {
+            "dispname": "29",
+            "name": "Q29",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "規則に従うよりも自分のやり方を好みますか"
+        },
+        {
+            "dispname": "30",
+            "name": "Q30",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "愛する人を傷つけることを楽しみますか"
+        },
+        {
+            "dispname": "31",
+            "name": "Q31",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "罪悪感についてよく悩みますか"
+        },
+        {
+            "dispname": "32",
+            "name": "Q32",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "何も知らないことについて話すことがありますか"
+        },
+        {
+            "dispname": "33",
+            "name": "Q33",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "人に会うよりも読書の方が好きですか"
+        },
+        {
+            "dispname": "34",
+            "name": "Q34",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "あなたを傷つけようとする敵がいますか"
+        },
+        {
+            "dispname": "35",
+            "name": "Q35",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "自分を神経質な人だと思いますか"
+        },
+        {
+            "dispname": "36",
+            "name": "Q36",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "たくさんの友人がいますか"
+        },
+        {
+            "dispname": "37",
+            "name": "Q37",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "時には人を本当に傷つけるような冗談を楽しみますか"
+        },
+        {
+            "dispname": "38",
+            "name": "Q38",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "あなたは心配性ですか"
+        },
+        {
+            "dispname": "39",
+            "name": "Q39",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "子供の頃、言われたことをすぐに不平を言わずに従いましたか"
+        },
+        {
+            "dispname": "40",
+            "name": "Q40",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "自分を能天気な人だと思いますか"
+        },
+        {
+            "dispname": "41",
+            "name": "Q41",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "礼儀作法や清潔さはあなたにとって重要ですか"
+        },
+        {
+            "dispname": "42",
+            "name": "Q42",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "両親の望みに反したことがよくありましたか"
+        },
+        {
+            "dispname": "43",
+            "name": "Q43",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "起こるかもしれないひどいことについて心配しますか"
+        },
+        {
+            "dispname": "44",
+            "name": "Q44",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "他人のものを壊したり失くしたりしたことがありますか"
+        },
+        {
+            "dispname": "45",
+            "name": "Q45",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "新しい友人を作るとき、たいてい自分から率先しますか"
+        },
+        {
+            "dispname": "46",
+            "name": "Q46",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "自分を緊張しやすい人や「神経質」な人だと思いますか"
+        },
+        {
+            "dispname": "47",
+            "name": "Q47",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "他の人といるとき、たいてい静かですか"
+        },
+        {
+            "dispname": "48",
+            "name": "Q48",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "結婚は時代遅れで廃止されるべきだと思いますか"
+        },
+        {
+            "dispname": "49",
+            "name": "Q49",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "時々少し自慢することがありますか"
+        },
+        {
+            "dispname": "50",
+            "name": "Q50",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "善悪について、ほとんどの人よりも気楽に考えていますか"
+        },
+        {
+            "dispname": "51",
+            "name": "Q51",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "退屈なパーティーを盛り上げることが簡単にできますか"
+        },
+        {
+            "dispname": "52",
+            "name": "Q52",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "健康について心配しますか"
+        },
+        {
+            "dispname": "53",
+            "name": "Q53",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "誰かについて悪いことや意地悪なことを言ったことがありますか"
+        },
+        {
+            "dispname": "54",
+            "name": "Q54",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "他の人と協力するのを楽しみますか"
+        },
+        {
+            "dispname": "55",
+            "name": "Q55",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "友人にジョークや面白い話をするのが好きですか"
+        },
+        {
+            "dispname": "56",
+            "name": "Q56",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "ほとんどのものがあなたには同じ味がしますか"
+        },
+        {
+            "dispname": "57",
+            "name": "Q57",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "子供の頃、親に生意気でしたか"
+        },
+        {
+            "dispname": "58",
+            "name": "Q58",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "人と交わるのが好きですか"
+        },
+        {
+            "dispname": "59",
+            "name": "Q59",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "仕事に間違いがあることが分かると心配になりますか"
+        },
+        {
+            "dispname": "60",
+            "name": "Q60",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "不眠症に悩まされていますか"
+        },
+        {
+            "dispname": "61",
+            "name": "Q61",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "時々無謀に行動すると人に言われたことがありますか"
+        },
+        {
+            "dispname": "62",
+            "name": "Q62",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "食事の前に必ず手を洗いますか"
+        },
+        {
+            "dispname": "63",
+            "name": "Q63",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "人が話しかけてきたとき、ほぼいつもすぐに返答できますか"
+        },
+        {
+            "dispname": "64",
+            "name": "Q64",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "約束の時間にはたっぷり余裕を持って到着するのが好きですか"
+        },
+        {
+            "dispname": "65",
+            "name": "Q65",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "理由もなく無気力で疲れたと感じることがよくありましたか"
+        },
+        {
+            "dispname": "66",
+            "name": "Q66",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "ゲームでズルをしたことがありますか"
+        },
+        {
+            "dispname": "67",
+            "name": "Q67",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "素早く行動しなければならないことをするのが好きですか"
+        },
+        {
+            "dispname": "68",
+            "name": "Q68",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "あなたの母親は（または母親でしたか）良い女性ですか"
+        },
+        {
+            "dispname": "69",
+            "name": "Q69",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "よく思いつきで決断しますか"
+        },
+        {
+            "dispname": "70",
+            "name": "Q70",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "人生がとても退屈だと感じることがよくありますか"
+        },
+        {
+            "dispname": "71",
+            "name": "Q71",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "誰かを利用したことがありますか"
+        },
+        {
+            "dispname": "72",
+            "name": "Q72",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "時間がないほど多くの活動を引き受けることがよくありますか"
+        },
+        {
+            "dispname": "73",
+            "name": "Q73",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "あなたを避けようとしている人が何人かいますか"
+        },
+        {
+            "dispname": "74",
+            "name": "Q74",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "自分の外見についてたくさん心配しますか"
+        },
+        {
+            "dispname": "75",
+            "name": "Q75",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "人々は貯蓄や保険で将来を守ることに時間をかけすぎていると思いますか"
+        },
+        {
+            "dispname": "76",
+            "name": "Q76",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "死んでしまいたいと思ったことがありますか"
+        },
+        {
+            "dispname": "77",
+            "name": "Q77",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "絶対にバレないとわかっていたら、税金を払わずにいますか"
+        },
+        {
+            "dispname": "78",
+            "name": "Q78",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "パーティーを盛り上げることができますか"
+        },
+        {
+            "dispname": "79",
+            "name": "Q79",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "人に失礼にならないように努めていますか"
+        },
+        {
+            "dispname": "80",
+            "name": "Q80",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "恥ずかしい経験の後、長い間心配しますか"
+        },
+        {
+            "dispname": "81",
+            "name": "Q81",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "たいてい「飛ぶ前に見る」ようにしていますか"
+        },
+        {
+            "dispname": "82",
+            "name": "Q82",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "自分のやり方を通すように主張したことがありますか"
+        },
+        {
+            "dispname": "83",
+            "name": "Q83",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "「神経質」に悩まされていますか"
+        },
+        {
+            "dispname": "84",
+            "name": "Q84",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "よく孤独を感じますか"
+        },
+        {
+            "dispname": "85",
+            "name": "Q85",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "概して、人々が真実を語ることを信頼できますか"
+        },
+        {
+            "dispname": "86",
+            "name": "Q86",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "常に自分が説くことを実践していますか"
+        },
+        {
+            "dispname": "87",
+            "name": "Q87",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "人々があなたや、あなたの仕事に欠点を見つけたとき、簡単に傷つきますか"
+        },
+        {
+            "dispname": "88",
+            "name": "Q88",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "自分のやり方を行くよりも、社会の規則に従う方が良いと思いますか"
+        },
+        {
+            "dispname": "89",
+            "name": "Q89",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "約束や仕事に遅刻したことがありますか"
+        },
+        {
+            "dispname": "90",
+            "name": "Q90",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "周りに騒々しさや興奮がたくさんあるのが好きですか"
+        },
+        {
+            "dispname": "91",
+            "name": "Q91",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "他の人があなたを恐れるようにしたいですか"
+        },
+        {
+            "dispname": "92",
+            "name": "Q92",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "時にはエネルギーに溢れ、時にはとても無気力になりますか"
+        },
+        {
+            "dispname": "93",
+            "name": "Q93",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "今日すべきことを明日まで先延ばしすることがありますか"
+        },
+        {
+            "dispname": "94",
+            "name": "Q94",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "他の人はあなたをとても生き生きした人だと思っていますか"
+        },
+        {
+            "dispname": "95",
+            "name": "Q95",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "人々はあなたに多くの嘘を話しますか"
+        },
+        {
+            "dispname": "96",
+            "name": "Q96",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "家族に対して特別な義務があると信じていますか"
+        },
+        {
+            "dispname": "97",
+            "name": "Q97",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "いくつかのことについて敏感ですか"
+        },
+        {
+            "dispname": "98",
+            "name": "Q98",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "間違いを犯したとき、いつでもそれを認める用意がありますか"
+        },
+        {
+            "dispname": "99",
+            "name": "Q99",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "罠にかかった動物をとても気の毒に思いますか"
+        },
+        {
+            "dispname": "100",
+            "name": "Q100",
+            "type": "radio",
+            "inline": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "required": true,
+            "description": "怒りが込み上げたとき、それをコントロールするのが難しいですか"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "外向性得点",
+            "type": "eval",
+            "dispname": "外向性尺度（E尺度）得点 (0-23点)",
+            "formula": "[[Q1.index]] + [[Q6.index]] + [[Q11.index]] + [[Q16.index]] + [[Q20.index]] + [[Q24.index]] + [[Q28.index]] + [[Q33.index]] + [[Q36.index]] + [[Q40.index]] + [[Q45.index]] + [[Q47.index]] + [[Q51.index]] + [[Q55.index]] + [[Q58.index]] + [[Q61.index]] + [[Q63.index]] + [[Q67.index]] + [[Q69.index]] + [[Q72.index]] + [[Q78.index]] + [[Q90.index]] + [[Q94.index]]"
+        },
+        {
+            "name": "神経症傾向得点",
+            "type": "eval",
+            "dispname": "神経症傾向尺度（N尺度）得点 (0-24点)",
+            "formula": "[[Q3.index]] + [[Q8.index]] + [[Q13.index]] + [[Q17.index]] + [[Q22.index]] + [[Q26.index]] + [[Q31.index]] + [[Q35.index]] + [[Q38.index]] + [[Q43.index]] + [[Q46.index]] + [[Q52.index]] + [[Q60.index]] + [[Q65.index]] + [[Q70.index]] + [[Q74.index]] + [[Q76.index]] + [[Q80.index]] + [[Q83.index]] + [[Q84.index]] + [[Q87.index]] + [[Q92.index]] + [[Q97.index]] + [[Q100.index]]"
+        },
+        {
+            "name": "精神病傾向得点",
+            "type": "eval",
+            "dispname": "精神病傾向尺度（P尺度）得点 (0-32点)",
+            "formula": "[[Q2.index]] + [[Q5.index]] + [[Q7.index]] + [[Q9.index]] + [[Q12.index]] + [[Q14.index]] + [[Q18.index]] + [[Q21.index]] + [[Q25.index]] + [[Q29.index]] + [[Q30.index]] + [[Q34.index]] + [[Q37.index]] + [[Q41.index]] + [[Q42.index]] + [[Q48.index]] + [[Q50.index]] + [[Q54.index]] + [[Q56.index]] + [[Q59.index]] + [[Q64.index]] + [[Q68.index]] + [[Q73.index]] + [[Q75.index]] + [[Q79.index]] + [[Q81.index]] + [[Q85.index]] + [[Q88.index]] + [[Q91.index]] + [[Q95.index]] + [[Q96.index]] + [[Q99.index]]"
+        },
+        {
+            "name": "虚偽性得点",
+            "type": "eval",
+            "dispname": "虚偽性尺度（L尺度）得点 (0-21点)",
+            "formula": "[[Q4.index]] + [[Q10.index]] + [[Q15.index]] + [[Q19.index]] + [[Q23.index]] + [[Q27.index]] + [[Q32.index]] + [[Q39.index]] + [[Q44.index]] + [[Q49.index]] + [[Q53.index]] + [[Q57.index]] + [[Q62.index]] + [[Q66.index]] + [[Q71.index]] + [[Q77.index]] + [[Q82.index]] + [[Q86.index]] + [[Q89.index]] + [[Q93.index]] + [[Q98.index]]"
+        },
+        {
+            "name": "外向性判定",
+            "type": "eval",
+            "dispname": "外向性レベル",
+            "formula": "[[外向性得点]] >= 15 ? '高外向性' : ( [[外向性得点]] >= 8 ? '中程度' : '低外向性（内向性）' )"
+        },
+        {
+            "name": "神経症傾向判定",
+            "type": "eval",
+            "dispname": "神経症傾向レベル",
+            "formula": "[[神経症傾向得点]] >= 15 ? '高神経症傾向' : ( [[神経症傾向得点]] >= 8 ? '中程度' : '低神経症傾向（情緒安定）' )"
+        },
+        {
+            "name": "精神病傾向判定",
+            "type": "eval",
+            "dispname": "精神病傾向レベル",
+            "formula": "[[精神病傾向得点]] >= 15 ? '高精神病傾向' : ( [[精神病傾向得点]] >= 8 ? '中程度' : '低精神病傾向' )"
+        },
+        {
+            "name": "虚偽性判定",
+            "type": "eval",
+            "dispname": "虚偽性スケール",
+            "formula": "[[虚偽性得点]] >= 12 ? '高虚偽性（回答の信頼性に注意）' : '正常範囲'"
+        }
+    ]
+}

@@ -1,0 +1,256 @@
+{
+    "_comment": [
+        "Roland-Morris Disability Questionnaire (RMDQ) 日本語版",
+        "原著論文: Roland M, Morris R. A study of the natural history of back pain. Part 1: Development of a reliable and sensitive measure of disability in low back pain. Spine 1983; 8: 141-144 (PMID: 6222486)",
+        "日本語版妥当性: Suzukamo Y, Fukuhara S, Kikuchi S, et al. Validation of the Japanese version of the Roland-Morris Disability Questionnaire. Journal of Orthopaedic Science 2003;8(4):543-548 (PMID: 12898308)",
+        "日本語版信頼性: Nakamura M, Miyamoto K, Shimizu K. Validation of the Japanese version of the Roland-Morris Disability Questionnaire for Japanese patients with lumbar spinal diseases. Spine 2003;28(20):2414-2418 (PMID: 14560093)",
+        "日本語版作成: 紺野愼一. Roland-Morris Disability Questionnaire（RDQ）日本語版の作成と文化的適合. 整形外科 2003;54(8):958-963",
+        "腰痛による機能障害を評価する24項目の自己報告型質問票",
+        "0点(障害なし)から24点(最大障害)の範囲でスコア化",
+        "公式サイト: https://www.rmdq.org/ (公有ドメイン、使用許可不要)"
+    ],
+    "title": "RMDQ 腰痛による機能障害評価質問票",
+    "description": [
+        "腰痛による日常生活の障害の程度を評価する質問票です。",
+        "腰が痛いときの日常生活への影響について、今日の状態をお答えください。"
+    ],
+    "contact": "整形外科・リハビリテーション科",
+    "dept_in_charge": "整形外科",
+    "submit_button_title": "回答を送信",
+    "fields": [
+        {
+            "type": "note",
+            "description": "腰が痛いと、ふだんやっていることがなかなかできなくなることがあります。以下の項目は、腰が痛いときに起こることを表したものです。この中に、あなたの「今日」の状態にあてはまるものがあるかもしれません。項目を読みながら、今日のあなたの状態を考えてみてください。あなたの状態にあてはまる場合には「はい」に、あてはまらない場合には「いいえ」に選択してください。"
+        },
+        {
+            "dispname": "1. 腰痛のため、大半の時間、家にいる",
+            "name": "Q1",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "いいえ|はい",
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "2. 腰痛を和らげるために、何回も姿勢を変える",
+            "name": "Q2",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "いいえ|はい",
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "3. 腰痛のため、いつもよりゆっくり歩く",
+            "name": "Q3",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "いいえ|はい",
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "4. 腰痛のため、ふだんしている家の仕事を全くしていない",
+            "name": "Q4",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "いいえ|はい",
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "5. 腰痛のため、手すりを使って階段を上る",
+            "name": "Q5",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "いいえ|はい",
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "6. 腰痛のため、いつもより横になって休むことが多い",
+            "name": "Q6",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "いいえ|はい",
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "7. 腰痛のため、何かにつかまらないと、安楽椅子から立ち上がれない",
+            "name": "Q7",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "いいえ|はい",
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "8. 腰痛のため、人に何かしてもらうよう頼むことがある",
+            "name": "Q8",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "いいえ|はい",
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "9. 腰痛のため、服を着るのにいつもより時間がかかる",
+            "name": "Q9",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "いいえ|はい",
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "10. 腰痛のため、短時間しか立たないようにしている",
+            "name": "Q10",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "いいえ|はい",
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "11. 腰痛のため、腰を曲げたりひざまずいたりしないようにしている",
+            "name": "Q11",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "いいえ|はい",
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "12. 腰痛のため、椅子からなかなか立ち上がれない",
+            "name": "Q12",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "いいえ|はい",
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "13. ほとんどいつも腰が痛い",
+            "name": "Q13",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "いいえ|はい",
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "14. 腰痛のため、寝返りがうちにくい",
+            "name": "Q14",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "いいえ|はい",
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "15. 腰痛のため、あまり食欲がない",
+            "name": "Q15",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "いいえ|はい",
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "16. 腰痛のため、靴下やストッキングをはくとき苦労する",
+            "name": "Q16",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "いいえ|はい",
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "17. 腰痛のため、短い距離しか歩かないようにしている",
+            "name": "Q17",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "いいえ|はい",
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "18. 腰痛のため、あまりよく眠れない",
+            "name": "Q18",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "いいえ|はい",
+            "selectoridx": "0|1",
+            "description": "痛みのために睡眠薬を飲んでいる場合は「はい」を選択してください"
+        },
+        {
+            "dispname": "19. 腰痛のため、服を着るのを誰かに手伝ってもらう",
+            "name": "Q19",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "いいえ|はい",
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "20. 腰痛のため、一日の大半を、座って過ごす",
+            "name": "Q20",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "いいえ|はい",
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "21. 腰痛のため、家の仕事をするとき力仕事をしないようにしている",
+            "name": "Q21",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "いいえ|はい",
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "22. 腰痛のため、いつもより人に対していらいらしたり腹が立ったりする",
+            "name": "Q22",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "いいえ|はい",
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "23. 腰痛のため、いつもよりゆっくり階段を上る",
+            "name": "Q23",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "いいえ|はい",
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "24. 腰痛のため、大半の時間、ベッドの中にいる",
+            "name": "Q24",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "いいえ|はい",
+            "selectoridx": "0|1"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "合計スコア",
+            "type": "eval",
+            "formula": "[[Q1.index]] + [[Q2.index]] + [[Q3.index]] + [[Q4.index]] + [[Q5.index]] + [[Q6.index]] + [[Q7.index]] + [[Q8.index]] + [[Q9.index]] + [[Q10.index]] + [[Q11.index]] + [[Q12.index]] + [[Q13.index]] + [[Q14.index]] + [[Q15.index]] + [[Q16.index]] + [[Q17.index]] + [[Q18.index]] + [[Q19.index]] + [[Q20.index]] + [[Q21.index]] + [[Q22.index]] + [[Q23.index]] + [[Q24.index]]"
+        },
+        {
+            "name": "臨床的意味のある変化の目安",
+            "type": "eval",
+            "formula": "[[合計スコア]] < 7 ? '変化の目安: 30%の減少' : '変化の目安: 3-5点の減少'"
+        }
+    ]
+}

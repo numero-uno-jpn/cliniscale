@@ -1,0 +1,616 @@
+{
+    "_comment": [
+        "SF-36（36項目簡易健康調査票）- RAND公式スコアリング方式に準拠",
+        "原典: MOS Short-Form 36-Item Health Survey (Ware & Sherbourne 1992)",
+        "開発: Medical Outcome Study (MOS), RAND Corporation",
+        "日本語版: 福原俊一・鈴鴨よしみ (Fukuhara et al. 1998)",
+        "8つの下位尺度で健康関連QOLを測定、各尺度は0-100点",
+        "重要: 使用にはQualitest株式会社への登録申請が必要（商用利用時は有償）"
+    ],
+    "title": "SF-36 健康関連QOL調査票",
+    "description": [
+        "<h3>SF-36 健康関連QOL調査票</h3>",
+        "あなたの健康状態とそれが日常生活に与える影響について、ご自身の感じ方をお聞かせください。",
+        "過去4週間の状況を思い出してお答えください。",
+        "<small>※本調査票の使用にはQualitest株式会社への使用登録申請が必要です</small>"
+    ],
+    "submit_button_title": "調査票を送信",
+    "fields": [
+        {
+            "dispname": "全体的健康感",
+            "type": "subsection"
+        },
+        {
+            "dispname": "現在の健康状態",
+            "name": "GH1",
+            "type": "radio",
+            "selector": [
+                "最高に良い",
+                "とても良い",
+                "良い",
+                "あまり良くない",
+                "良くない"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true,
+            "description": "現在のあなたの健康状態はいかがですか"
+        },
+        {
+            "dispname": "1年前と比べた健康状態",
+            "name": "HT",
+            "type": "radio",
+            "selector": [
+                "1年前よりもずっと良くなった",
+                "1年前よりも少し良くなった",
+                "1年前とほぼ同じ",
+                "1年前よりも少し悪くなった",
+                "1年前よりもずっと悪くなった"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true,
+            "description": "1年前と比べて、現在のあなたの健康状態はいかがですか"
+        },
+        {
+            "dispname": "身体機能",
+            "type": "subsection"
+        },
+        {
+            "dispname": "激しい活動への制限",
+            "name": "PF01",
+            "type": "radio",
+            "selector": [
+                "まったく制限されない",
+                "少し制限される",
+                "とても制限される"
+            ],
+            "selectoridx": "3|2|1",
+            "required": true,
+            "description": "走ったり、重いものを持ち上げたり、激しいスポーツをするなどの激しい活動をする時、あなたの健康状態はどの程度制限されますか"
+        },
+        {
+            "dispname": "中程度の活動への制限",
+            "name": "PF02",
+            "type": "radio",
+            "selector": [
+                "まったく制限されない",
+                "少し制限される",
+                "とても制限される"
+            ],
+            "selectoridx": "3|2|1",
+            "required": true,
+            "description": "テーブルを動かしたり、掃除機をかけたり、ボウリングやゴルフをするなどの中程度の活動をする時、あなたの健康状態はどの程度制限されますか"
+        },
+        {
+            "dispname": "買い物袋を持ち上げ運ぶことへの制限",
+            "name": "PF03",
+            "type": "radio",
+            "selector": [
+                "まったく制限されない",
+                "少し制限される",
+                "とても制限される"
+            ],
+            "selectoridx": "3|2|1",
+            "required": true,
+            "description": "買い物袋を持ち上げたり運んだりする時、あなたの健康状態はどの程度制限されますか"
+        },
+        {
+            "dispname": "数階の階段を上ることへの制限",
+            "name": "PF04",
+            "type": "radio",
+            "selector": [
+                "まったく制限されない",
+                "少し制限される",
+                "とても制限される"
+            ],
+            "selectoridx": "3|2|1",
+            "required": true,
+            "description": "数階の階段を上る時、あなたの健康状態はどの程度制限されますか"
+        },
+        {
+            "dispname": "1階分の階段を上ることへの制限",
+            "name": "PF05",
+            "type": "radio",
+            "selector": [
+                "まったく制限されない",
+                "少し制限される",
+                "とても制限される"
+            ],
+            "selectoridx": "3|2|1",
+            "required": true,
+            "description": "1階分の階段を上る時、あなたの健康状態はどの程度制限されますか"
+        },
+        {
+            "dispname": "体を曲げたり膝をついたりすることへの制限",
+            "name": "PF06",
+            "type": "radio",
+            "selector": [
+                "まったく制限されない",
+                "少し制限される",
+                "とても制限される"
+            ],
+            "selectoridx": "3|2|1",
+            "required": true,
+            "description": "体を曲げたり、膝をついたり、しゃがんだりする時、あなたの健康状態はどの程度制限されますか"
+        },
+        {
+            "dispname": "1キロ以上歩くことへの制限",
+            "name": "PF07",
+            "type": "radio",
+            "selector": [
+                "まったく制限されない",
+                "少し制限される",
+                "とても制限される"
+            ],
+            "selectoridx": "3|2|1",
+            "required": true,
+            "description": "1キロ以上歩く時、あなたの健康状態はどの程度制限されますか"
+        },
+        {
+            "dispname": "数百メートル歩くことへの制限",
+            "name": "PF08",
+            "type": "radio",
+            "selector": [
+                "まったく制限されない",
+                "少し制限される",
+                "とても制限される"
+            ],
+            "selectoridx": "3|2|1",
+            "required": true,
+            "description": "数百メートル歩く時、あなたの健康状態はどの程度制限されますか"
+        },
+        {
+            "dispname": "100メートル歩くことへの制限",
+            "name": "PF09",
+            "type": "radio",
+            "selector": [
+                "まったく制限されない",
+                "少し制限される",
+                "とても制限される"
+            ],
+            "selectoridx": "3|2|1",
+            "required": true,
+            "description": "100メートル歩く時、あなたの健康状態はどの程度制限されますか"
+        },
+        {
+            "dispname": "入浴や着替えへの制限",
+            "name": "PF10",
+            "type": "radio",
+            "selector": [
+                "まったく制限されない",
+                "少し制限される",
+                "とても制限される"
+            ],
+            "selectoridx": "3|2|1",
+            "required": true,
+            "description": "入浴や着替えをする時、あなたの健康状態はどの程度制限されますか"
+        },
+        {
+            "dispname": "日常役割機能（身体）",
+            "type": "subsection"
+        },
+        {
+            "dispname": "活動時間の短縮（身体的理由）",
+            "name": "RP1",
+            "type": "radio",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|2",
+            "required": true,
+            "description": "過去4週間に、身体的な理由で、仕事や普段の活動をする時間を減らしましたか"
+        },
+        {
+            "dispname": "達成度の低下（身体的理由）",
+            "name": "RP2",
+            "type": "radio",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|2",
+            "required": true,
+            "description": "過去4週間に、身体的な理由で、思っていたより少ししか仕事やその他の活動ができませんでしたか"
+        },
+        {
+            "dispname": "活動の種類の制限（身体的理由）",
+            "name": "RP3",
+            "type": "radio",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|2",
+            "required": true,
+            "description": "過去4週間に、身体的な理由で、仕事やその他の活動の種類に制限がありましたか"
+        },
+        {
+            "dispname": "活動の困難（身体的理由）",
+            "name": "RP4",
+            "type": "radio",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|2",
+            "required": true,
+            "description": "過去4週間に、身体的な理由で、仕事やその他の活動をするのに困難を感じましたか"
+        },
+        {
+            "dispname": "日常役割機能（精神）",
+            "type": "subsection"
+        },
+        {
+            "dispname": "活動時間の短縮（精神的理由）",
+            "name": "RE1",
+            "type": "radio",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|2",
+            "required": true,
+            "description": "過去4週間に、心理的な問題（ゆううつ、不安など）のために、仕事や普段の活動をする時間を減らしましたか"
+        },
+        {
+            "dispname": "達成度の低下（精神的理由）",
+            "name": "RE2",
+            "type": "radio",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|2",
+            "required": true,
+            "description": "過去4週間に、心理的な問題のために、思っていたより少ししか仕事やその他の活動ができませんでしたか"
+        },
+        {
+            "dispname": "活動の注意力低下（精神的理由）",
+            "name": "RE3",
+            "type": "radio",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|2",
+            "required": true,
+            "description": "過去4週間に、心理的な問題のために、仕事やその他の活動をいつものように注意深くできませんでしたか"
+        },
+        {
+            "dispname": "社会生活機能",
+            "type": "subsection"
+        },
+        {
+            "dispname": "社会活動への支障度",
+            "name": "SF1",
+            "type": "radio",
+            "selector": [
+                "全く支障なし",
+                "少し支障あり",
+                "中程度支障あり",
+                "かなり支障あり",
+                "非常に支障あり"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true,
+            "description": "過去4週間に、身体的あるいは心理的な問題によって、家族、友人、近所の人、その他の仲間との普段の社会活動がどの程度さまたげられましたか"
+        },
+        {
+            "dispname": "社会活動の時間的制約",
+            "name": "SF2",
+            "type": "radio",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "ときどき",
+                "少しだけ",
+                "全くない"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true,
+            "description": "過去4週間に、身体的あるいは心理的な問題によって、家族や友人とのつきあいなどの社会活動が、どのくらいの時間さまたげられましたか"
+        },
+        {
+            "dispname": "体の痛み",
+            "type": "subsection"
+        },
+        {
+            "dispname": "痛みの程度",
+            "name": "BP1",
+            "type": "radio",
+            "selector": [
+                "全くなし",
+                "とても軽い",
+                "軽い",
+                "中程度",
+                "強い",
+                "とても強い"
+            ],
+            "selectoridx": "1|2|3|4|5|6",
+            "required": true,
+            "description": "過去4週間に、どの程度身体の痛みがありましたか"
+        },
+        {
+            "dispname": "痛みによる活動への支障",
+            "name": "BP2",
+            "type": "radio",
+            "selector": [
+                "全く支障なし",
+                "少し支障あり",
+                "中程度支障あり",
+                "かなり支障あり",
+                "非常に支障あり"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true,
+            "description": "過去4週間に、痛みのために、いつもの仕事（家事を含む）がどの程度さまたげられましたか"
+        },
+        {
+            "dispname": "活力",
+            "type": "subsection"
+        },
+        {
+            "dispname": "活気に満ちていたか",
+            "name": "VT1",
+            "type": "radio",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "かなりの時間",
+                "ときどき",
+                "少しだけ",
+                "全くない"
+            ],
+            "selectoridx": "1|2|3|4|5|6",
+            "required": true,
+            "description": "過去4週間に、活気に満ちあふれていると感じましたか"
+        },
+        {
+            "dispname": "エネルギーに満ちていたか",
+            "name": "VT2",
+            "type": "radio",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "かなりの時間",
+                "ときどき",
+                "少しだけ",
+                "全くない"
+            ],
+            "selectoridx": "1|2|3|4|5|6",
+            "required": true,
+            "description": "過去4週間に、エネルギーに満ちあふれていると感じましたか"
+        },
+        {
+            "dispname": "疲れ果てていたか",
+            "name": "VT3",
+            "type": "radio",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "かなりの時間",
+                "ときどき",
+                "少しだけ",
+                "全くない"
+            ],
+            "selectoridx": "1|2|3|4|5|6",
+            "required": true,
+            "description": "過去4週間に、疲れ果てていると感じましたか"
+        },
+        {
+            "dispname": "疲れていたか",
+            "name": "VT4",
+            "type": "radio",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "かなりの時間",
+                "ときどき",
+                "少しだけ",
+                "全くない"
+            ],
+            "selectoridx": "1|2|3|4|5|6",
+            "required": true,
+            "description": "過去4週間に、疲れていると感じましたか"
+        },
+        {
+            "dispname": "心の健康",
+            "type": "subsection"
+        },
+        {
+            "dispname": "神経質な感じがしたか",
+            "name": "MH1",
+            "type": "radio",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "かなりの時間",
+                "ときどき",
+                "少しだけ",
+                "全くない"
+            ],
+            "selectoridx": "1|2|3|4|5|6",
+            "required": true,
+            "description": "過去4週間に、神経質な感じがしましたか"
+        },
+        {
+            "dispname": "絶望的な気持ちになったか",
+            "name": "MH2",
+            "type": "radio",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "かなりの時間",
+                "ときどき",
+                "少しだけ",
+                "全くない"
+            ],
+            "selectoridx": "1|2|3|4|5|6",
+            "required": true,
+            "description": "過去4週間に、何をしても気持ちが明るくならないような絶望的な気持ちになりましたか"
+        },
+        {
+            "dispname": "落ち着いて平静だったか",
+            "name": "MH3",
+            "type": "radio",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "かなりの時間",
+                "ときどき",
+                "少しだけ",
+                "全くない"
+            ],
+            "selectoridx": "1|2|3|4|5|6",
+            "required": true,
+            "description": "過去4週間に、落ち着いて平静な気持ちでいましたか"
+        },
+        {
+            "dispname": "気持ちが沈んでいたか",
+            "name": "MH4",
+            "type": "radio",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "かなりの時間",
+                "ときどき",
+                "少しだけ",
+                "全くない"
+            ],
+            "selectoridx": "1|2|3|4|5|6",
+            "required": true,
+            "description": "過去4週間に、気持ちが沈んでユウウツになりましたか"
+        },
+        {
+            "dispname": "幸福な感じがしたか",
+            "name": "MH5",
+            "type": "radio",
+            "selector": [
+                "いつも",
+                "たいてい",
+                "かなりの時間",
+                "ときどき",
+                "少しだけ",
+                "全くない"
+            ],
+            "selectoridx": "1|2|3|4|5|6",
+            "required": true,
+            "description": "過去4週間に、幸福な感じがしましたか"
+        },
+        {
+            "dispname": "全体的健康感（追加項目）",
+            "type": "subsection"
+        },
+        {
+            "dispname": "病気になりやすさ",
+            "name": "GH2",
+            "type": "radio",
+            "selector": [
+                "全くその通り",
+                "だいたいその通り",
+                "よくわからない",
+                "だいたい違う",
+                "全く違う"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true,
+            "description": "私は他の人よりも病気になりやすい"
+        },
+        {
+            "dispname": "他の人と同程度の健康さ",
+            "name": "GH3",
+            "type": "radio",
+            "selector": [
+                "全くその通り",
+                "だいたいその通り",
+                "よくわからない",
+                "だいたい違う",
+                "全く違う"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true,
+            "description": "私は知っている人の中では健康な方である"
+        },
+        {
+            "dispname": "健康状態悪化への不安",
+            "name": "GH4",
+            "type": "radio",
+            "selector": [
+                "全くその通り",
+                "だいたいその通り",
+                "よくわからない",
+                "だいたい違う",
+                "全く違う"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true,
+            "description": "自分の健康について不安になることがある"
+        },
+        {
+            "dispname": "健康状態の良好さ",
+            "name": "GH5",
+            "type": "radio",
+            "selector": [
+                "全くその通り",
+                "だいたいその通り",
+                "よくわからない",
+                "だいたい違う",
+                "全く違う"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true,
+            "description": "私の健康状態は非常に良い"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "身体機能スコア",
+            "type": "eval",
+            "dispname": "身体機能の総合得点（0-100点）",
+            "formula": "( ( [[PF01.index]] + [[PF02.index]] + [[PF03.index]] + [[PF04.index]] + [[PF05.index]] + [[PF06.index]] + [[PF07.index]] + [[PF08.index]] + [[PF09.index]] + [[PF10.index]] - 10 ) * 100 / 20).toFixed(2)"
+        },
+        {
+            "name": "日常役割機能身体スコア",
+            "type": "eval",
+            "dispname": "身体的理由による日常役割機能の得点（0-100点）",
+            "formula": "( ( [[RP1.index]] + [[RP2.index]] + [[RP3.index]] + [[RP4.index]] - 4 ) * 100 / 4).toFixed(2)"
+        },
+        {
+            "name": "日常役割機能精神スコア",
+            "type": "eval",
+            "dispname": "精神的理由による日常役割機能の得点（0-100点）",
+            "formula": "( ( [[RE1.index]] + [[RE2.index]] + [[RE3.index]] - 3 ) * 100 / 3).toFixed(2)"
+        },
+        {
+            "name": "活力スコア",
+            "type": "eval",
+            "dispname": "活力・エネルギーの得点（0-100点）",
+            "formula": "( ( [[VT1.index]] + [[VT2.index]] + (7 - [[VT3.index]]) + (7 - [[VT4.index]]) - 4 ) * 100 / 20).toFixed(2)"
+        },
+        {
+            "name": "心の健康スコア",
+            "type": "eval",
+            "dispname": "心の健康の得点（0-100点）",
+            "formula": "( ( (7 - [[MH1.index]]) + (7 - [[MH2.index]]) + [[MH3.index]] + (7 - [[MH4.index]]) + [[MH5.index]] - 5 ) * 100 / 25).toFixed(2)"
+        },
+        {
+            "name": "社会生活機能スコア",
+            "type": "eval",
+            "dispname": "社会生活機能の得点（0-100点）",
+            "formula": "( ( (6 - [[SF1.index]]) + (6 - [[SF2.index]]) - 2 ) * 100 / 8).toFixed(2)"
+        },
+        {
+            "name": "体の痛みスコア",
+            "type": "eval",
+            "dispname": "痛みの得点（0-100点、高いほど痛みが少ない）",
+            "formula": "( ( (7 - [[BP1.index]]) + (6 - [[BP2.index]]) - 2 ) * 100 / 9).toFixed(2)"
+        },
+        {
+            "name": "全体的健康感スコア",
+            "type": "eval",
+            "dispname": "全体的健康感の得点（0-100点）",
+            "formula": "( ( (6 - [[GH1.index]]) + [[GH2.index]] + (6 - [[GH3.index]]) + [[GH4.index]] + (6 - [[GH5.index]]) - 5 ) * 100 / 20).toFixed(2)"
+        }
+    ]
+}

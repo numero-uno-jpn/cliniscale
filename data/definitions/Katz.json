@@ -1,0 +1,99 @@
+{
+    "_comment": [
+        "Katz Index of ADL（カッツインデックス）問診票",
+        "原典: Katz S, et al. Studies of illness in the aged: The index of ADL - A standardized measure of biological and psychosocial function. JAMA. 1963;185:914-919.",
+        "開発者: Sidney Katz とベンジャミン・ローズ病院スタッフ",
+        "開発年: 1963年",
+        "評価対象: 基本的日常生活動作（ADL）6項目",
+        "判定方法: 自立または介助の2段階評価、総合判定A-G階級",
+        "参考URL: https://www.jpn-geriat-soc.or.jp/tool/tool_03.html"
+    ],
+    "title": "Katz 基本的日常生活動作指標",
+    "description": [
+        "<h3>Katz Index of ADL（カッツインデックス）</h3>",
+        "基本的な日常生活動作（ADL）6項目について、実際に行っているかどうかを評価します。",
+        "各項目について、監視・指導・介助なしで自立して行えるかお答えください。"
+    ],
+    "fields": [
+        {
+            "dispname": "入浴（スポンジ、シャワー、浴槽）",
+            "name": "入浴",
+            "type": "radio",
+            "required": true,
+            "selector": "介助|自立",
+            "selectoridx": "0|1",
+            "inline": true,
+            "description": "浴槽への出入りと身体を洗うことについて評価します。身体の一部（背中、脚）に介助を要する場合は自立です。"
+        },
+        {
+            "dispname": "更衣",
+            "name": "更衣",
+            "type": "radio",
+            "required": true,
+            "selector": "介助|自立",
+            "selectoridx": "0|1",
+            "inline": true,
+            "description": "たんすや引き出しから衣類を取り出し、下着・上着の着脱、ファスナー操作、装具の装着ができるかを評価します。靴紐を結ぶことは除きます。"
+        },
+        {
+            "dispname": "トイレに行く",
+            "name": "トイレ",
+            "type": "radio",
+            "required": true,
+            "selector": "介助|自立",
+            "selectoridx": "0|1",
+            "inline": true,
+            "description": "トイレに行く、排泄後の後始末、下着を整える、夜間の便器の使用ができるかを評価します。"
+        },
+        {
+            "dispname": "移乗",
+            "name": "移乗",
+            "type": "radio",
+            "required": true,
+            "selector": "介助|自立",
+            "selectoridx": "0|1",
+            "inline": true,
+            "description": "介助なしでベッドや椅子への出入りができるかを評価します。杖やウォーカーを使用しても構いません。"
+        },
+        {
+            "dispname": "尿便失禁制御",
+            "name": "失禁制御",
+            "type": "radio",
+            "required": true,
+            "selector": "介助|自立",
+            "selectoridx": "0|1",
+            "inline": true,
+            "description": "排尿・排便を自分で制御できるかを評価します。失禁がある場合や下剤・カテーテル使用時の介助が必要な場合は介助です。"
+        },
+        {
+            "dispname": "食事",
+            "name": "食事",
+            "type": "radio",
+            "required": true,
+            "selector": "介助|自立",
+            "selectoridx": "0|1",
+            "inline": true,
+            "description": "皿から口へ食べ物を運ぶことができるかを評価します。肉を切る、パンにバターをつけることは除きます。"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "自立項目数",
+            "type": "eval",
+            "formula": "[[入浴.index]] + [[更衣.index]] + [[トイレ.index]] + [[移乗.index]] + [[失禁制御.index]] + [[食事.index]]"
+        },
+        {
+            "name": "Katz分類",
+            "type": "eval",
+            "formula": "[[自立項目数]] == 6 ? 'A - 全6領域で自立' : [[自立項目数]] == 0 ? 'G - 全領域で介助が必要' : [[自立項目数]] == 5 && [[入浴.index]] == 0 ? 'B - 入浴以外の5領域で自立' : [[自立項目数]] == 4 && [[入浴.index]] == 0 && [[更衣.index]] == 0 ? 'C - 入浴・更衣以外の4領域で自立' : [[自立項目数]] == 3 && [[入浴.index]] == 0 && [[更衣.index]] == 0 && [[トイレ.index]] == 0 ? 'D - 入浴・更衣・トイレ以外の3領域で自立' : [[自立項目数]] == 2 && [[失禁制御.index]] == 1 && [[食事.index]] == 1 ? 'E - 失禁制御・食事の2領域で自立' : [[自立項目数]] == 1 && ( [[失禁制御.index]] == 1 || [[食事.index]] == 1 ) ? 'F - 失禁制御または食事のみ自立' : 'O - その他（典型的パターンに該当しない）'",
+            "dispname": "Katz Index分類結果（A-G階級）"
+        },
+        {
+            "name": "重症度判定",
+            "type": "eval",
+            "formula": "[[自立項目数]] >= 5 ? '軽度依存' : ([[自立項目数]] >= 3 ? '中等度依存' : '重度依存')",
+            "dispname": "依存度による重症度分類"
+        }
+    ]
+}

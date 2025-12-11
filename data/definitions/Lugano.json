@@ -1,0 +1,250 @@
+{
+  "_comment": [
+    "Lugano Criteria for Lymphoma",
+    "リンパ腫の病期分類と反応評価",
+    "原著論文: Cheson BD, et al. J Clin Oncol. 2014;32(27):3059-68.",
+    "PubMed: https://pubmed.ncbi.nlm.nih.gov/25113753/",
+    "原文: https://ascopubs.org/doi/abs/10.1200/JCO.2013.53.5229"
+  ],
+  "title": "Lugano分類",
+  "description": [
+    "リンパ腫の病期分類と治療反応を評価する基準です",
+    "PET/CTを統合したAnn Arborの更新版です"
+  ],
+  "responsible_person": [
+    "血液内科医"
+  ],
+  "dept_in_charge": "血液内科",
+  "fields": [
+    {
+      "dispname": "基本情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "評価日",
+      "name": "評価日",
+      "type": "date",
+      "format": "YYYY/MM/DD"
+    },
+    {
+      "dispname": "リンパ腫のタイプ",
+      "name": "リンパ腫タイプ",
+      "type": "text",
+      "required": true,
+      "description": "ホジキンリンパ腫、非ホジキンリンパ腫のサブタイプを記載"
+    },
+    {
+      "dispname": "評価目的",
+      "name": "評価目的",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": [
+        "初回病期診断",
+        "治療反応評価"
+      ],
+      "selectoridx": "1|2"
+    },
+    {
+      "dispname": "病期分類 (Staging)",
+      "type": "subsection"
+    },
+    {
+      "dispname": "病期",
+      "name": "病期",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "I期: 単一リンパ節領域または単一節外臓器",
+        "II期: 横隔膜の同側で2つ以上のリンパ節領域",
+        "III期: 横隔膜の両側にリンパ節病変",
+        "IV期: 1つ以上の節外臓器への広範な浸潤"
+      ],
+      "selectoridx": "1|2|3|4",
+      "description": "病変の分布に基づく病期"
+    },
+    {
+      "dispname": "B症状",
+      "name": "B症状",
+      "type": "checkbox",
+      "selector": [
+        "原因不明の発熱 (38度以上)",
+        "盗汗 (寝汗)",
+        "6ヶ月以内に10%以上の体重減少"
+      ],
+      "selectoridx": "1|2|3",
+      "description": "該当するB症状をすべて選択"
+    },
+    {
+      "dispname": "巨大腫瘤",
+      "name": "巨大腫瘤",
+      "type": "radio",
+      "inline": true,
+      "selector": [
+        "なし",
+        "あり (10cm以上または縦隔の1/3以上)"
+      ],
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "節外病変",
+      "name": "節外病変",
+      "type": "radio",
+      "inline": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "節外病変の部位",
+      "name": "節外病変部位",
+      "type": "textarea",
+      "rows": 3,
+      "parentname": "節外病変",
+      "parentsel": "あり",
+      "description": "節外病変がある場合、部位を記載"
+    },
+    {
+      "dispname": "治療反応評価 (Response Assessment)",
+      "type": "subsection"
+    },
+    {
+      "dispname": "PET/CT評価",
+      "name": "PET評価",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "実施していない",
+        "Deauville 1: 集積なし",
+        "Deauville 2: 縦隔血液プールと同等以下",
+        "Deauville 3: 縦隔血液プールより高く肝臓以下",
+        "Deauville 4: 肝臓より高い",
+        "Deauville 5: 肝臓より著しく高い、または新病変"
+      ],
+      "selectoridx": "0|1|2|3|4|5",
+      "description": "Deauvilleスコア"
+    },
+    {
+      "dispname": "標的病変の変化",
+      "name": "標的病変",
+      "type": "radio",
+      "selector": [
+        "完全消失",
+        "50%以上縮小",
+        "25-49%縮小",
+        "変化なし (±25%未満)",
+        "25%以上増大",
+        "新規病変出現"
+      ],
+      "selectoridx": "1|2|3|4|5|6",
+      "description": "CT/MRIでの標的病変の変化"
+    },
+    {
+      "dispname": "骨髄浸潤",
+      "name": "骨髄",
+      "type": "radio",
+      "inline": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "追加情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "病変の詳細",
+      "name": "病変詳細",
+      "type": "textarea",
+      "rows": 5,
+      "description": "リンパ節および節外病変の詳細を記載"
+    },
+    {
+      "dispname": "画像所見",
+      "name": "画像所見",
+      "type": "textarea",
+      "rows": 5,
+      "description": "CT、MRI、PETの詳細所見"
+    },
+    {
+      "dispname": "その他の所見・コメント",
+      "name": "その他所見",
+      "type": "textarea",
+      "rows": 5
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "B症状length",
+      "type": "eval",
+      "noreport": true,
+      "formula": "((B症状.index)).length"
+    },
+    {
+      "name": "B症状有無",
+      "type": "eval",
+      "formula": "( [[B症状length]] > 0) ? ', B症状あり' : ', B症状なし'"
+    },
+    {
+      "name": "病期index",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[病期.index]]"
+    },
+    {
+      "name": "巨大腫瘤index",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[巨大腫瘤.index]]"
+    },
+    {
+      "name": "節外病変index",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[節外病変.index]]"
+    },
+    {
+      "name": "完全病期",
+      "type": "eval",
+      "formula": "{{病期}}.split(':')[0] +  {{B症状有無}} + ( [[巨大腫瘤index]] == 1 ? ', 巨大腫瘤あり' : '' ) + ( [[節外病変index]] == 1 ? ' , 節外病変あり' : '' )"
+    },
+    {
+      "name": "評価目的index",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[評価目的.index]]"
+    },
+    {
+      "name": "PET評価index",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[PET評価.index]]"
+    },
+    {
+      "name": "標的病変index",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[標的病変.index]]"
+    },
+    {
+      "name": "治療反応",
+      "type": "eval",
+      "formula": "[[評価目的index]] == 2 ? ( [[PET評価index]] <= 3 && [[標的病変index]] == 1 ? 'CR (完全奏効)' : ( [[PET評価index]] <= 3 && [[標的病変index]] <= 2 ? 'PR (部分奏効)' : ( [[標的病変index]] >= 5 || [[PET評価index]] >= 4 ? 'PD (進行)' : 'SD (安定)' ) ) ) : '病期診断のみ'"
+    },
+    {
+      "name": "Warning: 進行期",
+      "formula": "[[病期index]] >= 3",
+      "type": "warning"
+    },
+    {
+      "name": "Emergency: IV期または複数のB症状",
+      "formula": "[[病期index]] == 4 || [[B症状length]] >= 2",
+      "type": "emergency"
+    }
+  ]
+}

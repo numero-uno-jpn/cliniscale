@@ -1,0 +1,213 @@
+{
+  "_comment": [
+    "Crohn's Disease Activity Index (CDAI) - クローン病活動度指数",
+    "Best et al. Development of a Crohn's disease activity index. Gastroenterology. 1976 Mar;70(3):439-44. PMID: 1248701",
+    "NCCDS. National Cooperative Crohn's Disease Study: results of drug treatment. Gastroenterology. 1979 Oct;77(4 Pt 2):847-69. PMID: 38176",
+    "厚生労働省研究費補助金 難治性疾患等政策研究事業 難治性炎症性腸管障害に関する調査研究（鈴木班）. 炎症性腸疾患の疾患活動性評価指標集 第2版",
+    "8項目の合計点で評価: 150未満（寛解）、150-220（軽度活動性）、220-450（中等度活動性）、450以上（重症）",
+    "修正内容: 1) section→subsection、2) scale→text、3) 計算式の括弧修正、4) warning/emergencyにname追加、5) 中間変数追加"
+  ],
+  "title": "CDAI クローン病活動度指数",
+  "description": [
+    "過去1週間の症状とその他の臨床項目から、クローン病の活動性を評価する問診票です。",
+    "合計8項目の評価により、クローン病の重症度分類を行います。"
+  ],
+  "fields": [
+    {
+      "dispname": "基本情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "性別",
+      "name": "性別",
+      "type": "radio",
+      "selector": "男性|女性",
+      "required": true,
+      "inline": true
+    },
+    {
+      "dispname": "身長",
+      "name": "身長",
+      "type": "text",
+      "postfix": "cm",
+      "inputmode": "decimal",
+      "testrange": [
+        135,
+        190
+      ],
+      "required": true
+    },
+    {
+      "dispname": "現在の体重",
+      "name": "体重",
+      "type": "text",
+      "postfix": "kg",
+      "inputmode": "decimal",
+      "testrange": [
+        35,
+        90
+      ],
+      "required": true
+    },
+    {
+      "dispname": "現在のヘマトクリット値",
+      "name": "ヘマトクリット",
+      "type": "text",
+      "postfix": "%",
+      "inputmode": "numeric",
+      "testrange": [
+        25,
+        55
+      ],
+      "required": true
+    },
+    {
+      "dispname": "CDAI評価項目",
+      "type": "subsection"
+    },
+    {
+      "dispname": "1. 過去1週間の水様または泥状便の1日平均回数",
+      "name": "便回数",
+      "type": "text",
+      "postfix": "回",
+      "inputmode": "numeric",
+      "required": true,
+      "description": "過去1週間を振り返って、1日あたりの平均的な水様・泥状便の回数を入力してください"
+    },
+    {
+      "dispname": "2. 過去1週間の腹痛の程度",
+      "name": "腹痛",
+      "type": "radio",
+      "selector": "なし|軽度|中等度|高度",
+      "selectoridx": "0|1|2|3",
+      "required": true,
+      "description": "過去1週間で最も多かった腹痛の程度を選択してください"
+    },
+    {
+      "dispname": "3. 過去1週間の一般状態",
+      "name": "一般状態",
+      "type": "radio",
+      "selector": "良好|軽度不良|不良|重症|劇症",
+      "selectoridx": "0|1|2|3|4",
+      "required": true,
+      "description": "過去1週間の全体的な体調を選択してください"
+    },
+    {
+      "dispname": "4. 現在もっている合併症",
+      "name": "合併症",
+      "type": "checkbox",
+      "selector": [
+        "関節炎または関節痛",
+        "皮膚または口腔内病変",
+        "虹彩炎またはぶどう膜炎",
+        "裂肛、痔瘻または肛門周囲膿瘍",
+        "その他の瘻孔",
+        "過去1週間の37.8℃を超える発熱"
+      ],
+      "selectoridx": "0|1|2|3|4|5",
+      "description": "現在該当するものをすべて選択してください"
+    },
+    {
+      "dispname": "5. 下痢に対する止痢薬の使用",
+      "name": "止痢薬",
+      "type": "radio",
+      "selector": "なし|あり",
+      "selectoridx": "0|1",
+      "required": true,
+      "description": "ロペラミド（イモディウム）やオピアト系薬剤の使用について"
+    },
+    {
+      "dispname": "6. 腹部腫瘤",
+      "name": "腹部腫瘤",
+      "type": "radio",
+      "selector": "なし|疑い|確実にあり",
+      "selectoridx": "0|2|5",
+      "required": true,
+      "description": "医師による触診での腹部腫瘤の評価"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "標準体重",
+      "type": "eval",
+      "formula": "( ( ((身長)) / 100 ) * ( ((身長)) / 100 ) * 22).toFixed(1)"
+    },
+    {
+      "name": "合併症_length",
+      "type": "eval",
+      "noreport": true,
+      "formula": "([[合併症.index]] || []).length"
+    },
+    {
+      "name": "項目1スコア",
+      "type": "eval",
+      "noreport": true,
+      "formula": "((便回数)) * 2"
+    },
+    {
+      "name": "項目2スコア",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[腹痛.index]] * 5"
+    },
+    {
+      "name": "項目3スコア",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[一般状態.index]] * 7"
+    },
+    {
+      "name": "項目4スコア",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[合併症_length]] * 20"
+    },
+    {
+      "name": "項目5スコア",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[止痢薬.index]] * 30"
+    },
+    {
+      "name": "項目6スコア",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[腹部腫瘤.index]] * 10"
+    },
+    {
+      "name": "項目7スコア",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( {{性別}} === '男性' ? 47 - ((ヘマトクリット)) : 42 - ((ヘマトクリット)) ) * 6"
+    },
+    {
+      "name": "項目8スコア",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( ( 1 - ((体重)) / [[標準体重]] ) * 100).toFixed(1)"
+    },
+    {
+      "name": "CDAI合計スコア",
+      "type": "eval",
+      "formula": "[[項目1スコア]] + [[項目2スコア]] + [[項目3スコア]] + [[項目4スコア]] + [[項目5スコア]] + [[項目6スコア]] + [[項目7スコア]] + [[項目8スコア]]",
+      "dispname": "CDAI合計スコア"
+    },
+    {
+      "name": "重症度判定",
+      "type": "eval",
+      "formula": "[[CDAI合計スコア]] < 150 ? '寛解' : ( [[CDAI合計スコア]] < 220 ? '軽度活動性' : ( [[CDAI合計スコア]] < 450 ? '中等度活動性' : '重症' ) )",
+      "dispname": "重症度分類"
+    },
+    {
+      "name": "Warning: 中等度以上の活動性",
+      "type": "warning",
+      "formula": "[[CDAI合計スコア]] >= 220"
+    },
+    {
+      "name": "Emergency: 重症活動性",
+      "type": "emergency",
+      "formula": "[[CDAI合計スコア]] >= 450"
+    }
+  ]
+}

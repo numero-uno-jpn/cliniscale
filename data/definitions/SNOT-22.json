@@ -1,0 +1,307 @@
+{
+    "_comment": [
+        "SNOT-22 (Sino-Nasal Outcome Test) 日本語版",
+        "原著論文: Hopkins C, et al. Psychometric validity of the 22-item Sinonasal Outcome Test. Clin Otolaryngol. 2009;34(5):447-54. PMID: 19793277",
+        "日本語版: 荻野枝里子, et al. Sino-Nasal Outcome Test (SNOT-22) 日本語版の信頼性・妥当性・治療反応性の検討. 日耳鼻. 2017;120(9):1155-1164.",
+        "重症度分類: Toma S, Hopkins C. Stratification of SNOT-22 scores into mild, moderate or severe. Rhinology. 2016;54(2):129-33. PMID: 27017484",
+        "サブドメイン構成: Feng AL, et al. A validated model for the 22-item Sino-Nasal Outcome Test subdomain structure in chronic rhinosinusitis. Int Forum Allergy Rhinol. 2017;7(12):1140-1148. PMID: 29028287",
+        "著作権: Washington University in St. Louis (Dr. Jay Piccirillo)",
+        "22項目、各項目0-5点、総合計0-110点",
+        "慢性副鼻腔炎患者の症状と生活の質評価",
+        "日本語版MID（臨床的意義のある最小差）: 15.7点"
+    ],
+    "title": "SNOT-22 副鼻腔炎に関する自覚症状調査票",
+    "description": [
+        "<h3>副鼻腔炎に関する自覚症状調査票</h3>",
+        "過去2週間の症状について、それぞれの問題がどの程度困っているかを評価してください。"
+    ],
+    "fields": [
+        {
+            "dispname": "鼻症状",
+            "type": "subsection"
+        },
+        {
+            "dispname": "鼻をかむ必要",
+            "name": "Q1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全く問題ない|非常に軽度の問題|軽度の問題|中等度の問題|重度の問題|考えられる最悪の問題",
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "くしゃみ",
+            "name": "Q2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全く問題ない|非常に軽度の問題|軽度の問題|中等度の問題|重度の問題|考えられる最悪の問題",
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "鼻水",
+            "name": "Q3",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全く問題ない|非常に軽度の問題|軽度の問題|中等度の問題|重度の問題|考えられる最悪の問題",
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "鼻詰まり",
+            "name": "Q4",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全く問題ない|非常に軽度の問題|軽度の問題|中等度の問題|重度の問題|考えられる最悪の問題",
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "においや味がしない",
+            "name": "Q5",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全く問題ない|非常に軽度の問題|軽度の問題|中等度の問題|重度の問題|考えられる最悪の問題",
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "咳",
+            "name": "Q6",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全く問題ない|非常に軽度の問題|軽度の問題|中等度の問題|重度の問題|考えられる最悪の問題",
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "鼻水がのどにまわる",
+            "name": "Q7",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全く問題ない|非常に軽度の問題|軽度の問題|中等度の問題|重度の問題|考えられる最悪の問題",
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "粘り気のある鼻水",
+            "name": "Q8",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全く問題ない|非常に軽度の問題|軽度の問題|中等度の問題|重度の問題|考えられる最悪の問題",
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "耳・顔面症状",
+            "type": "subsection"
+        },
+        {
+            "dispname": "耳の閉塞感",
+            "name": "Q9",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全く問題ない|非常に軽度の問題|軽度の問題|中等度の問題|重度の問題|考えられる最悪の問題",
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "めまい",
+            "name": "Q10",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全く問題ない|非常に軽度の問題|軽度の問題|中等度の問題|重度の問題|考えられる最悪の問題",
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "耳の痛み",
+            "name": "Q11",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全く問題ない|非常に軽度の問題|軽度の問題|中等度の問題|重度の問題|考えられる最悪の問題",
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "顔面の痛みや圧迫感",
+            "name": "Q12",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全く問題ない|非常に軽度の問題|軽度の問題|中等度の問題|重度の問題|考えられる最悪の問題",
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "睡眠関連",
+            "type": "subsection"
+        },
+        {
+            "dispname": "寝つきの悪さ",
+            "name": "Q13",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全く問題ない|非常に軽度の問題|軽度の問題|中等度の問題|重度の問題|考えられる最悪の問題",
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "夜中に目が覚める",
+            "name": "Q14",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全く問題ない|非常に軽度の問題|軽度の問題|中等度の問題|重度の問題|考えられる最悪の問題",
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "熟睡できない",
+            "name": "Q15",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全く問題ない|非常に軽度の問題|軽度の問題|中等度の問題|重度の問題|考えられる最悪の問題",
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "疲れた状態で目が覚める",
+            "name": "Q16",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全く問題ない|非常に軽度の問題|軽度の問題|中等度の問題|重度の問題|考えられる最悪の問題",
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "心理・社会機能への影響",
+            "type": "subsection"
+        },
+        {
+            "dispname": "疲労感",
+            "name": "Q17",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全く問題ない|非常に軽度の問題|軽度の問題|中等度の問題|重度の問題|考えられる最悪の問題",
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "生産性の低下",
+            "name": "Q18",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全く問題ない|非常に軽度の問題|軽度の問題|中等度の問題|重度の問題|考えられる最悪の問題",
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "集中力の低下",
+            "name": "Q19",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全く問題ない|非常に軽度の問題|軽度の問題|中等度の問題|重度の問題|考えられる最悪の問題",
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "イライラや落ち着きのなさ",
+            "name": "Q20",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全く問題ない|非常に軽度の問題|軽度の問題|中等度の問題|重度の問題|考えられる最悪の問題",
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "悲しい気持ち",
+            "name": "Q21",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全く問題ない|非常に軽度の問題|軽度の問題|中等度の問題|重度の問題|考えられる最悪の問題",
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "恥ずかしい気持ち",
+            "name": "Q22",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全く問題ない|非常に軽度の問題|軽度の問題|中等度の問題|重度の問題|考えられる最悪の問題",
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "治療効果評価（前回測定スコアがある場合）",
+            "type": "subsection",
+            "description": "治療開始前または前回測定時のスコアがある場合、以下に入力してください。初回測定の場合は空欄のままで結構です。"
+        },
+        {
+            "dispname": "前回測定時のSNOT-22合計スコア",
+            "name": "前回SNOT22スコア",
+            "type": "text",
+            "inputmode": "numeric",
+            "testrange": [
+                0,
+                110
+            ],
+            "description": "治療開始前または前回測定時のスコアを半角数字で入力してください（0-110点）。初回測定の場合は空欄のままで結構です。"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "SNOT22合計スコア",
+            "type": "eval",
+            "formula": "[[Q1.index]] + [[Q2.index]] + [[Q3.index]] + [[Q4.index]] + [[Q5.index]] + [[Q6.index]] + [[Q7.index]] + [[Q8.index]] + [[Q9.index]] + [[Q10.index]] + [[Q11.index]] + [[Q12.index]] + [[Q13.index]] + [[Q14.index]] + [[Q15.index]] + [[Q16.index]] + [[Q17.index]] + [[Q18.index]] + [[Q19.index]] + [[Q20.index]] + [[Q21.index]] + [[Q22.index]]",
+            "dispname": "SNOT-22合計スコア（0-110点）"
+        },
+        {
+            "name": "症状重症度判定",
+            "type": "eval",
+            "formula": "[[SNOT22合計スコア]] > 50 ? '重度（>50点）' : ( [[SNOT22合計スコア]] > 20 ? '中等度（21-50点）' : ( [[SNOT22合計スコア]] >= 8 ? '軽度（8-20点）' : '正常範囲（0-7点）' ) )",
+            "dispname": "症状重症度分類"
+        },
+        {
+            "name": "鼻症状サブドメインスコア",
+            "type": "eval",
+            "formula": "[[Q1.index]] + [[Q2.index]] + [[Q3.index]] + [[Q4.index]] + [[Q5.index]] + [[Q6.index]] + [[Q7.index]] + [[Q8.index]]",
+            "dispname": "鼻症状ドメインスコア（0-40点）"
+        },
+        {
+            "name": "耳顔面症状サブドメインスコア",
+            "type": "eval",
+            "formula": "[[Q9.index]] + [[Q10.index]] + [[Q11.index]] + [[Q12.index]]",
+            "dispname": "耳・顔面症状ドメインスコア（0-20点）"
+        },
+        {
+            "name": "睡眠サブドメインスコア",
+            "type": "eval",
+            "formula": "[[Q13.index]] + [[Q14.index]] + [[Q15.index]] + [[Q16.index]]",
+            "dispname": "睡眠ドメインスコア（0-20点）"
+        },
+        {
+            "name": "感情機能サブドメインスコア",
+            "type": "eval",
+            "formula": "[[Q17.index]] + [[Q18.index]] + [[Q19.index]] + [[Q20.index]] + [[Q21.index]] + [[Q22.index]]",
+            "dispname": "感情・心理機能ドメインスコア（0-30点）"
+        },
+        {
+            "name": "前回スコア数値",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[前回SNOT22スコア]] || 0"
+        },
+        {
+            "name": "スコア変化量",
+            "type": "eval",
+            "formula": "[[前回スコア数値]] > 0 ? [[前回スコア数値]] - [[SNOT22合計スコア]] : 0",
+            "dispname": "スコア変化量（前回比）"
+        },
+        {
+            "name": "臨床的意義のある改善判定",
+            "type": "eval",
+            "formula": "[[前回スコア数値]] > 0 ? ( [[スコア変化量]] >= 16 ? '臨床的に意義のある改善あり（MID達成）' : ( [[スコア変化量]] > 0 ? '改善傾向あり（MID未達）' : ( [[スコア変化量]] === 0 ? '変化なし' : '悪化' ) ) ) : '前回スコア未入力のため判定不可'",
+            "dispname": "治療効果判定（日本語版MID = 15.7点）"
+        }
+    ]
+}

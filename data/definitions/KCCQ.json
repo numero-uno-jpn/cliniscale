@@ -1,0 +1,319 @@
+{
+    "_comment": [
+        "Kansas City Cardiomyopathy Questionnaire (KCCQ)",
+        "心不全患者のQOL評価用23項目質問票",
+        "開発者: John A. Spertus, MD, MPH",
+        "原典: Green CP, et al. J Am Coll Cardiol. 2000;35:1245-55",
+        "日本語版妥当性: Watanabe-Fujinuma E, et al. Health Qual Life Outcomes. 2020;18:228",
+        "FDA Clinical Outcome Assessment資格認定済み",
+        "公式サイト: https://www.cvoutcomes.org/",
+        "スコア範囲: 0-100点 (高得点ほど良好)",
+        "測定期間: 過去2週間"
+    ],
+    "title": "KCCQ カンザスシティ心筋症質問票",
+    "description": [
+        "この質問票は、心不全があなたの生活にどのような影響を与えているかを評価するものです。",
+        "過去2週間のことを振り返ってお答えください。",
+        "正しい答えも間違った答えもありません。あなたに最も当てはまるものを選んでください。"
+    ],
+    "submit_button_title": "質問票を送信",
+    "fields": [
+        {
+            "dispname": "身体的制限",
+            "description": "心不全によって以下の活動がどの程度制限されましたか。過去2週間について、息切れや疲労による制限の程度をお答えください。",
+            "type": "subsection"
+        },
+        {
+            "dispname": "ドレッシング・シャワー・入浴",
+            "name": "身体制限1",
+            "type": "radio",
+            "selector": "非常に制限された|かなり制限された|やや制限された|少し制限された|まったく制限されていない|他の理由で制限された・行わなかった",
+            "selectoridx": "1|2|3|4|5|6",
+            "required": true
+        },
+        {
+            "dispname": "平坦な道を1ブロック歩く",
+            "name": "身体制限2",
+            "type": "radio",
+            "selector": "非常に制限された|かなり制限された|やや制限された|少し制限された|まったく制限されていない|他の理由で制限された・行わなかった",
+            "selectoridx": "1|2|3|4|5|6",
+            "required": true
+        },
+        {
+            "dispname": "庭仕事・掃除機をかける・運ぶ",
+            "name": "身体制限3",
+            "type": "radio",
+            "selector": "非常に制限された|かなり制限された|やや制限された|少し制限された|まったく制限されていない|他の理由で制限された・行わなかった",
+            "selectoridx": "1|2|3|4|5|6",
+            "required": true
+        },
+        {
+            "dispname": "階段を1階分上る",
+            "name": "身体制限4",
+            "type": "radio",
+            "selector": "非常に制限された|かなり制限された|やや制限された|少し制限された|まったく制限されていない|他の理由で制限された・行わなかった",
+            "selectoridx": "1|2|3|4|5|6",
+            "required": true
+        },
+        {
+            "dispname": "急いで歩く・小走りする",
+            "name": "身体制限5",
+            "type": "radio",
+            "selector": "非常に制限された|かなり制限された|やや制限された|少し制限された|まったく制限されていない|他の理由で制限された・行わなかった",
+            "selectoridx": "1|2|3|4|5|6",
+            "required": true
+        },
+        {
+            "dispname": "重いものを持ち上げる・運ぶ",
+            "name": "身体制限6",
+            "type": "radio",
+            "selector": "非常に制限された|かなり制限された|やや制限された|少し制限された|まったく制限されていない|他の理由で制限された・行わなかった",
+            "selectoridx": "1|2|3|4|5|6",
+            "required": true
+        },
+        {
+            "dispname": "症状の頻度",
+            "description": "症状の頻度についてお答えください。",
+            "type": "subsection"
+        },
+        {
+            "dispname": "過去2週間で、朝起きた時に足・足首・脚にむくみがありましたか",
+            "name": "症状頻度1",
+            "type": "radio",
+            "selector": "毎朝|週3回以上(毎日ではない)|週1-2回|週1回未満|過去2週間はまったくなかった",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "過去2週間で、疲労のためにやりたいことができなかったことがありましたか",
+            "name": "症状頻度2",
+            "type": "radio",
+            "selector": "常に|1日数回|1日1回以上|週3回以上(毎日ではない)|週1-2回|週1回未満|過去2週間はまったくなかった",
+            "selectoridx": "1|2|3|4|5|6|7",
+            "required": true
+        },
+        {
+            "dispname": "過去2週間で、息切れのためにやりたいことができなかったことがありましたか",
+            "name": "症状頻度3",
+            "type": "radio",
+            "selector": "常に|1日数回|1日1回以上|週3回以上(毎日ではない)|週1-2回|週1回未満|過去2週間はまったくなかった",
+            "selectoridx": "1|2|3|4|5|6|7",
+            "required": true
+        },
+        {
+            "dispname": "過去2週間で、息切れのために椅子で眠ったり、3個以上の枕を使って眠ったりしましたか",
+            "name": "症状頻度4",
+            "type": "radio",
+            "selector": "毎晩|週3回以上(毎日ではない)|週1-2回|週1回未満|過去2週間はまったくなかった",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "症状の重症度",
+            "description": "症状の重症度についてお答えください。",
+            "type": "subsection"
+        },
+        {
+            "dispname": "過去2週間で、息切れはどの程度でしたか",
+            "name": "症状重症度1",
+            "type": "radio",
+            "selector": "非常に重い|かなり重い|やや重い|軽い|症状はなかった",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "過去2週間で、疲労はどの程度でしたか",
+            "name": "症状重症度2",
+            "type": "radio",
+            "selector": "非常に重い|かなり重い|やや重い|軽い|症状はなかった",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "過去2週間で、足・足首・脚のむくみはどの程度でしたか",
+            "name": "症状重症度3",
+            "type": "radio",
+            "selector": "非常に重い|かなり重い|やや重い|軽い|症状はなかった",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "症状の安定性",
+            "description": "過去2週間の症状の変化についてお答えください。",
+            "type": "subsection"
+        },
+        {
+            "dispname": "過去2週間で、息切れ・疲労・むくみの症状はどのように変化しましたか",
+            "name": "症状安定性",
+            "type": "radio",
+            "selector": "大幅に改善した|やや改善した|変化なし|やや悪化した|大幅に悪化した",
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "生活の質",
+            "description": "生活の質についてお答えください。",
+            "type": "subsection"
+        },
+        {
+            "dispname": "過去2週間で、心不全はあなたの生活の楽しみをどの程度制限しましたか",
+            "name": "QOL1",
+            "type": "radio",
+            "selector": "非常に制限した|かなり制限した|やや制限した|少し制限した|まったく制限していない",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "もし残りの人生を今の心不全の状態で過ごさなければならないとしたら、どう感じますか",
+            "name": "QOL2",
+            "type": "radio",
+            "selector": "まったく満足できない|おおむね不満|やや満足|おおむね満足|完全に満足",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "心不全の症状はあなたをどの程度落胆させますか",
+            "name": "QOL3",
+            "type": "radio",
+            "selector": "非常に落胆する|かなり落胆する|やや落胆する|あまり落胆しない|まったく落胆しない",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "社会的制限",
+            "description": "社会的制限についてお答えください。",
+            "type": "subsection"
+        },
+        {
+            "dispname": "過去2週間で、心不全は以下の活動への参加をどの程度制限しましたか",
+            "name": "社会制限説明",
+            "type": "note"
+        },
+        {
+            "dispname": "趣味・娯楽活動",
+            "name": "社会制限1",
+            "type": "radio",
+            "selector": "著しく制限した|かなり制限した|やや制限した|少し制限した|まったく制限していない|当てはまらない・他の理由で行わなかった",
+            "selectoridx": "1|2|3|4|5|6",
+            "required": true
+        },
+        {
+            "dispname": "仕事・家事",
+            "name": "社会制限2",
+            "type": "radio",
+            "selector": "著しく制限した|かなり制限した|やや制限した|少し制限した|まったく制限していない|当てはまらない・他の理由で行わなかった",
+            "selectoridx": "1|2|3|4|5|6",
+            "required": true
+        },
+        {
+            "dispname": "家族・友人を訪問する",
+            "name": "社会制限3",
+            "type": "radio",
+            "selector": "著しく制限した|かなり制限した|やや制限した|少し制限した|まったく制限していない|当てはまらない・他の理由で行わなかった",
+            "selectoridx": "1|2|3|4|5|6",
+            "required": true
+        },
+        {
+            "dispname": "親密な関係",
+            "name": "社会制限4",
+            "type": "radio",
+            "selector": "著しく制限した|かなり制限した|やや制限した|少し制限した|まったく制限していない|当てはまらない・他の理由で行わなかった",
+            "selectoridx": "1|2|3|4|5|6",
+            "required": true
+        },
+        {
+            "dispname": "自己効力感",
+            "description": "自己効力感についてお答えください。",
+            "type": "subsection"
+        },
+        {
+            "dispname": "心不全の症状を防ぐために何をすればよいかよく理解している",
+            "name": "自己効力感1",
+            "type": "radio",
+            "selector": "まったくそう思わない|そう思わない|どちらでもない|そう思う|非常にそう思う",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "心不全の症状を自分でコントロールできると感じている",
+            "name": "自己効力感2",
+            "type": "radio",
+            "selector": "まったくそう思わない|そう思わない|どちらでもない|そう思う|非常にそう思う",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "身体制限ドメインスコア",
+            "type": "eval",
+            "noreport": true,
+            "formula": "( ( ( ([[身体制限1.index]] < 6 ? ([[身体制限1.index]] - 1) : 4 ) + ( [[身体制限2.index]] < 6 ? ([[身体制限2.index]] - 1) : 4 ) + ( [[身体制限3.index]] < 6 ? ([[身体制限3.index]] - 1) : 4 ) + ( [[身体制限4.index]] < 6 ? ([[身体制限4.index]] - 1) : 4 ) + ( [[身体制限5.index]] < 6 ? ([[身体制限5.index]] - 1) : 4 ) + ( [[身体制限6.index]] < 6 ? ([[身体制限6.index]] - 1) : 4 ) ) / 6 ) * 25 ).toFixed(2)"
+        },
+        {
+            "name": "症状頻度ドメインスコア",
+            "type": "eval",
+            "noreport": true,
+            "formula": "( ( ( ([[症状頻度1.index]] - 1) * 25 + ( [[症状頻度2.index]] - 1) * 16.666666 + ( [[症状頻度3.index]] - 1) * 16.666666 + ( [[症状頻度4.index]] - 1) * 25 ) / 4 ) ).toFixed(2)"
+        },
+        {
+            "name": "症状重症度ドメインスコア",
+            "type": "eval",
+            "noreport": true,
+            "formula": "( ( ( ([[症状重症度1.index]] - 1) + ( [[症状重症度2.index]] - 1) + ( [[症状重症度3.index]] - 1) ) / 3 ) * 25 ).toFixed(2)"
+        },
+        {
+            "name": "総症状スコア",
+            "type": "eval",
+            "noreport": true,
+            "formula": "( ( ((症状頻度ドメインスコア)) + ((症状重症度ドメインスコア)) ) / 2 ).toFixed(2)"
+        },
+        {
+            "name": "QOLドメインスコア",
+            "type": "eval",
+            "noreport": true,
+            "formula": "( ( ( ([[QOL1.index]] - 1) + ( [[QOL2.index]] - 1) + ( [[QOL3.index]] - 1) ) / 3 ) * 25 ).toFixed(2)"
+        },
+        {
+            "name": "社会制限ドメインスコア",
+            "type": "eval",
+            "noreport": true,
+            "formula": "( ( ( ([[社会制限1.index]] < 6 ? ([[社会制限1.index]] - 1) : 4 ) + ( [[社会制限2.index]] < 6 ? ([[社会制限2.index]] - 1) : 4 ) + ( [[社会制限3.index]] < 6 ? ([[社会制限3.index]] - 1) : 4 ) + ( [[社会制限4.index]] < 6 ? ([[社会制限4.index]] - 1) : 4 ) ) / 4 ) * 25 ).toFixed(2)"
+        },
+        {
+            "name": "自己効力感ドメインスコア",
+            "type": "eval",
+            "noreport": true,
+            "formula": "( ( ( ([[自己効力感1.index]] - 1) + ( [[自己効力感2.index]] - 1) ) / 2 ) * 25 ).toFixed(2)"
+        },
+        {
+            "dispname": "KCCQ臨床サマリースコア(CSS)",
+            "name": "臨床サマリースコア",
+            "type": "eval",
+            "formula": "( ( ((身体制限ドメインスコア)) + ((総症状スコア)) ) / 2 ).toFixed(2)"
+        },
+        {
+            "dispname": "KCCQ全体サマリースコア(OSS)",
+            "name": "全体サマリースコア",
+            "type": "eval",
+            "formula": "( ( ((身体制限ドメインスコア)) + ((総症状スコア)) + ((QOLドメインスコア)) + ((社会制限ドメインスコア)) ) / 4 ).toFixed(2)"
+        },
+        {
+            "dispname": "重症度評価",
+            "name": "重症度分類",
+            "type": "eval",
+            "formula": "((全体サマリースコア)) <= 25 ? '重度' : ( ((全体サマリースコア)) <= 50 ? '中等度' : ( ((全体サマリースコア)) <= 75 ? '軽度' : '良好') )"
+        },
+        {
+            "name": "Warning: 中等度リスク",
+            "type": "warning",
+            "formula": "((全体サマリースコア)) <= 50"
+        },
+        {
+            "name": "Emergency: 重度リスク",
+            "type": "emergency",
+            "formula": "((全体サマリースコア)) <= 25"
+        }
+    ]
+}

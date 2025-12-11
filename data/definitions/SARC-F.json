@@ -1,0 +1,102 @@
+{
+    "_comment": [
+        "SARC-F (Screening tool for sarcopenia) 日本語版",
+        "原著: Malmstrom TK, Miller DK, Simonsick EM, Ferrucci L, Morley JE. SARC-F: a symptom score to predict persons with sarcopenia at risk for poor functional outcomes. J Cachexia Sarcopenia Muscle. 2016;7(1):28-36.",
+        "開発者: Theodore K. Malmstrom, John E. Morley (Saint Louis University School of Medicine)",
+        "公式URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4799853/",
+        "日本語版開発: 栗田紀明(福島県立医科大学), 紙谷司(京都大学), 脇田貴文(関西大学)"
+    ],
+    "title": "SARC-F サルコペニアスクリーニング質問票",
+    "description": [
+        "この質問票は、サルコペニア（筋肉の減少）のリスクを評価するためのスクリーニングツールです。",
+        "5つの項目について、日常生活での困難さを評価します。"
+    ],
+    "submit_button_title": "評価結果を送信",
+    "fields": [
+        {
+            "dispname": "質問1: 筋力",
+            "name": "Q1_筋力",
+            "type": "radio",
+            "required": true,
+            "description": "4.5kgくらいのものを持ち上げたり運んだりするのはどのくらいむずかしいですか",
+            "selector": [
+                "まったくむずかしくない",
+                "いくらかむずかしい",
+                "とてもむずかしい、または、できない"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "質問2: 歩行補助",
+            "name": "Q2_歩行",
+            "type": "radio",
+            "required": true,
+            "description": "部屋の中を歩くことはどのくらいむずかしいですか",
+            "selector": [
+                "まったくむずかしくない",
+                "いくらかむずかしい",
+                "とてもむずかしい、杖などが必要、または、できない"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "質問3: 椅子からの立ち上がり",
+            "name": "Q3_立ち上がり",
+            "type": "radio",
+            "required": true,
+            "description": "ベッドや椅子から立ち上がることはどのくらいむずかしいですか",
+            "selector": [
+                "まったくむずかしくない",
+                "いくらかむずかしい",
+                "とてもむずかしい、または、介助が必要"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "質問4: 階段昇降",
+            "name": "Q4_階段",
+            "type": "radio",
+            "required": true,
+            "description": "10段くらいの階段をのぼることはどのくらいむずかしいですか",
+            "selector": [
+                "まったくむずかしくない",
+                "いくらかむずかしい",
+                "とてもむずかしい、または、できない"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "質問5: 転倒歴",
+            "name": "Q5_転倒",
+            "type": "radio",
+            "required": true,
+            "description": "過去1年間に何回程度転びましたか",
+            "selector": [
+                "まったくない",
+                "1-3回",
+                "4回以上"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "SARC_F_合計点",
+            "type": "eval",
+            "dispname": "SARC-F合計スコア (0-10点)",
+            "formula": "[[Q1_筋力.index]] + [[Q2_歩行.index]] + [[Q3_立ち上がり.index]] + [[Q4_階段.index]] + [[Q5_転倒.index]]"
+        },
+        {
+            "name": "サルコペニアリスク判定",
+            "type": "eval",
+            "dispname": "サルコペニアのリスク評価",
+            "formula": "[[SARC_F_合計点]] >= 4 ? 'サルコペニアの可能性が高い (4点以上)' : 'サルコペニアのリスクは低い (3点以下)'"
+        },
+        {
+            "name": "Warning: SARC-F 高リスク",
+            "type": "warning",
+            "formula": "[[SARC_F_合計点]] >= 4"
+        }
+    ]
+}

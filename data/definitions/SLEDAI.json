@@ -1,0 +1,290 @@
+{
+  "_comment": [
+    "SLEDAI: SLE Disease Activity Index",
+    "原著: Bombardier C, et al. Arthritis Rheum. 1992;35(6):630-640",
+    "厚生労働省指定難病の重症度分類(4点以上で医療費助成対象)",
+    "国際的には6点以上で治療推奨"
+  ],
+  "title": "SLEDAI 全身性エリテマトーデス疾患活動性指標",
+  "description": [
+    "全身性エリテマトーデス(SLE)の疾患活動性を評価する指標です。",
+    "24項目の臨床症状と検査所見について、過去10日以内に認められた所見を評価します。",
+    "4点以上で医療費助成の対象となります。"
+  ],
+  "responsible_person": [
+    "担当医師"
+  ],
+  "fields": [
+    {
+      "dispname": "中枢神経系症状(各8点)",
+      "type": "subsection"
+    },
+    {
+      "dispname": "痙攣",
+      "name": "痙攣",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|8",
+      "description": "最近発症した痙攣。代謝性、感染性、薬剤性は除外"
+    },
+    {
+      "dispname": "精神症状",
+      "name": "精神症状",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|8",
+      "description": "現実認識の重度の障害による正常な機能の変化。幻覚、思考散乱、連合弛緩、貧困な思想内容、著明な非論理的思考、奇異な、混乱した、緊張病性の行動を含む。尿毒症、薬剤性は除外"
+    },
+    {
+      "dispname": "器質的脳障害",
+      "name": "器質的脳障害",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|8",
+      "description": "見当識、記憶、その他の知能機能障害による認知機能の変化、変動する急性発症の臨床所見を伴う。注意力の低下を伴う意識混濁、周囲の環境に対する継続した注意の欠如を含み、かつ以下のうち少なくとも2つを認める:知覚障害、支離滅裂な発言、不眠症あるいは日中の眠気、精神運動興奮。代謝性、感染性、薬剤性は除外"
+    },
+    {
+      "dispname": "視力障害",
+      "name": "視力障害",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|8",
+      "description": "SLEによる網膜の変化。細胞様小体、網膜出血、脈絡膜における漿液性の浸出あるいは出血、視神経炎を含む。高血圧性、感染性、薬剤性は除外"
+    },
+    {
+      "dispname": "脳神経障害",
+      "name": "脳神経障害",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|8",
+      "description": "脳神経領域における感覚あるいは運動神経障害の新出"
+    },
+    {
+      "dispname": "ループス頭痛",
+      "name": "ループス頭痛",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|8",
+      "description": "高度の持続性頭痛:片頭痛様だが、麻薬性鎮痛薬に反応しない"
+    },
+    {
+      "dispname": "脳血管障害",
+      "name": "脳血管障害",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|8",
+      "description": "脳血管障害の新出。動脈硬化性は除外"
+    },
+    {
+      "dispname": "血管炎",
+      "name": "血管炎",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|8",
+      "description": "潰瘍、壊疽、手指の圧痛を伴う結節、爪周囲の梗塞、線状出血、生検又は血管造影による血管炎の証明"
+    },
+    {
+      "dispname": "筋骨格系・腎症状(各4点)",
+      "type": "subsection"
+    },
+    {
+      "dispname": "関節炎",
+      "name": "関節炎",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|4",
+      "description": "2関節以上の関節痛あるいは炎症所見(例:圧痛、腫脹、関節液貯留)"
+    },
+    {
+      "dispname": "筋炎",
+      "name": "筋炎",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|4",
+      "description": "CK・アルドラーゼの上昇を伴う近位筋の疼痛/筋力低下、あるいは筋電図変化、筋生検における筋炎所見"
+    },
+    {
+      "dispname": "尿円柱",
+      "name": "尿円柱",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|4",
+      "description": "顆粒円柱あるいは赤血球円柱"
+    },
+    {
+      "dispname": "血尿",
+      "name": "血尿",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|4",
+      "description": ">5赤血球/HPF。結石、感染性、その他の原因は除外"
+    },
+    {
+      "dispname": "蛋白尿",
+      "name": "蛋白尿",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|4",
+      "description": ">0.5g/24時間。新規発症あるいは最近の0.5g/24時間以上の増加"
+    },
+    {
+      "dispname": "膿尿",
+      "name": "膿尿",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|4",
+      "description": ">5白血球/HPF。感染性は除外"
+    },
+    {
+      "dispname": "皮膚・粘膜・漿膜・免疫学的所見(各2点)",
+      "type": "subsection"
+    },
+    {
+      "dispname": "新たな皮疹",
+      "name": "新たな皮疹",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|2",
+      "description": "炎症性皮疹の新規発症あるいは再発"
+    },
+    {
+      "dispname": "脱毛",
+      "name": "脱毛",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|2",
+      "description": "限局性あるいはびまん性の異常な脱毛の新規発症あるいは再発"
+    },
+    {
+      "dispname": "粘膜潰瘍",
+      "name": "粘膜潰瘍",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|2",
+      "description": "口腔あるいは鼻腔潰瘍の新規発症あるいは再発"
+    },
+    {
+      "dispname": "胸膜炎",
+      "name": "胸膜炎",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|2",
+      "description": "胸膜摩擦あるいは胸水、胸膜肥厚による胸部痛"
+    },
+    {
+      "dispname": "心膜炎",
+      "name": "心膜炎",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|2",
+      "description": "少なくとも以下の1つ以上を伴う心膜の疼痛:心膜摩擦、心嚢水、あるいは心電図・心エコーでの証明"
+    },
+    {
+      "dispname": "低補体血症",
+      "name": "低補体血症",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|2",
+      "description": "CH50、C3、C4の正常下限以下の低下"
+    },
+    {
+      "dispname": "抗DNA抗体上昇",
+      "name": "抗DNA抗体上昇",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|2",
+      "description": "Farr assayで>25%の結合、あるいは正常上限以上"
+    },
+    {
+      "dispname": "全身・血液学的所見(各1点)",
+      "type": "subsection"
+    },
+    {
+      "dispname": "発熱",
+      "name": "発熱",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1",
+      "description": ">38℃、感染性は除外"
+    },
+    {
+      "dispname": "血小板減少",
+      "name": "血小板減少",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1",
+      "description": "<100,000血小板/mm3"
+    },
+    {
+      "dispname": "白血球減少",
+      "name": "白血球減少",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1",
+      "description": "<3,000白血球/mm3、薬剤性は除外"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "SLEDAIスコア",
+      "type": "eval",
+      "formula": "[[痙攣.index]] + [[精神症状.index]] + [[器質的脳障害.index]] + [[視力障害.index]] + [[脳神経障害.index]] + [[ループス頭痛.index]] + [[脳血管障害.index]] + [[血管炎.index]] + [[関節炎.index]] + [[筋炎.index]] + [[尿円柱.index]] + [[血尿.index]] + [[蛋白尿.index]] + [[膿尿.index]] + [[新たな皮疹.index]] + [[脱毛.index]] + [[粘膜潰瘍.index]] + [[胸膜炎.index]] + [[心膜炎.index]] + [[低補体血症.index]] + [[抗DNA抗体上昇.index]] + [[発熱.index]] + [[血小板減少.index]] + [[白血球減少.index]]",
+      "dispname": "SLEDAIスコア(範囲:0-105点)"
+    },
+    {
+      "name": "重症度判定",
+      "type": "eval",
+      "formula": "[[SLEDAIスコア]] >= 4 ? '重症(医療費助成対象)' : '軽症'",
+      "dispname": "重症度分類"
+    }
+  ]
+}

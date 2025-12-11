@@ -1,0 +1,142 @@
+{
+  "_comment": [
+    "Strate Score: 下部消化管出血における止血必要性予測スコア",
+    "原典: Strate LL, et al. Am J Gastroenterol. 2005;100(8):1821-7",
+    "構成要素: 7項目の臨床評価項目",
+    "特徴: 血液検査不要で迅速評価可能",
+    "予測項目: 内視鏡的止血術、血管内治療、外科的止血の必要性",
+    "AUROC: 0.82 (95% CI, 0.79-0.85) for hemostasis prediction",
+    "参考文献: JAMA Netw Open. 2022;5(5):e2210604"
+  ],
+  "title": "Strate Score 下部消化管出血 止血必要性予測",
+  "description": [
+    "下部消化管出血患者の止血必要性を予測するスコアです",
+    "7つの臨床項目から構成され、血液検査は不要です",
+    "内視鏡的止血、血管内治療、外科的止血の必要性を高精度で予測します"
+  ],
+  "contact": "担当医師",
+  "dept_in_charge": "消化器科・救急科",
+  "translate": "major",
+  "fields": [
+    {
+      "dispname": "Strate Score評価項目",
+      "type": "subsection",
+      "description": "来院時の所見に基づいて評価してください"
+    },
+    {
+      "dispname": "1. 収縮期血圧",
+      "name": "収縮期血圧",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "115mmHgより高い",
+        "115mmHg以下"
+      ],
+      "selectoridx": "0|1",
+      "description": "来院時の収縮期血圧を評価してください（115mmHg以下で1点）"
+    },
+    {
+      "dispname": "2. 心拍数",
+      "name": "心拍数",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "100bpm未満",
+        "100bpm以上"
+      ],
+      "selectoridx": "0|1",
+      "description": "来院時の心拍数を評価してください（100bpm以上で1点）"
+    },
+    {
+      "dispname": "3. 失神の既往",
+      "name": "失神既往",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "selectoridx": "0|1",
+      "description": "今回の出血に関連した失神エピソードの有無（ありで1点）"
+    },
+    {
+      "dispname": "4. 初期4時間以内の直腸出血確認",
+      "name": "初期出血",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "selectoridx": "0|1",
+      "description": "来院後最初の4時間以内に直腸出血が確認されたか（ありで1点）"
+    },
+    {
+      "dispname": "5. 腹部圧痛",
+      "name": "腹部圧痛",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "あり",
+        "なし"
+      ],
+      "selectoridx": "0|1",
+      "description": "腹部身体所見での圧痛の有無（なしで1点）"
+    },
+    {
+      "dispname": "6. アスピリンの使用",
+      "name": "アスピリン",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "selectoridx": "0|1",
+      "description": "現在アスピリンを服用しているか（ありで1点）"
+    },
+    {
+      "dispname": "7. 併存疾患（Charlson併存疾患指数）",
+      "name": "Charlson指数",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "2点未満",
+        "2点以上"
+      ],
+      "selectoridx": "0|1",
+      "description": "Charlson併存疾患指数が2点以上か評価（2点以上で1点）"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "合計スコア",
+      "type": "eval",
+      "formula": "[[収縮期血圧.index]] + [[心拍数.index]] + [[失神既往.index]] + [[初期出血.index]] + [[腹部圧痛.index]] + [[アスピリン.index]] + [[Charlson指数.index]]",
+      "dispname": "Strate Score合計点数（0-7点）"
+    },
+    {
+      "name": "リスク分類",
+      "type": "eval",
+      "formula": "[[合計スコア]] >= 4 ? '高リスク' : ( [[合計スコア]] >= 1 ? '中間リスク' : '低リスク' )",
+      "dispname": "止血必要性のリスク層別化（低リスク: 0点、中間リスク: 1-3点、高リスク: 4-7点）"
+    },
+    {
+      "name": "止血必要性予測",
+      "type": "eval",
+      "formula": "[[合計スコア]] == 0 ? '低い可能性（6-9%）' : ( [[合計スコア]] >= 4 ? '高い可能性（79-84%）' : '中等度の可能性（約43%）' )",
+      "dispname": "内視鏡的止血、血管内治療、外科的止血の必要性"
+    },
+    {
+      "name": "Warning: 中間リスク Strate Score 1点以上",
+      "formula": "[[合計スコア]] >= 1",
+      "type": "warning"
+    },
+    {
+      "name": "Emergency: 高リスク Strate Score 4点以上",
+      "formula": "[[合計スコア]] >= 4",
+      "type": "emergency"
+    }
+  ]
+}

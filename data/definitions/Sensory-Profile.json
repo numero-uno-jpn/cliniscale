@@ -1,0 +1,534 @@
+{
+    "_comment": [
+        "Short Sensory Profile（SSP：短縮版感覚プロファイル）38項目",
+        "原版開発者: Winnie Dunn",
+        "短縮版開発: McIntosh, Miller, & Shyu (1999)",
+        "日本版監修: 辻井正次",
+        "日本版作成: 萩原拓、岩永竜一郎、伊藤大幸、谷伊織",
+        "感覚刺激への反応傾向を評価する標準化された短縮版",
+        "対象年齢: 3歳～10歳（公式標準化対象）",
+        "実施時間: 約10分",
+        "用途: スクリーニング、研究用途",
+        "7つのサブスケール構成による包括的感覚評価"
+    ],
+    "title": "SSP (Short Sensory Profile) 短縮版感覚プロファイル",
+    "description": [
+        "このアンケートは、お子さまの感覚の特徴について教えていただくものです。",
+        "普段の様子を思い浮かべて、最もよく当てはまるものを選んでください。",
+        "<strong>注意：本版は公式短縮版（38項目）に基づいています。</strong>"
+    ],
+    "submit_button_title": "回答内容を送信",
+    "responsible_person": [
+        "小児科医師"
+    ],
+    "dept_in_charge": "小児科",
+    "contact": "小児科外来",
+    "fields": [
+        {
+            "dispname": "基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "お子さまの年齢",
+            "name": "年齢",
+            "type": "text",
+            "required": true,
+            "postfix": "歳",
+            "inputmode": "numeric"
+        },
+        {
+            "dispname": "性別",
+            "name": "性別",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "男性|女性"
+        },
+        {
+            "dispname": "触覚過敏性（Tactile Sensitivity）",
+            "type": "subsection",
+            "description": "触覚に関する7項目"
+        },
+        {
+            "dispname": "手が汚れることを嫌がる",
+            "name": "TAC1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "特定の服の感触を嫌がる",
+            "name": "TAC2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "靴下の縫い目や服のタグを嫌がる",
+            "name": "TAC3",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "軽く触られることを嫌がる",
+            "name": "TAC4",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "べたべたした感触を嫌がる",
+            "name": "TAC5",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "足の裏に砂がつくことを嫌がる",
+            "name": "TAC6",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "髪を洗ったり梳いたりされることを嫌がる",
+            "name": "TAC7",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "味覚・嗅覚過敏性（Taste/Smell Sensitivity）",
+            "type": "subsection",
+            "description": "味覚・嗅覚に関する4項目"
+        },
+        {
+            "dispname": "特定の食べ物の味を嫌がる",
+            "name": "TSM1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "特定の食感の食べ物を嫌がる",
+            "name": "TSM2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "においに敏感に反応する",
+            "name": "TSM3",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "食べ物の好き嫌いが激しい",
+            "name": "TSM4",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "動きへの過敏性（Movement Sensitivity）",
+            "type": "subsection",
+            "description": "動きに関する3項目"
+        },
+        {
+            "dispname": "ブランコやシーソーを嫌がる",
+            "name": "MOV1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "エレベーターやエスカレーターを怖がる",
+            "name": "MOV2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "高いところを怖がる",
+            "name": "MOV3",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "低反応・感覚探求（Underresponsive/Seeks Sensation）",
+            "type": "subsection",
+            "description": "感覚探求行動に関する7項目"
+        },
+        {
+            "dispname": "話しかけても聞こえていないような様子",
+            "name": "USS1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "強い圧迫を求める",
+            "name": "USS2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "触られることに気づかない",
+            "name": "USS3",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "動きを伴う遊びを好む",
+            "name": "USS4",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "回転する動きを楽しむ",
+            "name": "USS5",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "様々な感触のものを触りたがる",
+            "name": "USS6",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "物を口に入れたがる",
+            "name": "USS7",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "聴覚フィルタリング（Auditory Filtering）",
+            "type": "subsection",
+            "description": "聴覚処理に関する6項目"
+        },
+        {
+            "dispname": "騒がしい場所では集中できない",
+            "name": "AFL1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "複数の音がすると混乱する",
+            "name": "AFL2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "大きな音に対して不愉快そうにする",
+            "name": "AFL3",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "予想外の大きな音に驚きすぎる",
+            "name": "AFL4",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "音に気をとられやすい",
+            "name": "AFL5",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "周りの音に注意がそれる",
+            "name": "AFL6",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "低活動・弱さ（Low Energy/Weak）",
+            "type": "subsection",
+            "description": "活動性・体力に関する6項目"
+        },
+        {
+            "dispname": "疲れやすい",
+            "name": "LEW1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "握る力が弱い",
+            "name": "LEW2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "階段の昇り降りが困難",
+            "name": "LEW3",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "姿勢を保つことが困難",
+            "name": "LEW4",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "動きがゆっくりしている",
+            "name": "LEW5",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "活動への参加を避ける",
+            "name": "LEW6",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "視覚・聴覚過敏性（Visual/Auditory Sensitivity）",
+            "type": "subsection",
+            "description": "視覚・聴覚過敏に関する5項目"
+        },
+        {
+            "dispname": "明るい光を避ける",
+            "name": "VAS1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "陽光を嫌がる",
+            "name": "VAS2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "視覚的な活動に興味を示さない",
+            "name": "VAS3",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "テレビやラジオの音量が大きすぎると文句を言う",
+            "name": "VAS4",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "掃除機の音を嫌がる",
+            "name": "VAS5",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "いつも|ひんぱんに|ときどき|まれに|しない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "触覚過敏性得点",
+            "type": "eval",
+            "dispname": "触覚過敏性サブスケールの合計",
+            "formula": "[[TAC1.index]] + [[TAC2.index]] + [[TAC3.index]] + [[TAC4.index]] + [[TAC5.index]] + [[TAC6.index]] + [[TAC7.index]]"
+        },
+        {
+            "name": "味覚嗅覚過敏性得点",
+            "type": "eval",
+            "dispname": "味覚・嗅覚過敏性サブスケールの合計",
+            "formula": "[[TSM1.index]] + [[TSM2.index]] + [[TSM3.index]] + [[TSM4.index]]"
+        },
+        {
+            "name": "動き過敏性得点",
+            "type": "eval",
+            "dispname": "動きへの過敏性サブスケールの合計",
+            "formula": "[[MOV1.index]] + [[MOV2.index]] + [[MOV3.index]]"
+        },
+        {
+            "name": "低反応感覚探求得点",
+            "type": "eval",
+            "dispname": "低反応・感覚探求サブスケールの合計",
+            "formula": "[[USS1.index]] + [[USS2.index]] + [[USS3.index]] + [[USS4.index]] + [[USS5.index]] + [[USS6.index]] + [[USS7.index]]"
+        },
+        {
+            "name": "聴覚フィルタリング得点",
+            "type": "eval",
+            "dispname": "聴覚フィルタリングサブスケールの合計",
+            "formula": "[[AFL1.index]] + [[AFL2.index]] + [[AFL3.index]] + [[AFL4.index]] + [[AFL5.index]] + [[AFL6.index]]"
+        },
+        {
+            "name": "低活動弱さ得点",
+            "type": "eval",
+            "dispname": "低活動・弱さサブスケールの合計",
+            "formula": "[[LEW1.index]] + [[LEW2.index]] + [[LEW3.index]] + [[LEW4.index]] + [[LEW5.index]] + [[LEW6.index]]"
+        },
+        {
+            "name": "視覚聴覚過敏性得点",
+            "type": "eval",
+            "dispname": "視覚・聴覚過敏性サブスケールの合計",
+            "formula": "[[VAS1.index]] + [[VAS2.index]] + [[VAS3.index]] + [[VAS4.index]] + [[VAS5.index]]"
+        },
+        {
+            "name": "SSP総合得点",
+            "type": "eval",
+            "dispname": "短縮版感覚プロファイル総合得点",
+            "formula": "[[触覚過敏性得点]] + [[味覚嗅覚過敏性得点]] + [[動き過敏性得点]] + [[低反応感覚探求得点]] + [[聴覚フィルタリング得点]] + [[低活動弱さ得点]] + [[視覚聴覚過敏性得点]]"
+        },
+        {
+            "name": "触覚過敏性判定",
+            "type": "eval",
+            "dispname": "触覚過敏性の評価",
+            "formula": "[[触覚過敏性得点]] <= 26 ? '明らかな違い' : ( [[触覚過敏性得点]] <= 29 ? '疑いのある違い' : '標準的' )"
+        },
+        {
+            "name": "味覚嗅覚過敏性判定",
+            "type": "eval",
+            "dispname": "味覚・嗅覚過敏性の評価",
+            "formula": "[[味覚嗅覚過敏性得点]] <= 11 ? '明らかな違い' : ( [[味覚嗅覚過敏性得点]] <= 14 ? '疑いのある違い' : '標準的' )"
+        },
+        {
+            "name": "動き過敏性判定",
+            "type": "eval",
+            "dispname": "動きへの過敏性の評価",
+            "formula": "[[動き過敏性得点]] <= 10 ? '明らかな違い' : ( [[動き過敏性得点]] <= 12 ? '疑いのある違い' : '標準的' )"
+        },
+        {
+            "name": "低反応感覚探求判定",
+            "type": "eval",
+            "dispname": "低反応・感覚探求の評価",
+            "formula": "[[低反応感覚探求得点]] <= 23 ? '明らかな違い' : ( [[低反応感覚探求得点]] <= 26 ? '疑いのある違い' : '標準的' )"
+        },
+        {
+            "name": "聴覚フィルタリング判定",
+            "type": "eval",
+            "dispname": "聴覚フィルタリングの評価",
+            "formula": "[[聴覚フィルタリング得点]] <= 19 ? '明らかな違い' : ( [[聴覚フィルタリング得点]] <= 22 ? '疑いのある違い' : '標準的' )"
+        },
+        {
+            "name": "低活動弱さ判定",
+            "type": "eval",
+            "dispname": "低活動・弱さの評価",
+            "formula": "[[低活動弱さ得点]] <= 23 ? '明らかな違い' : ( [[低活動弱さ得点]] <= 25 ? '疑いのある違い' : '標準的' )"
+        },
+        {
+            "name": "視覚聴覚過敏性判定",
+            "type": "eval",
+            "dispname": "視覚・聴覚過敏性の評価",
+            "formula": "[[視覚聴覚過敏性得点]] <= 15 ? '明らかな違い' : ( [[視覚聴覚過敏性得点]] <= 18 ? '疑いのある違い' : '標準的' )"
+        },
+        {
+            "name": "SSP総合判定",
+            "type": "eval",
+            "dispname": "短縮版感覚プロファイル総合判定",
+            "formula": "[[SSP総合得点]] <= 141 ? '明らかな違い' : ( [[SSP総合得点]] <= 154 ? '疑いのある違い' : '標準的' )"
+        },
+        {
+            "name": "Warning: セクション別に明らかな違いあり",
+            "formula": "{{触覚過敏性判定}} === '明らかな違い' || {{味覚嗅覚過敏性判定}} === '明らかな違い' || {{動き過敏性判定}} === '明らかな違い' || {{低反応感覚探求判定}} === '明らかな違い' || {{聴覚フィルタリング判定}} === '明らかな違い' || {{低活動弱さ判定}} === '明らかな違い' || {{視覚聴覚過敏性判定}} === '明らかな違い'",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: SSP総合判定で明らかな違いあり",
+            "formula": "{{SSP総合判定}} === '明らかな違い'",
+            "type": "emergency"
+        }
+    ]
+}

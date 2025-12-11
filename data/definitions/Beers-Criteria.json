@@ -1,0 +1,320 @@
+{
+    "_comment": [
+        "Beers Criteria（ビアーズ基準）問診票",
+        "高齢者における潜在的に不適切な薬物使用評価",
+        "原典: Mark Beers et al. Beers Criteria",
+        "日本版: 日本老年医学会 高齢者の安全な薬物療法ガイドライン",
+        "参考URL: https://www.jpn-geriat-soc.or.jp/"
+    ],
+    "title": "Beers Criteria 高齢者不適切薬物評価",
+    "description": [
+        "高齢者における潜在的に不適切な薬物使用を評価する問診票です。",
+        "現在服用中の薬剤について詳しくお聞かせください。"
+    ],
+    "contact": "担当医師",
+    "dept_in_charge": "内科・老年科",
+    "fields": [
+        {
+            "dispname": "基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "年齢",
+            "name": "年齢",
+            "type": "text",
+            "min": 65,
+            "max": 110,
+            "postfix": "歳",
+            "inputmode": "numeric",
+            "required": true
+        },
+        {
+            "dispname": "現在の主な疾患",
+            "name": "主疾患",
+            "type": "checkbox",
+            "selector": [
+                "高血圧",
+                "糖尿病",
+                "心疾患",
+                "認知症",
+                "うつ病",
+                "不眠症",
+                "COPD",
+                "腎疾患",
+                "骨粗鬆症",
+                "前立腺肥大症",
+                "緑内障",
+                "てんかん",
+                "パーキンソン病",
+                "その他"
+            ]
+        },
+        {
+            "dispname": "その他の疾患詳細",
+            "name": "その他疾患",
+            "type": "textarea",
+            "parentname": "主疾患",
+            "parentsel": "その他",
+            "rows": 3
+        },
+        {
+            "dispname": "服薬状況",
+            "type": "subsection"
+        },
+        {
+            "dispname": "現在服用中の薬の数",
+            "name": "薬剤数",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "なし",
+                "1-2種類",
+                "3-4種類",
+                "5-6種類",
+                "7種類以上"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "抗コリン薬の使用",
+            "name": "抗コリン薬",
+            "type": "radio",
+            "description": "抗ヒスタミン薬、三環系抗うつ薬、過活動膀胱治療薬等",
+            "selector": [
+                "使用していない",
+                "使用している",
+                "わからない"
+            ],
+            "required": true,
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "ベンゾジアゼピン系薬剤の使用",
+            "name": "ベンゾジアゼピン",
+            "type": "radio",
+            "description": "睡眠薬、抗不安薬",
+            "selector": [
+                "使用していない",
+                "短時間作用型を使用",
+                "長時間作用型を使用",
+                "わからない"
+            ],
+            "required": true,
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "NSAIDs（非ステロイド性抗炎症薬）の使用",
+            "name": "NSAIDs",
+            "type": "radio",
+            "description": "ロキソニン、ボルタレン等の痛み止め",
+            "selector": [
+                "使用していない",
+                "時々使用",
+                "毎日使用",
+                "わからない"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "胃薬（PPI/H2ブロッカー）の使用",
+            "name": "胃薬",
+            "type": "radio",
+            "description": "オメプラゾール、ガスター等",
+            "selector": [
+                "使用していない",
+                "PPI（オメプラゾール等）",
+                "H2ブロッカー（ガスター等）",
+                "わからない"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "降圧薬の使用",
+            "name": "降圧薬",
+            "type": "radio",
+            "description": "血圧を下げる薬",
+            "selector": [
+                "使用していない",
+                "ACE阻害薬/ARB",
+                "カルシウム拮抗薬",
+                "利尿薬",
+                "β遮断薬",
+                "複数使用",
+                "わからない"
+            ],
+            "selectoridx": "0|1|2|3|4|5|6"
+        },
+        {
+            "dispname": "糖尿病薬の使用",
+            "name": "糖尿病薬",
+            "type": "radio",
+            "description": "血糖を下げる薬",
+            "selector": [
+                "使用していない",
+                "メトホルミン",
+                "スルホニル尿素薬",
+                "インスリン",
+                "その他",
+                "わからない"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "抗血栓薬の使用",
+            "name": "抗血栓薬",
+            "type": "radio",
+            "description": "血液をサラサラにする薬",
+            "selector": [
+                "使用していない",
+                "アスピリン",
+                "ワルファリン",
+                "DOAC（新規抗凝固薬）",
+                "わからない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "症状・副作用の評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "転倒・ふらつきの経験",
+            "name": "転倒",
+            "type": "radio",
+            "description": "過去6ヶ月間",
+            "selector": [
+                "なし",
+                "1回",
+                "2-3回",
+                "4回以上"
+            ],
+            "required": true,
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "記憶力・認知機能の変化",
+            "name": "認知機能",
+            "type": "radio",
+            "description": "薬開始後の変化",
+            "selector": [
+                "変化なし",
+                "軽度低下",
+                "中等度低下",
+                "著明な低下",
+                "評価困難"
+            ],
+            "required": true,
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "便秘の症状",
+            "name": "便秘",
+            "type": "radio",
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度"
+            ],
+            "required": true,
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "口渇・排尿困難",
+            "name": "口渇排尿",
+            "type": "radio",
+            "description": "抗コリン作用による症状",
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度"
+            ],
+            "required": true,
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "日中の眠気・ふらつき",
+            "name": "眠気",
+            "type": "radio",
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度"
+            ],
+            "required": true,
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "食欲・体重の変化",
+            "name": "食欲体重",
+            "type": "radio",
+            "description": "過去3ヶ月間",
+            "selector": [
+                "変化なし",
+                "食欲低下・体重減少",
+                "食欲亢進・体重増加",
+                "評価困難"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "追加情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "服用中の薬剤詳細",
+            "name": "薬剤詳細",
+            "type": "textarea",
+            "description": "薬剤名、用法用量を可能な限り詳しく記載してください",
+            "rows": 5
+        },
+        {
+            "dispname": "その他の気になる症状",
+            "name": "その他症状",
+            "type": "textarea",
+            "description": "薬剤に関連すると思われる症状があれば記載してください",
+            "rows": 3
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "ポリファーマシー判定",
+            "type": "eval",
+            "formula": "[[薬剤数.index]] >= 3 ? 'ポリファーマシーあり' : 'ポリファーマシーなし'",
+            "dispname ": "ポリファーマシー 5種類以上の薬剤使用"
+        },
+        {
+            "name": "転倒リスク",
+            "type": "eval",
+            "formula": "( [[転倒.index]] >= 1 && ( [[ベンゾジアゼピン.index]] == 1 || [[ベンゾジアゼピン.index]] == 2 ) ) ? '高リスク' : ( [[転倒.index]] >= 1 ? '中リスク' : '低リスク' )"
+        },
+        {
+            "name": "抗コリン負荷",
+            "type": "eval",
+            "formula": "( [[抗コリン薬.index]] == 1 && ( [[口渇排尿.index]] >= 2 || [[便秘.index]] >= 2 || [[認知機能.index]] >= 2 ) ) ? '高負荷' : ( [[抗コリン薬.index]] == 1 ? '中負荷' : '低負荷' )"
+        },
+        {
+            "name": "総合リスクスコア",
+            "type": "eval",
+            "formula": "[[薬剤数.index]] + [[転倒.index]] + [[認知機能.index]] + [[便秘.index]] + [[口渇排尿.index]] + [[眠気.index]]"
+        },
+        {
+            "name": "リスク分類",
+            "type": "eval",
+            "formula": "[[総合リスクスコア]] >= 12 ? '高リスク' : ( [[総合リスクスコア]] >= 8 ? '中リスク' : ( [[総合リスクスコア]] >= 4 ? '軽度リスク' : '低リスク' ) )"
+        },
+        {
+            "name": "Warning: 中程度リスク 総合リスクスコア >= 8",
+            "formula": "[[総合リスクスコア]] >= 8",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 高リスク 総合リスクスコア >= 12",
+            "formula": "[[総合リスクスコア]] >= 12",
+            "type": "emergency"
+        }
+    ]
+}

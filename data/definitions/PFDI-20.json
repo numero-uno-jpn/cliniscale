@@ -1,0 +1,345 @@
+{
+  "_comment": [
+    "Pelvic Floor Distress Inventory - Short Form 20 (PFDI-20)",
+    "Barber MD, Walters MD, Bump RC. Short forms of two condition-specific quality-of-life questionnaires for women with pelvic floor disorders (PFDI-20 and PFIQ-7). Am J Obstet Gynecol. 2005;193(1):103-13.",
+    "https://pubmed.ncbi.nlm.nih.gov/16021067/",
+    "骨盤底機能障害の苦痛評価質問票短縮版",
+    "3つのサブスケール (POPDI-6, CRADI-8, UDI-6) から構成、0-300点"
+  ],
+  "title": "PFDI-20 (骨盤底機能障害苦痛評価)",
+  "description": [
+    "骨盤底機能障害の症状と苦痛を評価",
+    "過去3か月の症状について回答してください"
+  ],
+  "fields": [
+    {
+      "type": "subsection",
+      "dispname": "POPDI-6: 骨盤臓器脱症状"
+    },
+    {
+      "type": "radio",
+      "name": "POPDI1",
+      "dispname": "下腹部の圧迫感を感じますか",
+      "selector": [
+        "いいえ",
+        "はい、全く気にならない",
+        "はい、やや気になる",
+        "はい、かなり気になる",
+        "はい、非常に気になる"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "POPDI2",
+      "dispname": "下腹部や腰部の重い感じがありますか",
+      "selector": [
+        "いいえ",
+        "はい、全く気にならない",
+        "はい、やや気になる",
+        "はい、かなり気になる",
+        "はい、非常に気になる"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "POPDI3",
+      "dispname": "膣から何かが出ている感じがありますか",
+      "selector": [
+        "いいえ",
+        "はい、全く気にならない",
+        "はい、やや気になる",
+        "はい、かなり気になる",
+        "はい、非常に気になる"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "POPDI4",
+      "dispname": "膣を指で押さないと排尿や排便ができないことがありますか",
+      "selector": [
+        "いいえ",
+        "はい、全く気にならない",
+        "はい、やや気になる",
+        "はい、かなり気になる",
+        "はい、非常に気になる"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "POPDI5",
+      "dispname": "膀胱を完全に空にできない感じがありますか",
+      "selector": [
+        "いいえ",
+        "はい、全く気にならない",
+        "はい、やや気になる",
+        "はい、かなり気になる",
+        "はい、非常に気になる"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "POPDI6",
+      "dispname": "腸を完全に空にできない感じがありますか",
+      "selector": [
+        "いいえ",
+        "はい、全く気にならない",
+        "はい、やや気になる",
+        "はい、かなり気になる",
+        "はい、非常に気になる"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "required": true
+    },
+    {
+      "type": "subsection",
+      "dispname": "CRADI-8: 大腸・肛門症状"
+    },
+    {
+      "type": "radio",
+      "name": "CRADI1",
+      "dispname": "便がいきみなしで出てしまうことがありますか",
+      "selector": [
+        "いいえ",
+        "はい、全く気にならない",
+        "はい、やや気になる",
+        "はい、かなり気になる",
+        "はい、非常に気になる"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "CRADI2",
+      "dispname": "液状便が漏れることがありますか",
+      "selector": [
+        "いいえ",
+        "はい、全く気にならない",
+        "はい、やや気になる",
+        "はい、かなり気になる",
+        "はい、非常に気になる"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "CRADI3",
+      "dispname": "固形便が漏れることがありますか",
+      "selector": [
+        "いいえ",
+        "はい、全く気にならない",
+        "はい、やや気になる",
+        "はい、かなり気になる",
+        "はい、非常に気になる"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "CRADI4",
+      "dispname": "ガスが漏れることがありますか",
+      "selector": [
+        "いいえ",
+        "はい、全く気にならない",
+        "はい、やや気になる",
+        "はい、かなり気になる",
+        "はい、非常に気になる"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "CRADI5",
+      "dispname": "排便時に痛みがありますか",
+      "selector": [
+        "いいえ",
+        "はい、全く気にならない",
+        "はい、やや気になる",
+        "はい、かなり気になる",
+        "はい、非常に気になる"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "CRADI6",
+      "dispname": "強くいきまないと便が出ませんか",
+      "selector": [
+        "いいえ",
+        "はい、全く気にならない",
+        "はい、やや気になる",
+        "はい、かなり気になる",
+        "はい、非常に気になる"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "CRADI7",
+      "dispname": "一部の便が残っている感じがありますか",
+      "selector": [
+        "いいえ",
+        "はい、全く気にならない",
+        "はい、やや気になる",
+        "はい、かなり気になる",
+        "はい、非常に気になる"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "CRADI8",
+      "dispname": "下着に便が付着することがありますか",
+      "selector": [
+        "いいえ",
+        "はい、全く気にならない",
+        "はい、やや気になる",
+        "はい、かなり気になる",
+        "はい、非常に気になる"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "required": true
+    },
+    {
+      "type": "subsection",
+      "dispname": "UDI-6: 尿路症状"
+    },
+    {
+      "type": "radio",
+      "name": "UDI1",
+      "dispname": "頻繁にトイレに行きますか",
+      "selector": [
+        "いいえ",
+        "はい、全く気にならない",
+        "はい、やや気になる",
+        "はい、かなり気になる",
+        "はい、非常に気になる"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "UDI2",
+      "dispname": "咳やくしゃみ、笑った時に尿が漏れますか",
+      "selector": [
+        "いいえ",
+        "はい、全く気にならない",
+        "はい、やや気になる",
+        "はい、かなり気になる",
+        "はい、非常に気になる"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "UDI3",
+      "dispname": "少量の尿漏れがありますか (尿パッド使用するほど)",
+      "selector": [
+        "いいえ",
+        "はい、全く気にならない",
+        "はい、やや気になる",
+        "はい、かなり気になる",
+        "はい、非常に気になる"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "UDI4",
+      "dispname": "排尿開始が困難ですか",
+      "selector": [
+        "いいえ",
+        "はい、全く気にならない",
+        "はい、やや気になる",
+        "はい、かなり気になる",
+        "はい、非常に気になる"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "UDI5",
+      "dispname": "排尿時に痛みや灼熱感がありますか",
+      "selector": [
+        "いいえ",
+        "はい、全く気にならない",
+        "はい、やや気になる",
+        "はい、かなり気になる",
+        "はい、非常に気になる"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "UDI6",
+      "dispname": "意図せずに尿が漏れますか",
+      "selector": [
+        "いいえ",
+        "はい、全く気にならない",
+        "はい、やや気になる",
+        "はい、かなり気になる",
+        "はい、非常に気になる"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "required": true
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "type": "eval",
+      "name": "POPDIスコア",
+      "dispname": "骨盤臓器脱症状スコア (0-100点)",
+      "formula": "( ( [[POPDI1.index]] + [[POPDI2.index]] + [[POPDI3.index]] + [[POPDI4.index]] + [[POPDI5.index]] + [[POPDI6.index]] ) / 6 * 25).toFixed(2)"
+    },
+    {
+      "type": "eval",
+      "name": "CRADIスコア",
+      "dispname": "大腸・肛門症状スコア (0-100点)",
+      "formula": "( ( [[CRADI1.index]] + [[CRADI2.index]] + [[CRADI3.index]] + [[CRADI4.index]] + [[CRADI5.index]] + [[CRADI6.index]] + [[CRADI7.index]] + [[CRADI8.index]] ) / 8 * 25).toFixed(2)"
+    },
+    {
+      "type": "eval",
+      "name": "UDIスコア",
+      "dispname": "尿路症状スコア (0-100点)",
+      "formula": "( ( [[UDI1.index]] + [[UDI2.index]] + [[UDI3.index]] + [[UDI4.index]] + [[UDI5.index]] + [[UDI6.index]] ) / 6 * 25).toFixed(2)"
+    },
+    {
+      "type": "eval",
+      "name": "PFDI20合計スコア",
+      "dispname": "総合スコア (0-300点)",
+      "formula": "( ((POPDIスコア)) + ((CRADIスコア)) + ((UDIスコア)) ).toFixed(2)"
+    },
+    {
+      "type": "warning",
+      "name": "Warning: 中等度苦痛 (100点以上)",
+      "formula": "((PFDI20合計スコア)) >= 100"
+    },
+    {
+      "type": "emergency",
+      "name": "Emergency: 高度苦痛 (150点以上)",
+      "formula": "((PFDI20合計スコア)) >= 150"
+    }
+  ]
+}

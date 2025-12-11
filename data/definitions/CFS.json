@@ -1,0 +1,101 @@
+{
+    "_comment": [
+        "臨床虚弱尺度 (Clinical Frailty Scale: CFS) 日本語版問診票",
+        "原典: Rockwood K, et al. A global clinical measure of fitness and frailty in elderly people. CMAJ. 2005;173(5):489-95.",
+        "日本語版: 日本老年医学会 Clinical Frailty Scale - Japanese 臨床虚弱尺度 (CFS version 2.0)",
+        "参考URL: https://www.jpn-geriat-soc.or.jp/tool/pdf/tool_14.pdf",
+        "参考URL: https://www.dal.ca/sites/gmedicine/our-tools/clinical-frailty-scale.html",
+        "開発史: 2005年7段階として開発、2007年に9段階に拡張"
+    ],
+    "title": "CFS 臨床虚弱尺度",
+    "description": [
+        "<h3>臨床虚弱尺度による虚弱度評価</h3>",
+        "患者様の現在の健康状態と日常生活の状況について、最も適切なものを選択してください。",
+        "評価は過去2週間の状態を基準にお答えください。"
+    ],
+    "submit_button_title": "評価を送信",
+    "translate": "major",
+    "fields": [
+        {
+            "dispname": "評価対象者",
+            "type": "subsection"
+        },
+        {
+            "dispname": "年齢",
+            "name": "年齢",
+            "type": "text",
+            "required": true,
+            "postfix": "歳",
+            "inputmode": "numeric"
+        },
+        {
+            "dispname": "性別",
+            "name": "性別",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "男性|女性"
+        },
+        {
+            "dispname": "臨床虚弱尺度評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "現在の健康状態と日常生活の状況",
+            "name": "CFS評価",
+            "type": "radio",
+            "required": true,
+            "description": "患者様の過去2週間の状態を最もよく表すものを選択してください",
+            "selector": [
+                "非常に健康である - 年齢に関係なく強健で活動的、意欲的で健康状態は良好",
+                "健康である - 症状はないが第1段階ほど健康ではない",
+                "うまく管理されている - 病気の症状はよくコントロールされているが定期的な運動以外は活動的ではない",
+                "非常に軽度の虚弱がある - 日常生活に他者の助けは必要ないが、しばしば症状により活動が制限される",
+                "軽度の虚弱がある - より明らかに動作が緩慢で、財政管理、交通手段、重い家事、服薬管理などのより高次の手段的日常生活動作に支援が必要",
+                "中等度の虚弱がある - 屋外での全ての活動と家事の維持に支援が必要。屋内では階段昇降に問題があり、入浴に支援が必要で、着衣に最小限の介助が必要なことがある",
+                "重度の虚弱がある - 身体的または認知的な理由により身の回りの世話が完全に他者に依存している。安定しており6か月以内に死亡する危険性は高くないように思われる",
+                "非常に重度の虚弱がある - 完全に他者に依存し生命の終末期に近づいている。軽症疾患からも回復しそうにない",
+                "人生の最終段階 - 生命予後が6か月未満で、明らかに虚弱ではないその他の状態"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7|8|9"
+        },
+        {
+            "dispname": "特記事項",
+            "name": "特記事項",
+            "type": "textarea",
+            "rows": 3,
+            "description": "評価に関する追加情報や特記すべき事項があれば記載してください"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "CFSスコア",
+            "type": "eval",
+            "formula": "[[CFS評価.index]]",
+            "dispname": "CFS 臨床虚弱尺度スコア"
+        },
+        {
+            "name": "虚弱度判定",
+            "type": "eval",
+            "formula": "[[CFSスコア]] >= 5 ? '虚弱あり' : '虚弱なし'",
+            "dispname": "虚弱度判定 (スコア5以上で虚弱ありと判定)"
+        },
+        {
+            "name": "重症度分類",
+            "type": "eval",
+            "formula": "[[CFSスコア]] <= 3 ? '健康・良好' : ( [[CFSスコア]] == 4 ? '非常に軽度虚弱' : ( [[CFSスコア]] == 5 ? '軽度虚弱' : ( [[CFSスコア]] == 6 ? '中等度虚弱' : ( [[CFSスコア]] >= 7 && [[CFSスコア]] <= 8 ? '重度虚弱' : '人生最終段階' ) ) ) )",
+            "dispname": "詳細な重症度分類"
+        },
+        {
+            "name": "Warning: 虚弱リスク CFSスコア >= 5",
+            "formula": "[[CFSスコア]] >= 5",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 重度虚弱 CFSスコア >= 7",
+            "formula": "[[CFSスコア]] >= 7",
+            "type": "emergency"
+        }
+    ]
+}

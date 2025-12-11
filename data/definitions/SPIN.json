@@ -1,0 +1,282 @@
+{
+    "title": "SPIN 社交不安障害評価尺度",
+    "_comment": [
+        "Social Phobia Inventory (SPIN) - 社交不安障害評価尺度",
+        "原著: Connor KM, et al. Psychometric properties of the Social Phobia Inventory (SPIN): New self-rating scale. Br J Psychiatry. 2000;176:379-386.",
+        "著作権: Copyright © Jonathan Davidson, 1995, 2008, 2014. All rights reserved.",
+        "日本語版: Nagata T, et al. Psychometric properties of the Japanese version of the Social Phobia Inventory. Psychiatry Clin Neurosci. 2013;67(3):160-166.",
+        "17項目からなる自己記入式質問紙で、社交不安障害の恐怖、回避、生理的症状を評価",
+        "過去1週間の症状について0-4点の5段階で評価、総得点0-68点",
+        "カットオフ値: 19点以上で社交不安障害の可能性"
+    ],
+    "description": [
+        "過去1週間にあなたが感じた症状について、最もあてはまるものを選択してください。"
+    ],
+    "fields": [
+        {
+            "name": "権威者への恐怖",
+            "type": "radio",
+            "dispname": "権威のある人を恐れる",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "ある程度ある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "赤面への困惑",
+            "type": "radio",
+            "dispname": "人前で赤面することに困惑する",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "ある程度ある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "パーティーや社交行事への恐怖",
+            "type": "radio",
+            "dispname": "パーティーや社交行事が怖い",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "ある程度ある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "知らない人との会話回避",
+            "type": "radio",
+            "dispname": "知らない人と話すことを避ける",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "ある程度ある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "批判への恐怖",
+            "type": "radio",
+            "dispname": "批判されることが非常に怖い",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "ある程度ある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "恥ずかしさによる回避",
+            "type": "radio",
+            "dispname": "恥ずかしさへの恐怖から何かをしたり人と話すことを避ける",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "ある程度ある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "発汗への苦痛",
+            "type": "radio",
+            "dispname": "人前で汗をかくことが苦痛である",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "ある程度ある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "パーティー回避",
+            "type": "radio",
+            "dispname": "パーティーに行くことを避ける",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "ある程度ある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "注目の中心回避",
+            "type": "radio",
+            "dispname": "注目の的になる活動を避ける",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "ある程度ある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "見知らぬ人との会話恐怖",
+            "type": "radio",
+            "dispname": "見知らぬ人と話すことが怖い",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "ある程度ある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "スピーチ回避",
+            "type": "radio",
+            "dispname": "スピーチをすることを避ける",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "ある程度ある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "批判回避意欲",
+            "type": "radio",
+            "dispname": "批判されることを避けるためなら何でもする",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "ある程度ある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "動悸への困惑",
+            "type": "radio",
+            "dispname": "人がいるときの動悸に困惑する",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "ある程度ある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "人に見られることへの恐怖",
+            "type": "radio",
+            "dispname": "人に見られているかもしれない時に何かをするのが怖い",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "ある程度ある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "恥辱への恐怖",
+            "type": "radio",
+            "dispname": "恥をかいたりばかに見えることは最も恐れることの一つである",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "ある程度ある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "権威者との会話回避",
+            "type": "radio",
+            "dispname": "権威のある人と話すことを避ける",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "ある程度ある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "震えや振戦への苦痛",
+            "type": "radio",
+            "dispname": "他人の前で震えたりふるえることが苦痛である",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "ある程度ある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "SPIN恐怖サブスケール",
+            "type": "eval",
+            "dispname": "恐怖サブスケール(6項目): 0-24点",
+            "formula": "[[権威者への恐怖.index]] + [[パーティーや社交行事への恐怖.index]] + [[批判への恐怖.index]] + [[見知らぬ人との会話恐怖.index]] + [[人に見られることへの恐怖.index]] + [[恥辱への恐怖.index]]"
+        },
+        {
+            "name": "SPIN回避サブスケール",
+            "type": "eval",
+            "dispname": "回避サブスケール(7項目): 0-28点",
+            "formula": "[[知らない人との会話回避.index]] + [[恥ずかしさによる回避.index]] + [[パーティー回避.index]] + [[注目の中心回避.index]] + [[スピーチ回避.index]] + [[批判回避意欲.index]] + [[権威者との会話回避.index]]"
+        },
+        {
+            "name": "SPIN生理的症状サブスケール",
+            "type": "eval",
+            "dispname": "生理的症状サブスケール(4項目): 0-16点",
+            "formula": "[[赤面への困惑.index]] + [[発汗への苦痛.index]] + [[動悸への困惑.index]] + [[震えや振戦への苦痛.index]]"
+        },
+        {
+            "name": "SPIN総得点",
+            "type": "eval",
+            "dispname": "社交不安障害評価尺度(SPIN)総得点: 0-68点",
+            "formula": "[[権威者への恐怖.index]] + [[赤面への困惑.index]] + [[パーティーや社交行事への恐怖.index]] + [[知らない人との会話回避.index]] + [[批判への恐怖.index]] + [[恥ずかしさによる回避.index]] + [[発汗への苦痛.index]] + [[パーティー回避.index]] + [[注目の中心回避.index]] + [[見知らぬ人との会話恐怖.index]] + [[スピーチ回避.index]] + [[批判回避意欲.index]] + [[動悸への困惑.index]] + [[人に見られることへの恐怖.index]] + [[恥辱への恐怖.index]] + [[権威者との会話回避.index]] + [[震えや振戦への苦痛.index]]"
+        }
+    ]
+}

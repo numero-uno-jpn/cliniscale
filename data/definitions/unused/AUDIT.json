@@ -1,0 +1,175 @@
+{
+    "title": "AUDIT アルコール使用障害同定テスト",
+    "_comment": [
+        "Alcohol Use Disorders Identification Test (AUDIT) - WHO開発のアルコール使用障害スクリーニングテスト",
+        "原典: Saunders JB, Aasland OG, Babor TF, et al. Development of the Alcohol Use Disorders Identification Test (AUDIT): WHO Collaborative Project on Early Detection of Persons with Harmful Alcohol Consumption--II. Addiction. 1993;88(6):791-804.",
+        "WHO公式マニュアル: https://www.who.int/publications/i/item/WHO-MSD-MSB-01.6a",
+        "NIDA公式版PDF: https://nida.nih.gov/sites/default/files/files/AUDIT.pdf",
+        "日本語翻訳版: 廣尚典訳 WHO/AUDIT (問題飲酒標準テスト/日本語版) 千葉テストセンター, 2000",
+        "10項目、各項目0-4点（項目9-10は0,2,4点）、合計40点満点",
+        "カットオフ値: 8点以上で問題飲酒の疑い、15点以上でアルコール依存症の疑い"
+    ],
+    "description": [
+        "AUDITは、WHO（世界保健機関）によって開発されたアルコール使用障害のスクリーニングテストです。",
+        "過去1年間の飲酒習慣についてお答えください。",
+        "<strong>※1ドリンク = 純アルコール10g</strong>",
+        "（ビール 250mL、日本酒1/2合、ワイングラス1杯程度）"
+    ],
+    "fields": [
+        {
+            "name": "q1",
+            "type": "radio",
+            "dispname": "1. どのくらいの頻度でお酒を飲みますか",
+            "selector": [
+                "飲まない",
+                "月に1回以下",
+                "月に2～4回",
+                "週に2～3回",
+                "週に4回以上"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "q2",
+            "type": "radio",
+            "dispname": "2. 飲酒する日には、普通どのくらいの量を飲みますか",
+            "selector": [
+                "1～2ドリンク",
+                "3～4ドリンク",
+                "5～6ドリンク",
+                "7～9ドリンク",
+                "10ドリンク以上"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true,
+            "parentname": "q1",
+            "parentsel": "月に1回以下|月に2～4回|週に2～3回|週に4回以上"
+        },
+        {
+            "name": "q3",
+            "type": "radio",
+            "dispname": "3. 1回に6ドリンク以上飲むことがどのくらいありますか",
+            "selector": [
+                "ない",
+                "月に1回未満",
+                "月に1回",
+                "週に1回",
+                "毎日またはほとんど毎日"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true,
+            "parentname": "q1",
+            "parentsel": "月に1回以下|月に2～4回|週に2～3回|週に4回以上"
+        },
+        {
+            "name": "q4",
+            "type": "radio",
+            "dispname": "4. 過去1年間に、飲み始めると止められなくなったことがどのくらいありましたか",
+            "selector": [
+                "ない",
+                "月に1回未満",
+                "月に1回",
+                "週に1回",
+                "毎日またはほとんど毎日"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "q5",
+            "type": "radio",
+            "dispname": "5. 過去1年間に、飲酒のために普通なら行うべきことができなかったことがどのくらいありましたか",
+            "selector": [
+                "ない",
+                "月に1回未満",
+                "月に1回",
+                "週に1回",
+                "毎日またはほとんど毎日"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "q6",
+            "type": "radio",
+            "dispname": "6. 過去1年間に、深酒の後体調を整えるために、朝迎え酒をしなければならなかったことがどのくらいありましたか",
+            "selector": [
+                "ない",
+                "月に1回未満",
+                "月に1回",
+                "週に1回",
+                "毎日またはほとんど毎日"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "q7",
+            "type": "radio",
+            "dispname": "7. 過去1年間に、飲酒後に罪悪感や自責の念を感じたことがどのくらいありましたか",
+            "selector": [
+                "ない",
+                "月に1回未満",
+                "月に1回",
+                "週に1回",
+                "毎日またはほとんど毎日"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "q8",
+            "type": "radio",
+            "dispname": "8. 過去1年間に、飲酒のために前夜の出来事を思い出せなかったことがどのくらいありましたか",
+            "selector": [
+                "ない",
+                "月に1回未満",
+                "月に1回",
+                "週に1回",
+                "毎日またはほとんど毎日"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "q9",
+            "type": "radio",
+            "dispname": "9. あなたの飲酒が原因で、あなた自身や他の人がけがをしたことがありますか",
+            "selector": [
+                "ない",
+                "あるが、過去1年間はない",
+                "過去1年間にある"
+            ],
+            "selectoridx": "0|2|4",
+            "required": true
+        },
+        {
+            "name": "q10",
+            "type": "radio",
+            "dispname": "10. 親族、友人、医師、その他の医療従事者が、あなたの飲酒について心配したり、飲酒量を減らすように勧めたことがありますか",
+            "selector": [
+                "ない",
+                "あるが、過去1年間はない",
+                "過去1年間にある"
+            ],
+            "selectoridx": "0|2|4",
+            "required": true
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "audit_total",
+            "type": "eval",
+            "dispname": "AUDIT合計点（0-40点）",
+            "formula": "[[q1.index]] + [[q2.index]] + [[q3.index]] + [[q4.index]] + [[q5.index]] + [[q6.index]] + [[q7.index]] + [[q8.index]] + [[q9.index]] + [[q10.index]]"
+        },
+        {
+            "name": "audit_risk_level",
+            "type": "eval",
+            "dispname": "アルコール使用リスク評価",
+            "formula": "[[audit_total]] < 8 ? \"低リスク（0-7点）\" : [[audit_total]] < 15 ? \"中等度リスク（8-14点）\" : \"高リスク（15点以上）\""
+        }
+    ]
+}

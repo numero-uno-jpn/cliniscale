@@ -1,0 +1,110 @@
+{
+  "_comment": [
+    "Mantle Cell Lymphoma International Prognostic Index (MIPI)",
+    "Hoster E, Dreyling M, Klapper W, et al. A new prognostic index (MIPI) for patients with advanced-stage mantle cell lymphoma. Blood. 2008;111(2):558-65.",
+    "https://pubmed.ncbi.nlm.nih.gov/17962512/",
+    "マントル細胞リンパ腫の予後予測インデックス",
+    "年齢、ECOG PS、LDH、白血球数から予後リスクを分類"
+  ],
+  "title": "MIPI (マントル細胞リンパ腫国際予後指標)",
+  "description": [
+    "マントル細胞リンパ腫の予後予測",
+    "4つの因子から予後リスクを評価します"
+  ],
+  "fields": [
+    {
+      "type": "subsection",
+      "dispname": "患者情報"
+    },
+    {
+      "type": "text",
+      "name": "年齢",
+      "dispname": "年齢",
+      "postfix": "歳",
+      "inputmode": "numeric",
+      "required": true
+    },
+    {
+      "type": "subsection",
+      "dispname": "臨床情報"
+    },
+    {
+      "type": "radio",
+      "name": "ECOG",
+      "dispname": "ECOG Performance Status",
+      "selector": [
+        "0または1",
+        "2以上"
+      ],
+      "selectoridx": "0|1",
+      "required": true,
+      "description": "0: 無症状、1: 軽度症状、2: 50%以上臥床"
+    },
+    {
+      "type": "text",
+      "name": "LDH",
+      "dispname": "LDH (乳酸脱水素酵素)",
+      "postfix": "U/L",
+      "inputmode": "numeric",
+      "testrange": [
+        200,
+        3000
+      ],
+      "required": true
+    },
+    {
+      "type": "text",
+      "name": "LDH上限",
+      "dispname": "LDH正常上限値",
+      "postfix": "U/L",
+      "inputmode": "numeric",
+      "testrange": [
+        180,
+        220
+      ],
+      "required": true,
+      "description": "施設基準値を入力してください"
+    },
+    {
+      "type": "text",
+      "name": "白血球数",
+      "dispname": "白血球数",
+      "postfix": "/μL",
+      "inputmode": "numeric",
+      "testrange": [
+        4000,
+        30000
+      ],
+      "required": true
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "type": "eval",
+      "name": "LDH対数",
+      "formula": "Math.log10( ((LDH)) / ((LDH上限)) )",
+      "noreport": true
+    },
+    {
+      "type": "eval",
+      "name": "MIPIスコア",
+      "formula": "(0.03535 * ((年齢)) + 0.6978 * [[ECOG.index]] + 0.34 * ((LDH対数)) + 0.00024 * ((白血球数)) ).toFixed(2)"
+    },
+    {
+      "type": "eval",
+      "name": "リスク分類",
+      "formula": "((MIPIスコア)) >= 6.2 ? '高リスク' : ( ((MIPIスコア)) >= 5.7 ? '中間リスク' : '低リスク')"
+    },
+    {
+      "type": "warning",
+      "formula": "((MIPIスコア)) >= 5.7",
+      "name": "Warning: 中等度リスク"
+    },
+    {
+      "type": "emergency",
+      "formula": "((MIPIスコア)) >= 6.2",
+      "name": "Emergency: 高度リスク"
+    }
+  ]
+}

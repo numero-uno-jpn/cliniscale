@@ -1,0 +1,260 @@
+{
+  "_comment": [
+    "Seddon分類による末梢神経損傷評価問診票",
+    "原典: Seddon HJ. Three types of nerve injury. Brain. 1943;66(4):237-288",
+    "参考URL: https://en.wikipedia.org/wiki/Nerve_injury_classification",
+    "日本語参考: 日本神経治療学会ガイドライン"
+  ],
+  "title": "Seddon分類による末梢神経損傷評価",
+  "description": [
+    "末梢神経損傷の重症度を評価し、治療方針決定と予後予測を行います",
+    "損傷の程度により3段階（神経失調症、軸索断裂、神経断裂）で分類されます"
+  ],
+  "responsible_person": [
+    "神経内科医",
+    "整形外科医"
+  ],
+  "dept_in_charge": "神経内科・整形外科",
+  "submit_button_title": "評価を完了する",
+  "fields": [
+    {
+      "dispname": "基本情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "受傷部位",
+      "name": "受傷部位",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "上肢",
+        "下肢",
+        "顔面",
+        "その他"
+      ],
+      "description": "神経損傷が疑われる部位を選択してください"
+    },
+    {
+      "dispname": "詳細な神経名",
+      "name": "神経名",
+      "type": "text",
+      "required": true,
+      "description": "損傷が疑われる具体的な神経名を記入してください（例: 正中神経、尺骨神経、橈骨神経）"
+    },
+    {
+      "dispname": "受傷から評価までの期間",
+      "name": "受傷期間",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "24時間以内",
+        "1-7日",
+        "1-2週間",
+        "2-4週間",
+        "1-3ヶ月",
+        "3ヶ月以上"
+      ],
+      "description": "受傷から現在の評価までの経過時間"
+    },
+    {
+      "dispname": "症状評価",
+      "type": "subsection"
+    },
+    {
+      "dispname": "運動機能障害",
+      "name": "運動障害",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "軽度",
+        "中等度",
+        "重度",
+        "完全麻痺"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "description": "支配筋の随意運動の程度"
+    },
+    {
+      "dispname": "感覚機能障害",
+      "name": "感覚障害",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "軽度",
+        "中等度",
+        "重度",
+        "完全脱失"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "description": "支配領域の感覚の程度"
+    },
+    {
+      "dispname": "自律神経機能障害",
+      "name": "自律神経障害",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "軽度",
+        "中等度",
+        "重度"
+      ],
+      "selectoridx": "0|1|2|3",
+      "description": "発汗、血管運動、栄養性変化など"
+    },
+    {
+      "dispname": "痛み・異常感覚",
+      "name": "痛み",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "軽度",
+        "中等度",
+        "重度"
+      ],
+      "selectoridx": "0|1|2|3",
+      "description": "神経痛、灼熱痛、異常感覚の程度"
+    },
+    {
+      "dispname": "理学検査所見",
+      "type": "subsection"
+    },
+    {
+      "dispname": "Tinel徴候",
+      "name": "Tinel徴候",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "陰性",
+        "陽性"
+      ],
+      "description": "神経走行に沿った叩打時の異常感覚（チクチク感・蟻走感）"
+    },
+    {
+      "dispname": "電気生理学的検査結果",
+      "name": "電気検査",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "正常",
+        "軽度異常",
+        "中等度異常",
+        "重度異常",
+        "検査不能"
+      ],
+      "description": "筋電図、神経伝導速度検査の結果"
+    },
+    {
+      "dispname": "筋萎縮の有無",
+      "name": "筋萎縮",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "軽度",
+        "中等度",
+        "重度"
+      ],
+      "selectoridx": "0|1|2|3",
+      "description": "支配筋の萎縮の程度"
+    },
+    {
+      "dispname": "機能回復の経過",
+      "name": "回復経過",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "改善傾向",
+        "不変",
+        "悪化傾向",
+        "評価困難"
+      ],
+      "description": "受傷後の症状の変化"
+    },
+    {
+      "dispname": "外傷の性質",
+      "type": "subsection"
+    },
+    {
+      "dispname": "受傷機転",
+      "name": "受傷機転",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "圧迫",
+        "牽引",
+        "切創",
+        "挫滅",
+        "熱傷",
+        "電撃傷",
+        "その他"
+      ],
+      "description": "神経損傷を引き起こした外力の種類"
+    },
+    {
+      "dispname": "解剖学的連続性",
+      "name": "解剖連続性",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "保持",
+        "部分断裂",
+        "完全断裂",
+        "不明"
+      ],
+      "description": "画像検査や手術所見による神経の連続性"
+    },
+    {
+      "dispname": "合併損傷",
+      "name": "合併損傷",
+      "type": "checkbox",
+      "selector": [
+        "骨折",
+        "脱臼",
+        "血管損傷",
+        "軟部組織損傷"
+      ],
+      "description": "神経損傷に伴う他の組織の損傷"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "重症度スコア",
+      "type": "eval",
+      "formula": "[[運動障害.index]] + [[感覚障害.index]] + [[自律神経障害.index]] + [[痛み.index]] + [[筋萎縮.index]]",
+      "dispname": "各症状の重症度を数値化した合計スコア（0-17点）"
+    },
+    {
+      "name": "Seddon分類判定",
+      "type": "eval",
+      "formula": "[[重症度スコア]] <= 3 && {{電気検査}} !== '重度異常' && {{回復経過}} === '改善傾向' ? '神経失調症（Neurapraxia）' : ( [[重症度スコア]] <= 10 && {{解剖連続性}} === '保持' ? '軸索断裂（Axonotmesis）' : '神経断裂（Neurotmesis）' )",
+      "dispname": "症状と検査所見に基づくSeddon分類"
+    },
+    {
+      "name": "予後予測",
+      "type": "eval",
+      "formula": "{{Seddon分類判定}} === '神経失調症（Neurapraxia）' ? '数分から数週間で完全回復' : ( {{Seddon分類判定}} === '軸索断裂（Axonotmesis）' ? '1mm/日（約1インチ/月）で再生、数ヶ月で改善' : '手術なしでは回復困難' )",
+      "dispname": "分類に基づく機能回復の見込み"
+    },
+    {
+      "name": "治療推奨",
+      "type": "eval",
+      "formula": "{{Seddon分類判定}} === '神経失調症（Neurapraxia）' ? '保存的治療・経過観察' : ( {{Seddon分類判定}} === '軸索断裂（Axonotmesis）' ? '保存的治療・理学療法' : '手術的治療を検討' )",
+      "dispname": "分類に応じた治療方針の推奨"
+    },
+    {
+      "name": "Warning: 重症度スコア ≥ 8点",
+      "formula": "[[重症度スコア]] >= 8",
+      "type": "warning"
+    },
+    {
+      "name": "Emergency: 重症度スコア ≥ 12点または神経断裂",
+      "formula": "[[重症度スコア]] >= 12 || {{Seddon分類判定}} === '神経断裂（Neurotmesis）'",
+      "type": "emergency"
+    }
+  ]
+}

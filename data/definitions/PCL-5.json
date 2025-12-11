@@ -1,0 +1,424 @@
+{
+    "title": "PCL-5 心的外傷後ストレス障害（PTSD）症状評価尺度",
+    "_comment": [
+        "PCL-5: PTSD Checklist for DSM-5",
+        "原典: Weathers, F. W., Litz, B. T., Keane, T. M., Palmieri, P. A., Marx, B. P., & Schnurr, P. P. (2013). The PTSD Checklist for DSM-5 (PCL-5). National Center for PTSD.",
+        "公式URL: https://www.ptsd.va.gov/professional/assessment/adult-sr/ptsd-checklist.asp",
+        "PDF形式: https://www.ptsd.va.gov/professional/assessment/documents/PCL5_Standard_form.pdf",
+        "DSM-5基準に基づくPTSD症状評価のための20項目自己記入式尺度",
+        "各項目は過去1ヶ月間の症状頻度を0-4点で評価",
+        "総得点範囲: 0-80点、カットオフ値: 31-33点（PTSD疑い）",
+        "DSM-5診断基準: B群1項目以上(1-5番)、C群1項目以上(6-7番)、D群2項目以上(8-14番)、E群2項目以上(15-20番)で各項目2点以上",
+        "著作権: パブリックドメイン（米国政府機関職員による開発のため）"
+    ],
+    "description": [
+        "PCL-5は、DSM-5基準に基づくPTSD症状を評価する20項目の自己記入式尺度です。",
+        "過去1ヶ月間の症状について、最もつらかった出来事を思い浮かべながらお答えください。",
+        "各項目について、その症状にどの程度悩まされたかを5段階で評価してください。"
+    ],
+    "fields": [
+        {
+            "name": "最もつらかった出来事",
+            "type": "textarea",
+            "dispname": "最もつらかった出来事",
+            "description": "あなたが経験した最もつらかった出来事について簡潔に記載してください",
+            "rows": 3,
+            "required": true
+        },
+        {
+            "name": "section_B",
+            "type": "subsection",
+            "dispname": "再体験症状（B群症状）"
+        },
+        {
+            "name": "PCL1",
+            "type": "radio",
+            "dispname": "1. つらい体験の繰り返される、困った、望まない記憶",
+            "description": "つらい体験について、繰り返される、困った、望まない記憶に、どの程度悩まされましたか？",
+            "selector": [
+                "全くない",
+                "少しだけ",
+                "中程度",
+                "かなり",
+                "極度に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "PCL2",
+            "type": "radio",
+            "dispname": "2. つらい体験の繰り返される、困った夢",
+            "description": "つらい体験の繰り返される、困った夢に、どの程度悩まされましたか？",
+            "selector": [
+                "全くない",
+                "少しだけ",
+                "中程度",
+                "かなり",
+                "極度に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "PCL3",
+            "type": "radio",
+            "dispname": "3. つらい体験が実際に再び起こっているかのように突然感じたり行動したりすること",
+            "description": "突然、つらい体験が実際に再び起こっているかのように感じたり行動したりすること（実際にその場に戻って再体験しているかのように感じること）に、どの程度悩まされましたか？",
+            "selector": [
+                "全くない",
+                "少しだけ",
+                "中程度",
+                "かなり",
+                "極度に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "PCL4",
+            "type": "radio",
+            "dispname": "4. つらい体験を思い出させるものがあったときの強い動揺",
+            "description": "つらい体験を思い出させるものがあったとき、非常に動揺することに、どの程度悩まされましたか？",
+            "selector": [
+                "全くない",
+                "少しだけ",
+                "中程度",
+                "かなり",
+                "極度に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "PCL5",
+            "type": "radio",
+            "dispname": "5. つらい体験を思い出させるものがあったときの強い身体反応",
+            "description": "つらい体験を思い出させるものがあったとき、強い身体反応があること（例：心臓がドキドキする、呼吸困難、発汗）に、どの程度悩まされましたか？",
+            "selector": [
+                "全くない",
+                "少しだけ",
+                "中程度",
+                "かなり",
+                "極度に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "section_C",
+            "type": "subsection",
+            "dispname": "回避症状（C群症状）"
+        },
+        {
+            "name": "PCL6",
+            "type": "radio",
+            "dispname": "6. つらい体験に関連する記憶、思考、感情の回避",
+            "description": "つらい体験に関連する記憶、思考、感情を避けることに、どの程度悩まされましたか？",
+            "selector": [
+                "全くない",
+                "少しだけ",
+                "中程度",
+                "かなり",
+                "極度に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "PCL7",
+            "type": "radio",
+            "dispname": "7. つらい体験の外的な手がかりの回避",
+            "description": "つらい体験の外的な手がかりを避けること（例：人、場所、会話、活動、物、状況）に、どの程度悩まされましたか？",
+            "selector": [
+                "全くない",
+                "少しだけ",
+                "中程度",
+                "かなり",
+                "極度に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "section_D",
+            "type": "subsection",
+            "dispname": "認知と気分の陰性の変化（D群症状）"
+        },
+        {
+            "name": "PCL8",
+            "type": "radio",
+            "dispname": "8. つらい体験の重要な部分を思い出すのに困難があること",
+            "description": "つらい体験の重要な部分を思い出すのに困難があることに、どの程度悩まされましたか？",
+            "selector": [
+                "全くない",
+                "少しだけ",
+                "中程度",
+                "かなり",
+                "極度に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "PCL9",
+            "type": "radio",
+            "dispname": "9. 自分、他者、世界に対する強い否定的信念",
+            "description": "自分、他の人、世界に対する強い否定的信念を持つこと（例：「私はダメな人間だ」「私には深刻な問題がある」「誰も信用できない」「世界は完全に危険だ」といった考え）に、どの程度悩まされましたか？",
+            "selector": [
+                "全くない",
+                "少しだけ",
+                "中程度",
+                "かなり",
+                "極度に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "PCL10",
+            "type": "radio",
+            "dispname": "10. つらい体験やその後の出来事について自分や他者を責めること",
+            "description": "つらい体験やその後に起こったことについて、自分や他の人を責めることに、どの程度悩まされましたか？",
+            "selector": [
+                "全くない",
+                "少しだけ",
+                "中程度",
+                "かなり",
+                "極度に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "PCL11",
+            "type": "radio",
+            "dispname": "11. 恐怖、恐ろしさ、怒り、罪悪感、恥などの強い陰性感情",
+            "description": "恐怖、恐ろしさ、怒り、罪悪感、恥などの強い陰性感情を持つことに、どの程度悩まされましたか？",
+            "selector": [
+                "全くない",
+                "少しだけ",
+                "中程度",
+                "かなり",
+                "極度に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "PCL12",
+            "type": "radio",
+            "dispname": "12. 以前楽しんでいた活動への興味の減退",
+            "description": "以前楽しんでいた活動への興味を失うことに、どの程度悩まされましたか？",
+            "selector": [
+                "全くない",
+                "少しだけ",
+                "中程度",
+                "かなり",
+                "極度に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "PCL13",
+            "type": "radio",
+            "dispname": "13. 他者との距離感や疎外感",
+            "description": "他の人との距離感や疎外感を感じることに、どの程度悩まされましたか？",
+            "selector": [
+                "全くない",
+                "少しだけ",
+                "中程度",
+                "かなり",
+                "極度に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "PCL14",
+            "type": "radio",
+            "dispname": "14. 陽性感情を体験することの困難",
+            "description": "陽性感情を体験することの困難（例：幸せを感じられない、身近な人に愛情を感じられない）に、どの程度悩まされましたか？",
+            "selector": [
+                "全くない",
+                "少しだけ",
+                "中程度",
+                "かなり",
+                "極度に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "section_E",
+            "type": "subsection",
+            "dispname": "覚醒と反応性の著しい変化（E群症状）"
+        },
+        {
+            "name": "PCL15",
+            "type": "radio",
+            "dispname": "15. 怒りやすさ、怒りの爆発、攻撃的行動",
+            "description": "怒りやすさ、怒りの爆発、攻撃的行動に、どの程度悩まされましたか？",
+            "selector": [
+                "全くない",
+                "少しだけ",
+                "中程度",
+                "かなり",
+                "極度に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "PCL16",
+            "type": "radio",
+            "dispname": "16. リスクを取りすぎたり自分を傷つける可能性のあることをすること",
+            "description": "リスクを取りすぎたり、自分を傷つける可能性のあることをしたりすることに、どの程度悩まされましたか？",
+            "selector": [
+                "全くない",
+                "少しだけ",
+                "中程度",
+                "かなり",
+                "極度に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "PCL17",
+            "type": "radio",
+            "dispname": "17. 非常に用心深い、見張っている、警戒している状態",
+            "description": "「非常に用心深い」「見張っている」「警戒している」状態でいることに、どの程度悩まされましたか？",
+            "selector": [
+                "全くない",
+                "少しだけ",
+                "中程度",
+                "かなり",
+                "極度に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "PCL18",
+            "type": "radio",
+            "dispname": "18. びくびくしたり簡単に驚いたりすること",
+            "description": "びくびくしたり、簡単に驚いたりすることに、どの程度悩まされましたか？",
+            "selector": [
+                "全くない",
+                "少しだけ",
+                "中程度",
+                "かなり",
+                "極度に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "PCL19",
+            "type": "radio",
+            "dispname": "19. 集中することの困難",
+            "description": "集中することの困難に、どの程度悩まされましたか？",
+            "selector": [
+                "全くない",
+                "少しだけ",
+                "中程度",
+                "かなり",
+                "極度に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "name": "PCL20",
+            "type": "radio",
+            "dispname": "20. 寝つきの悪さや睡眠の維持困難",
+            "description": "寝つきの悪さや睡眠の維持困難に、どの程度悩まされましたか？",
+            "selector": [
+                "全くない",
+                "少しだけ",
+                "中程度",
+                "かなり",
+                "極度に"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "PCL5_total",
+            "type": "eval",
+            "dispname": "PCL-5総得点（0-80点）",
+            "formula": "[[PCL1.index]] + [[PCL2.index]] + [[PCL3.index]] + [[PCL4.index]] + [[PCL5.index]] + [[PCL6.index]] + [[PCL7.index]] + [[PCL8.index]] + [[PCL9.index]] + [[PCL10.index]] + [[PCL11.index]] + [[PCL12.index]] + [[PCL13.index]] + [[PCL14.index]] + [[PCL15.index]] + [[PCL16.index]] + [[PCL17.index]] + [[PCL18.index]] + [[PCL19.index]] + [[PCL20.index]]"
+        },
+        {
+            "name": "B_cluster_score",
+            "type": "eval",
+            "dispname": "B群（再体験）症状得点（0-20点）",
+            "formula": "[[PCL1.index]] + [[PCL2.index]] + [[PCL3.index]] + [[PCL4.index]] + [[PCL5.index]]"
+        },
+        {
+            "name": "C_cluster_score",
+            "type": "eval",
+            "dispname": "C群（回避）症状得点（0-8点）",
+            "formula": "[[PCL6.index]] + [[PCL7.index]]"
+        },
+        {
+            "name": "D_cluster_score",
+            "type": "eval",
+            "dispname": "D群（認知と気分の陰性の変化）症状得点（0-28点）",
+            "formula": "[[PCL8.index]] + [[PCL9.index]] + [[PCL10.index]] + [[PCL11.index]] + [[PCL12.index]] + [[PCL13.index]] + [[PCL14.index]]"
+        },
+        {
+            "name": "E_cluster_score",
+            "type": "eval",
+            "dispname": "E群（覚醒と反応性の変化）症状得点（0-24点）",
+            "formula": "[[PCL15.index]] + [[PCL16.index]] + [[PCL17.index]] + [[PCL18.index]] + [[PCL19.index]] + [[PCL20.index]]"
+        },
+        {
+            "name": "B_criteria_met",
+            "type": "eval",
+            "dispname": "B群診断基準（1項目以上で2点以上）",
+            "formula": "( ([[PCL1.index]] >= 2) || ([[PCL2.index]] >= 2) || ([[PCL3.index]] >= 2) || ([[PCL4.index]] >= 2) || ([[PCL5.index]] >= 2) ) ? 1 : 0"
+        },
+        {
+            "name": "C_criteria_met",
+            "type": "eval",
+            "dispname": "C群診断基準（1項目以上で2点以上）",
+            "formula": "( ([[PCL6.index]] >= 2) || ([[PCL7.index]] >= 2) ) ? 1 : 0"
+        },
+        {
+            "name": "D_criteria_met",
+            "type": "eval",
+            "dispname": "D群診断基準（2項目以上で2点以上）",
+            "formula": "( ([[PCL8.index]] >= 2 ? 1 : 0) + ([[PCL9.index]] >= 2 ? 1 : 0) + ([[PCL10.index]] >= 2 ? 1 : 0) + ([[PCL11.index]] >= 2 ? 1 : 0) + ([[PCL12.index]] >= 2 ? 1 : 0) + ([[PCL13.index]] >= 2 ? 1 : 0) + ([[PCL14.index]] >= 2 ? 1 : 0) ) >= 2 ? 1 : 0"
+        },
+        {
+            "name": "E_criteria_met",
+            "type": "eval",
+            "dispname": "E群診断基準（2項目以上で2点以上）",
+            "formula": "( ([[PCL15.index]] >= 2 ? 1 : 0) + ([[PCL16.index]] >= 2 ? 1 : 0) + ([[PCL17.index]] >= 2 ? 1 : 0) + ([[PCL18.index]] >= 2 ? 1 : 0) + ([[PCL19.index]] >= 2 ? 1 : 0) + ([[PCL20.index]] >= 2 ? 1 : 0) ) >= 2 ? 1 : 0"
+        },
+        {
+            "name": "DSM5_criteria_met",
+            "type": "eval",
+            "dispname": "DSM-5診断基準（B群1項目以上、C群1項目以上、D群2項目以上、E群2項目以上で各2点以上）",
+            "formula": "([[B_criteria_met]] == 1) && ([[C_criteria_met]] == 1) && ([[D_criteria_met]] == 1) && ([[E_criteria_met]] == 1) ? 1 : 0"
+        },
+        {
+            "name": "cutoff_31_met",
+            "type": "eval",
+            "dispname": "カットオフスコア基準（総得点31点以上）",
+            "formula": "[[PCL5_total]] >= 31 ? 1 : 0"
+        },
+        {
+            "name": "cutoff_33_met",
+            "type": "eval",
+            "dispname": "カットオフスコア基準（総得点33点以上）",
+            "formula": "[[PCL5_total]] >= 33 ? 1 : 0"
+        }
+    ]
+}

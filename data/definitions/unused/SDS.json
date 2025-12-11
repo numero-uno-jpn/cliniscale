@@ -1,0 +1,300 @@
+{
+    "_comment": [
+        "Zung Self-rating Depression Scale (SDS) - うつ病自己評価スケール",
+        "原典論文: Zung WW. A self-rating depression scale. Arch Gen Psychiatry 1965;12:63-70",
+        "参考URL: https://integrationacademy.ahrq.gov/sites/default/files/2020-07/Zung_Self_Rating_Depression_Scale.pdf",
+        "日本語版: 福田一彦ら 精神神経学雑誌 1973;75:673-679",
+        "20項目の自己記入式評価尺度、過去数日間の症状について4段階評価",
+        "逆転項目（ポジティブ項目）: 2, 5, 6, 11, 12, 14, 16, 17, 18, 20",
+        "スコア範囲: 20-80点（生スコア）、25-100点（インデックススコア）",
+        "重症度判定: 正常 25-49、軽度 50-59、中等度 60-69、重度 70以上（インデックススコア）"
+    ],
+    "title": "SDS うつ病自己評価スケール",
+    "description": [
+        "このスケールは、うつ病の症状を評価するために開発された自己記入式の評価尺度です。",
+        "過去数日間のあなたの状態について、最も当てはまるものを選択してください。"
+    ],
+    "fields": [
+        {
+            "name": "q1",
+            "type": "radio",
+            "dispname": "気分が沈んで憂うつである",
+            "required": true,
+            "selector": [
+                "ほとんどなし",
+                "ときどき",
+                "かなりの間",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "name": "q2",
+            "type": "radio",
+            "dispname": "朝方は最も気分がよい",
+            "required": true,
+            "selector": [
+                "ほとんどなし",
+                "ときどき",
+                "かなりの間",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "4|3|2|1"
+        },
+        {
+            "name": "q3",
+            "type": "radio",
+            "dispname": "泣いたり泣きたくなったりする",
+            "required": true,
+            "selector": [
+                "ほとんどなし",
+                "ときどき",
+                "かなりの間",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "name": "q4",
+            "type": "radio",
+            "dispname": "夜よく眠れない",
+            "required": true,
+            "selector": [
+                "ほとんどなし",
+                "ときどき",
+                "かなりの間",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "name": "q5",
+            "type": "radio",
+            "dispname": "いつものように食欲がある",
+            "required": true,
+            "selector": [
+                "ほとんどなし",
+                "ときどき",
+                "かなりの間",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "4|3|2|1"
+        },
+        {
+            "name": "q6",
+            "type": "radio",
+            "dispname": "異性に対して関心がある",
+            "required": true,
+            "selector": [
+                "ほとんどなし",
+                "ときどき",
+                "かなりの間",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "4|3|2|1"
+        },
+        {
+            "name": "q7",
+            "type": "radio",
+            "dispname": "体重が減ったことに気づく",
+            "required": true,
+            "selector": [
+                "ほとんどなし",
+                "ときどき",
+                "かなりの間",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "name": "q8",
+            "type": "radio",
+            "dispname": "便秘に悩んでいる",
+            "required": true,
+            "selector": [
+                "ほとんどなし",
+                "ときどき",
+                "かなりの間",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "name": "q9",
+            "type": "radio",
+            "dispname": "いつもより心臓がドキドキする",
+            "required": true,
+            "selector": [
+                "ほとんどなし",
+                "ときどき",
+                "かなりの間",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "name": "q10",
+            "type": "radio",
+            "dispname": "なんとなく疲れる",
+            "required": true,
+            "selector": [
+                "ほとんどなし",
+                "ときどき",
+                "かなりの間",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "name": "q11",
+            "type": "radio",
+            "dispname": "いつものように頭の回転が速い",
+            "required": true,
+            "selector": [
+                "ほとんどなし",
+                "ときどき",
+                "かなりの間",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "4|3|2|1"
+        },
+        {
+            "name": "q12",
+            "type": "radio",
+            "dispname": "普段していることが楽にできる",
+            "required": true,
+            "selector": [
+                "ほとんどなし",
+                "ときどき",
+                "かなりの間",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "4|3|2|1"
+        },
+        {
+            "name": "q13",
+            "type": "radio",
+            "dispname": "そわそわして落ち着かない",
+            "required": true,
+            "selector": [
+                "ほとんどなし",
+                "ときどき",
+                "かなりの間",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "name": "q14",
+            "type": "radio",
+            "dispname": "将来に希望がある",
+            "required": true,
+            "selector": [
+                "ほとんどなし",
+                "ときどき",
+                "かなりの間",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "4|3|2|1"
+        },
+        {
+            "name": "q15",
+            "type": "radio",
+            "dispname": "いつもよりもイライラする",
+            "required": true,
+            "selector": [
+                "ほとんどなし",
+                "ときどき",
+                "かなりの間",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "name": "q16",
+            "type": "radio",
+            "dispname": "決断を下すことは容易である",
+            "required": true,
+            "selector": [
+                "ほとんどなし",
+                "ときどき",
+                "かなりの間",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "4|3|2|1"
+        },
+        {
+            "name": "q17",
+            "type": "radio",
+            "dispname": "自分は有用で必要な人間だと思う",
+            "required": true,
+            "selector": [
+                "ほとんどなし",
+                "ときどき",
+                "かなりの間",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "4|3|2|1"
+        },
+        {
+            "name": "q18",
+            "type": "radio",
+            "dispname": "自分の人生はかなり充実している",
+            "required": true,
+            "selector": [
+                "ほとんどなし",
+                "ときどき",
+                "かなりの間",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "4|3|2|1"
+        },
+        {
+            "name": "q19",
+            "type": "radio",
+            "dispname": "自分が死んだほうが他の人のためになると思う",
+            "required": true,
+            "selector": [
+                "ほとんどなし",
+                "ときどき",
+                "かなりの間",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "name": "q20",
+            "type": "radio",
+            "dispname": "普段していることを楽しんでいる",
+            "required": true,
+            "selector": [
+                "ほとんどなし",
+                "ときどき",
+                "かなりの間",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "4|3|2|1"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "raw_score",
+            "type": "eval",
+            "dispname": "生スコア (20-80点)",
+            "formula": "[[q1.index]] + [[q2.index]] + [[q3.index]] + [[q4.index]] + [[q5.index]] + [[q6.index]] + [[q7.index]] + [[q8.index]] + [[q9.index]] + [[q10.index]] + [[q11.index]] + [[q12.index]] + [[q13.index]] + [[q14.index]] + [[q15.index]] + [[q16.index]] + [[q17.index]] + [[q18.index]] + [[q19.index]] + [[q20.index]]"
+        },
+        {
+            "name": "index_score",
+            "type": "eval",
+            "dispname": "インデックススコア (25-100点)",
+            "formula": "((raw_score)) * 1.25"
+        },
+        {
+            "name": "severity_category",
+            "type": "eval",
+            "dispname": "重症度分類",
+            "formula": "((index_score)) < 50 ? \"正常範囲\" : ((index_score)) < 60 ? \"軽度うつ状態\" : ((index_score)) < 70 ? \"中等度うつ状態\" : \"重度うつ状態\""
+        }
+    ]
+}

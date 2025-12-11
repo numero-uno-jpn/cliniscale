@@ -1,0 +1,284 @@
+{
+  "_comment": [
+    "CARG (Cancer and Aging Research Group) Chemotherapy Toxicity Tool",
+    "高齢がん患者における化学療法毒性リスク予測スコア",
+    "Hurria A, et al. Predicting chemotherapy toxicity in older adults with cancer: a prospective multicenter study. J Clin Oncol. 2011;29(25):3457-65.",
+    "Hurria A, et al. Validation of a Prediction Tool for Chemotherapy Toxicity in Older Adults With Cancer. J Clin Oncol. 2016;34(20):2366-71.",
+    "https://www.mycarg.org/",
+    "https://www.mdcalc.com/calc/10424/cancer-aging-research-group-chemotherapy-toxicity-tool-carg-tt",
+    "11項目で構成され、グレード3-5の化学療法毒性リスクを予測",
+    "スコア範囲: 0-19点",
+    "開発研究 (N=500): 低リスク(0-5点) 30%, 中リスク(6-9点) 52%, 高リスク(10-19点) 83%",
+    "検証研究 (N=250): 低リスク(0-5点) 36.7%, 中リスク(6-9点) 62.4%, 高リスク(10-19点) 70.2%"
+  ],
+  "title": "CARG 化学療法毒性予測スコア",
+  "description": [
+    "65歳以上のがん患者を対象とした化学療法の重篤な有害事象リスクを予測するスコアです",
+    "11項目の質問にお答えください"
+  ],
+  "fields": [
+    {
+      "type": "subsection",
+      "name": "基本情報セクション",
+      "dispname": "基本情報"
+    },
+    {
+      "dispname": "性別",
+      "name": "性別",
+      "type": "radio",
+      "required": true,
+      "selector": "男性|女性",
+      "selectoridx": "1|0"
+    },
+    {
+      "dispname": "年齢",
+      "name": "年齢",
+      "type": "text",
+      "required": true,
+      "inputmode": "numeric",
+      "postfix": "歳",
+      "testrange": [
+        65,
+        95
+      ],
+      "description": "65歳以上の方が対象です"
+    },
+    {
+      "dispname": "身長",
+      "name": "身長",
+      "type": "text",
+      "required": true,
+      "inputmode": "decimal",
+      "testrange": [
+        135,
+        190
+      ],
+      "postfix": "cm"
+    },
+    {
+      "dispname": "体重",
+      "name": "体重",
+      "type": "text",
+      "required": true,
+      "inputmode": "decimal",
+      "testrange": [
+        35,
+        95
+      ],
+      "postfix": "kg"
+    },
+    {
+      "type": "subsection",
+      "name": "検査値セクション",
+      "dispname": "検査値"
+    },
+    {
+      "dispname": "血清クレアチニン値",
+      "name": "クレアチニン",
+      "type": "text",
+      "required": true,
+      "inputmode": "decimal",
+      "testrange": [
+        0.8,
+        3
+      ],
+      "postfix": "mg/dL"
+    },
+    {
+      "dispname": "ヘモグロビン値",
+      "name": "ヘモグロビン",
+      "type": "text",
+      "required": true,
+      "inputmode": "decimal",
+      "testrange": [
+        6,
+        15
+      ],
+      "postfix": "g/dL"
+    },
+    {
+      "type": "subsection",
+      "name": "がん治療情報セクション",
+      "dispname": "がん・治療情報"
+    },
+    {
+      "dispname": "がんの種類",
+      "name": "がん種類",
+      "type": "radio",
+      "required": true,
+      "selector": "消化器がん|泌尿器がん|その他",
+      "selectoridx": "2|2|0",
+      "description": "消化器がん: 胃がん、大腸がん、膵がんなど<br>泌尿器がん: 膀胱がん、腎がんなど"
+    },
+    {
+      "dispname": "化学療法の投与量",
+      "name": "化学療法投与量",
+      "type": "radio",
+      "required": true,
+      "selector": "標準用量|減量",
+      "selectoridx": "2|0",
+      "description": "標準用量: 100%の投与量<br>減量: 100%未満の投与量"
+    },
+    {
+      "dispname": "化学療法薬剤数",
+      "name": "薬剤数",
+      "type": "radio",
+      "required": true,
+      "selector": "単剤|多剤併用",
+      "selectoridx": "0|2",
+      "description": "単剤: 1種類の薬剤<br>多剤併用: 2種類以上の薬剤"
+    },
+    {
+      "type": "subsection",
+      "name": "機能評価セクション",
+      "dispname": "身体機能・生活機能"
+    },
+    {
+      "dispname": "聴力（補聴器使用時も含む）",
+      "name": "聴力",
+      "type": "radio",
+      "required": true,
+      "selector": "非常に良い|良い|普通|悪い|聞こえない",
+      "selectoridx": "0|0|2|2|2"
+    },
+    {
+      "dispname": "過去6か月の転倒回数",
+      "name": "転倒",
+      "type": "radio",
+      "required": true,
+      "selector": "0回|1回以上",
+      "selectoridx": "0|3"
+    },
+    {
+      "dispname": "薬の服用",
+      "name": "服薬能力",
+      "type": "radio",
+      "required": true,
+      "selector": "自分で服薬できる|少し手助けが必要|全く自分では服薬できない",
+      "selectoridx": "0|1|1",
+      "description": "少し手助けが必要: 準備してもらったり、服薬時間を教えてもらったりすれば服薬できる"
+    },
+    {
+      "dispname": "1ブロック (約100m) 歩行の制限",
+      "name": "歩行制限",
+      "type": "radio",
+      "required": true,
+      "selector": "全く制限されない|少し制限される|かなり制限される",
+      "selectoridx": "0|2|2"
+    },
+    {
+      "dispname": "過去4週間での身体的・精神的問題による社会活動への支障",
+      "name": "社会活動制限",
+      "type": "radio",
+      "required": true,
+      "selector": "全くない|少しある|時々ある|しばしばある|いつもある",
+      "selectoridx": "0|0|1|1|1",
+      "description": "社会活動: 友人や親戚を訪問することなど"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "年齢ポイント",
+      "type": "eval",
+      "formula": "((年齢)) >= 72 ? 2 : 0",
+      "dispname": "年齢ポイント 72歳以上で2点"
+    },
+    {
+      "name": "性別ポイント",
+      "type": "eval",
+      "formula": "[[性別.index]]",
+      "dispname": "性別ポイント 男性で1点"
+    },
+    {
+      "name": "クレアチニンクリアランス",
+      "type": "eval",
+      "formula": "( {{性別}} === '男性' ? ( ( (140 - ((年齢))) *((体重)) ) / (72 * ((クレアチニン))) ) : ( ( ( (140 - ((年齢))) *((体重)) ) / (72 * ((クレアチニン))) ) * 0.85 ) ).toFixed(2)",
+      "dispname": "クレアチニンクリアランス Cockcroft-Gault式による推定値 (mL/min)"
+    },
+    {
+      "name": "腎機能ポイント",
+      "type": "eval",
+      "formula": "((クレアチニンクリアランス)) < 34 ? 3 : 0",
+      "dispname": "腎機能ポイント クレアチニンクリアランス <34 mL/min で3点"
+    },
+    {
+      "name": "ヘモグロビンポイント",
+      "type": "eval",
+      "formula": "{{性別}} === '男性' ? ( ((ヘモグロビン)) < 11 ? 3 : 0 ) : ( ((ヘモグロビン)) < 10 ? 3 : 0 )",
+      "dispname": "ヘモグロビンポイント 男性 <11 g/dL、女性 <10 g/dL で3点"
+    },
+    {
+      "name": "がん種類ポイント",
+      "type": "eval",
+      "formula": "[[がん種類.index]]",
+      "dispname": "がん種類ポイント 消化器・泌尿器がんで2点"
+    },
+    {
+      "name": "化学療法投与量ポイント",
+      "type": "eval",
+      "formula": "[[化学療法投与量.index]]",
+      "dispname": "化学療法投与量ポイント 標準用量で2点"
+    },
+    {
+      "name": "薬剤数ポイント",
+      "type": "eval",
+      "formula": "[[薬剤数.index]]",
+      "dispname": "薬剤数ポイント 多剤併用で2点"
+    },
+    {
+      "name": "聴力ポイント",
+      "type": "eval",
+      "formula": "[[聴力.index]]",
+      "dispname": "聴力ポイント 普通以下で2点"
+    },
+    {
+      "name": "転倒ポイント",
+      "type": "eval",
+      "formula": "[[転倒.index]]",
+      "dispname": "転倒ポイント 過去6か月で1回以上の転倒で3点"
+    },
+    {
+      "name": "服薬能力ポイント",
+      "type": "eval",
+      "formula": "[[服薬能力.index]]",
+      "dispname": "服薬能力ポイント 手助け必要で1点"
+    },
+    {
+      "name": "歩行制限ポイント",
+      "type": "eval",
+      "formula": "[[歩行制限.index]]",
+      "dispname": "歩行制限ポイント 100m歩行制限ありで2点"
+    },
+    {
+      "name": "社会活動制限ポイント",
+      "type": "eval",
+      "formula": "[[社会活動制限.index]]",
+      "dispname": "社会活動制限ポイント 社会活動への支障ありで1点"
+    },
+    {
+      "dispname": "CARGスコア合計",
+      "name": "CARGスコア",
+      "type": "eval",
+      "formula": "[[年齢ポイント]] + [[性別ポイント]] + [[腎機能ポイント]] + [[ヘモグロビンポイント]] + [[がん種類ポイント]] + [[化学療法投与量ポイント]] + [[薬剤数ポイント]] + [[聴力ポイント]] + [[転倒ポイント]] + [[服薬能力ポイント]] + [[歩行制限ポイント]] + [[社会活動制限ポイント]]"
+    },
+    {
+      "dispname": "リスク分類",
+      "name": "リスク分類",
+      "type": "eval",
+      "formula": "[[CARGスコア]] <= 5 ? '低リスク' : ( [[CARGスコア]] <= 9 ? '中リスク' : '高リスク' )"
+    },
+    {
+      "dispname": "毒性発現予測率（開発研究）",
+      "name": "毒性発現率_開発研究",
+      "type": "eval",
+      "formula": "[[CARGスコア]] <= 5 ? '30%' : ( [[CARGスコア]] <= 9 ? '52%' : '83%' )"
+    },
+    {
+      "dispname": "毒性発現予測率（検証研究）",
+      "name": "毒性発現率_検証研究",
+      "type": "eval",
+      "formula": "[[CARGスコア]] <= 5 ? '36.7%' : ( [[CARGスコア]] <= 9 ? '62.4%' : '70.2%' )"
+    }
+  ]
+}

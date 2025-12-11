@@ -1,0 +1,164 @@
+{
+    "_comment": [
+        "Revised Trauma Score (RTS) - 外傷重症度評価問診票",
+        "Champion HR, et al. A revision of the Trauma Score. J Trauma. 1989;29(5):623-9. PMID: 2657085",
+        "参考URL: https://www.mdcalc.com/calc/683/revised-trauma-score",
+        "重み付けRTS = 0.9368 × GCS点数 + 0.7326 × 収縮期血圧点数 + 0.2908 × 呼吸数点数"
+    ],
+    "title": "Revised Trauma Score (RTS) - 外傷重症度評価",
+    "description": [
+        "外傷患者の生理学的重症度を評価するスコアです",
+        "Glasgow Coma Scale、収縮期血圧、呼吸数の3項目から算出します"
+    ],
+    "contact": "救急科",
+    "dept_in_charge": "救急部",
+    "responsible_person": [
+        "外傷センター長"
+    ],
+    "staffs": [
+        "救急科医師"
+    ],
+    "submit_button_title": "評価結果を送信",
+    "mail_notification": true,
+    "fields": [
+        {
+            "type": "note",
+            "description": "来院時のバイタルサインをもとに、外傷の重症度を評価します。各項目をご入力ください。"
+        },
+        {
+            "type": "subsection",
+            "dispname": "Glasgow Coma Scale（意識レベル）"
+        },
+        {
+            "dispname": "開眼反応（Eye Opening）",
+            "name": "開眼反応",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "自発的に開眼",
+                "音声で開眼",
+                "痛み刺激で開眼",
+                "開眼しない"
+            ],
+            "selectoridx": "4|3|2|1"
+        },
+        {
+            "dispname": "言語反応（Verbal Response）",
+            "name": "言語反応",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "見当識あり",
+                "混乱した会話",
+                "発語のみ",
+                "発声のみ",
+                "発声なし"
+            ],
+            "selectoridx": "5|4|3|2|1"
+        },
+        {
+            "dispname": "運動反応（Motor Response）",
+            "name": "運動反応",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "指示に従う",
+                "刺激部位がわかる",
+                "正常屈曲",
+                "異常屈曲",
+                "伸展",
+                "まったく動かさない"
+            ],
+            "selectoridx": "6|5|4|3|2|1"
+        },
+        {
+            "type": "subsection",
+            "dispname": "収縮期血圧"
+        },
+        {
+            "dispname": "収縮期血圧",
+            "name": "収縮期血圧",
+            "type": "text",
+            "required": true,
+            "postfix": "mmHg",
+            "inputmode": "numeric",
+            "testrange": [
+                40,
+                250
+            ],
+            "description": "半角数字で入力してください（例: 120）"
+        },
+        {
+            "type": "subsection",
+            "dispname": "呼吸数"
+        },
+        {
+            "dispname": "呼吸数",
+            "name": "呼吸数",
+            "type": "text",
+            "required": true,
+            "postfix": "回/分",
+            "inputmode": "numeric",
+            "testrange": [
+                0,
+                60
+            ],
+            "description": "半角数字で入力してください（例: 16）"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "GCS合計",
+            "type": "eval",
+            "formula": "[[開眼反応.index]] + [[言語反応.index]] + [[運動反応.index]]",
+            "dispname": "Glasgow Coma Scale合計点（3-15点）"
+        },
+        {
+            "name": "GCS点数",
+            "type": "eval",
+            "formula": "[[GCS合計]] >= 13 ? 4 : ([[GCS合計]] >= 9 ? 3 : ([[GCS合計]] >= 6 ? 2 : ([[GCS合計]] >= 4 ? 1 : 0)))",
+            "dispname": "GCS点数（0-4点）: 13-15=4点, 9-12=3点, 6-8=2点, 4-5=1点, 3=0点"
+        },
+        {
+            "name": "収縮期血圧点数",
+            "type": "eval",
+            "formula": "[[収縮期血圧]] >= 90 ? 4 : ([[収縮期血圧]] >= 76 ? 3 : ([[収縮期血圧]] >= 50 ? 2 : ([[収縮期血圧]] >= 1 ? 1 : 0)))",
+            "dispname": "血圧点数（0-4点）: ≥90=4点, 76-89=3点, 50-75=2点, 1-49=1点, 0=0点"
+        },
+        {
+            "name": "呼吸数点数",
+            "type": "eval",
+            "formula": "[[呼吸数]] >= 10 && [[呼吸数]] <= 29 ? 4 : ([[呼吸数]] >= 30 || ([[呼吸数]] >= 6 && [[呼吸数]] <= 9) ? 3 : ([[呼吸数]] >= 1 && [[呼吸数]] <= 5 ? 2 : 0))",
+            "dispname": "呼吸数点数（0-4点）: 10-29=4点, ≥30または6-9=3点, 1-5=2点, 0=0点"
+        },
+        {
+            "name": "簡易RTS",
+            "type": "eval",
+            "formula": "[[GCS点数]] + [[収縮期血圧点数]] + [[呼吸数点数]]",
+            "dispname": "簡易RTS（Triage RTS）- 0-12点。11点以下で外傷センター搬送を推奨"
+        },
+        {
+            "name": "重み付けRTS",
+            "type": "eval",
+            "formula": "(0.9368 * [[GCS点数]] + 0.7326 * [[収縮期血圧点数]] + 0.2908 * [[呼吸数点数]]).toFixed(4)",
+            "dispname": "重み付けRTS（Weighted RTS）- 0-7.8408点。予後予測に使用"
+        },
+        {
+            "name": "トリアージ判定",
+            "type": "eval",
+            "formula": "[[簡易RTS]] == 12 ? '遅延対応可' : ([[簡易RTS]] == 11 ? '緊急対応' : ([[簡易RTS]] >= 3 ? '即座対応' : '救命困難'))",
+            "dispname": "START triageに基づく判定"
+        },
+        {
+            "name": "Warning: 中等度緊急",
+            "formula": "[[簡易RTS]] <= 10",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 重症",
+            "formula": "[[簡易RTS]] < 3",
+            "type": "emergency"
+        }
+    ]
+}

@@ -1,0 +1,300 @@
+{
+  "_comment": [
+    "SAPS II - Simplified Acute Physiology Score II",
+    "ICU患者の重症度評価スコア",
+    "開発者: J. R. Le Gall (1993)",
+    "原典: Le Gall JR, et al. JAMA. 1993;270(24):2957-63.",
+    "参考URL: https://pubmed.ncbi.nlm.nih.gov/8254858/",
+    "公式URL: https://www.mdcalc.com/calc/4044/simplified-acute-physiology-score-saps-ii",
+    "評価: 0-163点、死亡率予測",
+    "ICU入室後24時間以内の最悪値を使用"
+  ],
+  "title": "SAPS II",
+  "description": [
+    "ICU患者の重症度を評価します",
+    "ICU入室後24時間以内の最悪値を入力してください"
+  ],
+  "fields": [
+    {
+      "type": "subsection",
+      "dispname": "基本情報"
+    },
+    {
+      "type": "radio",
+      "name": "年齢",
+      "dispname": "年齢",
+      "required": true,
+      "selector": [
+        "40歳未満",
+        "40-59歳",
+        "60-69歳",
+        "70-74歳",
+        "75-79歳",
+        "80歳以上"
+      ],
+      "selectoridx": "0|7|12|15|16|18"
+    },
+    {
+      "type": "radio",
+      "name": "入院形態",
+      "dispname": "入院形態",
+      "required": true,
+      "selector": [
+        "予定手術後",
+        "内科",
+        "緊急手術後"
+      ],
+      "selectoridx": "0|6|8"
+    },
+    {
+      "type": "subsection",
+      "dispname": "バイタルサイン"
+    },
+    {
+      "type": "radio",
+      "name": "心拍数",
+      "dispname": "心拍数 (回/分)",
+      "required": true,
+      "selector": [
+        "70未満",
+        "70-119",
+        "120-159",
+        "160以上"
+      ],
+      "selectoridx": "2|0|4|7"
+    },
+    {
+      "type": "radio",
+      "name": "収縮期血圧",
+      "dispname": "収縮期血圧 (mmHg)",
+      "required": true,
+      "selector": [
+        "70未満",
+        "70-99",
+        "100-199",
+        "200以上"
+      ],
+      "selectoridx": "13|5|0|2"
+    },
+    {
+      "type": "radio",
+      "name": "体温",
+      "dispname": "体温 (℃)",
+      "required": true,
+      "selector": [
+        "39.0未満",
+        "39.0以上"
+      ],
+      "selectoridx": "0|3"
+    },
+    {
+      "type": "subsection",
+      "dispname": "呼吸・酸素化"
+    },
+    {
+      "type": "radio",
+      "name": "PaO2FiO2比",
+      "dispname": "PaO2/FiO2比",
+      "description": "人工呼吸管理中または気管挿管中の場合",
+      "selector": [
+        "200以上または測定なし",
+        "100-199",
+        "100未満"
+      ],
+      "selectoridx": "0|9|11"
+    },
+    {
+      "type": "radio",
+      "name": "尿量",
+      "dispname": "尿量 (L/日)",
+      "required": true,
+      "selector": [
+        "1.0以上",
+        "0.5-0.999",
+        "0.5未満"
+      ],
+      "selectoridx": "0|4|11"
+    },
+    {
+      "type": "subsection",
+      "dispname": "神経学的評価"
+    },
+    {
+      "type": "radio",
+      "name": "GCS",
+      "dispname": "Glasgow Coma Scale",
+      "required": true,
+      "selector": [
+        "14-15",
+        "11-13",
+        "9-10",
+        "6-8",
+        "6未満"
+      ],
+      "selectoridx": "0|5|7|13|26"
+    },
+    {
+      "type": "subsection",
+      "dispname": "血液検査"
+    },
+    {
+      "type": "radio",
+      "name": "尿素窒素",
+      "dispname": "血中尿素窒素 (mmol/L)",
+      "required": true,
+      "selector": [
+        "10未満 (<28mg/dL)",
+        "10-29.9 (28-83.7mg/dL)",
+        "30以上 (≧84mg/dL)"
+      ],
+      "selectoridx": [
+        0,
+        6,
+        10
+      ]
+    },
+    {
+      "type": "radio",
+      "name": "白血球",
+      "dispname": "白血球数 (×10^9/L)",
+      "required": true,
+      "selector": [
+        "1.0未満 (<1,000/μL)",
+        "1.0-19.9 (1,000-19,900/μL)",
+        "20.0以上 (≧20,000/μL)"
+      ],
+      "selectoridx": "12|0|3"
+    },
+    {
+      "type": "radio",
+      "name": "カリウム",
+      "dispname": "血清カリウム (mmol/L)",
+      "required": true,
+      "selector": [
+        "3.0未満",
+        "3.0-4.9",
+        "5.0以上"
+      ],
+      "selectoridx": "3|0|3"
+    },
+    {
+      "type": "radio",
+      "name": "ナトリウム",
+      "dispname": "血清ナトリウム (mmol/L)",
+      "required": true,
+      "selector": [
+        "125未満",
+        "125-144",
+        "145以上"
+      ],
+      "selectoridx": "5|0|1"
+    },
+    {
+      "type": "radio",
+      "name": "HCO3",
+      "dispname": "血清重炭酸塩 (mmol/L)",
+      "required": true,
+      "selector": [
+        "15未満",
+        "15-19",
+        "20以上"
+      ],
+      "selectoridx": "6|3|0"
+    },
+    {
+      "type": "radio",
+      "name": "ビリルビン",
+      "dispname": "総ビリルビン (μmol/L)",
+      "required": true,
+      "selector": [
+        "68.4未満 (4mg/dL未満)",
+        "68.4-102.5 (4-5.9mg/dL)",
+        "102.6以上 (6mg/dL以上)"
+      ],
+      "selectoridx": "0|4|9"
+    },
+    {
+      "type": "subsection",
+      "dispname": "基礎疾患"
+    },
+    {
+      "type": "checkbox",
+      "name": "慢性疾患",
+      "dispname": "慢性疾患",
+      "description": "該当するものをすべて選択してください",
+      "selector": [
+        "血液悪性腫瘍",
+        "転移性癌",
+        "AIDS",
+        "該当なし"
+      ]
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "type": "eval",
+      "name": "慢性疾患_血液悪性腫瘍スコア",
+      "formula": "{{慢性疾患}}.includes('血液悪性腫瘍')? 10: 0",
+      "noreport": true
+    },
+    {
+      "type": "eval",
+      "name": "慢性疾患_転移性癌スコア",
+      "formula": "{{慢性疾患}}.includes('転移性癌')? 9: 0",
+      "noreport": true
+    },
+    {
+      "type": "eval",
+      "name": "慢性疾患_AIDSスコア",
+      "formula": "{{慢性疾患}}.includes('AIDS')? 17: 0",
+      "noreport": true
+    },
+    {
+      "type": "eval",
+      "name": "慢性疾患スコア",
+      "formula": "( [[慢性疾患_血液悪性腫瘍スコア]] + [[慢性疾患_転移性癌スコア]] + [[慢性疾患_AIDSスコア]] )",
+      "noreport": true
+    },
+    {
+      "type": "eval",
+      "name": "PaO2FiO2比_index",
+      "formula": "[[PaO2FiO2比.index]]",
+      "noreport": true
+    },
+    {
+      "type": "eval",
+      "name": "SAPSII合計",
+      "description": "SAPS IIスコア (0-163点)",
+      "formula": "[[年齢.index]] + [[入院形態.index]] + [[心拍数.index]] + [[収縮期血圧.index]] + [[体温.index]] + [[PaO2FiO2比_index]] + [[尿量.index]] + [[GCS.index]] + [[尿素窒素.index]] + [[白血球.index]] + [[カリウム.index]] + [[ナトリウム.index]] + [[HCO3.index]] + [[ビリルビン.index]] + [[慢性疾患スコア]]"
+    },
+    {
+      "type": "eval",
+      "name": "logit値",
+      "formula": "-7.7631 + 0.0737 * ((SAPSII合計)) + 0.9971 * Math.log( ((SAPSII合計)) + 1)",
+      "noreport": true
+    },
+    {
+      "type": "eval",
+      "name": "予測死亡率",
+      "description": "院内死亡率の予測 (%)",
+      "formula": "Math.round(Math.exp( ((logit値)) ) / (1 + Math.exp( ((logit値)) )) * 1000) / 10"
+    },
+    {
+      "type": "eval",
+      "name": "リスク層別化",
+      "description": "リスクの分類",
+      "formula": "((予測死亡率)) < 10 ? '低リスク' : ((予測死亡率)) < 30 ? '中リスク' : ((予測死亡率)) < 50 ? '高リスク' : '超高リスク'"
+    },
+    {
+      "type": "warning",
+      "formula": "((予測死亡率)) >= 10",
+      "name": "Warning: 予測死亡率10%以上"
+    },
+    {
+      "type": "emergency",
+      "formula": "((予測死亡率)) >= 30",
+      "name": "Emergency: 予測死亡率30%以上"
+    }
+  ]
+}

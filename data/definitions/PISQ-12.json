@@ -1,0 +1,240 @@
+{
+  "_comment": [
+    "Pelvic Organ Prolapse/Urinary Incontinence Sexual Questionnaire - Short Form 12 (PISQ-12)",
+    "Rogers RG, Coates KW, Kammerer-Doak D, Khalsa S, Qualls C. A short form of the Pelvic Organ Prolapse/Urinary Incontinence Sexual Questionnaire (PISQ-12). Int Urogynecol J Pelvic Floor Dysfunct. 2003;14(3):164-8.",
+    "https://pubmed.ncbi.nlm.nih.gov/12955337/",
+    "骨盤臓器脱・尿失禁性機能質問票短縮版",
+    "0-48点、高得点ほど性機能良好。最初4項目は逆スコア"
+  ],
+  "title": "PISQ-12 (骨盤底障害性機能評価)",
+  "description": [
+    "骨盤臓器脱や尿失禁が性機能に与える影響を評価",
+    "性的に活動的な女性のための質問票です"
+  ],
+  "fields": [
+    {
+      "type": "subsection",
+      "dispname": "行動・感情面"
+    },
+    {
+      "type": "radio",
+      "name": "PISQ1",
+      "dispname": "パートナーとの性行為をどのくらい望みますか",
+      "selector": [
+        "常に",
+        "通常",
+        "時々",
+        "めったにない",
+        "決してない"
+      ],
+      "selectoridx": "4|3|2|1|0",
+      "required": true,
+      "description": "逆スコア項目"
+    },
+    {
+      "type": "radio",
+      "name": "PISQ2",
+      "dispname": "パートナーとの性行為をどのくらい望みますか (パートナーの希望と比較)",
+      "selector": [
+        "常に",
+        "通常",
+        "時々",
+        "めったにない",
+        "決してない"
+      ],
+      "selectoridx": "4|3|2|1|0",
+      "required": true,
+      "description": "逆スコア項目"
+    },
+    {
+      "type": "radio",
+      "name": "PISQ3",
+      "dispname": "オルガスムに達しますか",
+      "selector": [
+        "常に",
+        "通常",
+        "時々",
+        "めったにない",
+        "決してない"
+      ],
+      "selectoridx": "4|3|2|1|0",
+      "required": true,
+      "description": "逆スコア項目"
+    },
+    {
+      "type": "radio",
+      "name": "PISQ4",
+      "dispname": "性行為時にオルガスムに達することが困難ですか",
+      "selector": [
+        "常に",
+        "通常",
+        "時々",
+        "めったにない",
+        "決してない"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "required": true
+    },
+    {
+      "type": "subsection",
+      "dispname": "身体面"
+    },
+    {
+      "type": "radio",
+      "name": "PISQ5",
+      "dispname": "性行為時に痛みがありますか",
+      "selector": [
+        "常に",
+        "通常",
+        "時々",
+        "めったにない",
+        "決してない"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "PISQ6",
+      "dispname": "性行為時に尿漏れがありますか",
+      "selector": [
+        "常に",
+        "通常",
+        "時々",
+        "めったにない",
+        "決してない"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "PISQ7",
+      "dispname": "性行為時に便失禁やガス漏れがありますか",
+      "selector": [
+        "常に",
+        "通常",
+        "時々",
+        "めったにない",
+        "決してない"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "PISQ8",
+      "dispname": "性行為を避けていますか (膀胱の問題のため)",
+      "selector": [
+        "常に",
+        "通常",
+        "時々",
+        "めったにない",
+        "決してない"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "PISQ9",
+      "dispname": "性行為を避けていますか (直腸の問題のため)",
+      "selector": [
+        "常に",
+        "通常",
+        "時々",
+        "めったにない",
+        "決してない"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "required": true
+    },
+    {
+      "type": "subsection",
+      "dispname": "パートナー関連"
+    },
+    {
+      "type": "radio",
+      "name": "PISQ10",
+      "dispname": "パートナーの勃起障害はありますか",
+      "selector": [
+        "常に",
+        "通常",
+        "時々",
+        "めったにない",
+        "決してない"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "PISQ11",
+      "dispname": "パートナーの早漏の問題はありますか",
+      "selector": [
+        "常に",
+        "通常",
+        "時々",
+        "めったにない",
+        "決してない"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "PISQ12",
+      "dispname": "パートナーとの性行為の質と比較して、あなたの性行為はどのくらい性的に興奮しますか",
+      "selector": [
+        "常に悪い",
+        "通常悪い",
+        "同じくらい",
+        "通常良い",
+        "常に良い"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "required": true
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "type": "eval",
+      "name": "行動感情スコア",
+      "formula": "[[PISQ1.index]] + [[PISQ2.index]] + [[PISQ3.index]] + [[PISQ4.index]]",
+      "noreport": true
+    },
+    {
+      "type": "eval",
+      "name": "身体スコア",
+      "formula": "[[PISQ5.index]] + [[PISQ6.index]] + [[PISQ7.index]] + [[PISQ8.index]] + [[PISQ9.index]]",
+      "noreport": true
+    },
+    {
+      "type": "eval",
+      "name": "パートナースコア",
+      "formula": "[[PISQ10.index]] + [[PISQ11.index]] + [[PISQ12.index]]",
+      "noreport": true
+    },
+    {
+      "type": "eval",
+      "name": "PISQ12合計スコア",
+      "formula": "[[行動感情スコア]] + [[身体スコア]] + [[パートナースコア]]"
+    },
+    {
+      "type": "eval",
+      "name": "性機能評価",
+      "formula": "[[PISQ12合計スコア]] >= 35 ? '良好' : ( [[PISQ12合計スコア]] >= 25 ? '中程度' : '低下' )"
+    },
+    {
+      "type": "warning",
+      "name": "Warning: 中程度リスク PISQ-12スコア < 35",
+      "formula": "[[PISQ12合計スコア]] < 35"
+    },
+    {
+      "type": "emergency",
+      "name": "Emergency: 高リスク PISQ-12スコア < 25",
+      "formula": "[[PISQ12合計スコア]] < 25"
+    }
+  ]
+}

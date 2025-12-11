@@ -1,0 +1,393 @@
+{
+    "_comment": [
+        "HCAHPS (Hospital Consumer Assessment of Healthcare Providers and Systems) - 病院ケア患者視点評価調査",
+        "米国CMS(Centers for Medicare & Medicaid Services)とAHRQ(Agency for Healthcare Research and Quality)が開発",
+        "2025年版では32項目に更新（調査項目25項目＋背景情報7項目）",
+        "原典: https://www.hcahpsonline.org/",
+        "日本語版開発者: 日本ホスピタルアライアンス、Patient Experience研究会"
+    ],
+    "title": "HCAHPS 病院ケア患者体験評価調査",
+    "description": [
+        "この調査は、あなたの入院体験について伺います。",
+        "すべての質問にお答えいただき、病院のケアの質向上にご協力ください。",
+        "回答は完全に匿名で処理され、あなたの医療に影響することはありません。"
+    ],
+    "translate": "major",
+    "fields": [
+        {
+            "dispname": "看護師とのコミュニケーション",
+            "type": "subsection"
+        },
+        {
+            "dispname": "入院中、看護師はあなたに礼儀正しく敬意を持って接しましたか",
+            "name": "看護師礼儀",
+            "type": "radio",
+            "selector": "全くなかった|時々|たいてい|いつも",
+            "required": true
+        },
+        {
+            "dispname": "入院中、看護師はあなたの話を注意深く聞いてくれましたか",
+            "name": "看護師傾聴",
+            "type": "radio",
+            "selector": "全くなかった|時々|たいてい|いつも",
+            "required": true
+        },
+        {
+            "dispname": "入院中、看護師はあなたが理解できるように説明してくれましたか",
+            "name": "看護師説明",
+            "type": "radio",
+            "selector": "全くなかった|時々|たいてい|いつも",
+            "required": true
+        },
+        {
+            "dispname": "医師とのコミュニケーション",
+            "type": "subsection"
+        },
+        {
+            "dispname": "入院中、医師はあなたに礼儀正しく敬意を持って接しましたか",
+            "name": "医師礼儀",
+            "type": "radio",
+            "selector": "全くなかった|時々|たいてい|いつも",
+            "required": true
+        },
+        {
+            "dispname": "入院中、医師はあなたの話を注意深く聞いてくれましたか",
+            "name": "医師傾聴",
+            "type": "radio",
+            "selector": "全くなかった|時々|たいてい|いつも",
+            "required": true
+        },
+        {
+            "dispname": "入院中、医師はあなたが理解できるように説明してくれましたか",
+            "name": "医師説明",
+            "type": "radio",
+            "selector": "全くなかった|時々|たいてい|いつも",
+            "required": true
+        },
+        {
+            "dispname": "病院環境",
+            "type": "subsection"
+        },
+        {
+            "dispname": "入院中、病室とトイレは清潔に保たれていましたか",
+            "name": "清潔さ",
+            "type": "radio",
+            "selector": "全くなかった|時々|たいてい|いつも",
+            "required": true
+        },
+        {
+            "dispname": "入院中、必要な休息をとることができましたか",
+            "name": "休息",
+            "type": "radio",
+            "selector": "全くなかった|時々|たいてい|いつも",
+            "required": true
+        },
+        {
+            "dispname": "夜間、病院周辺は十分静かでしたか",
+            "name": "静かさ",
+            "type": "radio",
+            "selector": "全くなかった|時々|たいてい|いつも",
+            "required": true
+        },
+        {
+            "dispname": "ケアの連携",
+            "type": "subsection"
+        },
+        {
+            "dispname": "医師、看護師、その他の病院スタッフは、あなたのケアについて十分な情報を持って対応していましたか",
+            "name": "ケア情報",
+            "type": "radio",
+            "selector": "全くなかった|時々|たいてい|いつも",
+            "required": true
+        },
+        {
+            "dispname": "医師、看護師、その他の病院スタッフは、あなたのケアのために連携して働いていると感じましたか",
+            "name": "チーム連携",
+            "type": "radio",
+            "selector": "全くなかった|時々|たいてい|いつも",
+            "required": true
+        },
+        {
+            "dispname": "病院スタッフの対応",
+            "type": "subsection"
+        },
+        {
+            "dispname": "トイレや便器の使用で助けが必要でしたか",
+            "name": "介助必要性",
+            "type": "radio",
+            "selector": "はい|いいえ",
+            "required": true
+        },
+        {
+            "dispname": "希望通りの速さでトイレや便器使用の助けを得ることができましたか",
+            "name": "介助対応速度",
+            "type": "radio",
+            "selector": "全くなかった|時々|たいてい|いつも",
+            "parentname": "介助必要性",
+            "parentsel": "はい",
+            "required": true
+        },
+        {
+            "dispname": "すぐに助けを求めた時、必要な時に助けを得ることができましたか",
+            "name": "緊急対応",
+            "type": "radio",
+            "selector": "全くなかった|時々|たいてい|いつも",
+            "required": true
+        },
+        {
+            "dispname": "薬に関する説明",
+            "type": "subsection"
+        },
+        {
+            "dispname": "入院中、これまでに服用したことのない薬を投与されましたか",
+            "name": "新薬投与",
+            "type": "radio",
+            "selector": "はい|いいえ",
+            "required": true
+        },
+        {
+            "dispname": "新しい薬を投与する前に、病院スタッフはその薬が何のためのものかを説明しましたか",
+            "name": "薬効果説明",
+            "type": "radio",
+            "selector": "全くなかった|時々|たいてい|いつも",
+            "parentname": "新薬投与",
+            "parentsel": "はい",
+            "required": true
+        },
+        {
+            "dispname": "新しい薬を投与する前に、病院スタッフは起こりうる副作用をわかりやすく説明しましたか",
+            "name": "薬副作用説明",
+            "type": "radio",
+            "selector": "全くなかった|時々|たいてい|いつも",
+            "parentname": "新薬投与",
+            "parentsel": "はい",
+            "required": true
+        },
+        {
+            "dispname": "回復支援",
+            "type": "subsection"
+        },
+        {
+            "dispname": "入院中、医師、看護師、その他の病院スタッフは、あなたの休息と回復を助けてくれましたか",
+            "name": "回復支援",
+            "type": "radio",
+            "selector": "全くなかった|時々|たいてい|いつも",
+            "required": true
+        },
+        {
+            "dispname": "退院時の情報提供とケア計画",
+            "type": "subsection"
+        },
+        {
+            "dispname": "医師、看護師、その他の病院スタッフは、退院後のケア計画について、あなたやご家族・介護者と一緒に検討しましたか",
+            "name": "退院ケア計画",
+            "type": "radio",
+            "selector": "はい|いいえ",
+            "required": true
+        },
+        {
+            "dispname": "医師、看護師、その他の病院スタッフは、退院後に注意すべき症状や健康問題について、あなたのご家族や介護者に十分な情報を提供しましたか",
+            "name": "家族情報提供",
+            "type": "radio",
+            "selector": "はい|いいえ",
+            "required": true
+        },
+        {
+            "dispname": "退院先について",
+            "name": "退院先",
+            "type": "radio",
+            "selector": "自宅|他の人の家|別の医療施設",
+            "required": true
+        },
+        {
+            "dispname": "入院中、医師、看護師、その他の病院スタッフは、退院後に必要な支援について話し合いましたか",
+            "name": "退院後支援相談",
+            "type": "radio",
+            "selector": "はい|いいえ",
+            "required": true
+        },
+        {
+            "dispname": "入院中、退院後に注意すべき症状や健康問題について書面で情報を受け取りましたか",
+            "name": "退院指導書面",
+            "type": "radio",
+            "selector": "はい|いいえ",
+            "required": true
+        },
+        {
+            "dispname": "全体評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "この病院での治療を0から10の点数で評価してください",
+            "name": "病院総合評価",
+            "type": "scale",
+            "min": 0,
+            "max": 10,
+            "step": 1,
+            "value": -1,
+            "starttag": "最悪の病院",
+            "endtag": "最高の病院",
+            "disprange": true,
+            "required": true
+        },
+        {
+            "dispname": "この病院を友人や家族に勧めますか",
+            "name": "病院推奨",
+            "type": "radio",
+            "selector": "絶対に勧めない|たぶん勧めない|たぶん勧める|間違いなく勧める",
+            "required": true
+        },
+        {
+            "dispname": "背景情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "今回の入院は事前に計画されていましたか",
+            "name": "入院計画",
+            "type": "radio",
+            "selector": "はい|いいえ",
+            "required": true
+        },
+        {
+            "dispname": "あなたの全体的な健康状態はいかがですか",
+            "name": "健康状態",
+            "type": "radio",
+            "selector": "優秀|とても良い|良い|普通|悪い",
+            "required": true
+        },
+        {
+            "dispname": "あなたの全体的な精神的・感情的健康状態はいかがですか",
+            "name": "精神健康状態",
+            "type": "radio",
+            "selector": "優秀|とても良い|良い|普通|悪い",
+            "required": true
+        },
+        {
+            "dispname": "ご自宅で主に話される言語は何ですか",
+            "name": "使用言語",
+            "type": "radio",
+            "selector": "日本語|英語|中国語|韓国語|その他",
+            "required": true
+        },
+        {
+            "dispname": "最も当てはまる学歴を選択してください",
+            "name": "学歴",
+            "type": "radio",
+            "selector": "中学校卒業以下|高等学校卒業|専門学校・短期大学卒業|大学卒業|大学院修了",
+            "required": true
+        },
+        {
+            "dispname": "あなたはスペイン系、ヒスパニック系、またはラテン系の出身ですか",
+            "name": "ヒスパニック系",
+            "type": "radio",
+            "selector": "はい|いいえ",
+            "required": true
+        },
+        {
+            "dispname": "あなたの人種を選択してください（複数選択可）",
+            "name": "人種",
+            "type": "checkbox",
+            "selector": "アジア系|黒人・アフリカ系アメリカ人|ハワイ先住民・太平洋諸島系|アメリカインディアン・アラスカ先住民|白人|その他",
+            "required": true
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "介助対応速度_index",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[介助対応速度.index]]"
+        },
+        {
+            "name": "薬効果説明_index",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[薬効果説明.index]]"
+        },
+        {
+            "name": "薬副作用説明_index",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[薬副作用説明.index]]"
+        },
+        {
+            "name": "看護師コミュニケーション",
+            "type": "eval",
+            "formula": "( ( [[看護師礼儀.index]] + [[看護師傾聴.index]] + [[看護師説明.index]] ) / 3 * ( 100 / 3 )).toFixed(1)",
+            "dispname": "看護師とのコミュニケーション複合スコア（0-100点）"
+        },
+        {
+            "name": "医師コミュニケーション",
+            "type": "eval",
+            "formula": "( ( [[医師礼儀.index]] + [[医師傾聴.index]] + [[医師説明.index]] ) / 3 * ( 100 / 3 )).toFixed(1)",
+            "dispname": "医師とのコミュニケーション複合スコア（0-100点）"
+        },
+        {
+            "name": "病院環境",
+            "type": "eval",
+            "formula": "( ( [[清潔さ.index]] + [[休息.index]] + [[静かさ.index]] ) / 3 * ( 100 / 3 )).toFixed(1)",
+            "dispname": "病院環境複合スコア（0-100点）"
+        },
+        {
+            "name": "ケア連携",
+            "type": "eval",
+            "formula": "( ( [[ケア情報.index]] + [[チーム連携.index]] ) / 2 * ( 100 / 3 )).toFixed(1)",
+            "dispname": "ケアの連携複合スコア（0-100点）"
+        },
+        {
+            "name": "スタッフ対応性",
+            "type": "eval",
+            "formula": "( {{介助必要性}} == 'はい' ? ( ( [[介助対応速度_index]] + [[緊急対応.index]] ) / 2 * ( 100 / 3 ) ) : ( [[緊急対応.index]] * ( 100 / 3 ) )).toFixed(1)",
+            "dispname": "病院スタッフの対応性複合スコア（0-100点）"
+        },
+        {
+            "name": "薬剤コミュニケーション",
+            "type": "eval",
+            "formula": "{{新薬投与}} == 'はい' ? ( ( ( [[薬効果説明_index]] + [[薬副作用説明_index]] ) / 2 * ( 100 / 3 ) )).toFixed(1) : 'N/A'",
+            "dispname": "薬に関するコミュニケーション複合スコア（0-100点）"
+        },
+        {
+            "name": "退院情報",
+            "type": "eval",
+            "formula": "( ( ( {{退院ケア計画}} == 'はい' ? 1 : 0 ) + ( {{家族情報提供}} == 'はい' ? 1 : 0 ) + ( {{退院後支援相談}} == 'はい' ? 1 : 0 ) + ( {{退院指導書面}} == 'はい' ? 1 : 0 ) ) * 25).toFixed(1)",
+            "dispname": "退院時の情報提供複合スコア（0-100点）"
+        },
+        {
+            "name": "病院評価点",
+            "type": "eval",
+            "formula": "[[病院総合評価]] * 10",
+            "dispname": "病院総合評価（0-100点変換）"
+        },
+        {
+            "name": "推奨意向",
+            "type": "eval",
+            "formula": "( [[病院推奨.index]] * ( 100 / 3 )).toFixed(1)",
+            "dispname": "病院推奨意向（0-100点変換）"
+        },
+        {
+            "name": "トップボックス看護師",
+            "type": "eval",
+            "formula": "( {{看護師礼儀}} == 'いつも' && {{看護師傾聴}} == 'いつも' && {{看護師説明}} == 'いつも' ) ? 1 : 0",
+            "dispname": "看護師コミュニケーション トップボックス（全て「いつも」で1）"
+        },
+        {
+            "name": "トップボックス医師",
+            "type": "eval",
+            "formula": "( {{医師礼儀}} == 'いつも' && {{医師傾聴}} == 'いつも' && {{医師説明}} == 'いつも' ) ? 1 : 0",
+            "dispname": "医師コミュニケーション トップボックス（全て「いつも」で1）"
+        },
+        {
+            "name": "トップボックス推奨",
+            "type": "eval",
+            "formula": "{{病院推奨}} == '間違いなく勧める' ? 1 : 0",
+            "dispname": "病院推奨 トップボックス（「間違いなく勧める」で1）"
+        },
+        {
+            "name": "トップボックス評価",
+            "type": "eval",
+            "formula": "[[病院総合評価]] >= 9 ? 1 : 0",
+            "dispname": "病院評価 トップボックス（9-10点で1）"
+        }
+    ]
+}

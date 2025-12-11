@@ -1,0 +1,105 @@
+{
+    "_comment": [
+        "Medication Adherence Report Scale-5 (MARS-5) - 服薬アドヒアランス評価尺度",
+        "著作権: ©Professor Rob Horne",
+        "原典開発者: Thompson K, Kulkarni J, Sergejew AA (2000) - 10項目版MARS",
+        "短縮版開発者: Chan AHY, Horne R, Hankins M, Chisari C (2020) - 5項目版MARS-5",
+        "原典論文: Thompson K, et al. Reliability and validity of a new Medication Adherence Rating Scale (MARS) for the psychoses. Schizophrenia Research. 2000;42:241-247",
+        "MARS-5論文: Chan AHY, et al. The Medication Adherence Report Scale: A measurement tool for eliciting patients' reports of nonadherence. British Journal of Clinical Pharmacology. 2020;86:1281-1288",
+        "この問診票は原典10項目版MARSから主成分分析により5項目に短縮された版です",
+        "1項目は非意図的不遵守、4項目は意図的不遵守を評価します",
+        "評価スケール: 1=常に行う、2=しばしば、3=時々、4=まれに、5=全く行わない",
+        "カットオフ値: 複数の検証研究(IBD、MS、小児喘息等)により23点以上を良好なアドヒアランスの基準として設定"
+    ],
+    "title": "MARS-5 服薬アドヒアランス評価尺度",
+    "description": [
+        "薬の服用について、あなたの普段の行動を教えてください。",
+        "該当する頻度を選択してください。"
+    ],
+    "submit_button_title": "回答を送信",
+    "translate": "major",
+    "fields": [
+        {
+            "dispname": "薬を飲み忘れることがある",
+            "name": "Q1_forget",
+            "type": "radio",
+            "required": true,
+            "selector": "いつも|しばしば|時々|まれに|全くない",
+            "selectoridx": "1|2|3|4|5",
+            "inline": true
+        },
+        {
+            "dispname": "薬の量を変えることがある",
+            "name": "Q2_alter_dose",
+            "type": "radio",
+            "required": true,
+            "selector": "いつも|しばしば|時々|まれに|全くない",
+            "selectoridx": "1|2|3|4|5",
+            "inline": true
+        },
+        {
+            "dispname": "薬を一時的に止めることがある",
+            "name": "Q3_stop_temporarily",
+            "type": "radio",
+            "required": true,
+            "selector": "いつも|しばしば|時々|まれに|全くない",
+            "selectoridx": "1|2|3|4|5",
+            "inline": true
+        },
+        {
+            "dispname": "服薬をスキップすることがある",
+            "name": "Q4_skip_dose",
+            "type": "radio",
+            "required": true,
+            "selector": "いつも|しばしば|時々|まれに|全くない",
+            "selectoridx": "1|2|3|4|5",
+            "inline": true
+        },
+        {
+            "dispname": "指示より少ない量を服薬することがある",
+            "name": "Q5_take_less",
+            "type": "radio",
+            "required": true,
+            "selector": "いつも|しばしば|時々|まれに|全くない",
+            "selectoridx": "1|2|3|4|5",
+            "inline": true
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "MARS_total_score",
+            "type": "eval",
+            "dispname": "MARS合計スコア(5-25点)",
+            "formula": "[[Q1_forget.index]] + [[Q2_alter_dose.index]] + [[Q3_stop_temporarily.index]] + [[Q4_skip_dose.index]] + [[Q5_take_less.index]]"
+        },
+        {
+            "name": "adherence_level",
+            "type": "eval",
+            "dispname": "アドヒアランス評価",
+            "formula": "[[MARS_total_score]] >= 23 ? '良好' : ( [[MARS_total_score]] >= 20 ? '中程度' : '不良' )"
+        },
+        {
+            "name": "non_intentional_score",
+            "type": "eval",
+            "dispname": "非意図的不遵守スコア(質問1)",
+            "formula": "[[Q1_forget.index]]"
+        },
+        {
+            "name": "intentional_score",
+            "type": "eval",
+            "dispname": "意図的不遵守スコア(質問2-5の平均)",
+            "formula": "( [[Q2_alter_dose.index]] + [[Q3_stop_temporarily.index]] + [[Q4_skip_dose.index]] + [[Q5_take_less.index]] ) / 4"
+        },
+        {
+            "name": "Warning: 中程度アドヒアランス低下",
+            "formula": "[[MARS_total_score]] < 20",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 著しいアドヒアランス低下",
+            "formula": "[[MARS_total_score]] < 15",
+            "type": "emergency"
+        }
+    ]
+}

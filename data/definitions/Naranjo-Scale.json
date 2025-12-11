@@ -1,0 +1,191 @@
+{
+    "_comment": [
+        "Naranjo Adverse Drug Reaction Probability Scale - 副作用因果関係評価スケール",
+        "原典: Naranjo CA, Busto U, Sellers EM, et al. A method for estimating the probability of adverse drug reactions. Clin Pharmacol Ther. 1981;30(2):239-245",
+        "PMID: 7249508, DOI: 10.1038/clpt.1981.154",
+        "1981年に開発された薬物と有害事象の因果関係を評価する標準化された10項目のアルゴリズム",
+        "各質問は「はい」「いいえ」「不明・該当なし」の3択で回答し、それぞれにスコアが割り当てられる",
+        "合計スコアによる分類: 9点以上=確実、5-8点=可能性大、1-4点=可能性あり、0点以下=疑わしい"
+    ],
+    "title": "Naranjo 副作用因果関係評価スケール",
+    "description": [
+        "薬物投与と有害事象の因果関係を客観的に評価するための標準化された問診票",
+        "10項目の質問で構成され、各項目の回答に基づいてスコアを算出します",
+        "薬事安全性監視や臨床研究で広く使用されています"
+    ],
+    "fields": [
+        {
+            "dispname": "患者背景",
+            "type": "subsection"
+        },
+        {
+            "dispname": "評価対象薬剤",
+            "name": "評価対象薬剤",
+            "type": "text",
+            "required": true
+        },
+        {
+            "dispname": "有害事象",
+            "name": "有害事象",
+            "type": "text",
+            "required": true
+        },
+        {
+            "dispname": "Naranjo評価項目",
+            "type": "subsection"
+        },
+        {
+            "dispname": "問1. この有害事象について過去に確実な報告があるか",
+            "name": "Q1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ",
+                "不明・該当なし"
+            ],
+            "selectoridx": "1|0|0",
+            "description": "薬剤と同様の有害事象について信頼できる文献報告があるかを評価"
+        },
+        {
+            "dispname": "問2. 疑わしい薬剤投与後に有害事象が発現したか",
+            "name": "Q2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ",
+                "不明・該当なし"
+            ],
+            "selectoridx": "2|-1|0",
+            "description": "薬剤投与と有害事象発現の時間的関係を評価"
+        },
+        {
+            "dispname": "問3. 薬剤中止または拮抗薬投与で有害事象が改善したか",
+            "name": "Q3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ",
+                "不明・該当なし"
+            ],
+            "selectoridx": "1|0|0",
+            "description": "薬剤中止による症状改善（脱感作）を評価"
+        },
+        {
+            "dispname": "問4. 薬剤再投与時に有害事象が再発現したか",
+            "name": "Q4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ",
+                "不明・該当なし"
+            ],
+            "selectoridx": "2|-1|0",
+            "description": "薬剤再投与による症状再発現（再感作）を評価"
+        },
+        {
+            "dispname": "問5. この有害事象を説明できる他の原因があるか",
+            "name": "Q5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ",
+                "不明・該当なし"
+            ],
+            "selectoridx": "-1|2|0",
+            "description": "薬剤以外の原因（基礎疾患、併用薬等）の可能性を評価"
+        },
+        {
+            "dispname": "問6. プラセボ投与時にこの有害事象が出現したか",
+            "name": "Q6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ",
+                "不明・該当なし"
+            ],
+            "selectoridx": "-1|1|0",
+            "description": "プラセボ対照試験での反応の有無を評価"
+        },
+        {
+            "dispname": "問7. 中毒濃度として知られる血中薬物濃度が検出されたか",
+            "name": "Q7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ",
+                "不明・該当なし"
+            ],
+            "selectoridx": "1|0|0",
+            "description": "血中または体液中の薬物濃度測定結果を評価"
+        },
+        {
+            "dispname": "問8. 用量増加で有害事象が悪化したか、または用量減少で軽減したか",
+            "name": "Q8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ",
+                "不明・該当なし"
+            ],
+            "selectoridx": "1|0|0",
+            "description": "用量と反応の関係（用量依存性）を評価"
+        },
+        {
+            "dispname": "問9. 過去に同じまたは類似薬剤で同様の有害事象があったか",
+            "name": "Q9",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ",
+                "不明・該当なし"
+            ],
+            "selectoridx": "1|0|0",
+            "description": "患者の薬剤反応歴を評価"
+        },
+        {
+            "dispname": "問10. 何らかの客観的証拠により有害事象が確認されたか",
+            "name": "Q10",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ",
+                "不明・該当なし"
+            ],
+            "selectoridx": "1|0|0",
+            "description": "検査値、画像診断等の客観的所見の有無を評価"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "合計スコア",
+            "type": "eval",
+            "formula": "[[Q1.index]] + [[Q2.index]] + [[Q3.index]] + [[Q4.index]] + [[Q5.index]] + [[Q6.index]] + [[Q7.index]] + [[Q8.index]] + [[Q9.index]] + [[Q10.index]]"
+        },
+        {
+            "name": "因果関係判定",
+            "type": "eval",
+            "formula": "[[合計スコア]] >= 9 ? '確実' : ( [[合計スコア]] >= 5 ? '可能性大' : ( [[合計スコア]] >= 1 ? '可能性あり' : '疑わしい' ) )"
+        },
+        {
+            "name": "Warning: スコア5点以上",
+            "formula": "[[合計スコア]] >= 5",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: スコア9点以上",
+            "formula": "[[合計スコア]] >= 9",
+            "type": "emergency"
+        }
+    ]
+}

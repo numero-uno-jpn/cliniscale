@@ -1,0 +1,99 @@
+{
+    "_comment": [
+        "CURB-65スコア問診票",
+        "市中肺炎の重症度評価と治療場所決定",
+        "原典: Lim WS, et al. Thorax. 2003;58(5):377-82",
+        "各項目1点、最大5点",
+        "2点以上で入院推奨、3点以上で重症"
+    ],
+    "title": "CURB-65 市中肺炎重症度評価スコア",
+    "description": [
+        "<h3>市中肺炎重症度評価</h3>",
+        "CURB-65スコアによる肺炎の重症度と治療場所の判定を行います。",
+        "各項目に該当する場合は1点を加算し、合計点数で重症度を評価します。"
+    ],
+    "translate": "major",
+    "fields": [
+        {
+            "dispname": "意識状態",
+            "name": "confusion",
+            "type": "radio",
+            "inline": true,
+            "selector": "正常|混乱・見当識障害あり",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "新規発症の混乱、見当識障害がある場合"
+        },
+        {
+            "dispname": "血中尿素窒素(BUN)",
+            "name": "urea",
+            "type": "radio",
+            "inline": true,
+            "selector": "19mg/dL以下|20mg/dL超過",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "血中尿素窒素が19mg/dL(7mmol/L)を超過する場合"
+        },
+        {
+            "dispname": "呼吸数",
+            "name": "respiratory_rate",
+            "type": "radio",
+            "inline": true,
+            "selector": "29回/分以下|30回/分以上",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "安静時の呼吸数が30回/分以上の場合"
+        },
+        {
+            "dispname": "血圧",
+            "name": "blood_pressure",
+            "type": "radio",
+            "inline": true,
+            "selector": "正常|低血圧",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "収縮期血圧90mmHg未満または拡張期血圧60mmHg以下の場合"
+        },
+        {
+            "dispname": "年齢",
+            "name": "age",
+            "type": "radio",
+            "inline": true,
+            "selector": "64歳以下|65歳以上",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "65歳以上の場合"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "dispname": "CURB-65スコア合計",
+            "name": "curb65_total",
+            "type": "eval",
+            "formula": "[[confusion.index]] + [[urea.index]] + [[respiratory_rate.index]] + [[blood_pressure.index]] + [[age.index]]"
+        },
+        {
+            "dispname": "重症度判定",
+            "name": "severity",
+            "type": "eval",
+            "formula": "[[curb65_total]] <= 1 ? '軽症(外来治療可)' : ([[curb65_total]] == 2 ? '中等症(入院推奨)' : '重症(入院・集中治療検討)')"
+        },
+        {
+            "dispname": "30日死亡率推定",
+            "name": "mortality_risk",
+            "type": "eval",
+            "formula": "[[curb65_total]] <= 1 ? ([[curb65_total]] == 0 ? '約0.7%' : '約3.2%') : ([[curb65_total]] == 2 ? '約3%' : ([[curb65_total]] == 3 ? '約17%' : ([[curb65_total]] == 4 ? '約41.5%' : '約57%')))"
+        },
+        {
+            "name": "Warning: 中等症リスク",
+            "formula": "[[curb65_total]] >= 2",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 重症",
+            "formula": "[[curb65_total]] >= 3",
+            "type": "emergency"
+        }
+    ]
+}

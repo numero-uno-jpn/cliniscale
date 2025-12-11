@@ -1,0 +1,187 @@
+{
+    "_comment": [
+        "DSM-5-TR診断基準に基づくうつ病スクリーニング問診票",
+        "参考文献: DSM-5-TR 精神疾患の診断・統計マニュアル（医学書院、2023年）",
+        "原典: Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition Text Revision (DSM-5-TR), American Psychiatric Association, 2022",
+        "Major Depressive Disorderの診断基準A項目（9症状）および機能障害、時間基準を含む"
+    ],
+    "title": "DSM-5-TR うつ病スクリーニング問診票",
+    "description": [
+        "<h3>DSM-5-TR診断基準に基づくうつ病評価</h3>",
+        "過去2週間の症状について、該当する状況を選択してください。",
+        "この問診票は医師の診断を補助するものであり、診断確定には医師による詳細な評価が必要です。"
+    ],
+    "translate": "major",
+    "submit_button_title": "回答を送信",
+    "fields": [
+        {
+            "type": "subsection",
+            "dispname": "基本情報"
+        },
+        {
+            "name": "症状期間",
+            "dispname": "症状の期間",
+            "type": "radio",
+            "required": true,
+            "selector": "過去2週間以内|過去1ヶ月以内|過去3ヶ月以内|それ以上前",
+            "description": "現在の症状が続いている期間をお答えください"
+        },
+        {
+            "type": "subsection",
+            "dispname": "DSM-5-TR診断基準A項目 抑うつエピソードの症状"
+        },
+        {
+            "name": "抑うつ気分",
+            "dispname": "抑うつ気分",
+            "type": "radio",
+            "required": true,
+            "selector": "まったくない|少しある|かなりある|非常にある",
+            "selectoridx": "0|1|2|3",
+            "description": "悲しみ、空虚感、絶望感を感じたり、涙もろくなったりすることが、ほとんど1日中、ほとんど毎日ありますか"
+        },
+        {
+            "name": "興味喜び喪失",
+            "dispname": "興味または喜びの喪失",
+            "type": "radio",
+            "required": true,
+            "selector": "まったくない|少しある|かなりある|非常にある",
+            "selectoridx": "0|1|2|3",
+            "description": "これまで楽しめていた活動や趣味に対する興味や喜びが、ほとんど1日中、ほとんど毎日なくなっていますか"
+        },
+        {
+            "name": "体重食欲変化",
+            "dispname": "体重または食欲の著しい変化",
+            "type": "radio",
+            "required": true,
+            "selector": "まったくない|少しある|かなりある|非常にある",
+            "selectoridx": "0|1|2|3",
+            "description": "食事療法をしていないのに1ヶ月で体重が5%以上変化したり、ほとんど毎日食欲の減退または増加がありますか"
+        },
+        {
+            "name": "睡眠障害",
+            "dispname": "睡眠障害",
+            "type": "radio",
+            "required": true,
+            "selector": "まったくない|少しある|かなりある|非常にある",
+            "selectoridx": "0|1|2|3",
+            "description": "ほとんど毎日、不眠（寝つけない、夜中に目が覚める、早朝に目が覚める）または睡眠過多（過度に眠る）がありますか"
+        },
+        {
+            "name": "精神運動変化",
+            "dispname": "精神運動性の焦燥または制止",
+            "type": "radio",
+            "required": true,
+            "selector": "まったくない|少しある|かなりある|非常にある",
+            "selectoridx": "0|1|2|3",
+            "description": "ほとんど毎日、落ち着きがなくじっとしていられない、または動作や話し方が普段よりも遅くなることが他者からも観察できるほどありますか"
+        },
+        {
+            "name": "疲労感",
+            "dispname": "疲労感または気力の減退",
+            "type": "radio",
+            "required": true,
+            "selector": "まったくない|少しある|かなりある|非常にある",
+            "selectoridx": "0|1|2|3",
+            "description": "ほとんど毎日、疲労感や気力の減退を感じますか"
+        },
+        {
+            "name": "無価値感罪責感",
+            "dispname": "無価値感または過剰な罪責感",
+            "type": "radio",
+            "required": true,
+            "selector": "まったくない|少しある|かなりある|非常にある",
+            "selectoridx": "0|1|2|3",
+            "description": "ほとんど毎日、自分は価値のない人間だと感じたり、過剰または不適切な罪責感を感じますか"
+        },
+        {
+            "name": "思考集中力低下",
+            "dispname": "思考力や集中力の減退、決断困難",
+            "type": "radio",
+            "required": true,
+            "selector": "まったくない|少しある|かなりある|非常にある",
+            "selectoridx": "0|1|2|3",
+            "description": "ほとんど毎日、思考力や集中力の減退、または決断することが困難だと感じますか"
+        },
+        {
+            "name": "死の思考",
+            "dispname": "死についての反復思考",
+            "type": "radio",
+            "required": true,
+            "selector": "まったくない|少しある|かなりある|非常にある",
+            "selectoridx": "0|1|2|3",
+            "description": "死について繰り返し考えたり、自殺について考えたり、自殺の計画を立てたりすることがありますか"
+        },
+        {
+            "type": "subsection",
+            "dispname": "機能障害および除外基準"
+        },
+        {
+            "name": "機能障害",
+            "dispname": "日常生活への影響",
+            "type": "radio",
+            "required": true,
+            "selector": "まったく影響なし|軽度の影響|中等度の影響|重度の影響",
+            "selectoridx": "0|1|2|3",
+            "description": "これらの症状により、仕事、人間関係、その他の重要な日常生活にどの程度支障をきたしていますか"
+        },
+        {
+            "name": "薬物使用",
+            "dispname": "薬物の使用",
+            "type": "radio",
+            "required": true,
+            "selector": "使用していない|アルコール|処方薬|違法薬物|複数の薬物",
+            "description": "現在、これらの症状に影響を与える可能性のある薬物（アルコール、薬物など）を使用していますか"
+        },
+        {
+            "name": "身体疾患",
+            "dispname": "身体疾患の有無",
+            "type": "radio",
+            "required": true,
+            "selector": "なし|甲状腺疾患|糖尿病|心疾患|がん|その他の重篤な疾患",
+            "description": "これらの症状の原因となりうる身体疾患の診断を受けていますか"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "症状合計スコア",
+            "type": "eval",
+            "formula": "[[抑うつ気分.index]] + [[興味喜び喪失.index]] + [[体重食欲変化.index]] + [[睡眠障害.index]] + [[精神運動変化.index]] + [[疲労感.index]] + [[無価値感罪責感.index]] + [[思考集中力低下.index]] + [[死の思考.index]]",
+            "dispname": "DSM-5-TR診断基準A項目の症状スコア合計（0-27点）"
+        },
+        {
+            "name": "主要症状の有無",
+            "type": "eval",
+            "formula": "[[抑うつ気分.index]] >= 2 || [[興味喜び喪失.index]] >= 2 ? 'あり' : 'なし'",
+            "dispname": "主要症状の有無（抑うつ気分または興味喜びの喪失のいずれかが中等度以上）"
+        },
+        {
+            "name": "症状数カウント",
+            "type": "eval",
+            "formula": "(([[抑うつ気分.index]] >= 2) ? 1 : 0) + (([[興味喜び喪失.index]] >= 2) ? 1 : 0) + (([[体重食欲変化.index]] >= 2) ? 1 : 0) + (([[睡眠障害.index]] >= 2) ? 1 : 0) + (([[精神運動変化.index]] >= 2) ? 1 : 0) + (([[疲労感.index]] >= 2) ? 1 : 0) + (([[無価値感罪責感.index]] >= 2) ? 1 : 0) + (([[思考集中力低下.index]] >= 2) ? 1 : 0) + (([[死の思考.index]] >= 2) ? 1 : 0)",
+            "dispname": "中等度以上の症状数（DSM-5-TR診断基準：5つ以上で診断基準満たす可能性）"
+        },
+        {
+            "name": "重症度判定",
+            "type": "eval",
+            "formula": "[[症状数カウント]] >= 7 ? '重症' : ([[症状数カウント]] >= 5 ? '中等症' : ([[症状数カウント]] < 5 && [[症状数カウント]] >= 1 ? '症状あり（診断基準未満）' : '症状なし'))",
+            "dispname": "重症度の目安（症状なし：0症状、症状あり：1-4症状、中等症：5-6症状、重症：7症状以上）"
+        },
+        {
+            "name": "診断基準充足可能性",
+            "type": "eval",
+            "formula": "[[症状数カウント]] >= 5 && ([[抑うつ気分.index]] >= 2 || [[興味喜び喪失.index]] >= 2) && [[機能障害.index]] >= 1 ? '診断基準を満たす可能性あり' : '診断基準を満たさない'",
+            "dispname": "DSM-5-TR診断基準充足の可能性（5症状以上、主要症状あり、機能障害あり）"
+        },
+        {
+            "name": "Warning: 抑うつ症状と機能障害あり",
+            "type": "warning",
+            "formula": "[[症状数カウント]] >= 3 && [[機能障害.index]] >= 2"
+        },
+        {
+            "name": "Emergency: 自殺リスクまたは重症うつ",
+            "type": "emergency",
+            "formula": "[[死の思考.index]] >= 2 || [[症状数カウント]] >= 7"
+        }
+    ]
+}

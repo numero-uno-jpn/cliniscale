@@ -1,0 +1,50 @@
+{
+  "_comment": [
+    "D'Amico Risk Classification for Prostate Cancer",
+    "前立腺癌のリスク分類",
+    "原著論文: D'Amico AV, et al. JAMA. 1998;280(11):969-74.",
+    "参考URL: https://www.mdcalc.com/calc/2049/damico-risk-classification-prostate-cancer",
+    "PubMed: https://pubmed.ncbi.nlm.nih.gov/10411043/"
+  ],
+  "title": "D'Amico前立腺癌リスク分類",
+  "description": [
+    "前立腺癌のリスク層別化を行う分類システムです",
+    "PSA値、Gleasonスコア、臨床病期から低・中・高リスクを判定します"
+  ],
+  "contact": "泌尿器科",
+  "dept_in_charge": "泌尿器科",
+  "fields": [
+    {
+      "dispname": "PSA値",
+      "name": "PSA",
+      "type": "radio",
+      "required": true,
+      "selector": ["10 ng/mL未満", "10-20 ng/mL", "20 ng/mL超"],
+      "selectoridx": "0|1|2"
+    },
+    {
+      "dispname": "Gleasonスコア",
+      "name": "Gleason",
+      "type": "radio",
+      "required": true,
+      "selector": ["6以下", "7", "8以上"],
+      "selectoridx": "0|1|2"
+    },
+    {
+      "dispname": "臨床病期",
+      "name": "Tstage",
+      "type": "radio",
+      "required": true,
+      "selector": ["T1-T2a", "T2b", "T2c-T4"],
+      "selectoridx": "0|1|2"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "リスク判定",
+      "type": "eval",
+      "formula": "[[PSA.index]] >= 2 || [[Gleason.index]] >= 2 || [[Tstage.index]] >= 2 ? '高リスク' : ([[PSA.index]] >= 1 || [[Gleason.index]] >= 1 || [[Tstage.index]] >= 1 ? '中リスク' : '低リスク')"
+    }
+  ]
+}

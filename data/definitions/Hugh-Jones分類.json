@@ -1,0 +1,63 @@
+{
+    "_comment": [
+        "Hugh-Jones分類は呼吸器疾患患者の運動機能と呼吸困難からみた重症度(I-V段階)評価基準",
+        "Fletcher CMが慢性閉塞性肺疾患患者の呼吸困難について提唱 (Proc R Soc Med 1952; 45: 577-84)",
+        "後にFletcher-Hugh-Jones分類とも呼ばれるようになった",
+        "COPD診療ガイドラインで推奨されている評価法",
+        "参考: 厚生労働省DPC入院医療等の調査・評価分科会資料",
+        "参考: 日本呼吸器学会COPD診療ガイドライン",
+        "参考: 日本集中治療医学会用語委員会",
+        "URL: https://www.jrs.or.jp/publication/jrs_guidelines/"
+    ],
+    "title": "Hugh-Jones分類",
+    "description": [
+        "呼吸器疾患の患者さんの呼吸困難の程度を評価する分類です。",
+        "日常生活での活動能力に基づいて、I度(健常者と同程度)からV度(安静時でも息切れ)まで5段階で評価します。"
+    ],
+    "submit_button_title": "評価結果を送信",
+    "fields": [
+        {
+            "dispname": "評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "現在の症状について、最もあてはまるものを選択してください",
+            "name": "Hugh_Jones分類",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "I度: 同年齢の健康者と同様の労作ができ、歩行、階段昇降も健康者並みにできる",
+                "II度: 同年齢の健康者と同様の労作ができるが、坂道・階段は健康者並みにはできない",
+                "III度: 平地でも健康者並みに歩けないが、自分のペースなら1マイル(1.6km)以上歩ける",
+                "IV度: 休み休みでなければ約46m(50ヤード)以上歩けない",
+                "V度: 会話・着替えにも息切れがする。息切れの為外出できない"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "Hugh_Jones分類値",
+            "type": "eval",
+            "formula": "[[Hugh_Jones分類.index]]",
+            "dispname": "Hugh-Jones分類の段階(1-5)"
+        },
+        {
+            "name": "重症度評価",
+            "type": "eval",
+            "formula": "[[Hugh_Jones分類値]] <= 2 ? '軽度' : ( [[Hugh_Jones分類値]] <= 3 ? '中等度' : '重度' )",
+            "dispname": "重症度判定: 軽度(I-II度)、中等度(III度)、重度(IV-V度)"
+        },
+        {
+            "name": "Warning: IV度以上",
+            "formula": "[[Hugh_Jones分類値]] >= 4",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: V度",
+            "formula": "[[Hugh_Jones分類値]] == 5",
+            "type": "emergency"
+        }
+    ]
+}

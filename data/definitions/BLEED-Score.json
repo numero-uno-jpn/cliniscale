@@ -1,0 +1,85 @@
+{
+  "_comment": [
+    "BLEED Score - 下部消化管出血重症度予測スコア",
+    "5つのリスク因子で院内合併症(再出血、外科手術、院内死亡)を予測",
+    "各項目の存在で1点、最大5点",
+    "参考文献: Comparison of Risk Scores for Lower Gastrointestinal Bleeding: A Systematic Review and Meta-analysis. JAMA Netw Open. 2022"
+  ],
+  "title": "BLEED Score 下部消化管出血重症度予測",
+  "description": [
+    "下部消化管出血患者の院内合併症リスクを評価するスコアです",
+    "持続出血、血圧、凝固機能、意識状態、併存疾患の5項目から判定します"
+  ],
+  "fields": [
+    {
+      "dispname": "B - 持続する出血",
+      "name": "持続出血",
+      "type": "radio",
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1",
+      "description": "入院時に上部または下部消化管からの持続的な出血がありますか"
+    },
+    {
+      "dispname": "L - 低血圧",
+      "name": "低血圧",
+      "type": "radio",
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1",
+      "description": "収縮期血圧が100mmHg未満ですか"
+    },
+    {
+      "dispname": "E - プロトロンビン時間延長",
+      "name": "PT延長",
+      "type": "radio",
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1",
+      "description": "プロトロンビン時間比（PT ratio）が1.2を超えているか、INRが1.2を超えていますか"
+    },
+    {
+      "dispname": "E - 意識状態異常",
+      "name": "意識異常",
+      "type": "radio",
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1",
+      "description": "原因を問わず意識状態の異常や混乱がありますか"
+    },
+    {
+      "dispname": "D - 不安定な併存疾患",
+      "name": "不安定併存疾患",
+      "type": "radio",
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1",
+      "description": "ICU入院を要する不安定な併存疾患がありますか"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "BLEED合計スコア",
+      "type": "eval",
+      "formula": "[[持続出血.index]] + [[低血圧.index]] + [[PT延長.index]] + [[意識異常.index]] + [[不安定併存疾患.index]]",
+      "dispname": "BLEED Score合計点数"
+    },
+    {
+      "name": "リスク分類",
+      "type": "eval",
+      "formula": "[[BLEED合計スコア]] == 0 ? '低リスク' : [[BLEED合計スコア]] >= 1 && [[BLEED合計スコア]] <= 2 ? '中リスク' : '高リスク'",
+      "dispname": "院内合併症リスク評価"
+    },
+    {
+      "name": "Warning: 高リスク BLEED Score ≥ 3",
+      "formula": "[[BLEED合計スコア]] >= 3",
+      "type": "warning"
+    },
+    {
+      "name": "Emergency: 最高リスク BLEED Score = 5",
+      "formula": "[[BLEED合計スコア]] == 5",
+      "type": "emergency"
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+    "_comment": [
+        "Ranson基準 - 急性膵炎重症度評価",
+        "Ranson JH. Prognostic Signs and the Role of Operative Management in Acute Pancreatitis. Am J Gastroenterol. 1974;61(6):443-51",
+        "入院時5項目と48時間後6項目の計11項目で評価",
+        "3点以上で重症急性膵炎と判定",
+        "StatPearls: https://www.ncbi.nlm.nih.gov/books/NBK482345/",
+        "MDCalc: https://www.mdcalc.com/calc/89/ransons-criteria-pancreatitis-mortality"
+    ],
+    "title": "Ranson基準 急性膵炎重症度評価",
+    "description": [
+        "急性膵炎の重症度と死亡率を予測するための評価基準です",
+        "入院時5項目と48時間後6項目の計11項目で評価し、3点以上で重症膵炎と判定されます"
+    ],
+    "fields": [
+        {
+            "dispname": "入院時評価項目",
+            "type": "subsection"
+        },
+        {
+            "dispname": "年齢",
+            "name": "年齢",
+            "type": "radio",
+            "inline": true,
+            "selector": "55歳以下|55歳超",
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "dispname": "白血球数",
+            "name": "白血球数",
+            "type": "radio",
+            "inline": true,
+            "selector": "16,000/mm³以下|16,000/mm³超",
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "dispname": "血糖値",
+            "name": "血糖値",
+            "type": "radio",
+            "inline": true,
+            "selector": "200mg/dL以下|200mg/dL超",
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "dispname": "血清AST",
+            "name": "血清AST",
+            "type": "radio",
+            "inline": true,
+            "selector": "250IU/L以下|250IU/L超",
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "dispname": "血清LDH",
+            "name": "血清LDH",
+            "type": "radio",
+            "inline": true,
+            "selector": "350IU/L以下|350IU/L超",
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "dispname": "48時間後評価項目",
+            "type": "subsection"
+        },
+        {
+            "dispname": "ヘマトクリット低下",
+            "name": "ヘマトクリット低下",
+            "type": "radio",
+            "inline": true,
+            "selector": "10%未満の低下|10%以上の低下",
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "dispname": "血清カルシウム",
+            "name": "血清カルシウム",
+            "type": "radio",
+            "inline": true,
+            "selector": "8.0mg/dL以上|8.0mg/dL未満",
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "dispname": "動脈血酸素分圧",
+            "name": "動脈血酸素分圧",
+            "type": "radio",
+            "inline": true,
+            "selector": "60mmHg以上|60mmHg未満",
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "dispname": "BUN上昇",
+            "name": "BUN上昇",
+            "type": "radio",
+            "inline": true,
+            "selector": "5mg/dL未満の上昇|5mg/dL以上の上昇",
+            "selectoridx": "0|1",
+            "required": true,
+            "description": "輸液後も"
+        },
+        {
+            "dispname": "Base excess",
+            "description": "原典では Base deficit 4mEq/L以下 / 4mEq/L超 の表現ですが日本でなじみの深い正負反転表記としてあります",
+            "name": "Base excess",
+            "type": "radio",
+            "inline": true,
+            "selector": "-4mEq/L以下|-4mEq/L超",
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "dispname": "体液貯留",
+            "name": "体液貯留",
+            "type": "radio",
+            "inline": true,
+            "selector": "6L未満|6L以上",
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "合計スコア",
+            "type": "eval",
+            "formula": "[[年齢.index]] + [[白血球数.index]] + [[血糖値.index]] + [[血清AST.index]] + [[血清LDH.index]] + [[ヘマトクリット低下.index]] + [[血清カルシウム.index]] + [[動脈血酸素分圧.index]] + [[BUN上昇.index]] + [[Base excess.index]] + [[体液貯留.index]]",
+            "dispname": "Ranson基準合計スコア"
+        },
+        {
+            "name": "重症度判定",
+            "type": "eval",
+            "formula": "[[合計スコア]] >= 3 ? '重症急性膵炎' : '軽症から中等症'",
+            "dispname": "重症度分類"
+        },
+        {
+            "name": "予測死亡率",
+            "type": "eval",
+            "formula": "[[合計スコア]] == 0 ? '0-3%' : ([[合計スコア]] == 1 ? '0-3%' : ([[合計スコア]] == 2 ? '0-3%' : ([[合計スコア]] == 3 ? '15%' : ([[合計スコア]] == 4 ? '15%' : ([[合計スコア]] == 5 ? '40%' : ([[合計スコア]] == 6 ? '40%' : ([[合計スコア]] >= 7 ? 'ほぼ100%' : '不明')))))))",
+            "dispname": "スコア別予測死亡率"
+        },
+        {
+            "name": "Warning: 重症急性膵炎リスク",
+            "formula": "[[合計スコア]] >= 3",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 最重症急性膵炎",
+            "formula": "[[合計スコア]] >= 7",
+            "type": "emergency"
+        }
+    ]
+}

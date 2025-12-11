@@ -1,0 +1,107 @@
+{
+  "_comment": [
+    "Karnofsky Performance Status (KPS)",
+    "患者の機能状態評価",
+    "原著論文: Karnofsky DA, Burchenal JH. Evaluation of Chemotherapeutic Agents. 1949.",
+    "PubMed: https://pubmed.ncbi.nlm.nih.gov/18164884/",
+    "PDF: https://www.npcrc.org/files/news/karnofsky_performance_scale.pdf"
+  ],
+  "title": "Karnofsky Performance Status (KPS)",
+  "description": [
+    "患者の身体機能と自立度を評価するスケールです",
+    "100%(正常)から0%(死亡)まで10%刻みで評価します"
+  ],
+  "responsible_person": [
+    "腫瘍内科医"
+  ],
+  "dept_in_charge": "腫瘍内科",
+  "fields": [
+    {
+      "dispname": "基本情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "評価日",
+      "name": "評価日",
+      "type": "date",
+      "format": "YYYY/MM/DD"
+    },
+    {
+      "dispname": "Karnofsky Performance Status評価",
+      "type": "subsection"
+    },
+    {
+      "dispname": "KPS",
+      "name": "KPS",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "正常、症状や訴えなし、疾患の徴候なし",
+        "正常の活動可能、軽い症状や徴候あり",
+        "努力して正常の活動可能、いくらか症状や徴候あり",
+        "自分自身の世話はできる、正常の活動や労働は不可能",
+        "自分に必要なことはできる、時に介助が必要",
+        "かなりの介助と頻繁な医療を必要とする",
+        "身体障害者、適切な介助と医療を必要とする",
+        "重度の身体障害、入院が必要だが死はさしせまっていない",
+        "非常に重篤、入院が必要、支持療法が必要",
+        "死期が迫っている、致死的過程が急速に進行",
+        "死亡"
+      ],
+      "selectoridx": "100|90|80|70|60|50|40|30|20|10|0",
+      "description": "患者の現在の機能状態を評価してください"
+    },
+    {
+      "dispname": "追加情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "具体的な活動状況",
+      "name": "活動状況",
+      "type": "textarea",
+      "rows": 5,
+      "description": "日常生活動作の具体的な状況を記載してください"
+    },
+    {
+      "dispname": "必要な介助の内容",
+      "name": "介助内容",
+      "type": "textarea",
+      "rows": 3,
+      "description": "必要な介助がある場合、その内容を記載してください"
+    },
+    {
+      "dispname": "その他の所見・コメント",
+      "name": "その他所見",
+      "type": "textarea",
+      "rows": 5
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "KPSスコア",
+      "type": "eval",
+      "formula": "[[KPS.index]]"
+    },
+    {
+      "name": "機能分類",
+      "type": "eval",
+      "formula": "[[KPSスコア]] >= 80 ? '正常活動可能' : ( [[KPSスコア]] >= 50 ? '自立可能' : '介助必要' )"
+    },
+    {
+      "name": "予後評価",
+      "type": "eval",
+      "formula": "[[KPSスコア]] >= 70 ? '比較的良好' : ( [[KPSスコア]] >= 50 ? '中等度' : '不良' )"
+    },
+    {
+      "name": "Warning: 高度の機能障害",
+      "formula": "[[KPSスコア]] < 50",
+      "type": "warning"
+    },
+    {
+      "name": "Emergency: 重篤な状態",
+      "formula": "[[KPSスコア]] <= 30",
+      "type": "emergency"
+    }
+  ]
+}

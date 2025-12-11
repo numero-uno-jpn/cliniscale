@@ -1,0 +1,374 @@
+{
+  "_comment": [
+    "ICF（国際生活機能分類）評価問診票",
+    "原典：WHO International Classification of Functioning, Disability and Health (ICF), 2001",
+    "日本語版：厚生労働省「国際生活機能分類－国際障害分類改訂版－」2002年",
+    "参考URL：https://www.mhlw.go.jp/houdou/2002/08/h0805-1.html",
+    "本問診票はICFの6つの構成要素に基づく包括的評価ツールです"
+  ],
+  "title": "ICF生活機能評価問診票",
+  "description": [
+    "<h3>生活機能の包括的評価</h3>",
+    "世界保健機関（WHO）のICF分類に基づき、心身機能、活動、参加、環境因子を評価します。",
+    "医療・介護・リハビリテーション分野での共通言語として活用されています。"
+  ],
+  "contact": "評価担当者",
+  "dept_in_charge": "リハビリテーション科",
+  "responsible_person": [
+    "医師",
+    "理学療法士",
+    "作業療法士"
+  ],
+  "submit_button_title": "評価結果を送信",
+  "fields": [
+    {
+      "dispname": "基本情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "年齢",
+      "name": "年齢",
+      "type": "text",
+      "postfix": "歳",
+      "inputmode": "numeric",
+      "testrange": [
+        0,
+        120
+      ],
+      "required": true,
+      "description": "半角数字で入力してください（例: 65）"
+    },
+    {
+      "dispname": "性別",
+      "name": "性別",
+      "type": "radio",
+      "selector": "男性|女性|その他",
+      "inline": true,
+      "required": true
+    },
+    {
+      "dispname": "健康状態",
+      "type": "subsection"
+    },
+    {
+      "dispname": "主な診断名・疾患",
+      "name": "診断名",
+      "type": "textarea",
+      "rows": 3,
+      "description": "現在治療中の疾患や既往歴を記載してください"
+    },
+    {
+      "dispname": "現在の症状",
+      "name": "現在症状",
+      "type": "checkbox",
+      "selector": [
+        "痛み",
+        "疲労感",
+        "息切れ",
+        "めまい",
+        "睡眠障害",
+        "食欲不振",
+        "その他"
+      ],
+      "description": "現在感じている症状すべてにチェックしてください"
+    },
+    {
+      "dispname": "心身機能・身体構造",
+      "type": "subsection"
+    },
+    {
+      "dispname": "意識・認知機能",
+      "name": "認知機能",
+      "type": "radio",
+      "selector": "問題なし|軽度の問題|中等度の問題|重度の問題|完全な問題",
+      "selectoridx": "0|1|2|3|4",
+      "required": true,
+      "description": "意識状態、記憶、注意力、判断力などの認知機能"
+    },
+    {
+      "dispname": "視覚機能",
+      "name": "視覚機能",
+      "type": "radio",
+      "selector": "問題なし|軽度の問題|中等度の問題|重度の問題|完全な問題",
+      "selectoridx": "0|1|2|3|4",
+      "required": true,
+      "description": "見ることに関する機能（眼鏡・コンタクト使用時を含む）"
+    },
+    {
+      "dispname": "聴覚機能",
+      "name": "聴覚機能",
+      "type": "radio",
+      "selector": "問題なし|軽度の問題|中等度の問題|重度の問題|完全な問題",
+      "selectoridx": "0|1|2|3|4",
+      "required": true,
+      "description": "聞くことに関する機能（補聴器使用時を含む）"
+    },
+    {
+      "dispname": "音声・言語機能",
+      "name": "音声言語機能",
+      "type": "radio",
+      "selector": "問題なし|軽度の問題|中等度の問題|重度の問題|完全な問題",
+      "selectoridx": "0|1|2|3|4",
+      "required": true,
+      "description": "話すこと、言葉を理解することに関する機能"
+    },
+    {
+      "dispname": "筋力・持久力",
+      "name": "筋力持久力",
+      "type": "radio",
+      "selector": "問題なし|軽度の問題|中等度の問題|重度の問題|完全な問題",
+      "selectoridx": "0|1|2|3|4",
+      "required": true,
+      "description": "筋肉の力や持続力に関する機能"
+    },
+    {
+      "dispname": "関節可動域",
+      "name": "関節可動域",
+      "type": "radio",
+      "selector": "問題なし|軽度の問題|中等度の問題|重度の問題|完全な問題",
+      "selectoridx": "0|1|2|3|4",
+      "required": true,
+      "description": "関節の動きの範囲に関する機能"
+    },
+    {
+      "dispname": "疼痛",
+      "name": "疼痛",
+      "type": "radio",
+      "selector": "問題なし|軽度の問題|中等度の問題|重度の問題|完全な問題",
+      "selectoridx": "0|1|2|3|4",
+      "required": true,
+      "description": "痛みに関する問題"
+    },
+    {
+      "dispname": "活動",
+      "type": "subsection"
+    },
+    {
+      "dispname": "学習と知識の応用",
+      "name": "学習知識応用",
+      "type": "radio",
+      "selector": "問題なし|軽度の問題|中等度の問題|重度の問題|完全な問題",
+      "selectoridx": "0|1|2|3|4",
+      "required": true,
+      "description": "読み書き、計算、学習することの困難さ"
+    },
+    {
+      "dispname": "一般的な課題と要求",
+      "name": "一般的課題",
+      "type": "radio",
+      "selector": "問題なし|軽度の問題|中等度の問題|重度の問題|完全な問題",
+      "selectoridx": "0|1|2|3|4",
+      "required": true,
+      "description": "日常的な作業や責任を果たすことの困難さ"
+    },
+    {
+      "dispname": "コミュニケーション",
+      "name": "コミュニケーション",
+      "type": "radio",
+      "selector": "問題なし|軽度の問題|中等度の問題|重度の問題|完全な問題",
+      "selectoridx": "0|1|2|3|4",
+      "required": true,
+      "description": "他者との意思疎通の困難さ"
+    },
+    {
+      "dispname": "運動・移動",
+      "name": "運動移動",
+      "type": "radio",
+      "selector": "問題なし|軽度の問題|中等度の問題|重度の問題|完全な問題",
+      "selectoridx": "0|1|2|3|4",
+      "required": true,
+      "description": "歩行、移動、姿勢変換の困難さ"
+    },
+    {
+      "dispname": "セルフケア",
+      "name": "セルフケア",
+      "type": "radio",
+      "selector": "問題なし|軽度の問題|中等度の問題|重度の問題|完全な問題",
+      "selectoridx": "0|1|2|3|4",
+      "required": true,
+      "description": "身の回りの世話（食事、入浴、着替えなど）の困難さ"
+    },
+    {
+      "dispname": "家庭生活",
+      "name": "家庭生活",
+      "type": "radio",
+      "selector": "問題なし|軽度の問題|中等度の問題|重度の問題|完全な問題",
+      "selectoridx": "0|1|2|3|4",
+      "required": true,
+      "description": "家事、買い物、家計管理などの困難さ"
+    },
+    {
+      "dispname": "対人関係",
+      "name": "対人関係",
+      "type": "radio",
+      "selector": "問題なし|軽度の問題|中等度の問題|重度の問題|完全な問題",
+      "selectoridx": "0|1|2|3|4",
+      "required": true,
+      "description": "他者との適切な関係を築くことの困難さ"
+    },
+    {
+      "dispname": "参加",
+      "type": "subsection"
+    },
+    {
+      "dispname": "教育",
+      "name": "教育",
+      "type": "radio",
+      "selector": "問題なし|軽度の問題|中等度の問題|重度の問題|完全な問題",
+      "selectoridx": "0|1|2|3|4",
+      "required": true,
+      "description": "学校教育や職業訓練への参加の困難さ"
+    },
+    {
+      "dispname": "就労",
+      "name": "就労",
+      "type": "radio",
+      "selector": "問題なし|軽度の問題|中等度の問題|重度の問題|完全な問題",
+      "selectoridx": "0|1|2|3|4",
+      "required": true,
+      "description": "仕事に従事することの困難さ"
+    },
+    {
+      "dispname": "経済生活",
+      "name": "経済生活",
+      "type": "radio",
+      "selector": "問題なし|軽度の問題|中等度の問題|重度の問題|完全な問題",
+      "selectoridx": "0|1|2|3|4",
+      "required": true,
+      "description": "経済的な取引や金銭管理の困難さ"
+    },
+    {
+      "dispname": "コミュニティライフ・社会生活・市民生活",
+      "name": "社会生活",
+      "type": "radio",
+      "selector": "問題なし|軽度の問題|中等度の問題|重度の問題|完全な問題",
+      "selectoridx": "0|1|2|3|4",
+      "required": true,
+      "description": "地域活動や宗教活動、政治活動への参加の困難さ"
+    },
+    {
+      "dispname": "レクリエーション・余暇",
+      "name": "レクリエーション",
+      "type": "radio",
+      "selector": "問題なし|軽度の問題|中等度の問題|重度の問題|完全な問題",
+      "selectoridx": "0|1|2|3|4",
+      "required": true,
+      "description": "スポーツ、芸術、趣味活動への参加の困難さ"
+    },
+    {
+      "dispname": "環境因子",
+      "type": "subsection"
+    },
+    {
+      "dispname": "生産品と用具",
+      "name": "生産品用具",
+      "type": "radio",
+      "selector": "大きな促進因子|中等度の促進因子|軽度の促進因子|阻害も促進もしない|軽度の阻害因子|中等度の阻害因子|重度の阻害因子|完全な阻害因子",
+      "selectoridx": "4|3|2|0|-1|-2|-3|-4",
+      "required": true,
+      "description": "福祉用具、医療機器、交通手段などの利用しやすさ"
+    },
+    {
+      "dispname": "自然環境と人間が作った環境",
+      "name": "自然人工環境",
+      "type": "radio",
+      "selector": "大きな促進因子|中等度の促進因子|軽度の促進因子|阻害も促進もしない|軽度の阻害因子|中等度の阻害因子|重度の阻害因子|完全な阻害因子",
+      "selectoridx": "4|3|2|0|-1|-2|-3|-4",
+      "required": true,
+      "description": "物理的環境、気候、バリアフリー環境などの状況"
+    },
+    {
+      "dispname": "サポートと関係",
+      "name": "サポート関係",
+      "type": "radio",
+      "selector": "大きな促進因子|中等度の促進因子|軽度の促進因子|阻害も促進もしない|軽度の阻害因子|中等度の阻害因子|重度の阻害因子|完全な阻害因子",
+      "selectoridx": "4|3|2|0|-1|-2|-3|-4",
+      "required": true,
+      "description": "家族、友人、専門職者からのサポートの状況"
+    },
+    {
+      "dispname": "態度",
+      "name": "態度",
+      "type": "radio",
+      "selector": "大きな促進因子|中等度の促進因子|軽度の促進因子|阻害も促進もしない|軽度の阻害因子|中等度の阻害因子|重度の阻害因子|完全な阻害因子",
+      "selectoridx": "4|3|2|0|-1|-2|-3|-4",
+      "required": true,
+      "description": "周囲の人々の態度や偏見の影響"
+    },
+    {
+      "dispname": "サービス・制度・政策",
+      "name": "サービス制度政策",
+      "type": "radio",
+      "selector": "大きな促進因子|中等度の促進因子|軽度の促進因子|阻害も促進もしない|軽度の阻害因子|中等度の阻害因子|重度の阻害因子|完全な阻害因子",
+      "selectoridx": "4|3|2|0|-1|-2|-3|-4",
+      "required": true,
+      "description": "社会保障制度、医療サービス、法的サービスの利用しやすさ"
+    },
+    {
+      "dispname": "個人因子",
+      "type": "subsection"
+    },
+    {
+      "dispname": "生活歴",
+      "name": "生活歴",
+      "type": "textarea",
+      "rows": 3,
+      "description": "職歴、学歴、家族構成、生活習慣など"
+    },
+    {
+      "dispname": "性格・価値観",
+      "name": "性格価値観",
+      "type": "textarea",
+      "rows": 3,
+      "description": "性格の特徴、価値観、対処スタイルなど"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "心身機能平均",
+      "type": "eval",
+      "formula": "average([[認知機能.index]], [[視覚機能.index]], [[聴覚機能.index]], [[音声言語機能.index]], [[筋力持久力.index]], [[関節可動域.index]], [[疼痛.index]]).toFixed(2)",
+      "dispname": "心身機能の平均スコア（0-4）"
+    },
+    {
+      "name": "活動平均",
+      "type": "eval",
+      "formula": "average([[学習知識応用.index]], [[一般的課題.index]], [[コミュニケーション.index]], [[運動移動.index]], [[セルフケア.index]], [[家庭生活.index]], [[対人関係.index]]).toFixed(2)",
+      "dispname": "活動の平均スコア（0-4）"
+    },
+    {
+      "name": "参加平均",
+      "type": "eval",
+      "formula": "average([[教育.index]], [[就労.index]], [[経済生活.index]], [[社会生活.index]], [[レクリエーション.index]]).toFixed(2)",
+      "dispname": "参加の平均スコア（0-4）"
+    },
+    {
+      "name": "環境因子平均",
+      "type": "eval",
+      "formula": "( ( [[生産品用具.index]] + [[自然人工環境.index]] + [[サポート関係.index]] + [[態度.index]] + [[サービス制度政策.index]] ) / 5).toFixed(2)",
+      "dispname": "環境因子の平均スコア（促進因子+、阻害因子-）"
+    },
+    {
+      "name": "総合機能レベル",
+      "type": "eval",
+      "formula": "( ( ((心身機能平均)) + ((活動平均)) + ((参加平均)) ) / 3).toFixed(2)",
+      "dispname": "生活機能の総合スコア（0-4）"
+    },
+    {
+      "name": "機能レベル分類",
+      "type": "eval",
+      "formula": "((総合機能レベル)) <= 1 ? '軽度の制限' : ((総合機能レベル)) <= 2 ? '中等度の制限' : ((総合機能レベル)) <= 3 ? '重度の制限' : '完全な制限'"
+    },
+    {
+      "name": "Warning: 中等度以上の制限",
+      "formula": "((総合機能レベル)) >= 2",
+      "type": "warning"
+    },
+    {
+      "name": "Emergency: 重度以上の制限",
+      "formula": "((総合機能レベル)) >= 3",
+      "type": "emergency"
+    }
+  ]
+}

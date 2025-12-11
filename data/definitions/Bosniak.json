@@ -1,0 +1,110 @@
+{
+    "_comment": [
+        "Bosniak Classification for Renal Cysts (Revised 2019)",
+        "原著論文: https://pubmed.ncbi.nlm.nih.gov/31210616/",
+        "参考URL: https://radiopaedia.org/articles/bosniak-classification-of-cystic-renal-masses-version-2019",
+        "インデックスベースの計算式に改善"
+    ],
+    "title": "Bosniak腎嚢胞分類",
+    "description": [
+        "腎嚢胞の悪性リスクを評価する画像分類システムです",
+        "CT・MRIの所見により治療方針を決定します"
+    ],
+    "fields": [
+        {
+            "dispname": "嚢胞の基本特徴",
+            "type": "subsection"
+        },
+        {
+            "dispname": "嚢胞壁の性状",
+            "name": "嚢胞壁",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "薄く均一",
+                "わずかに肥厚または不規則",
+                "明らかに肥厚または結節状"
+            ],
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "隔壁の有無",
+            "name": "隔壁",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "なし",
+                "薄い隔壁 (髪の毛様)",
+                "厚い隔壁または複数の隔壁",
+                "不規則な隔壁"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "石灰化",
+            "name": "石灰化",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "なし",
+                "壁の石灰化",
+                "隔壁の石灰化",
+                "結節状の石灰化"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "造影効果",
+            "name": "造影効果",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "なし",
+                "最小限の造影効果",
+                "明らかな造影効果",
+                "結節の造影効果"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "嚢胞内容物",
+            "name": "嚢胞内容物",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "単純な液体",
+                "高吸収域を伴う液体",
+                "軟部組織成分"
+            ],
+            "selectoridx": "1|2|3"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "Bosniak分類",
+            "type": "eval",
+            "formula": "[[造影効果.index]] == 3 || [[嚢胞内容物.index]] == 3 ? 'Bosniak IV - 悪性の可能性が高い' : ( [[嚢胞壁.index]] == 3 || [[造影効果.index]] == 2 ? 'Bosniak III - 悪性の可能性あり' : ( [[隔壁.index]] >= 2 || [[石灰化.index]] == 3 || [[造影効果.index]] == 1 || [[嚢胞壁.index]] == 2 ? 'Bosniak IIF - 経過観察が必要' : ( [[隔壁.index]] == 1 || [[石灰化.index]] >= 1 && [[石灰化.index]] <= 2 || [[嚢胞内容物.index]] == 2 ? 'Bosniak II - 良性だが複雑な嚢胞' : 'Bosniak I - 単純な良性嚢胞' ) ) )"
+        },
+        {
+            "name": "悪性リスク",
+            "type": "eval",
+            "formula": "{{Bosniak分類}}.includes('IV') ? '悪性確率 85-100%' : ( {{Bosniak分類}}.includes('III') ? '悪性確率 50-60%' : ( {{Bosniak分類}}.includes('IIF') ? '悪性確率 5-10%' : ( {{Bosniak分類}}.includes('II') ? '悪性確率 <5%' : '悪性確率 0%' ) ) )"
+        },
+        {
+            "name": "推奨治療方針",
+            "type": "eval",
+            "formula": "{{Bosniak分類}}.includes('IV') || {{Bosniak分類}}.includes('III') ? '外科的切除を推奨' : ( {{Bosniak分類}}.includes('IIF') ? '6-12ヶ月ごとの画像経過観察' : '治療不要 - 定期観察のみ' )"
+        },
+        {
+            "name": "Warning: IIF経過観察必要",
+            "formula": "{{Bosniak分類}}.includes('IIF')",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 外科的介入検討",
+            "formula": "{{Bosniak分類}}.includes('III') || {{Bosniak分類}}.includes('IV')",
+            "type": "emergency"
+        }
+    ]
+}

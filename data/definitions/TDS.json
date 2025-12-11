@@ -1,0 +1,139 @@
+{
+  "_comment": [
+    "TDS（Tobacco Dependence Screener）",
+    "ニコチン依存症スクリーニングテスト",
+    "原著：Development of a screening questionnaire for tobacco/nicotine dependence according to ICD-10, DSM-III-R, and DSM-IV. Kawakami N, et al. Addict Behav. 1999; 24(2):155-66",
+    "日本語版は厚生労働省の実態調査（1998年度）で使用",
+    "禁煙治療保険診療でのニコチン依存症診断基準として標準使用",
+    "5点以上でニコチン依存症と診断"
+  ],
+  "title": "TDS ニコチン依存症スクリーニングテスト",
+  "description": [
+    "ニコチン依存症の診断に用いられる標準的なスクリーニングテストです。",
+    "禁煙治療の保険診療適用判定に使用されています。"
+  ],
+  "contact": "禁煙外来担当医",
+  "dept_in_charge": "禁煙外来",
+  "responsible_person": [
+    "禁煙外来担当医師"
+  ],
+  "staffs": [
+    "看護師",
+    "医師"
+  ],
+  "submit_button_title": "回答を送信",
+  "mail_notification": false,
+  "fields": [
+    {
+      "dispname": "問1",
+      "name": "Q1",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "description": "自分が吸うつもりよりも、ずっと多くタバコを吸ってしまうことがありましたか。",
+      "selector": "いいえ|はい"
+    },
+    {
+      "dispname": "問2",
+      "name": "Q2",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "description": "禁煙や本数を減らそうと試みて、できなかったことがありましたか。",
+      "selector": "いいえ|はい"
+    },
+    {
+      "dispname": "問3",
+      "name": "Q3",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "description": "禁煙したり本数を減らそうとしたときに、タバコがほしくてほしくてたまらなくなることがありましたか。",
+      "selector": "いいえ|はい"
+    },
+    {
+      "dispname": "問4",
+      "name": "Q4",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "description": "禁煙したり本数を減らしたときに、次のどれかがありましたか。(イライラ、神経質、落ちつかない、集中しにくい、ゆううつ、頭痛、眠気、胃のむかつき、脈が遅い、手のふるえ、食欲または体重増加)",
+      "selector": "いいえ|はい"
+    },
+    {
+      "dispname": "問5",
+      "name": "Q5",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "description": "問4でうかがった症状を消すために、またタバコを吸い始めることがありましたか。",
+      "selector": "いいえ|はい"
+    },
+    {
+      "dispname": "問6",
+      "name": "Q6",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "description": "重い病気にかかったときに、タバコはよくないとわかっているのに吸うことがありましたか。",
+      "selector": "いいえ|はい"
+    },
+    {
+      "dispname": "問7",
+      "name": "Q7",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "description": "タバコのために自分に健康問題が起きているとわかっていても、吸うことがありましたか。",
+      "selector": "いいえ|はい"
+    },
+    {
+      "dispname": "問8",
+      "name": "Q8",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "description": "タバコのために自分に精神的問題が起きているとわかっていても、吸うことがありましたか。",
+      "selector": "いいえ|はい"
+    },
+    {
+      "dispname": "問9",
+      "name": "Q9",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "description": "自分はタバコに依存していると感じることがありましたか。",
+      "selector": "いいえ|はい"
+    },
+    {
+      "dispname": "問10",
+      "name": "Q10",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "description": "タバコが吸えないような仕事やつきあいを避けることが何度かありましたか。",
+      "selector": "いいえ|はい"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "TDS合計スコア",
+      "type": "eval",
+      "formula": "[[Q1.index]] + [[Q2.index]] + [[Q3.index]] + [[Q4.index]] + [[Q5.index]] + [[Q6.index]] + [[Q7.index]] + [[Q8.index]] + [[Q9.index]] + [[Q10.index]]",
+      "dispname": "TDS合計得点(0-10点)"
+    },
+    {
+      "name": "ニコチン依存症判定",
+      "type": "eval",
+      "formula": "[[TDS合計スコア]] >= 5 ? 'ニコチン依存症' : 'ニコチン依存症なし'",
+      "dispname": "ニコチン依存症診断結果(5点以上で依存症)"
+    },
+    {
+      "name": "保険診療適用判定",
+      "type": "eval",
+      "formula": "[[TDS合計スコア]] >= 5 ? '保険診療対象' : '自費診療'",
+      "dispname": "禁煙治療保険適用の可否"
+    }
+  ]
+}

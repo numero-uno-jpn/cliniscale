@@ -1,0 +1,158 @@
+{
+    "_comment": [
+        "FAB (Frontal Assessment Battery) - 前頭葉機能評価バッテリー",
+        "Dubois B, Slachevsky A, Litvan I, Pillon B. The FAB: a Frontal Assessment Battery at bedside. Neurology. 2000;55(11):1621-6.",
+        "18点満点で構成される6つの前頭葉機能評価項目",
+        "カットオフ値: 11点以下で前頭葉機能低下を示唆（一般的基準）",
+        "参考URL: https://japan.progress.im/ja/content/fab",
+        "評価者による実施が必要な神経心理学的検査"
+    ],
+    "title": "FAB (Frontal Assessment Battery) 前頭葉機能評価",
+    "description": [
+        "前頭葉機能を評価するためのベッドサイド検査です。",
+        "6つの下位検査から構成され、概念化、知的柔軟性、運動プログラミング、干渉刺激に対する敏感さ、抑制コントロール、環境に対する被影響性を評価します。",
+        "各項目は0-3点で評価され、合計18点満点となります。"
+    ],
+    "disable_privacyitems": false,
+    "fields": [
+        {
+            "name": "検査実施日",
+            "type": "date",
+            "dispname": "検査実施日",
+            "required": true,
+            "format": "YYYY年MM月DD日"
+        },
+        {
+            "name": "検査者名",
+            "type": "text",
+            "dispname": "検査者名"
+        },
+        {
+            "name": "類似性",
+            "type": "radio",
+            "dispname": "1. 類似性 (概念化)",
+            "description": [
+                "2つのものの類似点を答える課題",
+                "質問1「バナナとオレンジ」",
+                "質問2「テーブルとイス」",
+                "質問3「チューリップとバラとキク」"
+            ],
+            "required": true,
+            "selector": [
+                "3つ正解",
+                "2つ正解",
+                "1つ正解",
+                "正解なし"
+            ],
+            "selectoridx": "3|2|1|0"
+        },
+        {
+            "name": "語の流暢性",
+            "type": "radio",
+            "dispname": "2. 語の流暢性 (知的柔軟性)",
+            "description": [
+                "60秒間で「か」から始まる言葉をできるだけ多く答える課題",
+                "人名や地名は除く",
+                "10語言えたら終了"
+            ],
+            "required": true,
+            "selector": [
+                "10個以上",
+                "6-9個",
+                "3-5個",
+                "3個未満"
+            ],
+            "selectoridx": "3|2|1|0"
+        },
+        {
+            "name": "運動系列",
+            "type": "radio",
+            "dispname": "3. 運動系列 (運動プログラミング)",
+            "description": [
+                "Luria系統動作 (拳-刀-掌) の模倣課題",
+                "検者が左手で3回実演後、被検者が実施",
+                "動作を言語化してはいけない"
+            ],
+            "required": true,
+            "selector": [
+                "一人で正しい系列を6回以上可能",
+                "一人で正しい系列を3回連続で可能",
+                "検者と一緒に3回連続で可能",
+                "検者と一緒でも3回連続不可能"
+            ],
+            "selectoridx": "3|2|1|0"
+        },
+        {
+            "name": "葛藤指示",
+            "type": "radio",
+            "dispname": "4. 葛藤指示 (干渉刺激に対する敏感さ)",
+            "description": [
+                "「1回叩いたら2回」「2回叩いたら1回」叩く課題",
+                "本番: 1-1-2-1-2-2-2-1-1-2の順序で実施"
+            ],
+            "required": true,
+            "selector": [
+                "間違えなし",
+                "1-2回の間違いで可能",
+                "3回以上の間違い",
+                "検者と同じように4回連続で叩く"
+            ],
+            "selectoridx": "3|2|1|0"
+        },
+        {
+            "name": "go_nogo",
+            "type": "radio",
+            "dispname": "5. Go/No-Go課題 (抑制コントロール)",
+            "description": [
+                "「1回叩いたら1回」「2回叩いたら叩かない」課題",
+                "本番: 1-1-2-1-2-2-2-1-1-2の順序で実施"
+            ],
+            "required": true,
+            "selector": [
+                "間違えなし",
+                "1-2回の間違いで可能",
+                "3回以上の間違い",
+                "検者と同じように4回連続で叩く"
+            ],
+            "selectoridx": "3|2|1|0"
+        },
+        {
+            "name": "把握行動",
+            "type": "radio",
+            "dispname": "6. 把握行動 (環境に対する被影響性)",
+            "description": [
+                "「私の手を握らないでください」と指示",
+                "検者が被検者の手に自分の手を合わせて1-2秒観察",
+                "握った場合は再教示を行う"
+            ],
+            "required": true,
+            "selector": [
+                "手を握らない",
+                "戸惑って何をすればよいか尋ねてきた",
+                "最初に握ったが再教示では握らない",
+                "再教示でも握った"
+            ],
+            "selectoridx": "3|2|1|0"
+        },
+        {
+            "name": "note1",
+            "type": "note",
+            "description": "**注意事項**\n- 側頭葉機能障害でも得点低下することがあります\n- あくまでスクリーニング検査として位置づけてください\n- 他の検査や日常生活観察と合わせて総合的に判断してください"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "fab_total",
+            "type": "eval",
+            "dispname": "FAB合計得点の計算",
+            "formula": "[[類似性.index]] + [[語の流暢性.index]] + [[運動系列.index]] + [[葛藤指示.index]] + [[go_nogo.index]] + [[把握行動.index]]"
+        },
+        {
+            "name": "判定",
+            "type": "eval",
+            "dispname": "前頭葉機能障害の判定（一般的カットオフ値: 11点以下で前頭葉機能低下）",
+            "formula": "[[fab_total]] >= 12 ? \"正常範囲\" : \"前頭葉機能低下の可能性\""
+        }
+    ]
+}

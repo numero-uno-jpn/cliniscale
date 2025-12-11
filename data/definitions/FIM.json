@@ -1,0 +1,376 @@
+{
+    "_comment": [
+        "FIM（Functional Independence Measure）機能的自立度評価法 問診票定義",
+        "1987年にKeith, Granger, Hamilton, Sherwinによって発表されたADL評価法",
+        "運動項目13項目・認知項目5項目の計18項目、各項目1-7点の7段階評価",
+        "合計点数：18-126点",
+        "参考文献：Keith, R.A., Granger, C.V., Hamilton, B.B. and Sherwin, F.S. (1987) The Functional Independence Measure A New Tool for Rehabilitation. Advances in Clinical Rehabilitation, 1, 6-18.",
+        "参考文献：厚生労働省 日常生活動作（ADL）の指標 FIMの概要",
+        "URL: https://www.mhlw.go.jp/file/05-Shingikai-12404000-Hokenkyoku-Iryouka/0000184198.pdf"
+    ],
+    "title": "FIM 機能的自立度評価法",
+    "description": [
+        "日常生活動作（ADL）の自立度を評価する問診票です。",
+        "実際に行っている動作について回答してください。"
+    ],
+    "submit_button_title": "評価内容を送信",
+    "fields": [
+        {
+            "dispname": "運動項目 - セルフケア",
+            "type": "subsection"
+        },
+        {
+            "dispname": "食事",
+            "name": "食事",
+            "type": "radio",
+            "selector": [
+                "完全自立",
+                "修正自立",
+                "監視",
+                "最小介助",
+                "中等度介助",
+                "最大介助",
+                "全介助"
+            ],
+            "selectoridx": "7|6|5|4|3|2|1",
+            "description": "食事が適切に用意された状態で、食器・道具を使って食べ物を口に運び、咀嚼・嚥下するまでの動作",
+            "required": true
+        },
+        {
+            "dispname": "整容",
+            "name": "整容",
+            "type": "radio",
+            "selector": [
+                "完全自立",
+                "修正自立",
+                "監視",
+                "最小介助",
+                "中等度介助",
+                "最大介助",
+                "全介助"
+            ],
+            "selectoridx": "7|6|5|4|3|2|1",
+            "description": "口腔ケア、整髪、手洗い、洗顔、髭剃りまたは化粧の動作",
+            "required": true
+        },
+        {
+            "dispname": "清拭",
+            "name": "清拭",
+            "type": "radio",
+            "selector": [
+                "完全自立",
+                "修正自立",
+                "監視",
+                "最小介助",
+                "中等度介助",
+                "最大介助",
+                "全介助"
+            ],
+            "selectoridx": "7|6|5|4|3|2|1",
+            "description": "身体を洗う、すすぐ、乾かすの動作（入浴・シャワー）",
+            "required": true
+        },
+        {
+            "dispname": "更衣（上半身）",
+            "name": "更衣上半身",
+            "type": "radio",
+            "selector": [
+                "完全自立",
+                "修正自立",
+                "監視",
+                "最小介助",
+                "中等度介助",
+                "最大介助",
+                "全介助"
+            ],
+            "selectoridx": "7|6|5|4|3|2|1",
+            "description": "上半身の衣服の着脱",
+            "required": true
+        },
+        {
+            "dispname": "更衣（下半身）",
+            "name": "更衣下半身",
+            "type": "radio",
+            "selector": [
+                "完全自立",
+                "修正自立",
+                "監視",
+                "最小介助",
+                "中等度介助",
+                "最大介助",
+                "全介助"
+            ],
+            "selectoridx": "7|6|5|4|3|2|1",
+            "description": "下半身の衣服の着脱",
+            "required": true
+        },
+        {
+            "dispname": "トイレ動作",
+            "name": "トイレ動作",
+            "type": "radio",
+            "selector": [
+                "完全自立",
+                "修正自立",
+                "監視",
+                "最小介助",
+                "中等度介助",
+                "最大介助",
+                "全介助"
+            ],
+            "selectoridx": "7|6|5|4|3|2|1",
+            "description": "トイレでの一連の動作（衣服の着脱、排泄、清拭）",
+            "required": true
+        },
+        {
+            "dispname": "運動項目 - 排泄コントロール",
+            "type": "subsection"
+        },
+        {
+            "dispname": "排尿コントロール",
+            "name": "排尿コントロール",
+            "type": "radio",
+            "selector": [
+                "完全自立",
+                "修正自立",
+                "監視",
+                "最小介助",
+                "中等度介助",
+                "最大介助",
+                "全介助"
+            ],
+            "selectoridx": "7|6|5|4|3|2|1",
+            "description": "排尿のコントロール（失禁の有無、カテーテル等の管理を含む）",
+            "required": true
+        },
+        {
+            "dispname": "排便コントロール",
+            "name": "排便コントロール",
+            "type": "radio",
+            "selector": [
+                "完全自立",
+                "修正自立",
+                "監視",
+                "最小介助",
+                "中等度介助",
+                "最大介助",
+                "全介助"
+            ],
+            "selectoridx": "7|6|5|4|3|2|1",
+            "description": "排便のコントロール（失禁の有無、ストーマ等の管理を含む）",
+            "required": true
+        },
+        {
+            "dispname": "運動項目 - 移乗",
+            "type": "subsection"
+        },
+        {
+            "dispname": "ベッド・椅子・車椅子移乗",
+            "name": "ベッド椅子車椅子移乗",
+            "type": "radio",
+            "selector": [
+                "完全自立",
+                "修正自立",
+                "監視",
+                "最小介助",
+                "中等度介助",
+                "最大介助",
+                "全介助"
+            ],
+            "selectoridx": "7|6|5|4|3|2|1",
+            "description": "ベッドから椅子、車椅子への移乗動作",
+            "required": true
+        },
+        {
+            "dispname": "トイレ移乗",
+            "name": "トイレ移乗",
+            "type": "radio",
+            "selector": [
+                "完全自立",
+                "修正自立",
+                "監視",
+                "最小介助",
+                "中等度介助",
+                "最大介助",
+                "全介助"
+            ],
+            "selectoridx": "7|6|5|4|3|2|1",
+            "description": "トイレへの移乗動作",
+            "required": true
+        },
+        {
+            "dispname": "浴槽・シャワー移乗",
+            "name": "浴槽シャワー移乗",
+            "type": "radio",
+            "selector": [
+                "完全自立",
+                "修正自立",
+                "監視",
+                "最小介助",
+                "中等度介助",
+                "最大介助",
+                "全介助"
+            ],
+            "selectoridx": "7|6|5|4|3|2|1",
+            "description": "浴槽・シャワー室への移乗動作",
+            "required": true
+        },
+        {
+            "dispname": "運動項目 - 移動",
+            "type": "subsection"
+        },
+        {
+            "dispname": "歩行・車椅子移動",
+            "name": "歩行車椅子移動",
+            "type": "radio",
+            "selector": [
+                "完全自立",
+                "修正自立",
+                "監視",
+                "最小介助",
+                "中等度介助",
+                "最大介助",
+                "全介助"
+            ],
+            "selectoridx": "7|6|5|4|3|2|1",
+            "description": "平地での歩行または車椅子での移動（45m以上）",
+            "required": true
+        },
+        {
+            "dispname": "階段昇降",
+            "name": "階段昇降",
+            "type": "radio",
+            "selector": [
+                "完全自立",
+                "修正自立",
+                "監視",
+                "最小介助",
+                "中等度介助",
+                "最大介助",
+                "全介助"
+            ],
+            "selectoridx": "7|6|5|4|3|2|1",
+            "description": "階段の昇降動作（12-14段）",
+            "required": true
+        },
+        {
+            "dispname": "認知項目 - コミュニケーション",
+            "type": "subsection"
+        },
+        {
+            "dispname": "理解",
+            "name": "理解",
+            "type": "radio",
+            "selector": [
+                "完全自立",
+                "修正自立",
+                "監視",
+                "最小介助",
+                "中等度介助",
+                "最大介助",
+                "全介助"
+            ],
+            "selectoridx": "7|6|5|4|3|2|1",
+            "description": "聴覚的または視覚的コミュニケーションの理解",
+            "required": true
+        },
+        {
+            "dispname": "表出",
+            "name": "表出",
+            "type": "radio",
+            "selector": [
+                "完全自立",
+                "修正自立",
+                "監視",
+                "最小介助",
+                "中等度介助",
+                "最大介助",
+                "全介助"
+            ],
+            "selectoridx": "7|6|5|4|3|2|1",
+            "description": "音声的または非音声的コミュニケーションによる表出",
+            "required": true
+        },
+        {
+            "dispname": "認知項目 - 社会的認知",
+            "type": "subsection"
+        },
+        {
+            "dispname": "社会的交流",
+            "name": "社会的交流",
+            "type": "radio",
+            "selector": [
+                "完全自立",
+                "修正自立",
+                "監視",
+                "最小介助",
+                "中等度介助",
+                "最大介助",
+                "全介助"
+            ],
+            "selectoridx": "7|6|5|4|3|2|1",
+            "description": "他者との社会的交流、集団参加の能力",
+            "required": true
+        },
+        {
+            "dispname": "問題解決",
+            "name": "問題解決",
+            "type": "radio",
+            "selector": [
+                "完全自立",
+                "修正自立",
+                "監視",
+                "最小介助",
+                "中等度介助",
+                "最大介助",
+                "全介助"
+            ],
+            "selectoridx": "7|6|5|4|3|2|1",
+            "description": "日常生活での問題解決、判断、記憶の能力",
+            "required": true
+        },
+        {
+            "dispname": "記憶",
+            "name": "記憶",
+            "type": "radio",
+            "selector": [
+                "完全自立",
+                "修正自立",
+                "監視",
+                "最小介助",
+                "中等度介助",
+                "最大介助",
+                "全介助"
+            ],
+            "selectoridx": "7|6|5|4|3|2|1",
+            "description": "日常生活に必要な記憶・学習・認識の能力",
+            "required": true
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "運動項目合計",
+            "type": "eval",
+            "formula": "[[食事.index]] + [[整容.index]] + [[清拭.index]] + [[更衣上半身.index]] + [[更衣下半身.index]] + [[トイレ動作.index]] + [[排尿コントロール.index]] + [[排便コントロール.index]] + [[ベッド椅子車椅子移乗.index]] + [[トイレ移乗.index]] + [[浴槽シャワー移乗.index]] + [[歩行車椅子移動.index]] + [[階段昇降.index]]",
+            "dispname": "運動項目合計点数（13-91点）"
+        },
+        {
+            "name": "認知項目合計",
+            "type": "eval",
+            "formula": "[[理解.index]] + [[表出.index]] + [[社会的交流.index]] + [[問題解決.index]] + [[記憶.index]]",
+            "dispname": "認知項目合計点数（5-35点）"
+        },
+        {
+            "name": "FIM総合計",
+            "type": "eval",
+            "formula": "[[運動項目合計]] + [[認知項目合計]]",
+            "dispname": "FIM総合計点数（18-126点）"
+        },
+        {
+            "name": "FIM判定",
+            "type": "eval",
+            "formula": "[[FIM総合計]] >= 110 ? '介護時間ほぼ0分' : ( [[FIM総合計]] >= 91 ? '軽度介護' : ( [[FIM総合計]] >= 70 ? '中等度介護' : ( [[FIM総合計]] >= 40 ? '重度介護' : '最重度介護' ) ) )",
+            "dispname": "FIM判定 介護負担度レベル"
+        }
+    ]
+}

@@ -1,0 +1,205 @@
+{
+    "_comment": [
+        "水飲みテスト・改訂水飲みテスト問診票定義",
+        "参考文献: 窪田俊夫ら. 脳血管障害における麻痺性嚥下障害－スクリーニングテストとその臨床応用について. 総合リハ 1982;10(2):271-276",
+        "才藤栄一ら. 改訂水飲みテスト. 摂食・嚥下リハビリテーション学会誌 1999",
+        "URL: https://www.jsdr.or.jp/guideline/",
+        "URL: https://rehabilidata.com/mizunomi-test/"
+    ],
+    "title": "水飲みテスト(WST)・改訂水飲みテスト (MWST)",
+    "description": [
+        "<h3>摂食嚥下機能スクリーニング検査</h3>",
+        "水飲みテストは嚥下機能を評価する簡易検査です。",
+        "改訂水飲みテストから開始し、問題がなければ30ml水飲みテストを実施してください。"
+    ],
+    "translate": "major",
+    "fields": [
+        {
+            "dispname": "実施状況",
+            "type": "subsection"
+        },
+        {
+            "dispname": "患者の基本状態",
+            "name": "患者状態",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "意識清明・指示従命良好|軽度意識障害・指示従命不良|重度意識障害・指示従命不可",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "体位",
+            "name": "体位",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "座位|半座位|臥位",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "改訂水飲みテスト(MWST)",
+            "type": "subsection"
+        },
+        {
+            "dispname": "3ml冷水使用",
+            "name": "MWST実施",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "実施|実施せず"
+        },
+        {
+            "dispname": "評価結果",
+            "name": "MWST評価",
+            "type": "radio",
+            "required": true,
+            "parentname": "MWST実施",
+            "parentsel": "実施",
+            "selector": [
+                "1点 嚥下なし、むせるand/or呼吸切迫",
+                "2点 嚥下あり、呼吸切迫",
+                "3点 嚥下あり、呼吸良好、むせるand/or湿性嗄声",
+                "4点 嚥下あり、呼吸良好、むせなし",
+                "5点 4点に加え、反復嚥下が30秒以内に2回可能"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "反復実施回数",
+            "name": "MWST実施回数",
+            "type": "radio",
+            "inline": true,
+            "parentname": "MWST実施",
+            "parentsel": "実施",
+            "selector": "1回のみ|2回実施|3回実施",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "実施しなかった理由",
+            "name": "MWST未実施理由",
+            "type": "textarea",
+            "parentname": "MWST実施",
+            "parentsel": "実施せず",
+            "rows": 3
+        },
+        {
+            "dispname": "30ml水飲みテスト(WST)",
+            "type": "subsection"
+        },
+        {
+            "dispname": "30ml常温水使用",
+            "name": "WST実施",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "実施|実施せず"
+        },
+        {
+            "dispname": "評価結果",
+            "name": "WST評価",
+            "type": "radio",
+            "required": true,
+            "parentname": "WST実施",
+            "parentsel": "実施",
+            "selector": [
+                "段階1 1回でむせることなく飲むことができる",
+                "段階2 2回以上に分けるが、むせることなく飲むことができる",
+                "段階3 1回で飲むことができるが、むせることがある",
+                "段階4 2回以上に分けて飲むにもかかわらず、むせることがある",
+                "段階5 むせることがしばしばで、全量飲むことが困難である"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "飲水時間",
+            "name": "WST評価_飲水時間",
+            "type": "text",
+            "postfix": "秒",
+            "inputmode": "numeric",
+            "testrange": [
+                0,
+                60
+            ],
+            "parentname": "WST実施",
+            "parentsel": "実施",
+            "description": "半角数字で入力してください（例: 5）"
+        },
+        {
+            "dispname": "実施しなかった理由",
+            "name": "WST未実施理由",
+            "type": "textarea",
+            "parentname": "WST実施",
+            "parentsel": "実施せず",
+            "rows": 3
+        },
+        {
+            "dispname": "観察所見",
+            "type": "subsection"
+        },
+        {
+            "dispname": "観察された症状",
+            "name": "観察症状",
+            "type": "checkbox",
+            "selector": [
+                "むせ",
+                "湿性嗄声",
+                "呼吸切迫",
+                "口唇からの流出",
+                "注意深い飲み方",
+                "すするような飲み方",
+                "口に含むような飲み方",
+                "無理に続けようとする傾向"
+            ]
+        },
+        {
+            "dispname": "その他の所見",
+            "name": "その他所見",
+            "type": "textarea",
+            "rows": 3,
+            "description": "特記すべき所見があれば記載してください"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "MWSTスコア",
+            "type": "eval",
+            "formula": "[[MWST評価.index]]",
+            "noreport": true
+        },
+        {
+            "name": "飲水時間",
+            "type": "eval",
+            "formula": "[[WST評価_飲水時間]]",
+            "noreport": true
+        },
+        {
+            "name": "WSTスコア",
+            "type": "eval",
+            "formula": "[[WST評価.index]]",
+            "noreport": true
+        },
+        {
+            "name": "MWST総合判定",
+            "type": "eval",
+            "formula": "{{MWST実施}} == '実施' ? ( [[MWSTスコア]] >= 4 ? '異常なし' : '要精査' ) : '未実施'",
+            "dispname": "改訂水飲みテスト総合判定: 4点以上で異常なし、3点以下で要精査"
+        },
+        {
+            "name": "WST総合判定",
+            "type": "eval",
+            "formula": "{{WST実施}} == '実施' ? ( [[WSTスコア]] == 1 && [[飲水時間]] <= 5 ? '正常' : ( [[WSTスコア]] <= 2 ? '嚥下障害疑い' : '異常' ) ) : '未実施'",
+            "dispname": "30ml水飲みテスト総合判定: 段階1で5秒以内なら正常、段階1で5秒以上または段階2は嚥下障害疑い、段階3以上は異常"
+        },
+        {
+            "name": "Warning: 要精査判定 (MWST 3点以下、またはWST段階2以上)",
+            "type": "warning",
+            "formula": "{{MWST総合判定}} == '要精査' || {{WST総合判定}} == '嚥下障害疑い' || {{WST総合判定}} == '異常'"
+        },
+        {
+            "name": "Emergency: 緊急対応判定 (嚥下不能、呼吸切迫)",
+            "type": "emergency",
+            "formula": "{{MWST実施}} == '実施' && [[MWSTスコア]] <= 2 && [[MWSTスコア]] > 0"
+        }
+    ]
+}

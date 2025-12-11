@@ -12,12 +12,12 @@ header('Content-Type: application/xml; charset=UTF-8');
 error_reporting(0);
 ini_set('display_errors', 0);
 
-require_once '/home/medeputize/scripts/stats/vendor/autoload.php';
+require_once __DIR__ . "/vendor/autoload.php";
 
 use Symfony\Component\Yaml\Yaml;
 
 // YAML ファイル読み込み
-$yamlPath = '/home/medeputize/www/documents/emuyn/cliniscale/スコア票リスト.yaml';
+$yamlPath = __DIR__ . '/data/スコア票リスト.yaml';
 $questionnaires = [];
 
 if (file_exists($yamlPath)) {

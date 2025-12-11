@@ -1,0 +1,128 @@
+{
+  "_comment": [
+    "R-ISS - Revised International Staging System for Multiple Myeloma",
+    "多発性骨髄腫の改訂国際病期分類",
+    "開発者: IMWG (International Myeloma Working Group) (2015)",
+    "原典: Palumbo A, et al. J Clin Oncol. 2015;33(26):2863-9.",
+    "参考URL: https://pubmed.ncbi.nlm.nih.gov/26240224/",
+    "公式URL: https://www.myeloma.org/international-staging-system-iss-reivised-iss-r-iss",
+    "評価: ISSに遺伝子異常とLDHを追加",
+    "分類: ステージI (低リスク)、II (中リスク)、III (高リスク)"
+  ],
+  "title": "R-ISS",
+  "description": [
+    "多発性骨髄腫の病期分類を行います",
+    "血清β2ミクログロブリン、アルブミン、LDH、遺伝子異常を評価します"
+  ],
+  "fields": [
+    {
+      "type": "subsection",
+      "dispname": "ISS基準項目"
+    },
+    {
+      "type": "text",
+      "name": "β2ミクログロブリン",
+      "dispname": "血清β2ミクログロブリン",
+      "description": "血清β2ミクログロブリン値",
+      "required": true,
+      "inputmode": "decimal",
+      "postfix": "mg/L",
+      "testrange": [
+        0.5,
+        15
+      ]
+    },
+    {
+      "type": "text",
+      "name": "アルブミン",
+      "dispname": "血清アルブミン",
+      "description": "血清アルブミン値",
+      "required": true,
+      "inputmode": "decimal",
+      "postfix": "g/dL",
+      "testrange": [
+        2.0,
+        5.0
+      ]
+    },
+    {
+      "type": "subsection",
+      "dispname": "R-ISS追加項目"
+    },
+    {
+      "type": "radio",
+      "name": "LDH",
+      "dispname": "血清LDH (乳酸脱水素酵素)",
+      "description": "LDHは正常上限を超えているか",
+      "required": true,
+      "inline": true,
+      "selector": [
+        "正常範囲内",
+        "正常上限を超える"
+      ],
+      "selectoridx": "0|1"
+    },
+    {
+      "type": "checkbox",
+      "name": "高リスク遺伝子異常",
+      "dispname": "高リスク遺伝子異常",
+      "description": "FISH/細胞遺伝学検査で検出された高リスク異常",
+      "selector": [
+        "del(17p)",
+        "t(4;14)",
+        "t(14;16)",
+        "該当なし"
+      ],
+      "selectoridx": "1|1|1|0"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "type": "eval",
+      "name": "ISSステージ",
+      "formula": "((β2ミクログロブリン)) < 3.5 && ((アルブミン)) >= 3.5 ? 'ISS I' : ((β2ミクログロブリン)) >= 5.5 ? 'ISS III' : 'ISS II'",
+      "noreport": true
+    },
+    {
+      "type": "eval",
+      "name": "高リスク遺伝子異常length",
+      "formula": "((高リスク遺伝子異常.index)).length",
+      "noreport": true
+    },
+    {
+      "type": "eval",
+      "name": "高リスク異常の有無",
+      "formula": "( [[高リスク遺伝子異常length]] ) ? 'あり' : 'なし'",
+      "noreport": true
+    },
+    {
+      "type": "eval",
+      "name": "R_ISSステージ",
+      "description": "Revised ISS病期分類",
+      "formula": "{{ISSステージ}} == 'ISS I' && {{高リスク異常の有無}} == 'なし' && [[LDH.index]] == 0 ? 'R-ISS I' : ({{ISSステージ}} == 'ISS III' || {{高リスク異常の有無}} == 'あり' || [[LDH.index]] == 1 ? 'R-ISS III' : 'R-ISS II')"
+    },
+    {
+      "type": "eval",
+      "name": "予後分類",
+      "description": "予後リスク分類",
+      "formula": "{{R_ISSステージ}} == 'R-ISS I' ? '低リスク' : {{R_ISSステージ}} == 'R-ISS II' ? '中間リスク' : '高リスク'"
+    },
+    {
+      "type": "eval",
+      "name": "5年生存率目安",
+      "description": "5年全生存率の目安",
+      "formula": "{{R_ISSステージ}} == 'R-ISS I' ? '約82%' : {{R_ISSステージ}} == 'R-ISS II' ? '約62%' : '約40%'"
+    },
+    {
+      "type": "warning",
+      "formula": "{{R_ISSステージ}} == 'R-ISS II' || {{R_ISSステージ}} == 'R-ISS III'",
+      "name": "Warning: R-ISS II/III"
+    },
+    {
+      "type": "emergency",
+      "formula": "{{R_ISSステージ}} == 'R-ISS III'",
+      "name": "Emergency: R-ISS III"
+    }
+  ]
+}

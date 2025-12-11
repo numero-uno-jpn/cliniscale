@@ -1,0 +1,523 @@
+{
+    "_comment": [
+        "BITE (Bulimic Investigatory Test, Edinburgh) - 過食症評価スケール",
+        "原典：Henderson, M., & Freeman, C. P. L. (1987). A self-rating scale for bulimia. The 'BITE'. British Journal of Psychiatry, 150(1), 18-24.",
+        "doi: 10.1192/bjp.150.1.18",
+        "33項目の自己報告型尺度で、過食症の症状と重症度を評価",
+        "症状スケール（30項目）と重症度スケール（3項目）で構成",
+        "症状スケール20点以上で過食障害の可能性あり（感度44%、特異度92%）",
+        "重症度スケール5点以上で摂食障害を示唆"
+    ],
+    "title": "BITE 過食症評価スケール",
+    "description": [
+        "過食症評価スケール（BITE：Bulimic Investigatory Test, Edinburgh）",
+        "この質問票は、過食症状や摂食に関する問題を評価するためのものです。",
+        "すべての質問にお答えください。"
+    ],
+    "fields": [
+        {
+            "type": "subsection",
+            "name": "section1",
+            "dispname": "摂食パターンについて"
+        },
+        {
+            "type": "radio",
+            "name": "q1",
+            "dispname": "規則正しい食事パターンがありますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "radio",
+            "name": "q2",
+            "dispname": "厳格なダイエットをしていますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "radio",
+            "name": "q3",
+            "dispname": "一度でもダイエットを破ってしまうと、失敗したと感じますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "radio",
+            "name": "q4",
+            "dispname": "ダイエット中でなくても、食べるもののカロリーをすべて数えますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "radio",
+            "name": "q5",
+            "dispname": "丸一日断食することがありますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "radio",
+            "name": "q6",
+            "dispname": "断食する場合、どの程度の頻度ですか？",
+            "selector": [
+                "一度だけ",
+                "時々",
+                "週に一度",
+                "週に2-3回",
+                "一日おき"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "parentname": "q5",
+            "parentsel": "はい",
+            "required": true
+        },
+        {
+            "type": "eval",
+            "name": "q6_index",
+            "formula": "[[q6.index]]",
+            "noreport": true,
+            "parentname": "q5",
+            "parentsel": "いいえ"
+        },
+        {
+            "type": "subsection",
+            "dispname": "体重減少のための行動"
+        },
+        {
+            "type": "radio",
+            "name": "q7",
+            "dispname": "体重を減らすために、以下のうちどれかを使用しますか？",
+            "description": [
+                "ダイエット薬、利尿薬、下剤、自分で嘔吐のうち最も頻繁に行うものを選択してください。",
+                "どれも行わない場合は「一度もない」を選択してください。"
+            ],
+            "selector": [
+                "一度もない",
+                "時々",
+                "週に一度",
+                "週に2-3回",
+                "毎日",
+                "1日2-3回",
+                "1日5回以上"
+            ],
+            "selectoridx": "0|2|3|4|5|6|7",
+            "required": true
+        },
+        {
+            "type": "subsection",
+            "name": "section2",
+            "dispname": "食行動と生活への影響"
+        },
+        {
+            "type": "radio",
+            "name": "q8",
+            "dispname": "あなたの食事パターンは、生活に深刻な支障をきたしていますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "radio",
+            "name": "q9",
+            "dispname": "食べ物があなたの生活を支配していると思いますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "radio",
+            "name": "q10",
+            "dispname": "身体的な不快感で止まるまで食べ続けることがありますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "radio",
+            "name": "q11",
+            "dispname": "食べ物のことばかり考えている時がありますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "radio",
+            "name": "q12",
+            "dispname": "人前では普通に食べて、一人の時にたくさん食べて埋め合わせをしますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "radio",
+            "name": "q13",
+            "dispname": "いつでも思った時に食べるのをやめることができますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "radio",
+            "name": "q14",
+            "dispname": "食べて食べて食べたいという抑えきれない衝動を感じることがありますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "radio",
+            "name": "q15",
+            "dispname": "不安を感じている時に、たくさん食べる傾向がありますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "radio",
+            "name": "q16",
+            "dispname": "太ることを考えると恐ろしくなりますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "subsection",
+            "name": "section3",
+            "dispname": "過食行動について"
+        },
+        {
+            "type": "radio",
+            "name": "q17",
+            "dispname": "食事以外で、大量の食べ物を急いで食べることがありますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "radio",
+            "name": "q18",
+            "dispname": "自分の食べ方を恥ずかしく思いますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "radio",
+            "name": "q19",
+            "dispname": "どれだけ食べるかをコントロールできないのではないかと心配になりますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "radio",
+            "name": "q20",
+            "dispname": "慰めを求めて食べ物に頼りますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "radio",
+            "name": "q21",
+            "dispname": "食事の最後にお皿に食べ物を残すことができますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "radio",
+            "name": "q22",
+            "dispname": "どれだけ食べるかについて、他の人を騙しますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "radio",
+            "name": "q23",
+            "dispname": "どれだけお腹がすいているかによって、食べる量が決まりますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "radio",
+            "name": "q24",
+            "dispname": "大量の食べ物を一気に食べてしまうこと（過食）がありますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "radio",
+            "name": "q25",
+            "dispname": "過食した後、みじめな気持ちになりますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "parentname": "q24",
+            "parentsel": "はい",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "eval",
+            "name": "q25_index",
+            "formula": "[[q25.index]]",
+            "noreport": true,
+            "parentname": "q24",
+            "parentsel": "いいえ"
+        },
+        {
+            "type": "radio",
+            "name": "q26",
+            "dispname": "過食するのは一人でいる時だけですか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "parentname": "q24",
+            "parentsel": "はい",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "eval",
+            "name": "q26_index",
+            "formula": "[[q26.index]]",
+            "noreport": true,
+            "parentname": "q24",
+            "parentsel": "いいえ"
+        },
+        {
+            "type": "radio",
+            "name": "q27",
+            "dispname": "過食する場合、どの程度の頻度ですか？",
+            "selector": [
+                "ほとんどない",
+                "月に一度",
+                "週に一度",
+                "週に2-3回",
+                "毎日",
+                "1日2-3回"
+            ],
+            "selectoridx": "1|2|3|4|5|6",
+            "parentname": "q24",
+            "parentsel": "はい",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "eval",
+            "name": "q27_index",
+            "formula": "[[q27.index]]",
+            "noreport": true,
+            "parentname": "q24",
+            "parentsel": "いいえ"
+        },
+        {
+            "type": "radio",
+            "name": "q28",
+            "dispname": "過食したいという衝動を満たすために、大変な努力をしますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "radio",
+            "name": "q29",
+            "dispname": "食べ過ぎた時、とても罪悪感を感じますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "radio",
+            "name": "q30",
+            "dispname": "こっそりと食べることがありますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "radio",
+            "name": "q31",
+            "dispname": "あなたの食習慣は正常だと思いますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "radio",
+            "name": "q32",
+            "dispname": "自分を強迫的な食べ方をする人だと思いますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "radio",
+            "name": "q33",
+            "dispname": "1週間で体重が2kg以上変動しますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "eval",
+            "name": "symptom_score",
+            "dispname": "症状スケール得点（質問1-5, 8-33の30項目の合計）",
+            "formula": "[[q1.index]] + [[q2.index]] + [[q3.index]] + [[q4.index]] + [[q5.index]] + [[q8.index]] + [[q9.index]] + [[q10.index]] + [[q11.index]] + [[q12.index]] + [[q13.index]] + [[q14.index]] + [[q15.index]] + [[q16.index]] + [[q17.index]] + [[q18.index]] + [[q19.index]] + [[q20.index]] + [[q21.index]] + [[q22.index]] + [[q23.index]] + [[q24.index]] + [[q25_index]] + [[q26_index]] + [[q28.index]] + [[q29.index]] + [[q30.index]] + [[q31.index]] + [[q32.index]] + [[q33.index]]"
+        },
+        {
+            "type": "eval",
+            "name": "severity_score",
+            "dispname": "重症度スケール得点（質問6, 7, 27の合計）",
+            "formula": "[[q6_index]] + [[q7.index]] + [[q27_index]]"
+        },
+        {
+            "type": "eval",
+            "name": "total_score",
+            "dispname": "総合得点",
+            "formula": "[[symptom_score]] + [[severity_score]]"
+        },
+        {
+            "type": "eval",
+            "name": "symptom_interpretation",
+            "dispname": "症状評価",
+            "formula": "[[symptom_score]] >= 20 ? '過食障害の症状あり' : [[symptom_score]] >= 10 ? '異常な食習慣の可能性' : '正常範囲'"
+        },
+        {
+            "type": "eval",
+            "name": "severity_interpretation",
+            "dispname": "重症度評価",
+            "formula": "[[severity_score]] >= 5 ? '摂食障害を示唆' : '軽度'"
+        },
+        {
+            "name": "Warning: 高得点の警告",
+            "type": "warning",
+            "formula": "[[symptom_score]] >= 20 || [[severity_score]] >= 10"
+        }
+    ]
+}

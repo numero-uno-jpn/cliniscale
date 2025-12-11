@@ -1,0 +1,117 @@
+{
+  "_comment": [
+    "Binet分類 - 慢性リンパ性白血病病期分類",
+    "参考文献: Binet JL, et al. Cancer. 1981;48(1):198-206",
+    "日本血液学会造血器腫瘍診療ガイドライン第3.1版（2024年版）",
+    "診察所見と貧血、血小板減少のみで診断し、CTなどの画像所見は用いない",
+    "リンパ節領域：頭頸部、腋窩、鼠径部、脾臓、肝臓の5領域（両側でも1領域と評価）"
+  ],
+  "title": "Binet 慢性リンパ性白血病病期分類",
+  "description": [
+    "慢性リンパ性白血病の病期分類",
+    "ヘモグロビン値、血小板数、リンパ節腫大により3段階に分類",
+    "触診による身体診察で評価（CT等の画像検査は使用しない）"
+  ],
+  "fields": [
+    {
+      "dispname": "ヘモグロビン値",
+      "name": "ヘモグロビン",
+      "type": "radio",
+      "selector": "10g/dL未満|10g/dL以上",
+      "selectoridx": "1|0",
+      "required": true,
+      "description": "検査値に基づいて選択してください（Binet分類の境界値：10g/dL）"
+    },
+    {
+      "dispname": "血小板数",
+      "name": "血小板",
+      "type": "radio",
+      "selector": "10万/μL未満|10万/μL以上",
+      "selectoridx": "1|0",
+      "required": true,
+      "description": "検査値に基づいて選択してください（Binet分類の境界値：10万/μL）"
+    },
+    {
+      "dispname": "リンパ節腫大の評価",
+      "type": "subsection"
+    },
+    {
+      "dispname": "頭頸部リンパ節腫大",
+      "name": "頭頸部リンパ節",
+      "type": "radio",
+      "selector": "なし|あり",
+      "required": true,
+      "inline": true,
+      "description": "触診による評価"
+    },
+    {
+      "dispname": "腋窩リンパ節腫大",
+      "name": "腋窩リンパ節",
+      "type": "radio",
+      "selector": "なし|あり",
+      "required": true,
+      "inline": true,
+      "description": "触診による評価"
+    },
+    {
+      "dispname": "鼠径部リンパ節腫大",
+      "name": "鼠径部リンパ節",
+      "type": "radio",
+      "selector": "なし|あり",
+      "required": true,
+      "inline": true,
+      "description": "触診による評価"
+    },
+    {
+      "dispname": "脾腫",
+      "name": "脾腫",
+      "type": "radio",
+      "selector": "なし|あり",
+      "required": true,
+      "inline": true,
+      "description": "触診による評価"
+    },
+    {
+      "dispname": "肝腫",
+      "name": "肝腫",
+      "type": "radio",
+      "selector": "なし|あり",
+      "required": true,
+      "inline": true,
+      "description": "触診による評価"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "腫大領域数",
+      "type": "eval",
+      "formula": "({{頭頸部リンパ節}} == 'あり' ? 1 : 0) + ({{腋窩リンパ節}} == 'あり' ? 1 : 0) + ({{鼠径部リンパ節}} == 'あり' ? 1 : 0) + ({{脾腫}} == 'あり' ? 1 : 0) + ({{肝腫}} == 'あり' ? 1 : 0)",
+      "dispname": "腫大しているリンパ組織領域の数"
+    },
+    {
+      "name": "貧血または血小板減少",
+      "type": "eval",
+      "formula": "[[ヘモグロビン.index]] == 1 || [[血小板.index]] == 1 ? 'あり' : 'なし'",
+      "dispname": "Hb<10g/dLまたは血小板<10万/μLの有無"
+    },
+    {
+      "dispname": "Binet分類",
+      "name": "Binet分類",
+      "type": "eval",
+      "formula": "{{貧血または血小板減少}} == 'あり' ? 'C期' : ( [[腫大領域数]] >= 3 ? 'B期' : 'A期' )"
+    },
+    {
+      "name": "予後",
+      "type": "eval",
+      "formula": "{{Binet分類}} == 'A期' ? '生存期間中央値：10年以上' : ({{Binet分類}} == 'B期' ? '生存期間中央値：7年' : '生存期間中央値：2年')",
+      "dispname": "病期別の生存期間中央値（1981年原典データ）"
+    },
+    {
+      "name": "治療推奨",
+      "type": "eval",
+      "formula": "{{Binet分類}} == 'C期' ? '治療を考慮' : '経過観察'",
+      "dispname": "C期では治療開始を考慮する"
+    }
+  ]
+}

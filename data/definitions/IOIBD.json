@@ -1,0 +1,336 @@
+{
+  "_comment": [
+    "IOIBD Disease Severity Index（DSI）- 炎症性腸疾患重症度指数",
+    "International Organization for the Study of IBD（IOIBD）により開発",
+    "疾患表現型、炎症活動性、患者への影響を包括的に評価",
+    "クローン病と潰瘍性大腸炎で異なる項目を使用",
+    "100点満点で評価、カットオフ値: 23点で複雑な病状経過を予測",
+    "検証論文: Swaminathan A, et al. Inflammatory Bowel Diseases. 2024;30(11):2064-2075",
+    "開発論文: Pariente B (Siegel CA lead), et al. Gut. 2018;67(2):244-254"
+  ],
+  "title": "IOIBD Disease Severity Index 炎症性腸疾患重症度指数",
+  "description": [
+    "IOIBD（国際炎症性腸疾患研究機構）により開発された炎症性腸疾患の包括的重症度評価指標です。",
+    "疾患の表現型、炎症活動性、患者への影響を統合的に評価し、将来の複雑な病状経過を予測します。"
+  ],
+  "contact": "消化器科",
+  "dept_in_charge": "消化器科",
+  "responsible_person": [
+    "消化器科医師"
+  ],
+  "staffs": [
+    "消化器科医師",
+    "看護師"
+  ],
+  "submit_button_title": "評価を送信",
+  "fields": [
+    {
+      "dispname": "疾患の種類",
+      "name": "疾患種類",
+      "type": "radio",
+      "required": true,
+      "selector": "クローン病|潰瘍性大腸炎",
+      "description": "対象となる炎症性腸疾患の種類を選択してください"
+    },
+    {
+      "dispname": "基本的評価項目",
+      "type": "subsection"
+    },
+    {
+      "dispname": "粘膜病変の存在",
+      "name": "粘膜病変",
+      "type": "radio",
+      "required": true,
+      "selector": "なし|軽度|中等度|重度",
+      "selectoridx": "0|5|10|18",
+      "description": "内視鏡検査で確認される粘膜病変の程度"
+    },
+    {
+      "dispname": "C反応性蛋白質（CRP）レベル",
+      "name": "CRP",
+      "type": "radio",
+      "required": true,
+      "selector": "正常範囲|軽度上昇|中等度上昇|高度上昇",
+      "selectoridx": "0|3|6|11",
+      "description": "炎症マーカーであるCRPの上昇程度"
+    },
+    {
+      "dispname": "アルブミン値",
+      "name": "アルブミン",
+      "type": "radio",
+      "required": true,
+      "selector": "正常|軽度低下|中等度低下|高度低下",
+      "selectoridx": "0|2|4|6",
+      "description": "栄養状態と炎症の指標"
+    },
+    {
+      "dispname": "排便回数",
+      "name": "排便回数",
+      "type": "radio",
+      "required": true,
+      "selector": "正常|軽度増加|中等度増加|著明増加",
+      "selectoridx": "0|2|4|6",
+      "description": "1日の排便回数の増加程度"
+    },
+    {
+      "dispname": "症状評価",
+      "type": "subsection"
+    },
+    {
+      "dispname": "肛門直腸症状",
+      "name": "肛門直腸症状",
+      "type": "radio",
+      "required": true,
+      "selector": "なし|軽度|中等度|重度",
+      "selectoridx": "0|2|4|6",
+      "description": "肛門部痛、便意切迫感、テネスムス等"
+    },
+    {
+      "dispname": "腹痛",
+      "name": "腹痛",
+      "type": "radio",
+      "required": true,
+      "selector": "なし|軽度|中等度|重度",
+      "selectoridx": "0|2|4|7",
+      "description": "腹部の痛みの程度"
+    },
+    {
+      "dispname": "日常生活への影響",
+      "name": "日常生活影響",
+      "type": "radio",
+      "required": true,
+      "selector": "影響なし|軽度影響|中等度影響|重度影響",
+      "selectoridx": "0|3|6|9",
+      "description": "疾患が日常生活に与える影響の程度"
+    },
+    {
+      "dispname": "クローン病特異的項目",
+      "type": "subsection",
+      "parentname": "疾患種類",
+      "parentsel": "クローン病"
+    },
+    {
+      "dispname": "病変範囲",
+      "name": "病変範囲CD",
+      "type": "radio",
+      "required": true,
+      "parentname": "疾患種類",
+      "parentsel": "クローン病",
+      "selector": "限局性|中等度拡がり|広範囲",
+      "selectoridx": "0|3|6",
+      "description": "クローン病の病変分布範囲"
+    },
+    {
+      "dispname": "瘻孔の既往",
+      "name": "瘻孔既往",
+      "type": "radio",
+      "required": true,
+      "parentname": "疾患種類",
+      "parentsel": "クローン病",
+      "selector": "なし|あり",
+      "selectoridx": "0|11",
+      "description": "瘻孔形成の既往歴"
+    },
+    {
+      "dispname": "膿瘍の既往",
+      "name": "膿瘍既往",
+      "type": "radio",
+      "required": true,
+      "parentname": "疾患種類",
+      "parentsel": "クローン病",
+      "selector": "なし|あり",
+      "selectoridx": "0|10",
+      "description": "腹腔内膿瘍の既往歴"
+    },
+    {
+      "dispname": "腸切除術の既往",
+      "name": "腸切除既往",
+      "type": "radio",
+      "required": true,
+      "parentname": "疾患種類",
+      "parentsel": "クローン病",
+      "selector": "なし|あり",
+      "selectoridx": "0|7",
+      "description": "腸管切除手術の既往歴"
+    },
+    {
+      "dispname": "肛門周囲膿瘍",
+      "name": "肛門周囲膿瘍",
+      "type": "radio",
+      "required": true,
+      "parentname": "疾患種類",
+      "parentsel": "クローン病",
+      "selector": "なし|あり",
+      "selectoridx": "0|6",
+      "description": "活動性肛門周囲膿瘍の有無"
+    },
+    {
+      "dispname": "潰瘍性大腸炎特異的項目",
+      "type": "subsection",
+      "parentname": "疾患種類",
+      "parentsel": "潰瘍性大腸炎"
+    },
+    {
+      "dispname": "夜間排便",
+      "name": "夜間排便",
+      "type": "radio",
+      "required": true,
+      "parentname": "疾患種類",
+      "parentsel": "潰瘍性大腸炎",
+      "selector": "なし|あり",
+      "selectoridx": "0|5",
+      "description": "夜間の排便回数増加"
+    },
+    {
+      "dispname": "直腸出血",
+      "name": "直腸出血",
+      "type": "radio",
+      "required": true,
+      "parentname": "疾患種類",
+      "parentsel": "潰瘍性大腸炎",
+      "selector": "なし|軽度|中等度|重度",
+      "selectoridx": "0|2|4|6",
+      "description": "血便の程度"
+    },
+    {
+      "dispname": "病変範囲",
+      "name": "病変範囲UC",
+      "type": "radio",
+      "required": true,
+      "parentname": "疾患種類",
+      "parentsel": "潰瘍性大腸炎",
+      "selector": "直腸型|左側大腸型|全大腸型",
+      "selectoridx": "0|3|6",
+      "description": "潰瘍性大腸炎の病変範囲"
+    },
+    {
+      "dispname": "治療歴・重症度指標",
+      "type": "subsection"
+    },
+    {
+      "dispname": "最近の入院歴",
+      "name": "入院歴",
+      "type": "radio",
+      "required": true,
+      "selector": "なし|1年以内にあり",
+      "selectoridx": "0|6",
+      "description": "IBD関連での過去1年以内の入院歴"
+    },
+    {
+      "dispname": "生物学的製剤の使用",
+      "name": "生物学的製剤",
+      "type": "radio",
+      "required": true,
+      "selector": "使用なし|現在使用中|過去に使用",
+      "selectoridx": "0|7|10",
+      "description": "生物学的製剤の使用歴と現在の使用状況"
+    },
+    {
+      "dispname": "ステロイド使用",
+      "name": "ステロイド",
+      "type": "radio",
+      "required": true,
+      "selector": "使用なし|現在使用中|過去1年以内に使用",
+      "selectoridx": "0|8|6",
+      "description": "コルチコステロイドの使用状況"
+    },
+    {
+      "dispname": "貧血の有無",
+      "name": "貧血",
+      "type": "radio",
+      "required": true,
+      "selector": "なし|軽度|中等度|重度",
+      "selectoridx": "0|2|4|6",
+      "description": "ヘモグロビン値による貧血の評価"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "基本スコア",
+      "type": "eval",
+      "formula": "[[粘膜病変.index]] + [[CRP.index]] + [[アルブミン.index]] + [[排便回数.index]] + [[肛門直腸症状.index]] + [[腹痛.index]] + [[日常生活影響.index]] + [[入院歴.index]] + [[生物学的製剤.index]] + [[ステロイド.index]] + [[貧血.index]]",
+      "noreport": true,
+      "dispname": "基本項目の合計スコア"
+    },
+    {
+      "name": "病変範囲CD_safe",
+      "type": "eval",
+      "formula": "[[病変範囲CD.index]]",
+      "noreport": true
+    },
+    {
+      "name": "瘻孔既往_safe",
+      "type": "eval",
+      "formula": "[[瘻孔既往.index]]",
+      "noreport": true
+    },
+    {
+      "name": "膿瘍既往_safe",
+      "type": "eval",
+      "formula": "[[膿瘍既往.index]]",
+      "noreport": true
+    },
+    {
+      "name": "腸切除既往_safe",
+      "type": "eval",
+      "formula": "[[腸切除既往.index]]",
+      "noreport": true
+    },
+    {
+      "name": "肛門周囲膿瘍_safe",
+      "type": "eval",
+      "formula": "[[肛門周囲膿瘍.index]]",
+      "noreport": true
+    },
+    {
+      "name": "夜間排便_safe",
+      "type": "eval",
+      "formula": "[[夜間排便.index]]",
+      "noreport": true
+    },
+    {
+      "name": "直腸出血_safe",
+      "type": "eval",
+      "formula": "[[直腸出血.index]]",
+      "noreport": true
+    },
+    {
+      "name": "病変範囲UC_safe",
+      "type": "eval",
+      "formula": "[[病変範囲UC.index]]",
+      "noreport": true
+    },
+    {
+      "name": "クローン病追加スコア",
+      "type": "eval",
+      "formula": "{{疾患種類}} == 'クローン病' ? ( [[病変範囲CD_safe]] + [[瘻孔既往_safe]] + [[膿瘍既往_safe]] + [[腸切除既往_safe]] + [[肛門周囲膿瘍_safe]] ) : 0",
+      "noreport": true,
+      "dispname": "クローン病特異的項目の合計スコア"
+    },
+    {
+      "name": "潰瘍性大腸炎追加スコア",
+      "type": "eval",
+      "formula": "{{疾患種類}} == '潰瘍性大腸炎' ? ( [[夜間排便_safe]] + [[直腸出血_safe]] + [[病変範囲UC_safe]] ) : 0",
+      "noreport": true,
+      "dispname": "潰瘍性大腸炎特異的項目の合計スコア"
+    },
+    {
+      "name": "DSI総合スコア",
+      "type": "eval",
+      "formula": "[[基本スコア]] + [[クローン病追加スコア]] + [[潰瘍性大腸炎追加スコア]]",
+      "dispname": "IOIBD Disease Severity Index 総合得点（100点満点）"
+    },
+    {
+      "dispname": "重症度評価",
+      "name": "重症度判定",
+      "type": "eval",
+      "formula": "[[DSI総合スコア]] < 23 ? '軽度から中等度' : '重度（複雑な病状経過のリスクが高い）'"
+    },
+    {
+      "name": "Warning: 高リスク DSI≧23",
+      "formula": "[[DSI総合スコア]] >= 23",
+      "type": "warning"
+    }
+  ]
+}

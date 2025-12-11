@@ -1,0 +1,277 @@
+{
+    "_comment": [
+        "RLS診断基準質問票（IRLS併用）- 2014年IRLSSG改訂診断基準準拠版",
+        "むずむず脚症候群（レストレスレッグス症候群）の診断基準に基づく症状評価",
+        "国際レストレスレッグス症候群研究グループ（IRLSSG）の2014年改訂診断基準（5項目）とIRLS重症度スケールを統合",
+        "参考文献: Allen et al. Sleep Med 2014;15(8):860-873 (PMID:25023924)",
+        "参考文献: Walters et al. Sleep Med 2003;4(2):121-132 (PMID:14592342)",
+        "公式サイト: https://www.irlssg.org/"
+    ],
+    "title": "RLS むずむず脚症候群診断基準質問票",
+    "description": [
+        "<h3>むずむず脚症候群（レストレスレッグス症候群）の診断基準質問票</h3>",
+        "この質問票は、むずむず脚症候群の診断基準（2014年改訂版）と重症度を評価するためのものです。",
+        "正確な診断のため、できるだけ具体的にお答えください。"
+    ],
+    "contact": "担当医師",
+    "submit_button_title": "回答を送信",
+    "translate": "major",
+    "fields": [
+        {
+            "dispname": "診断基準項目",
+            "type": "subsection"
+        },
+        {
+            "dispname": "下肢の異常感覚や不快感による脚を動かしたい強い欲求がありますか",
+            "name": "診断基準1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "description": "脚に不快な感覚があり、脚を動かしたくてたまらない気持ちになりますか"
+        },
+        {
+            "dispname": "症状は安静時に始まったり悪化したりしますか",
+            "name": "診断基準2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "description": "座っているときや横になっているときに症状が出現したり強くなったりしますか"
+        },
+        {
+            "dispname": "歩いたり動いたりすることで症状が改善しますか",
+            "name": "診断基準3",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "description": "脚を動かしたり歩いたりすると症状が楽になりますか"
+        },
+        {
+            "dispname": "症状は夕方から夜間にかけて強くなりますか",
+            "name": "診断基準4",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "description": "日中よりも夕方や夜間に症状が強く感じられますか"
+        },
+        {
+            "dispname": "上記の症状は他の病気では説明できませんか",
+            "name": "診断基準5",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "description": "下肢痙攣（こむら返り）、むくみ、静脈の問題、体位の不快感、筋肉痛、足を動かす癖、関節炎などの他の病気では説明できない症状ですか"
+        },
+        {
+            "dispname": "症状の詳細",
+            "type": "subsection",
+            "parentname": "診断基準1",
+            "parentsel": "はい"
+        },
+        {
+            "dispname": "症状が始まった時期",
+            "name": "発症時期",
+            "type": "text",
+            "parentname": "診断基準1",
+            "parentsel": "はい",
+            "description": "おおよその年月をお答えください"
+        },
+        {
+            "dispname": "感覚の種類",
+            "name": "感覚種類",
+            "type": "checkbox",
+            "parentname": "診断基準1",
+            "parentsel": "はい",
+            "selector": [
+                "むずむずする",
+                "ちくちくする",
+                "ぴりぴりする",
+                "はうような感覚",
+                "引っ張られる感覚",
+                "痛みのような感覚",
+                "その他"
+            ]
+        },
+        {
+            "dispname": "症状が起こる部位",
+            "name": "症状部位",
+            "type": "checkbox",
+            "parentname": "診断基準1",
+            "parentsel": "はい",
+            "selector": [
+                "両足",
+                "右足のみ",
+                "左足のみ",
+                "両腕",
+                "右腕のみ",
+                "左腕のみ"
+            ]
+        },
+        {
+            "dispname": "重症度評価項目",
+            "type": "subsection"
+        },
+        {
+            "dispname": "脚や腕のRLS症状による不快感を全体的にどう評価しますか",
+            "name": "Q1不快感",
+            "type": "radio",
+            "required": true,
+            "selector": "なし|軽度|中等度|重度|非常に重度",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "RLS症状のために動き回りたい欲求を全体的にどう評価しますか",
+            "name": "Q2動的欲求",
+            "type": "radio",
+            "required": true,
+            "selector": "なし|軽度|中等度|重度|非常に重度",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "動き回ることでRLSの不快感がどの程度改善しますか",
+            "name": "Q3改善度",
+            "type": "radio",
+            "required": true,
+            "selector": "RLS症状がないため該当しない|完全またはほぼ完全に改善|中等度改善|わずかに改善|改善しない",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "RLS症状による睡眠障害はどの程度重度ですか",
+            "name": "Q4睡眠障害",
+            "type": "radio",
+            "required": true,
+            "selector": "なし|軽度|中等度|重度|非常に重度",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "RLS症状による疲労感や眠気はどの程度重度ですか",
+            "name": "Q5疲労感",
+            "type": "radio",
+            "required": true,
+            "selector": "なし|軽度|中等度|重度|非常に重度",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "RLS症状全体としてどの程度重度ですか",
+            "name": "Q6全体重症度",
+            "type": "radio",
+            "required": true,
+            "selector": "なし|軽度|中等度|重度|非常に重度",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "RLS症状はどのくらいの頻度で起こりますか",
+            "name": "Q7頻度",
+            "type": "radio",
+            "required": true,
+            "selector": "なし|軽度（週1日以下）|中等度（週2-3日）|重度（週4-5日）|非常に重度（週6-7日）",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "RLS症状があるとき、1日平均でどのくらいの時間続きますか",
+            "name": "Q8持続時間",
+            "type": "radio",
+            "required": true,
+            "selector": "なし|軽度（1時間未満）|中等度（1-3時間）|重度（3-8時間）|非常に重度（8時間以上）",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "RLS症状が日常生活への影響はどの程度重度ですか",
+            "name": "Q9日常生活影響",
+            "type": "radio",
+            "required": true,
+            "selector": "なし|軽度|中等度|重度|非常に重度",
+            "selectoridx": "0|1|2|3|4",
+            "description": "家庭、仕事、学校、社会生活などへの影響について"
+        },
+        {
+            "dispname": "RLS症状による気分の変化はどの程度重度ですか",
+            "name": "Q10気分変化",
+            "type": "radio",
+            "required": true,
+            "selector": "なし|軽度|中等度|重度|非常に重度",
+            "selectoridx": "0|1|2|3|4",
+            "description": "怒り、抑うつ、悲しみ、不安、いらいらなど"
+        },
+        {
+            "dispname": "追加情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "家族歴",
+            "name": "家族歴",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|あり|不明",
+            "description": "ご家族にむずむず脚症候群の方はいますか"
+        },
+        {
+            "dispname": "現在服用中の薬",
+            "name": "服用薬",
+            "type": "textarea",
+            "rows": 3,
+            "description": "現在服用されているお薬があればすべてお書きください"
+        },
+        {
+            "dispname": "妊娠の有無",
+            "name": "妊娠",
+            "type": "radio",
+            "inline": true,
+            "selector": "該当しない|妊娠していない|妊娠中|不明"
+        },
+        {
+            "dispname": "その他の症状や気になること",
+            "name": "その他症状",
+            "type": "textarea",
+            "rows": 3,
+            "description": "貧血、慢性腎不全、糖尿病など他の病気や気になる症状があればお書きください"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "dispname": "診断基準項目の充足状況",
+            "name": "診断基準充足数",
+            "type": "eval",
+            "formula": "[[診断基準1.index]] + [[診断基準2.index]] + [[診断基準3.index]] + [[診断基準4.index]] + [[診断基準5.index]]",
+            "noreport": true
+        },
+        {
+            "dispname": "RLS診断",
+            "name": "RLS診断",
+            "type": "eval",
+            "formula": "[[診断基準充足数]] == 5 ? 'むずむず脚症候群の診断基準を満たす（2014年IRLSSG改訂診断基準）' : 'むずむず脚症候群の診断基準を満たさない'"
+        },
+        {
+            "dispname": "IRLS合計スコア",
+            "name": "IRLS合計スコア",
+            "type": "eval",
+            "formula": "[[Q1不快感.index]] + [[Q2動的欲求.index]] + [[Q3改善度.index]] + [[Q4睡眠障害.index]] + [[Q5疲労感.index]] + [[Q6全体重症度.index]] + [[Q7頻度.index]] + [[Q8持続時間.index]] + [[Q9日常生活影響.index]] + [[Q10気分変化.index]]"
+        },
+        {
+            "dispname": "重症度分類",
+            "name": "重症度分類",
+            "type": "eval",
+            "formula": "[[IRLS合計スコア]] == 0 ? 'なし' : ( [[IRLS合計スコア]] >= 1 && [[IRLS合計スコア]] <= 10 ? '軽度' : ( [[IRLS合計スコア]] >= 11 && [[IRLS合計スコア]] <= 20 ? '中等度' : ( [[IRLS合計スコア]] >= 21 && [[IRLS合計スコア]] <= 30 ? '重度' : '非常に重度' ) ) )"
+        },
+        {
+            "name": "Warning: IRLS >= 11点（診断基準充足・中等度以上）",
+            "formula": "[[診断基準充足数]] == 5 && [[IRLS合計スコア]] >= 11",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: IRLS >= 21点（診断基準充足・重度・専門治療必要）",
+            "formula": "[[診断基準充足数]] == 5 && [[IRLS合計スコア]] >= 21",
+            "type": "emergency"
+        }
+    ]
+}

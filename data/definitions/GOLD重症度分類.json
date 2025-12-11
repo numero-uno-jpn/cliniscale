@@ -1,0 +1,265 @@
+{
+    "_comment": [
+        "GOLD COPD重症度分類問診票",
+        "出典: Global Initiative for Chronic Obstructive Lung Disease (GOLD) 2023 Report",
+        "参考: COPD(慢性閉塞性肺疾患)診断と治療のためのガイドライン2022 第6版 日本呼吸器学会",
+        "GOLDサイト: https://goldcopd.org/",
+        "CAT公式サイト: https://www.catestonline.org/",
+        "2023年よりABE分類(3群)に変更"
+    ],
+    "title": "GOLD COPD重症度分類",
+    "description": [
+        "COPDの重症度評価のためのGOLD分類を評価する問診票です。",
+        "気流閉塞重症度と症状・増悪リスクを総合的に評価し、2023年からはABE分類を採用しています。"
+    ],
+    "fields": [
+        {
+            "dispname": "基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "年齢",
+            "name": "年齢",
+            "type": "text",
+            "inputmode": "numeric",
+            "postfix": "歳",
+            "testrange": [
+                40,
+                85
+            ],
+            "required": true,
+            "description": "半角数字で入力してください（例: 65）"
+        },
+        {
+            "dispname": "性別",
+            "name": "性別",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "男性|女性"
+        },
+        {
+            "dispname": "肺機能検査結果",
+            "type": "subsection"
+        },
+        {
+            "dispname": "1秒率 (FEV1/FVC)",
+            "name": "FEV1_FVC",
+            "type": "text",
+            "inputmode": "decimal",
+            "postfix": "%",
+            "testrange": [
+                30,
+                100
+            ],
+            "required": true,
+            "description": "気管支拡張薬吸入後の値を入力してください（例: 65.5）"
+        },
+        {
+            "dispname": "対標準1秒量 (%FEV1)",
+            "name": "FEV1_predicted",
+            "type": "text",
+            "inputmode": "decimal",
+            "postfix": "%",
+            "testrange": [
+                30,
+                120
+            ],
+            "required": true,
+            "description": "予測値に対する1秒量の割合を入力してください（例: 55.2）"
+        },
+        {
+            "dispname": "症状評価 (mMRC息切れスケール)",
+            "type": "subsection"
+        },
+        {
+            "dispname": "息切れの程度",
+            "name": "mMRC",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "激しい運動の時だけ息切れがする",
+                "平地を急いで歩く時、または軽い上り坂を歩く時に息切れがする",
+                "息切れのために同年代の人より平地での歩行が遅い、または平地を自分のペースで歩いていても息切れのために立ち止まることがある",
+                "平地を約100m歩くか、数分歩くと息切れのために立ち止まる",
+                "息切れがひどく家から出られない、または衣服の着脱時にも息切れがする"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "症状評価 (CAT: COPD評価テスト)",
+            "type": "subsection"
+        },
+        {
+            "dispname": "咳の症状",
+            "name": "CAT1",
+            "type": "radio",
+            "required": true,
+            "description": "まったく咳をしない から いつも咳をしている まで",
+            "selector": "0|1|2|3|4|5",
+            "selectoridx": "0|1|2|3|4|5",
+            "inline": true
+        },
+        {
+            "dispname": "痰の症状",
+            "name": "CAT2",
+            "type": "radio",
+            "required": true,
+            "description": "胸に痰は全くない から 胸が痰でいっぱい まで",
+            "selector": "0|1|2|3|4|5",
+            "selectoridx": "0|1|2|3|4|5",
+            "inline": true
+        },
+        {
+            "dispname": "胸の圧迫感",
+            "name": "CAT3",
+            "type": "radio",
+            "required": true,
+            "description": "胸の圧迫感は全くない から 胸の圧迫感が非常に強い まで",
+            "selector": "0|1|2|3|4|5",
+            "selectoridx": "0|1|2|3|4|5",
+            "inline": true
+        },
+        {
+            "dispname": "坂道や階段での息切れ",
+            "name": "CAT4",
+            "type": "radio",
+            "required": true,
+            "description": "坂道や1階分の階段を上がる時、息切れしない から 坂道や1階分の階段を上がるには息切れがひどすぎる まで",
+            "selector": "0|1|2|3|4|5",
+            "selectoridx": "0|1|2|3|4|5",
+            "inline": true
+        },
+        {
+            "dispname": "家での活動制限",
+            "name": "CAT5",
+            "type": "radio",
+            "required": true,
+            "description": "家での活動に支障はない から 家での活動が非常に制限される まで",
+            "selector": "0|1|2|3|4|5",
+            "selectoridx": "0|1|2|3|4|5",
+            "inline": true
+        },
+        {
+            "dispname": "外出への影響",
+            "name": "CAT6",
+            "type": "radio",
+            "required": true,
+            "description": "肺の状態を気にせず安心して外出できる から 肺の状態のため外出するのが不安 まで",
+            "selector": "0|1|2|3|4|5",
+            "selectoridx": "0|1|2|3|4|5",
+            "inline": true
+        },
+        {
+            "dispname": "睡眠への影響",
+            "name": "CAT7",
+            "type": "radio",
+            "required": true,
+            "description": "ぐっすり眠れる から 肺の状態のためぐっすり眠れない まで",
+            "selector": "0|1|2|3|4|5",
+            "selectoridx": "0|1|2|3|4|5",
+            "inline": true
+        },
+        {
+            "dispname": "活力・元気さ",
+            "name": "CAT8",
+            "type": "radio",
+            "required": true,
+            "description": "とても元気 から 全く元気がない まで",
+            "selector": "0|1|2|3|4|5",
+            "selectoridx": "0|1|2|3|4|5",
+            "inline": true
+        },
+        {
+            "dispname": "増悪歴評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "過去1年間の中等度増悪回数",
+            "name": "moderate_exacerbation",
+            "type": "text",
+            "inputmode": "numeric",
+            "postfix": "回",
+            "testrange": [
+                0,
+                5
+            ],
+            "required": true,
+            "description": "外来で抗菌薬および/または全身性コルチコステロイドによる治療を要した呼吸器症状の悪化回数を入力してください（例: 2）"
+        },
+        {
+            "dispname": "過去1年間の重度増悪回数",
+            "name": "severe_exacerbation",
+            "type": "text",
+            "inputmode": "numeric",
+            "postfix": "回",
+            "testrange": [
+                0,
+                3
+            ],
+            "required": true,
+            "description": "入院を要した呼吸器症状の悪化回数を入力してください（例: 1）"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "dispname": "COPD診断",
+            "name": "COPD_diagnosis",
+            "type": "eval",
+            "formula": "((FEV1_FVC)) < 70 ? 'COPD' : 'COPD疑い'"
+        },
+        {
+            "dispname": "気流閉塞重症度 (GOLD 1-4)",
+            "name": "airflow_severity",
+            "type": "eval",
+            "formula": "((FEV1_predicted)) >= 80 ? 'GOLD 1 (軽度)' : ( ((FEV1_predicted)) >= 50 ? 'GOLD 2 (中等度)' : ( ((FEV1_predicted)) >= 30 ? 'GOLD 3 (重度)' : 'GOLD 4 (極めて重度)' ) )"
+        },
+        {
+            "dispname": "CATスコア合計",
+            "name": "CAT_total",
+            "type": "eval",
+            "formula": "[[CAT1.index]] + [[CAT2.index]] + [[CAT3.index]] + [[CAT4.index]] + [[CAT5.index]] + [[CAT6.index]] + [[CAT7.index]] + [[CAT8.index]]"
+        },
+        {
+            "dispname": "症状評価 (mMRC基準)",
+            "name": "symptoms_mMRC",
+            "type": "eval",
+            "formula": "[[mMRC.index]] >= 2 ? 'More symptoms' : 'Less symptoms'"
+        },
+        {
+            "dispname": "症状評価 (CAT基準)",
+            "name": "symptoms_CAT",
+            "type": "eval",
+            "formula": "[[CAT_total]] >= 10 ? 'More symptoms' : 'Less symptoms'"
+        },
+        {
+            "dispname": "増悪リスク評価",
+            "name": "exacerbation_risk",
+            "type": "eval",
+            "formula": "[[moderate_exacerbation]] >= 2 || [[severe_exacerbation]] >= 1 ? 'High risk' : 'Low risk'"
+        },
+        {
+            "dispname": "GOLD ABE分類 (mMRC基準)",
+            "name": "GOLD_ABE_classification_mMRC",
+            "type": "eval",
+            "formula": "{{exacerbation_risk}} == 'High risk' ? 'E群 (頻回増悪)' : ( {{symptoms_mMRC}} == 'More symptoms' ? 'B群 (多症状・低リスク)' : 'A群 (少症状・低リスク)' )"
+        },
+        {
+            "dispname": "GOLD ABE分類 (CAT基準)",
+            "name": "GOLD_ABE_classification_CAT",
+            "type": "eval",
+            "formula": "{{exacerbation_risk}} == 'High risk' ? 'E群 (頻回増悪)' : ( {{symptoms_CAT}} == 'More symptoms' ? 'B群 (多症状・低リスク)' : 'A群 (少症状・低リスク)' )"
+        },
+        {
+            "name": "Warning: COPD診断疑い",
+            "formula": "((FEV1_FVC)) < 70",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 重度COPD高リスク",
+            "formula": "((FEV1_predicted)) < 50 && {{exacerbation_risk}} == 'High risk'",
+            "type": "emergency"
+        }
+    ]
+}

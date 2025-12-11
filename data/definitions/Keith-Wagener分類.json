@@ -1,0 +1,272 @@
+{
+  "_comment": [
+    "Keith-Wagener分類による高血圧性網膜症の分類問診票",
+    "眼底検査による高血圧性変化と動脈硬化性変化の評価",
+    "人体で唯一直接観察可能な血管である網膜血管の所見から全身の血管状態を推定",
+    "参考: 日本人間ドック学会眼底健診判定マニュアル、高血圧治療ガイドライン2019",
+    "原法はKeith and Wagener (1939年)、本問診票は日本の臨床実践に基づく実装版"
+  ],
+  "title": "Keith-Wagener 高血圧性網膜症評価",
+  "description": [
+    "眼底検査による高血圧性網膜症の分類評価",
+    "網膜血管の所見から高血圧による眼底変化を評価し、全身の血管状態を推定します"
+  ],
+  "fields": [
+    {
+      "dispname": "動脈血柱反射の状態",
+      "name": "動脈血柱反射",
+      "type": "radio",
+      "required": true,
+      "description": "網膜動脈の光沢の程度を評価します",
+      "selector": [
+        "正常",
+        "軽度増強",
+        "中等度増強",
+        "高度増強（銅線動脈）",
+        "銀線動脈"
+      ],
+      "selectoridx": "0|1|2|3|4"
+    },
+    {
+      "dispname": "動静脈交叉現象",
+      "name": "動静脈交叉現象",
+      "type": "radio",
+      "required": true,
+      "description": "動脈が静脈と交差する部位での静脈の圧迫・狭窄所見",
+      "selector": [
+        "なし",
+        "軽度",
+        "中等度",
+        "高度"
+      ],
+      "selectoridx": "0|1|2|3"
+    },
+    {
+      "dispname": "網膜動脈の狭窄・硬化",
+      "name": "動脈狭窄",
+      "type": "radio",
+      "required": true,
+      "description": "動脈の狭まりや硬化の程度",
+      "selector": [
+        "なし",
+        "軽度の狭窄または硬化",
+        "明らかな動脈硬化と狭窄",
+        "著明な硬化性変化"
+      ],
+      "selectoridx": "0|1|2|3"
+    },
+    {
+      "dispname": "口径不同",
+      "name": "口径不同",
+      "type": "radio",
+      "required": true,
+      "description": "動脈の太さが部分的に異なる所見（動脈硬化の指標）",
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "網膜出血",
+      "name": "網膜出血",
+      "type": "radio",
+      "required": true,
+      "description": "網膜内の出血所見の有無と形態",
+      "selector": [
+        "なし",
+        "点状出血",
+        "線状出血",
+        "斑状出血",
+        "広範囲出血"
+      ],
+      "selectoridx": "0|1|2|3|4"
+    },
+    {
+      "dispname": "白斑",
+      "name": "白斑",
+      "type": "checkbox",
+      "description": "硬性白斑（脂質沈着）と軟性白斑（綿花状白斑・神経線維層梗塞）を選択",
+      "selector": [
+        "硬性白斑",
+        "軟性白斑"
+      ],
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "網膜浮腫",
+      "name": "網膜浮腫",
+      "type": "radio",
+      "required": true,
+      "description": "網膜の腫れ・浮腫の程度",
+      "selector": [
+        "なし",
+        "軽度",
+        "中等度",
+        "高度"
+      ],
+      "selectoridx": "0|1|2|3"
+    },
+    {
+      "dispname": "視神経乳頭浮腫",
+      "name": "乳頭浮腫",
+      "type": "radio",
+      "required": true,
+      "description": "視神経乳頭の浮腫の程度（重症度の重要指標）",
+      "selector": [
+        "なし",
+        "軽度",
+        "中等度",
+        "高度"
+      ],
+      "selectoridx": "0|1|2|3"
+    },
+    {
+      "dispname": "動脈硬化性合併症",
+      "name": "動脈硬化性網膜症",
+      "type": "radio",
+      "required": true,
+      "description": "動脈硬化による網膜症や静脈閉塞の有無",
+      "selector": [
+        "なし",
+        "動脈硬化性網膜症",
+        "網膜静脈分枝閉塞",
+        "網膜中心静脈閉塞"
+      ],
+      "selectoridx": "0|1|2|3"
+    },
+    {
+      "dispname": "血管攣縮性網膜症",
+      "name": "血管攣縮性網膜症",
+      "type": "radio",
+      "required": true,
+      "description": "血管の痙攣による急性の変化",
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "selectoridx": "0|1"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "白斑_length",
+      "type": "eval",
+      "noreport": true,
+      "formula": "([[白斑.index]] || []).length"
+    },
+    {
+      "name": "白斑に軟性白斑を含む",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{白斑}}.includes(\"軟性白斑\") ? 1 : 0"
+    },
+    {
+      "name": "白斑に硬性白斑を含む",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{白斑}}.includes(\"硬性白斑\") ? 1 : 0"
+    },
+    {
+      "name": "Grade3条件_出血あり",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[網膜出血.index]] > 0 ? 1 : 0"
+    },
+    {
+      "name": "Grade3条件_軟性白斑あり",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[白斑に軟性白斑を含む]] > 0 ? 1 : 0"
+    },
+    {
+      "name": "Grade3条件_硬性白斑あり",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[白斑に硬性白斑を含む]] > 0 ? 1 : 0"
+    },
+    {
+      "name": "Grade3条件_3つすべて揃う",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[Grade3条件_出血あり]] > 0 && [[Grade3条件_軟性白斑あり]] > 0 && [[Grade3条件_硬性白斑あり]] > 0 ? 1 : 0"
+    },
+    {
+      "name": "Grade2以上の動脈所見",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[動脈狭窄.index]] >= 2 && [[動静脈交叉現象.index]] >= 1 ? 1 : 0"
+    },
+    {
+      "name": "KW_0群判定_正常眼底",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[動脈狭窄.index]] == 0 && [[網膜出血.index]] == 0 && [[白斑_length]] == 0 && [[網膜浮腫.index]] == 0 && [[乳頭浮腫.index]] == 0 ? 1 : 0"
+    },
+    {
+      "name": "KW_Grade1判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[動脈狭窄.index]] == 1 && [[網膜出血.index]] == 0 && [[白斑_length]] == 0 && [[網膜浮腫.index]] == 0 && [[乳頭浮腫.index]] == 0 ? 1 : 0"
+    },
+    {
+      "name": "KW_Grade2判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[Grade2以上の動脈所見]] > 0 && [[網膜出血.index]] == 0 && [[白斑_length]] == 0 && [[網膜浮腫.index]] == 0 && [[乳頭浮腫.index]] == 0 ? 1 : 0"
+    },
+    {
+      "name": "KW_Grade3判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[Grade2以上の動脈所見]] > 0 && [[Grade3条件_3つすべて揃う]] > 0 && [[乳頭浮腫.index]] == 0 ? 1 : 0"
+    },
+    {
+      "name": "KW_Grade4判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[Grade2以上の動脈所見]] > 0 && [[Grade3条件_3つすべて揃う]] > 0 && [[乳頭浮腫.index]] > 0 ? 1 : 0"
+    },
+    {
+      "name": "KW分類判定",
+      "type": "eval",
+      "dispname": "Keith-Wagener分類",
+      "formula": "[[KW_0群判定_正常眼底]] > 0 ? '0群（正常眼底）' : ( [[KW_Grade1判定]] > 0 ? 'Grade 1（軽度）' : ( [[KW_Grade2判定]] > 0 ? 'Grade 2（中等度）' : ( [[KW_Grade3判定]] > 0 ? 'Grade 3（高血圧性網膜症）' : ( [[KW_Grade4判定]] > 0 ? 'Grade 4（悪性高血圧）' : '分類不能' ) ) ) )"
+    },
+    {
+      "name": "重症度評価",
+      "type": "eval",
+      "dispname": "臨床的重症度",
+      "formula": "{{KW分類判定}}.includes('0群') ? '正常' : ( {{KW分類判定}}.includes('Grade 1') ? '軽度異常（経過観察）' : ( {{KW分類判定}}.includes('Grade 2') ? '要経過観察' : ( {{KW分類判定}}.includes('Grade 3') || {{KW分類判定}}.includes('Grade 4') ? '要精密検査・治療' : '要再評価' ) ) )"
+    },
+    {
+      "name": "臓器障害評価",
+      "type": "eval",
+      "dispname": "高血圧性臓器障害",
+      "formula": "{{KW分類判定}}.includes('Grade 3') || {{KW分類判定}}.includes('Grade 4') ? '高血圧性臓器障害あり' : '臓器障害なし'"
+    },
+    {
+      "name": "心血管リスク評価",
+      "type": "eval",
+      "dispname": "脳心血管病リスク",
+      "formula": "{{KW分類判定}}.includes('0群') ? '正常' : ( {{KW分類判定}}.includes('Grade 1') ? '軽度上昇' : ( {{KW分類判定}}.includes('Grade 2') ? '中等度上昇' : ( {{KW分類判定}}.includes('Grade 3') ? '高リスク' : ( {{KW分類判定}}.includes('Grade 4') ? '最高リスク（緊急降圧要）' : '評価困難' ) ) ) )"
+    },
+    {
+      "name": "生存予後評価",
+      "type": "eval",
+      "dispname": "3年生存率の目安",
+      "formula": "{{KW分類判定}}.includes('Grade 1') ? '約70%（原典1939年データ）' : ( {{KW分類判定}}.includes('Grade 4') ? '約6%（原典1939年データ）' : '原典に記載なし' )"
+    },
+    {
+      "name": "Warning: 高リスク（Grade 3）",
+      "formula": "{{KW分類判定}}.includes('Grade 3')",
+      "type": "warning"
+    },
+    {
+      "name": "Emergency: 最高リスク（Grade 4・悪性高血圧）",
+      "formula": "{{KW分類判定}}.includes('Grade 4')",
+      "type": "emergency"
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+    "_comment": [
+        "HELT-E2S2スコア - 日本人心房細動患者の脳梗塞発症リスク評価スコア",
+        "原典論文: Okumura K, et al. A Novel Risk Stratification System for Ischemic Stroke in Japanese Patients With Non-Valvular Atrial Fibrillation. Circ J. 2021;85:1258-1270.",
+        "開発: 日本の5大レジストリ研究(J-RISK)の統合解析から開発",
+        "対象: 日本人非弁膜症性心房細動患者",
+        "2024年JCS/JHRS不整脈治療ガイドラインでClassIIa推奨",
+        "原典論文DOI: https://doi.org/10.1253/circj.CJ-20-1075",
+        "医療計算機: https://hokuto.app/calculator/FEA1IGB7fQjCvyXbHaMV"
+    ],
+    "title": "HELT-E2S2 心房細動患者の脳梗塞発症リスクスコア",
+    "description": [
+        "<h3>日本人心房細動患者の脳梗塞発症リスク評価</h3>",
+        "HELT-E2S2スコアは、日本人の非弁膜症性心房細動患者における脳梗塞発症リスクを評価するスコアです。",
+        "日本国内の5つの主要な心房細動レジストリ研究を統合した大規模解析により開発されました。"
+    ],
+    "fields": [
+        {
+            "dispname": "基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "年齢",
+            "name": "年齢",
+            "type": "text",
+            "postfix": "歳",
+            "inputmode": "numeric",
+            "testrange": [
+                20,
+                110
+            ],
+            "required": true,
+            "description": "半角数字で入力してください（例: 65）"
+        },
+        {
+            "dispname": "身長",
+            "name": "身長",
+            "type": "text",
+            "postfix": "cm",
+            "inputmode": "decimal",
+            "testrange": [
+                135,
+                190
+            ],
+            "required": true,
+            "description": "半角数字で入力してください（例: 170）"
+        },
+        {
+            "dispname": "体重",
+            "name": "体重",
+            "type": "text",
+            "postfix": "kg",
+            "inputmode": "decimal",
+            "testrange": [
+                30,
+                150
+            ],
+            "required": true,
+            "description": "半角数字で入力してください（例: 65.5）"
+        },
+        {
+            "dispname": "リスク因子評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "高血圧",
+            "name": "高血圧",
+            "type": "radio",
+            "selector": [
+                "なし",
+                "あり"
+            ],
+            "selectoridx": "0|1",
+            "inline": true,
+            "required": true,
+            "description": "高血圧の診断を受けているか、現在降圧薬を服用している場合は「あり」を選択"
+        },
+        {
+            "dispname": "心房細動のタイプ",
+            "name": "心房細動タイプ",
+            "type": "radio",
+            "selector": [
+                "発作性心房細動",
+                "持続性心房細動",
+                "永続性心房細動"
+            ],
+            "selectoridx": "0|1|2",
+            "required": true,
+            "description": "発作性: 7日以内に自然停止、持続性: 7日以上継続、永続性: 洞調律化を諦めた状態"
+        },
+        {
+            "dispname": "脳卒中・TIAの既往",
+            "name": "脳卒中既往",
+            "type": "radio",
+            "selector": [
+                "なし",
+                "あり"
+            ],
+            "selectoridx": "0|1",
+            "inline": true,
+            "required": true,
+            "description": "虚血性脳卒中または一過性脳虚血発作(TIA)の既往がある場合は「あり」を選択"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "BMI値",
+            "type": "eval",
+            "formula": "((体重)) / ( ( ((身長)) / 100 ) ** 2 )",
+            "noreport": true
+        },
+        {
+            "name": "BMI",
+            "type": "eval",
+            "formula": "Math.round([[BMI値]] * 10) / 10",
+            "dispname": "BMI（体格指数）= 体重(kg) ÷ 身長(m)²"
+        },
+        {
+            "name": "年齢グループ",
+            "type": "eval",
+            "formula": "[[年齢]] < 75 ? 0 : ( [[年齢]] >= 85 ? 2 : 1 )",
+            "noreport": true
+        },
+        {
+            "name": "高血圧スコア",
+            "type": "eval",
+            "formula": "[[高血圧.index]]",
+            "noreport": true
+        },
+        {
+            "name": "低体重スコア",
+            "type": "eval",
+            "formula": "[[BMI値]] < 18.5 ? 1 : 0",
+            "noreport": true
+        },
+        {
+            "name": "心房細動タイプスコア",
+            "type": "eval",
+            "formula": "[[心房細動タイプ.index]] >= 1 ? 1 : 0",
+            "noreport": true
+        },
+        {
+            "name": "脳卒中既往スコア",
+            "type": "eval",
+            "formula": "[[脳卒中既往.index]] * 2",
+            "noreport": true
+        },
+        {
+            "name": "HELT-E2S2スコア合計",
+            "type": "eval",
+            "formula": "[[年齢グループ]] + [[高血圧スコア]] + [[低体重スコア]] + [[心房細動タイプスコア]] + [[脳卒中既往スコア]]",
+            "dispname": "合計スコア: 0-7点"
+        },
+        {
+            "name": "リスク評価",
+            "type": "eval",
+            "formula": "[[HELT-E2S2スコア合計]] == 0 ? '極低リスク(0.57%/年)' : ( [[HELT-E2S2スコア合計]] == 1 ? '低リスク(0.73%/年)' : ( [[HELT-E2S2スコア合計]] == 2 ? '中リスク(1.37%/年)' : ( [[HELT-E2S2スコア合計]] == 3 ? '中高リスク(2.59%/年)' : ( [[HELT-E2S2スコア合計]] == 4 ? '高リスク(3.96%/年)' : '超高リスク(5.82%/年以上)' ) ) ) )",
+            "dispname": "年間脳梗塞発症率の推定 (https://doi.org/10.1253/circj.CJ-20-1075)"
+        },
+        {
+            "name": "項目別スコア詳細",
+            "type": "eval",
+            "formula": "'H(高血圧):' + [[高血圧スコア]] + '点, E(年齢):' + [[年齢グループ]] + '点, L(低体重):' + [[低体重スコア]] + '点, T(心房細動タイプ):' + [[心房細動タイプスコア]] + '点, S(脳卒中既往):' + [[脳卒中既往スコア]] + '点'",
+            "dispname": "HELT-E2S2スコア内訳"
+        },
+        {
+            "name": "Warning: 中等度リスク 抗凝固療法の適応検討を推奨（スコア2点以上）",
+            "type": "warning",
+            "formula": "[[HELT-E2S2スコア合計]] >= 2"
+        },
+        {
+            "name": "Emergency: 高リスク 抗凝固療法の積極的適応（スコア4点以上）",
+            "type": "emergency",
+            "formula": "[[HELT-E2S2スコア合計]] >= 4"
+        }
+    ]
+}

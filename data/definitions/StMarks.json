@@ -1,0 +1,155 @@
+{
+  "_comment": [
+    "St. Mark's Incontinence Score (SMIS)",
+    "St. Mark's便失禁スコア",
+    "0-24点: 便失禁の重症度とQOL評価",
+    "原著: Vaizey CJ, et al. Dis Colon Rectum. 1999;42(2):238-46.",
+    "参考URL: https://journals.lww.com/dcrjournal/abstract/1999/42020/does_the_st__mark_s_incontinence_score_reflect.15.aspx"
+  ],
+  "title": "St. Mark's便失禁スコア",
+  "description": [
+    "便失禁の頻度、種類、生活への影響を評価する0-24点のスケール",
+    "Wexnerスコアの修正版で、より詳細な評価が可能"
+  ],
+  "contact": "外科・消化器科担当医",
+  "dept_in_charge": "外科",
+  "fields": [
+    {
+      "dispname": "評価項目",
+      "type": "subsection"
+    },
+    {
+      "dispname": "固形便の失禁",
+      "name": "固形便失禁",
+      "type": "radio",
+      "required": true,
+      "description": "固形便の失禁頻度",
+      "selector": [
+        "なし",
+        "月に1回未満",
+        "月に1回以上、週に1回未満",
+        "週に1回以上、日に1回未満",
+        "日に1回以上"
+      ],
+      "selectoridx": "0|1|2|3|4"
+    },
+    {
+      "dispname": "液体便の失禁",
+      "name": "液体便失禁",
+      "type": "radio",
+      "required": true,
+      "description": "液体便の失禁頻度",
+      "selector": [
+        "なし",
+        "月に1回未満",
+        "月に1回以上、週に1回未満",
+        "週に1回以上、日に1回未満",
+        "日に1回以上"
+      ],
+      "selectoridx": "0|1|2|3|4"
+    },
+    {
+      "dispname": "ガスの失禁",
+      "name": "ガス失禁",
+      "type": "radio",
+      "required": true,
+      "description": "ガス(おなら)の失禁頻度",
+      "selector": [
+        "なし",
+        "月に1回未満",
+        "月に1回以上、週に1回未満",
+        "週に1回以上、日に1回未満",
+        "日に1回以上"
+      ],
+      "selectoridx": "0|1|2|3|4"
+    },
+    {
+      "dispname": "パッドの使用",
+      "name": "パッド使用",
+      "type": "radio",
+      "required": true,
+      "description": "パッドやおむつの使用状況",
+      "selector": [
+        "使用していない",
+        "週に1回未満",
+        "週に1回以上、日に1回未満",
+        "日に1回",
+        "日に2回以上"
+      ],
+      "selectoridx": "0|1|2|3|4"
+    },
+    {
+      "dispname": "生活への影響",
+      "name": "生活影響",
+      "type": "radio",
+      "required": true,
+      "description": "便失禁が生活に与える影響の程度",
+      "selector": [
+        "影響なし",
+        "わずかに影響",
+        "中程度の影響",
+        "かなりの影響",
+        "非常に大きな影響"
+      ],
+      "selectoridx": "0|1|2|3|4"
+    },
+    {
+      "dispname": "下剤の使用",
+      "name": "下剤使用",
+      "type": "radio",
+      "required": true,
+      "description": "下剤の使用状況",
+      "selector": [
+        "使用していない",
+        "時々使用",
+        "毎日使用"
+      ],
+      "selectoridx": "0|1|2"
+    },
+    {
+      "dispname": "便秘",
+      "name": "便秘",
+      "type": "radio",
+      "required": true,
+      "description": "便秘の有無と程度",
+      "selector": [
+        "なし",
+        "時々ある",
+        "頻繁にある"
+      ],
+      "selectoridx": "0|1|2"
+    },
+    {
+      "dispname": "備考",
+      "name": "備考",
+      "type": "textarea",
+      "rows": 3,
+      "description": "追加の所見や特記事項"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "合計スコア",
+      "type": "eval",
+      "dispname": "St. Mark's便失禁スコア",
+      "formula": "[[固形便失禁.index]] + [[液体便失禁.index]] + [[ガス失禁.index]] + [[パッド使用.index]] + [[生活影響.index]] + [[下剤使用.index]] + [[便秘.index]]"
+    },
+    {
+      "name": "重症度判定",
+      "type": "eval",
+      "dispname": "重症度の評価",
+      "formula": "[[合計スコア]] == 0 ? '完全禁制' : ( [[合計スコア]] <= 8 ? '軽度' : ( [[合計スコア]] <= 16 ? '中度' : '重度' ) )"
+    },
+    {
+      "name": "Warning: 中等度以上便失禁",
+      "formula": "[[合計スコア]] >= 9",
+      "type": "warning"
+    },
+    {
+      "name": "Emergency: 重度便失禁",
+      "formula": "[[合計スコア]] >= 17",
+      "type": "emergency"
+    }
+  ]
+}

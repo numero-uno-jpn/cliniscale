@@ -1,0 +1,610 @@
+{
+    "_comment": [
+        "STAI（State-Trait Anxiety Inventory）状態特性不安尺度の問診票",
+        "原著者：Charles D. Spielberger, R.L. Gorsuch, R.E. Lushene (1970)",
+        "改訂版：Form Y (1983)",
+        "日本語版：肥田野直、福原眞知子、岩脇三良、曽我祥子 (新版STAI-JYZ 2021年改訂版)",
+        "状態不安（Y-1）と特性不安（Y-2）各20項目、計40項目",
+        "4段階評価：状態不安 1=全くない、2=いくらか、3=かなり、4=非常に",
+        "          特性不安 1=ほとんどない、2=ときどき、3=しばしば、4=ほとんどいつも",
+        "逆転項目：状態不安 1,2,5,8,10,11,15,16,19,20",
+        "          特性不安 21,23,26,27,30,33,34,36,39",
+        "参考：新版STAI状態-特性不安検査マニュアル（実務教育出版）",
+        "参考URL: https://www.jitsumu-kyouzai.com/wellness/show_product.php?pid=75",
+        "医科診療報酬80点（D285-1）の保険適用検査"
+    ],
+    "title": "STAI 状態特性不安尺度",
+    "description": [
+        "この問診票は、あなたの不安について調べるためのものです。",
+        "2つの部分に分かれており、現在の気持ち（状態不安）と普段の気持ち（特性不安）をお聞きします。",
+        "それぞれの質問について、最もあてはまると思う回答を選んでください。",
+        "正しい答えや間違った答えはありません。あまり深く考えず、最初に思い浮かんだ気持ちでお答えください。"
+    ],
+    "fields": [
+        {
+            "type": "subsection",
+            "name": "state_anxiety_section",
+            "dispname": "Y-1：状態不安尺度（現在の気持ち）",
+            "description": "現在のあなたの気持ちについてお答えください。今この瞬間にどのように感じているかを表す文章を読んで、その程度を選んでください。"
+        },
+        {
+            "type": "radio",
+            "name": "state01",
+            "dispname": "私は平静である",
+            "required": true,
+            "selector": [
+                "全くない",
+                "いくらか",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "state02",
+            "dispname": "私は安全だと感じる",
+            "required": true,
+            "selector": [
+                "全くない",
+                "いくらか",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "state03",
+            "dispname": "私は緊張している",
+            "required": true,
+            "selector": [
+                "全くない",
+                "いくらか",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "state04",
+            "dispname": "私は苦悩している",
+            "required": true,
+            "selector": [
+                "全くない",
+                "いくらか",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "state05",
+            "dispname": "私はくつろいでいる",
+            "required": true,
+            "selector": [
+                "全くない",
+                "いくらか",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "state06",
+            "dispname": "私は動揺している",
+            "required": true,
+            "selector": [
+                "全くない",
+                "いくらか",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "state07",
+            "dispname": "私は今起こりうる不幸について悩んでいる",
+            "required": true,
+            "selector": [
+                "全くない",
+                "いくらか",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "state08",
+            "dispname": "私は満足している",
+            "required": true,
+            "selector": [
+                "全くない",
+                "いくらか",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "state09",
+            "dispname": "私は怯えている",
+            "required": true,
+            "selector": [
+                "全くない",
+                "いくらか",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "state10",
+            "dispname": "私は安楽に感じる",
+            "required": true,
+            "selector": [
+                "全くない",
+                "いくらか",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "state11",
+            "dispname": "私は自信がある",
+            "required": true,
+            "selector": [
+                "全くない",
+                "いくらか",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "state12",
+            "dispname": "私は神経質である",
+            "required": true,
+            "selector": [
+                "全くない",
+                "いくらか",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "state13",
+            "dispname": "私はそわそわしている",
+            "required": true,
+            "selector": [
+                "全くない",
+                "いくらか",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "state14",
+            "dispname": "私は迷っている",
+            "required": true,
+            "selector": [
+                "全くない",
+                "いくらか",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "state15",
+            "dispname": "私はリラックスしている",
+            "required": true,
+            "selector": [
+                "全くない",
+                "いくらか",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "state16",
+            "dispname": "私は満ち足りている",
+            "required": true,
+            "selector": [
+                "全くない",
+                "いくらか",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "state17",
+            "dispname": "私は心配している",
+            "required": true,
+            "selector": [
+                "全くない",
+                "いくらか",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "state18",
+            "dispname": "私は混乱している",
+            "required": true,
+            "selector": [
+                "全くない",
+                "いくらか",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "state19",
+            "dispname": "私は落ち着いている",
+            "required": true,
+            "selector": [
+                "全くない",
+                "いくらか",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "state20",
+            "dispname": "私は愉快である",
+            "required": true,
+            "selector": [
+                "全くない",
+                "いくらか",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "subsection",
+            "name": "trait_anxiety_section",
+            "dispname": "Y-2：特性不安尺度（普段の気持ち）",
+            "description": "普段のあなたの気持ちについてお答えください。一般的にどのように感じることが多いかを表す文章を読んで、その程度を選んでください。"
+        },
+        {
+            "type": "radio",
+            "name": "trait01",
+            "dispname": "私は愉快である",
+            "required": true,
+            "selector": [
+                "ほとんどない",
+                "ときどき",
+                "しばしば",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "trait02",
+            "dispname": "私は疲れやすい",
+            "required": true,
+            "selector": [
+                "ほとんどない",
+                "ときどき",
+                "しばしば",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "trait03",
+            "dispname": "私は泣きたい気持ちである",
+            "required": true,
+            "selector": [
+                "ほとんどない",
+                "ときどき",
+                "しばしば",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "trait04",
+            "dispname": "私は他の人ほど幸福ではないと思う",
+            "required": true,
+            "selector": [
+                "ほとんどない",
+                "ときどき",
+                "しばしば",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "trait05",
+            "dispname": "私は決断が早すぎて失敗する",
+            "required": true,
+            "selector": [
+                "ほとんどない",
+                "ときどき",
+                "しばしば",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "trait06",
+            "dispname": "私は安らかである",
+            "required": true,
+            "selector": [
+                "ほとんどない",
+                "ときどき",
+                "しばしば",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "trait07",
+            "dispname": "私は落ち着いていて冷静で安定している",
+            "required": true,
+            "selector": [
+                "ほとんどない",
+                "ときどき",
+                "しばしば",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "trait08",
+            "dispname": "私は困難が積み重なって解決できないと感じる",
+            "required": true,
+            "selector": [
+                "ほとんどない",
+                "ときどき",
+                "しばしば",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "trait09",
+            "dispname": "私は重要でないことをあまりに心配しすぎる",
+            "required": true,
+            "selector": [
+                "ほとんどない",
+                "ときどき",
+                "しばしば",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "trait10",
+            "dispname": "私は幸福である",
+            "required": true,
+            "selector": [
+                "ほとんどない",
+                "ときどき",
+                "しばしば",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "trait11",
+            "dispname": "私は他のことを気にしすぎる傾向がある",
+            "required": true,
+            "selector": [
+                "ほとんどない",
+                "ときどき",
+                "しばしば",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "trait12",
+            "dispname": "私は自信がない",
+            "required": true,
+            "selector": [
+                "ほとんどない",
+                "ときどき",
+                "しばしば",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "trait13",
+            "dispname": "私は安全だと感じる",
+            "required": true,
+            "selector": [
+                "ほとんどない",
+                "ときどき",
+                "しばしば",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "trait14",
+            "dispname": "私は決断を下すことを避ける",
+            "required": true,
+            "selector": [
+                "ほとんどない",
+                "ときどき",
+                "しばしば",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "trait15",
+            "dispname": "私は憂鬱である",
+            "required": true,
+            "selector": [
+                "ほとんどない",
+                "ときどき",
+                "しばしば",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "trait16",
+            "dispname": "私は満足している",
+            "required": true,
+            "selector": [
+                "ほとんどない",
+                "ときどき",
+                "しばしば",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "trait17",
+            "dispname": "私は重要でない考えが頭に浮かんで私を悩ませる",
+            "required": true,
+            "selector": [
+                "ほとんどない",
+                "ときどき",
+                "しばしば",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "trait18",
+            "dispname": "私は失望を強く感じるので、それが頭から離れない",
+            "required": true,
+            "selector": [
+                "ほとんどない",
+                "ときどき",
+                "しばしば",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "trait19",
+            "dispname": "私は落ち着いた人間である",
+            "required": true,
+            "selector": [
+                "ほとんどない",
+                "ときどき",
+                "しばしば",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "trait20",
+            "dispname": "私は現在の関心事や心配ごとを考えると緊張し混乱する",
+            "required": true,
+            "selector": [
+                "ほとんどない",
+                "ときどき",
+                "しばしば",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "type": "eval",
+            "name": "state_anxiety_positive",
+            "description": "状態不安・不安存在項目の得点",
+            "formula": "[[state03.index]] + [[state04.index]] + [[state06.index]] + [[state07.index]] + [[state09.index]] + [[state12.index]] + [[state13.index]] + [[state14.index]] + [[state17.index]] + [[state18.index]]",
+            "noreport": true
+        },
+        {
+            "type": "eval",
+            "name": "state_anxiety_negative",
+            "description": "状態不安・不安不在項目の得点（逆転）",
+            "formula": "(5 - [[state01.index]]) + (5 - [[state02.index]]) + (5 - [[state05.index]]) + (5 - [[state08.index]]) + (5 - [[state10.index]]) + (5 - [[state11.index]]) + (5 - [[state15.index]]) + (5 - [[state16.index]]) + (5 - [[state19.index]]) + (5 - [[state20.index]])",
+            "noreport": true
+        },
+        {
+            "type": "eval",
+            "name": "state_anxiety_total",
+            "dispname": "状態不安得点",
+            "formula": "[[state_anxiety_positive]] + [[state_anxiety_negative]]"
+        },
+        {
+            "type": "eval",
+            "name": "trait_anxiety_positive",
+            "description": "特性不安・不安存在項目の得点",
+            "formula": "[[trait02.index]] + [[trait04.index]] + [[trait05.index]] + [[trait08.index]] + [[trait09.index]] + [[trait11.index]] + [[trait12.index]] + [[trait15.index]] + [[trait17.index]] + [[trait18.index]] + [[trait20.index]]",
+            "noreport": true
+        },
+        {
+            "type": "eval",
+            "name": "trait_anxiety_negative",
+            "description": "特性不安・不安不在項目の得点（逆転）",
+            "formula": "(5 - [[trait01.index]]) + (5 - [[trait03.index]]) + (5 - [[trait06.index]]) + (5 - [[trait07.index]]) + (5 - [[trait10.index]]) + (5 - [[trait13.index]]) + (5 - [[trait14.index]]) + (5 - [[trait16.index]]) + (5 - [[trait19.index]])",
+            "noreport": true
+        },
+        {
+            "type": "eval",
+            "name": "trait_anxiety_total",
+            "dispname": "特性不安得点",
+            "formula": "[[trait_anxiety_positive]] + [[trait_anxiety_negative]]"
+        },
+        {
+            "type": "warning",
+            "name": "Warning: 状態不安高値 (≥42点)",
+            "formula": "[[state_anxiety_total]] >= 42"
+        },
+        {
+            "type": "warning",
+            "name": "Warning: 特性不安高値 (≥45点)",
+            "formula": "[[trait_anxiety_total]] >= 45"
+        }
+    ]
+}

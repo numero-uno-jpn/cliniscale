@@ -1,11 +1,11 @@
 <?php
 // index.php
-require_once '/home/medeputize/scripts/stats/vendor/autoload.php';
+require_once __DIR__ . "/vendor/autoload.php";
 
 use Symfony\Component\Yaml\Yaml;
 
 // スケール票リストを読み込み
-$yamlPath = '/home/medeputize/www/documents/emuyn/cliniscale/スコア票リスト.yaml';
+$yamlPath = __DIR__ . '/data/スコア票リスト.yaml';
 $questionnaires = [];
 
 if (file_exists($yamlPath)) {
@@ -32,7 +32,7 @@ if (preg_match('/\/([^\/\?]+)\/?(\?.*)?$/', $path, $matches)) {
 
 // questionnaire データを読み込み
 if ($questionnaireId) {
-    $basePath = '/home/medeputize/www/documents/emuyn/cliniscale/definitions/';
+    $basePath = __DIR__ . '/data/definitions/';
     $safeId = basename($questionnaireId);
     $jsonPath = $basePath . $safeId . '.json';
     $mdPath = $basePath . $safeId . '.md';

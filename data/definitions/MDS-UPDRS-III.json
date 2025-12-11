@@ -1,0 +1,359 @@
+{
+    "_comment": [
+        "MDS-UPDRS Part III (Movement Disorder Society-Unified Parkinson's Disease Rating Scale Part III) Motor Examination",
+        "統一パーキンソン病評価尺度パート3 運動症状検査",
+        "原典: Goetz CG, et al. Movement Disorder Society-sponsored revision of the Unified Parkinson's Disease Rating Scale (MDS-UPDRS): scale presentation and clinimetric testing results. Mov Disord. 2008;23(15):2129-2170. PMID: 19025984",
+        "18項目（左右別評価により33スコア）、各項目0-4点の5段階評価",
+        "最大132点、高得点ほど運動症状が重度",
+        "評価者: 訓練を受けた医療従事者による客観的評価",
+        "参考URL: https://www.movementdisorders.org/",
+        "重症度分類参考値(Martinez-Martin 2015): 軽度0-32点、中等度33-58点、重度59点以上",
+        "重要: Part IIIのスコアは他のPartと合計すべきではない(Goetz 2022: PMID: 36480107)"
+    ],
+    "title": "MDS-UPDRS-III 運動障害学会改訂版統一パーキンソン病評価スケール Part III",
+    "description": [
+        "<h3>統一パーキンソン病評価尺度 パート3 運動症状検査</h3>",
+        "パーキンソン病の運動症状を客観的に評価する標準的な評価尺度です。",
+        "18項目（左右別評価により33スコア）の運動機能について、0点から4点の5段階で評価します。",
+        "評価は訓練を受けた医療従事者が実施してください。"
+    ],
+    "submit_button_title": "評価結果を送信",
+    "translate": "major",
+    "fields": [
+        {
+            "dispname": "基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "薬物状態",
+            "name": "薬物状態",
+            "type": "radio",
+            "required": true,
+            "selector": "ON状態|OFF状態|不明",
+            "description": "評価時の抗パーキンソン病薬の効果状態"
+        },
+        {
+            "dispname": "運動症状評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "3.1 構語障害",
+            "name": "構語障害",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|軽度の発声低下や構語不明瞭|中等度の発声低下や構語不明瞭、聞き返されることがある|重度の発声低下や構語不明瞭、頻繁に聞き返される|ほとんど理解できない",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "3.2 顔面表情",
+            "name": "顔面表情",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|軽度の表情減少|軽度から中等度の表情減少、唇が時々開く|中等度の表情減少、唇が大部分の時間開いている|表情がほとんどない、口が常に開いている",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "3.3 安静時振戦（頸部）",
+            "name": "安静時振戦頸部",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|軽度、振戦はまれにみられる|軽度、振戦は大部分の時間にみられる|中等度、振戦は大部分の時間にみられる|重度、振戦は大部分の時間にみられる",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "3.4 安静時振戦（右上肢）",
+            "name": "安静時振戦右上肢",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|軽度、振戦はまれにみられる|軽度、振戦は大部分の時間にみられる|中等度、振戦は大部分の時間にみられる|重度、振戦は大部分の時間にみられる",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "3.5 安静時振戦（左上肢）",
+            "name": "安静時振戦左上肢",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|軽度、振戦はまれにみられる|軽度、振戦は大部分の時間にみられる|中等度、振戦は大部分の時間にみられる|重度、振戦は大部分の時間にみられる",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "3.6 安静時振戦（右下肢）",
+            "name": "安静時振戦右下肢",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|軽度、振戦はまれにみられる|軽度、振戦は大部分の時間にみられる|中等度、振戦は大部分の時間にみられる|重度、振戦は大部分の時間にみられる",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "3.7 安静時振戦（左下肢）",
+            "name": "安静時振戦左下肢",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|軽度、振戦はまれにみられる|軽度、振戦は大部分の時間にみられる|中等度、振戦は大部分の時間にみられる|重度、振戦は大部分の時間にみられる",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "3.8 動作時振戦（右上肢）",
+            "name": "動作時振戦右上肢",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|軽度、振戦は運動中にのみ出現|中等度、振戦は運動中と静止肢位保持中に出現|重度、振戦は軽い随意運動を妨げる|重度、振戦は大部分の運動を妨げる",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "3.9 動作時振戦（左上肢）",
+            "name": "動作時振戦左上肢",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|軽度、振戦は運動中にのみ出現|中等度、振戦は運動中と静止肢位保持中に出現|重度、振戦は軽い随意運動を妨げる|重度、振戦は大部分の運動を妨げる",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "3.10 硬縮（頸部）",
+            "name": "硬縮頸部",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|軽度、可動域全体にわたって検出される|軽度から中等度|中等度、可動域の大部分で明らかに増強|重度、可動域が困難",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "3.11 硬縮（右上肢）",
+            "name": "硬縮右上肢",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|軽度、可動域全体にわたって検出される|軽度から中等度|中等度、可動域の大部分で明らかに増強|重度、可動域が困難",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "3.12 硬縮（左上肢）",
+            "name": "硬縮左上肢",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|軽度、可動域全体にわたって検出される|軽度から中等度|中等度、可動域の大部分で明らかに増強|重度、可動域が困難",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "3.13 硬縮（右下肢）",
+            "name": "硬縮右下肢",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|軽度、可動域全体にわたって検出される|軽度から中等度|中等度、可動域の大部分で明らかに増強|重度、可動域が困難",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "3.14 硬縮（左下肢）",
+            "name": "硬縮左下肢",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|軽度、可動域全体にわたって検出される|軽度から中等度|中等度、可動域の大部分で明らかに増強|重度、可動域が困難",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "3.15 指タップ（右手）",
+            "name": "指タップ右手",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|軽度の運動緩慢や小振幅|中等度の運動緩慢や小振幅、時々動作が止まる|重度の運動緩慢や小振幅、頻繁に動作が止まる|ほとんどまたは全く運動できない",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "3.16 指タップ（左手）",
+            "name": "指タップ左手",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|軽度の運動緩慢や小振幅|中等度の運動緩慢や小振幅、時々動作が止まる|重度の運動緩慢や小振幅、頻繁に動作が止まる|ほとんどまたは全く運動できない",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "3.17 手の動き（右手）",
+            "name": "手の動き右手",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|軽度の運動緩慢や小振幅|中等度の運動緩慢や小振幅、時々動作が止まる|重度の運動緩慢や小振幅、頻繁に動作が止まる|ほとんどまたは全く運動できない",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "3.18 手の動き（左手）",
+            "name": "手の動き左手",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|軽度の運動緩慢や小振幅|中等度の運動緩慢や小振幅、時々動作が止まる|重度の運動緩慢や小振幅、頻繁に動作が止まる|ほとんどまたは全く運動できない",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "3.19 手回し運動（右手）",
+            "name": "手回し運動右手",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|軽度の運動緩慢や小振幅|中等度の運動緩慢や小振幅、時々動作が止まる|重度の運動緩慢や小振幅、頻繁に動作が止まる|ほとんどまたは全く運動できない",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "3.20 手回し運動（左手）",
+            "name": "手回し運動左手",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|軽度の運動緩慢や小振幅|中等度の運動緩慢や小振幅、時々動作が止まる|重度の運動緩慢や小振幅、頻繁に動作が止まる|ほとんどまたは全く運動できない",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "3.21 足タップ（右足）",
+            "name": "足タップ右足",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|軽度の運動緩慢や小振幅|中等度の運動緩慢や小振幅、時々動作が止まる|重度の運動緩慢や小振幅、頻繁に動作が止まる|ほとんどまたは全く運動できない",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "3.22 足タップ（左足）",
+            "name": "足タップ左足",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|軽度の運動緩慢や小振幅|中等度の運動緩慢や小振幅、時々動作が止まる|重度の運動緩慢や小振幅、頻繁に動作が止まる|ほとんどまたは全く運動できない",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "3.23 足の敏捷性（右足）",
+            "name": "足の敏捷性右足",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|軽度の運動緩慢や小振幅|中等度の運動緩慢や小振幅、時々動作が止まる|重度の運動緩慢や小振幅、頻繁に動作が止まる|ほとんどまたは全く運動できない",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "3.24 足の敏捷性（左足）",
+            "name": "足の敏捷性左足",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|軽度の運動緩慢や小振幅|中等度の運動緩慢や小振幅、時々動作が止まる|重度の運動緩慢や小振幅、頻繁に動作が止まる|ほとんどまたは全く運動できない",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "3.25 起立",
+            "name": "起立",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|ゆっくりだが介助なしで起立|肘掛けを押して起立|複数回の試行で起立|介助なしには起立できない",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "3.26 歩行",
+            "name": "歩行",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|軽度の歩行障害|軽度から中等度の歩行障害|中等度の歩行障害、補助や介助が必要|歩行できない",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "3.27 すくみ足",
+            "name": "すくみ足",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|歩行開始時に軽度のためらい|歩行開始時に明らかなすくみ|複数回のすくみ、時々転倒リスク|頻繁にすくんで歩行が困難",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "3.28 姿勢安定性",
+            "name": "姿勢安定性",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|軽度の姿勢不安定、回復可能|中等度の姿勢不安定、介助なしで回復|重度の姿勢不安定、転倒の危険|介助なしに立位保持困難",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "3.29 全体的な運動緩慢",
+            "name": "全体的運動緩慢",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|軽度の全体的運動緩慢|軽度から中等度の全体的運動緩慢|中等度の全体的運動緩慢|重度の全体的運動緩慢",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "3.30 上肢動作時振戦（右）",
+            "name": "上肢動作時振戦右",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|軽度、運動中にのみ出現|中等度、運動中と静止肢位保持中に出現|重度、軽い随意運動を妨げる|重度、大部分の運動を妨げる",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "3.31 上肢動作時振戦（左）",
+            "name": "上肢動作時振戦左",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|軽度、運動中にのみ出現|中等度、運動中と静止肢位保持中に出現|重度、軽い随意運動を妨げる|重度、大部分の運動を妨げる",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "3.32 下肢動作時振戦（右）",
+            "name": "下肢動作時振戦右",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|軽度、運動中にのみ出現|中等度、運動中と静止肢位保持中に出現|重度、軽い随意運動を妨げる|重度、大部分の運動を妨げる",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "3.33 下肢動作時振戦（左）",
+            "name": "下肢動作時振戦左",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|軽度、運動中にのみ出現|中等度、運動中と静止肢位保持中に出現|重度、軽い随意運動を妨げる|重度、大部分の運動を妨げる",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "合計スコア",
+            "type": "eval",
+            "formula": "[[構語障害.index]] + [[顔面表情.index]] + [[安静時振戦頸部.index]] + [[安静時振戦右上肢.index]] + [[安静時振戦左上肢.index]] + [[安静時振戦右下肢.index]] + [[安静時振戦左下肢.index]] + [[動作時振戦右上肢.index]] + [[動作時振戦左上肢.index]] + [[硬縮頸部.index]] + [[硬縮右上肢.index]] + [[硬縮左上肢.index]] + [[硬縮右下肢.index]] + [[硬縮左下肢.index]] + [[指タップ右手.index]] + [[指タップ左手.index]] + [[手の動き右手.index]] + [[手の動き左手.index]] + [[手回し運動右手.index]] + [[手回し運動左手.index]] + [[足タップ右足.index]] + [[足タップ左足.index]] + [[足の敏捷性右足.index]] + [[足の敏捷性左足.index]] + [[起立.index]] + [[歩行.index]] + [[すくみ足.index]] + [[姿勢安定性.index]] + [[全体的運動緩慢.index]] + [[上肢動作時振戦右.index]] + [[上肢動作時振戦左.index]] + [[下肢動作時振戦右.index]] + [[下肢動作時振戦左.index]]",
+            "dispname": "UPDRS-III 総合得点（0-132点）"
+        },
+        {
+            "name": "重症度参考分類",
+            "type": "eval",
+            "formula": "[[合計スコア]] <= 32 ? '軽度' : ([[合計スコア]] <= 58 ? '中等度' : '重度')",
+            "dispname": "運動症状重症度の参考分類（Martinez-Martin 2015）"
+        },
+        {
+            "name": "安静時振戦サブスコア",
+            "type": "eval",
+            "formula": "[[安静時振戦頸部.index]] + [[安静時振戦右上肢.index]] + [[安静時振戦左上肢.index]] + [[安静時振戦右下肢.index]] + [[安静時振戦左下肢.index]]",
+            "dispname": "安静時振戦項目の合計（0-20点）"
+        },
+        {
+            "name": "動作時振戦サブスコア",
+            "type": "eval",
+            "formula": "[[動作時振戦右上肢.index]] + [[動作時振戦左上肢.index]] + [[上肢動作時振戦右.index]] + [[上肢動作時振戦左.index]] + [[下肢動作時振戦右.index]] + [[下肢動作時振戦左.index]]",
+            "dispname": "動作時振戦項目の合計（0-24点）"
+        },
+        {
+            "name": "硬縮サブスコア",
+            "type": "eval",
+            "formula": "[[硬縮頸部.index]] + [[硬縮右上肢.index]] + [[硬縮左上肢.index]] + [[硬縮右下肢.index]] + [[硬縮左下肢.index]]",
+            "dispname": "硬縮項目の合計（0-20点）"
+        },
+        {
+            "name": "運動緩慢サブスコア",
+            "type": "eval",
+            "formula": "[[指タップ右手.index]] + [[指タップ左手.index]] + [[手の動き右手.index]] + [[手の動き左手.index]] + [[手回し運動右手.index]] + [[手回し運動左手.index]] + [[足タップ右足.index]] + [[足タップ左足.index]] + [[足の敏捷性右足.index]] + [[足の敏捷性左足.index]] + [[全体的運動緩慢.index]]",
+            "dispname": "運動緩慢項目の合計（0-44点）"
+        },
+        {
+            "name": "軸性症状サブスコア",
+            "type": "eval",
+            "formula": "[[構語障害.index]] + [[顔面表情.index]] + [[起立.index]] + [[歩行.index]] + [[すくみ足.index]] + [[姿勢安定性.index]]",
+            "dispname": "軸性症状項目の合計（0-24点）"
+        },
+        {
+            "name": "Warning: 中程度リスク MDS-UPDRS-IIIスコア ≥ 33点",
+            "formula": "[[合計スコア]] >= 33",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 高リスク MDS-UPDRS-IIIスコア ≥ 59点",
+            "formula": "[[合計スコア]] >= 59",
+            "type": "emergency"
+        }
+    ]
+}

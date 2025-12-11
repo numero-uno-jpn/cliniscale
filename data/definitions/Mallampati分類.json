@@ -1,0 +1,181 @@
+{
+    "_comment": [
+        "Mallampati分類問診票",
+        "開発者: Seshagiri Mallampati (1985年) → Samsoon and Young修正版 (1987年)",
+        "目的: 気管挿管困難の予測",
+        "分類: Class I-IV の4段階分類",
+        "判定: Class III以上で挿管困難リスク上昇",
+        "参考文献: 日本麻酔科学会安全委員会 安全な鎮静のためのプラクティカルガイド",
+        "参考URL: https://anesth.or.jp/files/pdf/practical_guide_for_safe_sedation_20220628.pdf"
+    ],
+    "title": "気管挿管困難予測のための Mallampati分類評価",
+    "description": [
+        "気管挿管困難予測のためのMallampati分類評価を行います",
+        "座位で最大開口し、舌を前方に突出させた状態で口腔内を観察してください"
+    ],
+    "contact": "担当医師",
+    "dept_in_charge": "麻酔科",
+    "submit_button_title": "評価結果を送信",
+    "fields": [
+        {
+            "dispname": "評価者情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "評価者氏名",
+            "name": "評価者氏名",
+            "type": "text"
+        },
+        {
+            "dispname": "評価日時",
+            "name": "評価日時",
+            "type": "date",
+            "required": true,
+            "format": "YYYY/MM/DD"
+        },
+        {
+            "dispname": "患者基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "年齢",
+            "name": "年齢",
+            "type": "text",
+            "postfix": "歳",
+            "inputmode": "numeric",
+            "testrange": [
+                10,
+                90
+            ],
+            "required": true
+        },
+        {
+            "dispname": "性別",
+            "name": "性別",
+            "type": "radio",
+            "selector": "男性|女性",
+            "inline": true,
+            "required": true
+        },
+        {
+            "dispname": "Mallampati分類評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "評価条件",
+            "type": "note",
+            "description": "**評価方法**\n\n1. 患者を座位にする\n2. 最大限に開口してもらう\n3. 舌を前方に突出させる（発声はさせない）\n4. 口腔内の可視構造物を観察し分類する"
+        },
+        {
+            "dispname": "Mallampati分類",
+            "name": "Mallampati分類",
+            "type": "radio",
+            "selector": [
+                "Class I: 口蓋弓、軟口蓋、口蓋垂がすべて見える",
+                "Class II: 軟口蓋、口蓋垂が見える（口蓋弓は見えない）",
+                "Class III: 軟口蓋、口蓋垂の基部のみ見える",
+                "Class IV: 硬口蓋のみ見える（軟口蓋も見えない）"
+            ],
+            "selectoridx": "1|2|3|4",
+            "required": true,
+            "description": "口腔内の可視構造物に基づいて最も適切な分類を選択してください"
+        },
+        {
+            "dispname": "評価時の体位",
+            "name": "評価体位",
+            "type": "radio",
+            "selector": "座位|仰臥位",
+            "inline": true,
+            "description": "実際に評価を行った時の患者体位"
+        },
+        {
+            "dispname": "頭部位置",
+            "name": "頭部位置",
+            "type": "radio",
+            "selector": "中立位|軽度伸展|完全伸展",
+            "inline": true,
+            "description": "評価時の頭部の位置"
+        },
+        {
+            "dispname": "舌の突出",
+            "name": "舌突出",
+            "type": "radio",
+            "selector": "あり|なし",
+            "inline": true,
+            "required": true,
+            "description": "舌を前方に突出させたかどうか"
+        },
+        {
+            "dispname": "評価の信頼性",
+            "name": "評価信頼性",
+            "type": "radio",
+            "selector": "高い|中程度|低い",
+            "inline": true,
+            "description": "患者の協力度や観察条件から判断した評価の信頼性"
+        },
+        {
+            "dispname": "追加所見",
+            "type": "subsection"
+        },
+        {
+            "dispname": "開口度",
+            "name": "開口度",
+            "type": "radio",
+            "selector": "3横指以上|3横指未満",
+            "inline": true,
+            "description": "最大開口時の開口幅"
+        },
+        {
+            "dispname": "下顎の形態",
+            "name": "下顎形態",
+            "type": "radio",
+            "selector": "正常|小顎症|後退顎",
+            "inline": true
+        },
+        {
+            "dispname": "歯列の状態",
+            "name": "歯列状態",
+            "type": "radio",
+            "selector": "正常|突出歯|欠損多数",
+            "inline": true
+        },
+        {
+            "dispname": "頸部可動性",
+            "name": "頸部可動性",
+            "type": "radio",
+            "selector": "良好|制限あり|高度制限",
+            "inline": true
+        },
+        {
+            "dispname": "その他の所見",
+            "name": "その他所見",
+            "type": "textarea",
+            "rows": 3,
+            "description": "評価に影響を与える可能性のある追加所見があれば記載"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "挿管困難リスク",
+            "type": "eval",
+            "formula": "[[Mallampati分類.index]] >= 3 ? '高リスク（Class III以上）' : '低-中リスク（Class I-II）'",
+            "dispname": "Mallampati分類に基づく挿管困難リスク"
+        },
+        {
+            "name": "総合評価コメント",
+            "type": "eval",
+            "formula": "[[Mallampati分類.index]] == 1 ? 'Class I: 挿管困難のリスクは低い' : ( [[Mallampati分類.index]] == 2 ? 'Class II: 挿管困難のリスクは比較的低い' : ( [[Mallampati分類.index]] == 3 ? 'Class III: 挿管困難のリスクが高い。術前に対策を検討' : 'Class IV: 挿管困難のリスクが非常に高い。十分な準備と対策が必要' ) )"
+        },
+        {
+            "name": "Warning: 挿管困難中程度リスク Class III",
+            "formula": "[[Mallampati分類.index]] >= 3",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 挿管困難高リスク Class IV",
+            "formula": "[[Mallampati分類.index]] == 4",
+            "type": "emergency"
+        }
+    ]
+}

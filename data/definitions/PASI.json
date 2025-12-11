@@ -1,0 +1,347 @@
+{
+    "_comment": [
+        "PASI (Psoriasis Area and Severity Index) 問診票",
+        "開発: Fredriksson T, Pettersson U (1978)",
+        "出典: Severe psoriasis--oral therapy with a new retinoid. Dermatologica. 1978;157(4):238-44",
+        "PMID: 357213",
+        "用途: 乾癬の重症度評価、臨床試験での標準指標",
+        "医師による客観的評価ツール"
+    ],
+    "title": "PASI 乾癬の重症度評価指標",
+    "description": [
+        "乾癬の重症度を客観的に評価する指標です",
+        "医師による評価により、全身を4つの部位に分けて皮疹の範囲と重症度を数値化します"
+    ],
+    "translate": "major",
+    "fields": [
+        {
+            "dispname": "頭部の評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "頭部 - 紅斑の程度",
+            "name": "頭部_紅斑",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "高度",
+                "極めて高度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "頭部の赤みの程度を評価してください"
+        },
+        {
+            "dispname": "頭部 - 浸潤の程度",
+            "name": "頭部_浸潤",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "高度",
+                "極めて高度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "頭部の皮疹の盛り上がりの程度を評価してください"
+        },
+        {
+            "dispname": "頭部 - 落屑の程度",
+            "name": "頭部_落屑",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "高度",
+                "極めて高度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "頭部の鱗屑（フケ様の落屑）の程度を評価してください"
+        },
+        {
+            "dispname": "頭部 - 病巣範囲",
+            "name": "頭部_範囲",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "0%",
+                "1-9%",
+                "10-29%",
+                "30-49%",
+                "50-69%",
+                "70-89%",
+                "90-100%"
+            ],
+            "selectoridx": "0|1|2|3|4|5|6",
+            "description": "頭部における病巣の範囲を評価してください"
+        },
+        {
+            "dispname": "体幹の評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "体幹 - 紅斑の程度",
+            "name": "体幹_紅斑",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "高度",
+                "極めて高度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "体幹の赤みの程度を評価してください"
+        },
+        {
+            "dispname": "体幹 - 浸潤の程度",
+            "name": "体幹_浸潤",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "高度",
+                "極めて高度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "体幹の皮疹の盛り上がりの程度を評価してください"
+        },
+        {
+            "dispname": "体幹 - 落屑の程度",
+            "name": "体幹_落屑",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "高度",
+                "極めて高度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "体幹の鱗屑（フケ様の落屑）の程度を評価してください"
+        },
+        {
+            "dispname": "体幹 - 病巣範囲",
+            "name": "体幹_範囲",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "0%",
+                "1-9%",
+                "10-29%",
+                "30-49%",
+                "50-69%",
+                "70-89%",
+                "90-100%"
+            ],
+            "selectoridx": "0|1|2|3|4|5|6",
+            "description": "体幹における病巣の範囲を評価してください"
+        },
+        {
+            "dispname": "上肢の評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "上肢 - 紅斑の程度",
+            "name": "上肢_紅斑",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "高度",
+                "極めて高度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "上肢の赤みの程度を評価してください"
+        },
+        {
+            "dispname": "上肢 - 浸潤の程度",
+            "name": "上肢_浸潤",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "高度",
+                "極めて高度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "上肢の皮疹の盛り上がりの程度を評価してください"
+        },
+        {
+            "dispname": "上肢 - 落屑の程度",
+            "name": "上肢_落屑",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "高度",
+                "極めて高度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "上肢の鱗屑（フケ様の落屑）の程度を評価してください"
+        },
+        {
+            "dispname": "上肢 - 病巣範囲",
+            "name": "上肢_範囲",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "0%",
+                "1-9%",
+                "10-29%",
+                "30-49%",
+                "50-69%",
+                "70-89%",
+                "90-100%"
+            ],
+            "selectoridx": "0|1|2|3|4|5|6",
+            "description": "上肢における病巣の範囲を評価してください"
+        },
+        {
+            "dispname": "下肢の評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "下肢 - 紅斑の程度",
+            "name": "下肢_紅斑",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "高度",
+                "極めて高度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "下肢の赤みの程度を評価してください"
+        },
+        {
+            "dispname": "下肢 - 浸潤の程度",
+            "name": "下肢_浸潤",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "高度",
+                "極めて高度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "下肢の皮疹の盛り上がりの程度を評価してください"
+        },
+        {
+            "dispname": "下肢 - 落屑の程度",
+            "name": "下肢_落屑",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "高度",
+                "極めて高度"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "description": "下肢の鱗屑（フケ様の落屑）の程度を評価してください"
+        },
+        {
+            "dispname": "下肢 - 病巣範囲",
+            "name": "下肢_範囲",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": [
+                "0%",
+                "1-9%",
+                "10-29%",
+                "30-49%",
+                "50-69%",
+                "70-89%",
+                "90-100%"
+            ],
+            "selectoridx": "0|1|2|3|4|5|6",
+            "description": "下肢における病巣の範囲を評価してください"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "頭部スコア",
+            "type": "eval",
+            "formula": "( ( [[頭部_紅斑.index]] + [[頭部_浸潤.index]] + [[頭部_落屑.index]] ) * [[頭部_範囲.index]] * 0.1).toFixed(2)",
+            "dispname": "頭部の部分スコア = (紅斑 + 浸潤 + 落屑) × 範囲 × 0.1"
+        },
+        {
+            "name": "体幹スコア",
+            "type": "eval",
+            "formula": "( ( [[体幹_紅斑.index]] + [[体幹_浸潤.index]] + [[体幹_落屑.index]] ) * [[体幹_範囲.index]] * 0.3).toFixed(2)",
+            "dispname": "体幹の部分スコア = (紅斑 + 浸潤 + 落屑) × 範囲 × 0.3"
+        },
+        {
+            "name": "上肢スコア",
+            "type": "eval",
+            "formula": "( ( [[上肢_紅斑.index]] + [[上肢_浸潤.index]] + [[上肢_落屑.index]] ) * [[上肢_範囲.index]] * 0.2).toFixed(2)",
+            "dispname": "上肢の部分スコア = (紅斑 + 浸潤 + 落屑) × 範囲 × 0.2"
+        },
+        {
+            "name": "下肢スコア",
+            "type": "eval",
+            "formula": "( ( [[下肢_紅斑.index]] + [[下肢_浸潤.index]] + [[下肢_落屑.index]] ) * [[下肢_範囲.index]] * 0.4).toFixed(2)",
+            "dispname": "下肢の部分スコア = (紅斑 + 浸潤 + 落屑) × 範囲 × 0.4"
+        },
+        {
+            "name": "PASI総スコア",
+            "type": "eval",
+            "formula": "( ((頭部スコア)) + ((体幹スコア)) + ((上肢スコア)) + ((下肢スコア)) ).toFixed(2)",
+            "dispname": "PASIスコア（0-72点）: 4つの部位スコアの合計"
+        },
+        {
+            "name": "重症度",
+            "type": "eval",
+            "formula": "((PASI総スコア)) >= 20 ? '重症' : ( ((PASI総スコア)) >= 10 ? '中等症' : '軽症' )",
+            "dispname": "重症度判定: 軽症（10未満）、中等症（10-20）、重症（20以上）"
+        },
+        {
+            "name": "Warning: 中等症警告 PASI総スコア >= 10",
+            "type": "warning",
+            "formula": "((PASI総スコア)) >= 10"
+        },
+        {
+            "name": "Emergency: 重症警告 PASI総スコア >= 20",
+            "type": "emergency",
+            "formula": "((PASI総スコア)) >= 20"
+        }
+    ]
+}

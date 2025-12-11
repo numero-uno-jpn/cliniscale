@@ -1,0 +1,243 @@
+{
+    "_comment": [
+        "MDQ (Mood Disorder Questionnaire) - 双極性障害スクリーニング",
+        "原典: Hirschfeld R, Williams J, Spitzer RL, et al. Development and validation of a screening instrument for bipolar spectrum disorder: the Mood Disorder Questionnaire. Am J Psychiatry. 2000;157:1873-1875.",
+        "2000年に開発された双極性障害のスクリーニングツール",
+        "13項目のはい/いいえ質問、機能障害評価、家族歴、診断歴を含む",
+        "陽性基準: Q1で7項目以上「はい」かつ Q2「はい」かつ Q3で中等度以上の問題",
+        "感度は高いが特異度は限定的なため、あくまでスクリーニング用途"
+    ],
+    "title": "MDQ 双極性障害スクリーニング",
+    "description": [
+        "気分障害質問票（MDQ）",
+        "双極性障害のスクリーニングを目的とした質問票です。",
+        "過去の気分の変化について振り返ってお答えください。"
+    ],
+    "fields": [
+        {
+            "name": "説明",
+            "type": "note",
+            "description": "以下の質問は、あなたが普段の自分とは違う状態になった時期があったかどうかについてお聞きします。最もよく当てはまる回答を選んでください。それぞれの質問にできるだけ正確にお答えください。"
+        },
+        {
+            "name": "Q1_intro",
+            "type": "note",
+            "description": "**あなたが普段の自分ではない状態になった時期がありましたか？その時期に以下の症状はありましたか？**"
+        },
+        {
+            "name": "Q1_1",
+            "type": "radio",
+            "dispname": "気分が非常に良くなったり、ハイになったりして、他の人があなたが普段の自分ではないと思ったり、ハイになりすぎてトラブルになったりしましたか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true
+        },
+        {
+            "name": "Q1_2",
+            "type": "radio",
+            "dispname": "非常にイライラして、人に怒鳴ったり、けんかや口論を始めたりしましたか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true
+        },
+        {
+            "name": "Q1_3",
+            "type": "radio",
+            "dispname": "いつもよりもずっと自信に満ちていましたか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true
+        },
+        {
+            "name": "Q1_4",
+            "type": "radio",
+            "dispname": "いつもよりもずっと睡眠時間が少なくても、実際には睡眠を必要としていないと感じましたか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true
+        },
+        {
+            "name": "Q1_5",
+            "type": "radio",
+            "dispname": "いつもよりもずっとおしゃべりになったり、早口になったりしましたか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true
+        },
+        {
+            "name": "Q1_6",
+            "type": "radio",
+            "dispname": "頭の中で考えが次々と浮かんできて、心を落ち着かせることができませんでしたか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true
+        },
+        {
+            "name": "Q1_7",
+            "type": "radio",
+            "dispname": "周りのことに非常に気が散りやすくて、集中したり一つのことに取り組み続けたりすることが困難でしたか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true
+        },
+        {
+            "name": "Q1_8",
+            "type": "radio",
+            "dispname": "いつもよりもずっとエネルギッシュでしたか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true
+        },
+        {
+            "name": "Q1_9",
+            "type": "radio",
+            "dispname": "いつもよりもずっと活動的になったり、いつもよりもたくさんのことをしたりしましたか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true
+        },
+        {
+            "name": "Q1_10",
+            "type": "radio",
+            "dispname": "いつもよりもずっと社交的になったり外向的になったりしましたか（例：真夜中に友人に電話をかけるなど）？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true
+        },
+        {
+            "name": "Q1_11",
+            "type": "radio",
+            "dispname": "いつもよりもずっと性的なことに興味を持ちましたか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true
+        },
+        {
+            "name": "Q1_12",
+            "type": "radio",
+            "dispname": "あなたにとって普通ではないことや、他の人が過度、愚かしい、危険だと思うようなことをしましたか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true
+        },
+        {
+            "name": "Q1_13",
+            "type": "radio",
+            "dispname": "お金を使いすぎて、あなたやご家族がトラブルに巻き込まれましたか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true
+        },
+        {
+            "name": "Q1_note",
+            "type": "note",
+            "description": "**以下の質問は、上記で「はい」と答えた項目についてお聞きします。**"
+        },
+        {
+            "name": "Q2",
+            "type": "radio",
+            "dispname": "上記の質問で複数の項目に「はい」と答えた場合、これらのうちいくつかが同じ時期に起こったことがありましたか？",
+            "description": "（当てはまらない場合は「いいえ」を選択してください）",
+            "selector": [
+                "はい",
+                "いいえ / 当てはまらない"
+            ],
+            "selectoridx": "1|0",
+            "required": true
+        },
+        {
+            "name": "Q3",
+            "type": "radio",
+            "dispname": "これらの症状によって、どの程度の問題が生じましたか（仕事ができない、家族・金銭・法的なトラブル、口論やけんかなど）？",
+            "selector": [
+                "問題なし",
+                "軽度の問題",
+                "中等度の問題",
+                "重度の問題"
+            ],
+            "selectoridx": "0|1|2|3",
+            "required": true
+        },
+        {
+            "name": "additional_info_note",
+            "type": "note",
+            "description": "**ご家族の病歴と、あなたご自身の診断歴についてお聞きします。**"
+        },
+        {
+            "name": "Q4",
+            "type": "radio",
+            "dispname": "あなたの血縁者（子ども、兄弟姉妹、両親、祖父母、おじ・おば）で、躁うつ病や双極性障害と診断された人はいますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true
+        },
+        {
+            "name": "Q5",
+            "type": "radio",
+            "dispname": "医療従事者から躁うつ病や双極性障害と診断されたことがありますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "Q1_total",
+            "type": "eval",
+            "dispname": "質問1の合計点数",
+            "formula": "[[Q1_1.index]] + [[Q1_2.index]] + [[Q1_3.index]] + [[Q1_4.index]] + [[Q1_5.index]] + [[Q1_6.index]] + [[Q1_7.index]] + [[Q1_8.index]] + [[Q1_9.index]] + [[Q1_10.index]] + [[Q1_11.index]] + [[Q1_12.index]] + [[Q1_13.index]]"
+        },
+        {
+            "name": "MDQ_positive",
+            "type": "eval",
+            "dispname": "MDQ陽性判定",
+            "formula": "( ([[Q1_total]] >= 7) && ([[Q2.index]] == 1) && ([[Q3.index]] >= 2) ) ? \"陽性\" : \"陰性\""
+        }
+    ]
+}

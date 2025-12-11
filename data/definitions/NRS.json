@@ -1,0 +1,201 @@
+{
+    "_comment": [
+        "NRS (Numerical Rating Scale) - 疼痛数値評価スケール",
+        "参考文献: Jensen, M. P., & McFarland, C. A. (1993). Increasing the reliability and validity of pain intensity measurement in chronic pain patients. Pain, 55(2), 195-203. PMID: 8309709",
+        "参考URL: https://www.jspc.gr.jp/igakusei/igakusei_hyouka.html",
+        "一般社団法人 日本ペインクリニック学会",
+        "がん疼痛の薬物療法に関するガイドライン 2020年版 日本緩和医療学会",
+        "重症度分類: NCCN基準（1-3軽度、4-6中等度、7-10重度）"
+    ],
+    "title": "NRS 疼痛数値評価スケール",
+    "description": [
+        "NRS (Numerical Rating Scale) は痛みの強度を0から10までの数値で評価する疼痛評価ツールです。",
+        "現在の痛みの程度を数値で表現していただき、適切な疼痛管理の参考にさせていただきます。"
+    ],
+    "translate": "major",
+    "fields": [
+        {
+            "dispname": "基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "年齢",
+            "name": "年齢",
+            "type": "text",
+            "required": true,
+            "postfix": "歳",
+            "inputmode": "numeric"
+        },
+        {
+            "dispname": "性別",
+            "name": "性別",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "男性|女性|その他"
+        },
+        {
+            "dispname": "疼痛評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "現在の安静時の痛み",
+            "name": "安静時痛み",
+            "type": "painscale",
+            "required": true,
+            "description": "現在、安静にしている時の痛みの程度を0から10の数字で表してください"
+        },
+        {
+            "dispname": "体を動かした時の痛み",
+            "name": "体動時痛み",
+            "type": "painscale",
+            "required": true,
+            "description": "体を動かしたり、深呼吸をした時の痛みの程度を0から10の数字で表してください"
+        },
+        {
+            "dispname": "痛みの部位",
+            "name": "痛みの部位",
+            "type": "textarea",
+            "required": true,
+            "rows": 3,
+            "description": "痛みがある部位を具体的に記載してください"
+        },
+        {
+            "dispname": "痛みの性質",
+            "name": "痛みの性質",
+            "type": "checkbox",
+            "selector": [
+                "刺すような痛み",
+                "ズキズキする痛み",
+                "鈍い痛み",
+                "締め付けられるような痛み",
+                "電気が走るような痛み",
+                "焼けるような痛み",
+                "その他"
+            ]
+        },
+        {
+            "dispname": "その他の痛みの表現",
+            "name": "その他痛み表現",
+            "type": "textarea",
+            "parentname": "痛みの性質",
+            "parentsel": "その他",
+            "rows": 2,
+            "description": "その他の痛みの表現があれば記載してください"
+        },
+        {
+            "dispname": "痛みの持続時間",
+            "name": "痛みの持続時間",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "数秒から数分|数時間|半日程度|1日以上|数日以上|1週間以上"
+        },
+        {
+            "dispname": "痛みの経過",
+            "name": "痛みの経過",
+            "type": "radio",
+            "required": true,
+            "selector": "急に始まった|徐々に強くなった|一定している|徐々に弱くなった|波がある"
+        },
+        {
+            "dispname": "痛みに影響する因子",
+            "name": "痛みに影響する因子",
+            "type": "checkbox",
+            "selector": [
+                "安静で軽減",
+                "体位変換で軽減",
+                "温めると軽減",
+                "冷やすと軽減",
+                "薬で軽減",
+                "動くと悪化",
+                "天気で変化",
+                "ストレスで悪化",
+                "その他"
+            ]
+        },
+        {
+            "dispname": "その他の影響因子",
+            "name": "その他影響因子",
+            "type": "textarea",
+            "parentname": "痛みに影響する因子",
+            "parentsel": "その他",
+            "rows": 2,
+            "description": "その他の影響因子があれば記載してください"
+        },
+        {
+            "dispname": "現在使用中の鎮痛薬",
+            "name": "現在使用中の鎮痛薬",
+            "type": "radio",
+            "required": true,
+            "selector": "使用していない|市販薬使用|処方薬使用|両方使用"
+        },
+        {
+            "dispname": "薬の詳細",
+            "name": "薬の詳細",
+            "type": "textarea",
+            "parentname": "現在使用中の鎮痛薬",
+            "parentsel": "市販薬使用|処方薬使用|両方使用",
+            "rows": 3,
+            "required": true,
+            "description": "使用している薬の名前、用量、服用回数を記載してください"
+        },
+        {
+            "dispname": "薬使用後の痛み",
+            "name": "薬使用後の痛み",
+            "type": "painscale",
+            "required": true,
+            "parentname": "現在使用中の鎮痛薬",
+            "parentsel": "市販薬使用|処方薬使用|両方使用",
+            "description": "薬を使用した後の痛みの程度を0から10の数字で表してください"
+        },
+        {
+            "dispname": "日常生活への影響",
+            "name": "日常生活への影響",
+            "type": "checkbox",
+            "selector": [
+                "歩行困難",
+                "睡眠障害",
+                "食欲低下",
+                "仕事や学業に支障",
+                "家事に支障",
+                "気分の落ち込み",
+                "イライラ",
+                "集中力低下",
+                "社会活動の制限",
+                "影響なし"
+            ]
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "安静時重症度",
+            "type": "eval",
+            "formula": "[[安静時痛み]] == 0 ? '痛みなし' : ( [[安静時痛み]] <= 3 ? '軽度' : ( [[安静時痛み]] <= 6 ? '中等度' : '重度' ) )",
+            "dispname": "安静時痛みの重症度分類"
+        },
+        {
+            "name": "体動時重症度",
+            "type": "eval",
+            "formula": "[[体動時痛み]] == 0 ? '痛みなし' : ( [[体動時痛み]] <= 3 ? '軽度' : ( [[体動時痛み]] <= 6 ? '中等度' : '重度' ) )",
+            "dispname": "体動時痛みの重症度分類"
+        },
+        {
+            "name": "薬効評価",
+            "type": "eval",
+            "formula": "{{現在使用中の鎮痛薬}} != '使用していない' ? ( [[安静時痛み]] - [[薬使用後の痛み]] >= 2 ? '効果あり（2点以上減少）' : ( [[安静時痛み]] - [[薬使用後の痛み]] >= 1 ? '軽度効果（1点減少）' : ( [[安静時痛み]] - [[薬使用後の痛み]] >= 0 ? '不変' : '悪化（痛み増加）' ) ) ) : '薬剤未使用'",
+            "dispname": "鎮痛薬の効果評価"
+        },
+        {
+            "name": "Warning: 中等度以上の痛み NRS≥4",
+            "formula": "[[安静時痛み]] >= 4 || [[体動時痛み]] >= 4",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 重度の痛み NRS≥7",
+            "formula": "[[安静時痛み]] >= 7 || [[体動時痛み]] >= 7",
+            "type": "emergency"
+        }
+    ]
+}

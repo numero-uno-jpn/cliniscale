@@ -1,0 +1,251 @@
+{
+    "_comment": [
+        "JOAスコア腰椎疾患版 (Japanese Orthopaedic Association Score for Lumbar Diseases)",
+        "29点満点で腰椎疾患の機能評価を行う",
+        "原典: 井上駿一ほか 腰椎疾患治療成績判定基準 日整会誌 1986",
+        "自覚症状(9点) + 他覚所見(6点) + 日常生活動作(14点) + 膀胱機能(0点または-3点/-6点) = -6点～29点"
+    ],
+    "title": "JOAスコア 腰椎疾患版",
+    "description": [
+        "腰椎疾患の機能評価を行います",
+        "自覚症状、他覚所見、日常生活動作、膀胱機能の4領域について評価してください"
+    ],
+    "fields": [
+        {
+            "dispname": "Ⅰ. 自覚症状",
+            "type": "subsection"
+        },
+        {
+            "dispname": "A. 腰痛に関して",
+            "name": "腰痛",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったく腰痛はない",
+                "時に軽い腰痛がある",
+                "常に腰痛があるか、あるいは時にかなりの腰痛がある",
+                "常に激しい腰痛がある"
+            ],
+            "selectoridx": "3|2|1|0"
+        },
+        {
+            "dispname": "B. 下肢痛に関して",
+            "name": "下肢痛",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったく下肢痛、シビレがない",
+                "時に軽い下肢痛、シビレがある",
+                "常に下肢痛、シビレがあるかあるいは時にかなりの下肢痛、シビレがある",
+                "常に激しい下肢痛、シビレがある"
+            ],
+            "selectoridx": "3|2|1|0"
+        },
+        {
+            "dispname": "C. 歩行能力に関して",
+            "name": "歩行能力",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったく正常に歩行が可能",
+                "500メートル以上歩行が可能であるが、疼痛、シビレ、脱力を生じる",
+                "500メートル以下の歩行で、疼痛、シビレ、脱力を生じて歩けない",
+                "100メートル以下の歩行で疼痛、シビレ、脱力を生じ、歩けない"
+            ],
+            "selectoridx": "3|2|1|0"
+        },
+        {
+            "dispname": "Ⅱ. 他覚所見",
+            "type": "subsection"
+        },
+        {
+            "dispname": "A. SLR (hamstring tightnessを含む)",
+            "name": "SLR",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "正常",
+                "30°～70°",
+                "30°未満"
+            ],
+            "selectoridx": "2|1|0"
+        },
+        {
+            "dispname": "B. 知覚",
+            "name": "知覚",
+            "type": "radio",
+            "required": true,
+            "description": "軽度の知覚障害: 患者自身が認識しない程度のもの、明白な知覚障害: 知覚のいずれかの完全脱出、あるいはこれに近いもので患者自身も明らかに認識しているもの",
+            "selector": [
+                "正常",
+                "軽度の知覚障害を有する",
+                "明白な知覚障害を認める"
+            ],
+            "selectoridx": "2|1|0"
+        },
+        {
+            "dispname": "C. 筋力",
+            "name": "筋力",
+            "type": "radio",
+            "required": true,
+            "description": "軽度の筋力低下: 筋力4程度、明らかな筋力低下: 筋力3以下。他覚所見が両側に認められる時にはより障害度の強い側で判定",
+            "selector": [
+                "正常",
+                "軽度の筋力低下",
+                "明らかな筋力低下"
+            ],
+            "selectoridx": "2|1|0"
+        },
+        {
+            "dispname": "Ⅲ. 日常生活動作",
+            "type": "subsection"
+        },
+        {
+            "dispname": "a. 寝返り動作",
+            "name": "寝返り",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "容易",
+                "やや困難",
+                "非常に困難"
+            ],
+            "selectoridx": "2|1|0"
+        },
+        {
+            "dispname": "b. 立ち上がり動作",
+            "name": "立ち上がり",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "容易",
+                "やや困難",
+                "非常に困難"
+            ],
+            "selectoridx": "2|1|0"
+        },
+        {
+            "dispname": "c. 洗顔動作",
+            "name": "洗顔",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "容易",
+                "やや困難",
+                "非常に困難"
+            ],
+            "selectoridx": "2|1|0"
+        },
+        {
+            "dispname": "d. 中腰姿勢または立位の持続",
+            "name": "中腰立位",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "容易",
+                "やや困難",
+                "非常に困難"
+            ],
+            "selectoridx": "2|1|0"
+        },
+        {
+            "dispname": "e. 長時間坐位 (1時間位)",
+            "name": "長時間坐位",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "容易",
+                "やや困難",
+                "非常に困難"
+            ],
+            "selectoridx": "2|1|0"
+        },
+        {
+            "dispname": "f. 重量物の挙上または保持",
+            "name": "重量物",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "容易",
+                "やや困難",
+                "非常に困難"
+            ],
+            "selectoridx": "2|1|0"
+        },
+        {
+            "dispname": "g. 歩行",
+            "name": "歩行",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "容易",
+                "やや困難",
+                "非常に困難"
+            ],
+            "selectoridx": "2|1|0"
+        },
+        {
+            "dispname": "Ⅳ. 膀胱機能",
+            "type": "subsection"
+        },
+        {
+            "dispname": "膀胱機能",
+            "name": "膀胱機能",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "正常",
+                "軽度の排尿困難 (頻尿、排尿遅延、残尿感)",
+                "高度の排尿困難 (失禁、尿閉)"
+            ],
+            "selectoridx": "0|-3|-6"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "自覚症状小計",
+            "type": "eval",
+            "formula": "[[腰痛.index]] + [[下肢痛.index]] + [[歩行能力.index]]"
+        },
+        {
+            "name": "他覚所見小計",
+            "type": "eval",
+            "formula": "[[SLR.index]] + [[知覚.index]] + [[筋力.index]]"
+        },
+        {
+            "name": "日常生活動作小計",
+            "type": "eval",
+            "formula": "[[寝返り.index]] + [[立ち上がり.index]] + [[洗顔.index]] + [[中腰立位.index]] + [[長時間坐位.index]] + [[重量物.index]] + [[歩行.index]]"
+        },
+        {
+            "name": "JOAスコア合計",
+            "type": "eval",
+            "dispname": "総合評価スコア (-6点～29点)",
+            "formula": "[[自覚症状小計]] + [[他覚所見小計]] + [[日常生活動作小計]] + [[膀胱機能.index]]"
+        },
+        {
+            "dispname": "重症度評価",
+            "name": "重症度評価",
+            "type": "eval",
+            "formula": "[[JOAスコア合計]] >= 20 ? '軽度' : ( [[JOAスコア合計]] >= 10 ? '中等度' : '重度' )"
+        },
+        {
+            "name": "Warning: 中等度リスク JOAスコア < 10",
+            "formula": "[[JOAスコア合計]] < 10",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 重度リスク JOAスコア < 5",
+            "formula": "[[JOAスコア合計]] < 5",
+            "type": "emergency"
+        }
+    ]
+}

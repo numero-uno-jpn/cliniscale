@@ -1,0 +1,121 @@
+{
+  "_comment": [
+    "R.E.N.A.L. Nephrometry Score",
+    "腎腫瘍の複雑度評価スコア",
+    "開発者: Alexander Kutikov, Robert G. Uzzo (2009)",
+    "原典: Kutikov A, Uzzo RG. J Urol. 2009;182(3):844-53.",
+    "参考URL: https://pubmed.ncbi.nlm.nih.gov/19616235/",
+    "公式URL: https://www.sciencedirect.com/science/article/abs/pii/S0022534709011756",
+    "評価: 4-12点、腎部分切除術の難易度予測",
+    "5項目: R (Radius)、E (Exophytic)、N (Nearness)、A (Anterior/posterior)、L (Location)"
+  ],
+  "title": "R.E.N.A.L. Nephrometry Score",
+  "description": [
+    "腎腫瘍の複雑度を評価します",
+    "CTまたはMRIの画像所見に基づいて評価してください"
+  ],
+  "fields": [
+    {
+      "type": "subsection",
+      "dispname": "R.E.N.A.L.スコア評価"
+    },
+    {
+      "type": "radio",
+      "name": "R_Radius",
+      "dispname": "R: 腫瘍の最大径 (Radius)",
+      "description": "腫瘍の最大径",
+      "required": true,
+      "selector": [
+        "4cm以下",
+        "4cmより大きく7cm以下",
+        "7cmより大きい"
+      ],
+      "selectoridx": "1|2|3"
+    },
+    {
+      "type": "radio",
+      "name": "E_Exophytic",
+      "dispname": "E: 外方発育性 (Exophytic/Endophytic)",
+      "description": "腫瘍の外方突出の程度",
+      "required": true,
+      "selector": [
+        "50%以上が外方発育",
+        "50%未満が外方発育",
+        "完全に内方発育"
+      ],
+      "selectoridx": "1|2|3"
+    },
+    {
+      "type": "radio",
+      "name": "N_Nearness",
+      "dispname": "N: 集合系との近接性 (Nearness to collecting system)",
+      "description": "腫瘍と集合系または腎洞との最短距離",
+      "required": true,
+      "selector": [
+        "7mm以上",
+        "4mm以上7mm未満",
+        "4mm未満"
+      ],
+      "selectoridx": "1|2|3"
+    },
+    {
+      "type": "radio",
+      "name": "A_Anterior",
+      "dispname": "A: 前面/後面の位置 (Anterior/posterior)",
+      "description": "腫瘍の前後位置",
+      "required": true,
+      "selector": [
+        "後面",
+        "前面",
+        "どちらでもない (極の位置)"
+      ],
+      "selectoridx": "0|0|0"
+    },
+    {
+      "type": "radio",
+      "name": "L_Location",
+      "dispname": "L: 極からの位置 (Location relative to polar lines)",
+      "description": "腫瘍の極線に対する位置",
+      "required": true,
+      "selector": [
+        "完全に極線より上または下",
+        "極線をまたぐ",
+        "50%以上が極線をまたぐ、または完全に腎門部内"
+      ],
+      "selectoridx": "1|2|3"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "type": "eval",
+      "name": "RENALスコア",
+      "formula": "[[R_Radius.index]] + [[E_Exophytic.index]] + [[N_Nearness.index]] + [[L_Location.index]]"
+    },
+    {
+      "type": "eval",
+      "name": "位置記号",
+      "formula": "{{A_Anterior}} == '後面' ? 'p' : ( {{A_Anterior}} == '前面' ? 'a' : 'x' )"
+    },
+    {
+      "type": "eval",
+      "name": "完全スコア",
+      "formula": "((RENALスコア)) + {{位置記号}}"
+    },
+    {
+      "type": "eval",
+      "name": "複雑度分類",
+      "formula": "[[RENALスコア]] <= 6 ? '低複雑度' : ( [[RENALスコア]] <= 9 ? '中等度複雑度' : '高複雑度' )"
+    },
+    {
+      "type": "warning",
+      "name": "Warning: 中等度複雑度 RENAL 7-9",
+      "formula": "[[RENALスコア]] > 6"
+    },
+    {
+      "type": "emergency",
+      "name": "Emergency: 高複雑度 RENAL >= 10",
+      "formula": "[[RENALスコア]] >= 10"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+    "_comment": [
+        "CGI-S/CGI-I (Clinical Global Impression - Severity/Improvement)",
+        "参考文献: Guy W. ECDEU Assessment Manual for Psychopharmacology. U.S. Department of Health, Education, and Welfare; 1976",
+        "参考URL: https://eprovide.mapi-trust.org/instruments/clinical-global-impressions-scale-improvement-severity-change-and-efficacy",
+        "参考論文: Busner J, Targum SD. The clinical global impressions scale: applying a research tool in clinical practice. Psychiatry (Edgmont). 2007;4(7):28-37",
+        "7段階評価による臨床医の全般印象評価尺度",
+        "CGI-S: 現在の疾患重症度評価、CGI-I: 治療開始からの改善度評価",
+        "修正点: selectoridxを1-7に設定、eval式から+1を削除（スコアが正確に1-7になるよう修正）"
+    ],
+    "title": "CGI-S・CGI-I (全般的臨床印象評価)",
+    "description": [
+        "Clinical Global Impression Scale (CGI-S/CGI-I)",
+        "臨床医による全般的臨床印象評価を行います。",
+        "CGI-Sは現在の疾患重症度を、CGI-Iは治療開始時からの改善度を評価します。"
+    ],
+    "responsible_person": [
+        "精神科医師"
+    ],
+    "dept_in_charge": "精神科",
+    "fields": [
+        {
+            "name": "section_cgis",
+            "type": "subsection",
+            "dispname": "CGI-S (重症度評価)"
+        },
+        {
+            "name": "CGI-S",
+            "type": "radio",
+            "dispname": "現在の疾患の重症度はどの程度ですか",
+            "description": "同じ診断の患者に関する臨床医としての経験に照らして、現在の患者の疾患の重症度を評価してください。",
+            "required": true,
+            "selector": [
+                "正常、まったく病気ではない",
+                "境界域、精神的に病気とは言えない",
+                "軽症",
+                "中等症",
+                "重症",
+                "最重症",
+                "極めて重篤な状態の患者"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7"
+        },
+        {
+            "name": "section_cgii",
+            "type": "subsection",
+            "dispname": "CGI-I (改善度評価)"
+        },
+        {
+            "name": "CGI-I",
+            "type": "radio",
+            "dispname": "治療開始時と比較した現在の状態はどうですか",
+            "description": "治療介入開始時のベースライン状態と比較して、患者の疾患がどの程度改善または悪化したかを評価してください。",
+            "required": true,
+            "selector": [
+                "著明改善",
+                "中等度改善",
+                "軽度改善",
+                "不変",
+                "軽度悪化",
+                "中等度悪化",
+                "著明悪化"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7"
+        }
+    ]
+}

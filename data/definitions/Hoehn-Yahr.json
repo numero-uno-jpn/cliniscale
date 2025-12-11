@@ -1,0 +1,134 @@
+{
+    "_comment": [
+        "Hoehn and Yahr Scale for Parkinson's Disease - 1967年にMargaret HoehnとMelvin Yahrによって開発されたパーキンソン病重症度分類",
+        "原典: Hoehn MM, Yahr MD. Parkinsonism: onset, progression, and mortality. Neurology. 1967 May;17(5):427-442",
+        "参考URL: https://www.parkinsons.va.gov/resources/HY.asp",
+        "日本での使用状況: 難病情報センター パーキンソン病(指定難病6) - https://www.nanbyou.or.jp/entry/314",
+        "修正版では1.5と2.5が追加されているが、本JSON定義では原典の0-5度の6段階分類を採用",
+        "難病助成判定は重症度のみで評価しており、実際の基準である生活機能障害度2度以上は含まれていない"
+    ],
+    "title": "Hoehn-Yahr スケール",
+    "description": [
+        "パーキンソン病の重症度を評価する国際標準の分類スケール",
+        "症状の進行度を0度から5度の6段階で分類し日常生活への影響度を評価します"
+    ],
+    "fields": [
+        {
+            "name": "評価者",
+            "type": "text",
+            "dispname": "評価者",
+            "description": "評価を実施した医師名",
+            "required": true
+        },
+        {
+            "name": "評価日",
+            "type": "date",
+            "dispname": "評価日",
+            "description": "評価を実施した日付",
+            "format": "YYYY年MM月DD日",
+            "required": true
+        },
+        {
+            "name": "患者状態",
+            "type": "note",
+            "dispname": "評価時の注意事項",
+            "description": "評価は患者の**最良の状態**で実施してください。薬物療法の効果が最も現れている時間帯での評価を基本とします。"
+        },
+        {
+            "name": "section1",
+            "type": "subsection",
+            "dispname": "Hoehn-Yahr重症度分類"
+        },
+        {
+            "name": "重症度",
+            "type": "radio",
+            "dispname": "重症度分類",
+            "description": "患者の現在の状態に最も適合する重症度を選択してください",
+            "selector": [
+                "0度: パーキンソニズムなし",
+                "1度: 片側性の疾患",
+                "2度: 両側性の疾患、姿勢反射障害なし",
+                "3度: 軽度から中等度の両側性疾患、軽度の姿勢不安定性、身体的には自立",
+                "4度: 高度の能力障害、歩行や起立は介助なしでも可能",
+                "5度: 介助なしでは車椅子またはベッド上での生活"
+            ],
+            "selectoridx": "0|1|2|3|4|5",
+            "required": true
+        },
+        {
+            "name": "症状詳細0",
+            "type": "note",
+            "dispname": "0度の詳細",
+            "description": "パーキンソン病の症状は認められません。",
+            "parentname": "重症度",
+            "parentsel": "0度: パーキンソニズムなし"
+        },
+        {
+            "name": "症状詳細1",
+            "type": "note",
+            "dispname": "1度の詳細",
+            "description": "手足の震えや筋肉のこわばりが身体の片側のみにみられます。日常生活への影響はほとんどありません。",
+            "parentname": "重症度",
+            "parentsel": "1度: 片側性の疾患"
+        },
+        {
+            "name": "症状詳細2",
+            "type": "note",
+            "dispname": "2度の詳細",
+            "description": "両側の手足に震えや筋肉のこわばりがみられますが、バランスの障害はありません。日常生活や仕事にやや支障が出ますが、介助は不要です。",
+            "parentname": "重症度",
+            "parentsel": "2度: 両側性の疾患、姿勢反射障害なし"
+        },
+        {
+            "name": "症状詳細3",
+            "type": "note",
+            "dispname": "3度の詳細",
+            "description": "明らかな歩行障害がみられ、方向転換時に転倒しやすくなります。日常生活に支障が出ますが、介助なしで生活可能です。職種によっては就労継続可能です。",
+            "parentname": "重症度",
+            "parentsel": "3度: 軽度から中等度の両側性疾患、軽度の姿勢不安定性、身体的には自立"
+        },
+        {
+            "name": "症状詳細4",
+            "type": "note",
+            "dispname": "4度の詳細",
+            "description": "立ち上がりや歩行が困難になり、生活の様々な場面で介助が必要です。しかし、介助なしでも歩行や起立は可能です。",
+            "parentname": "重症度",
+            "parentsel": "4度: 高度の能力障害、歩行や起立は介助なしでも可能"
+        },
+        {
+            "name": "症状詳細5",
+            "type": "note",
+            "dispname": "5度の詳細",
+            "description": "介助なしでは車椅子での生活またはベッド上での生活となります。最も重度の状態です。",
+            "parentname": "重症度",
+            "parentsel": "5度: 介助なしでは車椅子またはベッド上での生活"
+        },
+        {
+            "name": "section2",
+            "type": "subsection",
+            "dispname": "その他"
+        },
+        {
+            "name": "コメント",
+            "type": "textarea",
+            "dispname": "評価コメント",
+            "description": "症状の特徴や治療反応性などの追加情報があれば記載してください",
+            "rows": 3
+        },
+        {
+            "name": "次回評価予定",
+            "type": "date",
+            "dispname": "次回評価予定日",
+            "format": "YYYY年MM月DD日"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "難病助成対象",
+            "type": "eval",
+            "formula": "[[重症度]] >= 3 ? \"該当\" : \"非該当\"",
+            "dispname": "難病医療費助成制度対象 (重症度が3度以上で対象)"
+        }
+    ]
+}

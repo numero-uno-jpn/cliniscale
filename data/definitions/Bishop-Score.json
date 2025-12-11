@@ -1,0 +1,102 @@
+{
+    "_comment": [
+        "Bishop Score問診票定義",
+        "原著論文: Bishop EH. Pelvic scoring for elective induction. Obstet Gynecol. 1964 Aug;24:266-8. PMID: 14199536",
+        "子宮頸管成熟度評価スケール、分娩誘発適応判定",
+        "参考URL: https://www.ncbi.nlm.nih.gov/books/NBK470368/",
+        "対象: 原典では経産婦対象、現在は初産婦にも適用（予測精度は経産婦で高い）"
+    ],
+    "title": "Bishop Score 子宮頸管成熟度評価スケール",
+    "description": [
+        "子宮頸管成熟度を評価し、分娩誘発の適応と成功率を予測するスケールです",
+        "内診により5項目を評価してスコアを算出します"
+    ],
+    "fields": [
+        {
+            "dispname": "基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "妊娠週数",
+            "name": "妊娠週数",
+            "type": "text",
+            "required": true,
+            "postfix": "週",
+            "testrange": [
+                37,
+                42
+            ],
+            "inputmode": "numeric"
+        },
+        {
+            "dispname": "分娩歴",
+            "name": "分娩歴",
+            "type": "radio",
+            "required": true,
+            "selector": "初産婦|経産婦",
+            "description": "原典は経産婦を対象に開発されましたが、現在は初産婦にも適用されています"
+        },
+        {
+            "dispname": "評価項目",
+            "type": "subsection"
+        },
+        {
+            "dispname": "子宮口開大度",
+            "name": "子宮口開大度",
+            "type": "radio",
+            "required": true,
+            "selector": "0cm|1-2cm|3-4cm|5-6cm",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "頸管展退度",
+            "name": "頸管展退度",
+            "type": "radio",
+            "required": true,
+            "selector": "0-30%|40-50%|60-70%|80%以上",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "児頭下降度",
+            "name": "児頭下降度",
+            "type": "radio",
+            "required": true,
+            "selector": "-3cm|-2cm|-1～0cm|+1cm以上",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "頸管硬度",
+            "name": "頸管硬度",
+            "type": "radio",
+            "required": true,
+            "selector": "硬|中等度|軟",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "子宮口位置",
+            "name": "子宮口位置",
+            "type": "radio",
+            "required": true,
+            "selector": "後方|中央|前方",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "合計スコア",
+            "type": "eval",
+            "formula": "[[子宮口開大度.index]] + [[頸管展退度.index]] + [[児頭下降度.index]] + [[頸管硬度.index]] + [[子宮口位置.index]]"
+        },
+        {
+            "name": "頸管成熟度判定",
+            "type": "eval",
+            "formula": "[[合計スコア]] >= 9 ? '成熟' : ( [[合計スコア]] >= 5 ? 'やや成熟' : '未成熟' )"
+        },
+        {
+            "name": "分娩誘発予測",
+            "type": "eval",
+            "formula": "[[合計スコア]] >= 9 ? '24時間以内に90%分娩（原典：経産婦）' : ( [[合計スコア]] >= 8 ? '2日以内に70-80%児娩出' : '分娩誘発成功率低い' )"
+        }
+    ]
+}

@@ -1,0 +1,128 @@
+{
+    "_comment": [
+        "Fagerström Test for Nicotine Dependence (FTND) - ニコチン依存度評価のための問診票",
+        "原典: Heatherton TF, Kozlowski LT, Frecker RC, Fagerstrom KO. The Fagerstrom Test for Nicotine Dependence: a revision of the Fagerstrom Tolerance Questionnaire. Br J Addict 1991;86(9):1119-1127.",
+        "FTNDは6項目の質問からなり、ニコチン依存の程度を0-10点で評価する標準化された尺度です",
+        "日本語版は禁煙支援において広く使用されています",
+        "参考URL: https://www.aarc.org/wp-content/uploads/2014/08/Fagerstrom_test.pdf"
+    ],
+    "title": "FTND ニコチン依存度テスト",
+    "description": [
+        "このテストは、あなたのニコチン依存の程度を評価するためのものです。",
+        "6つの質問にお答えいただき、現在の喫煙習慣について教えてください。"
+    ],
+    "fields": [
+        {
+            "name": "smoking_status",
+            "type": "radio",
+            "dispname": "現在喫煙をしていますか",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "time_to_first_cigarette",
+            "type": "radio",
+            "dispname": "朝起きてから何分以内に最初のタバコを吸いますか",
+            "parentname": "smoking_status",
+            "parentsel": "はい",
+            "required": true,
+            "selector": [
+                "5分以内",
+                "6-30分以内",
+                "31-60分以内",
+                "60分より後"
+            ],
+            "selectoridx": "3|2|1|0"
+        },
+        {
+            "name": "difficult_refrain_forbidden",
+            "type": "radio",
+            "dispname": "禁煙場所（教会、図書館、映画館、病院など）でタバコを吸わずにいることが困難ですか",
+            "parentname": "smoking_status",
+            "parentsel": "はい",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "hardest_cigarette",
+            "type": "radio",
+            "dispname": "やめるのが最もつらいタバコはどれですか",
+            "parentname": "smoking_status",
+            "parentsel": "はい",
+            "required": true,
+            "selector": [
+                "朝起きてすぐの1本目",
+                "その他のタバコ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "cigarettes_per_day",
+            "type": "radio",
+            "dispname": "1日に何本のタバコを吸いますか",
+            "parentname": "smoking_status",
+            "parentsel": "はい",
+            "required": true,
+            "selector": [
+                "10本以下",
+                "11-20本",
+                "21-30本",
+                "31本以上"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "morning_smoking_frequency",
+            "type": "radio",
+            "dispname": "起床後数時間は、その後の時間よりも頻繁にタバコを吸いますか",
+            "parentname": "smoking_status",
+            "parentsel": "はい",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "smoke_when_ill",
+            "type": "radio",
+            "dispname": "病気でほとんど1日中寝込んでいる時でもタバコを吸いますか",
+            "parentname": "smoking_status",
+            "parentsel": "はい",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "ftnd_score",
+            "type": "eval",
+            "dispname": "FTNDスコア（0-10点）",
+            "formula": "[[time_to_first_cigarette.index]] + [[difficult_refrain_forbidden.index]] + [[hardest_cigarette.index]] + [[cigarettes_per_day.index]] + [[morning_smoking_frequency.index]] + [[smoke_when_ill.index]]"
+        },
+        {
+            "name": "dependence_level",
+            "type": "eval",
+            "dispname": "依存度レベル",
+            "formula": "![[smoking_status.index]] ? \"N/A\" : [[ftnd_score]] <= 2 ? \"非常に軽度依存\" : [[ftnd_score]] <= 4 ? \"軽度依存\" : [[ftnd_score]] == 5 ? \"中等度依存\" : [[ftnd_score]] <= 7 ? \"高度依存\" : \"非常に高度依存\""
+        }
+    ]
+}

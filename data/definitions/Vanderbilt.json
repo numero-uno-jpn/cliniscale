@@ -1,0 +1,861 @@
+{
+    "_comment": [
+        "Vanderbilt ADHD Diagnostic Parent Rating Scale (VADPRS)",
+        "開発者: Mark L. Wolraich (Oklahoma Health Sciences Center)",
+        "目的: 6-12歳児のADHD症状および併存疾患の評価",
+        "親記入式55項目の評価尺度",
+        "DSM-IVおよびDSM-5基準に準拠",
+        "原典論文: Wolraich et al. (2003) Journal of Pediatric Psychology",
+        "スコアリング: 症状項目は0-3点、機能項目は1-5点",
+        "ADHD診断基準: 注意欠如または多動・衝動性のいずれかで6項目以上が2-3点 かつ 機能項目で1項目以上が4-5点",
+        "公式URL: https://nichq.org/downloadable/nichq-vanderbilt-assessment-scales/",
+        "PDF: https://nichq.org/wp-content/uploads/2024/09/NICHQ-Vanderbilt-Assessment-Scales.pdf"
+    ],
+    "title": "Vanderbilt ADHD診断評価尺度（親記入式）",
+    "description": [
+        "この評価尺度は、6-12歳の子どものADHD症状および関連する行動問題を評価するためのものです。",
+        "過去6か月間の子どもの行動について、年齢に適したものかどうかを考慮して評価してください。"
+    ],
+    "fields": [
+        {
+            "name": "medication_status",
+            "type": "radio",
+            "dispname": "評価時の服薬状況",
+            "required": true,
+            "selector": [
+                "服薬中",
+                "服薬していない",
+                "不明"
+            ]
+        },
+        {
+            "name": "section_inattention",
+            "type": "subsection",
+            "dispname": "注意欠如症状"
+        },
+        {
+            "name": "inattention_1",
+            "type": "radio",
+            "dispname": "細かいところに注意を向けられない、または宿題などで不注意な間違いをする",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "inattention_2",
+            "type": "radio",
+            "dispname": "課題や活動に注意を持続することが困難",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "inattention_3",
+            "type": "radio",
+            "dispname": "直接話しかけられても聞いていないようにみえる",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "inattention_4",
+            "type": "radio",
+            "dispname": "指示に従えず、課題を最後までやり遂げられない（反抗や理解できないためではない）",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "inattention_5",
+            "type": "radio",
+            "dispname": "課題や活動を順序立てることが困難",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "inattention_6",
+            "type": "radio",
+            "dispname": "持続的な精神的努力を要する課題を避ける、嫌がる、または始めたがらない",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "inattention_7",
+            "type": "radio",
+            "dispname": "課題や活動に必要なもの（おもちゃ、宿題、鉛筆、本など）をなくす",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "inattention_8",
+            "type": "radio",
+            "dispname": "騒音や他の刺激によってすぐ気が散る",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "inattention_9",
+            "type": "radio",
+            "dispname": "日常の活動で忘れっぽい",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "section_hyperactivity",
+            "type": "subsection",
+            "dispname": "多動・衝動症状"
+        },
+        {
+            "name": "hyperactivity_1",
+            "type": "radio",
+            "dispname": "手足をそわそわと動かしたり、いすの上でもじもじしたりする",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "hyperactivity_2",
+            "type": "radio",
+            "dispname": "座っていることが求められている時に席を離れる",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "hyperactivity_3",
+            "type": "radio",
+            "dispname": "座っていることが期待される状況で走り回ったり高いところに登ったりする",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "hyperactivity_4",
+            "type": "radio",
+            "dispname": "遊びや余暇活動におとなしく参加することが困難",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "hyperactivity_5",
+            "type": "radio",
+            "dispname": "じっとしていない、または「エンジンで動かされているように」行動する",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "hyperactivity_6",
+            "type": "radio",
+            "dispname": "しゃべりすぎる",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "hyperactivity_7",
+            "type": "radio",
+            "dispname": "質問が終わる前に出し抜けに答える",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "hyperactivity_8",
+            "type": "radio",
+            "dispname": "順番を待つことが困難",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "hyperactivity_9",
+            "type": "radio",
+            "dispname": "他の人の会話や活動を妨害したり邪魔したりする",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "section_odd",
+            "type": "subsection",
+            "dispname": "反抗挑発性障害症状"
+        },
+        {
+            "name": "odd_1",
+            "type": "radio",
+            "dispname": "大人と口論する",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "odd_2",
+            "type": "radio",
+            "dispname": "かんしゃくを起こす",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "odd_3",
+            "type": "radio",
+            "dispname": "大人の要求や規則に積極的に反抗したり従うことを拒否したりする",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "odd_4",
+            "type": "radio",
+            "dispname": "故意に他の人をいらだたせる",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "odd_5",
+            "type": "radio",
+            "dispname": "自分の間違いや悪行を他の人のせいにする",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "odd_6",
+            "type": "radio",
+            "dispname": "神経過敏で他の人からいらだたされやすい",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "odd_7",
+            "type": "radio",
+            "dispname": "怒りっぽく憤慨している",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "odd_8",
+            "type": "radio",
+            "dispname": "意地悪で復讐心を抱く",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "section_conduct",
+            "type": "subsection",
+            "dispname": "行為障害症状"
+        },
+        {
+            "name": "conduct_1",
+            "type": "radio",
+            "dispname": "いじめ、脅し、威嚇する",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "conduct_2",
+            "type": "radio",
+            "dispname": "けんかを始める",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "conduct_3",
+            "type": "radio",
+            "dispname": "困ったことから逃れたり責任を回避したりするためにうそをつく",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "conduct_4",
+            "type": "radio",
+            "dispname": "許可なく学校を休む（ずる休み）",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "conduct_5",
+            "type": "radio",
+            "dispname": "人に身体的な残酷な行為をする",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "conduct_6",
+            "type": "radio",
+            "dispname": "価値のあるものを盗む",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "conduct_7",
+            "type": "radio",
+            "dispname": "故意に他人の所有物を破壊する",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "conduct_8",
+            "type": "radio",
+            "dispname": "深刻な害を与えうる武器を使用する（バット、ナイフ、れんが、銃）",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "conduct_9",
+            "type": "radio",
+            "dispname": "動物に身体的な残酷な行為をする",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "conduct_10",
+            "type": "radio",
+            "dispname": "破壊を目的として故意に火をつける",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "conduct_11",
+            "type": "radio",
+            "dispname": "他人の家、会社、車に押し入る",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "conduct_12",
+            "type": "radio",
+            "dispname": "許可なく夜間外泊する",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "conduct_13",
+            "type": "radio",
+            "dispname": "家から一晩中逃げ出す",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "conduct_14",
+            "type": "radio",
+            "dispname": "人に性的行為を強要する",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "section_anxiety_depression",
+            "type": "subsection",
+            "dispname": "不安・うつ症状"
+        },
+        {
+            "name": "anxiety_1",
+            "type": "radio",
+            "dispname": "恐がり、不安、心配している",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "anxiety_2",
+            "type": "radio",
+            "dispname": "間違いを恐れて新しいことに挑戦するのを怖がる",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "anxiety_3",
+            "type": "radio",
+            "dispname": "価値がない、劣っていると感じる",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "anxiety_4",
+            "type": "radio",
+            "dispname": "問題を自分のせいにし、罪悪感を感じる",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "anxiety_5",
+            "type": "radio",
+            "dispname": "孤独感、必要とされていない感、愛されていない感があり「誰も自分を愛してくれない」と不満を言う",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "anxiety_6",
+            "type": "radio",
+            "dispname": "悲しい、不機嫌、憂うつ",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "anxiety_7",
+            "type": "radio",
+            "dispname": "自意識過剰で恥ずかしがりやすい",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "ときどき",
+                "しばしば",
+                "非常にしばしば"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "section_performance",
+            "type": "subsection",
+            "dispname": "機能評価",
+            "description": "以下の領域について、お子さんの現在の状況を評価してください。"
+        },
+        {
+            "name": "performance_1",
+            "type": "radio",
+            "dispname": "全体的な学業成績",
+            "required": true,
+            "selector": [
+                "優秀",
+                "平均以上",
+                "平均",
+                "やや問題",
+                "問題"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "name": "performance_2",
+            "type": "radio",
+            "dispname": "読み",
+            "required": true,
+            "selector": [
+                "優秀",
+                "平均以上",
+                "平均",
+                "やや問題",
+                "問題"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "name": "performance_3",
+            "type": "radio",
+            "dispname": "書字",
+            "required": true,
+            "selector": [
+                "優秀",
+                "平均以上",
+                "平均",
+                "やや問題",
+                "問題"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "name": "performance_4",
+            "type": "radio",
+            "dispname": "算数",
+            "required": true,
+            "selector": [
+                "優秀",
+                "平均以上",
+                "平均",
+                "やや問題",
+                "問題"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "name": "performance_5",
+            "type": "radio",
+            "dispname": "両親との関係",
+            "required": true,
+            "selector": [
+                "優秀",
+                "平均以上",
+                "平均",
+                "やや問題",
+                "問題"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "name": "performance_6",
+            "type": "radio",
+            "dispname": "きょうだいとの関係",
+            "required": true,
+            "selector": [
+                "優秀",
+                "平均以上",
+                "平均",
+                "やや問題",
+                "問題"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "name": "performance_7",
+            "type": "radio",
+            "dispname": "仲間との関係",
+            "required": true,
+            "selector": [
+                "優秀",
+                "平均以上",
+                "平均",
+                "やや問題",
+                "問題"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "name": "performance_8",
+            "type": "radio",
+            "dispname": "組織化された活動への参加（チームなど）",
+            "required": true,
+            "selector": [
+                "優秀",
+                "平均以上",
+                "平均",
+                "やや問題",
+                "問題"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "inattention_score",
+            "type": "eval",
+            "dispname": "注意欠如症状スコア",
+            "formula": "([[inattention_1.index]] >= 2 ? 1 : 0) + ([[inattention_2.index]] >= 2 ? 1 : 0) + ([[inattention_3.index]] >= 2 ? 1 : 0) + ([[inattention_4.index]] >= 2 ? 1 : 0) + ([[inattention_5.index]] >= 2 ? 1 : 0) + ([[inattention_6.index]] >= 2 ? 1 : 0) + ([[inattention_7.index]] >= 2 ? 1 : 0) + ([[inattention_8.index]] >= 2 ? 1 : 0) + ([[inattention_9.index]] >= 2 ? 1 : 0)"
+        },
+        {
+            "name": "hyperactivity_score",
+            "type": "eval",
+            "dispname": "多動・衝動症状スコア",
+            "formula": "([[hyperactivity_1.index]] >= 2 ? 1 : 0) + ([[hyperactivity_2.index]] >= 2 ? 1 : 0) + ([[hyperactivity_3.index]] >= 2 ? 1 : 0) + ([[hyperactivity_4.index]] >= 2 ? 1 : 0) + ([[hyperactivity_5.index]] >= 2 ? 1 : 0) + ([[hyperactivity_6.index]] >= 2 ? 1 : 0) + ([[hyperactivity_7.index]] >= 2 ? 1 : 0) + ([[hyperactivity_8.index]] >= 2 ? 1 : 0) + ([[hyperactivity_9.index]] >= 2 ? 1 : 0)"
+        },
+        {
+            "name": "odd_score",
+            "type": "eval",
+            "dispname": "反抗挑発性障害症状スコア",
+            "formula": "([[odd_1.index]] >= 2 ? 1 : 0) + ([[odd_2.index]] >= 2 ? 1 : 0) + ([[odd_3.index]] >= 2 ? 1 : 0) + ([[odd_4.index]] >= 2 ? 1 : 0) + ([[odd_5.index]] >= 2 ? 1 : 0) + ([[odd_6.index]] >= 2 ? 1 : 0) + ([[odd_7.index]] >= 2 ? 1 : 0) + ([[odd_8.index]] >= 2 ? 1 : 0)"
+        },
+        {
+            "name": "conduct_score",
+            "type": "eval",
+            "dispname": "行為障害症状スコア",
+            "formula": "([[conduct_1.index]] >= 2 ? 1 : 0) + ([[conduct_2.index]] >= 2 ? 1 : 0) + ([[conduct_3.index]] >= 2 ? 1 : 0) + ([[conduct_4.index]] >= 2 ? 1 : 0) + ([[conduct_5.index]] >= 2 ? 1 : 0) + ([[conduct_6.index]] >= 2 ? 1 : 0) + ([[conduct_7.index]] >= 2 ? 1 : 0) + ([[conduct_8.index]] >= 2 ? 1 : 0) + ([[conduct_9.index]] >= 2 ? 1 : 0) + ([[conduct_10.index]] >= 2 ? 1 : 0) + ([[conduct_11.index]] >= 2 ? 1 : 0) + ([[conduct_12.index]] >= 2 ? 1 : 0) + ([[conduct_13.index]] >= 2 ? 1 : 0) + ([[conduct_14.index]] >= 2 ? 1 : 0)"
+        },
+        {
+            "name": "anxiety_depression_score",
+            "type": "eval",
+            "dispname": "不安・うつ症状スコア",
+            "formula": "([[anxiety_1.index]] >= 2 ? 1 : 0) + ([[anxiety_2.index]] >= 2 ? 1 : 0) + ([[anxiety_3.index]] >= 2 ? 1 : 0) + ([[anxiety_4.index]] >= 2 ? 1 : 0) + ([[anxiety_5.index]] >= 2 ? 1 : 0) + ([[anxiety_6.index]] >= 2 ? 1 : 0) + ([[anxiety_7.index]] >= 2 ? 1 : 0)"
+        },
+        {
+            "name": "performance_impairment_count",
+            "type": "eval",
+            "dispname": "機能障害項目数",
+            "formula": "([[performance_1.index]] >= 4 ? 1 : 0) + ([[performance_2.index]] >= 4 ? 1 : 0) + ([[performance_3.index]] >= 4 ? 1 : 0) + ([[performance_4.index]] >= 4 ? 1 : 0) + ([[performance_5.index]] >= 4 ? 1 : 0) + ([[performance_6.index]] >= 4 ? 1 : 0) + ([[performance_7.index]] >= 4 ? 1 : 0) + ([[performance_8.index]] >= 4 ? 1 : 0)"
+        },
+        {
+            "name": "adhd_inattentive_criteria",
+            "type": "eval",
+            "dispname": "ADHD注意欠如型診断基準",
+            "formula": "[[inattention_score]] >= 6 && [[performance_impairment_count]] >= 1 ? \"基準を満たす\" : \"基準を満たさない\""
+        },
+        {
+            "name": "adhd_hyperactive_criteria",
+            "type": "eval",
+            "dispname": "ADHD多動・衝動型診断基準",
+            "formula": "[[hyperactivity_score]] >= 6 && [[performance_impairment_count]] >= 1 ? \"基準を満たす\" : \"基準を満たさない\""
+        },
+        {
+            "name": "adhd_combined_criteria",
+            "type": "eval",
+            "dispname": "ADHD混合型診断基準",
+            "formula": "[[inattention_score]] >= 6 && [[hyperactivity_score]] >= 6 && [[performance_impairment_count]] >= 1 ? \"基準を満たす\" : \"基準を満たさない\""
+        },
+        {
+            "name": "odd_criteria",
+            "type": "eval",
+            "dispname": "反抗挑発性障害スクリーニング",
+            "formula": "[[odd_score]] >= 4 && [[performance_impairment_count]] >= 1 ? \"スクリーニング陽性\" : \"スクリーニング陰性\""
+        },
+        {
+            "name": "conduct_criteria",
+            "type": "eval",
+            "dispname": "行為障害スクリーニング",
+            "formula": "[[conduct_score]] >= 3 && [[performance_impairment_count]] >= 1 ? \"スクリーニング陽性\" : \"スクリーニング陰性\""
+        },
+        {
+            "name": "anxiety_depression_criteria",
+            "type": "eval",
+            "dispname": "不安・うつスクリーニング",
+            "formula": "[[anxiety_depression_score]] >= 3 && [[performance_impairment_count]] >= 1 ? \"スクリーニング陽性\" : \"スクリーニング陰性\""
+        }
+    ]
+}

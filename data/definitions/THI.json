@@ -1,0 +1,358 @@
+{
+    "_comment": [
+        "THI (Tinnitus Handicap Inventory) 耳鳴障害度評価表",
+        "原著: Newman CW, Jacobson GP, Spitzer JB. Development of the Tinnitus Handicap Inventory. Arch Otolaryngol Head Neck Surg. 1996;122(2):143-8.",
+        "25項目の自己報告式質問票で、耳鳴りによる心理的苦痛度と生活支障度を評価",
+        "各質問に対し「はい」4点、「ときどき」2点、「いいえ」0点で採点",
+        "合計点0-100点で重症度を分類：0-16点ハンディなし、18-36点軽症、38-56点中等症、58-100点重症",
+        "American Tinnitus Association URL: https://ata.org/wp-content/uploads/2022/08/Tinnitus_Handicap_Inventory.pdf"
+    ],
+    "title": "THI 耳鳴障害度評価表",
+    "description": [
+        "このアンケートは、耳鳴りによって引き起こされる困難さを特定し、定量化し、評価することを目的としています。",
+        "質問をよく読んで、当てはまるものを選択してください。"
+    ],
+    "submit_button_title": "回答を送信",
+    "fields": [
+        {
+            "name": "Q1",
+            "dispname": "耳鳴のために集中することが困難ですか",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "ときどき",
+                "いいえ"
+            ],
+            "selectoridx": "4|2|0"
+        },
+        {
+            "name": "Q2",
+            "dispname": "耳鳴の音の大きさのために、人の話を聞くことが困難ですか",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "ときどき",
+                "いいえ"
+            ],
+            "selectoridx": "4|2|0"
+        },
+        {
+            "name": "Q3",
+            "dispname": "耳鳴のために怒りを感じますか",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "ときどき",
+                "いいえ"
+            ],
+            "selectoridx": "4|2|0"
+        },
+        {
+            "name": "Q4",
+            "dispname": "耳鳴のために混乱を感じますか",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "ときどき",
+                "いいえ"
+            ],
+            "selectoridx": "4|2|0"
+        },
+        {
+            "name": "Q5",
+            "dispname": "耳鳴のために絶望的な気分になりますか",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "ときどき",
+                "いいえ"
+            ],
+            "selectoridx": "4|2|0"
+        },
+        {
+            "name": "Q6",
+            "dispname": "耳鳴について多くの不満を述べますか",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "ときどき",
+                "いいえ"
+            ],
+            "selectoridx": "4|2|0"
+        },
+        {
+            "name": "Q7",
+            "dispname": "耳鳴のために夜眠りにつくのが困難ですか",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "ときどき",
+                "いいえ"
+            ],
+            "selectoridx": "4|2|0"
+        },
+        {
+            "name": "Q8",
+            "dispname": "耳鳴から逃れることができないと感じますか",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "ときどき",
+                "いいえ"
+            ],
+            "selectoridx": "4|2|0"
+        },
+        {
+            "name": "Q9",
+            "dispname": "耳鳴のために社交活動（外食や映画など）を楽しむことが困難ですか",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "ときどき",
+                "いいえ"
+            ],
+            "selectoridx": "4|2|0"
+        },
+        {
+            "name": "Q10",
+            "dispname": "耳鳴のために欲求不満を感じますか",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "ときどき",
+                "いいえ"
+            ],
+            "selectoridx": "4|2|0"
+        },
+        {
+            "name": "Q11",
+            "dispname": "耳鳴のために自分がひどい病気にかかっていると感じますか",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "ときどき",
+                "いいえ"
+            ],
+            "selectoridx": "4|2|0"
+        },
+        {
+            "name": "Q12",
+            "dispname": "耳鳴のために人生を楽しむことが困難ですか",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "ときどき",
+                "いいえ"
+            ],
+            "selectoridx": "4|2|0"
+        },
+        {
+            "name": "Q13",
+            "dispname": "耳鳴のために仕事や家事に支障をきたしますか",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "ときどき",
+                "いいえ"
+            ],
+            "selectoridx": "4|2|0"
+        },
+        {
+            "name": "Q14",
+            "dispname": "耳鳴のためにしばしばイライラしますか",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "ときどき",
+                "いいえ"
+            ],
+            "selectoridx": "4|2|0"
+        },
+        {
+            "name": "Q15",
+            "dispname": "耳鳴のために読書が困難ですか",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "ときどき",
+                "いいえ"
+            ],
+            "selectoridx": "4|2|0"
+        },
+        {
+            "name": "Q16",
+            "dispname": "耳鳴のために動揺しますか",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "ときどき",
+                "いいえ"
+            ],
+            "selectoridx": "4|2|0"
+        },
+        {
+            "name": "Q17",
+            "dispname": "耳鳴の問題が家族や友人との関係にストレスを与えていると感じますか",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "ときどき",
+                "いいえ"
+            ],
+            "selectoridx": "4|2|0"
+        },
+        {
+            "name": "Q18",
+            "dispname": "耳鳴から注意をそらして他のことに集中することが困難ですか",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "ときどき",
+                "いいえ"
+            ],
+            "selectoridx": "4|2|0"
+        },
+        {
+            "name": "Q19",
+            "dispname": "耳鳴をコントロールできないと感じますか",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "ときどき",
+                "いいえ"
+            ],
+            "selectoridx": "4|2|0"
+        },
+        {
+            "name": "Q20",
+            "dispname": "耳鳴のためにしばしば疲労感を感じますか",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "ときどき",
+                "いいえ"
+            ],
+            "selectoridx": "4|2|0"
+        },
+        {
+            "name": "Q21",
+            "dispname": "耳鳴のために憂うつな気分になりますか",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "ときどき",
+                "いいえ"
+            ],
+            "selectoridx": "4|2|0"
+        },
+        {
+            "name": "Q22",
+            "dispname": "耳鳴のために不安を感じますか",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "ときどき",
+                "いいえ"
+            ],
+            "selectoridx": "4|2|0"
+        },
+        {
+            "name": "Q23",
+            "dispname": "もはや耳鳴に対処できないと感じますか",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "ときどき",
+                "いいえ"
+            ],
+            "selectoridx": "4|2|0"
+        },
+        {
+            "name": "Q24",
+            "dispname": "ストレスを受けているときに耳鳴が悪化しますか",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "ときどき",
+                "いいえ"
+            ],
+            "selectoridx": "4|2|0"
+        },
+        {
+            "name": "Q25",
+            "dispname": "耳鳴のために不安な気持ちになりますか",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "ときどき",
+                "いいえ"
+            ],
+            "selectoridx": "4|2|0"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "合計点",
+            "type": "eval",
+            "dispname": "THI合計点",
+            "formula": "[[Q1.index]] + [[Q2.index]] + [[Q3.index]] + [[Q4.index]] + [[Q5.index]] + [[Q6.index]] + [[Q7.index]] + [[Q8.index]] + [[Q9.index]] + [[Q10.index]] + [[Q11.index]] + [[Q12.index]] + [[Q13.index]] + [[Q14.index]] + [[Q15.index]] + [[Q16.index]] + [[Q17.index]] + [[Q18.index]] + [[Q19.index]] + [[Q20.index]] + [[Q21.index]] + [[Q22.index]] + [[Q23.index]] + [[Q24.index]] + [[Q25.index]]"
+        },
+        {
+            "name": "重症度分類",
+            "type": "eval",
+            "dispname": "重症度判定",
+            "formula": "[[合計点]] <= 17 ? 'ハンディなし' : [[合計点]] <= 37 ? '軽症' : [[合計点]] <= 57 ? '中等症' : '重症'"
+        }
+    ]
+}

@@ -1,0 +1,277 @@
+{
+    "_comment": [
+        "Penn State Worry Questionnaire (PSWQ) - ペンシルベニア州立大学心配性質問票",
+        "原典: Meyer, T. J., Miller, M. L., Metzger, R. L., & Borkovec, T. D. (1990). Development and validation of the Penn State Worry Questionnaire. Behaviour research and therapy, 28(6), 487-495.",
+        "16項目の自己記入式質問票で心配性傾向を評価",
+        "全般性不安障害（GAD）のスクリーニングに使用",
+        "逆転項目: 項目1, 3, 8, 10, 11 (selectoridxを5|4|3|2|1に設定)",
+        "カットオフ値: 62点以上でGADが疑われる（Behar et al., 2003）"
+    ],
+    "title": "PSWQ ペンシルベニア州立大学心配性質問票",
+    "description": [
+        "この質問票は、あなたの心配する傾向について調べるものです。",
+        "16の質問について、あなたにどの程度あてはまるかを5段階で評価してください。"
+    ],
+    "fields": [
+        {
+            "dispname": "項目1",
+            "name": "Q1",
+            "type": "radio",
+            "required": true,
+            "description": "すべてのことをする時間が十分にないときでも、私は心配しない",
+            "selector": [
+                "全くあてはまらない",
+                "あまりあてはまらない",
+                "どちらでもない",
+                "ややあてはまる",
+                "非常にあてはまる"
+            ],
+            "selectoridx": "5|4|3|2|1"
+        },
+        {
+            "dispname": "項目2",
+            "name": "Q2",
+            "type": "radio",
+            "required": true,
+            "description": "心配事が私を圧倒する",
+            "selector": [
+                "全くあてはまらない",
+                "あまりあてはまらない",
+                "どちらでもない",
+                "ややあてはまる",
+                "非常にあてはまる"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "項目3",
+            "name": "Q3",
+            "type": "radio",
+            "required": true,
+            "description": "私は物事を心配しない傾向がある",
+            "selector": [
+                "全くあてはまらない",
+                "あまりあてはまらない",
+                "どちらでもない",
+                "ややあてはまる",
+                "非常にあてはまる"
+            ],
+            "selectoridx": "5|4|3|2|1"
+        },
+        {
+            "dispname": "項目4",
+            "name": "Q4",
+            "type": "radio",
+            "required": true,
+            "description": "多くの状況で私は心配になる",
+            "selector": [
+                "全くあてはまらない",
+                "あまりあてはまらない",
+                "どちらでもない",
+                "ややあてはまる",
+                "非常にあてはまる"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "項目5",
+            "name": "Q5",
+            "type": "radio",
+            "required": true,
+            "description": "物事を心配すべきではないと分かっているが、どうしても心配してしまう",
+            "selector": [
+                "全くあてはまらない",
+                "あまりあてはまらない",
+                "どちらでもない",
+                "ややあてはまる",
+                "非常にあてはまる"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "項目6",
+            "name": "Q6",
+            "type": "radio",
+            "required": true,
+            "description": "プレッシャーを感じているとき、私はとても心配する",
+            "selector": [
+                "全くあてはまらない",
+                "あまりあてはまらない",
+                "どちらでもない",
+                "ややあてはまる",
+                "非常にあてはまる"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "項目7",
+            "name": "Q7",
+            "type": "radio",
+            "required": true,
+            "description": "私はいつも何かを心配している",
+            "selector": [
+                "全くあてはまらない",
+                "あまりあてはまらない",
+                "どちらでもない",
+                "ややあてはまる",
+                "非常にあてはまる"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "項目8",
+            "name": "Q8",
+            "type": "radio",
+            "required": true,
+            "description": "心配な考えを簡単に頭から追い払うことができる",
+            "selector": [
+                "全くあてはまらない",
+                "あまりあてはまらない",
+                "どちらでもない",
+                "ややあてはまる",
+                "非常にあてはまる"
+            ],
+            "selectoridx": "5|4|3|2|1"
+        },
+        {
+            "dispname": "項目9",
+            "name": "Q9",
+            "type": "radio",
+            "required": true,
+            "description": "一つの作業を終えるとすぐに、しなければならない他のすべてのことを心配し始める",
+            "selector": [
+                "全くあてはまらない",
+                "あまりあてはまらない",
+                "どちらでもない",
+                "ややあてはまる",
+                "非常にあてはまる"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "項目10",
+            "name": "Q10",
+            "type": "radio",
+            "required": true,
+            "description": "私は何も心配しない",
+            "selector": [
+                "全くあてはまらない",
+                "あまりあてはまらない",
+                "どちらでもない",
+                "ややあてはまる",
+                "非常にあてはまる"
+            ],
+            "selectoridx": "5|4|3|2|1"
+        },
+        {
+            "dispname": "項目11",
+            "name": "Q11",
+            "type": "radio",
+            "required": true,
+            "description": "心配事についてもうできることがないときは、それ以上心配しない",
+            "selector": [
+                "全くあてはまらない",
+                "あまりあてはまらない",
+                "どちらでもない",
+                "ややあてはまる",
+                "非常にあてはまる"
+            ],
+            "selectoridx": "5|4|3|2|1"
+        },
+        {
+            "dispname": "項目12",
+            "name": "Q12",
+            "type": "radio",
+            "required": true,
+            "description": "私は生まれてからずっと心配性だった",
+            "selector": [
+                "全くあてはまらない",
+                "あまりあてはまらない",
+                "どちらでもない",
+                "ややあてはまる",
+                "非常にあてはまる"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "項目13",
+            "name": "Q13",
+            "type": "radio",
+            "required": true,
+            "description": "私は物事を心配していることに気づく",
+            "selector": [
+                "全くあてはまらない",
+                "あまりあてはまらない",
+                "どちらでもない",
+                "ややあてはまる",
+                "非常にあてはまる"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "項目14",
+            "name": "Q14",
+            "type": "radio",
+            "required": true,
+            "description": "いったん心配し始めると、止めることができない",
+            "selector": [
+                "全くあてはまらない",
+                "あまりあてはまらない",
+                "どちらでもない",
+                "ややあてはまる",
+                "非常にあてはまる"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "項目15",
+            "name": "Q15",
+            "type": "radio",
+            "required": true,
+            "description": "私はいつも心配している",
+            "selector": [
+                "全くあてはまらない",
+                "あまりあてはまらない",
+                "どちらでもない",
+                "ややあてはまる",
+                "非常にあてはまる"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "項目16",
+            "name": "Q16",
+            "type": "radio",
+            "required": true,
+            "description": "すべて完了するまでプロジェクトを心配する",
+            "selector": [
+                "全くあてはまらない",
+                "あまりあてはまらない",
+                "どちらでもない",
+                "ややあてはまる",
+                "非常にあてはまる"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "PSWQ合計得点",
+            "type": "eval",
+            "dispname": "PSWQ合計得点（16-80点）",
+            "formula": "[[Q1.index]] + [[Q2.index]] + [[Q3.index]] + [[Q4.index]] + [[Q5.index]] + [[Q6.index]] + [[Q7.index]] + [[Q8.index]] + [[Q9.index]] + [[Q10.index]] + [[Q11.index]] + [[Q12.index]] + [[Q13.index]] + [[Q14.index]] + [[Q15.index]] + [[Q16.index]]"
+        },
+        {
+            "name": "GADリスク評価",
+            "type": "eval",
+            "dispname": "全般性不安障害（GAD）のリスク評価",
+            "formula": "[[PSWQ合計得点]] >= 62 ? 'GADが疑われます（専門医への相談を推奨）' : 'GADの可能性は低い'"
+        },
+        {
+            "name": "Emergency: GADリスク PSWQ ≥ 62",
+            "formula": "[[PSWQ合計得点]] >= 62",
+            "type": "emergency"
+        }
+    ]
+}

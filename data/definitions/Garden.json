@@ -1,0 +1,56 @@
+{
+  "_comment": [
+    "Garden Classification for Femoral Neck Fractures",
+    "大腿骨頚部骨折のGarden分類",
+    "原著論文: Garden RS. J Bone Joint Surg Br. 1961;43-B(4):647-63.",
+    "参考URL: https://radiopaedia.org/articles/garden-classification-of-subcapital-femoral-neck-fractures",
+    "PubMed: https://pubmed.ncbi.nlm.nih.gov/13940679/",
+    "注意: 評定者間信頼性は中程度（κ=0.31-0.38）",
+    "臨床では非転位型（I-II）vs 転位型（III-IV）の2分類がより再現性が高い"
+  ],
+  "title": "Garden分類",
+  "description": [
+    "大腿骨頚部骨折の分類システムです",
+    "骨折の変位度に基づいてI型からIV型まで分類します",
+    "注意: I型とII型の区別は困難な場合があります"
+  ],
+  "contact": "整形外科",
+  "dept_in_charge": "整形外科",
+  "fields": [
+    {
+      "dispname": "Gardenタイプ",
+      "name": "タイプ",
+      "type": "radio",
+      "required": true,
+      "description": "画像所見に基づいて骨折タイプを選択してください",
+      "selector": [
+        "I型: 不完全骨折（外反嵌入骨折）",
+        "II型: 完全骨折、変位なし",
+        "III型: 完全骨折、部分的変位あり",
+        "IV型: 完全骨折、完全変位"
+      ],
+      "selectoridx": "1|2|3|4"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "骨折の安定性",
+      "type": "eval",
+      "description": "骨折の安定性評価",
+      "formula": "[[タイプ.index]] <= 2 ? '安定型（非転位型）' : '不安定型（転位型）'"
+    },
+    {
+      "name": "治療方針の目安",
+      "type": "eval",
+      "description": "一般的な治療選択の参考",
+      "formula": "[[タイプ.index]] <= 2 ? '内固定が選択されることが多い' : '人工骨頭置換術も考慮される'"
+    },
+    {
+      "name": "骨頭壊死リスク",
+      "type": "eval",
+      "description": "骨頭壊死（AVN）のリスク評価",
+      "formula": "[[タイプ.index]] == 1 ? '低リスク' : ( [[タイプ.index]] == 2 ? '低〜中リスク' : ( [[タイプ.index]] == 3 ? '中〜高リスク' : '高リスク' ) )"
+    }
+  ]
+}

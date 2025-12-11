@@ -1,0 +1,350 @@
+{
+  "_comment": [
+    "Pelvic Floor Impact Questionnaire - Short Form 7 (PFIQ-7)",
+    "Barber MD, Walters MD, Bump RC. Short forms of two condition-specific quality-of-life questionnaires for women with pelvic floor disorders (PFDI-20 and PFIQ-7). Am J Obstet Gynecol. 2005;193(1):103-13.",
+    "https://pubmed.ncbi.nlm.nih.gov/16021067/",
+    "骨盤底機能の生活影響評価質問票短縮版",
+    "3つのサブスケール (UIQ-7, CRAIQ-7, POPIQ-7) から構成、0-300点"
+  ],
+  "title": "PFIQ-7 (骨盤底機能生活影響評価)",
+  "description": [
+    "骨盤底機能障害が日常生活に与える影響を評価",
+    "各症状がそれぞれの活動にどの程度影響しているかを回答してください"
+  ],
+  "fields": [
+    {
+      "type": "subsection",
+      "dispname": "UIQ-7: 尿路症状の生活影響"
+    },
+    {
+      "type": "note",
+      "description": "膀胱や尿の問題は、以下の活動にどの程度影響していますか"
+    },
+    {
+      "type": "radio",
+      "name": "UIQ1",
+      "dispname": "家事への影響",
+      "selector": [
+        "全く影響なし",
+        "少し",
+        "中等度",
+        "かなり"
+      ],
+      "selectoridx": "0|1|2|3",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "UIQ2",
+      "dispname": "身体的レクリエーションへの影響",
+      "selector": [
+        "全く影響なし",
+        "少し",
+        "中等度",
+        "かなり"
+      ],
+      "selectoridx": "0|1|2|3",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "UIQ3",
+      "dispname": "娯楽活動への影響",
+      "selector": [
+        "全く影響なし",
+        "少し",
+        "中等度",
+        "かなり"
+      ],
+      "selectoridx": "0|1|2|3",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "UIQ4",
+      "dispname": "外出先でトイレを確認することへの影響",
+      "selector": [
+        "全く影響なし",
+        "少し",
+        "中等度",
+        "かなり"
+      ],
+      "selectoridx": "0|1|2|3",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "UIQ5",
+      "dispname": "感情への影響 (神経質、落ち込み)",
+      "selector": [
+        "全く影響なし",
+        "少し",
+        "中等度",
+        "かなり"
+      ],
+      "selectoridx": "0|1|2|3",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "UIQ6",
+      "dispname": "欲求不満への影響",
+      "selector": [
+        "全く影響なし",
+        "少し",
+        "中等度",
+        "かなり"
+      ],
+      "selectoridx": "0|1|2|3",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "UIQ7",
+      "dispname": "恥ずかしさへの影響",
+      "selector": [
+        "全く影響なし",
+        "少し",
+        "中等度",
+        "かなり"
+      ],
+      "selectoridx": "0|1|2|3",
+      "required": true
+    },
+    {
+      "type": "subsection",
+      "dispname": "CRAIQ-7: 大腸・肛門症状の生活影響"
+    },
+    {
+      "type": "note",
+      "description": "腸や肛門の問題は、以下の活動にどの程度影響していますか"
+    },
+    {
+      "type": "radio",
+      "name": "CRAIQ1",
+      "dispname": "家事への影響",
+      "selector": [
+        "全く影響なし",
+        "少し",
+        "中等度",
+        "かなり"
+      ],
+      "selectoridx": "0|1|2|3",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "CRAIQ2",
+      "dispname": "身体的レクリエーションへの影響",
+      "selector": [
+        "全く影響なし",
+        "少し",
+        "中等度",
+        "かなり"
+      ],
+      "selectoridx": "0|1|2|3",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "CRAIQ3",
+      "dispname": "娯楽活動への影響",
+      "selector": [
+        "全く影響なし",
+        "少し",
+        "中等度",
+        "かなり"
+      ],
+      "selectoridx": "0|1|2|3",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "CRAIQ4",
+      "dispname": "外出先でトイレを確認することへの影響",
+      "selector": [
+        "全く影響なし",
+        "少し",
+        "中等度",
+        "かなり"
+      ],
+      "selectoridx": "0|1|2|3",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "CRAIQ5",
+      "dispname": "感情への影響 (神経質、落ち込み)",
+      "selector": [
+        "全く影響なし",
+        "少し",
+        "中等度",
+        "かなり"
+      ],
+      "selectoridx": "0|1|2|3",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "CRAIQ6",
+      "dispname": "欲求不満への影響",
+      "selector": [
+        "全く影響なし",
+        "少し",
+        "中等度",
+        "かなり"
+      ],
+      "selectoridx": "0|1|2|3",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "CRAIQ7",
+      "dispname": "恥ずかしさへの影響",
+      "selector": [
+        "全く影響なし",
+        "少し",
+        "中等度",
+        "かなり"
+      ],
+      "selectoridx": "0|1|2|3",
+      "required": true
+    },
+    {
+      "type": "subsection",
+      "dispname": "POPIQ-7: 骨盤臓器脱症状の生活影響"
+    },
+    {
+      "type": "note",
+      "description": "膀胱、膣、直腸の脱出問題は、以下の活動にどの程度影響していますか"
+    },
+    {
+      "type": "radio",
+      "name": "POPIQ1",
+      "dispname": "家事への影響",
+      "selector": [
+        "全く影響なし",
+        "少し",
+        "中等度",
+        "かなり"
+      ],
+      "selectoridx": "0|1|2|3",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "POPIQ2",
+      "dispname": "身体的レクリエーションへの影響",
+      "selector": [
+        "全く影響なし",
+        "少し",
+        "中等度",
+        "かなり"
+      ],
+      "selectoridx": "0|1|2|3",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "POPIQ3",
+      "dispname": "娯楽活動への影響",
+      "selector": [
+        "全く影響なし",
+        "少し",
+        "中等度",
+        "かなり"
+      ],
+      "selectoridx": "0|1|2|3",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "POPIQ4",
+      "dispname": "外出先でトイレを確認することへの影響",
+      "selector": [
+        "全く影響なし",
+        "少し",
+        "中等度",
+        "かなり"
+      ],
+      "selectoridx": "0|1|2|3",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "POPIQ5",
+      "dispname": "感情への影響 (神経質、落ち込み)",
+      "selector": [
+        "全く影響なし",
+        "少し",
+        "中等度",
+        "かなり"
+      ],
+      "selectoridx": "0|1|2|3",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "POPIQ6",
+      "dispname": "欲求不満への影響",
+      "selector": [
+        "全く影響なし",
+        "少し",
+        "中等度",
+        "かなり"
+      ],
+      "selectoridx": "0|1|2|3",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "POPIQ7",
+      "dispname": "恥ずかしさへの影響",
+      "selector": [
+        "全く影響なし",
+        "少し",
+        "中等度",
+        "かなり"
+      ],
+      "selectoridx": "0|1|2|3",
+      "required": true
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "type": "eval",
+      "name": "UIQスコア",
+      "dispname": "尿路症状生活影響スコア (0-100点)",
+      "formula": "( ( [[UIQ1.index]] + [[UIQ2.index]] + [[UIQ3.index]] + [[UIQ4.index]] + [[UIQ5.index]] + [[UIQ6.index]] + [[UIQ7.index]] ) / 7 * 100 / 3).toFixed(2)"
+    },
+    {
+      "type": "eval",
+      "name": "CRAIQスコア",
+      "dispname": "大腸・肛門症状生活影響スコア (0-100点)",
+      "formula": "( ( [[CRAIQ1.index]] + [[CRAIQ2.index]] + [[CRAIQ3.index]] + [[CRAIQ4.index]] + [[CRAIQ5.index]] + [[CRAIQ6.index]] + [[CRAIQ7.index]] ) / 7 * 100 / 3).toFixed(2)"
+    },
+    {
+      "type": "eval",
+      "name": "POPIQスコア",
+      "dispname": "骨盤臓器脱生活影響スコア (0-100点)",
+      "formula": "( ( [[POPIQ1.index]] + [[POPIQ2.index]] + [[POPIQ3.index]] + [[POPIQ4.index]] + [[POPIQ5.index]] + [[POPIQ6.index]] + [[POPIQ7.index]] ) / 7 * 100 / 3).toFixed(2)"
+    },
+    {
+      "type": "eval",
+      "name": "PFIQ7合計スコア",
+      "dispname": "総合スコア (0-300点)",
+      "formula": "( ((UIQスコア)) + ((CRAIQスコア)) + ((POPIQスコア)) ).toFixed(2)"
+    },
+    {
+      "type": "warning",
+      "name": "Warning: 中等度生活影響 (100点以上)",
+      "formula": "((PFIQ7合計スコア)) >= 100"
+    },
+    {
+      "type": "emergency",
+      "name": "Emergency: 高度生活影響 (150点以上)",
+      "formula": "((PFIQ7合計スコア)) >= 150"
+    }
+  ]
+}

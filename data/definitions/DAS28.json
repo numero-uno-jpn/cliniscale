@@ -1,0 +1,287 @@
+{
+    "_comment": [
+        "DAS28（Disease Activity Score 28） - 関節リウマチ活動性評価尺度",
+        "28関節の圧痛・腫脹関節数、CRP・ESR、患者全般評価VASから疾患活動性を算出",
+        "原典: Ann Rheum Dis. 1990; 49(11):916-20 / Arthritis Rheum. 1995; 38(1):44-8",
+        "公式サイト: https://www.das-score.nl/",
+        "計算方法: DAS28-CRP = 0.56×√圧痛関節数 + 0.28×√腫脹関節数 + 0.36×LN(CRP×10+1) + 0.014×VAS + 0.96",
+        "計算方法: DAS28-ESR = 0.56×√圧痛関節数 + 0.28×√腫脹関節数 + 0.7×LN(ESR) + 0.014×VAS"
+    ],
+    "title": "DAS28 関節リウマチ活動性評価",
+    "description": [
+        "関節リウマチの疾患活動性を評価するDAS28スコアの測定を行います。",
+        "28の特定関節における圧痛・腫脹、血液検査値、患者さんの全般的な体調評価から算出されます。"
+    ],
+    "fields": [
+        {
+            "dispname": "基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "検査実施日",
+            "name": "検査日",
+            "type": "date",
+            "required": true,
+            "format": "YYYY/MM/DD"
+        },
+        {
+            "dispname": "28関節の評価",
+            "type": "note",
+            "description": "以下の28関節について、圧痛（押すと痛い）と腫脹（腫れている）の有無を評価してください"
+        },
+        {
+            "dispname": "圧痛関節の評価",
+            "type": "subsection",
+            "description": "押すと痛い関節を選択してください（複数選択可）"
+        },
+        {
+            "dispname": "手首・手指の圧痛関節",
+            "name": "手首手指圧痛",
+            "type": "checkbox",
+            "selector": [
+                "右手首",
+                "左手首",
+                "右第2中手指節関節",
+                "左第2中手指節関節",
+                "右第3中手指節関節",
+                "左第3中手指節関節",
+                "右第4中手指節関節",
+                "左第4中手指節関節",
+                "右第5中手指節関節",
+                "左第5中手指節関節",
+                "右第2近位指節間関節",
+                "左第2近位指節間関節",
+                "右第3近位指節間関節",
+                "左第3近位指節間関節",
+                "右第4近位指節間関節",
+                "左第4近位指節間関節",
+                "右第5近位指節間関節",
+                "左第5近位指節間関節"
+            ]
+        },
+        {
+            "dispname": "肘・肩の圧痛関節",
+            "name": "肘肩圧痛",
+            "type": "checkbox",
+            "selector": [
+                "右肘関節",
+                "左肘関節",
+                "右肩関節",
+                "左肩関節"
+            ]
+        },
+        {
+            "dispname": "膝・足の圧痛関節",
+            "name": "膝足圧痛",
+            "type": "checkbox",
+            "selector": [
+                "右膝関節",
+                "左膝関節",
+                "右足首関節",
+                "左足首関節",
+                "右第1中足趾節関節",
+                "左第1中足趾節関節",
+                "右第2中足趾節関節",
+                "左第2中足趾節関節",
+                "右第3中足趾節関節",
+                "左第3中足趾節関節",
+                "右第4中足趾節関節",
+                "左第4中足趾節関節",
+                "右第5中足趾節関節",
+                "左第5中足趾節関節"
+            ]
+        },
+        {
+            "dispname": "腫脹関節の評価",
+            "type": "subsection",
+            "description": "腫れている関節を選択してください（複数選択可）"
+        },
+        {
+            "dispname": "手首・手指の腫脹関節",
+            "name": "手首手指腫脹",
+            "type": "checkbox",
+            "selector": [
+                "右手首",
+                "左手首",
+                "右第2中手指節関節",
+                "左第2中手指節関節",
+                "右第3中手指節関節",
+                "左第3中手指節関節",
+                "右第4中手指節関節",
+                "左第4中手指節関節",
+                "右第5中手指節関節",
+                "左第5中手指節関節",
+                "右第2近位指節間関節",
+                "左第2近位指節間関節",
+                "右第3近位指節間関節",
+                "左第3近位指節間関節",
+                "右第4近位指節間関節",
+                "左第4近位指節間関節",
+                "右第5近位指節間関節",
+                "左第5近位指節間関節"
+            ]
+        },
+        {
+            "dispname": "肘・肩の腫脹関節",
+            "name": "肘肩腫脹",
+            "type": "checkbox",
+            "selector": [
+                "右肘関節",
+                "左肘関節",
+                "右肩関節",
+                "左肩関節"
+            ]
+        },
+        {
+            "dispname": "膝・足の腫脹関節",
+            "name": "膝足腫脹",
+            "type": "checkbox",
+            "selector": [
+                "右膝関節",
+                "左膝関節",
+                "右足首関節",
+                "左足首関節",
+                "右第1中足趾節関節",
+                "左第1中足趾節関節",
+                "右第2中足趾節関節",
+                "左第2中足趾節関節",
+                "右第3中足趾節関節",
+                "左第3中足趾節関節",
+                "右第4中足趾節関節",
+                "左第4中足趾節関節",
+                "右第5中足趾節関節",
+                "左第5中足趾節関節"
+            ]
+        },
+        {
+            "dispname": "血液検査値",
+            "type": "subsection",
+            "description": "最新の血液検査結果を入力してください (どちらか一方)"
+        },
+        {
+            "dispname": "CRP",
+            "name": "CRP",
+            "type": "text",
+            "inputmode": "decimal",
+            "postfix": "mg/dL",
+            "testrange": [
+                0,
+                10
+            ]
+        },
+        {
+            "dispname": "赤血球沈降速度 (ESR)",
+            "name": "ESR",
+            "type": "text",
+            "inputmode": "numeric",
+            "postfix": "mm/hr",
+            "testrange": [
+                0,
+                100
+            ]
+        },
+        {
+            "dispname": "患者全般評価",
+            "type": "subsection",
+            "description": "現在のあなたの関節リウマチの症状全体について評価してください"
+        },
+        {
+            "dispname": "全般的な体調評価 (VAS)",
+            "name": "患者VAS",
+            "type": "text",
+            "inputmode": "numeric",
+            "postfix": "mm",
+            "testrange": [
+                0,
+                100
+            ],
+            "required": true,
+            "description": "0（とても良い）から100（とても悪い）の間で入力してください"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "手首手指圧痛_count",
+            "type": "eval",
+            "noreport": true,
+            "formula": "([[手首手指圧痛.index]] || []).length"
+        },
+        {
+            "name": "肘肩圧痛_count",
+            "type": "eval",
+            "noreport": true,
+            "formula": "([[肘肩圧痛.index]] || []).length"
+        },
+        {
+            "name": "膝足圧痛_count",
+            "type": "eval",
+            "noreport": true,
+            "formula": "([[膝足圧痛.index]] || []).length"
+        },
+        {
+            "name": "手首手指腫脹_count",
+            "type": "eval",
+            "noreport": true,
+            "formula": "([[手首手指腫脹.index]] || []).length"
+        },
+        {
+            "name": "肘肩腫脹_count",
+            "type": "eval",
+            "noreport": true,
+            "formula": "([[肘肩腫脹.index]] || []).length"
+        },
+        {
+            "name": "膝足腫脹_count",
+            "type": "eval",
+            "noreport": true,
+            "formula": "([[膝足腫脹.index]] || []).length"
+        },
+        {
+            "name": "総圧痛関節数",
+            "type": "eval",
+            "formula": "[[手首手指圧痛_count]] + [[肘肩圧痛_count]] + [[膝足圧痛_count]]",
+            "description": "28関節中の圧痛関節数"
+        },
+        {
+            "name": "総腫脹関節数",
+            "type": "eval",
+            "formula": "[[手首手指腫脹_count]] + [[肘肩腫脹_count]] + [[膝足腫脹_count]]",
+            "description": "28関節中の腫脹関節数"
+        },
+        {
+            "name": "DAS28_CRP",
+            "type": "eval",
+            "formula": "(0.56 * Math.sqrt( [[総圧痛関節数]] ) + 0.28 * Math.sqrt( [[総腫脹関節数]] ) + 0.36 * Math.log( ((CRP)) * 10 + 1 ) + 0.014 * ((患者VAS)) + 0.96).toFixed(2)",
+            "description": "DAS28-CRP スコア（CRP値が未入力の場合は計算されません）"
+        },
+        {
+            "name": "DAS28_ESR",
+            "type": "eval",
+            "formula": "((ESR)) > 0 ? ( (0.56 * Math.sqrt( [[総圧痛関節数]] ) + 0.28 * Math.sqrt( [[総腫脹関節数]] ) + 0.7 * Math.log( ((ESR)) ) + 0.014 * ((患者VAS)) ) ).toFixed(2) : 0",
+            "description": "DAS28-ESR スコア（ESR値が未入力の場合は計算されません）"
+        },
+        {
+            "name": "CRP活動性分類",
+            "type": "eval",
+            "formula": "((DAS28_CRP)) >= 4.1 ? '高疾患活動性' : ( ((DAS28_CRP)) >= 2.7 ? '中等度疾患活動性' : ( ((DAS28_CRP)) >= 2.3 ? '低疾患活動性' : '寛解' ) )",
+            "description": "DAS28-CRPによる疾患活動性分類"
+        },
+        {
+            "name": "ESR活動性分類",
+            "type": "eval",
+            "formula": "((ESR)) > 0 ? ( ((DAS28_ESR)) >= 5.1 ? '高疾患活動性' : ( ((DAS28_ESR)) >= 3.2 ? '中等度疾患活動性' : ( ((DAS28_ESR)) >= 2.6 ? '低疾患活動性' : '寛解' ) ) ) : '計算不可'",
+            "description": "DAS28-ESRによる疾患活動性分類"
+        },
+        {
+            "name": "Warning: 中等度以上の疾患活動性",
+            "type": "warning",
+            "formula": "((DAS28_CRP)) >= 2.7 || ((DAS28_ESR)) >= 3.2"
+        },
+        {
+            "name": "Emergency: 高疾患活動性",
+            "type": "emergency",
+            "formula": "((DAS28_CRP)) >= 4.1 || ((DAS28_ESR)) >= 5.1"
+        }
+    ]
+}

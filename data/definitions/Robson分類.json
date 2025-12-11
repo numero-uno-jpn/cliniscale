@@ -1,0 +1,103 @@
+{
+    "_comment": [
+        "Robson分類（Ten-Group Classification System for Caesarean Section）",
+        "WHO推奨の帝王切開率評価のための分類システム",
+        "経産回数、帝王切開既往、妊娠週数、陣痛発来、胎位、胎児数の5項目で10群に分類",
+        "各群での帝王切開率算出により施設間比較とベンチマークが可能",
+        "参考: WHO Statement on Caesarean Section Rates (2015)",
+        "参考: Robson MS. Classification of caesarean sections. Fetal Maternal Med Rev. 2001;12:23-39",
+        "参考: WHO Robson Classification: Implementation Manual (2017)"
+    ],
+    "title": "Robson分類による帝王切開評価",
+    "description": [
+        "分娩時の基本的な産科学的特徴に基づき、すべての分娩を10群に分類します",
+        "帝王切開率の施設間比較とベンチマークに使用されます"
+    ],
+    "fields": [
+        {
+            "dispname": "基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "経産回数",
+            "name": "経産回数",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "初産婦|経産婦"
+        },
+        {
+            "dispname": "帝王切開既往",
+            "name": "帝王切開既往",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "なし|あり"
+        },
+        {
+            "dispname": "妊娠週数",
+            "name": "妊娠週数",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "37週未満|37週以上"
+        },
+        {
+            "dispname": "陣痛発来",
+            "name": "陣痛発来",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "自然陣痛|陣痛誘発|陣痛前帝王切開"
+        },
+        {
+            "dispname": "胎位・胎向",
+            "name": "胎位",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "頭位|骨盤位|横位・その他"
+        },
+        {
+            "dispname": "胎児数",
+            "name": "胎児数",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "単胎|多胎"
+        },
+        {
+            "dispname": "帝王切開実施",
+            "name": "帝王切開実施",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "なし|あり"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "群分類",
+            "type": "eval",
+            "formula": "{{胎児数}} == '多胎' ? 'Group 8' : ( {{胎位}} == '横位・その他' ? 'Group 9' : ( {{胎位}} == '骨盤位' ? ( {{経産回数}} == '初産婦' ? 'Group 6' : 'Group 7' ) : ( {{妊娠週数}} == '37週未満' ? 'Group 10' : ( {{帝王切開既往}} == 'あり' ? 'Group 5' : ( {{経産回数}} == '初産婦' && {{陣痛発来}} == '自然陣痛' ? 'Group 1' : ( {{経産回数}} == '初産婦' && ( {{陣痛発来}} == '陣痛誘発' || {{陣痛発来}} == '陣痛前帝王切開' ) ? 'Group 2' : ( {{経産回数}} == '経産婦' && {{陣痛発来}} == '自然陣痛' ? 'Group 3' : ( {{経産回数}} == '経産婦' && ( {{陣痛発来}} == '陣痛誘発' || {{陣痛発来}} == '陣痛前帝王切開' ) ? 'Group 4' : '分類不能' ) ) ) ) ) ) ) )",
+            "dispname": "入力項目に基づく自動分類結果"
+        },
+        {
+            "name": "群説明",
+            "type": "eval",
+            "formula": "{{群分類}} == 'Group 1' ? '初産婦、単胎、頭位、37週以上、自然陣痛' : ({{群分類}} == 'Group 2' ? '初産婦、単胎、頭位、37週以上、誘発または陣痛前帝王切開' : ({{群分類}} == 'Group 3' ? '経産婦、帝王切開既往なし、単胎、頭位、37週以上、自然陣痛' : ({{群分類}} == 'Group 4' ? '経産婦、帝王切開既往なし、単胎、頭位、37週以上、誘発または陣痛前帝王切開' : ({{群分類}} == 'Group 5' ? '帝王切開既往あり、単胎、頭位、37週以上' : ({{群分類}} == 'Group 6' ? '初産婦、骨盤位（全妊娠週数）' : ({{群分類}} == 'Group 7' ? '経産婦、骨盤位（全妊娠週数）' : ({{群分類}} == 'Group 8' ? '多胎妊娠（全胎位・全妊娠週数）' : ({{群分類}} == 'Group 9' ? '横位・その他の異常胎位（全妊娠週数）' : ({{群分類}} == 'Group 10' ? '単胎、頭位、37週未満' : '分類できません')))))))))",
+            "dispname": "分類群の詳細説明"
+        },
+        {
+            "name": "Warning: Group 5 高帝王切開率注意",
+            "formula": "{{群分類}} == 'Group 5' && {{帝王切開実施}} == 'あり'",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: Group 1 帝王切開要検討",
+            "formula": "{{群分類}} == 'Group 1' && {{帝王切開実施}} == 'あり'",
+            "type": "emergency"
+        }
+    ]
+}

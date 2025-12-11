@@ -1,0 +1,144 @@
+{
+  "_comment": [
+    "International Consultation on Incontinence Questionnaire - Short Form (ICIQ-SF)",
+    "尿失禁の評価",
+    "原著論文: Avery K, et al. Neurourol Urodyn. 2004;23(4):322-30.",
+    "PubMed: https://pubmed.ncbi.nlm.nih.gov/15227649/",
+    "公式サイト: https://iciq.net/iciq-ui-sf",
+    "使用許可が必要な場合があります"
+  ],
+  "title": "ICIQ-UI Short Form",
+  "description": [
+    "尿失禁の頻度、重症度、生活への影響を評価する短縮版質問票です",
+    "0-21点で評価し、高得点ほど重症を示します"
+  ],
+  "responsible_person": [
+    "泌尿器科医",
+    "婦人科医"
+  ],
+  "dept_in_charge": "泌尿器科",
+  "fields": [
+    {
+      "dispname": "基本情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "評価日",
+      "name": "評価日",
+      "type": "date",
+      "format": "YYYY/MM/DD"
+    },
+    {
+      "dispname": "ICIQ-SF質問項目",
+      "type": "subsection"
+    },
+    {
+      "dispname": "質問1: 生年月日",
+      "name": "生年月日",
+      "type": "date",
+      "format": "YYYY/MM/DD",
+      "required": true
+    },
+    {
+      "dispname": "質問2: 性別",
+      "name": "性別",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "女性|男性",
+      "selectoridx": "1|2"
+    },
+    {
+      "dispname": "質問3: 尿漏れの頻度",
+      "name": "頻度",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "まったくない",
+        "週に1回以下",
+        "週に2-3回",
+        "1日に1回",
+        "1日に何度も",
+        "常に"
+      ],
+      "selectoridx": "0|1|2|3|4|5",
+      "description": "過去4週間で尿漏れはどのくらいありましたか"
+    },
+    {
+      "dispname": "質問4: 尿漏れの量",
+      "name": "量",
+      "type": "text",
+      "required": true,
+      "inputmode": "numeric",
+      "testrange": [
+        0,
+        6
+      ],
+      "description": "通常どのくらいの量の尿が漏れますか（0=全くない、6=大量）を半角数字で入力してください（例: 3）"
+    },
+    {
+      "dispname": "質問5: 生活への影響",
+      "name": "生活影響",
+      "type": "text",
+      "required": true,
+      "inputmode": "numeric",
+      "testrange": [
+        0,
+        10
+      ],
+      "description": "尿漏れは日常生活にどのくらい影響しますか（0=全くない、10=非常に大きい）を半角数字で入力してください（例: 5）"
+    },
+    {
+      "dispname": "質問6: 尿漏れが起こる状況",
+      "name": "状況",
+      "type": "checkbox",
+      "selector": [
+        "尿意を感じる前に漏れる",
+        "咳やくしゃみをしたとき漏れる",
+        "眠っている間に漏れる",
+        "身体を動かしているとき・運動しているとき漏れる",
+        "排尿が終わり服を着たあとに漏れる",
+        "明らかな理由がなく漏れる",
+        "常に漏れる"
+      ],
+      "selectoridx": "1|1|1|1|1|1|1",
+      "description": "尿漏れが起こる状況をすべて選択してください（スコアには含まれません）"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "ICIQ-SFスコア",
+      "type": "eval",
+      "formula": "[[頻度.index]] + [[量]] + [[生活影響]]"
+    },
+    {
+      "name": "重症度評価",
+      "type": "eval",
+      "formula": "[[ICIQ-SFスコア]] == 0 ? '尿失禁なし' : ( [[ICIQ-SFスコア]] <= 5 ? '軽度' : ( [[ICIQ-SFスコア]] <= 12 ? '中等度' : '重度' ) )"
+    },
+    {
+      "name": "Warning: 中等度以上の尿失禁",
+      "formula": "[[ICIQ-SFスコア]] >= 6",
+      "type": "warning",
+      "description": "中等度以上の尿失禁"
+    },
+    {
+      "name": "Emergency: 重度の尿失禁",
+      "formula": "[[ICIQ-SFスコア]] >= 13",
+      "type": "emergency",
+      "description": "重度の尿失禁"
+    },
+    {
+      "dispname": "追加情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "その他の症状・コメント",
+      "name": "その他所見",
+      "type": "textarea",
+      "rows": 5,
+      "description": "その他の症状や特記事項を記載してください"
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "_comment": [
+    "Fisher分類（Fisher Classification）",
+    "1980年にC. Miller Fisherらが提案したくも膜下出血のCT分類",
+    "脳血管攣縮の発生リスクを予測するための分類システム",
+    "重要: Modified Fisher Scale（2006年、Frontera et al.）とは完全に異なるシステム",
+    "原典論文: Fisher CM, Kistler JP, Davis JM. Neurosurgery. 1980 Jan;6(1):1-9. PMID: 7354892",
+    "Group 4の定義: びまん性（薄い）または血液なし＋脳内血腫または脳室内血腫",
+    "参考文献: Komiyama M. Interv Neuroradiol. 2019;25(6):653-4. PMID: 31116074"
+  ],
+  "title": "Fisher くも膜下出血のCT所見による脳血管攣縮リスク分類",
+  "description": [
+    "くも膜下出血のCT所見による脳血管攣縮リスク分類",
+    "発症後48時間以内の単純CTで評価します",
+    "注意: Modified Fisher Scale（2006）とは異なる分類システムです"
+  ],
+  "responsible_person": [
+    "脳神経外科医師"
+  ],
+  "dept_in_charge": "脳神経外科",
+  "fields": [
+    {
+      "dispname": "重要な注意事項",
+      "type": "note",
+      "description": [
+        "**注意**:",
+        "1. Fisher分類は脳血管攣縮の発生予測が目的であり、予後予測とは異なります",
+        "2. Groupの数字が高いほど予後が悪いとは限りません。Group 3が最も脳血管攣縮のリスクが高く、Group 4はGroup 1-2と同程度のリスクです",
+        "3. Modified Fisher Scale（2006年、Frontera et al.）とは完全に異なる分類システムです。Modified Fisher Scaleは0-4の5段階評価で、脳室内出血の有無を重視します",
+        "4. Group 4は全SAH患者の10-15%未満を占めます。30-40%以上を占める場合、Group 4の誤解釈の可能性があります"
+      ]
+    },
+    {
+      "dispname": "参考文献",
+      "type": "note",
+      "description": [
+        "**原典論文**:<br>Fisher CM, Kistler JP, Davis JM. Relation of cerebral vasospasm to subarachnoid hemorrhage visualized by computerized tomographic scanning. Neurosurgery. 1980 Jan;6(1):1-9. PMID: 7354892<br>",
+        "**Group 4の正しい理解**:<br>Komiyama M. Misunderstanding of Fisher's Grouping System for Computed Tomography Evaluation of Aneurysmal Subarachnoid Haemorrhage. Interv Neuroradiol. 2019;25(6):653-4. PMID: 31116074"
+      ]
+    },
+    {
+      "dispname": "患者基本情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "年齢",
+      "name": "年齢",
+      "type": "text",
+      "required": true,
+      "postfix": "歳",
+      "inputmode": "numeric",
+      "testrange": [
+        20,
+        85
+      ]
+    },
+    {
+      "dispname": "性別",
+      "name": "性別",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": [
+        "男性",
+        "女性"
+      ],
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "発症日",
+      "name": "発症日",
+      "type": "date",
+      "required": true,
+      "description": "くも膜下出血発症日時を記入してください"
+    },
+    {
+      "dispname": "発症時刻",
+      "name": "発症時刻",
+      "type": "time",
+      "required": true
+    },
+    {
+      "dispname": "CT撮影日",
+      "name": "CT撮影日",
+      "type": "date",
+      "required": true,
+      "description": "単純CT撮影日時を記入してください（発症後48時間以内が推奨）"
+    },
+    {
+      "dispname": "CT撮影時刻",
+      "name": "CT撮影時刻",
+      "type": "time",
+      "required": true
+    },
+    {
+      "dispname": "Fisher分類評価",
+      "type": "subsection"
+    },
+    {
+      "dispname": "くも膜下腔の出血所見",
+      "name": "くも膜下腔出血",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "出血を認めない",
+        "びまん性の薄い出血（1mm以下）",
+        "びまん性の厚い出血（1mmを超える）またはlocalized clot"
+      ],
+      "selectoridx": "0|1|2",
+      "description": [
+        "単純CT上のくも膜下腔への出血の程度を評価してください",
+        "注: 3番目の選択肢は原典のGroup 3に相当し、厚い出血または局所性血腫を含みます"
+      ]
+    },
+    {
+      "dispname": "脳内出血",
+      "name": "脳内出血",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "脳室内出血",
+      "name": "脳室内出血",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "脳室拡大の有無",
+      "name": "脳室拡大",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "selectoridx": "0|1"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "Fisher分類",
+      "type": "eval",
+      "formula": "[[くも膜下腔出血.index]] == 0 && [[脳内出血.index]] == 0 && [[脳室内出血.index]] == 0 ? 'Group 1' : ( [[くも膜下腔出血.index]] == 0 || [[くも膜下腔出血.index]] == 1 ) && ( [[脳内出血.index]] == 1 || [[脳室内出血.index]] == 1 ) ? 'Group 4' : [[くも膜下腔出血.index]] == 1 ? 'Group 2' : [[くも膜下腔出血.index]] == 2 ? 'Group 3' : '判定不能'"
+    },
+    {
+      "name": "脳血管攣縮リスク",
+      "type": "eval",
+      "formula": "{{Fisher分類}} == 'Group 1' ? '低リスク（約0-5%）' : {{Fisher分類}} == 'Group 2' ? '中等度リスク（約15-20%）' : {{Fisher分類}} == 'Group 3' ? '高リスク（約30-35%）' : {{Fisher分類}} == 'Group 4' ? '低～中等度リスク（約0-15%）' : '判定不能'"
+    },
+    {
+      "name": "Warning: Group 3 高リスク",
+      "type": "warning",
+      "formula": "{{Fisher分類}} == 'Group 3'"
+    }
+  ]
+}

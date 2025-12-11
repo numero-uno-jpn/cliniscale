@@ -1,0 +1,710 @@
+{
+    "_comment": [
+        "Big Five Inventory (BFI) 44項目版 - 修正版",
+        "John, O. P., & Srivastava, S. (1999). The Big Five trait taxonomy: History, measurement, and theoretical perspectives. In L. A. Pervin & O. P. John (Eds.), Handbook of personality: Theory and research (pp. 102-138). New York: Guilford Press.",
+        "https://www.ocf.berkeley.edu/~johnlab/bfi.htm",
+        "ビッグファイブ性格特性（外向性、協調性、勤勉性、神経症傾向、開放性）を測定する44項目の自己報告式尺度",
+        "5段階リッカート尺度：1（全く当てはまらない）から5（非常に当てはまる）",
+        "実施時間：約10-15分",
+        "年齢制限：なし（理解可能な言語能力があれば実施可能）",
+        "【修正事項】原典に基づき外向性の逆転項目を正確に修正、セクションタイプを改善"
+    ],
+    "title": "BFI ビッグファイブ性格検査",
+    "description": [
+        "ビッグファイブ性格特性を測定する44項目の質問票です。",
+        "あなたの性格について「私は〜な人間だと思う」という文に対して、どの程度当てはまるかをお答えください。",
+        "正解や不正解はありません。普段のあなたらしさを基準にお答えください。"
+    ],
+    "submit_button_title": "回答を送信",
+    "fields": [
+        {
+            "dispname": "外向性",
+            "type": "subsection"
+        },
+        {
+            "dispname": "私は話好きな人間だと思う",
+            "name": "Q1",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は無口な人間だと思う",
+            "name": "Q6",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は外向的で熱狂的な人間だと思う",
+            "name": "Q11",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は控えめな人間だと思う",
+            "name": "Q16",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は社交的な人間だと思う",
+            "name": "Q21",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は内気で引っ込み思案な人間だと思う",
+            "name": "Q26",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は積極的な人間だと思う",
+            "name": "Q31",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は活発な人間だと思う",
+            "name": "Q36",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "協調性",
+            "type": "subsection"
+        },
+        {
+            "dispname": "私は他人の欠点を見つけがちな人間だと思う",
+            "name": "Q2",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は他人に対して親切で思いやりのある人間だと思う",
+            "name": "Q7",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は他人と争いを起こしがちな人間だと思う",
+            "name": "Q12",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は許しやすい人間だと思う",
+            "name": "Q17",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は冷たく無関心な人間だと思う",
+            "name": "Q22",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は協力的な人間だと思う",
+            "name": "Q27",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は疑い深い人間だと思う",
+            "name": "Q32",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は他人を助ける人間だと思う",
+            "name": "Q37",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は信頼しやすい人間だと思う",
+            "name": "Q42",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "勤勉性",
+            "type": "subsection"
+        },
+        {
+            "dispname": "私は徹底的に仕事をする人間だと思う",
+            "name": "Q3",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は怠惰になりがちな人間だと思う",
+            "name": "Q8",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は効率的に作業する人間だと思う",
+            "name": "Q13",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は計画を立てそれに従って行動する人間だと思う",
+            "name": "Q18",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は怠け者だと思う",
+            "name": "Q23",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は物事を最後までやり遂げる人間だと思う",
+            "name": "Q28",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は信頼できる働き者だと思う",
+            "name": "Q33",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は物事を先延ばしにしがちな人間だと思う",
+            "name": "Q38",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は几帳面な人間だと思う",
+            "name": "Q43",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "神経症傾向",
+            "type": "subsection"
+        },
+        {
+            "dispname": "私は気分が沈みがちで憂うつな人間だと思う",
+            "name": "Q4",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私はリラックスしてストレスをよく処理する人間だと思う",
+            "name": "Q9",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は心配しがちな人間だと思う",
+            "name": "Q14",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は神経質になりがちな人間だと思う",
+            "name": "Q19",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は気分転換がうまい人間だと思う",
+            "name": "Q24",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は情緒不安定で気分が変わりやすい人間だと思う",
+            "name": "Q29",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は緊張しがちな人間だと思う",
+            "name": "Q34",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は冷静で感情の起伏が少ない人間だと思う",
+            "name": "Q39",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "開放性",
+            "type": "subsection"
+        },
+        {
+            "dispname": "私は独創的でアイデアを思いつく人間だと思う",
+            "name": "Q5",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は芸術的体験を大切にする人間だと思う",
+            "name": "Q10",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は想像力に富んだ人間だと思う",
+            "name": "Q15",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は知的な反省や思索を好む人間だと思う",
+            "name": "Q20",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は創造性にあまり関心のない人間だと思う",
+            "name": "Q25",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は工夫することが好きな人間だと思う",
+            "name": "Q30",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は知的でない人間だと思う",
+            "name": "Q35",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は日常的でない物事について考えることを好む人間だと思う",
+            "name": "Q40",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は複雑さよりもシンプルさを好む人間だと思う",
+            "name": "Q41",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は動揺しやすい人間だと思う",
+            "name": "Q44",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "当てはまらない",
+                "どちらでもない",
+                "当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "外向性得点",
+            "type": "eval",
+            "formula": "[[Q1.index]] + ( 6 - [[Q6.index]] ) + [[Q11.index]] + ( 6 - [[Q16.index]] ) + [[Q21.index]] + ( 6 - [[Q26.index]] ) + [[Q31.index]] + [[Q36.index]]"
+        },
+        {
+            "name": "協調性得点",
+            "type": "eval",
+            "formula": "( 6 - [[Q2.index]] ) + [[Q7.index]] + ( 6 - [[Q12.index]] ) + [[Q17.index]] + ( 6 - [[Q22.index]] ) + [[Q27.index]] + ( 6 - [[Q32.index]] ) + [[Q37.index]] + [[Q42.index]]"
+        },
+        {
+            "name": "勤勉性得点",
+            "type": "eval",
+            "formula": "[[Q3.index]] + ( 6 - [[Q8.index]] ) + [[Q13.index]] + ( 6 - [[Q18.index]] ) + ( 6 - [[Q23.index]] ) + [[Q28.index]] + [[Q33.index]] + ( 6 - [[Q38.index]] ) + [[Q43.index]]"
+        },
+        {
+            "name": "神経症傾向得点",
+            "type": "eval",
+            "formula": "[[Q4.index]] + ( 6 - [[Q9.index]] ) + [[Q14.index]] + [[Q19.index]] + ( 6 - [[Q24.index]] ) + [[Q29.index]] + [[Q34.index]] + ( 6 - [[Q39.index]] )"
+        },
+        {
+            "name": "開放性得点",
+            "type": "eval",
+            "formula": "[[Q5.index]] + [[Q10.index]] + [[Q15.index]] + [[Q20.index]] + ( 6 - [[Q25.index]] ) + [[Q30.index]] + ( 6 - [[Q35.index]] ) + [[Q40.index]] + ( 6 - [[Q41.index]] ) + [[Q44.index]]"
+        },
+        {
+            "name": "外向性評価",
+            "type": "eval",
+            "formula": "[[外向性得点]] >= 28 ? '高い' : ( [[外向性得点]] >= 20 ? '中程度' : '低い' )"
+        },
+        {
+            "name": "協調性評価",
+            "type": "eval",
+            "formula": "[[協調性得点]] >= 32 ? '高い' : ( [[協調性得点]] >= 23 ? '中程度' : '低い' )"
+        },
+        {
+            "name": "勤勉性評価",
+            "type": "eval",
+            "formula": "[[勤勉性得点]] >= 32 ? '高い' : ( [[勤勉性得点]] >= 23 ? '中程度' : '低い' )"
+        },
+        {
+            "name": "神経症傾向評価",
+            "type": "eval",
+            "formula": "[[神経症傾向得点]] >= 28 ? '高い' : ( [[神経症傾向得点]] >= 20 ? '中程度' : '低い' )"
+        },
+        {
+            "name": "開放性評価",
+            "type": "eval",
+            "formula": "[[開放性得点]] >= 35 ? '高い' : ( [[開放性得点]] >= 25 ? '中程度' : '低い' )"
+        }
+    ]
+}

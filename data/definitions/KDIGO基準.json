@@ -1,0 +1,328 @@
+{
+    "_comment": [
+        "KDIGO AKI基準 - Kidney Disease Improving Global Outcomes Acute Kidney Injury Criteria",
+        "原典: KDIGO Clinical Practice Guideline for Acute Kidney Injury (2012)",
+        "血清クレアチニンと尿量による急性腎障害の診断基準",
+        "参考URL: https://kdigo.org/guidelines/acute-kidney-injury/"
+    ],
+    "title": "KDIGO AKI基準評価問診票",
+    "description": [
+        "<h3>KDIGO急性腎障害診断基準評価</h3>",
+        "急性腎障害(AKI)の診断と重症度分類を行います。",
+        "血清クレアチニン値と尿量の変化を評価し、KDIGO基準に基づくステージ分類を行います。"
+    ],
+    "contact": "腎臓内科担当医",
+    "dept_in_charge": "腎臓内科",
+    "responsible_person": [
+        "主治医",
+        "腎臓専門医"
+    ],
+    "staffs": [
+        "看護師",
+        "臨床検査技師"
+    ],
+    "submit_button_title": "AKI評価を送信",
+    "translate": "major",
+    "mail_notification": true,
+    "fields": [
+        {
+            "dispname": "患者基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "年齢",
+            "name": "年齢",
+            "type": "text",
+            "postfix": "歳",
+            "testrange": [
+                40,
+                90
+            ],
+            "required": true,
+            "inputmode": "numeric"
+        },
+        {
+            "dispname": "体重",
+            "name": "体重",
+            "type": "text",
+            "postfix": "kg",
+            "testrange": [
+                30,
+                100
+            ],
+            "required": true,
+            "inputmode": "decimal",
+            "description": "尿量計算に使用します"
+        },
+        {
+            "dispname": "血清クレアチニン値の変化",
+            "type": "subsection"
+        },
+        {
+            "dispname": "基礎血清クレアチニン値",
+            "name": "基礎SCr",
+            "type": "text",
+            "postfix": "mg/dL",
+            "testrange": [
+                0.6,
+                5.0
+            ],
+            "required": true,
+            "inputmode": "decimal",
+            "description": "7日以内に判明していた、または予想される基礎値"
+        },
+        {
+            "dispname": "現在の血清クレアチニン値",
+            "name": "現在SCr",
+            "type": "text",
+            "postfix": "mg/dL",
+            "testrange": [
+                0.6,
+                5.0
+            ],
+            "required": true,
+            "inputmode": "decimal"
+        },
+        {
+            "dispname": "血清クレアチニン値上昇の時間経過",
+            "name": "SCr上昇時間",
+            "type": "radio",
+            "required": true,
+            "selector": "48時間以内|7日以内|7日を超える|不明",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "尿量の評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "尿量測定は可能ですか",
+            "name": "尿量測定可否",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "測定可能|測定不可"
+        },
+        {
+            "dispname": "6時間尿量",
+            "name": "6時間尿量",
+            "type": "text",
+            "postfix": "mL",
+            "inputmode": "numeric",
+            "parentname": "尿量測定可否",
+            "parentsel": "測定可能"
+        },
+        {
+            "dispname": "12時間尿量",
+            "name": "12時間尿量",
+            "type": "text",
+            "postfix": "mL",
+            "inputmode": "numeric",
+            "parentname": "尿量測定可否",
+            "parentsel": "測定可能"
+        },
+        {
+            "dispname": "24時間尿量",
+            "name": "24時間尿量",
+            "type": "text",
+            "postfix": "mL",
+            "inputmode": "numeric",
+            "parentname": "尿量測定可否",
+            "parentsel": "測定可能"
+        },
+        {
+            "dispname": "無尿の継続時間",
+            "name": "無尿時間",
+            "type": "radio",
+            "parentname": "尿量測定可否",
+            "parentsel": "測定可能",
+            "selector": "無尿なし|12時間未満|12時間以上",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "腎代替療法",
+            "type": "subsection"
+        },
+        {
+            "dispname": "腎代替療法の実施",
+            "name": "RRT実施",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "実施なし|実施中|実施予定"
+        },
+        {
+            "dispname": "透析開始日",
+            "name": "透析開始日",
+            "type": "date",
+            "parentname": "RRT実施",
+            "parentsel": "実施中|実施予定",
+            "format": "YYYY/MM/DD"
+        },
+        {
+            "dispname": "年齢補正（18歳未満のみ）",
+            "type": "subsection"
+        },
+        {
+            "dispname": "基礎推定糸球体濾過量（eGFR）",
+            "name": "基礎eGFR",
+            "type": "text",
+            "postfix": "mL/min/1.73m²",
+            "inputmode": "numeric",
+            "description": "18歳未満の患者の基礎eGFR値"
+        },
+        {
+            "dispname": "現在の推定糸球体濾過量（eGFR）",
+            "name": "現在eGFR",
+            "type": "text",
+            "postfix": "mL/min/1.73m²",
+            "inputmode": "numeric",
+            "description": "18歳未満の患者でeGFRが基礎値から35未満に低下した場合はStage3に分類"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "SCr絶対上昇",
+            "type": "eval",
+            "formula": "( ((現在SCr)) - ((基礎SCr)) ).toFixed(3)",
+            "noreport": true
+        },
+        {
+            "name": "SCr相対上昇倍率",
+            "type": "eval",
+            "formula": "( ((現在SCr)) / ((基礎SCr)) ).toFixed(3)",
+            "noreport": true
+        },
+        {
+            "name": "_6時間尿量",
+            "type": "eval",
+            "formula": "((6時間尿量))",
+            "noreport": true
+        },
+        {
+            "name": "_12時間尿量",
+            "type": "eval",
+            "formula": "((12時間尿量))",
+            "noreport": true
+        },
+        {
+            "name": "_24時間尿量",
+            "type": "eval",
+            "formula": "((24時間尿量))",
+            "noreport": true
+        },
+        {
+            "name": "_基礎eGFR",
+            "type": "eval",
+            "formula": "((基礎eGFR))",
+            "noreport": true
+        },
+        {
+            "name": "_現在eGFR",
+            "type": "eval",
+            "formula": "((現在eGFR))",
+            "noreport": true
+        },
+        {
+            "name": "無尿時間_index",
+            "type": "eval",
+            "formula": "((無尿時間.index))",
+            "noreport": true
+        },
+        {
+            "name": "6時間尿量mL_kg_h",
+            "type": "eval",
+            "formula": "[[尿量測定可否.index]] == 0 && ((_6時間尿量)) ? ( ((_6時間尿量)) / ((体重)) / 6 ).toFixed(2) : -1",
+            "noreport": true
+        },
+        {
+            "name": "12時間尿量mL_kg_h",
+            "type": "eval",
+            "formula": "[[尿量測定可否.index]] == 0 && ((_12時間尿量)) ? ( ((_12時間尿量)) / ((体重)) / 12 ).toFixed(2) : -1",
+            "noreport": true
+        },
+        {
+            "name": "24時間尿量mL_kg_h",
+            "type": "eval",
+            "formula": "[[尿量測定可否.index]] == 0 && ((_24時間尿量)) ? ( ((_24時間尿量)) / ((体重)) / 24 ).toFixed(2) : -1",
+            "noreport": true
+        },
+        {
+            "name": "eGFR低下",
+            "type": "eval",
+            "formula": "[[年齢]] < 18 && ((_基礎eGFR)) && ((_現在eGFR)) ? ((_基礎eGFR)) - ((_現在eGFR)) : -1",
+            "noreport": true
+        },
+        {
+            "name": "AKI基準該当",
+            "type": "eval",
+            "formula": "( [[SCr上昇時間.index]] == 0 && ((SCr絶対上昇)) >= 0.3 ) || ( [[SCr上昇時間.index]] <= 1 && ((SCr相対上昇倍率)) >= 1.5 ) || ( ((6時間尿量mL_kg_h)) >= 0 && ((6時間尿量mL_kg_h)) < 0.5 ) ? 'AKI診断基準に該当' : 'AKI診断基準に非該当'",
+            "dispname": "KDIGO基準によるAKI診断の該当性"
+        },
+        {
+            "name": "SCr基準ステージ",
+            "type": "eval",
+            "formula": "[[RRT実施.index]] > 0 ? 3 : ( ((現在SCr)) >= 4.0 ? 3 : ( ((SCr相対上昇倍率)) >= 3.0 ? 3 : ( ((SCr相対上昇倍率)) >= 2.0 ? 2 : ( ( ((SCr相対上昇倍率)) >= 1.5 || ( [[SCr上昇時間.index]] == 0 && ((SCr絶対上昇)) >= 0.3 ) ) ? 1 : 0 ) ) ) )",
+            "noreport": true
+        },
+        {
+            "name": "尿量基準ステージ",
+            "type": "eval",
+            "formula": "((無尿時間_index)) == 2 ? 3 : ( ((24時間尿量mL_kg_h)) >= 0 && ((24時間尿量mL_kg_h)) < 0.3 ? 3 : ( ((12時間尿量mL_kg_h)) >= 0 && ((12時間尿量mL_kg_h)) < 0.5 ? 2 : ( ((6時間尿量mL_kg_h)) >= 0 && ((6時間尿量mL_kg_h)) < 0.5 ? 1 : 0 ) ) )",
+            "noreport": true
+        },
+        {
+            "name": "年齢補正ステージ",
+            "type": "eval",
+            "formula": "((年齢)) < 18 && ((eGFR低下)) > 0 && ((_現在eGFR)) < 35 ? 3 : 0",
+            "noreport": true
+        },
+        {
+            "name": "最終AKIステージ",
+            "type": "eval",
+            "formula": "[[SCr基準ステージ]] > [[尿量基準ステージ]] ? ( [[SCr基準ステージ]] > [[年齢補正ステージ]] ? [[SCr基準ステージ]] : [[年齢補正ステージ]] ) : ( [[尿量基準ステージ]] > [[年齢補正ステージ]] ? [[尿量基準ステージ]] : [[年齢補正ステージ]] )",
+            "dispname": "KDIGO AKI病期分類の最終判定"
+        },
+        {
+            "name": "ステージ分類",
+            "type": "eval",
+            "formula": "[[最終AKIステージ]] == 0 ? 'AKIなし' : ( [[最終AKIステージ]] == 1 ? 'Stage 1 (軽度)' : ( [[最終AKIステージ]] == 2 ? 'Stage 2 (中等度)' : 'Stage 3 (重度)' ) )",
+            "dispname": "KDIGO病期分類による重症度判定"
+        },
+        {
+            "name": "ステージ1基準詳細",
+            "type": "eval",
+            "formula": "[[最終AKIステージ]] == 1 ? 'SCr基礎値の1.5-1.9倍または0.3mg/dL以上上昇、尿量6-12時間で0.5mL/kg/h未満' : ''",
+            "noreport": true
+        },
+        {
+            "name": "ステージ2基準詳細",
+            "type": "eval",
+            "formula": "[[最終AKIステージ]] == 2 ? 'SCr基礎値の2.0-2.9倍、尿量12時間以上で0.5mL/kg/h未満' : ''",
+            "noreport": true
+        },
+        {
+            "name": "ステージ3基準詳細",
+            "type": "eval",
+            "formula": "[[最終AKIステージ]] == 3 ? 'SCr基礎値の3倍以上または4.0mg/dL以上、尿量24時間以上で0.3mL/kg/h未満または12時間以上無尿、または腎代替療法開始' : ''",
+            "noreport": true
+        },
+        {
+            "name": "臨床的重要度",
+            "type": "eval",
+            "formula": "[[最終AKIステージ]] == 1 ? '軽度のAKI、経過観察と原因検索が必要' : ( [[最終AKIステージ]] == 2 ? '中等度のAKI、積極的治療と専門医コンサルトを検討' : ( [[最終AKIステージ]] == 3 ? '重度のAKI、緊急治療と腎代替療法の検討が必要' : '正常範囲' ) )",
+            "dispname": "臨床的対応の指針"
+        },
+        {
+            "name": "Warning: 中等度以上のAKI",
+            "formula": "[[最終AKIステージ]] >= 2",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 重度のAKI",
+            "formula": "[[最終AKIステージ]] == 3",
+            "type": "emergency"
+        }
+    ]
+}

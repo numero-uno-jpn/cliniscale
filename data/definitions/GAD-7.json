@@ -1,0 +1,151 @@
+{
+    "title": "GAD-7 全般性不安障害7項目",
+    "_comment": [
+        "GAD-7 (Generalized Anxiety Disorder-7) 全般性不安障害7項目",
+        "開発者: Robert L. Spitzer, Kurt Kroenke, Janet B. W. Williams ら (2006年)",
+        "過去2週間の不安症状を評価する7項目の自己報告式尺度",
+        "カットオフ値: 8点以上で要精査、10点以上で中等度以上の不安",
+        "参考文献: Spitzer RL, Kroenke K, Williams JB, Löwe B. A brief measure for assessing generalized anxiety disorder: the GAD-7. Arch Intern Med. 2006;166:1092-7.",
+        "公式URL: https://www.hiv.uw.edu/page/mental-health-screening/gad-7"
+    ],
+    "description": [
+        "過去2週間において、以下の症状にどの程度悩まされましたか？"
+    ],
+    "fields": [
+        {
+            "name": "item1",
+            "type": "radio",
+            "dispname": "神経過敏、不安、緊張感",
+            "required": true,
+            "selector": [
+                "全くない",
+                "数日",
+                "半分以上の日",
+                "ほぼ毎日"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "item2",
+            "type": "radio",
+            "dispname": "心配を止めることができない、心配をコントロールできない",
+            "required": true,
+            "selector": [
+                "全くない",
+                "数日",
+                "半分以上の日",
+                "ほぼ毎日"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "item3",
+            "type": "radio",
+            "dispname": "様々なことを心配しすぎる",
+            "required": true,
+            "selector": [
+                "全くない",
+                "数日",
+                "半分以上の日",
+                "ほぼ毎日"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "item4",
+            "type": "radio",
+            "dispname": "リラックスすることが難しい",
+            "required": true,
+            "selector": [
+                "全くない",
+                "数日",
+                "半分以上の日",
+                "ほぼ毎日"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "item5",
+            "type": "radio",
+            "dispname": "じっとしていられないほど落ち着かない",
+            "required": true,
+            "selector": [
+                "全くない",
+                "数日",
+                "半分以上の日",
+                "ほぼ毎日"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "item6",
+            "type": "radio",
+            "dispname": "イライラしやすい、または怒りっぽい",
+            "required": true,
+            "selector": [
+                "全くない",
+                "数日",
+                "半分以上の日",
+                "ほぼ毎日"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "item7",
+            "type": "radio",
+            "dispname": "何か恐ろしいことが起こるのではないかと恐怖を感じる",
+            "required": true,
+            "selector": [
+                "全くない",
+                "数日",
+                "半分以上の日",
+                "ほぼ毎日"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "functional_impairment",
+            "type": "radio",
+            "dispname": "これらの症状により、仕事をしたり、家事をしたり、他の人と上手くやっていくことが、どの程度困難になっていますか？",
+            "required": false,
+            "selector": [
+                "全く困難でない",
+                "やや困難",
+                "とても困難",
+                "極めて困難"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "total_score",
+            "type": "eval",
+            "dispname": "GAD-7総得点: 過去2週間の不安症状の重症度を評価",
+            "formula": "[[item1.index]] + [[item2.index]] + [[item3.index]] + [[item4.index]] + [[item5.index]] + [[item6.index]] + [[item7.index]]"
+        },
+        {
+            "name": "severity_level",
+            "type": "eval",
+            "dispname": "重症度分類: 0-4点(最小限)、5-9点(軽度)、10-14点(中等度)、15-21点(重度)",
+            "formula": "[[total_score]] <= 4 ? \"最小限の不安\" : ([[total_score]] <= 9 ? \"軽度の不安\" : ([[total_score]] <= 14 ? \"中等度の不安\" : \"重度の不安\"))"
+        },
+        {
+            "name": "screening_result",
+            "type": "eval",
+            "dispname": "スクリーニング判定: 8点以上で要精査、10点以上で中等度以上の不安症状",
+            "formula": "[[total_score]] >= 10 ? \"中等度以上の不安症状あり\" : ([[total_score]] >= 8 ? \"要精査レベルの不安症状あり\" : \"臨床的に有意な不安症状なし\")"
+        },
+        {
+            "name": "Warning: GAD-7スコア8点以上",
+            "type": "warning",
+            "formula": "[[total_score]] >= 8"
+        },
+        {
+            "name": "Emergency: GAD-7スコア15点以上",
+            "type": "emergency",
+            "formula": "[[total_score]] >= 15"
+        }
+    ]
+}

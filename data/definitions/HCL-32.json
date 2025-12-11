@@ -1,0 +1,461 @@
+{
+    "_comment": [
+        "HCL-32 (Hypomania Checklist) 日本語版問診票",
+        "原典: Angst, J., Adolfsson, R., Benazzi, F., et al. (2005). The HCL-32: towards a self-assessment tool for hypomanic symptoms in outpatients. Journal of Affective Disorders, 88(2), 217-233.",
+        "参考URL: https://psycheducation.org/hypomania-symptom-checklist-hcl-32/",
+        "開発者: Jules Angst (チューリッヒ大学)",
+        "目的: 双極性障害における軽躁症状のスクリーニング",
+        "著作権: University of Zurich (無料使用可能)",
+        "日本語版作成日: 2024年",
+        "32項目のチェックリスト形式、はい/いいえで回答",
+        "カットオフ値: 14項目以上でスクリーニング陽性の可能性"
+    ],
+    "title": "HCL-32 軽躁チェックリスト",
+    "description": [
+        "この質問票は、軽躁症状の特徴を評価することを目的としています。",
+        "人生のさまざまな時期において、誰もがエネルギー、活動、気分の変化や波（「高まり」と「落ち込み」、または「上がり」と「下がり」）を経験します。",
+        "この質問票では、「高まり」の期間の特徴について評価します。"
+    ],
+    "responsible_person": [
+        "精神科医師"
+    ],
+    "dept_in_charge": "精神科",
+    "fields": [
+        {
+            "name": "current_mood",
+            "type": "radio",
+            "dispname": "今日の気分について、いつもの状態と比べてどうですか？",
+            "required": true,
+            "selector": [
+                "いつもよりもかなり悪い",
+                "いつもよりも悪い",
+                "いつもよりも少し悪い",
+                "いつもと変わらない",
+                "いつもよりも少し良い",
+                "いつもよりも良い",
+                "いつもよりもかなり良い"
+            ]
+        },
+        {
+            "name": "general_level",
+            "type": "radio",
+            "dispname": "他の人と比べて、私の活動、エネルギー、気分のレベルは（今日の気分ではなく、平均的にどうか）",
+            "required": true,
+            "selector": [
+                "いつもかなり安定して平坦である",
+                "一般的により高い",
+                "一般的により低い",
+                "繰り返し上下の期間を示す"
+            ]
+        },
+        {
+            "name": "section_high_period",
+            "type": "subsection",
+            "dispname": "「高まり」の状態について"
+        },
+        {
+            "name": "high_period_instruction",
+            "type": "note",
+            "description": "薬物やアルコールを使用していない時の「高まり」状態の期間を思い出してください。そのような状態では以下のような特徴がありましたか。"
+        },
+        {
+            "name": "less_sleep",
+            "type": "radio",
+            "dispname": "睡眠時間が少なくても平気",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "more_energetic",
+            "type": "radio",
+            "dispname": "より活力があり、より活動的になる",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "more_confident",
+            "type": "radio",
+            "dispname": "より自信がある",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "enjoy_work_more",
+            "type": "radio",
+            "dispname": "仕事をより楽しめる",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "more_sociable",
+            "type": "radio",
+            "dispname": "より社交的になる（電話をかけたり、外出したりする）",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "want_travel",
+            "type": "radio",
+            "dispname": "旅行をしたがる、実際により多く旅行する",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "drive_faster",
+            "type": "radio",
+            "dispname": "より速く運転する、または運転時により多くのリスクを取る",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "spend_more_money",
+            "type": "radio",
+            "dispname": "より多くのお金を使う、お金を使いすぎる",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "take_more_risks",
+            "type": "radio",
+            "dispname": "日常生活でより多くのリスクを取る（仕事やその他の活動で）",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "more_physically_active",
+            "type": "radio",
+            "dispname": "身体的により活動的になる（スポーツなど）",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "plan_more_activities",
+            "type": "radio",
+            "dispname": "より多くの活動や計画を立てる",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "more_ideas",
+            "type": "radio",
+            "dispname": "より多くのアイデアがある、より創造的になる",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "less_shy",
+            "type": "radio",
+            "dispname": "より恥ずかしがらない、抑制がなくなる",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "colorful_clothes",
+            "type": "radio",
+            "dispname": "よりカラフルで派手な服装や化粧をする",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "meet_more_people",
+            "type": "radio",
+            "dispname": "より多くの人に会いたがる、実際により多くの人に会う",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "more_interested_sex",
+            "type": "radio",
+            "dispname": "性的により興味を持つ、性的欲求が増加する",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "more_flirtatious",
+            "type": "radio",
+            "dispname": "より人を誘惑する、性的により活発になる",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "talk_more",
+            "type": "radio",
+            "dispname": "より多く話す",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "think_faster",
+            "type": "radio",
+            "dispname": "より速く考える",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "more_jokes",
+            "type": "radio",
+            "dispname": "話しているときにより多くのジョークや駄洒落を言う",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "more_easily_distracted",
+            "type": "radio",
+            "dispname": "より注意散漫になりやすい",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "engage_new_things",
+            "type": "radio",
+            "dispname": "多くの新しいことに取り組む",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "thoughts_jump",
+            "type": "radio",
+            "dispname": "考えが話題から話題へと飛ぶ",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "do_things_quickly",
+            "type": "radio",
+            "dispname": "物事をより速く、またはより簡単に行う",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "more_impatient",
+            "type": "radio",
+            "dispname": "よりせっかちになる、またはイライラしやすくなる",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "exhausting_others",
+            "type": "radio",
+            "dispname": "他人を疲れさせる、またはイライラさせることがある",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "more_quarrels",
+            "type": "radio",
+            "dispname": "より多くの口論に巻き込まれる",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "mood_higher",
+            "type": "radio",
+            "dispname": "気分がより高く、より楽観的になる",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "drink_more_coffee",
+            "type": "radio",
+            "dispname": "より多くコーヒーを飲む",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "smoke_more",
+            "type": "radio",
+            "dispname": "より多くタバコを吸う",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "drink_more_alcohol",
+            "type": "radio",
+            "dispname": "より多くアルコールを飲む",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "take_more_drugs",
+            "type": "radio",
+            "dispname": "より多くの薬物を使用する（鎮静薬、抗不安薬、興奮薬）",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "total_score",
+            "type": "eval",
+            "dispname": "HCL-32合計点数",
+            "formula": "[[less_sleep.index]] + [[more_energetic.index]] + [[more_confident.index]] + [[enjoy_work_more.index]] + [[more_sociable.index]] + [[want_travel.index]] + [[drive_faster.index]] + [[spend_more_money.index]] + [[take_more_risks.index]] + [[more_physically_active.index]] + [[plan_more_activities.index]] + [[more_ideas.index]] + [[less_shy.index]] + [[colorful_clothes.index]] + [[meet_more_people.index]] + [[more_interested_sex.index]] + [[more_flirtatious.index]] + [[talk_more.index]] + [[think_faster.index]] + [[more_jokes.index]] + [[more_easily_distracted.index]] + [[engage_new_things.index]] + [[thoughts_jump.index]] + [[do_things_quickly.index]] + [[more_impatient.index]] + [[exhausting_others.index]] + [[more_quarrels.index]] + [[mood_higher.index]] + [[drink_more_coffee.index]] + [[smoke_more.index]] + [[drink_more_alcohol.index]] + [[take_more_drugs.index]]"
+        },
+        {
+            "name": "result_interpretation",
+            "type": "eval",
+            "dispname": "結果の解釈",
+            "formula": "[[total_score]] >= 14 ? \"スクリーニング陽性の可能性（専門医への相談を推奨）\" : \"スクリーニング陰性\""
+        }
+    ]
+}

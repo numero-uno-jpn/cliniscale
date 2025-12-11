@@ -1,0 +1,105 @@
+{
+    "_comment": [
+        "AUDIT-C (Alcohol Use Disorders Identification Test-Concise)",
+        "WHO開発のAUDITの最初の3項目からなる短縮版アルコールスクリーニングテスト",
+        "原典: Bush K, et al. The AUDIT alcohol consumption questions (AUDIT-C): an effective brief screening test for problem drinking. Arch Intern Med. 1998;158(16):1789-95",
+        "日本語版参考: 尾崎米厚 問題飲酒の簡易スクリーニング方法の開発に関する研究 平成24年度厚生労働科学研究費補助金研究",
+        "参考URL: https://www.hepatitis.va.gov/alcohol/treatment/audit-c.asp",
+        "参考URL: https://kurihama.hosp.go.jp/hospital/screening/audit-c.html",
+        "カットオフポイント: 海外基準 男性4点以上、女性3点以上、日本基準 男性6点以上、女性4点以上、VA/DoD基準 5点以上"
+    ],
+    "title": "AUDIT-C アルコール使用障害特定テスト短縮版",
+    "description": [
+        "アルコール使用障害特定テスト短縮版(AUDIT-C)です。",
+        "過去1年間の飲酒習慣について3つの質問にお答えください。"
+    ],
+    "responsible_person": [
+        "精神科医"
+    ],
+    "dept_in_charge": "精神科",
+    "fields": [
+        {
+            "name": "飲酒頻度",
+            "type": "radio",
+            "dispname": "あなたはアルコール含有飲料をどのくらいの頻度で飲みますか？",
+            "required": true,
+            "selector": [
+                "飲まない",
+                "1か月に1回以下",
+                "1か月に2～4回",
+                "1週間に2～3回",
+                "1週間に4回以上"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "飲酒量",
+            "type": "radio",
+            "dispname": "飲酒をする日には通常どのくらいの量を飲みますか？",
+            "description": "※1ドリンク＝純アルコール10g（WHO基準）: ビール 250mL、日本酒1/2合、ワイングラス1杯程度",
+            "required": true,
+            "selector": [
+                "1～2ドリンク",
+                "3～4ドリンク",
+                "5～6ドリンク",
+                "7～9ドリンク",
+                "10ドリンク以上"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "大量飲酒頻度",
+            "type": "radio",
+            "dispname": "6ドリンク以上飲酒することがどのくらいの頻度でありますか？",
+            "description": "※女性・65歳以上の方は4ドリンク以上",
+            "required": true,
+            "selector": [
+                "ない",
+                "1か月に1回未満",
+                "1か月に1回",
+                "1週間に1回",
+                "毎日あるいはほとんど毎日"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "AUDIT-C総得点",
+            "type": "eval",
+            "dispname": "AUDIT-C総得点（0-12点）",
+            "formula": "[[飲酒頻度.index]] + [[飲酒量.index]] + [[大量飲酒頻度.index]]"
+        },
+        {
+            "name": "海外基準男性判定",
+            "type": "eval",
+            "dispname": "海外基準での男性リスク評価（4点以上で陽性）",
+            "formula": "[[AUDIT-C総得点]] >= 4 ? \"4点以上: 問題飲酒のリスクあり\" : \"3点以下: 低リスク\""
+        },
+        {
+            "name": "海外基準女性判定",
+            "type": "eval",
+            "dispname": "海外基準での女性リスク評価（3点以上で陽性）",
+            "formula": "[[AUDIT-C総得点]] >= 3 ? \"3点以上: 問題飲酒のリスクあり\" : \"2点以下: 低リスク\""
+        },
+        {
+            "name": "日本基準男性判定",
+            "type": "eval",
+            "dispname": "日本基準での男性リスク評価（6点以上で陽性）",
+            "formula": "[[AUDIT-C総得点]] >= 6 ? \"6点以上: 問題飲酒のリスクあり\" : \"5点以下: 低リスク\""
+        },
+        {
+            "name": "日本基準女性判定",
+            "type": "eval",
+            "dispname": "日本基準での女性リスク評価（4点以上で陽性）",
+            "formula": "[[AUDIT-C総得点]] >= 4 ? \"4点以上: 問題飲酒のリスクあり\" : \"3点以下: 低リスク\""
+        },
+        {
+            "name": "VA/DoD基準判定",
+            "type": "eval",
+            "dispname": "VA/DoD基準での評価（5点以上で陽性、2021年基準）",
+            "formula": "[[AUDIT-C総得点]] >= 5 ? \"5点以上: 不健康な飲酒使用\" : \"4点以下: 低リスク\""
+        }
+    ]
+}

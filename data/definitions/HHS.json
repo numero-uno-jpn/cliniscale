@@ -1,0 +1,331 @@
+{
+  "_comment": [
+    "Harris Hip Score (HHS)",
+    "股関節機能評価",
+    "原著論文: Harris WH. J Bone Joint Surg Am. 1969;51(4):737-55.",
+    "PubMed: https://pubmed.ncbi.nlm.nih.gov/5783851/",
+    "Physiopedia: https://www.physio-pedia.com/Harris_Hip_Score"
+  ],
+  "title": "Harris股関節スコア (HHS)",
+  "description": [
+    "股関節の痛み、機能、変形、可動域を総合的に評価します",
+    "0-100点で評価し、高得点ほど良好な股関節機能を示します"
+  ],
+  "responsible_person": [
+    "整形外科医"
+  ],
+  "dept_in_charge": "整形外科",
+  "fields": [
+    {
+      "dispname": "基本情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "評価日",
+      "name": "評価日",
+      "type": "date",
+      "format": "YYYY/MM/DD"
+    },
+    {
+      "dispname": "評価側",
+      "name": "評価側",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "右|左",
+      "selectoridx": "1|2"
+    },
+    {
+      "dispname": "I. 痛み（44点）",
+      "type": "subsection"
+    },
+    {
+      "dispname": "痛みの程度",
+      "name": "痛み",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "痛みなし",
+        "わずか、時々、活動に支障なし",
+        "軽度、普通の活動に支障なし、時々鎮痛薬",
+        "中等度、活動に多少支障あり、鎮痛薬常用",
+        "顕著、重度の活動制限",
+        "完全に障害、臥床状態"
+      ],
+      "selectoridx": "44|40|30|20|10|0",
+      "description": "過去1週間の痛みの程度"
+    },
+    {
+      "dispname": "II. 機能（47点）",
+      "type": "subsection"
+    },
+    {
+      "dispname": "A. 日常生活動作",
+      "type": "subsection"
+    },
+    {
+      "dispname": "跛行",
+      "name": "跛行",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "わずか",
+        "中等度",
+        "重度"
+      ],
+      "selectoridx": "11|8|5|0"
+    },
+    {
+      "dispname": "支持の必要性",
+      "name": "支持",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "長距離歩行時に杖",
+        "ほとんどの時間に杖",
+        "1本の松葉杖",
+        "2本の杖",
+        "2本の松葉杖または歩行不能"
+      ],
+      "selectoridx": "11|7|5|3|2|0"
+    },
+    {
+      "dispname": "歩行距離",
+      "name": "歩行距離",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "無制限",
+        "6ブロック",
+        "2-3ブロック",
+        "屋内のみ",
+        "ベッドと椅子のみ"
+      ],
+      "selectoridx": "11|8|5|2|0",
+      "description": "1ブロック約100m"
+    },
+    {
+      "dispname": "B. 動作能力",
+      "type": "subsection"
+    },
+    {
+      "dispname": "階段昇降",
+      "name": "階段",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "手すりなしで正常",
+        "手すりあれば正常",
+        "いずれにしても困難",
+        "不能"
+      ],
+      "selectoridx": "4|2|1|0"
+    },
+    {
+      "dispname": "靴下・靴の着脱",
+      "name": "靴下着脱",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "容易",
+        "困難",
+        "不能"
+      ],
+      "selectoridx": "4|2|0"
+    },
+    {
+      "dispname": "座位",
+      "name": "座位",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "どんな椅子でも1時間",
+        "高い椅子で30分",
+        "座位不能"
+      ],
+      "selectoridx": "5|3|0"
+    },
+    {
+      "dispname": "公共交通機関の利用",
+      "name": "公共交通",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "可能",
+        "不能"
+      ],
+      "selectoridx": "1|0"
+    },
+    {
+      "dispname": "III. 変形（4点）",
+      "type": "subsection"
+    },
+    {
+      "dispname": "屈曲拘縮",
+      "name": "屈曲拘縮",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "30度未満|30度以上",
+      "selectoridx": "1|0"
+    },
+    {
+      "dispname": "内転拘縮",
+      "name": "内転拘縮",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "10度未満|10度以上",
+      "selectoridx": "1|0"
+    },
+    {
+      "dispname": "内旋拘縮",
+      "name": "内旋拘縮",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "10度未満|10度以上",
+      "selectoridx": "1|0"
+    },
+    {
+      "dispname": "脚長差",
+      "name": "脚長差",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "3.2cm未満|3.2cm以上",
+      "selectoridx": "1|0"
+    },
+    {
+      "dispname": "IV. 可動域（5点）",
+      "type": "subsection"
+    },
+    {
+      "dispname": "屈曲",
+      "name": "屈曲",
+      "type": "text",
+      "required": true,
+      "postfix": "度",
+      "inputmode": "numeric",
+      "testrange": [
+        0,
+        140
+      ],
+      "description": "屈曲角度を半角数字で入力してください（例: 90）"
+    },
+    {
+      "dispname": "外転",
+      "name": "外転",
+      "type": "text",
+      "required": true,
+      "postfix": "度",
+      "inputmode": "numeric",
+      "testrange": [
+        0,
+        50
+      ],
+      "description": "外転角度を半角数字で入力してください（例: 30）"
+    },
+    {
+      "dispname": "外旋",
+      "name": "外旋",
+      "type": "text",
+      "required": true,
+      "postfix": "度",
+      "inputmode": "numeric",
+      "testrange": [
+        0,
+        50
+      ],
+      "description": "外旋角度を半角数字で入力してください（例: 30）"
+    },
+    {
+      "dispname": "内旋",
+      "name": "内旋",
+      "type": "text",
+      "required": true,
+      "postfix": "度",
+      "inputmode": "numeric",
+      "testrange": [
+        0,
+        50
+      ],
+      "description": "内旋角度を半角数字で入力してください（例: 30）"
+    },
+    {
+      "dispname": "内転",
+      "name": "内転",
+      "type": "text",
+      "required": true,
+      "postfix": "度",
+      "inputmode": "numeric",
+      "testrange": [
+        0,
+        50
+      ],
+      "description": "内転角度を半角数字で入力してください（例: 20）"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "痛みスコア",
+      "type": "eval",
+      "formula": "[[痛み.index]]"
+    },
+    {
+      "name": "機能スコア",
+      "type": "eval",
+      "formula": "[[跛行.index]] + [[支持.index]] + [[歩行距離.index]] + [[階段.index]] + [[靴下着脱.index]] + [[座位.index]] + [[公共交通.index]]"
+    },
+    {
+      "name": "変形スコア",
+      "type": "eval",
+      "formula": "[[屈曲拘縮.index]] + [[内転拘縮.index]] + [[内旋拘縮.index]] + [[脚長差.index]]"
+    },
+    {
+      "name": "可動域合計角度",
+      "type": "eval",
+      "formula": "[[屈曲]] + [[外転]] + [[外旋]] + [[内旋]] + [[内転]]"
+    },
+    {
+      "name": "可動域スコア",
+      "type": "eval",
+      "formula": "[[可動域合計角度]] * 0.047"
+    },
+    {
+      "name": "HHS合計スコア",
+      "type": "eval",
+      "formula": "[[痛みスコア]] + [[機能スコア]] + [[変形スコア]] + [[可動域スコア]]"
+    },
+    {
+      "name": "評価結果",
+      "type": "eval",
+      "formula": "[[HHS合計スコア]] >= 90 ? '優秀' : ( [[HHS合計スコア]] >= 80 ? '良好' : ( [[HHS合計スコア]] >= 70 ? '普通' : '不良' ) )"
+    },
+    {
+      "name": "Warning: 不良な股関節機能",
+      "formula": "[[HHS合計スコア]] < 70",
+      "type": "warning",
+      "description": "不良な股関節機能"
+    },
+    {
+      "name": "Emergency: 著しく不良",
+      "formula": "[[HHS合計スコア]] < 50",
+      "type": "emergency",
+      "description": "著しく不良な股関節機能"
+    },
+    {
+      "dispname": "追加情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "その他の所見・コメント",
+      "name": "その他所見",
+      "type": "textarea",
+      "rows": 5
+    }
+  ]
+}

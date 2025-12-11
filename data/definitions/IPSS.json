@@ -1,0 +1,191 @@
+{
+    "_comment": [
+        "IPSS (International Prostate Symptom Score) - 国際前立腺症状スコア",
+        "原典: The American Urological Association symptom index for benign prostatic hyperplasia. The Measurement Committee of the American Urological Association. J Urol. 1992 Nov;148(5):1549-57. PMID: 1279218",
+        "日本語版妥当性: International Prostate Symptom ScoreとBPH Impact Indexの日本語訳の言語的妥当性に関する研究. 日泌尿会誌 2002; 93: 669–680",
+        "前立腺肥大症や前立腺癌に対する症状評価法",
+        "7項目の症状スコア(0-35点)とQOLスコア(0-6点)で構成",
+        "日本語版は日本泌尿器科学会により言語的妥当性が検証済み",
+        "選択肢は公式日本語版チェックシート（キッセイ薬品）に準拠"
+    ],
+    "title": "IPSS 国際前立腺症状スコア",
+    "description": [
+        "前立腺肥大症の症状評価のための国際標準問診票",
+        "過去1ヶ月間の排尿症状について回答してください"
+    ],
+    "fields": [
+        {
+            "dispname": "症状評価項目",
+            "type": "subsection"
+        },
+        {
+            "description": "この1か月の間に、尿をしたあとにまだ尿が残っている感じがありましたか",
+            "dispname": "残尿感",
+            "name": "残尿感",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "5回に1回の割合より少ない",
+                "2回に1回の割合より少ない",
+                "2回に1回の割合くらい",
+                "2回に1回の割合より多い",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "description": "この1か月の間に、尿をしてから2時間以内にもう一度しなくてはならないことがありましたか",
+            "dispname": "頻尿",
+            "name": "頻尿",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "5回に1回の割合より少ない",
+                "2回に1回の割合より少ない",
+                "2回に1回の割合くらい",
+                "2回に1回の割合より多い",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "description": "この1か月の間に、尿をしている間に尿が何度もとぎれることがありましたか",
+            "dispname": "尿線途絶",
+            "name": "尿線途絶",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "5回に1回の割合より少ない",
+                "2回に1回の割合より少ない",
+                "2回に1回の割合くらい",
+                "2回に1回の割合より多い",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "description": "この1か月の間に、尿を我慢するのが難しいことがありましたか",
+            "dispname": "尿意切迫感",
+            "name": "尿意切迫感",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "5回に1回の割合より少ない",
+                "2回に1回の割合より少ない",
+                "2回に1回の割合くらい",
+                "2回に1回の割合より多い",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "description": "この1か月の間に、尿の勢いが弱いことがありましたか",
+            "dispname": "尿勢低下",
+            "name": "尿勢低下",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "5回に1回の割合より少ない",
+                "2回に1回の割合より少ない",
+                "2回に1回の割合くらい",
+                "2回に1回の割合より多い",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "description": "この1か月の間に、尿をし始めるためにおなかに力を入れることがありましたか",
+            "dispname": "腹圧排尿",
+            "name": "腹圧排尿",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "5回に1回の割合より少ない",
+                "2回に1回の割合より少ない",
+                "2回に1回の割合くらい",
+                "2回に1回の割合より多い",
+                "ほとんどいつも"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "description": "この1か月の間に、夜寝てから朝起きるまでに、ふつう何回尿をするために起きましたか",
+            "dispname": "夜間排尿回数",
+            "name": "夜間排尿回数",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "0回",
+                "1回",
+                "2回",
+                "3回",
+                "4回",
+                "5回以上"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "type": "separator"
+        },
+        {
+            "dispname": "生活の質評価",
+            "type": "subsection"
+        },
+        {
+            "description": "現在の尿の状態がこのまま変わらずに続くとしたら、どう思いますか",
+            "dispname": "QOLスコア",
+            "name": "QOLスコア",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "とても満足",
+                "満足",
+                "ほぼ満足",
+                "なんともいえない",
+                "やや不満",
+                "いやだ",
+                "とてもいやだ"
+            ],
+            "selectoridx": "0|1|2|3|4|5|6"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "症状スコア合計",
+            "type": "eval",
+            "dispname": "症状スコア合計 (0-35点)",
+            "formula": "[[残尿感.index]] + [[頻尿.index]] + [[尿線途絶.index]] + [[尿意切迫感.index]] + [[尿勢低下.index]] + [[腹圧排尿.index]] + [[夜間排尿回数.index]]"
+        },
+        {
+            "name": "症状重症度",
+            "type": "eval",
+            "dispname": "症状重症度分類",
+            "formula": "[[症状スコア合計]] <= 7 ? '軽症' : ( [[症状スコア合計]] <= 19 ? '中等症' : '重症' )"
+        },
+        {
+            "name": "QOL重症度",
+            "type": "eval",
+            "dispname": "QOL重症度分類",
+            "formula": "[[QOLスコア.index]] <= 1 ? 'QOL軽度' : ( [[QOLスコア.index]] <= 4 ? 'QOL中等度' : 'QOL高度' )"
+        },
+        {
+            "name": "Warning: 中等症以上 症状スコア合計 >= 8",
+            "type": "warning",
+            "description": "中等症以上の症状を認めます",
+            "formula": "[[症状スコア合計]] >= 8"
+        },
+        {
+            "name": "Emergency: 重症 症状スコア合計 >= 20",
+            "type": "emergency",
+            "description": "重症の症状を認めます",
+            "formula": "[[症状スコア合計]] >= 20"
+        }
+    ]
+}

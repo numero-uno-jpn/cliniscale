@@ -1,0 +1,148 @@
+{
+    "_comment": [
+        "不眠症重症度指標 (Insomnia Severity Index; ISI)",
+        "開発者: Charles M. Morin (1993)",
+        "原典: Morin CM. Insomnia: Psychological assessment and management. New York: Guilford Press; 1993.",
+        "妥当性研究: Bastien CH, Vallières A, Morin CM. Validation of the Insomnia Severity Index as an outcome measure for insomnia research. Sleep Med. 2001;2(4):297-307.",
+        "日本語版: 宗澤岳史ら. 日本語版不眠重症度質問票の開発. 精神科治療学. 2009;24(2):219-225.",
+        "著作権: © Morin, C.M. (1993, 1996)",
+        "URL: https://eprovide.mapi-trust.org/instruments/insomnia-severity-index"
+    ],
+    "title": "ISI 不眠症重症度指標",
+    "description": [
+        "過去2週間の不眠症状とその日常生活への影響について評価します。",
+        "各質問について最も適切な回答を選択してください。"
+    ],
+    "fields": [
+        {
+            "dispname": "入眠困難の程度",
+            "name": "Q1",
+            "type": "radio",
+            "required": true,
+            "description": "過去2週間において、寝つきの悪さはどの程度でしたか。",
+            "selector": [
+                "まったくなし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極めて重度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "睡眠維持困難の程度",
+            "name": "Q2",
+            "type": "radio",
+            "required": true,
+            "description": "過去2週間において、夜中に目が覚めてしまうことはどの程度でしたか。",
+            "selector": [
+                "まったくなし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極めて重度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "早朝覚醒の程度",
+            "name": "Q3",
+            "type": "radio",
+            "required": true,
+            "description": "過去2週間において、朝早く目が覚めてしまうことはどの程度でしたか。",
+            "selector": [
+                "まったくなし",
+                "軽度",
+                "中等度",
+                "重度",
+                "極めて重度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "睡眠パターンへの満足度",
+            "name": "Q4",
+            "type": "radio",
+            "required": true,
+            "description": "現在の睡眠パターンについて、どの程度満足していますか。",
+            "selector": [
+                "非常に満足",
+                "満足",
+                "どちらでもない",
+                "不満",
+                "非常に不満"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "機能的影響の程度",
+            "name": "Q5",
+            "type": "radio",
+            "required": true,
+            "description": "睡眠の問題は、日中の疲労感、気分、集中力、記憶、仕事や日常の活動能力など、あなたの日常機能をどの程度妨げていますか。",
+            "selector": [
+                "まったく妨げていない",
+                "少し妨げている",
+                "やや妨げている",
+                "かなり妨げている",
+                "非常に妨げている"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "睡眠問題の目立ち具合",
+            "name": "Q6",
+            "type": "radio",
+            "required": true,
+            "description": "睡眠の問題は、あなたの日常生活の質をどの程度損なっていると他の人から見られていると思いますか。",
+            "selector": [
+                "まったく目立たない",
+                "少し目立つ",
+                "やや目立つ",
+                "かなり目立つ",
+                "非常に目立つ"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "睡眠問題への心配",
+            "name": "Q7",
+            "type": "radio",
+            "required": true,
+            "description": "現在の睡眠の問題について、どの程度心配していますか。",
+            "selector": [
+                "まったく心配していない",
+                "少し心配",
+                "やや心配",
+                "かなり心配",
+                "非常に心配"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "ISI_total",
+            "type": "eval",
+            "formula": "[[Q1.index]] + [[Q2.index]] + [[Q3.index]] + [[Q4.index]] + [[Q5.index]] + [[Q6.index]] + [[Q7.index]]",
+            "dispname": "ISI合計得点"
+        },
+        {
+            "name": "ISI_severity",
+            "type": "eval",
+            "formula": "[[ISI_total]] <= 7 ? '正常範囲（臨床的に有意な不眠症なし）' : ([[ISI_total]] <= 14 ? '閾値下の不眠症' : ([[ISI_total]] <= 21 ? '中等度の臨床的不眠症' : '重度の臨床的不眠症'))",
+            "dispname": "不眠症の重症度分類"
+        },
+        {
+            "name": "Warning: 中等度以上の不眠症が疑われます",
+            "formula": "[[ISI_total]] >= 15",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 重度の不眠症が疑われます",
+            "formula": "[[ISI_total]] >= 22",
+            "type": "emergency"
+        }
+    ]
+}

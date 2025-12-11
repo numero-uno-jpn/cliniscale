@@ -1,0 +1,976 @@
+{
+    "_comment": [
+        "16Personalities様式性格診断問診票（5軸版）",
+        "注意: 本問診票は16Personalitiesを参考とした独自診断であり、正式なMBTIではありません",
+        "参考: 16Personalities、心理学的タイプ論+Big Five要素による質問項目構成",
+        "理論基盤: Carl Jung心理学的タイプ論 + Big Five神経症傾向",
+        "URL: https://www.16personalities.com/ja",
+        "日本MBTI協会: https://www.mbti.or.jp/"
+    ],
+    "title": "16Personalities様式性格診断問診票",
+    "description": [
+        "<h3>5軸による32タイプ性格診断問診票</h3>",
+        "この診断では、あなたの性格を32のタイプのいずれかに分類します。",
+        "外向-内向、感覚-直観、思考-感情、判断-知覚、自己主張-慎重の5つの軸を測定します。",
+        "各質問に対して、あなたにより当てはまると思われる選択肢を選んでください。",
+        "<strong>注意: これは 16Personalities を参考とした独自診断であり、正式なMBTIではありません。</strong>"
+    ],
+    "contact": "問診担当者",
+    "dept_in_charge": "心理評価部門",
+    "responsible_person": [
+        "担当医師",
+        "心理士"
+    ],
+    "submit_button_title": "診断結果を確認する",
+    "translate": "major",
+    "fields": [
+        {
+            "dispname": "基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "年齢",
+            "name": "年齢",
+            "type": "text",
+            "inputmode": "numeric",
+            "postfix": "歳",
+            "testrange": [
+                18,
+                90
+            ],
+            "required": true
+        },
+        {
+            "dispname": "性別",
+            "name": "性別",
+            "type": "radio",
+            "selector": [
+                "男性",
+                "女性",
+                "その他"
+            ],
+            "inline": true,
+            "required": true
+        },
+        {
+            "dispname": "外向性-内向性の評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "新しい友人を作ることを心がけている",
+            "name": "Q1",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "人脈を広げたり見知らぬ人に自分を売り込むことは大変だと感じる",
+            "name": "Q2",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "興味のある人のところに行って話しかけるのは簡単",
+            "name": "Q3",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "チームで何かをするのが好き",
+            "name": "Q4",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "趣味やアクティビティは一人で行うものの方が楽しい",
+            "name": "Q5",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "社交の場では最初に他の人が自己紹介するのを待つ",
+            "name": "Q6",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "一人でいるより人と一緒にいる方が好き",
+            "name": "Q7",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "友達から活発で社交的であると言われる",
+            "name": "Q8",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "電話をかけるのを避けがち",
+            "name": "Q9",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "初対面の人とも簡単に接することができる",
+            "name": "Q10",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "単独で作業する仕事につくことを望んでいる",
+            "name": "Q11",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "静かな隠れ家のような場所より人が沢山いて賑やかな雰囲気の方が好き",
+            "name": "Q12",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "感覚-直観の評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "複雑で斬新なアイデアよりも単純明快なアイデアの方が好き",
+            "name": "Q13",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "クリエイティブな作品の様々な解釈の仕方に関する議論には興味がない",
+            "name": "Q14",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "未経験の新しいアプローチを試すことを楽しむ",
+            "name": "Q15",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "新しい経験や知識分野を積極的に追求する",
+            "name": "Q16",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "生計を立てるために架空の物語を書いている自分を想像することは不可能",
+            "name": "Q17",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "文章を書くなど様々な創造的表現に惹かれる",
+            "name": "Q18",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "馴染みのないアイデアや視点を探求することを楽しんでいる",
+            "name": "Q19",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "将来的な世界動向の理論を議論することにはあまり興味を持たない",
+            "name": "Q20",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "抽象的な哲学的問題についてじっくり考えるのは時間の無駄だと思う",
+            "name": "Q21",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "具体的な手順を踏むよりも創造的な解決策を考える必要がある仕事を好む",
+            "name": "Q22",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "思考-感情の評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "事実に基づいた議論よりも感情的に響くものに説得力を感じる",
+            "name": "Q23",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "数字やデータより人々の物語や感情の方が力強く響く",
+            "name": "Q24",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "行動方針を決めるとき他人の感情より事実を大切にする",
+            "name": "Q25",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "完全に正直であることよりも思いやりを持つことを優先する",
+            "name": "Q26",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "感情的な面を多少無視してでも効率的な決断を好む",
+            "name": "Q27",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "意見の相違がある場合他人の感情を守ることよりも自分の意見を証明することを優先する",
+            "name": "Q28",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "感情的な議論には簡単に動かされない",
+            "name": "Q29",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "議論がとても理論的になると退屈に感じたり興味を失ったりする",
+            "name": "Q30",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "事実と感情が相反する場合たいてい自分の心に従う",
+            "name": "Q31",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "感情的な印象よりも客観的な事実に基づいて選択する",
+            "name": "Q32",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "感情をコントロールするのではなく感情にコントロールされている",
+            "name": "Q33",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "意思決定をする際は最も論理的で効率的な方法よりも影響を受ける人達がどう感じるかを重視する",
+            "name": "Q34",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "選択をする際は論理的な推論よりも感情的な直感に頼る傾向がある",
+            "name": "Q35",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "判断-知覚の評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "生活と仕事のスペースは清潔で整理整頓されている",
+            "name": "Q36",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "仕事に優先順位をつけ効率的に計画を立て期限よりかなり前に完了させることが多い",
+            "name": "Q37",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "予定表やリストなどの整理・管理ツールを使うのが好き",
+            "name": "Q38",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "何の予定もなく一日を過ごすことがよくある",
+            "name": "Q39",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "やらなければいけないことをしてからリラックスするのが好き",
+            "name": "Q40",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "ギリギリのタイミングで最後にやっと何かを行うことが多い",
+            "name": "Q41",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "仕事や勉強のスケジュールを一定に保つことが難しいと思う",
+            "name": "Q42",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "日々のToDoリストを作ることが好き",
+            "name": "Q43",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "計画が途中で中断された場合最も重要なのはできる限り迅速に再び軌道に乗せること",
+            "name": "Q44",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "仕事のスタイルは『きちんと着実に努力する』ではなく『自然発生するエネルギー爆発の連続』に近い",
+            "name": "Q45",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "いずれかのステップを省くことなく順序を追って念入りに行う",
+            "name": "Q46",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "締め切りを守るのが苦手",
+            "name": "Q47",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "自己主張-慎重の評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "大きなプレッシャーがあっても通常冷静でいられる",
+            "name": "Q48",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "些細なことでも間違えると自分の能力と知識全般を疑ってしまう",
+            "name": "Q49",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "会う人に好印象を残すかどうかはほとんど気にしない",
+            "name": "Q50",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "物事が悪い方向に向かうのではないかと心配しがち",
+            "name": "Q51",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "とても急に機嫌が変わることがある",
+            "name": "Q52",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "一度決めたらその決断を疑うことはほとんどない",
+            "name": "Q53",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "不安はほとんど感じない",
+            "name": "Q54",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "ずっと前に自分がした間違いをまだ気にしている",
+            "name": "Q55",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "誰かに高く評価されるとその人が自分に落胆するのにどれくらい時間がかかるか考えてしまう",
+            "name": "Q56",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "ある決断が自分にとって正しいと感じればそれ以上の証拠を必要とせずに行動することが多い",
+            "name": "Q57",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "重圧で押しつぶされそうだとよく感じる",
+            "name": "Q58",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "ものごとはうまくいくだろうと自信がある",
+            "name": "Q59",
+            "type": "radio",
+            "selector": [
+                "全く当てはまらない",
+                "あまり当てはまらない",
+                "どちらでもない",
+                "やや当てはまる",
+                "非常に当てはまる"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "description": "外向性-内向性スコア計算",
+            "name": "E_I_スコア",
+            "type": "eval",
+            "formula": "[[Q1.index]] + [[Q2.index]] + [[Q3.index]] + [[Q4.index]] + [[Q5.index]] + [[Q6.index]] + [[Q7.index]] + [[Q8.index]] + [[Q9.index]] + [[Q10.index]] + [[Q11.index]] + [[Q12.index]]",
+            "noreport": true
+        },
+        {
+            "description": "感覚-直観スコア計算",
+            "name": "S_N_スコア",
+            "type": "eval",
+            "formula": "[[Q13.index]] + [[Q14.index]] + [[Q15.index]] + [[Q16.index]] + [[Q17.index]] + [[Q18.index]] + [[Q19.index]] + [[Q20.index]] + [[Q21.index]] + [[Q22.index]]",
+            "noreport": true
+        },
+        {
+            "description": "思考-感情スコア計算",
+            "name": "T_F_スコア",
+            "type": "eval",
+            "formula": "[[Q23.index]] + [[Q24.index]] + [[Q25.index]] + [[Q26.index]] + [[Q27.index]] + [[Q28.index]] + [[Q29.index]] + [[Q30.index]] + [[Q31.index]] + [[Q32.index]] + [[Q33.index]] + [[Q34.index]] + [[Q35.index]]",
+            "noreport": true
+        },
+        {
+            "description": "判断-知覚スコア計算",
+            "name": "J_P_スコア",
+            "type": "eval",
+            "formula": "[[Q36.index]] + [[Q37.index]] + [[Q38.index]] + [[Q39.index]] + [[Q40.index]] + [[Q41.index]] + [[Q42.index]] + [[Q43.index]] + [[Q44.index]] + [[Q45.index]] + [[Q46.index]] + [[Q47.index]]",
+            "noreport": true
+        },
+        {
+            "description": "自己主張-慎重スコア計算",
+            "name": "A_T_スコア",
+            "type": "eval",
+            "formula": "[[Q48.index]] + [[Q49.index]] + [[Q50.index]] + [[Q51.index]] + [[Q52.index]] + [[Q53.index]] + [[Q54.index]] + [[Q55.index]] + [[Q56.index]] + [[Q57.index]] + [[Q58.index]] + [[Q59.index]]",
+            "noreport": true
+        },
+        {
+            "dispname": "外向性-内向性判定",
+            "name": "外向内向",
+            "type": "eval",
+            "formula": "[[E_I_スコア]] >= 36 ? 'E（外向型）' : 'I（内向型）'"
+        },
+        {
+            "dispname": "感覚-直観判定",
+            "name": "感覚直観",
+            "type": "eval",
+            "formula": "[[S_N_スコア]] >= 30 ? 'S（感覚型）' : 'N（直観型）'"
+        },
+        {
+            "dispname": "思考-感情判定",
+            "name": "思考感情",
+            "type": "eval",
+            "formula": "[[T_F_スコア]] >= 39 ? 'T（思考型）' : 'F（感情型）'"
+        },
+        {
+            "dispname": "判断-知覚判定",
+            "name": "判断知覚",
+            "type": "eval",
+            "formula": "[[J_P_スコア]] >= 36 ? 'J（判断型）' : 'P（知覚型）'"
+        },
+        {
+            "dispname": "自己主張-慎重判定",
+            "name": "自己主張慎重",
+            "type": "eval",
+            "formula": "[[A_T_スコア]] >= 36 ? 'A（自己主張型）' : 'T（慎重型）'"
+        },
+        {
+            "dispname": "性格タイプ",
+            "name": "性格タイプ",
+            "type": "eval",
+            "formula": "({{外向内向}}.charAt(0)) + ({{感覚直観}}.charAt(0)) + ({{思考感情}}.charAt(0)) + ({{判断知覚}}.charAt(0)) + '-' + ({{自己主張慎重}}.charAt(0))"
+        }
+    ]
+}

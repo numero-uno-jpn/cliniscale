@@ -1,0 +1,134 @@
+{
+  "_comment": [
+    "Rockall Score",
+    "上部消化管出血の死亡・再出血リスク評価スコア",
+    "原典: Rockall TA, Logan RF, Devlin HB, Northfield TC. Risk assessment after acute upper gastrointestinal haemorrhage. Gut. 1996 Mar;38(3):316-21. PMID: 8675081",
+    "Clinical Rockall Score (0-7点): 年齢、ショック、併存症",
+    "Complete Rockall Score (0-11点): 上記＋内視鏡診断、出血兆候",
+    "低リスク: Clinical 0点、Complete ≤2点",
+    "高リスク: ≥3点で死亡率・再出血率増加",
+    "注: 併存症のスコアは0, 2, 3のみ（1は存在しない）- 原典通り"
+  ],
+  "title": "Rockall Score上部消化管出血リスク評価",
+  "description": [
+    "上部消化管出血の死亡・再出血リスクを評価するスコアです。",
+    "年齢、循環動態、併存症、内視鏡所見から総合的にリスクを判定します。"
+  ],
+  "translate": "major",
+  "fields": [
+    {
+      "dispname": "基本情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "年齢",
+      "name": "年齢",
+      "type": "radio",
+      "required": true,
+      "selector": "60歳未満|60歳以上80歳未満|80歳以上",
+      "selectoridx": "0|1|2",
+      "description": "患者の年齢を選択"
+    },
+    {
+      "dispname": "循環動態・ショックの有無",
+      "name": "ショック",
+      "type": "radio",
+      "required": true,
+      "selector": "ショックなし（収縮期血圧≧100mmHg かつ 心拍数＜100回/分）|頻脈（収縮期血圧≧100mmHg かつ 心拍数≧100回/分）|血圧低下（収縮期血圧＜100mmHg）",
+      "selectoridx": "0|1|2",
+      "description": "来院時の循環動態"
+    },
+    {
+      "dispname": "併存症",
+      "name": "併存症",
+      "type": "radio",
+      "required": true,
+      "selector": "重大な併存症なし|虚血性心疾患またはうっ血性心不全|腎不全、肝不全、または播種性悪性腫瘍",
+      "selectoridx": "0|2|3",
+      "description": "既往歴・併存症（注: スコアは0, 2, 3点のみ）"
+    },
+    {
+      "dispname": "内視鏡検査実施の有無",
+      "name": "内視鏡実施",
+      "type": "radio",
+      "required": true,
+      "selector": "実施していない|実施済み",
+      "description": "内視鏡検査の実施状況"
+    },
+    {
+      "dispname": "内視鏡診断",
+      "name": "内視鏡診断",
+      "type": "radio",
+      "parentname": "内視鏡実施",
+      "parentsel": "実施済み",
+      "selector": "Mallory-Weiss裂傷/異常所見なし|その他の診断|上部消化管悪性腫瘍",
+      "selectoridx": "0|1|2",
+      "description": "内視鏡検査による診断"
+    },
+    {
+      "dispname": "主要な最近出血兆候",
+      "name": "出血兆候",
+      "type": "radio",
+      "parentname": "内視鏡実施",
+      "parentsel": "実施済み",
+      "selector": "観察時出血なしまたは黒色出血斑のみ|上部消化管出血、血塊、露出血管、または活動性出血",
+      "selectoridx": "0|2",
+      "description": "内視鏡検査時の出血兆候"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "内視鏡診断_index",
+      "type": "eval",
+      "formula": "[[内視鏡診断.index]]",
+      "noreport": true
+    },
+    {
+      "name": "出血兆候_index",
+      "type": "eval",
+      "formula": "[[出血兆候.index]]",
+      "noreport": true
+    },
+    {
+      "name": "Clinical_Rockall_Score",
+      "type": "eval",
+      "formula": "[[年齢.index]] + [[ショック.index]] + [[併存症.index]]",
+      "dispname": "Clinical Rockall Score (0-7点)"
+    },
+    {
+      "name": "Complete_Rockall_Score",
+      "type": "eval",
+      "formula": "{{内視鏡実施}} == '実施済み' ? [[Clinical_Rockall_Score]] + [[内視鏡診断_index]] + [[出血兆候_index]] : [[Clinical_Rockall_Score]]",
+      "dispname": "Complete Rockall Score (0-11点)"
+    },
+    {
+      "name": "リスク分類",
+      "type": "eval",
+      "formula": "{{内視鏡実施}} == '実施済み' ? ( [[Complete_Rockall_Score]] <= 2 ? '低リスク' : '高リスク' ) : ( [[Clinical_Rockall_Score]] == 0 ? '低リスク' : '中・高リスク' )",
+      "dispname": "死亡・再出血リスク評価"
+    },
+    {
+      "name": "死亡率推定",
+      "type": "eval",
+      "formula": "{{内視鏡実施}} == '実施済み' ? ( [[Complete_Rockall_Score]] <= 2 ? '0.3%' : ( [[Complete_Rockall_Score]] <= 4 ? '5-10%' : ( [[Complete_Rockall_Score]] <= 6 ? '15-25%' : '25%以上' ) ) ) : ( [[Clinical_Rockall_Score]] == 0 ? '0.2%' : ( [[Clinical_Rockall_Score]] <= 2 ? '2-5%' : ( [[Clinical_Rockall_Score]] == 3 ? '約10%' : '10%以上' ) ) )",
+      "dispname": "推定死亡率"
+    },
+    {
+      "name": "治療方針",
+      "type": "eval",
+      "formula": "{{リスク分類}} == '低リスク' ? '外来治療または早期退院を検討可能' : '入院管理・集中治療を検討'",
+      "dispname": "推奨治療方針"
+    },
+    {
+      "name": "Warning: Complete Rockall Score ≥ 3",
+      "formula": "[[Complete_Rockall_Score]] >= 3",
+      "type": "warning"
+    },
+    {
+      "name": "Emergency: Complete Rockall Score ≥ 6",
+      "formula": "[[Complete_Rockall_Score]] >= 6",
+      "type": "emergency"
+    }
+  ]
+}

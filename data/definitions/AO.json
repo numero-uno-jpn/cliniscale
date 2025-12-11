@@ -1,0 +1,108 @@
+{
+    "_comment": [
+        "AO/OTA Fracture and Dislocation Classification (2018)",
+        "原著論文: https://pubmed.ncbi.nlm.nih.gov/29283912/ (Meinberg 2018)",
+        "公式URL: https://classification.aoeducation.org/"
+    ],
+    "title": "AO骨折分類",
+    "description": [
+        "AO Foundation による骨折の階層的分類システムです",
+        "骨の部位、骨折のタイプ、グループ、サブグループで詳細に分類します"
+    ],
+    "fields": [
+        {
+            "dispname": "骨の部位",
+            "type": "subsection"
+        },
+        {
+            "dispname": "骨コード",
+            "name": "骨部位",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "11 - 上腕骨近位",
+                "12 - 上腕骨骨幹",
+                "13 - 上腕骨遠位",
+                "21 - 前腕骨近位",
+                "22 - 前腕骨骨幹",
+                "23 - 前腕骨遠位",
+                "31 - 大腿骨近位",
+                "32 - 大腿骨骨幹",
+                "33 - 大腿骨遠位",
+                "41 - 下腿骨近位",
+                "42 - 下腿骨骨幹",
+                "43 - 下腿骨遠位"
+            ],
+            "selectoridx": "11|12|13|21|22|23|31|32|33|41|42|43"
+        },
+        {
+            "dispname": "骨折のタイプ",
+            "type": "subsection"
+        },
+        {
+            "dispname": "骨折形態",
+            "name": "骨折タイプ",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "A - 単純骨折 (2骨片)",
+                "B - 楔状骨折 (3骨片、骨幹の連続性あり)",
+                "C - 複雑骨折 (3骨片以上、骨幹の連続性なし)"
+            ],
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "骨折のグループ",
+            "type": "subsection"
+        },
+        {
+            "dispname": "詳細分類グループ",
+            "name": "骨折グループ",
+            "type": "radio",
+            "required": true,
+            "description": "選択したタイプに応じた詳細グループを選択してください",
+            "selector": [
+                "1 - グループ1",
+                "2 - グループ2",
+                "3 - グループ3"
+            ],
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "骨折のサブグループ",
+            "type": "subsection"
+        },
+        {
+            "dispname": "サブグループ詳細",
+            "name": "骨折サブグループ",
+            "type": "radio",
+            "required": true,
+            "description": "さらに詳細な分類が必要な場合に選択してください",
+            "selector": [
+                "1 - サブグループ1",
+                "2 - サブグループ2",
+                "3 - サブグループ3"
+            ],
+            "selectoridx": "1|2|3"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "骨折タイプコード",
+            "type": "eval",
+            "formula": "{{骨折タイプ}}.split(' - ')[0]",
+            "noreport": true
+        },
+        {
+            "name": "AOコード",
+            "type": "eval",
+            "formula": "[[骨部位.index]] + {{骨折タイプコード}} + [[骨折グループ.index]] + '.' + [[骨折サブグループ.index]]"
+        },
+        {
+            "name": "骨折複雑度",
+            "type": "eval",
+            "formula": "{{骨折タイプコード}} == 'A' ? '単純骨折 - 保存的治療または最小侵襲手術' : ( {{骨折タイプコード}} == 'B' ? '楔状骨折 - 内固定が推奨される' : '複雑骨折 - 高度な外科的介入が必要' )"
+        }
+    ]
+}

@@ -1,0 +1,152 @@
+{
+  "_comment": [
+    "International Prognostic Index (IPI) for Lymphoma",
+    "悪性リンパ腫の予後予測",
+    "原著論文: Shipp MA, et al. N Engl J Med. 1993;329(14):987-94.",
+    "PubMed: https://pubmed.ncbi.nlm.nih.gov/8374536/",
+    "Wikipedia: https://en.wikipedia.org/wiki/International_Prognostic_Index"
+  ],
+  "title": "国際予後指数 (IPI)",
+  "description": [
+    "悪性リンパ腫の予後を予測する指標です",
+    "5つの因子により低・中・高リスクに分類します"
+  ],
+  "responsible_person": [
+    "血液内科医"
+  ],
+  "dept_in_charge": "血液内科",
+  "fields": [
+    {
+      "dispname": "基本情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "評価日",
+      "name": "評価日",
+      "type": "date",
+      "format": "YYYY/MM/DD"
+    },
+    {
+      "dispname": "診断名",
+      "name": "診断名",
+      "type": "text",
+      "required": true,
+      "description": "非ホジキンリンパ腫のサブタイプを記載"
+    },
+    {
+      "dispname": "IPI評価因子",
+      "type": "subsection"
+    },
+    {
+      "dispname": "1. 年齢",
+      "name": "年齢因子",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "60歳以下|60歳より上",
+      "selectoridx": "0|1",
+      "description": "年齢が60歳を超えているか"
+    },
+    {
+      "dispname": "2. 病期（Ann Arbor分類）",
+      "name": "病期因子",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "I-II期|III-IV期",
+      "selectoridx": "0|1",
+      "description": "病期がIII期またはIV期か"
+    },
+    {
+      "dispname": "3. 全身状態（ECOG Performance Status）",
+      "name": "ECOG因子",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "0: 全く問題なく活動できる",
+        "1: 肉体的に激しい活動は制限されるが、歩行可能で軽作業や座っての作業は可能",
+        "2: 歩行可能で自分の身の回りのことはすべて可能だが作業はできない、日中の50%以上はベッド外で過ごす",
+        "3: 限られた自分の身の回りのことしかできない、日中の50%以上をベッドか椅子で過ごす",
+        "4: 全く動けない、自分の身の回りのことは全くできない、完全にベッドか椅子で過ごす"
+      ],
+      "selectoridx": "0|0|1|1|1",
+      "description": "ECOG PSが2以上か"
+    },
+    {
+      "dispname": "4. 血清LDH",
+      "name": "LDH因子",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "正常範囲内|正常上限を超える",
+      "selectoridx": "0|1",
+      "description": "血清LDHが正常上限を超えているか"
+    },
+    {
+      "dispname": "5. 節外病変の数",
+      "name": "節外病変因子",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "0-1箇所|2箇所以上",
+      "selectoridx": "0|1",
+      "description": "節外病変が2箇所以上あるか"
+    },
+    {
+      "dispname": "追加情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "LDH値",
+      "name": "LDH値",
+      "type": "text",
+      "postfix": "U/L",
+      "inputmode": "numeric",
+      "description": "実測値を記載"
+    },
+    {
+      "dispname": "節外病変の部位",
+      "name": "節外病変部位",
+      "type": "textarea",
+      "rows": 3,
+      "description": "節外病変がある場合、部位を記載してください"
+    },
+    {
+      "dispname": "その他の所見・コメント",
+      "name": "その他所見",
+      "type": "textarea",
+      "rows": 5,
+      "description": "その他の臨床所見や特記事項を記載してください"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "IPIスコア",
+      "type": "eval",
+      "formula": "[[年齢因子.index]] + [[病期因子.index]] + [[ECOG因子.index]] + [[LDH因子.index]] + [[節外病変因子.index]]"
+    },
+    {
+      "name": "リスク分類",
+      "type": "eval",
+      "formula": "[[IPIスコア]] <= 1 ? '低リスク' : ( [[IPIスコア]] <= 3 ? '中リスク' : '高リスク' )"
+    },
+    {
+      "name": "予測5年生存率",
+      "type": "eval",
+      "formula": "[[IPIスコア]] == 0 ? '約84%' : ( [[IPIスコア]] == 1 ? '約70%' : ( [[IPIスコア]] == 2 ? '約50%' : ( [[IPIスコア]] == 3 ? '約43%' : ( [[IPIスコア]] == 4 ? '約26%' : '約13%' ) ) ) )"
+    },
+    {
+      "name": "Warning: 中リスク以上",
+      "formula": "[[IPIスコア]] >= 2",
+      "type": "warning",
+      "description": "中リスク以上"
+    },
+    {
+      "name": "Emergency: 高リスク",
+      "formula": "[[IPIスコア]] >= 4",
+      "type": "emergency",
+      "description": "高リスク"
+    }
+  ]
+}

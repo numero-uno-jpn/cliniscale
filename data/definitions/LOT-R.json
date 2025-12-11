@@ -1,0 +1,196 @@
+{
+    "_comment": [
+        "LOT-R（Life Orientation Test-Revised：改訂版楽観性尺度）",
+        "原典：Scheier, M. F., Carver, C. S., & Bridges, M. W. (1994). Distinguishing optimism from neuroticism (and trait anxiety, self-mastery, and self-esteem): A re-evaluation of the Life Orientation Test. Journal of Personality and Social Psychology, 67, 1063-1078.",
+        "日本語版：坂本真士・田中江里子（2002）. 改訂版楽観性尺度（the revised Life Orientation Test）の日本語版の検討. 健康心理学研究, 15(1), 59-69.",
+        "公式URL：https://www.psy.miami.edu/faculty/ccarver/lot-r.html",
+        "特徴：10項目（採点対象6項目：1,3,4,7,9,10、フィラー4項目：2,5,6,8）、5件法、楽観性・悲観性を測定",
+        "得点範囲：0-24点（6項目×最大4点）"
+    ],
+    "title": "LOT-R 楽観性尺度 改訂版",
+    "description": [
+        "このアンケートは、物事の捉え方について確認するためのものです。",
+        "各項目について、あなたの普段の考えに最も近い選択肢を選んでください。",
+        "正しい答えや間違った答えはありません。素直にお答えください。"
+    ],
+    "submit_button_title": "回答を送信",
+    "fields": [
+        {
+            "dispname": "質問1",
+            "name": "Q1",
+            "type": "radio",
+            "required": true,
+            "description": "はっきりしないときでも、ふだん私は最も良いことを期待している",
+            "selector": [
+                "全くそう思わない",
+                "あまりそう思わない",
+                "どちらでもない",
+                "ややそう思う",
+                "非常にそう思う"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "質問2",
+            "name": "Q2",
+            "type": "radio",
+            "required": true,
+            "description": "私はたやすくリラックスできる",
+            "selector": [
+                "全くそう思わない",
+                "あまりそう思わない",
+                "どちらでもない",
+                "ややそう思う",
+                "非常にそう思う"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "質問3",
+            "name": "Q3",
+            "type": "radio",
+            "required": true,
+            "description": "何か私にとってうまくいかなくなる可能性があれば、それはきっとそうなるものだ",
+            "selector": [
+                "全くそう思わない",
+                "あまりそう思わない",
+                "どちらでもない",
+                "ややそう思う",
+                "非常にそう思う"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "質問4",
+            "name": "Q4",
+            "type": "radio",
+            "required": true,
+            "description": "私は自分の将来についていつも楽観的である",
+            "selector": [
+                "全くそう思わない",
+                "あまりそう思わない",
+                "どちらでもない",
+                "ややそう思う",
+                "非常にそう思う"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "質問5",
+            "name": "Q5",
+            "type": "radio",
+            "required": true,
+            "description": "私にはたくさんの友人がいる",
+            "selector": [
+                "全くそう思わない",
+                "あまりそう思わない",
+                "どちらでもない",
+                "ややそう思う",
+                "非常にそう思う"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "質問6",
+            "name": "Q6",
+            "type": "radio",
+            "required": true,
+            "description": "忙しくあり続けることは私にとって大切である",
+            "selector": [
+                "全くそう思わない",
+                "あまりそう思わない",
+                "どちらでもない",
+                "ややそう思う",
+                "非常にそう思う"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "質問7",
+            "name": "Q7",
+            "type": "radio",
+            "required": true,
+            "description": "私はものごとが自分の思い通りにいくとはほとんど思っていない",
+            "selector": [
+                "全くそう思わない",
+                "あまりそう思わない",
+                "どちらでもない",
+                "ややそう思う",
+                "非常にそう思う"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "質問8",
+            "name": "Q8",
+            "type": "radio",
+            "required": true,
+            "description": "私は非常にたやすくとりみだしてしまうようなことはない",
+            "selector": [
+                "全くそう思わない",
+                "あまりそう思わない",
+                "どちらでもない",
+                "ややそう思う",
+                "非常にそう思う"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "質問9",
+            "name": "Q9",
+            "type": "radio",
+            "required": true,
+            "description": "良いことが私に起こるなんてほとんどあてにしていない",
+            "selector": [
+                "全くそう思わない",
+                "あまりそう思わない",
+                "どちらでもない",
+                "ややそう思う",
+                "非常にそう思う"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "質問10",
+            "name": "Q10",
+            "type": "radio",
+            "required": true,
+            "description": "概して、私は悪いことよりも良いことの方が自分の身に起こると思う",
+            "selector": [
+                "全くそう思わない",
+                "あまりそう思わない",
+                "どちらでもない",
+                "ややそう思う",
+                "非常にそう思う"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "楽観性得点",
+            "type": "eval",
+            "dispname": "楽観性得点（質問1, 4, 10の合計、範囲：0-12）",
+            "formula": "[[Q1.index]] + [[Q4.index]] + [[Q10.index]]"
+        },
+        {
+            "name": "悲観性得点",
+            "type": "eval",
+            "dispname": "悲観性得点（質問3, 7, 9の逆転項目合計、範囲：0-12）",
+            "formula": "( 4 - [[Q3.index]] ) + ( 4 - [[Q7.index]] ) + ( 4 - [[Q9.index]] )"
+        },
+        {
+            "name": "LOT-R総得点",
+            "type": "eval",
+            "dispname": "LOT-R総得点（楽観性得点 + 悲観性得点、範囲：0-24）",
+            "formula": "[[楽観性得点]] + [[悲観性得点]]"
+        },
+        {
+            "name": "解釈",
+            "type": "eval",
+            "dispname": "総得点の参考情報（高得点ほど楽観的、公式にはカットオフ値なし）",
+            "formula": "[[LOT-R総得点]] >= 18 ? '楽観的傾向（参考値）' : ( [[LOT-R総得点]] >= 12 ? '中程度（参考値）' : '悲観的傾向（参考値）' )"
+        }
+    ]
+}

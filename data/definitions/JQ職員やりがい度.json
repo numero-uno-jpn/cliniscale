@@ -1,0 +1,211 @@
+{
+    "_comment": [
+        "JQ職員やりがい度調査 - 日本医療機能評価機構 公式版",
+        "出典: 公益財団法人日本医療機能評価機構",
+        "満足度調査支援システム 統合版マニュアル（2021年7月1日版）",
+        "URL: https://www.jq-hyouka.jcqhc.or.jp/satisfaction/",
+        "質問項目は11項目固定で変更不可"
+    ],
+    "title": "JQ 職員やりがい度調査",
+    "description": [
+        "<h3>職員やりがい度調査へのご協力のお願い</h3>",
+        "当院では、より質の高い医療の提供を目指して、組織運営や職場環境の課題を把握するために、職員満足度調査を実施いたします。",
+        "回答は匿名で処理され、個人が特定されることはありません。",
+        "所要時間は3分程度です。ご協力をお願いいたします。"
+    ],
+    "contact": "満足度調査担当",
+    "dept_in_charge": "病院機能評価事業推進部",
+    "responsible_person": [
+        "病院長"
+    ],
+    "staffs": [
+        "人事担当者",
+        "質改善担当者"
+    ],
+    "submit_button_title": "調査を送信する",
+    "translate": "major",
+    "mail_notification": false,
+    "fields": [
+        {
+            "dispname": "回答者情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "性別",
+            "name": "性別",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "男性|女性"
+        },
+        {
+            "dispname": "年齢",
+            "name": "年齢",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "10代|20代|30代|40代|50代|60代|70代"
+        },
+        {
+            "dispname": "職種",
+            "name": "職種",
+            "type": "radio",
+            "required": true,
+            "selector": "医師|看護師|薬剤師|セラピスト|コメディカル|介護職員|事務|その他"
+        },
+        {
+            "dispname": "雇用区分",
+            "name": "雇用区分",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "常勤|非常勤"
+        },
+        {
+            "dispname": "やりがい度に関する質問",
+            "type": "subsection"
+        },
+        {
+            "dispname": "職場の雰囲気や人間関係は良好だと思いますか?",
+            "name": "Q1_雰囲気や人間関係",
+            "type": "radio",
+            "required": true,
+            "selector": "思う|まあまあ思う|どちらともいえない|あまり思わない|思わない",
+            "selectoridx": "5|4|3|2|1"
+        },
+        {
+            "dispname": "現在の仕事にやりがいがあると思いますか?",
+            "name": "Q2_仕事のやりがい",
+            "type": "radio",
+            "required": true,
+            "selector": "思う|まあまあ思う|どちらともいえない|あまり思わない|思わない",
+            "selectoridx": "5|4|3|2|1"
+        },
+        {
+            "dispname": "現在の処遇条件（報酬や福利厚生）を満足だと思いますか?",
+            "name": "Q3_処遇条件",
+            "type": "radio",
+            "required": true,
+            "selector": "思う|まあまあ思う|どちらともいえない|あまり思わない|思わない",
+            "selectoridx": "5|4|3|2|1"
+        },
+        {
+            "dispname": "現在の勤務条件（休日や勤務時間）を満足だと思いますか?",
+            "name": "Q4_勤務条件",
+            "type": "radio",
+            "required": true,
+            "selector": "思う|まあまあ思う|どちらともいえない|あまり思わない|思わない",
+            "selectoridx": "5|4|3|2|1"
+        },
+        {
+            "dispname": "学習や成長の機会があると思いますか?",
+            "name": "Q5_学習や成長",
+            "type": "radio",
+            "required": true,
+            "selector": "思う|まあまあ思う|どちらともいえない|あまり思わない|思わない",
+            "selectoridx": "5|4|3|2|1"
+        },
+        {
+            "dispname": "精神的な不安を感じずに仕事ができると思いますか?",
+            "name": "Q6_精神的な不安",
+            "type": "radio",
+            "required": true,
+            "selector": "思う|まあまあ思う|どちらともいえない|あまり思わない|思わない",
+            "selectoridx": "5|4|3|2|1"
+        },
+        {
+            "dispname": "仕事の成果や能力が適正に評価されていると思いますか?",
+            "name": "Q7_適正な評価",
+            "type": "radio",
+            "required": true,
+            "selector": "思う|まあまあ思う|どちらともいえない|あまり思わない|思わない",
+            "selectoridx": "5|4|3|2|1"
+        },
+        {
+            "dispname": "あなたの上司を信頼できると思いますか?",
+            "name": "Q8_上司への信頼",
+            "type": "radio",
+            "required": true,
+            "selector": "思う|まあまあ思う|どちらともいえない|あまり思わない|思わない",
+            "selectoridx": "5|4|3|2|1"
+        },
+        {
+            "dispname": "これからも、この病院・施設で働き続けたいと思いますか?",
+            "name": "Q9_勤続の意欲",
+            "type": "radio",
+            "required": true,
+            "selector": "思う|まあまあ思う|どちらともいえない|あまり思わない|思わない",
+            "selectoridx": "5|4|3|2|1"
+        },
+        {
+            "dispname": "病院・施設として、知人にすすめようと思いますか?",
+            "name": "Q10_医療介護の質",
+            "type": "radio",
+            "required": true,
+            "selector": "思う|まあまあ思う|どちらともいえない|あまり思わない|思わない",
+            "selectoridx": "5|4|3|2|1"
+        },
+        {
+            "dispname": "当院を職場として親しい人にすすめようと思いますか?（総合評価）",
+            "name": "Q11_総合評価",
+            "type": "radio",
+            "required": true,
+            "selector": "すすめる|まあまあすすめる|どちらともいえない|あまりすすめない|すすめない",
+            "selectoridx": "5|4|3|2|1",
+            "description": "この項目は必須回答項目です"
+        },
+        {
+            "dispname": "自由記述",
+            "type": "subsection"
+        },
+        {
+            "dispname": "当院の良いところはどこですか?",
+            "name": "良いところ",
+            "type": "textarea",
+            "rows": 4
+        },
+        {
+            "dispname": "当院の不満や改善してほしいところはどこですか?",
+            "name": "改善点",
+            "type": "textarea",
+            "rows": 4
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "やりがい度平均スコア",
+            "type": "eval",
+            "dispname": "やりがい度平均スコア（Q1-Q10の平均）",
+            "formula": "( ( ((Q1_雰囲気や人間関係.index)) + ((Q2_仕事のやりがい.index)) + ((Q3_処遇条件.index)) + ((Q4_勤務条件.index)) + ((Q5_学習や成長.index)) + ((Q6_精神的な不安.index)) + ((Q7_適正な評価.index)) + ((Q8_上司への信頼.index)) + ((Q9_勤続の意欲.index)) + ((Q10_医療介護の質.index)) ) / 10).toFixed(2)"
+        },
+        {
+            "name": "総合評価スコア",
+            "type": "eval",
+            "dispname": "総合評価スコア",
+            "formula": "((Q11_総合評価.index))"
+        },
+        {
+            "name": "全項目平均スコア",
+            "type": "eval",
+            "dispname": "全項目平均スコア（Q1-Q11の平均）",
+            "formula": "( ( ((Q1_雰囲気や人間関係.index)) + ((Q2_仕事のやりがい.index)) + ((Q3_処遇条件.index)) + ((Q4_勤務条件.index)) + ((Q5_学習や成長.index)) + ((Q6_精神的な不安.index)) + ((Q7_適正な評価.index)) + ((Q8_上司への信頼.index)) + ((Q9_勤続の意欲.index)) + ((Q10_医療介護の質.index)) + ((Q11_総合評価.index)) ) / 11).toFixed(2)"
+        },
+        {
+            "name": "満足度レベル",
+            "type": "eval",
+            "dispname": "満足度レベル評価",
+            "formula": "((全項目平均スコア)) >= 4.5 ? '非常に高い' : ((全項目平均スコア)) >= 3.5 ? '高い' : ((全項目平均スコア)) >= 2.5 ? '普通' : ((全項目平均スコア)) >= 1.5 ? '低い' : '非常に低い'"
+        },
+        {
+            "name": "Warning: やりがい度低下 平均スコア < 2.5",
+            "formula": "((全項目平均スコア)) < 2.5",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: やりがい度著しく低下 平均スコア < 2.0",
+            "formula": "((全項目平均スコア)) < 2.0",
+            "type": "emergency"
+        }
+    ]
+}

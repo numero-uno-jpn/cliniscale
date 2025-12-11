@@ -1,0 +1,188 @@
+{
+    "_comment": [
+        "更年期指数（SMI: Simplified Menopausal Index）",
+        "出典: 小山嵩夫ら 更年期婦人における漢方治療：簡略化した更年期指数による評価",
+        "産婦人科漢方研究のあゆみ 1992年 9巻 30-34頁",
+        "10項目の更年期症状を4段階で評価し、合計得点により5段階の重症度判定を行う",
+        "各項目の配点は内容により異なる（項目1,2: 0/3/6/10点、項目3,5: 0/5/9/14点、項目4,6: 0/4/8/12点、項目7,8,10: 0/3/5/7点、項目9: 0/2/4/7点）",
+        "最大合計得点: 100点"
+    ],
+    "title": "SMI 更年期指数",
+    "description": [
+        "更年期の症状の程度を評価する問診票です。",
+        "各症状について、現在の状態に最も近いものを選択してください。"
+    ],
+    "fields": [
+        {
+            "dispname": "顔がほてる",
+            "name": "Q1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "無",
+                "弱",
+                "中",
+                "強"
+            ],
+            "selectoridx": "0|3|6|10",
+            "inline": true
+        },
+        {
+            "dispname": "汗をかきやすい",
+            "name": "Q2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "無",
+                "弱",
+                "中",
+                "強"
+            ],
+            "selectoridx": "0|3|6|10",
+            "inline": true
+        },
+        {
+            "dispname": "腰や手足が冷えやすい",
+            "name": "Q3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "無",
+                "弱",
+                "中",
+                "強"
+            ],
+            "selectoridx": "0|5|9|14",
+            "inline": true
+        },
+        {
+            "dispname": "息切れ、どうきがする",
+            "name": "Q4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "無",
+                "弱",
+                "中",
+                "強"
+            ],
+            "selectoridx": "0|4|8|12",
+            "inline": true
+        },
+        {
+            "dispname": "寝つきが悪い、眠りが浅い",
+            "name": "Q5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "無",
+                "弱",
+                "中",
+                "強"
+            ],
+            "selectoridx": "0|5|9|14",
+            "inline": true
+        },
+        {
+            "dispname": "怒りやすく、すぐイライラする",
+            "name": "Q6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "無",
+                "弱",
+                "中",
+                "強"
+            ],
+            "selectoridx": "0|4|8|12",
+            "inline": true
+        },
+        {
+            "dispname": "くよくよしたり、憂うつになる",
+            "name": "Q7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "無",
+                "弱",
+                "中",
+                "強"
+            ],
+            "selectoridx": "0|3|5|7",
+            "inline": true
+        },
+        {
+            "dispname": "頭痛、めまい、吐き気がよくある",
+            "name": "Q8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "無",
+                "弱",
+                "中",
+                "強"
+            ],
+            "selectoridx": "0|3|5|7",
+            "inline": true
+        },
+        {
+            "dispname": "疲れやすい",
+            "name": "Q9",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "無",
+                "弱",
+                "中",
+                "強"
+            ],
+            "selectoridx": "0|2|4|7",
+            "inline": true
+        },
+        {
+            "dispname": "肩こり、腰痛、手足の痛みがある",
+            "name": "Q10",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "無",
+                "弱",
+                "中",
+                "強"
+            ],
+            "selectoridx": "0|3|5|7",
+            "inline": true
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "合計得点",
+            "type": "eval",
+            "formula": "[[Q1.index]] + [[Q2.index]] + [[Q3.index]] + [[Q4.index]] + [[Q5.index]] + [[Q6.index]] + [[Q7.index]] + [[Q8.index]] + [[Q9.index]] + [[Q10.index]]",
+            "dispname": "SMI合計得点（0-100点）"
+        },
+        {
+            "name": "重症度判定",
+            "type": "eval",
+            "formula": "[[合計得点]] <= 25 ? '正常範囲（0-25点）' : ( [[合計得点]] <= 50 ? '軽度（26-50点）' : ( [[合計得点]] <= 65 ? '中等度（51-65点）' : ( [[合計得点]] <= 80 ? '重度（66-80点）' : '最重度（81-100点）')))",
+            "dispname": "重症度判定結果"
+        },
+        {
+            "name": "推奨対応",
+            "type": "eval",
+            "formula": "[[合計得点]] <= 25 ? '上手に更年期を過ごしています。これまでの生活態度を続けていいでしょう。' : ( [[合計得点]] <= 50 ? '食事、運動などに注意を払い、生活様式も無理をしないようにしましょう。' : ( [[合計得点]] <= 65 ? '医師の診察を受け、生活指導、カウンセリング、薬物療法を受けた方がいいでしょう。' : ( [[合計得点]] <= 80 ? '長期間（半年以上）の計画的な治療が必要でしょう。' : '各科の精密検査を受け、更年期障害のみである場合は、専門医での長期的な対応が必要でしょう。')))",
+            "dispname": "推奨される対応"
+        },
+        {
+            "name": "Warning: 中等度以上リスク SMIスコア > 50",
+            "formula": "[[合計得点]] > 50",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 最重度リスク SMIスコア > 80",
+            "formula": "[[合計得点]] > 80",
+            "type": "emergency"
+        }
+    ]
+}

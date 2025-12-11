@@ -1,0 +1,363 @@
+{
+    "_comment": [
+        "Greene Climacteric Scale (GCS) - 更年期症状評価問診票",
+        "原典: Greene JG. Constructing a standard climacteric scale. Maturitas. 1998;29(1):25-31.",
+        "日本語版作成日: 2025年",
+        "20項目、4段階評価（0-3点）、性機能項目は独立評価",
+        "4因子構造: 不安症状（1-6項目）、抑うつ症状（7-11項目）、身体症状（12-18項目）、血管運動症状（19-20項目）",
+        "12点以上で更年期症状の可能性が高い"
+    ],
+    "title": "Greene Climacteric Scale 更年期症状評価",
+    "description": [
+        "<h3>更年期症状の評価について</h3>",
+        "この問診票は、更年期前後の女性に現れる身体的・心理的症状を評価するために使用されています。",
+        "現在の症状の程度について、最も適切な選択肢を選んでください。"
+    ],
+    "submit_button_title": "評価を送信",
+    "fields": [
+        {
+            "dispname": "不安症状",
+            "type": "subsection"
+        },
+        {
+            "dispname": "心臓がドキドキしたり、激しく鼓動することがありますか",
+            "name": "Q1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "緊張したり、神経質になったりすることがありますか",
+            "name": "Q2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "眠りにくい、または夜中に目が覚めることがありますか",
+            "name": "Q3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "興奮しやすいと感じることがありますか",
+            "name": "Q4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "不安やパニック発作を経験することがありますか",
+            "name": "Q5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "集中することが困難だと感じることがありますか",
+            "name": "Q6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "抑うつ症状",
+            "type": "subsection"
+        },
+        {
+            "dispname": "日中に疲れやエネルギー不足を感じることがありますか",
+            "name": "Q7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "物事や活動への興味がなくなったと感じることがありますか",
+            "name": "Q8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "不幸せな気分や憂うつな気分になることがありますか",
+            "name": "Q9",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "日常生活で涙が出ることがありますか",
+            "name": "Q10",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "家族や友人、周りの人にイライラすることがありますか",
+            "name": "Q11",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "身体症状",
+            "type": "subsection"
+        },
+        {
+            "dispname": "めまいを感じることがありますか",
+            "name": "Q12",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "頭に圧迫感や締めつけ感を感じることがありますか",
+            "name": "Q13",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "体の一部が麻痺したような感覚がありますか",
+            "name": "Q14",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "頭痛がありますか",
+            "name": "Q15",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "筋肉や関節の痛みがありますか",
+            "name": "Q16",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "手足の感覚がなくなったり、しびれたりすることがありますか",
+            "name": "Q17",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "息苦しさを感じることがありますか",
+            "name": "Q18",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "血管運動症状",
+            "type": "subsection"
+        },
+        {
+            "dispname": "ほてり（ホットフラッシュ）がありますか",
+            "name": "Q19",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "夜間に汗をかくことがありますか",
+            "name": "Q20",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "性機能（参考評価）",
+            "type": "subsection"
+        },
+        {
+            "dispname": "性的な興味や関心が変化しましたか",
+            "name": "Q21",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "かなりある",
+                "非常にある"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "不安スコア",
+            "type": "eval",
+            "dispname": "不安症状スコア（1-6項目の合計）",
+            "formula": "[[Q1.index]] + [[Q2.index]] + [[Q3.index]] + [[Q4.index]] + [[Q5.index]] + [[Q6.index]]"
+        },
+        {
+            "name": "抑うつスコア",
+            "type": "eval",
+            "dispname": "抑うつ症状スコア（7-11項目の合計）",
+            "formula": "[[Q7.index]] + [[Q8.index]] + [[Q9.index]] + [[Q10.index]] + [[Q11.index]]"
+        },
+        {
+            "name": "心理症状スコア",
+            "type": "eval",
+            "dispname": "心理症状スコア（1-11項目の合計）",
+            "formula": "[[不安スコア]] + [[抑うつスコア]]"
+        },
+        {
+            "name": "身体症状スコア",
+            "type": "eval",
+            "dispname": "身体症状スコア（12-18項目の合計）",
+            "formula": "[[Q12.index]] + [[Q13.index]] + [[Q14.index]] + [[Q15.index]] + [[Q16.index]] + [[Q17.index]] + [[Q18.index]]"
+        },
+        {
+            "name": "血管運動症状スコア",
+            "type": "eval",
+            "dispname": "血管運動症状スコア（19-20項目の合計）",
+            "formula": "[[Q19.index]] + [[Q20.index]]"
+        },
+        {
+            "name": "GCS標準スコア",
+            "type": "eval",
+            "dispname": "GCS標準スコア（1-20項目の合計）",
+            "formula": "[[心理症状スコア]] + [[身体症状スコア]] + [[血管運動症状スコア]]"
+        },
+        {
+            "name": "性機能スコア",
+            "type": "eval",
+            "dispname": "性機能スコア（21項目、参考値）",
+            "formula": "[[Q21.index]]"
+        },
+        {
+            "name": "症状重症度",
+            "type": "eval",
+            "dispname": "症状重症度の判定",
+            "formula": "[[GCS標準スコア]] >= 12 ? '更年期症状の可能性が高い' : '軽度または正常範囲'"
+        }
+    ]
+}

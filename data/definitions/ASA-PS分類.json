@@ -1,0 +1,223 @@
+{
+    "_comment": [
+        "ASA Physical Status Classification System (ASA-PS分類)",
+        "アメリカ麻酔科学会による術前身体状態分類",
+        "原典: American Society of Anesthesiologists",
+        "URL: https://www.asahq.org/standards-and-practice-parameters/statement-on-asa-physical-status-classification-system",
+        "1963年採用、1980年にクラス6追加、2014年・2020年に具体例更新",
+        "日本麻酔科学会でも標準的に使用",
+        "修正事項: selector/selectoridx整合性、日本標準表記採用、技術仕様対応"
+    ],
+    "title": "ASA-PS分類評価票",
+    "description": [
+        "アメリカ麻酔科学会による術前身体状態分類システム",
+        "手術前の患者の全身状態を6段階で評価し、麻酔・手術リスクの情報共有に使用します"
+    ],
+    "translate": "major",
+    "fields": [
+        {
+            "dispname": "基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "年齢",
+            "name": "年齢",
+            "type": "text",
+            "postfix": "歳",
+            "inputmode": "numeric",
+            "testrange": [
+                12,
+                100
+            ]
+        },
+        {
+            "dispname": "予定手術名",
+            "name": "予定手術名",
+            "type": "text",
+            "required": true
+        },
+        {
+            "dispname": "評価日",
+            "name": "評価日",
+            "type": "date",
+            "format": "YYYY/MM/DD",
+            "required": true
+        },
+        {
+            "dispname": "評価者",
+            "name": "評価者",
+            "type": "text",
+            "required": true
+        },
+        {
+            "dispname": "ASA-PS分類評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "ASA Physical Status Classification",
+            "name": "ASA_PS",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "ASA1 - 正常で健康な患者",
+                "ASA2 - 軽度の全身性疾患を有する患者",
+                "ASA3 - 重篤な全身性疾患を有する患者",
+                "ASA4 - 生命に関わる重篤な全身性疾患を有する患者",
+                "ASA5 - 手術の有無にかかわらず24時間以内に死亡すると予想される瀕死の患者",
+                "ASA6 - 臓器提供のための脳死患者"
+            ],
+            "selectoridx": "0|1|2|3|4|5",
+            "description": "患者の術前身体状態に最も適した分類を選択してください"
+        },
+        {
+            "dispname": "緊急手術の該当",
+            "name": "緊急手術",
+            "type": "radio",
+            "inline": true,
+            "selector": "該当なし|緊急手術",
+            "description": "治療の遅延が患者の生命または身体への脅威を著しく増加させる場合"
+        },
+        {
+            "dispname": "ASA1 詳細評価項目",
+            "type": "subsection",
+            "parentname": "ASA_PS",
+            "parentsel": "ASA1 - 正常で健康な患者"
+        },
+        {
+            "dispname": "該当する状態",
+            "name": "ASA1_状態",
+            "type": "checkbox",
+            "parentname": "ASA_PS",
+            "parentsel": "ASA1 - 正常で健康な患者",
+            "selector": [
+                "健康で喫煙なし",
+                "飲酒なしまたは最小限",
+                "年齢に適したBMI",
+                "全ての主要臓器が良好"
+            ]
+        },
+        {
+            "dispname": "ASA2 詳細評価項目",
+            "type": "subsection",
+            "parentname": "ASA_PS",
+            "parentsel": "ASA2 - 軽度の全身性疾患を有する患者"
+        },
+        {
+            "dispname": "該当する疾患・状態",
+            "name": "ASA2_疾患",
+            "type": "checkbox",
+            "parentname": "ASA_PS",
+            "parentsel": "ASA2 - 軽度の全身性疾患を有する患者",
+            "selector": [
+                "現在喫煙",
+                "社交的飲酒",
+                "妊娠",
+                "肥満 (BMI 30-40)",
+                "コントロール良好な糖尿病",
+                "コントロール良好な高血圧",
+                "軽度の肺疾患"
+            ]
+        },
+        {
+            "dispname": "ASA3 詳細評価項目",
+            "type": "subsection",
+            "parentname": "ASA_PS",
+            "parentsel": "ASA3 - 重篤な全身性疾患を有する患者"
+        },
+        {
+            "dispname": "該当する疾患・状態",
+            "name": "ASA3_疾患",
+            "type": "checkbox",
+            "parentname": "ASA_PS",
+            "parentsel": "ASA3 - 重篤な全身性疾患を有する患者",
+            "selector": [
+                "コントロール不良の糖尿病",
+                "コントロール不良の高血圧",
+                "COPD",
+                "病的肥満 (BMI ≥40)",
+                "活動性肝炎",
+                "アルコール依存症",
+                "慢性腎疾患",
+                "心筋梗塞・脳卒中・TIA既往 (3ヶ月以上前)",
+                "DES植込み",
+                "中等度弁膜症"
+            ]
+        },
+        {
+            "dispname": "ASA4 詳細評価項目",
+            "type": "subsection",
+            "parentname": "ASA_PS",
+            "parentsel": "ASA4 - 生命に関わる重篤な全身性疾患を有する患者"
+        },
+        {
+            "dispname": "該当する疾患・状態",
+            "name": "ASA4_疾患",
+            "type": "checkbox",
+            "parentname": "ASA_PS",
+            "parentsel": "ASA4 - 生命に関わる重篤な全身性疾患を有する患者",
+            "selector": [
+                "心筋梗塞・脳卒中・TIA既往 (3ヶ月以内)",
+                "継続的心筋虚血",
+                "重症弁膜症",
+                "血液透析",
+                "敗血症",
+                "DIC",
+                "ARDSまたは末期肺疾患"
+            ]
+        },
+        {
+            "dispname": "ASA5 詳細評価項目",
+            "type": "subsection",
+            "parentname": "ASA_PS",
+            "parentsel": "ASA5 - 手術の有無にかかわらず24時間以内に死亡すると予想される瀕死の患者"
+        },
+        {
+            "dispname": "該当する状態",
+            "name": "ASA5_状態",
+            "type": "checkbox",
+            "parentname": "ASA_PS",
+            "parentsel": "ASA5 - 手術の有無にかかわらず24時間以内に死亡すると予想される瀕死の患者",
+            "selector": [
+                "破裂腹部大動脈瘤",
+                "多発外傷",
+                "頭蓋内出血・大量出血",
+                "心筋虚血・心機能不全",
+                "多臓器不全"
+            ]
+        },
+        {
+            "dispname": "備考・特記事項",
+            "name": "備考",
+            "type": "textarea",
+            "rows": 3,
+            "description": "分類の根拠や追加情報があれば記載してください"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "最終ASA分類",
+            "type": "eval",
+            "formula": "{{緊急手術}} == '緊急手術' ? {{ASA_PS}} + 'E' : {{ASA_PS}}",
+            "dispname": "最終 ASA Physical Status分類"
+        },
+        {
+            "name": "ASA数値",
+            "type": "eval",
+            "formula": "[[ASA_PS.index]]",
+            "noreport": true
+        },
+        {
+            "name": "Warning: 中等度リスク",
+            "dispname": "ASA4以上の高リスク患者",
+            "formula": "[[ASA数値]] >= 3",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 高度リスク",
+            "dispname": "ASA5以上の瀕死状態患者",
+            "formula": "[[ASA数値]] >= 4",
+            "type": "emergency"
+        }
+    ]
+}

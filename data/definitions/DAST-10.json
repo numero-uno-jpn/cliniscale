@@ -1,0 +1,165 @@
+{
+    "title": "DAST-10 薬物依存スクリーニング",
+    "_comment": [
+        "Drug Abuse Screening Test (DAST-10) - 薬物依存スクリーニング",
+        "過去12か月の薬物乱用問題をスクリーニングする10項目の尺度",
+        "開発者: Harvey Skinner (York University, 1982)",
+        "著作権: Addiction Research Foundation (1982)",
+        "参考URL: https://www.asam.org/docs/default-source/education-docs/drug-abuse-screening-test_dast10_8-28-2017.pdf",
+        "CDE URL: https://cde.nlm.nih.gov/instruments/drug-abuse-screening-test",
+        "スコア解釈: 0点=問題なし、1-2点=軽微、3-5点=中等度、6-8点=相当、9-10点=重大"
+    ],
+    "description": [
+        "<b>DAST-10 薬物依存スクリーニング</b>",
+        "以下の質問は、過去12か月間におけるアルコール以外の薬物への関与について確認するものです。",
+        "",
+        "「薬物乱用」とは、(1)処方薬や市販薬を指示を超えて使用すること、(2)薬物の非医学的使用を指します。",
+        "",
+        "様々な薬物には、大麻（マリファナ、ハシシ）、溶剤（シンナーなど）、精神安定剤（バリウムなど）、バルビツール酸系薬物、コカイン、覚醒剤（スピードなど）、幻覚剤（LSDなど）、麻薬（ヘロインなど）があります。",
+        "",
+        "この質問にはアルコール飲料は含まれていないことを覚えておいてください。"
+    ],
+    "fields": [
+        {
+            "name": "dast1",
+            "type": "radio",
+            "dispname": "1. 医学的理由以外で薬物を使用したことがありますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "dast2",
+            "type": "radio",
+            "dispname": "2. 一度に複数の薬物を乱用することがありますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "dast3",
+            "type": "radio",
+            "dispname": "3. いつでも自分が望むときに薬物使用をやめることができますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "dast4",
+            "type": "radio",
+            "dispname": "4. 薬物使用の結果として記憶の欠落やフラッシュバックを経験したことがありますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "dast5",
+            "type": "radio",
+            "dispname": "5. 薬物使用について悪いことをした、罪悪感を感じることがありますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "dast6",
+            "type": "radio",
+            "dispname": "6. 配偶者（または両親）があなたの薬物への関与について苦情を言うことがありますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "dast7",
+            "type": "radio",
+            "dispname": "7. 薬物使用のために家族を軽視したことがありますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "dast8",
+            "type": "radio",
+            "dispname": "8. 薬物を入手するために違法行為に関与したことがありますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "dast9",
+            "type": "radio",
+            "dispname": "9. 薬物の使用をやめたときに離脱症状（気分が悪くなる）を経験したことがありますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "dast10",
+            "type": "radio",
+            "dispname": "10. 薬物使用の結果として医学的問題（記憶喪失、肝炎、けいれん、出血など）を起こしたことがありますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "dast_total",
+            "type": "eval",
+            "dispname": "DAST-10合計スコア",
+            "formula": "[[dast1.index]] + [[dast2.index]] + [[dast3.index]] + [[dast4.index]] + [[dast5.index]] + [[dast6.index]] + [[dast7.index]] + [[dast8.index]] + [[dast9.index]] + [[dast10.index]]"
+        },
+        {
+            "name": "dast_category",
+            "type": "eval",
+            "dispname": "薬物乱用問題レベル分類",
+            "formula": "[[dast_total]] == 0 ? \"問題なし\" : [[dast_total]] <= 2 ? \"軽微レベル\" : [[dast_total]] <= 5 ? \"中等度レベル\" : [[dast_total]] <= 8 ? \"相当レベル\" : \"重大レベル\""
+        },
+        {
+            "name": "dast_action",
+            "type": "eval",
+            "dispname": "推奨アクション",
+            "formula": "[[dast_total]] == 0 ? \"現時点では介入なし\" : [[dast_total]] <= 2 ? \"モニタリング、後日再評価\" : [[dast_total]] <= 5 ? \"詳細な調査が必要\" : [[dast_total]] <= 8 ? \"集中的な評価が必要\" : \"集中的な評価が必要\""
+        }
+    ]
+}

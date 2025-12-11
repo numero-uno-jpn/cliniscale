@@ -1,0 +1,369 @@
+{
+    "_comment": [
+        "HAQ (Health Assessment Questionnaire) - 関節リウマチ機能評価尺度",
+        "原典: Fries JF, et al. Measurement of patient outcome in arthritis. Arthritis Rheum. 1980;23(2):137-145",
+        "J-HAQ参考文献: Matsuda Y, et al. Validation of a Japanese version of the Stanford Health Assessment Questionnaire in 3,763 Japanese patients with rheumatoid arthritis. Arthritis Rheum. 2003;49(6):784-788",
+        "参考URL: https://www.riumachi.jp/life/checksheet",
+        "HAQは8つのカテゴリー、20項目で構成される身体機能評価指標",
+        "各項目0-3点評価、カテゴリー別最高点の平均がHAQ-DI",
+        "0.5未満で機能的寛解とされる"
+    ],
+    "title": "HAQ (Health Assessment Questionnaire) 関節リウマチ機能評価",
+    "description": [
+        "この1週間の日常生活の困難度について評価します",
+        "HAQは関節リウマチ患者の身体機能を評価する標準的な指標です"
+    ],
+    "translate": "major",
+    "fields": [
+        {
+            "dispname": "カテゴリー1. 衣服の着脱と身支度",
+            "type": "subsection"
+        },
+        {
+            "dispname": "靴ひもを結び、ボタン掛けも含め、自分で身支度ができますか",
+            "name": "Q1_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "何の困難もなくできる",
+                "いくらか困難である",
+                "かなり困難である",
+                "できない"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "自分で洗髪ができますか",
+            "name": "Q1_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "何の困難もなくできる",
+                "いくらか困難である",
+                "かなり困難である",
+                "できない"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "カテゴリー2. 起立",
+            "type": "subsection"
+        },
+        {
+            "dispname": "椅子(肘かけがなく背もたれが垂直)から立ち上がれますか",
+            "name": "Q2_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "何の困難もなくできる",
+                "いくらか困難である",
+                "かなり困難である",
+                "できない"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "ベッドまたは布団からの就寝、起床の動作ができますか",
+            "name": "Q2_2",
+            "type": "radio",
+            "required": true,
+            "description": "日常使っている寝具についてお答えください",
+            "selector": [
+                "何の困難もなくできる",
+                "いくらか困難である",
+                "かなり困難である",
+                "できない"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "カテゴリー3. 食事",
+            "type": "subsection"
+        },
+        {
+            "dispname": "お箸を使ってごはんを口に運べますか",
+            "name": "Q3_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "何の困難もなくできる",
+                "いくらか困難である",
+                "かなり困難である",
+                "できない"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "いっぱい水の入ったコップを口元まで運べますか",
+            "name": "Q3_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "何の困難もなくできる",
+                "いくらか困難である",
+                "かなり困難である",
+                "できない"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "新しい牛乳の紙パックの口を開けることができますか",
+            "name": "Q3_3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "何の困難もなくできる",
+                "いくらか困難である",
+                "かなり困難である",
+                "できない"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "カテゴリー4. 歩行",
+            "type": "subsection"
+        },
+        {
+            "dispname": "戸外の平坦な道を歩けますか",
+            "name": "Q4_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "何の困難もなくできる",
+                "いくらか困難である",
+                "かなり困難である",
+                "できない"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "階段を5段上がれますか",
+            "name": "Q4_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "何の困難もなくできる",
+                "いくらか困難である",
+                "かなり困難である",
+                "できない"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "カテゴリー5. 衛生",
+            "type": "subsection"
+        },
+        {
+            "dispname": "洋式トイレに座ったり立ったりできますか",
+            "name": "Q5_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "何の困難もなくできる",
+                "いくらか困難である",
+                "かなり困難である",
+                "できない"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "浴槽につかることができますか",
+            "name": "Q5_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "何の困難もなくできる",
+                "いくらか困難である",
+                "かなり困難である",
+                "できない"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "身体を洗いタオルでふくことができますか",
+            "name": "Q5_3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "何の困難もなくできる",
+                "いくらか困難である",
+                "かなり困難である",
+                "できない"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "カテゴリー6. とどく範囲",
+            "type": "subsection"
+        },
+        {
+            "dispname": "腰を曲げて床にある衣服を拾い上げられますか",
+            "name": "Q6_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "何の困難もなくできる",
+                "いくらか困難である",
+                "かなり困難である",
+                "できない"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "頭上の棚に2リットル入りのペットボトルがあった場合、それを下に降ろせますか",
+            "name": "Q6_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "何の困難もなくできる",
+                "いくらか困難である",
+                "かなり困難である",
+                "できない"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "カテゴリー7. 握力",
+            "type": "subsection"
+        },
+        {
+            "dispname": "回転式の蛇口を開閉できますか",
+            "name": "Q7_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "何の困難もなくできる",
+                "いくらか困難である",
+                "かなり困難である",
+                "できない"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "広口ビンのふたを開けられますか",
+            "name": "Q7_2",
+            "type": "radio",
+            "required": true,
+            "description": "すでに一度開けてあるもの",
+            "selector": [
+                "何の困難もなくできる",
+                "いくらか困難である",
+                "かなり困難である",
+                "できない"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "自動車のドアを開けられますか",
+            "name": "Q7_3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "何の困難もなくできる",
+                "いくらか困難である",
+                "かなり困難である",
+                "できない"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "カテゴリー8. 家事や雑用",
+            "type": "subsection"
+        },
+        {
+            "dispname": "そうじ機をかけたり、庭仕事などの家事ができますか",
+            "name": "Q8_1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "何の困難もなくできる",
+                "いくらか困難である",
+                "かなり困難である",
+                "できない"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "買い物に行けますか",
+            "name": "Q8_2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "何の困難もなくできる",
+                "いくらか困難である",
+                "かなり困難である",
+                "できない"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "Cat1_max",
+            "type": "eval",
+            "formula": "[[Q1_1.index]] >= [[Q1_2.index]] ? [[Q1_1.index]] : [[Q1_2.index]]",
+            "noreport": true
+        },
+        {
+            "name": "Cat2_max",
+            "type": "eval",
+            "formula": "[[Q2_1.index]] >= [[Q2_2.index]] ? [[Q2_1.index]] : [[Q2_2.index]]",
+            "noreport": true
+        },
+        {
+            "name": "Cat3_max",
+            "type": "eval",
+            "formula": "[[Q3_1.index]] >= [[Q3_2.index]] ? ( [[Q3_1.index]] >= [[Q3_3.index]] ? [[Q3_1.index]] : [[Q3_3.index]] ) : ( [[Q3_2.index]] >= [[Q3_3.index]] ? [[Q3_2.index]] : [[Q3_3.index]] )",
+            "noreport": true
+        },
+        {
+            "name": "Cat4_max",
+            "type": "eval",
+            "formula": "[[Q4_1.index]] >= [[Q4_2.index]] ? [[Q4_1.index]] : [[Q4_2.index]]",
+            "noreport": true
+        },
+        {
+            "name": "Cat5_max",
+            "type": "eval",
+            "formula": "[[Q5_1.index]] >= [[Q5_2.index]] ? ( [[Q5_1.index]] >= [[Q5_3.index]] ? [[Q5_1.index]] : [[Q5_3.index]] ) : ( [[Q5_2.index]] >= [[Q5_3.index]] ? [[Q5_2.index]] : [[Q5_3.index]] )",
+            "noreport": true
+        },
+        {
+            "name": "Cat6_max",
+            "type": "eval",
+            "formula": "[[Q6_1.index]] >= [[Q6_2.index]] ? [[Q6_1.index]] : [[Q6_2.index]]",
+            "noreport": true
+        },
+        {
+            "name": "Cat7_max",
+            "type": "eval",
+            "formula": "[[Q7_1.index]] >= [[Q7_2.index]] ? ( [[Q7_1.index]] >= [[Q7_3.index]] ? [[Q7_1.index]] : [[Q7_3.index]] ) : ( [[Q7_2.index]] >= [[Q7_3.index]] ? [[Q7_2.index]] : [[Q7_3.index]] )",
+            "noreport": true
+        },
+        {
+            "name": "Cat8_max",
+            "type": "eval",
+            "formula": "[[Q8_1.index]] >= [[Q8_2.index]] ? [[Q8_1.index]] : [[Q8_2.index]]",
+            "noreport": true
+        },
+        {
+            "name": "HAQ_DI",
+            "type": "eval",
+            "dispname": "HAQ機能障害指数(Disability Index): 8つのカテゴリーの最高点の平均値",
+            "formula": "( ((Cat1_max)) + ((Cat2_max)) + ((Cat3_max)) + ((Cat4_max)) + ((Cat5_max)) + ((Cat6_max)) + ((Cat7_max)) + ((Cat8_max)) ) / 8"
+        },
+        {
+            "name": "機能的寛解",
+            "type": "eval",
+            "dispname": "機能的寛解判定: HAQ-DI 0.5未満で機能的寛解",
+            "formula": "((HAQ_DI)) < 0.5 ? '機能的寛解' : '機能障害あり'"
+        },
+        {
+            "name": "重症度分類",
+            "type": "eval",
+            "dispname": "HAQ-DIによる機能障害の重症度分類",
+            "formula": "((HAQ_DI)) < 0.5 ? '軽度または機能的寛解' : ( ((HAQ_DI)) < 1.0 ? '軽度から中等度の機能障害' : ( ((HAQ_DI)) < 2.0 ? '中等度から重度の機能障害' : '重度の機能障害' ) )"
+        }
+    ]
+}

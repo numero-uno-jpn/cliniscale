@@ -1,0 +1,112 @@
+{
+  "_comment": [
+    "Rutherford Classification",
+    "末梢動脈疾患の分類システム",
+    "開発者: R. B. Rutherford (1997)",
+    "原典: Rutherford RB, et al. J Vasc Surg. 1997;26(3):517-38.",
+    "参考URL: https://pubmed.ncbi.nlm.nih.gov/9308598/",
+    "公式URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC4232437/",
+    "評価: カテゴリ0-6の7段階分類",
+    "Fontaine分類の修正版、症状と客観所見の組み合わせ"
+  ],
+  "title": "Rutherford Classification",
+  "description": [
+    "末梢動脈疾患の重症度分類を行います",
+    "患者の症状に基づいて評価してください"
+  ],
+  "fields": [
+    {
+      "type": "subsection",
+      "dispname": "症状評価"
+    },
+    {
+      "type": "radio",
+      "name": "Rutherfordカテゴリ",
+      "dispname": "Rutherford分類",
+      "description": "患者の症状に最も適合するカテゴリを選択してください",
+      "required": true,
+      "selector": [
+        "カテゴリ0: 無症状",
+        "カテゴリ1: 軽度の間欠性跛行",
+        "カテゴリ2: 中等度の間欠性跛行",
+        "カテゴリ3: 重度の間欠性跛行",
+        "カテゴリ4: 虚血性安静時痛",
+        "カテゴリ5: 軽度の組織欠損 (小潰瘍または限局性壊疽)",
+        "カテゴリ6: 広範囲の組織欠損 (広範な潰瘍または壊疽)"
+      ],
+      "selectoridx": "0|1|2|3|4|5|6"
+    },
+    {
+      "type": "radio",
+      "name": "跛行距離",
+      "dispname": "間欠性跛行の距離 (該当する場合)",
+      "description": "痛みなく歩ける距離",
+      "parentname": "Rutherfordカテゴリ",
+      "parentsel": [
+        "カテゴリ1: 軽度の間欠性跛行",
+        "カテゴリ2: 中等度の間欠性跛行",
+        "カテゴリ3: 重度の間欠性跛行"
+      ],
+      "selector": [
+        "200m以上",
+        "50-200m",
+        "50m未満"
+      ]
+    },
+    {
+      "type": "radio",
+      "name": "トレッドミルテスト",
+      "dispname": "トレッドミルテスト結果 (該当する場合)",
+      "description": "標準トレッドミルテスト (2mph、12%勾配) での結果",
+      "parentname": "Rutherfordカテゴリ",
+      "parentsel": [
+        "カテゴリ1: 軽度の間欠性跛行",
+        "カテゴリ2: 中等度の間欠性跛行",
+        "カテゴリ3: 重度の間欠性跛行"
+      ],
+      "selector": [
+        "5分以上完遂可能",
+        "2-5分で中断",
+        "2分未満で中断"
+      ]
+    },
+    {
+      "type": "textarea",
+      "name": "症状詳細",
+      "dispname": "症状の詳細",
+      "description": "症状の具体的な内容や経過を記載してください",
+      "rows": 3
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "type": "eval",
+      "name": "グレード",
+      "description": "Rutherfordグレード",
+      "formula": "[[Rutherfordカテゴリ.index]] == 0 ? '0' : [[Rutherfordカテゴリ.index]] <= 3 ? 'I' : 'II'"
+    },
+    {
+      "type": "eval",
+      "name": "重症度",
+      "description": "重症度の分類",
+      "formula": "[[Rutherfordカテゴリ.index]] == 0 ? '無症状' : [[Rutherfordカテゴリ.index]] <= 3 ? '間欠性跛行' : '重症下肢虚血 (CLTI)'"
+    },
+    {
+      "type": "eval",
+      "name": "治療方針",
+      "description": "推奨される治療方針の目安",
+      "formula": "[[Rutherfordカテゴリ.index]] == 0 ? '経過観察、リスク因子管理' : [[Rutherfordカテゴリ.index]] <= 2 ? '運動療法、薬物療法' : [[Rutherfordカテゴリ.index]] == 3 ? '血行再建術の検討' : '緊急的血行再建術の適応'"
+    },
+    {
+      "type": "warning",
+      "formula": "[[Rutherfordカテゴリ.index]] >= 3",
+      "name": "Warning: カテゴリ3以上"
+    },
+    {
+      "type": "emergency",
+      "formula": "[[Rutherfordカテゴリ.index]] >= 4",
+      "name": "Emergency: CLTI (カテゴリ4以上)"
+    }
+  ]
+}

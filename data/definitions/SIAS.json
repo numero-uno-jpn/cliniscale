@@ -1,0 +1,427 @@
+{
+    "_comment": [
+        "SIAS（Stroke Impairment Assessment Set）脳卒中機能障害評価法",
+        "1993年に千野直一、園田茂らによって発表された日本の脳卒中評価スケール",
+        "原典：園田茂 他. 脳卒中機能障害評価セットStroke Impairment Assessment Set (SIAS). リハビリテーション医学1993; 30(4): 273-8",
+        "英語版：Chino N, et al. Stroke impairment assessment set (SIAS). Jpn J Rehabil Med 1994; 31: 119-125",
+        "慶應義塾大学医学部リハビリテーション医学教室開発",
+        "22項目、9つの機能障害分類、76点満点",
+        "運動機能5項目は0-5点、その他17項目は0-3点で評価"
+    ],
+    "title": "SIAS 脳卒中機能障害評価",
+    "description": [
+        "脳卒中による機能障害を包括的に評価する22項目の評価スケールです。",
+        "運動機能、筋緊張、感覚機能、関節可動域、疼痛、体幹機能、視空間認知、言語機能、非麻痺側機能を評価します。"
+    ],
+    "contact": "リハビリテーション科",
+    "dept_in_charge": "リハビリテーション科",
+    "responsible_person": [
+        "リハビリテーション医師",
+        "理学療法士"
+    ],
+    "submit_button_title": "評価結果を送信",
+    "fields": [
+        {
+            "dispname": "1. 麻痺側運動機能",
+            "type": "subsection"
+        },
+        {
+            "dispname": "1-1. 上肢近位（膝口テスト）",
+            "name": "M1",
+            "type": "radio",
+            "required": true,
+            "description": "座位で麻痺側の手を膝から口まで運ぶ動作（肩関節90度外転）",
+            "selector": [
+                "まったく動かない",
+                "肩のわずかな動きがあるが手部が乳頭に届かない",
+                "肩肘の共同運動があるが手部が口に届かない",
+                "課題可能、中等度または著明なぎこちなさあり",
+                "課題可能、軽度のぎこちなさあり",
+                "健側と変わらず正常"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "1-2. 上肢遠位（指機能テスト）",
+            "name": "M2",
+            "type": "radio",
+            "required": true,
+            "description": "麻痺側の指の分離運動、対立運動、把持機能の評価",
+            "selector": [
+                "まったく動かない",
+                "わずかな指の動きがある",
+                "指の屈曲伸展運動が可能だが分離運動は不可",
+                "全指の分離運動が可能、中等度または著明なぎこちなさあり",
+                "課題可能、軽度のぎこちなさあり",
+                "健側と変わらず正常"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "1-3. 下肢近位（股関節屈曲テスト）",
+            "name": "M3",
+            "type": "radio",
+            "required": true,
+            "description": "座位での麻痺側股関節屈曲運動",
+            "selector": [
+                "まったく動かない",
+                "わずかな股関節屈曲",
+                "股関節屈曲可能だが臀部が座面から離れない",
+                "課題可能、中等度または著明なぎこちなさあり",
+                "課題可能、軽度のぎこちなさあり",
+                "健側と変わらず正常"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "1-4. 下肢近位（膝伸展テスト）",
+            "name": "M4",
+            "type": "radio",
+            "required": true,
+            "description": "座位での麻痺側膝関節伸展運動",
+            "selector": [
+                "まったく動かない",
+                "わずかな膝伸展",
+                "膝関節の伸展可能だが完全伸展に至らない",
+                "課題可能、中等度または著明なぎこちなさあり",
+                "課題可能、軽度のぎこちなさあり",
+                "健側と変わらず正常"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "1-5. 下肢遠位（足パットテスト）",
+            "name": "M5",
+            "type": "radio",
+            "required": true,
+            "description": "座位で踵を床につけたまま足関節背屈・底屈運動",
+            "selector": [
+                "まったく動かない",
+                "わずかな足関節の動き",
+                "足関節の背屈・底屈可能だがスムーズでない",
+                "課題可能、中等度または著明なぎこちなさあり",
+                "課題可能、軽度のぎこちなさあり",
+                "健側と変わらず正常"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "2. 筋緊張",
+            "type": "subsection"
+        },
+        {
+            "dispname": "2-1. 上肢腱反射",
+            "name": "T1",
+            "type": "radio",
+            "required": true,
+            "description": "上腕二頭筋反射、上腕三頭筋反射、腕橈骨筋反射の評価",
+            "selector": [
+                "反射消失",
+                "反射低下",
+                "正常",
+                "反射亢進"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "2-2. 下肢腱反射",
+            "name": "T2",
+            "type": "radio",
+            "required": true,
+            "description": "膝蓋腱反射、アキレス腱反射の評価",
+            "selector": [
+                "反射消失",
+                "反射低下",
+                "正常",
+                "反射亢進"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "2-3. 上肢筋緊張",
+            "name": "T3",
+            "type": "radio",
+            "required": true,
+            "description": "肘関節他動伸展時の筋緊張評価",
+            "selector": [
+                "筋緊張低下",
+                "正常",
+                "軽度亢進",
+                "中等度から重度の亢進"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "2-4. 下肢筋緊張",
+            "name": "T4",
+            "type": "radio",
+            "required": true,
+            "description": "膝関節他動屈伸時の筋緊張評価",
+            "selector": [
+                "筋緊張低下",
+                "正常",
+                "軽度亢進",
+                "中等度から重度の亢進"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "3. 感覚機能",
+            "type": "subsection"
+        },
+        {
+            "dispname": "3-1. 上肢触覚",
+            "name": "S1",
+            "type": "radio",
+            "required": true,
+            "description": "麻痺側上肢の触覚検査",
+            "selector": [
+                "感覚消失",
+                "重度感覚低下",
+                "軽度感覚低下",
+                "正常"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "3-2. 下肢触覚",
+            "name": "S2",
+            "type": "radio",
+            "required": true,
+            "description": "麻痺側下肢の触覚検査",
+            "selector": [
+                "感覚消失",
+                "重度感覚低下",
+                "軽度感覚低下",
+                "正常"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "3-3. 上肢位置覚",
+            "name": "S3",
+            "type": "radio",
+            "required": true,
+            "description": "麻痺側上肢の位置覚検査",
+            "selector": [
+                "感覚消失",
+                "重度感覚低下",
+                "軽度感覚低下",
+                "正常"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "3-4. 下肢位置覚",
+            "name": "S4",
+            "type": "radio",
+            "required": true,
+            "description": "麻痺側下肢の位置覚検査",
+            "selector": [
+                "感覚消失",
+                "重度感覚低下",
+                "軽度感覚低下",
+                "正常"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "4. 関節可動域",
+            "type": "subsection"
+        },
+        {
+            "dispname": "4-1. 上肢関節可動域",
+            "name": "R1",
+            "type": "radio",
+            "required": true,
+            "description": "肩関節、肘関節、手関節の可動域制限の評価",
+            "selector": [
+                "著明な制限",
+                "中等度制限",
+                "軽度制限",
+                "制限なし"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "4-2. 下肢関節可動域",
+            "name": "R2",
+            "type": "radio",
+            "required": true,
+            "description": "股関節、膝関節、足関節の可動域制限の評価",
+            "selector": [
+                "著明な制限",
+                "中等度制限",
+                "軽度制限",
+                "制限なし"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "5. 疼痛",
+            "type": "subsection"
+        },
+        {
+            "dispname": "5-1. 疼痛",
+            "name": "P1",
+            "type": "radio",
+            "required": true,
+            "description": "脳卒中に関連する疼痛の有無と程度（肩手症候群、視床痛など）",
+            "selector": [
+                "激痛で動作困難",
+                "強い痛みで動作制限",
+                "軽度の痛み",
+                "痛みなし"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "6. 体幹機能",
+            "type": "subsection"
+        },
+        {
+            "dispname": "6-1. 体幹垂直保持",
+            "name": "TR1",
+            "type": "radio",
+            "required": true,
+            "description": "座位での体幹垂直保持能力",
+            "selector": [
+                "維持不可能",
+                "介助を要するが短時間可能",
+                "軽度の動揺があるが維持可能",
+                "正常に維持可能"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "6-2. 腹筋力",
+            "name": "TR2",
+            "type": "radio",
+            "required": true,
+            "description": "45度後傾位からの体幹起き上がり動作",
+            "selector": [
+                "起き上がり不可能",
+                "著明な介助を要する",
+                "軽度の介助で可能",
+                "自立して可能"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "7. 視空間認知",
+            "type": "subsection"
+        },
+        {
+            "dispname": "7-1. 視空間失認",
+            "name": "V1",
+            "type": "radio",
+            "required": true,
+            "description": "半側空間失認、視野欠損の評価",
+            "selector": [
+                "重度の視空間失認",
+                "中等度の視空間失認",
+                "軽度の視空間失認",
+                "正常"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "8. 言語機能",
+            "type": "subsection"
+        },
+        {
+            "dispname": "8-1. 言語機能",
+            "name": "L1",
+            "type": "radio",
+            "required": true,
+            "description": "失語症の有無と程度",
+            "selector": [
+                "重度失語",
+                "中等度失語",
+                "軽度失語",
+                "正常"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "9. 非麻痺側機能",
+            "type": "subsection"
+        },
+        {
+            "dispname": "9-1. 非麻痺側上肢機能",
+            "name": "U1",
+            "type": "radio",
+            "required": true,
+            "description": "非麻痺側上肢の筋力と機能",
+            "selector": [
+                "重度機能低下",
+                "中等度機能低下",
+                "軽度機能低下",
+                "正常"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "9-2. 非麻痺側下肢機能",
+            "name": "U2",
+            "type": "radio",
+            "required": true,
+            "description": "非麻痺側下肢の筋力と機能",
+            "selector": [
+                "重度機能低下",
+                "中等度機能低下",
+                "軽度機能低下",
+                "正常"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "dispname": "SIAS合計スコア（0-76点）",
+            "name": "total_score",
+            "type": "eval",
+            "formula": "[[M1.index]] + [[M2.index]] + [[M3.index]] + [[M4.index]] + [[M5.index]] + [[T1.index]] + [[T2.index]] + [[T3.index]] + [[T4.index]] + [[S1.index]] + [[S2.index]] + [[S3.index]] + [[S4.index]] + [[R1.index]] + [[R2.index]] + [[P1.index]] + [[TR1.index]] + [[TR2.index]] + [[V1.index]] + [[L1.index]] + [[U1.index]] + [[U2.index]]"
+        },
+        {
+            "dispname": "運動機能小計（0-25点）",
+            "name": "motor_score",
+            "type": "eval",
+            "formula": "[[M1.index]] + [[M2.index]] + [[M3.index]] + [[M4.index]] + [[M5.index]]"
+        },
+        {
+            "name": "motor_lower_score",
+            "type": "eval",
+            "dispname": "下肢運動機能3項目の合計得点（0-15点）",
+            "formula": "[[M3.index]] + [[M4.index]] + [[M5.index]]",
+            "noreport": true
+        },
+        {
+            "name": "trunk_score",
+            "type": "eval",
+            "dispname": "体幹機能2項目の合計得点（0-6点）",
+            "formula": "[[TR1.index]] + [[TR2.index]]",
+            "noreport": true
+        },
+        {
+            "name": "sensory_score",
+            "type": "eval",
+            "dispname": "感覚機能4項目の合計得点（0-12点）",
+            "formula": "[[S1.index]] + [[S2.index]] + [[S3.index]] + [[S4.index]]",
+            "noreport": true
+        },
+        {
+            "name": "severity",
+            "type": "eval",
+            "dispname": "SIAS総合得点による重症度分類",
+            "formula": "[[total_score]] >= 60 ? '軽度' : ( [[total_score]] >= 40 ? '中等度' : '重度' )"
+        },
+        {
+            "dispname": "歩行自立予測",
+            "name": "walking_prediction",
+            "type": "eval",
+            "formula": "( [[total_score]] >= 59 && [[motor_lower_score]] >= 9 && [[trunk_score]] >= 3 && [[sensory_score]] >= 9 ) ? '歩行自立可能性高い' : '要継続評価'"
+        }
+    ]
+}

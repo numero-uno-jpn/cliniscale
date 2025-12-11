@@ -1,0 +1,135 @@
+{
+    "_comment": [
+        "WHO-5 Well-Being Index (WHO精神的健康状態表) 問診票定義",
+        "正式名称: The World Health Organization-Five Well-Being Index (WHO-5)",
+        "日本語名: WHO-5精神的健康状態表",
+        "開発: デンマーク北ジーランド精神保健センター精神医学研究ユニット",
+        "開発者: Per Bech（故人）",
+        "開発年: 1990年代",
+        "日本語版: 2002年7月",
+        "翻訳者: 粟田主一（東北大学医学系研究科精神医学分野）",
+        "著作権: 2024年にWHOに移管",
+        "評価期間: 過去2週間",
+        "項目数: 5項目",
+        "回答方式: 6段階評価（0-5点）",
+        "得点範囲: 0-25点（粗点）、0-100点（百分率スコア）",
+        "カットオフ値: 13点未満で精神的健康状態低下を示唆",
+        "または任意項目で0-1点回答時に詳細評価推奨",
+        "参考文献: 岩佐一他（2007）「日本語版「WHO-5精神的健康状態表」の信頼性ならびに妥当性」厚生の指標",
+        "公式英語版PDF: https://cdn.who.int/media/docs/default-source/mental-health/who-5_english-original4da539d6ed4b49389e3afe47cda2326a.pdf",
+        "公式日本語版PDF: https://cdn.who.int/media/docs/default-source/mental-health/five-well-being-index-(who-5)/who-5_japanese.pdf"
+    ],
+    "title": "WHO-5 WHO精神的健康状態表",
+    "description": [
+        "WHO-5精神的健康状態表は、過去2週間の主観的幸福感を評価する5項目の簡易尺度です。",
+        "世界保健機関が推奨する精神的ウェルビーイングの測定ツールです。"
+    ],
+    "responsible_person": [
+        "精神科医師"
+    ],
+    "dept_in_charge": "精神科",
+    "fields": [
+        {
+            "name": "Q1",
+            "type": "radio",
+            "dispname": "最近2週間、私は明るく、楽しい気分で過ごした",
+            "required": true,
+            "selector": [
+                "いつも",
+                "ほとんどいつも",
+                "半分以上の期間を",
+                "半分以下の期間を",
+                "ほんのたまに",
+                "まったくない"
+            ],
+            "selectoridx": "5|4|3|2|1|0"
+        },
+        {
+            "name": "Q2",
+            "type": "radio",
+            "dispname": "最近2週間、私は落ち着いた、リラックスした気分で過ごした",
+            "required": true,
+            "selector": [
+                "いつも",
+                "ほとんどいつも",
+                "半分以上の期間を",
+                "半分以下の期間を",
+                "ほんのたまに",
+                "まったくない"
+            ],
+            "selectoridx": "5|4|3|2|1|0"
+        },
+        {
+            "name": "Q3",
+            "type": "radio",
+            "dispname": "最近2週間、私は意欲的で、活動的に過ごした",
+            "required": true,
+            "selector": [
+                "いつも",
+                "ほとんどいつも",
+                "半分以上の期間を",
+                "半分以下の期間を",
+                "ほんのたまに",
+                "まったくない"
+            ],
+            "selectoridx": "5|4|3|2|1|0"
+        },
+        {
+            "name": "Q4",
+            "type": "radio",
+            "dispname": "最近2週間、私はぐっすりと休め、気持ちよくめざめた",
+            "required": true,
+            "selector": [
+                "いつも",
+                "ほとんどいつも",
+                "半分以上の期間を",
+                "半分以下の期間を",
+                "ほんのたまに",
+                "まったくない"
+            ],
+            "selectoridx": "5|4|3|2|1|0"
+        },
+        {
+            "name": "Q5",
+            "type": "radio",
+            "dispname": "最近2週間、私は日常生活の中に、興味のあることがたくさんあった",
+            "required": true,
+            "selector": [
+                "いつも",
+                "ほとんどいつも",
+                "半分以上の期間を",
+                "半分以下の期間を",
+                "ほんのたまに",
+                "まったくない"
+            ],
+            "selectoridx": "5|4|3|2|1|0"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "total_score",
+            "type": "eval",
+            "dispname": "WHO-5合計点（粗点）：0-25点範囲",
+            "formula": "[[Q1.index]] + [[Q2.index]] + [[Q3.index]] + [[Q4.index]] + [[Q5.index]]",
+            "noreport": false
+        },
+        {
+            "name": "percentage_score",
+            "type": "eval",
+            "dispname": "WHO-5百分率スコア：0-100点範囲",
+            "formula": "[[total_score]] * 4",
+            "noreport": false
+        },
+        {
+            "name": "Warning: 精神的健康状態が低い可能性（13点未満）",
+            "type": "warning",
+            "formula": "[[total_score]] < 13"
+        },
+        {
+            "name": "Warning: 極端に低い項目回答あり（0-1点の回答）",
+            "type": "warning",
+            "formula": "[[Q1.index]] <= 1 || [[Q2.index]] <= 1 || [[Q3.index]] <= 1 || [[Q4.index]] <= 1 || [[Q5.index]] <= 1"
+        }
+    ]
+}

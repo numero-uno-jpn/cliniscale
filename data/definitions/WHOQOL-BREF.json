@@ -1,0 +1,440 @@
+{
+    "_comment": [
+        "WHOQOL-BREF (World Health Organization Quality of Life-BREF) - WHO生活の質評価尺度簡表",
+        "原典: The WHOQOL Group (1998). Development of the World Health Organization WHOQOL-BREF quality of life assessment. Psychological Medicine, 28:551-558.",
+        "日本語版監修: 田崎美弥子、中根允文",
+        "26項目、4領域 (身体的健康7項目、心理6項目、社会的関係3項目、環境8項目) + 全般的QOL・健康感2項目",
+        "5段階評価、過去2週間の状況を評価",
+        "URL: https://www.who.int/tools/whoqol/whoqol-bref",
+        "スコアリング出典: University of Washington WHOQOL-BREF Manual",
+        "逆転項目: Q3(痛み)、Q4(治療依存)、Q26(否定的感情)"
+    ],
+    "title": "WHOQOL-BREF WHO 生活の質評価尺度簡表",
+    "description": [
+        "過去2週間のあなたの生活の質について評価します。",
+        "身体的健康、心理、社会的関係、環境の4つの領域から生活の質を総合的に評価する国際標準尺度です。",
+        "すべての質問にお答えください。"
+    ],
+    "fields": [
+        {
+            "dispname": "全般的評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "あなたは、自分の生活の質をどのように評価しますか",
+            "name": "G1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "とても悪い",
+                "悪い",
+                "どちらでもない",
+                "良い",
+                "とても良い"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "あなたは、自分の健康状態に満足していますか",
+            "name": "G4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "とても不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "とても満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "身体的健康領域",
+            "type": "subsection"
+        },
+        {
+            "dispname": "身体的な痛みのために、しなければならないことがどのくらい妨げられていますか",
+            "name": "Q3",
+            "type": "radio",
+            "required": true,
+            "description": "この項目は逆転処理されます（痛みが強いほど低スコア）",
+            "selector": [
+                "全く妨げられていない",
+                "少し妨げられている",
+                "中程度妨げられている",
+                "非常に妨げられている",
+                "極度に妨げられている"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "生活していくのに、どのくらい医学的治療に依存していますか",
+            "name": "Q4",
+            "type": "radio",
+            "required": true,
+            "description": "この項目は逆転処理されます（依存度が高いほど低スコア）",
+            "selector": [
+                "全く依存していない",
+                "少し依存している",
+                "中程度依存している",
+                "非常に依存している",
+                "極度に依存している"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "あなたは毎日の活動を行うのに十分なエネルギーがありますか",
+            "name": "Q10",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "中程度ある",
+                "非常にある",
+                "極度にある"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "あなたはどのくらいうまく動き回ることができますか",
+            "name": "Q15",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くできない",
+                "少しできる",
+                "中程度できる",
+                "非常にできる",
+                "極度にできる"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "あなたは自分の睡眠に満足していますか",
+            "name": "Q16",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "とても不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "とても満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "あなたは日常生活の活動を行う能力に満足していますか",
+            "name": "Q17",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "とても不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "とても満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "あなたは仕事をする能力に満足していますか",
+            "name": "Q18",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "とても不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "とても満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "心理領域",
+            "type": "subsection"
+        },
+        {
+            "dispname": "あなたは生活を楽しんでいますか",
+            "name": "Q5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全く楽しんでいない",
+                "少し楽しんでいる",
+                "中程度楽しんでいる",
+                "非常に楽しんでいる",
+                "極度に楽しんでいる"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "あなたは自分の人生に意味があると感じますか",
+            "name": "Q6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全く感じない",
+                "少し感じる",
+                "中程度感じる",
+                "非常に感じる",
+                "極度に感じる"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "あなたはどのくらい集中できますか",
+            "name": "Q7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全く集中できない",
+                "少し集中できる",
+                "中程度集中できる",
+                "非常に集中できる",
+                "極度に集中できる"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "あなたは自分の外見を受け入れることができますか",
+            "name": "Q11",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全く受け入れられない",
+                "少し受け入れられる",
+                "中程度受け入れられる",
+                "非常に受け入れられる",
+                "極度に受け入れられる"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "あなたは自分自身に満足していますか",
+            "name": "Q19",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "とても不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "とても満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "あなたは否定的な感情（憂うつ、絶望、不安、落ち込みなど）をどのくらい経験しますか",
+            "name": "Q26",
+            "type": "radio",
+            "required": true,
+            "description": "この項目は逆転処理されます（否定的感情が多いほど低スコア）",
+            "selector": [
+                "全く経験しない",
+                "少し経験する",
+                "中程度経験する",
+                "非常に経験する",
+                "極度に経験する"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "社会的関係領域",
+            "type": "subsection"
+        },
+        {
+            "dispname": "他の人たちとの個人的な関係にどのくらい満足していますか",
+            "name": "Q20",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "とても不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "とても満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "あなたの性生活にどのくらい満足していますか",
+            "name": "Q21",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "とても不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "とても満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "友人からのサポートにどのくらい満足していますか",
+            "name": "Q22",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "とても不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "とても満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "環境領域",
+            "type": "subsection"
+        },
+        {
+            "dispname": "あなたは日常生活で安全と感じますか",
+            "name": "Q8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全く安全と感じない",
+                "少し安全と感じる",
+                "中程度安全と感じる",
+                "非常に安全と感じる",
+                "極度に安全と感じる"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "あなたの住環境は健康的ですか",
+            "name": "Q9",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全く健康的でない",
+                "少し健康的",
+                "中程度健康的",
+                "非常に健康的",
+                "極度に健康的"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "あなたは自分のお金で必要なものを買うのに十分なお金がありますか",
+            "name": "Q12",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "中程度ある",
+                "非常にある",
+                "極度にある"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "あなたは日常生活で必要な情報をどのくらい利用できますか",
+            "name": "Q13",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全く利用できない",
+                "少し利用できる",
+                "中程度利用できる",
+                "非常に利用できる",
+                "極度に利用できる"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "あなたは余暇を楽しむ機会がどのくらいありますか",
+            "name": "Q14",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "少しある",
+                "中程度ある",
+                "非常にある",
+                "極度にある"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "あなたが住んでいる場所での生活にどのくらい満足していますか",
+            "name": "Q23",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "とても不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "とても満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "保健・医療サービスの利用しやすさにどのくらい満足していますか",
+            "name": "Q24",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "とても不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "とても満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "あなたの交通手段にどのくらい満足していますか",
+            "name": "Q25",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "とても不満",
+                "不満",
+                "どちらでもない",
+                "満足",
+                "とても満足"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "身体的領域得点",
+            "type": "eval",
+            "formula": "( ((6 - [[Q3.index]]) + (6 - [[Q4.index]]) + [[Q10.index]] + [[Q15.index]] + [[Q16.index]] + [[Q17.index]] + [[Q18.index]]) / 7 * 4).toFixed(2)"
+        },
+        {
+            "name": "心理領域得点",
+            "type": "eval",
+            "formula": "( ([[Q5.index]] + [[Q6.index]] + [[Q7.index]] + [[Q11.index]] + [[Q19.index]] + (6 - [[Q26.index]])) / 6 * 4).toFixed(2)"
+        },
+        {
+            "name": "社会的関係領域得点",
+            "type": "eval",
+            "formula": "( ([[Q20.index]] + [[Q21.index]] + [[Q22.index]]) / 3 * 4).toFixed(2)"
+        },
+        {
+            "name": "環境領域得点",
+            "type": "eval",
+            "formula": "( ([[Q8.index]] + [[Q9.index]] + [[Q12.index]] + [[Q13.index]] + [[Q14.index]] + [[Q23.index]] + [[Q24.index]] + [[Q25.index]]) / 8 * 4).toFixed(2)"
+        },
+        {
+            "name": "全般的QOL得点",
+            "type": "eval",
+            "formula": "[[G1.index]]"
+        },
+        {
+            "name": "全般的健康感得点",
+            "type": "eval",
+            "formula": "[[G4.index]]"
+        }
+    ]
+}

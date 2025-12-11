@@ -1,0 +1,112 @@
+{
+    "_comment": [
+        "CDAI (Clinical Disease Activity Index) 関節リウマチ疾患活動性評価",
+        "原典: Aletaha D, Smolen J. The Simplified Disease Activity Index (SDAI) and the Clinical Disease Activity Index (CDAI): a review of their usefulness and validity in rheumatoid arthritis. Clin Exp Rheumatol. 2005;23(5 Suppl 39):S100-8.",
+        "PMID: 16273793",
+        "公式サイト: https://rheumatology.org/",
+        "計算式: CDAI = 圧痛関節数 + 腫脹関節数 + 患者VAS + 医師VAS",
+        "28関節の評価が必要"
+    ],
+    "title": "CDAI 関節リウマチ疾患活動性指標",
+    "description": [
+        "関節リウマチの疾患活動性を評価するスケールです。",
+        "医師による診察と合わせて実施してください。"
+    ],
+    "contact": "リウマチ・膠原病科",
+    "submit_button_title": "評価を完了",
+    "fields": [
+        {
+            "dispname": "関節評価（28関節）",
+            "type": "subsection"
+        },
+        {
+            "dispname": "圧痛関節数",
+            "name": "圧痛関節数",
+            "type": "text",
+            "inputmode": "numeric",
+            "postfix": "個",
+            "testrange": [
+                0,
+                28
+            ],
+            "description": "医師の触診により圧痛を認める関節の数（0～28個）",
+            "required": true
+        },
+        {
+            "dispname": "腫脹関節数",
+            "name": "腫脹関節数",
+            "type": "text",
+            "inputmode": "numeric",
+            "postfix": "個",
+            "testrange": [
+                0,
+                28
+            ],
+            "description": "医師の触診により腫脹を認める関節の数（0～28個）",
+            "required": true
+        },
+        {
+            "dispname": "評価対象関節（28関節）",
+            "type": "note",
+            "description": "**評価対象関節**\n\n- 肩関節（左右）\n- 肘関節（左右）\n- 手関節（左右）\n- 中手指節関節（左右各5個）\n- 近位指節間関節（左右各5個）\n- 親指の指節間関節（左右）\n- 膝関節（左右）"
+        },
+        {
+            "dispname": "患者全般評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "患者による全般的評価",
+            "name": "患者VAS",
+            "type": "scale",
+            "min": 0,
+            "max": 10,
+            "step": 1,
+            "value": 0,
+            "starttag": "症状なし",
+            "endtag": "最大の症状",
+            "description": "現在の関節リウマチの症状が日常生活に与える影響について、0（全く影響なし）から10（過去最大の影響）のスケールで評価してください",
+            "required": true
+        },
+        {
+            "dispname": "医師による全般的評価",
+            "name": "医師VAS",
+            "type": "scale",
+            "min": 0,
+            "max": 10,
+            "step": 1,
+            "value": 0,
+            "starttag": "症状なし",
+            "endtag": "最大の症状",
+            "description": "医師が評価する患者の現在の疾患活動性について、0（疾患活動性なし）から10（最大の疾患活動性）のスケールで評価",
+            "required": true
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "CDAIスコア",
+            "type": "eval",
+            "formula": "((圧痛関節数)) + ((腫脹関節数)) + ((患者VAS)) + ((医師VAS))"
+        },
+        {
+            "name": "疾患活動性分類",
+            "type": "eval",
+            "formula": "((CDAIスコア)) <= 2.8 ? '寛解' : ( ((CDAIスコア)) <= 10 ? '低疾患活動性' : ( ((CDAIスコア)) <= 22 ? '中等度疾患活動性' : '高疾患活動性' ) )"
+        },
+        {
+            "name": "寛解判定",
+            "type": "eval",
+            "formula": "((CDAIスコア)) <= 2.8 ? '寛解' : '非寛解'"
+        },
+        {
+            "name": "Warning: 中等度以上の疾患活動性",
+            "formula": "((CDAIスコア)) > 10",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 高疾患活動性",
+            "formula": "((CDAIスコア)) > 22",
+            "type": "emergency"
+        }
+    ]
+}

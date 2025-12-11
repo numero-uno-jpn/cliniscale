@@ -1,0 +1,158 @@
+{
+  "_comment": [
+    "Harvey-Bradshaw Index (HBI) for Crohn's Disease",
+    "クローン病活動性評価",
+    "原著論文: Harvey RF, Bradshaw JM. Lancet. 1980;1(8167):514.",
+    "PubMed: https://pubmed.ncbi.nlm.nih.gov/6070572/",
+    "MDCalc: https://www.mdcalc.com/calc/10069/harvey-bradshaw-index-hbi-crohns-disease"
+  ],
+  "title": "Harvey-Bradshaw指数 (HBI)",
+  "description": [
+    "クローン病の活動性を評価する簡易インデックスです",
+    "症状に基づいて評価し、検査不要で実施可能です"
+  ],
+  "responsible_person": [
+    "消化器科医"
+  ],
+  "dept_in_charge": "消化器内科",
+  "fields": [
+    {
+      "dispname": "基本情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "評価日",
+      "name": "評価日",
+      "type": "date",
+      "format": "YYYY/MM/DD"
+    },
+    {
+      "dispname": "HBI評価項目",
+      "type": "subsection"
+    },
+    {
+      "dispname": "1. 全般的健康状態",
+      "name": "健康状態",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "とても良い",
+        "良い",
+        "普通",
+        "悪い",
+        "とても悪い"
+      ],
+      "selectoridx": "0|1|2|3|4",
+      "description": "過去24時間の全般的な健康状態"
+    },
+    {
+      "dispname": "2. 腹痛",
+      "name": "腹痛",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "軽度",
+        "中等度",
+        "重度"
+      ],
+      "selectoridx": "0|1|2|3",
+      "description": "過去24時間の腹痛の程度"
+    },
+    {
+      "dispname": "3. 1日の液状便回数",
+      "name": "液状便回数",
+      "type": "text",
+      "required": true,
+      "postfix": "回",
+      "inputmode": "numeric",
+      "testrange": [
+        0,
+        20
+      ],
+      "description": "過去24時間の液状便の回数を半角数字で入力してください（例: 3）"
+    },
+    {
+      "dispname": "4. 腹部腫瘤",
+      "name": "腹部腫瘤",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "疑わしい",
+        "明らかな腫瘤",
+        "明らかで圧痛を伴う腫瘤"
+      ],
+      "selectoridx": "0|1|2|3",
+      "description": "腹部触診での腫瘤の有無と性状"
+    },
+    {
+      "dispname": "5. 合併症",
+      "name": "合併症",
+      "type": "checkbox",
+      "selector": [
+        "関節痛または関節炎",
+        "虹彩炎またはぶどう膜炎",
+        "結節性紅斑、壊疽性膿皮症、口内アフタ",
+        "裂肛、瘻孔、膿瘍",
+        "その他の瘻孔",
+        "過去1週間の発熱（37.8度以上）"
+      ],
+      "selectoridx": "1|1|1|1|1|1",
+      "description": "該当する合併症をすべて選択してください"
+    },
+    {
+      "dispname": "追加情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "その他の症状・所見",
+      "name": "その他所見",
+      "type": "textarea",
+      "rows": 5,
+      "description": "その他の症状や特記事項を記載してください"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "液状便回数_数値",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[液状便回数]]"
+    },
+    {
+      "name": "合併症_index",
+      "type": "eval",
+      "noreport": true,
+      "formula": "((合併症.index)).length"
+    },
+    {
+      "name": "合併症数",
+      "type": "eval",
+      "formula": "[[合併症_index]]"
+    },
+    {
+      "name": "HBI合計スコア",
+      "type": "eval",
+      "formula": "[[健康状態.index]] + [[腹痛.index]] + [[液状便回数_数値]] + [[腹部腫瘤.index]] + [[合併症数]]"
+    },
+    {
+      "name": "活動性評価",
+      "type": "eval",
+      "formula": "[[HBI合計スコア]] < 5 ? '寛解' : ( [[HBI合計スコア]] <= 7 ? '軽度活動性' : ( [[HBI合計スコア]] <= 16 ? '中等度活動性' : '重度活動性' ) )"
+    },
+    {
+      "name": "Warning: 軽度以上の活動性",
+      "formula": "[[HBI合計スコア]] >= 5",
+      "type": "warning",
+      "description": "軽度以上の活動性"
+    },
+    {
+      "name": "Emergency: 重度活動性",
+      "formula": "[[HBI合計スコア]] > 16",
+      "type": "emergency",
+      "description": "重度活動性"
+    }
+  ]
+}

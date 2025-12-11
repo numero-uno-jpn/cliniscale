@@ -1,0 +1,98 @@
+{
+    "_comment": [
+        "CONUT (Controlling Nutritional Status) スコア問診票",
+        "原典: Ignacio de Ulíbarri J, González-Madroño A, de Villar NG, et al. CONUT: a tool for controlling nutritional status. First validation in a hospital population. Nutr Hosp. 2005;20(1):38-45.",
+        "血清アルブミン、総リンパ球数、総コレステロールの3項目から栄養状態を評価",
+        "スコア0-12点で4段階に分類",
+        "URL: https://pubmed.ncbi.nlm.nih.gov/15762418/"
+    ],
+    "title": "CONUT 栄養状態評価",
+    "description": [
+        "血液検査結果を基に栄養状態を評価するスコアです。",
+        "血清アルブミン、総リンパ球数、総コレステロールの値を入力してください。"
+    ],
+    "submit_button_title": "評価結果を送信",
+    "fields": [
+        {
+            "dispname": "血清アルブミン",
+            "name": "アルブミン",
+            "type": "text",
+            "inputmode": "decimal",
+            "postfix": "g/dL",
+            "testrange": [
+                1.5,
+                4.5
+            ],
+            "required": true,
+            "description": "血液検査結果の血清アルブミン値を入力してください（例: 3.5）"
+        },
+        {
+            "dispname": "総リンパ球数",
+            "name": "総リンパ球数",
+            "type": "text",
+            "inputmode": "numeric",
+            "postfix": "/μL",
+            "testrange": [
+                500,
+                2000
+            ],
+            "required": true,
+            "description": "血液検査結果の総リンパ球数を入力してください（例: 1500）"
+        },
+        {
+            "dispname": "総コレステロール",
+            "name": "総コレステロール",
+            "type": "text",
+            "inputmode": "numeric",
+            "postfix": "mg/dL",
+            "testrange": [
+                60,
+                300
+            ],
+            "required": true,
+            "description": "血液検査結果の総コレステロール値を入力してください（例: 180）"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "アルブミンスコア",
+            "type": "eval",
+            "formula": "((アルブミン)) >= 3.5 ? 0 : ( ((アルブミン)) >= 3.0 ? 2 : ( ((アルブミン)) >= 2.5 ? 4 : 6 ) )",
+            "noreport": true
+        },
+        {
+            "name": "リンパ球スコア",
+            "type": "eval",
+            "formula": "((総リンパ球数)) >= 1600 ? 0 : ( ((総リンパ球数)) >= 1200 ? 1 : ( ((総リンパ球数)) >= 800 ? 2 : 3 ) )",
+            "noreport": true
+        },
+        {
+            "name": "コレステロールスコア",
+            "type": "eval",
+            "formula": "((総コレステロール)) >= 180 ? 0 : ( ((総コレステロール)) >= 140 ? 1 : ( ((総コレステロール)) >= 100 ? 2 : 3 ) )",
+            "noreport": true
+        },
+        {
+            "name": "CONUTスコア",
+            "type": "eval",
+            "formula": "[[アルブミンスコア]] + [[リンパ球スコア]] + [[コレステロールスコア]]"
+        },
+        {
+            "name": "栄養状態判定",
+            "type": "eval",
+            "formula": "[[CONUTスコア]] <= 1 ? '正常栄養状態' : ( [[CONUTスコア]] <= 4 ? '軽度栄養不良' : ( [[CONUTスコア]] <= 8 ? '中等度栄養不良' : '重度栄養不良' ) )",
+            "dispname": "栄養状態評価: 0-1点=正常、2-4点=軽度不良、5-8点=中等度不良、9-12点=重度不良"
+        },
+        {
+            "name": "Warning: 軽度以上の栄養不良",
+            "formula": "[[CONUTスコア]] >= 2",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 中等度以上の栄養不良",
+            "formula": "[[CONUTスコア]] >= 5",
+            "type": "emergency"
+        }
+    ]
+}

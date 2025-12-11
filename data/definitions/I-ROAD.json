@@ -1,0 +1,91 @@
+{
+    "_comment": [
+        "I-ROAD (Immunodeficiency, Respiration, Orientation, Age, Dehydration) スコア",
+        "院内肺炎・医療介護関連肺炎の重症度評価用",
+        "参考：日本呼吸器学会成人肺炎診療ガイドライン2024",
+        "参考URL：https://www.jrs.or.jp/publication/jrs_guidelines/20240319125656.html",
+        "計算：5項目の該当数で重症度分類、3項目以上で重症群"
+    ],
+    "title": "I-ROAD 院内肺炎・医療介護関連肺炎の重症度スコア",
+    "description": [
+        "院内肺炎・医療介護関連肺炎の重症度評価を行います",
+        "5つの項目について該当するかどうかお答えください"
+    ],
+    "fields": [
+        {
+            "dispname": "免疫不全",
+            "name": "免疫不全",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "なし|あり",
+            "selectoridx": "0|1",
+            "description": "悪性腫瘍または免疫不全状態はありますか"
+        },
+        {
+            "dispname": "呼吸不全",
+            "name": "呼吸不全",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "なし|あり",
+            "selectoridx": "0|1",
+            "description": "SpO2が90%を維持するのにFiO2が35%以上必要ですか"
+        },
+        {
+            "dispname": "意識障害",
+            "name": "意識障害",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "なし|あり",
+            "selectoridx": "0|1",
+            "description": "意識障害はありますか"
+        },
+        {
+            "dispname": "年齢",
+            "name": "年齢基準",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "該当しない|該当する",
+            "selectoridx": "0|1",
+            "description": "男性70歳以上または女性75歳以上ですか"
+        },
+        {
+            "dispname": "脱水",
+            "name": "脱水",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "なし|あり",
+            "selectoridx": "0|1",
+            "description": "乏尿または脱水所見はありますか"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "スコア合計",
+            "dispname": "I-ROADスコア合計",
+            "type": "eval",
+            "formula": "[[免疫不全.index]] + [[呼吸不全.index]] + [[意識障害.index]] + [[年齢基準.index]] + [[脱水.index]]"
+        },
+        {
+            "name": "重症度分類",
+            "type": "eval",
+            "formula": "[[スコア合計]] >= 3 ? '重症群 (C群)' : '中等症群以下 (A・B群)'"
+        },
+        {
+            "dispname": "詳細分類 (2項目以下の場合)",
+            "name": "詳細分類",
+            "type": "eval",
+            "formula": "[[スコア合計]] >= 3 ? 'C群' : 'CRPとX線所見により軽症A群・中等症B群に分類'"
+        },
+        {
+            "name": "Warning: 重症群判定 I-ROAD スコア ≥ 3",
+            "formula": "[[スコア合計]] >= 3",
+            "type": "warning"
+        }
+    ]
+}

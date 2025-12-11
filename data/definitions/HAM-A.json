@@ -1,0 +1,246 @@
+{
+    "_comment": [
+        "HAM-A (Hamilton Anxiety Rating Scale) - 1959年にMax Hamiltonによって開発された不安症状評価尺度",
+        "原著論文: Hamilton M. The assessment of anxiety states by rating. Br J Med Psychol 1959;32:50-55 (PMID: 13638508)",
+        "参考URL: https://dcf.psychiatry.ufl.edu/files/2011/05/HAMILTON-ANXIETY.pdf",
+        "14項目、各項目0-4点、総得点0-56点",
+        "得点解釈(標準): ≦17軽度、18-24軽度-中等度、25-30中等度-重度、31-56重度-非常に重度",
+        "臨床医による評価が前提だが、患者自己評価として適用",
+        "【修正履歴】",
+        "- Eval式構文を修正: [[field]].index → [[field.index]]",
+        "- severity_classificationを修正: [[total_score]] → ((total_score))",
+        "- カットオフ値を標準的な4分類に変更"
+    ],
+    "title": "HAM-A (ハミルトン不安評価尺度)",
+    "description": [
+        "この問診票は、あなたの不安症状を評価するためのものです。",
+        "以下の14項目について、過去1週間の状態を最もよく表すものを選択してください。"
+    ],
+    "fields": [
+        {
+            "name": "anxious_mood",
+            "type": "radio",
+            "dispname": "不安気分",
+            "description": "心配、最悪の事態への予期、恐怖的予期、いらいら感",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "非常に重度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "tension",
+            "type": "radio",
+            "dispname": "緊張",
+            "description": "緊張感、疲労感、驚愕反応、涙もろさ、震え、落ち着きのなさ、リラックスできない",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "非常に重度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "fears",
+            "type": "radio",
+            "dispname": "恐怖",
+            "description": "暗闇、見知らぬ人、一人でいること、動物、交通、群衆への恐怖",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "非常に重度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "insomnia",
+            "type": "radio",
+            "dispname": "不眠",
+            "description": "入眠困難、睡眠の中断、満足できない睡眠と起床時の疲労感、夢、悪夢、夜驚",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "非常に重度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "intellectual",
+            "type": "radio",
+            "dispname": "知的機能",
+            "description": "集中困難、記憶力低下",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "非常に重度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "depressed_mood",
+            "type": "radio",
+            "dispname": "抑うつ気分",
+            "description": "興味の減退、趣味の楽しみの欠如、抑うつ、早朝覚醒、日内変動",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "非常に重度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "somatic_muscular",
+            "type": "radio",
+            "dispname": "身体症状(筋系)",
+            "description": "痛み、こり、こわばり、ミオクローヌス様痙攣、歯ぎしり、声の震え、筋緊張の亢進",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "非常に重度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "somatic_sensory",
+            "type": "radio",
+            "dispname": "身体症状(感覚系)",
+            "description": "耳鳴り、視力のぼやけ、のぼせや寒気、脱力感、刺すような感覚",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "非常に重度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "cardiovascular",
+            "type": "radio",
+            "dispname": "心血管系症状",
+            "description": "頻脈、動悸、胸痛、血管の拍動、失神感、脈の欠滞",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "非常に重度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "respiratory",
+            "type": "radio",
+            "dispname": "呼吸器系症状",
+            "description": "胸部の圧迫感、窒息感、ため息、息切れ",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "非常に重度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "gastrointestinal",
+            "type": "radio",
+            "dispname": "胃腸症状",
+            "description": "嚥下困難、腹部膨満感、灼熱感、腹部充満感、悪心、嘔吐、腸蠕動音、下痢、体重減少、便秘",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "非常に重度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "genitourinary",
+            "type": "radio",
+            "dispname": "泌尿生殖器症状",
+            "description": "頻尿、尿意切迫感、無月経、月経過多、性的冷感、早漏、性欲減退、インポテンス",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "非常に重度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "autonomic",
+            "type": "radio",
+            "dispname": "自律神経症状",
+            "description": "口渇、顔面紅潮、蒼白、発汗傾向、めまい、緊張性頭痛、立毛",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "非常に重度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "behavior",
+            "type": "radio",
+            "dispname": "面接時の行動",
+            "description": "そわそわする、落ち着きがない、歩き回る、手の震え、しかめ面、こわばった表情、ため息、早い呼吸、顔面蒼白、つばを飲み込む等",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "中等度",
+                "重度",
+                "非常に重度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "total_score",
+            "type": "eval",
+            "dispname": "HAM-A総得点(0-56点)",
+            "formula": "[[anxious_mood.index]] + [[tension.index]] + [[fears.index]] + [[insomnia.index]] + [[intellectual.index]] + [[depressed_mood.index]] + [[somatic_muscular.index]] + [[somatic_sensory.index]] + [[cardiovascular.index]] + [[respiratory.index]] + [[gastrointestinal.index]] + [[genitourinary.index]] + [[autonomic.index]] + [[behavior.index]]"
+        },
+        {
+            "name": "severity_classification",
+            "type": "eval",
+            "dispname": "重症度分類",
+            "formula": "((total_score)) <= 7 ? \"症状なし～かなり軽度\" : ((total_score)) <= 14 ? \"軽度\" : ((total_score)) <= 23 ? \"中等度\" : \"重度\""
+        }
+    ]
+}

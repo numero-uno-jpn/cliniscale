@@ -1,0 +1,193 @@
+{
+  "_comment": [
+    "International Prognostic Scoring System for Myelodysplastic Syndromes (IPSS)",
+    "骨髄異形成症候群の予後予測",
+    "原著論文: Greenberg P, et al. Blood. 1997;89(6):2079-88.",
+    "PubMed: https://pubmed.ncbi.nlm.nih.gov/9058730/",
+    "原文: https://ashpublications.org/blood/article/89/6/2079/139148/International-Scoring-System-for-Evaluating"
+  ],
+  "title": "骨髄異形成症候群国際予後スコアリングシステム (IPSS)",
+  "description": [
+    "骨髄異形成症候群の予後を予測するスコアリングシステムです",
+    "芽球数、染色体異常、血球減少により低・中・高リスクに分類します"
+  ],
+  "responsible_person": [
+    "血液内科医"
+  ],
+  "dept_in_charge": "血液内科",
+  "fields": [
+    {
+      "dispname": "基本情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "評価日",
+      "name": "評価日",
+      "type": "date",
+      "format": "YYYY/MM/DD"
+    },
+    {
+      "dispname": "IPSS評価項目",
+      "type": "subsection"
+    },
+    {
+      "dispname": "1. 骨髄芽球比率",
+      "name": "芽球",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "5%未満",
+        "5-10%",
+        "11-20%",
+        "21-30%"
+      ],
+      "selectoridx": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "description": "骨髄中の芽球の割合"
+    },
+    {
+      "dispname": "2. 染色体核型",
+      "name": "染色体",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "良好: 正常、-Y単独、del(5q)単独、del(20q)単独",
+        "中間: その他の異常",
+        "不良: 複雑核型（3箇所以上の異常）、または7番染色体異常"
+      ],
+      "selectoridx": [
+        0,
+        1,
+        2
+      ],
+      "description": "染色体検査結果に基づく分類"
+    },
+    {
+      "dispname": "3. 血球減少の数",
+      "name": "血球減少",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "0-1系統",
+        "2-3系統"
+      ],
+      "selectoridx": [
+        0,
+        1
+      ],
+      "description": "血球減少（Hb<10g/dL、血小板<10万/μL、好中球<1800/μL）の系統数"
+    },
+    {
+      "dispname": "詳細情報（参考）",
+      "type": "subsection"
+    },
+    {
+      "dispname": "ヘモグロビン",
+      "name": "Hb",
+      "type": "text",
+      "postfix": "g/dL",
+      "inputmode": "decimal",
+      "testrange": [
+        4,
+        18
+      ],
+      "description": "ヘモグロビン値を半角数字で入力してください（例: 9.5）"
+    },
+    {
+      "dispname": "血小板数",
+      "name": "血小板",
+      "type": "text",
+      "postfix": "×10^4/μL",
+      "inputmode": "decimal",
+      "testrange": [
+        1,
+        50
+      ],
+      "description": "血小板数を半角数字で入力してください（例: 8.5）"
+    },
+    {
+      "dispname": "好中球数",
+      "name": "好中球",
+      "type": "text",
+      "postfix": "/μL",
+      "inputmode": "numeric",
+      "testrange": [
+        200,
+        8000
+      ],
+      "description": "好中球数を半角数字で入力してください（例: 1500）"
+    },
+    {
+      "dispname": "骨髄芽球比率",
+      "name": "芽球比率",
+      "type": "text",
+      "postfix": "%",
+      "inputmode": "decimal",
+      "testrange": [
+        0,
+        30
+      ],
+      "description": "実測値を半角数字で入力してください（例: 7.5）"
+    },
+    {
+      "dispname": "染色体検査所見",
+      "name": "染色体所見",
+      "type": "textarea",
+      "rows": 3,
+      "description": "具体的な染色体異常を記載してください"
+    },
+    {
+      "dispname": "追加情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "その他の所見・コメント",
+      "name": "その他所見",
+      "type": "textarea",
+      "rows": 5,
+      "description": "その他の臨床所見や特記事項を記載してください"
+    },
+    {
+      "dispname": "備考",
+      "type": "note",
+      "description": "注: 改訂版のIPSS-R (Revised IPSS) も利用可能です"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "IPSSスコア",
+      "type": "eval",
+      "formula": "( [[芽球.index]] + [[染色体.index]] + [[血球減少.index]] ) / 2",
+      "dispname": "IPSSスコア"
+    },
+    {
+      "name": "リスク群",
+      "type": "eval",
+      "formula": "((IPSSスコア)) == 0 ? '低リスク' : ( ((IPSSスコア)) <= 1 ? '中間-1' : ( ((IPSSスコア)) <= 2 ? '中間-2' : '高リスク' ) )",
+      "dispname": "リスク群"
+    },
+    {
+      "name": "予測生存期間",
+      "type": "eval",
+      "formula": "{{リスク群}} == '低リスク' ? '中央値5.7年' : ( {{リスク群}} == '中間-1' ? '中央値3.5年' : ( {{リスク群}} == '中間-2' ? '中央値1.2年' : '中央値0.4年' ) )",
+      "dispname": "予測生存期間"
+    },
+    {
+      "name": "Warning: 中間-2以上のリスク",
+      "type": "warning",
+      "formula": "((IPSSスコア)) >= 1.5",
+      "dispname": "Warning: 中間-2以上のリスク"
+    },
+    {
+      "name": "Emergency: 高リスク",
+      "type": "emergency",
+      "formula": "((IPSSスコア)) >= 2.5",
+      "dispname": "Emergency: 高リスク"
+    }
+  ]
+}

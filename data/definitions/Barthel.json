@@ -1,0 +1,172 @@
+{
+    "_comment": [
+        "Barthel Index (Barthel ADL Index) - バーセルインデックス",
+        "原典: Mahoney FI, Barthel DW. Functional evaluation: the Barthel Index. Maryland State Medical Journal 1965;14:61-65",
+        "日常生活動作(ADL)の自立度を評価する国際的な指標",
+        "10項目、最高100点、最低0点",
+        "https://pubmed.ncbi.nlm.nih.gov/14258950/",
+        "https://hokuto.app/calculator/vdDcVxip4BxGXIPx1iQp"
+    ],
+    "title": "Barthel Index 日常生活動作(ADL)の自立度評価指標",
+    "description": [
+        "日常生活動作(ADL)の自立度を評価する問診票です。",
+        "10項目について、現在のあなたの状況に最も当てはまるものをお選びください。"
+    ],
+    "fields": [
+        {
+            "name": "食事",
+            "dispname": "食事",
+            "type": "radio",
+            "required": true,
+            "description": "適当な時間内での食事摂取の自立度",
+            "selector": [
+                "自分で食事をとって食べることができる。自助具を自分で装着することも可能",
+                "食べ物を細かく切ってもらうなどの部分的な介助が必要",
+                "全面的な介助が必要"
+            ],
+            "selectoridx": "10|5|0"
+        },
+        {
+            "name": "移乗",
+            "dispname": "車椅子からベッドへの移乗",
+            "type": "radio",
+            "required": true,
+            "description": "車椅子からベッドに移る動作の自立度",
+            "selector": [
+                "車椅子からベッドへの移乗が全て自分でできる",
+                "移乗動作のいずれかに介助が必要だが、あとは自分でできる",
+                "ベッドから起き上がり座っていることはできるが、乗り移りに介助が必要",
+                "全面的な介助が必要または不可能"
+            ],
+            "selectoridx": "15|10|5|0"
+        },
+        {
+            "name": "整容",
+            "dispname": "整容",
+            "type": "radio",
+            "required": true,
+            "description": "洗面、整髪、歯磨き、髭剃り(男性)、化粧(女性)の自立度",
+            "selector": [
+                "手洗い、洗顔、整髪、歯磨き、髭剃り(男性)、化粧(女性)が全て自分でできる",
+                "上記の動作に介助が必要"
+            ],
+            "selectoridx": "5|0"
+        },
+        {
+            "name": "トイレ動作",
+            "dispname": "トイレ動作",
+            "type": "radio",
+            "required": true,
+            "description": "トイレでの一連の動作の自立度",
+            "selector": [
+                "トイレの出入り、衣服の操作、後始末を含め全て自分でできる。ポータブル便器使用時はその洗浄も含む",
+                "身体を支える、衣服の操作、後始末に部分的な介助が必要",
+                "全面的な介助が必要または不可能"
+            ],
+            "selectoridx": "10|5|0"
+        },
+        {
+            "name": "入浴",
+            "dispname": "入浴",
+            "type": "radio",
+            "required": true,
+            "description": "浴槽につかる、シャワーを使うなどの入浴動作の自立度",
+            "selector": [
+                "浴槽につかる、シャワーを使うなど全て自分でできる",
+                "入浴に介助が必要"
+            ],
+            "selectoridx": "5|0"
+        },
+        {
+            "name": "歩行",
+            "dispname": "歩行",
+            "type": "radio",
+            "required": true,
+            "description": "45m以上の平地歩行または車椅子移動の自立度",
+            "selector": [
+                "45m以上の平地歩行が自立してできる。補装具の使用は可だが車椅子、歩行器は除く",
+                "45m以上の介助歩行または歩行器の使用を含む",
+                "歩行はできないが、自力で車椅子を操作し45m以上移動できる",
+                "全面的な介助が必要または移動不可能"
+            ],
+            "selectoridx": "15|10|5|0"
+        },
+        {
+            "name": "階段昇降",
+            "dispname": "階段昇降",
+            "type": "radio",
+            "required": true,
+            "description": "階段の昇り降りの自立度",
+            "selector": [
+                "手すり、杖などの使用は可だが、介助や監視なしに安全に階段昇降ができる",
+                "階段昇降に介助または監視が必要",
+                "階段昇降ができない"
+            ],
+            "selectoridx": "10|5|0"
+        },
+        {
+            "name": "更衣",
+            "dispname": "更衣",
+            "type": "radio",
+            "required": true,
+            "description": "衣服の着脱の自立度",
+            "selector": [
+                "靴、ファスナー、装具の着脱を含め全て自分でできる",
+                "部分的な介助が必要だが、少なくとも半分以上は自分でできる。適切な時間内にできる",
+                "上記以外、全面的な介助が必要"
+            ],
+            "selectoridx": "10|5|0"
+        },
+        {
+            "name": "排便コントロール",
+            "dispname": "排便コントロール",
+            "type": "radio",
+            "required": true,
+            "description": "排便の失禁の有無",
+            "selector": [
+                "失禁なし。浣腸、座薬の取り扱いも可能",
+                "時に失禁あり。浣腸、座薬の取り扱いに介助が必要",
+                "失禁の管理ができない"
+            ],
+            "selectoridx": "10|5|0"
+        },
+        {
+            "name": "排尿コントロール",
+            "dispname": "排尿コントロール",
+            "type": "radio",
+            "required": true,
+            "description": "排尿の失禁の有無",
+            "selector": [
+                "失禁なし",
+                "時に失禁あり。収尿器の取り扱いに介助を要する場合も含む",
+                "失禁の管理ができない"
+            ],
+            "selectoridx": "10|5|0"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "合計スコア",
+            "type": "eval",
+            "formula": "[[食事.index]] + [[移乗.index]] + [[整容.index]] + [[トイレ動作.index]] + [[入浴.index]] + [[歩行.index]] + [[階段昇降.index]] + [[更衣.index]] + [[排便コントロール.index]] + [[排尿コントロール.index]]",
+            "dispname": "バーセルインデックス合計得点(0-100点)"
+        },
+        {
+            "name": "自立度判定",
+            "type": "eval",
+            "formula": "[[合計スコア]] >= 85 ? 'ADL自立' : ( [[合計スコア]] >= 60 ? '部分自立' : ( [[合計スコア]] >= 40 ? '大部分介助' : '全介助' ) )",
+            "dispname": "ADL自立度の判定結果"
+        },
+        {
+            "name": "Warning: 部分自立 - 介助必要",
+            "formula": "[[合計スコア]] >= 60 && [[合計スコア]] < 85",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 全介助レベル - 包括的ケア必要",
+            "formula": "[[合計スコア]] < 40",
+            "type": "emergency"
+        }
+    ]
+}

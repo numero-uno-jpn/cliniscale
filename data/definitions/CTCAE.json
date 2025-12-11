@@ -1,0 +1,1055 @@
+{
+    "_comment": [
+        "Common Terminology Criteria for Adverse Events (CTCAE) Version 5.0 (2017)",
+        "公式URL: https://ctep.cancer.gov/protocoldevelopment/electronic_applications/ctc.htm",
+        "参考URL: https://evs.nci.nih.gov/ftp1/CTCAE/CTCAE_5.0/",
+        "複数の臓器系統で同時に副作用が発生する可能性があるため、checkbox + parentsel構造を採用"
+    ],
+    "title": "CTCAE副作用評価",
+    "description": [
+        "臨床試験における副作用を標準化して評価するシステムです",
+        "グレード1 (軽度) からグレード5 (死亡) まで分類します",
+        "複数のカテゴリを同時に選択して包括的に評価できます"
+    ],
+    "fields": [
+        {
+            "dispname": "副作用の基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "副作用のカテゴリ",
+            "name": "カテゴリ",
+            "type": "checkbox",
+            "required": true,
+            "description": "該当する全てのカテゴリを選択してください",
+            "selector": [
+                "血液・リンパ系",
+                "心臓系",
+                "消化器系",
+                "内分泌系",
+                "眼系",
+                "全身症状",
+                "感染症",
+                "代謝・栄養系",
+                "筋骨格系",
+                "神経系",
+                "精神系",
+                "腎・泌尿器系",
+                "生殖器系",
+                "呼吸器系",
+                "皮膚系",
+                "血管系",
+                "その他"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17"
+        },
+        {
+            "dispname": "血液・リンパ系の副作用",
+            "type": "subsection",
+            "parentname": "カテゴリ",
+            "parentsel": "血液・リンパ系"
+        },
+        {
+            "dispname": "副作用の名称",
+            "name": "血液リンパ系_副作用名",
+            "type": "textarea",
+            "required": true,
+            "description": "具体的な副作用名を記載してください (例: 貧血、血小板減少症)",
+            "rows": 2,
+            "parentname": "カテゴリ",
+            "parentsel": "血液・リンパ系"
+        },
+        {
+            "dispname": "症状の重症度",
+            "name": "血液リンパ系_重症度",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "Grade 1: 無症状または軽度の症状 - 臨床的または診断的観察のみ、治療を要さない",
+                "Grade 2: 中等度 - 最小限・局所的・非侵襲的治療を要する、年齢相応の身の回り以外の日常生活に支障",
+                "Grade 3: 重度または医学的に重大だが、ただちに生命を脅かすものではない - 入院または入院期間の延長、身の回りの日常生活に支障",
+                "Grade 4: 生命を脅かす - 緊急処置を要する",
+                "Grade 5: 死亡"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "parentname": "カテゴリ",
+            "parentsel": "血液・リンパ系"
+        },
+        {
+            "dispname": "必要な医学的介入",
+            "name": "血液リンパ系_介入",
+            "type": "checkbox",
+            "selector": [
+                "観察のみ",
+                "外来治療",
+                "入院治療",
+                "集中治療",
+                "治験薬の減量",
+                "治験薬の中止",
+                "支持療法"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7",
+            "parentname": "カテゴリ",
+            "parentsel": "血液・リンパ系"
+        },
+        {
+            "dispname": "心臓系の副作用",
+            "type": "subsection",
+            "parentname": "カテゴリ",
+            "parentsel": "心臓系"
+        },
+        {
+            "dispname": "副作用の名称",
+            "name": "心臓系_副作用名",
+            "type": "textarea",
+            "required": true,
+            "description": "具体的な副作用名を記載してください (例: 不整脈、心筋梗塞)",
+            "rows": 2,
+            "parentname": "カテゴリ",
+            "parentsel": "心臓系"
+        },
+        {
+            "dispname": "症状の重症度",
+            "name": "心臓系_重症度",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "Grade 1: 無症状または軽度の症状 - 臨床的または診断的観察のみ、治療を要さない",
+                "Grade 2: 中等度 - 最小限・局所的・非侵襲的治療を要する、年齢相応の身の回り以外の日常生活に支障",
+                "Grade 3: 重度または医学的に重大だが、ただちに生命を脅かすものではない - 入院または入院期間の延長、身の回りの日常生活に支障",
+                "Grade 4: 生命を脅かす - 緊急処置を要する",
+                "Grade 5: 死亡"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "parentname": "カテゴリ",
+            "parentsel": "心臓系"
+        },
+        {
+            "dispname": "必要な医学的介入",
+            "name": "心臓系_介入",
+            "type": "checkbox",
+            "selector": [
+                "観察のみ",
+                "外来治療",
+                "入院治療",
+                "集中治療",
+                "治験薬の減量",
+                "治験薬の中止",
+                "支持療法"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7",
+            "parentname": "カテゴリ",
+            "parentsel": "心臓系"
+        },
+        {
+            "dispname": "消化器系の副作用",
+            "type": "subsection",
+            "parentname": "カテゴリ",
+            "parentsel": "消化器系"
+        },
+        {
+            "dispname": "副作用の名称",
+            "name": "消化器系_副作用名",
+            "type": "textarea",
+            "required": true,
+            "description": "具体的な副作用名を記載してください (例: 悪心、嘔吐、下痢)",
+            "rows": 2,
+            "parentname": "カテゴリ",
+            "parentsel": "消化器系"
+        },
+        {
+            "dispname": "症状の重症度",
+            "name": "消化器系_重症度",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "Grade 1: 無症状または軽度の症状 - 臨床的または診断的観察のみ、治療を要さない",
+                "Grade 2: 中等度 - 最小限・局所的・非侵襲的治療を要する、年齢相応の身の回り以外の日常生活に支障",
+                "Grade 3: 重度または医学的に重大だが、ただちに生命を脅かすものではない - 入院または入院期間の延長、身の回りの日常生活に支障",
+                "Grade 4: 生命を脅かす - 緊急処置を要する",
+                "Grade 5: 死亡"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "parentname": "カテゴリ",
+            "parentsel": "消化器系"
+        },
+        {
+            "dispname": "必要な医学的介入",
+            "name": "消化器系_介入",
+            "type": "checkbox",
+            "selector": [
+                "観察のみ",
+                "外来治療",
+                "入院治療",
+                "集中治療",
+                "治験薬の減量",
+                "治験薬の中止",
+                "支持療法"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7",
+            "parentname": "カテゴリ",
+            "parentsel": "消化器系"
+        },
+        {
+            "dispname": "内分泌系の副作用",
+            "type": "subsection",
+            "parentname": "カテゴリ",
+            "parentsel": "内分泌系"
+        },
+        {
+            "dispname": "副作用の名称",
+            "name": "内分泌系_副作用名",
+            "type": "textarea",
+            "required": true,
+            "description": "具体的な副作用名を記載してください (例: 甲状腺機能異常)",
+            "rows": 2,
+            "parentname": "カテゴリ",
+            "parentsel": "内分泌系"
+        },
+        {
+            "dispname": "症状の重症度",
+            "name": "内分泌系_重症度",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "Grade 1: 無症状または軽度の症状 - 臨床的または診断的観察のみ、治療を要さない",
+                "Grade 2: 中等度 - 最小限・局所的・非侵襲的治療を要する、年齢相応の身の回り以外の日常生活に支障",
+                "Grade 3: 重度または医学的に重大だが、ただちに生命を脅かすものではない - 入院または入院期間の延長、身の回りの日常生活に支障",
+                "Grade 4: 生命を脅かす - 緊急処置を要する",
+                "Grade 5: 死亡"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "parentname": "カテゴリ",
+            "parentsel": "内分泌系"
+        },
+        {
+            "dispname": "必要な医学的介入",
+            "name": "内分泌系_介入",
+            "type": "checkbox",
+            "selector": [
+                "観察のみ",
+                "外来治療",
+                "入院治療",
+                "集中治療",
+                "治験薬の減量",
+                "治験薬の中止",
+                "支持療法"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7",
+            "parentname": "カテゴリ",
+            "parentsel": "内分泌系"
+        },
+        {
+            "dispname": "眼系の副作用",
+            "type": "subsection",
+            "parentname": "カテゴリ",
+            "parentsel": "眼系"
+        },
+        {
+            "dispname": "副作用の名称",
+            "name": "眼系_副作用名",
+            "type": "textarea",
+            "required": true,
+            "description": "具体的な副作用名を記載してください (例: 視力障害、結膜炎)",
+            "rows": 2,
+            "parentname": "カテゴリ",
+            "parentsel": "眼系"
+        },
+        {
+            "dispname": "症状の重症度",
+            "name": "眼系_重症度",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "Grade 1: 無症状または軽度の症状 - 臨床的または診断的観察のみ、治療を要さない",
+                "Grade 2: 中等度 - 最小限・局所的・非侵襲的治療を要する、年齢相応の身の回り以外の日常生活に支障",
+                "Grade 3: 重度または医学的に重大だが、ただちに生命を脅かすものではない - 入院または入院期間の延長、身の回りの日常生活に支障",
+                "Grade 4: 生命を脅かす - 緊急処置を要する",
+                "Grade 5: 死亡"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "parentname": "カテゴリ",
+            "parentsel": "眼系"
+        },
+        {
+            "dispname": "必要な医学的介入",
+            "name": "眼系_介入",
+            "type": "checkbox",
+            "selector": [
+                "観察のみ",
+                "外来治療",
+                "入院治療",
+                "集中治療",
+                "治験薬の減量",
+                "治験薬の中止",
+                "支持療法"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7",
+            "parentname": "カテゴリ",
+            "parentsel": "眼系"
+        },
+        {
+            "dispname": "全身症状の副作用",
+            "type": "subsection",
+            "parentname": "カテゴリ",
+            "parentsel": "全身症状"
+        },
+        {
+            "dispname": "副作用の名称",
+            "name": "全身症状_副作用名",
+            "type": "textarea",
+            "required": true,
+            "description": "具体的な副作用名を記載してください (例: 発熱、倦怠感)",
+            "rows": 2,
+            "parentname": "カテゴリ",
+            "parentsel": "全身症状"
+        },
+        {
+            "dispname": "症状の重症度",
+            "name": "全身症状_重症度",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "Grade 1: 無症状または軽度の症状 - 臨床的または診断的観察のみ、治療を要さない",
+                "Grade 2: 中等度 - 最小限・局所的・非侵襲的治療を要する、年齢相応の身の回り以外の日常生活に支障",
+                "Grade 3: 重度または医学的に重大だが、ただちに生命を脅かすものではない - 入院または入院期間の延長、身の回りの日常生活に支障",
+                "Grade 4: 生命を脅かす - 緊急処置を要する",
+                "Grade 5: 死亡"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "parentname": "カテゴリ",
+            "parentsel": "全身症状"
+        },
+        {
+            "dispname": "必要な医学的介入",
+            "name": "全身症状_介入",
+            "type": "checkbox",
+            "selector": [
+                "観察のみ",
+                "外来治療",
+                "入院治療",
+                "集中治療",
+                "治験薬の減量",
+                "治験薬の中止",
+                "支持療法"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7",
+            "parentname": "カテゴリ",
+            "parentsel": "全身症状"
+        },
+        {
+            "dispname": "感染症の副作用",
+            "type": "subsection",
+            "parentname": "カテゴリ",
+            "parentsel": "感染症"
+        },
+        {
+            "dispname": "副作用の名称",
+            "name": "感染症_副作用名",
+            "type": "textarea",
+            "required": true,
+            "description": "具体的な副作用名を記載してください (例: 肺炎、敗血症)",
+            "rows": 2,
+            "parentname": "カテゴリ",
+            "parentsel": "感染症"
+        },
+        {
+            "dispname": "症状の重症度",
+            "name": "感染症_重症度",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "Grade 1: 無症状または軽度の症状 - 臨床的または診断的観察のみ、治療を要さない",
+                "Grade 2: 中等度 - 最小限・局所的・非侵襲的治療を要する、年齢相応の身の回り以外の日常生活に支障",
+                "Grade 3: 重度または医学的に重大だが、ただちに生命を脅かすものではない - 入院または入院期間の延長、身の回りの日常生活に支障",
+                "Grade 4: 生命を脅かす - 緊急処置を要する",
+                "Grade 5: 死亡"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "parentname": "カテゴリ",
+            "parentsel": "感染症"
+        },
+        {
+            "dispname": "必要な医学的介入",
+            "name": "感染症_介入",
+            "type": "checkbox",
+            "selector": [
+                "観察のみ",
+                "外来治療",
+                "入院治療",
+                "集中治療",
+                "治験薬の減量",
+                "治験薬の中止",
+                "支持療法"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7",
+            "parentname": "カテゴリ",
+            "parentsel": "感染症"
+        },
+        {
+            "dispname": "代謝・栄養系の副作用",
+            "type": "subsection",
+            "parentname": "カテゴリ",
+            "parentsel": "代謝・栄養系"
+        },
+        {
+            "dispname": "副作用の名称",
+            "name": "代謝栄養系_副作用名",
+            "type": "textarea",
+            "required": true,
+            "description": "具体的な副作用名を記載してください (例: 高血糖、電解質異常)",
+            "rows": 2,
+            "parentname": "カテゴリ",
+            "parentsel": "代謝・栄養系"
+        },
+        {
+            "dispname": "症状の重症度",
+            "name": "代謝栄養系_重症度",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "Grade 1: 無症状または軽度の症状 - 臨床的または診断的観察のみ、治療を要さない",
+                "Grade 2: 中等度 - 最小限・局所的・非侵襲的治療を要する、年齢相応の身の回り以外の日常生活に支障",
+                "Grade 3: 重度または医学的に重大だが、ただちに生命を脅かすものではない - 入院または入院期間の延長、身の回りの日常生活に支障",
+                "Grade 4: 生命を脅かす - 緊急処置を要する",
+                "Grade 5: 死亡"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "parentname": "カテゴリ",
+            "parentsel": "代謝・栄養系"
+        },
+        {
+            "dispname": "必要な医学的介入",
+            "name": "代謝栄養系_介入",
+            "type": "checkbox",
+            "selector": [
+                "観察のみ",
+                "外来治療",
+                "入院治療",
+                "集中治療",
+                "治験薬の減量",
+                "治験薬の中止",
+                "支持療法"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7",
+            "parentname": "カテゴリ",
+            "parentsel": "代謝・栄養系"
+        },
+        {
+            "dispname": "筋骨格系の副作用",
+            "type": "subsection",
+            "parentname": "カテゴリ",
+            "parentsel": "筋骨格系"
+        },
+        {
+            "dispname": "副作用の名称",
+            "name": "筋骨格系_副作用名",
+            "type": "textarea",
+            "required": true,
+            "description": "具体的な副作用名を記載してください (例: 筋肉痛、関節痛)",
+            "rows": 2,
+            "parentname": "カテゴリ",
+            "parentsel": "筋骨格系"
+        },
+        {
+            "dispname": "症状の重症度",
+            "name": "筋骨格系_重症度",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "Grade 1: 無症状または軽度の症状 - 臨床的または診断的観察のみ、治療を要さない",
+                "Grade 2: 中等度 - 最小限・局所的・非侵襲的治療を要する、年齢相応の身の回り以外の日常生活に支障",
+                "Grade 3: 重度または医学的に重大だが、ただちに生命を脅かすものではない - 入院または入院期間の延長、身の回りの日常生活に支障",
+                "Grade 4: 生命を脅かす - 緊急処置を要する",
+                "Grade 5: 死亡"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "parentname": "カテゴリ",
+            "parentsel": "筋骨格系"
+        },
+        {
+            "dispname": "必要な医学的介入",
+            "name": "筋骨格系_介入",
+            "type": "checkbox",
+            "selector": [
+                "観察のみ",
+                "外来治療",
+                "入院治療",
+                "集中治療",
+                "治験薬の減量",
+                "治験薬の中止",
+                "支持療法"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7",
+            "parentname": "カテゴリ",
+            "parentsel": "筋骨格系"
+        },
+        {
+            "dispname": "神経系の副作用",
+            "type": "subsection",
+            "parentname": "カテゴリ",
+            "parentsel": "神経系"
+        },
+        {
+            "dispname": "副作用の名称",
+            "name": "神経系_副作用名",
+            "type": "textarea",
+            "required": true,
+            "description": "具体的な副作用名を記載してください (例: 末梢神経障害、頭痛)",
+            "rows": 2,
+            "parentname": "カテゴリ",
+            "parentsel": "神経系"
+        },
+        {
+            "dispname": "症状の重症度",
+            "name": "神経系_重症度",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "Grade 1: 無症状または軽度の症状 - 臨床的または診断的観察のみ、治療を要さない",
+                "Grade 2: 中等度 - 最小限・局所的・非侵襲的治療を要する、年齢相応の身の回り以外の日常生活に支障",
+                "Grade 3: 重度または医学的に重大だが、ただちに生命を脅かすものではない - 入院または入院期間の延長、身の回りの日常生活に支障",
+                "Grade 4: 生命を脅かす - 緊急処置を要する",
+                "Grade 5: 死亡"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "parentname": "カテゴリ",
+            "parentsel": "神経系"
+        },
+        {
+            "dispname": "必要な医学的介入",
+            "name": "神経系_介入",
+            "type": "checkbox",
+            "selector": [
+                "観察のみ",
+                "外来治療",
+                "入院治療",
+                "集中治療",
+                "治験薬の減量",
+                "治験薬の中止",
+                "支持療法"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7",
+            "parentname": "カテゴリ",
+            "parentsel": "神経系"
+        },
+        {
+            "dispname": "精神系の副作用",
+            "type": "subsection",
+            "parentname": "カテゴリ",
+            "parentsel": "精神系"
+        },
+        {
+            "dispname": "副作用の名称",
+            "name": "精神系_副作用名",
+            "type": "textarea",
+            "required": true,
+            "description": "具体的な副作用名を記載してください (例: 不安、うつ、不眠)",
+            "rows": 2,
+            "parentname": "カテゴリ",
+            "parentsel": "精神系"
+        },
+        {
+            "dispname": "症状の重症度",
+            "name": "精神系_重症度",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "Grade 1: 無症状または軽度の症状 - 臨床的または診断的観察のみ、治療を要さない",
+                "Grade 2: 中等度 - 最小限・局所的・非侵襲的治療を要する、年齢相応の身の回り以外の日常生活に支障",
+                "Grade 3: 重度または医学的に重大だが、ただちに生命を脅かすものではない - 入院または入院期間の延長、身の回りの日常生活に支障",
+                "Grade 4: 生命を脅かす - 緊急処置を要する",
+                "Grade 5: 死亡"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "parentname": "カテゴリ",
+            "parentsel": "精神系"
+        },
+        {
+            "dispname": "必要な医学的介入",
+            "name": "精神系_介入",
+            "type": "checkbox",
+            "selector": [
+                "観察のみ",
+                "外来治療",
+                "入院治療",
+                "集中治療",
+                "治験薬の減量",
+                "治験薬の中止",
+                "支持療法"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7",
+            "parentname": "カテゴリ",
+            "parentsel": "精神系"
+        },
+        {
+            "dispname": "腎・泌尿器系の副作用",
+            "type": "subsection",
+            "parentname": "カテゴリ",
+            "parentsel": "腎・泌尿器系"
+        },
+        {
+            "dispname": "副作用の名称",
+            "name": "腎泌尿器系_副作用名",
+            "type": "textarea",
+            "required": true,
+            "description": "具体的な副作用名を記載してください (例: 腎機能障害、血尿)",
+            "rows": 2,
+            "parentname": "カテゴリ",
+            "parentsel": "腎・泌尿器系"
+        },
+        {
+            "dispname": "症状の重症度",
+            "name": "腎泌尿器系_重症度",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "Grade 1: 無症状または軽度の症状 - 臨床的または診断的観察のみ、治療を要さない",
+                "Grade 2: 中等度 - 最小限・局所的・非侵襲的治療を要する、年齢相応の身の回り以外の日常生活に支障",
+                "Grade 3: 重度または医学的に重大だが、ただちに生命を脅かすものではない - 入院または入院期間の延長、身の回りの日常生活に支障",
+                "Grade 4: 生命を脅かす - 緊急処置を要する",
+                "Grade 5: 死亡"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "parentname": "カテゴリ",
+            "parentsel": "腎・泌尿器系"
+        },
+        {
+            "dispname": "必要な医学的介入",
+            "name": "腎泌尿器系_介入",
+            "type": "checkbox",
+            "selector": [
+                "観察のみ",
+                "外来治療",
+                "入院治療",
+                "集中治療",
+                "治験薬の減量",
+                "治験薬の中止",
+                "支持療法"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7",
+            "parentname": "カテゴリ",
+            "parentsel": "腎・泌尿器系"
+        },
+        {
+            "dispname": "生殖器系の副作用",
+            "type": "subsection",
+            "parentname": "カテゴリ",
+            "parentsel": "生殖器系"
+        },
+        {
+            "dispname": "副作用の名称",
+            "name": "生殖器系_副作用名",
+            "type": "textarea",
+            "required": true,
+            "description": "具体的な副作用名を記載してください (例: 性機能障害)",
+            "rows": 2,
+            "parentname": "カテゴリ",
+            "parentsel": "生殖器系"
+        },
+        {
+            "dispname": "症状の重症度",
+            "name": "生殖器系_重症度",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "Grade 1: 無症状または軽度の症状 - 臨床的または診断的観察のみ、治療を要さない",
+                "Grade 2: 中等度 - 最小限・局所的・非侵襲的治療を要する、年齢相応の身の回り以外の日常生活に支障",
+                "Grade 3: 重度または医学的に重大だが、ただちに生命を脅かすものではない - 入院または入院期間の延長、身の回りの日常生活に支障",
+                "Grade 4: 生命を脅かす - 緊急処置を要する",
+                "Grade 5: 死亡"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "parentname": "カテゴリ",
+            "parentsel": "生殖器系"
+        },
+        {
+            "dispname": "必要な医学的介入",
+            "name": "生殖器系_介入",
+            "type": "checkbox",
+            "selector": [
+                "観察のみ",
+                "外来治療",
+                "入院治療",
+                "集中治療",
+                "治験薬の減量",
+                "治験薬の中止",
+                "支持療法"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7",
+            "parentname": "カテゴリ",
+            "parentsel": "生殖器系"
+        },
+        {
+            "dispname": "呼吸器系の副作用",
+            "type": "subsection",
+            "parentname": "カテゴリ",
+            "parentsel": "呼吸器系"
+        },
+        {
+            "dispname": "副作用の名称",
+            "name": "呼吸器系_副作用名",
+            "type": "textarea",
+            "required": true,
+            "description": "具体的な副作用名を記載してください (例: 間質性肺炎、咳嗽)",
+            "rows": 2,
+            "parentname": "カテゴリ",
+            "parentsel": "呼吸器系"
+        },
+        {
+            "dispname": "症状の重症度",
+            "name": "呼吸器系_重症度",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "Grade 1: 無症状または軽度の症状 - 臨床的または診断的観察のみ、治療を要さない",
+                "Grade 2: 中等度 - 最小限・局所的・非侵襲的治療を要する、年齢相応の身の回り以外の日常生活に支障",
+                "Grade 3: 重度または医学的に重大だが、ただちに生命を脅かすものではない - 入院または入院期間の延長、身の回りの日常生活に支障",
+                "Grade 4: 生命を脅かす - 緊急処置を要する",
+                "Grade 5: 死亡"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "parentname": "カテゴリ",
+            "parentsel": "呼吸器系"
+        },
+        {
+            "dispname": "必要な医学的介入",
+            "name": "呼吸器系_介入",
+            "type": "checkbox",
+            "selector": [
+                "観察のみ",
+                "外来治療",
+                "入院治療",
+                "集中治療",
+                "治験薬の減量",
+                "治験薬の中止",
+                "支持療法"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7",
+            "parentname": "カテゴリ",
+            "parentsel": "呼吸器系"
+        },
+        {
+            "dispname": "皮膚系の副作用",
+            "type": "subsection",
+            "parentname": "カテゴリ",
+            "parentsel": "皮膚系"
+        },
+        {
+            "dispname": "副作用の名称",
+            "name": "皮膚系_副作用名",
+            "type": "textarea",
+            "required": true,
+            "description": "具体的な副作用名を記載してください (例: 発疹、手足症候群)",
+            "rows": 2,
+            "parentname": "カテゴリ",
+            "parentsel": "皮膚系"
+        },
+        {
+            "dispname": "症状の重症度",
+            "name": "皮膚系_重症度",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "Grade 1: 無症状または軽度の症状 - 臨床的または診断的観察のみ、治療を要さない",
+                "Grade 2: 中等度 - 最小限・局所的・非侵襲的治療を要する、年齢相応の身の回り以外の日常生活に支障",
+                "Grade 3: 重度または医学的に重大だが、ただちに生命を脅かすものではない - 入院または入院期間の延長、身の回りの日常生活に支障",
+                "Grade 4: 生命を脅かす - 緊急処置を要する",
+                "Grade 5: 死亡"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "parentname": "カテゴリ",
+            "parentsel": "皮膚系"
+        },
+        {
+            "dispname": "必要な医学的介入",
+            "name": "皮膚系_介入",
+            "type": "checkbox",
+            "selector": [
+                "観察のみ",
+                "外来治療",
+                "入院治療",
+                "集中治療",
+                "治験薬の減量",
+                "治験薬の中止",
+                "支持療法"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7",
+            "parentname": "カテゴリ",
+            "parentsel": "皮膚系"
+        },
+        {
+            "dispname": "血管系の副作用",
+            "type": "subsection",
+            "parentname": "カテゴリ",
+            "parentsel": "血管系"
+        },
+        {
+            "dispname": "副作用の名称",
+            "name": "血管系_副作用名",
+            "type": "textarea",
+            "required": true,
+            "description": "具体的な副作用名を記載してください (例: 高血圧、血栓症)",
+            "rows": 2,
+            "parentname": "カテゴリ",
+            "parentsel": "血管系"
+        },
+        {
+            "dispname": "症状の重症度",
+            "name": "血管系_重症度",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "Grade 1: 無症状または軽度の症状 - 臨床的または診断的観察のみ、治療を要さない",
+                "Grade 2: 中等度 - 最小限・局所的・非侵襲的治療を要する、年齢相応の身の回り以外の日常生活に支障",
+                "Grade 3: 重度または医学的に重大だが、ただちに生命を脅かすものではない - 入院または入院期間の延長、身の回りの日常生活に支障",
+                "Grade 4: 生命を脅かす - 緊急処置を要する",
+                "Grade 5: 死亡"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "parentname": "カテゴリ",
+            "parentsel": "血管系"
+        },
+        {
+            "dispname": "必要な医学的介入",
+            "name": "血管系_介入",
+            "type": "checkbox",
+            "selector": [
+                "観察のみ",
+                "外来治療",
+                "入院治療",
+                "集中治療",
+                "治験薬の減量",
+                "治験薬の中止",
+                "支持療法"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7",
+            "parentname": "カテゴリ",
+            "parentsel": "血管系"
+        },
+        {
+            "dispname": "その他の副作用",
+            "type": "subsection",
+            "parentname": "カテゴリ",
+            "parentsel": "その他"
+        },
+        {
+            "dispname": "副作用の名称",
+            "name": "その他_副作用名",
+            "type": "textarea",
+            "required": true,
+            "description": "具体的な副作用名を記載してください",
+            "rows": 2,
+            "parentname": "カテゴリ",
+            "parentsel": "その他"
+        },
+        {
+            "dispname": "症状の重症度",
+            "name": "その他_重症度",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "Grade 1: 無症状または軽度の症状 - 臨床的または診断的観察のみ、治療を要さない",
+                "Grade 2: 中等度 - 最小限・局所的・非侵襲的治療を要する、年齢相応の身の回り以外の日常生活に支障",
+                "Grade 3: 重度または医学的に重大だが、ただちに生命を脅かすものではない - 入院または入院期間の延長、身の回りの日常生活に支障",
+                "Grade 4: 生命を脅かす - 緊急処置を要する",
+                "Grade 5: 死亡"
+            ],
+            "selectoridx": "1|2|3|4|5",
+            "parentname": "カテゴリ",
+            "parentsel": "その他"
+        },
+        {
+            "dispname": "必要な医学的介入",
+            "name": "その他_介入",
+            "type": "checkbox",
+            "selector": [
+                "観察のみ",
+                "外来治療",
+                "入院治療",
+                "集中治療",
+                "治験薬の減量",
+                "治験薬の中止",
+                "支持療法"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7",
+            "parentname": "カテゴリ",
+            "parentsel": "その他"
+        },
+        {
+            "dispname": "日常生活への影響",
+            "type": "subsection"
+        },
+        {
+            "dispname": "身の回りの日常生活への影響",
+            "name": "ADL影響",
+            "type": "radio",
+            "required": true,
+            "description": "入浴、着替え、食事、トイレの使用など",
+            "selector": [
+                "影響なし",
+                "影響あり"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "身の回り以外の日常生活への影響",
+            "name": "IADL影響",
+            "type": "radio",
+            "required": true,
+            "description": "買い物、料理、仕事、趣味など",
+            "selector": [
+                "影響なし",
+                "影響あり"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "血液リンパ系グレード",
+            "type": "eval",
+            "formula": "[[血液リンパ系_重症度.index]]",
+            "noreport": true
+        },
+        {
+            "name": "心臓系グレード",
+            "type": "eval",
+            "formula": "[[心臓系_重症度.index]]",
+            "noreport": true
+        },
+        {
+            "name": "消化器系グレード",
+            "type": "eval",
+            "formula": "[[消化器系_重症度.index]]",
+            "noreport": true
+        },
+        {
+            "name": "内分泌系グレード",
+            "type": "eval",
+            "formula": "[[内分泌系_重症度.index]]",
+            "noreport": true
+        },
+        {
+            "name": "眼系グレード",
+            "type": "eval",
+            "formula": "[[眼系_重症度.index]]",
+            "noreport": true
+        },
+        {
+            "name": "全身症状グレード",
+            "type": "eval",
+            "formula": "[[全身症状_重症度.index]]",
+            "noreport": true
+        },
+        {
+            "name": "感染症グレード",
+            "type": "eval",
+            "formula": "[[感染症_重症度.index]]",
+            "noreport": true
+        },
+        {
+            "name": "代謝栄養系グレード",
+            "type": "eval",
+            "formula": "[[代謝栄養系_重症度.index]]",
+            "noreport": true
+        },
+        {
+            "name": "筋骨格系グレード",
+            "type": "eval",
+            "formula": "[[筋骨格系_重症度.index]]",
+            "noreport": true
+        },
+        {
+            "name": "神経系グレード",
+            "type": "eval",
+            "formula": "[[神経系_重症度.index]]",
+            "noreport": true
+        },
+        {
+            "name": "精神系グレード",
+            "type": "eval",
+            "formula": "[[精神系_重症度.index]]",
+            "noreport": true
+        },
+        {
+            "name": "腎泌尿器系グレード",
+            "type": "eval",
+            "formula": "[[腎泌尿器系_重症度.index]]",
+            "noreport": true
+        },
+        {
+            "name": "生殖器系グレード",
+            "type": "eval",
+            "formula": "[[生殖器系_重症度.index]]",
+            "noreport": true
+        },
+        {
+            "name": "呼吸器系グレード",
+            "type": "eval",
+            "formula": "[[呼吸器系_重症度.index]]",
+            "noreport": true
+        },
+        {
+            "name": "皮膚系グレード",
+            "type": "eval",
+            "formula": "[[皮膚系_重症度.index]]",
+            "noreport": true
+        },
+        {
+            "name": "血管系グレード",
+            "type": "eval",
+            "formula": "[[血管系_重症度.index]]",
+            "noreport": true
+        },
+        {
+            "name": "その他グレード",
+            "type": "eval",
+            "formula": "[[その他_重症度.index]]",
+            "noreport": true
+        },
+        {
+            "name": "最重症グレード",
+            "type": "eval",
+            "description": "全カテゴリの中で最も高い重症度グレード",
+            "formula": "Math.max([[血液リンパ系グレード]], [[心臓系グレード]], [[消化器系グレード]], [[内分泌系グレード]], [[眼系グレード]], [[全身症状グレード]], [[感染症グレード]], [[代謝栄養系グレード]], [[筋骨格系グレード]], [[神経系グレード]], [[精神系グレード]], [[腎泌尿器系グレード]], [[生殖器系グレード]], [[呼吸器系グレード]], [[皮膚系グレード]], [[血管系グレード]], [[その他グレード]])"
+        },
+        {
+            "name": "最重症CTCAEグレード",
+            "type": "eval",
+            "description": "最高グレードの意味",
+            "formula": "[[最重症グレード]] == 5 ? 'Grade 5 - 死亡' : ( [[最重症グレード]] == 4 ? 'Grade 4 - 生命を脅かす' : ( [[最重症グレード]] == 3 ? 'Grade 3 - 重度または医学的に重大' : ( [[最重症グレード]] == 2 ? 'Grade 2 - 中等度' : ( [[最重症グレード]] == 1 ? 'Grade 1 - 軽度' : '副作用なし' ) ) ) )"
+        },
+        {
+            "name": "臨床的対応",
+            "type": "eval",
+            "description": "推奨される医療的対応",
+            "formula": "[[最重症グレード]] == 5 ? '致命的な副作用' : ( [[最重症グレード]] == 4 ? '緊急処置が必要 - 治験薬の即時中止を検討' : ( [[最重症グレード]] == 3 ? '入院または入院期間の延長が必要 - 治験薬の減量または中止を検討' : ( [[最重症グレード]] == 2 ? '外来での治療が必要 - 支持療法の追加を検討' : ( [[最重症グレード]] == 1 ? '観察のみ - 治療継続可能' : '介入不要' ) ) ) )"
+        },
+        {
+            "name": "試験継続の可否",
+            "type": "eval",
+            "description": "臨床試験継続の可否判断",
+            "formula": "[[最重症グレード]] >= 4 ? '治験中止を強く推奨' : ( [[最重症グレード]] == 3 ? '治験薬の減量または休薬を検討' : ( [[最重症グレード]] >= 1 ? '治験継続可能' : '問題なし' ) )"
+        },
+        {
+            "name": "報告の緊急性",
+            "type": "eval",
+            "description": "有害事象報告の緊急度",
+            "formula": "[[最重症グレード]] >= 4 ? '重篤な有害事象 (SAE) - 24時間以内に報告' : ( [[最重症グレード]] == 3 ? '速やかに報告 (数日以内)' : ( [[最重症グレード]] >= 1 ? '定期報告' : '報告不要' ) )"
+        },
+        {
+            "name": "Grade 3以上の副作用あり",
+            "formula": "[[最重症グレード]] >= 3",
+            "type": "warning",
+            "description": "中等度から重度の副作用が発生しています"
+        },
+        {
+            "name": "Grade 4-5の副作用あり",
+            "formula": "[[最重症グレード]] >= 4",
+            "type": "emergency",
+            "description": "生命を脅かす、または致命的な副作用が発生しています"
+        }
+    ]
+}

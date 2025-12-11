@@ -1,0 +1,189 @@
+{
+  "_comment": [
+    "Oakland Score - 下部消化管出血低リスク予測スコア",
+    "原典: Oakland K, et al. Derivation and validation of a novel risk score for safe discharge after acute lower gastrointestinal bleeding: a modelling study. Lancet Gastroenterol Hepatol. 2017;2(9):635-643. PMID: 28651935",
+    "スコアリング基準: FP Notebook (https://fpnotebook.com/GI/Exam/OklndScrFrSfDschrgAftrLwrGstrntstnlBldng.htm)",
+    "URL: https://www.mdcalc.com/calc/10042/oakland-score-safe-discharge-lower-gi-bleed",
+    "スコア範囲: 0-35点",
+    "カットオフ値: ≤8点(低リスク、感度98.4%)、9点以上(高リスク)",
+    "代替閾値: ≤10点(感度96%)、≤11点(感度97%)も検証されている",
+    "開発コホート: 英国143病院、2,336例(2015年)",
+    "検証コホート: 288例"
+  ],
+  "title": "Oakland Score 下部消化管出血低リスク予測",
+  "description": [
+    "下部消化管出血患者の安全な退院可能性を評価します。",
+    "スコア8点以下で低リスク、外来フォローアップ可能",
+    "スコア9点以上で高リスク、入院治療が推奨されます。",
+    "一部の研究では10点または11点を閾値として使用"
+  ],
+  "responsible_person": [
+    "消化器科医師",
+    "救急科医師"
+  ],
+  "submit_button_title": "スコア計算",
+  "fields": [
+    {
+      "dispname": "年齢",
+      "name": "年齢",
+      "type": "text",
+      "postfix": "歳",
+      "inputmode": "numeric",
+      "testrange": [
+        18,
+        100
+      ],
+      "required": true,
+      "description": "半角数字で入力してください(例: 65)"
+    },
+    {
+      "dispname": "性別",
+      "name": "性別",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": [
+        "男性",
+        "女性"
+      ],
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "下部消化管出血による入院歴",
+      "name": "下部消化管出血入院歴",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "直腸診での血液の有無",
+      "name": "直腸診血液",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": [
+        "血液なし",
+        "血液あり"
+      ],
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "脈拍数",
+      "name": "脈拍数",
+      "type": "text",
+      "postfix": "回/分",
+      "inputmode": "numeric",
+      "testrange": [
+        40,
+        150
+      ],
+      "required": true,
+      "description": "半角数字で入力してください(例: 88)"
+    },
+    {
+      "dispname": "収縮期血圧",
+      "name": "収縮期血圧",
+      "type": "text",
+      "postfix": "mmHg",
+      "inputmode": "numeric",
+      "testrange": [
+        80,
+        180
+      ],
+      "required": true,
+      "description": "半角数字で入力してください(例: 120)"
+    },
+    {
+      "dispname": "ヘモグロビン値",
+      "name": "ヘモグロビン",
+      "type": "text",
+      "postfix": "g/dL",
+      "inputmode": "decimal",
+      "testrange": [
+        6,
+        18
+      ],
+      "required": true,
+      "description": "半角数字で入力してください(例: 12.5)"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "dispname": "年齢スコア",
+      "name": "年齢スコア",
+      "type": "eval",
+      "formula": "((年齢)) >= 70 ? 2 : ( ((年齢)) >= 40 ? 1 : 0 )",
+      "noreport": true
+    },
+    {
+      "dispname": "性別スコア",
+      "name": "性別スコア",
+      "type": "eval",
+      "formula": "[[性別.index]] === 0 ? 1 : 0",
+      "noreport": true
+    },
+    {
+      "dispname": "入院歴スコア",
+      "name": "入院歴スコア",
+      "type": "eval",
+      "formula": "[[下部消化管出血入院歴.index]] === 1 ? 1 : 0",
+      "noreport": true
+    },
+    {
+      "dispname": "直腸診スコア",
+      "name": "直腸診スコア",
+      "type": "eval",
+      "formula": "[[直腸診血液.index]] === 1 ? 1 : 0",
+      "noreport": true
+    },
+    {
+      "dispname": "脈拍数スコア",
+      "name": "脈拍数スコア",
+      "type": "eval",
+      "formula": "((脈拍数)) >= 110 ? 3 : ( ((脈拍数)) >= 90 ? 2 : ( ((脈拍数)) >= 70 ? 1 : 0 ) )",
+      "noreport": true
+    },
+    {
+      "dispname": "収縮期血圧スコア",
+      "name": "血圧スコア",
+      "type": "eval",
+      "formula": "((収縮期血圧)) < 90 ? 5 : ( ((収縮期血圧)) < 120 ? 4 : ( ((収縮期血圧)) < 130 ? 3 : ( ((収縮期血圧)) < 160 ? 2 : 0 ) ) )",
+      "noreport": true
+    },
+    {
+      "dispname": "ヘモグロビンスコア",
+      "name": "ヘモグロビンスコア",
+      "type": "eval",
+      "formula": "((ヘモグロビン)) >= 16.0 ? 0 : ( ((ヘモグロビン)) >= 13.0 ? 4 : ( ((ヘモグロビン)) >= 11.0 ? 8 : ( ((ヘモグロビン)) >= 9.0 ? 13 : ( ((ヘモグロビン)) >= 7.0 ? 17 : 22 ) ) ) )",
+      "noreport": true
+    },
+    {
+      "name": "Oakland合計スコア",
+      "type": "eval",
+      "formula": "[[年齢スコア]] + [[性別スコア]] + [[入院歴スコア]] + [[直腸診スコア]] + [[脈拍数スコア]] + [[血圧スコア]] + [[ヘモグロビンスコア]]",
+      "dispname": "Oakland合計スコア (0-35点)"
+    },
+    {
+      "dispname": "リスク分類",
+      "name": "リスク分類",
+      "type": "eval",
+      "formula": "[[Oakland合計スコア]] <= 8 ? '低リスク(安全な退院可能)' : '高リスク(入院治療推奨)'"
+    },
+    {
+      "name": "Warning: 中程度リスク Oakland Score > 8",
+      "formula": "[[Oakland合計スコア]] > 8",
+      "type": "warning"
+    },
+    {
+      "name": "Emergency: 高リスク Oakland Score > 15",
+      "formula": "[[Oakland合計スコア]] > 15",
+      "type": "emergency"
+    }
+  ]
+}

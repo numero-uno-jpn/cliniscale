@@ -1,0 +1,428 @@
+{
+  "_comment": [
+    "PDAI (Pemphigus Disease Area Index) - 天疱瘡疾患面積指数",
+    "天疱瘡の重症度評価のための国際的標準評価尺度",
+    "原典: Murrell DF, Dick S, Ahmed AR, et al. Consensus statement on definitions of disease, end points, and therapeutic response for pemphigus. J Am Acad Dermatol. 2008;58(6):1043-1046",
+    "開発: International Pemphigus Definitions Group (2008年)",
+    "厚生労働省指定難病35番「天疱瘡」の重症度判定基準として採用",
+    "軽症: 8点以下、中等症: 9-24点、重症: 25点以上",
+    "最大得点: 263点 (皮膚活動性120点 + 頭皮活動性10点 + 粘膜活動性120点 + ダメージ13点)"
+  ],
+  "title": "PDAI 天疱瘡疾患面積指数",
+  "description": [
+    "天疱瘡の重症度を客観的に評価する国際的標準指標です。",
+    "皮膚、頭皮、粘膜の病変を数値化してスコア化します。"
+  ],
+  "fields": [
+    {
+      "dispname": "皮膚病変 - 活動性評価",
+      "type": "subsection"
+    },
+    {
+      "dispname": "耳のびらん/水疱/新しい紅斑",
+      "name": "皮膚耳",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|1-3個かつ最大径2cm未満|1-3個かつ最大径2cm以上|4個以上かつ最大径6cm未満|4個以上かつ最大径6-16cm|4個以上かつ最大径16cm以上または領域全体",
+      "selectoridx": "0|1|2|3|5|10"
+    },
+    {
+      "dispname": "鼻のびらん/水疱/新しい紅斑",
+      "name": "皮膚鼻",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|1-3個かつ最大径2cm未満|1-3個かつ最大径2cm以上|4個以上かつ最大径6cm未満|4個以上かつ最大径6-16cm|4個以上かつ最大径16cm以上または領域全体",
+      "selectoridx": "0|1|2|3|5|10"
+    },
+    {
+      "dispname": "顔面(耳・鼻除く)のびらん/水疱/新しい紅斑",
+      "name": "皮膚顔面",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|1-3個かつ最大径2cm未満|1-3個かつ最大径2cm以上|4個以上かつ最大径6cm未満|4個以上かつ最大径6-16cm|4個以上かつ最大径16cm以上または領域全体",
+      "selectoridx": "0|1|2|3|5|10"
+    },
+    {
+      "dispname": "頚部のびらん/水疱/新しい紅斑",
+      "name": "皮膚頚部",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|1-3個かつ最大径2cm未満|1-3個かつ最大径2cm以上|4個以上かつ最大径6cm未満|4個以上かつ最大径6-16cm|4個以上かつ最大径16cm以上または領域全体",
+      "selectoridx": "0|1|2|3|5|10"
+    },
+    {
+      "dispname": "胸部のびらん/水疱/新しい紅斑",
+      "name": "皮膚胸部",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|1-3個かつ最大径2cm未満|1-3個かつ最大径2cm以上|4個以上かつ最大径6cm未満|4個以上かつ最大径6-16cm|4個以上かつ最大径16cm以上または領域全体",
+      "selectoridx": "0|1|2|3|5|10"
+    },
+    {
+      "dispname": "腹部のびらん/水疱/新しい紅斑",
+      "name": "皮膚腹部",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|1-3個かつ最大径2cm未満|1-3個かつ最大径2cm以上|4個以上かつ最大径6cm未満|4個以上かつ最大径6-16cm|4個以上かつ最大径16cm以上または領域全体",
+      "selectoridx": "0|1|2|3|5|10"
+    },
+    {
+      "dispname": "背部・臀部のびらん/水疱/新しい紅斑",
+      "name": "皮膚背部臀部",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|1-3個かつ最大径2cm未満|1-3個かつ最大径2cm以上|4個以上かつ最大径6cm未満|4個以上かつ最大径6-16cm|4個以上かつ最大径16cm以上または領域全体",
+      "selectoridx": "0|1|2|3|5|10"
+    },
+    {
+      "dispname": "上肢のびらん/水疱/新しい紅斑",
+      "name": "皮膚上肢",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|1-3個かつ最大径2cm未満|1-3個かつ最大径2cm以上|4個以上かつ最大径6cm未満|4個以上かつ最大径6-16cm|4個以上かつ最大径16cm以上または領域全体",
+      "selectoridx": "0|1|2|3|5|10"
+    },
+    {
+      "dispname": "手のびらん/水疱/新しい紅斑",
+      "name": "皮膚手",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|1-3個かつ最大径2cm未満|1-3個かつ最大径2cm以上|4個以上かつ最大径6cm未満|4個以上かつ最大径6-16cm|4個以上かつ最大径16cm以上または領域全体",
+      "selectoridx": "0|1|2|3|5|10"
+    },
+    {
+      "dispname": "下肢のびらん/水疱/新しい紅斑",
+      "name": "皮膚下肢",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|1-3個かつ最大径2cm未満|1-3個かつ最大径2cm以上|4個以上かつ最大径6cm未満|4個以上かつ最大径6-16cm|4個以上かつ最大径16cm以上または領域全体",
+      "selectoridx": "0|1|2|3|5|10"
+    },
+    {
+      "dispname": "足のびらん/水疱/新しい紅斑",
+      "name": "皮膚足",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|1-3個かつ最大径2cm未満|1-3個かつ最大径2cm以上|4個以上かつ最大径6cm未満|4個以上かつ最大径6-16cm|4個以上かつ最大径16cm以上または領域全体",
+      "selectoridx": "0|1|2|3|5|10"
+    },
+    {
+      "dispname": "陰部のびらん/水疱/新しい紅斑",
+      "name": "皮膚陰部",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|1-3個かつ最大径2cm未満|1-3個かつ最大径2cm以上|4個以上かつ最大径6cm未満|4個以上かつ最大径6-16cm|4個以上かつ最大径16cm以上または領域全体",
+      "selectoridx": "0|1|2|3|5|10"
+    },
+    {
+      "dispname": "頭皮病変 - 活動性評価",
+      "type": "subsection"
+    },
+    {
+      "dispname": "頭皮のびらん/水疱/新しい紅斑",
+      "name": "頭皮",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|1-3個かつ最大径2cm未満|1-3個かつ最大径2cm以上|4個以上かつ最大径6cm未満|4個以上かつ最大径6-16cm|4個以上かつ最大径16cm以上または領域全体",
+      "selectoridx": "0|1|2|3|5|10"
+    },
+    {
+      "dispname": "粘膜病変 - 活動性評価",
+      "type": "subsection"
+    },
+    {
+      "dispname": "眼のびらん/水疱",
+      "name": "粘膜眼",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|1個|2-3個|4個以上かつ最大径2cm未満|4個以上かつ最大径2cm以上または領域全体",
+      "selectoridx": "0|1|2|5|10"
+    },
+    {
+      "dispname": "鼻腔のびらん/水疱",
+      "name": "粘膜鼻腔",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|1個|2-3個|4個以上かつ最大径2cm未満|4個以上かつ最大径2cm以上または領域全体",
+      "selectoridx": "0|1|2|5|10"
+    },
+    {
+      "dispname": "頬粘膜のびらん/水疱",
+      "name": "粘膜頬粘膜",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|1個|2-3個|4個以上かつ最大径2cm未満|4個以上かつ最大径2cm以上または領域全体",
+      "selectoridx": "0|1|2|5|10"
+    },
+    {
+      "dispname": "硬口蓋のびらん/水疱",
+      "name": "粘膜硬口蓋",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|1個|2-3個|4個以上かつ最大径2cm未満|4個以上かつ最大径2cm以上または領域全体",
+      "selectoridx": "0|1|2|5|10"
+    },
+    {
+      "dispname": "軟口蓋のびらん/水疱",
+      "name": "粘膜軟口蓋",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|1個|2-3個|4個以上かつ最大径2cm未満|4個以上かつ最大径2cm以上または領域全体",
+      "selectoridx": "0|1|2|5|10"
+    },
+    {
+      "dispname": "上歯肉のびらん/水疱",
+      "name": "粘膜上歯肉",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|1個|2-3個|4個以上かつ最大径2cm未満|4個以上かつ最大径2cm以上または領域全体",
+      "selectoridx": "0|1|2|5|10"
+    },
+    {
+      "dispname": "下歯肉のびらん/水疱",
+      "name": "粘膜下歯肉",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|1個|2-3個|4個以上かつ最大径2cm未満|4個以上かつ最大径2cm以上または領域全体",
+      "selectoridx": "0|1|2|5|10"
+    },
+    {
+      "dispname": "舌のびらん/水疱",
+      "name": "粘膜舌",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|1個|2-3個|4個以上かつ最大径2cm未満|4個以上かつ最大径2cm以上または領域全体",
+      "selectoridx": "0|1|2|5|10"
+    },
+    {
+      "dispname": "口腔底のびらん/水疱",
+      "name": "粘膜口腔底",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|1個|2-3個|4個以上かつ最大径2cm未満|4個以上かつ最大径2cm以上または領域全体",
+      "selectoridx": "0|1|2|5|10"
+    },
+    {
+      "dispname": "口唇のびらん/水疱",
+      "name": "粘膜口唇",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|1個|2-3個|4個以上かつ最大径2cm未満|4個以上かつ最大径2cm以上または領域全体",
+      "selectoridx": "0|1|2|5|10"
+    },
+    {
+      "dispname": "後咽頭のびらん/水疱",
+      "name": "粘膜後咽頭",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|1個|2-3個|4個以上かつ最大径2cm未満|4個以上かつ最大径2cm以上または領域全体",
+      "selectoridx": "0|1|2|5|10"
+    },
+    {
+      "dispname": "外陰部のびらん/水疱",
+      "name": "粘膜外陰部",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|1個|2-3個|4個以上かつ最大径2cm未満|4個以上かつ最大径2cm以上または領域全体",
+      "selectoridx": "0|1|2|5|10"
+    },
+    {
+      "dispname": "ダメージ評価",
+      "type": "subsection",
+      "description": "治癒病変の炎症後色素沈着または紅斑の有無を評価"
+    },
+    {
+      "dispname": "耳のダメージ(炎症後色素沈着/紅斑)",
+      "name": "ダメージ耳",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "鼻のダメージ(炎症後色素沈着/紅斑)",
+      "name": "ダメージ鼻",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "顔面のダメージ(炎症後色素沈着/紅斑)",
+      "name": "ダメージ顔面",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "頚部のダメージ(炎症後色素沈着/紅斑)",
+      "name": "ダメージ頚部",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "胸部のダメージ(炎症後色素沈着/紅斑)",
+      "name": "ダメージ胸部",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "腹部のダメージ(炎症後色素沈着/紅斑)",
+      "name": "ダメージ腹部",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "背部・臀部のダメージ(炎症後色素沈着/紅斑)",
+      "name": "ダメージ背部臀部",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "上肢のダメージ(炎症後色素沈着/紅斑)",
+      "name": "ダメージ上肢",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "手のダメージ(炎症後色素沈着/紅斑)",
+      "name": "ダメージ手",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "下肢のダメージ(炎症後色素沈着/紅斑)",
+      "name": "ダメージ下肢",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "足のダメージ(炎症後色素沈着/紅斑)",
+      "name": "ダメージ足",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "陰部のダメージ(炎症後色素沈着/紅斑)",
+      "name": "ダメージ陰部",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "頭皮のダメージ(炎症後色素沈着/紅斑)",
+      "name": "ダメージ頭皮",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "皮膚活動性スコア",
+      "type": "eval",
+      "formula": "[[皮膚耳.index]] + [[皮膚鼻.index]] + [[皮膚顔面.index]] + [[皮膚頚部.index]] + [[皮膚胸部.index]] + [[皮膚腹部.index]] + [[皮膚背部臀部.index]] + [[皮膚上肢.index]] + [[皮膚手.index]] + [[皮膚下肢.index]] + [[皮膚足.index]] + [[皮膚陰部.index]]",
+      "dispname": "皮膚の活動性病変スコア (最大120点)"
+    },
+    {
+      "name": "頭皮活動性スコア",
+      "type": "eval",
+      "formula": "[[頭皮.index]]",
+      "dispname": "頭皮の活動性病変スコア (最大10点)"
+    },
+    {
+      "name": "粘膜活動性スコア",
+      "type": "eval",
+      "formula": "[[粘膜眼.index]] + [[粘膜鼻腔.index]] + [[粘膜頬粘膜.index]] + [[粘膜硬口蓋.index]] + [[粘膜軟口蓋.index]] + [[粘膜上歯肉.index]] + [[粘膜下歯肉.index]] + [[粘膜舌.index]] + [[粘膜口腔底.index]] + [[粘膜口唇.index]] + [[粘膜後咽頭.index]] + [[粘膜外陰部.index]]",
+      "dispname": "粘膜の活動性病変スコア (最大120点)"
+    },
+    {
+      "name": "ダメージスコア",
+      "type": "eval",
+      "formula": "[[ダメージ耳.index]] + [[ダメージ鼻.index]] + [[ダメージ顔面.index]] + [[ダメージ頚部.index]] + [[ダメージ胸部.index]] + [[ダメージ腹部.index]] + [[ダメージ背部臀部.index]] + [[ダメージ上肢.index]] + [[ダメージ手.index]] + [[ダメージ下肢.index]] + [[ダメージ足.index]] + [[ダメージ陰部.index]] + [[ダメージ頭皮.index]]",
+      "dispname": "ダメージスコア (最大13点)"
+    },
+    {
+      "name": "PDAI総合スコア",
+      "type": "eval",
+      "formula": "[[皮膚活動性スコア]] + [[頭皮活動性スコア]] + [[粘膜活動性スコア]] + [[ダメージスコア]]",
+      "dispname": "PDAI総合スコア (最大263点)"
+    },
+    {
+      "name": "PDAI活動性スコア",
+      "type": "eval",
+      "formula": "[[皮膚活動性スコア]] + [[頭皮活動性スコア]] + [[粘膜活動性スコア]]",
+      "dispname": "PDAI活動性スコア (最大250点)"
+    },
+    {
+      "name": "重症度分類",
+      "type": "eval",
+      "formula": "[[PDAI活動性スコア]] <= 8 ? '軽症' : ( [[PDAI活動性スコア]] <= 24 ? '中等症' : '重症' )",
+      "dispname": "厚生労働省指定難病基準による重症度分類"
+    },
+    {
+      "name": "指定難病対象",
+      "type": "eval",
+      "formula": "[[PDAI活動性スコア]] >= 9 ? '対象' : '対象外'",
+      "dispname": "指定難病医療費助成の対象 (中等症以上)"
+    }
+  ]
+}

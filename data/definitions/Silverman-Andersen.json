@@ -1,0 +1,173 @@
+{
+    "_comment": [
+        "Silverman-Andersen Score（シルバーマン・アンダーセン スコア）",
+        "新生児呼吸窮迫症候群の重症度評価尺度",
+        "原著：Silverman WA, Andersen DH. A controlled clinical trial of effects of water mist on obstructive respiratory signs, death rate and necropsy findings among premature infants. Pediatrics. 1956;17(1):1-10.",
+        "参考文献：Hedstrom AB, et al. Performance of the Silverman Andersen Respiratory Severity Score in predicting PCO2 and respiratory support in newborns: a prospective cohort study. J Perinatol. 2018;38(5):505-511.",
+        "参考文献：Brenne H, et al. Inter-rater reliability of the Silverman and Andersen index-a measure of respiratory distress in preterm infants. PLoS One. 2023;18(6):e0286655.",
+        "開発年：1956年",
+        "開発者：William A. Silverman, Donald H. Andersen",
+        "評価項目：5項目（各0-2点、合計0-10点）",
+        "対象：新生児、特に早産児"
+    ],
+    "title": "Silverman-Andersen Score（新生児呼吸窮迫評価）",
+    "description": [
+        "<h3>Silverman-Andersen Score（シルバーマン・アンダーセン スコア）</h3>",
+        "新生児の呼吸窮迫症候群の重症度を評価する尺度です。",
+        "5つの呼吸の特徴を観察し、各項目を0-2点で評価します。",
+        "合計得点により呼吸サポートの必要性を判定します。"
+    ],
+    "fields": [
+        {
+            "dispname": "基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "在胎週数",
+            "name": "在胎週数",
+            "type": "text",
+            "inputmode": "numeric",
+            "postfix": "週",
+            "description": "妊娠何週での出生か"
+        },
+        {
+            "dispname": "出生体重",
+            "name": "出生体重",
+            "type": "text",
+            "inputmode": "numeric",
+            "postfix": "g"
+        },
+        {
+            "dispname": "評価項目",
+            "type": "subsection"
+        },
+        {
+            "dispname": "1. 上胸部の動き（胸腹部同調性）",
+            "name": "上胸部の動き",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "同調した胸部・腹部の動き",
+                "胸部の動きが遅れる",
+                "シーソー様呼吸（胸部と腹部が逆に動く）"
+            ],
+            "selectoridx": "0|1|2",
+            "description": "吸気時の上胸部と腹部の動きの同調性を評価"
+        },
+        {
+            "dispname": "2. 下胸部陥凹（肋間陥没）",
+            "name": "下胸部陥凹",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "なし",
+                "わずかにあり",
+                "著明"
+            ],
+            "selectoridx": "0|1|2",
+            "description": "吸気時の肋間腔の陥凹の程度を評価"
+        },
+        {
+            "dispname": "3. 剣状突起下陥没",
+            "name": "剣状突起下陥没",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "なし",
+                "わずかにあり",
+                "著明"
+            ],
+            "selectoridx": "0|1|2",
+            "description": "吸気時の剣状突起下部の陥没の程度を評価"
+        },
+        {
+            "dispname": "4. 鼻翼呼吸",
+            "name": "鼻翼呼吸",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "なし",
+                "わずかにあり",
+                "著明"
+            ],
+            "selectoridx": "0|1|2",
+            "description": "吸気時の鼻翼の拡張の程度を評価"
+        },
+        {
+            "dispname": "5. 呻吟",
+            "name": "呻吟",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "なし",
+                "聴診器で聞こえる",
+                "聴診器なしで聞こえる"
+            ],
+            "selectoridx": "0|1|2",
+            "description": "呼気時の声門狭窄による音の有無と程度を評価"
+        },
+        {
+            "dispname": "追加情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "酸素飽和度",
+            "name": "酸素飽和度",
+            "type": "text",
+            "inputmode": "numeric",
+            "postfix": "%",
+            "description": "SpO2"
+        },
+        {
+            "dispname": "現在の呼吸サポート",
+            "name": "現在の呼吸サポート",
+            "type": "radio",
+            "selector": [
+                "なし",
+                "鼻カニューラ",
+                "CPAP",
+                "人工呼吸器",
+                "その他"
+            ],
+            "description": "現在受けている呼吸サポート"
+        },
+        {
+            "dispname": "備考",
+            "name": "備考",
+            "type": "textarea",
+            "rows": 3,
+            "description": "その他の所見や特記事項"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "合計点",
+            "type": "eval",
+            "formula": "[[上胸部の動き.index]] + [[下胸部陥凹.index]] + [[剣状突起下陥没.index]] + [[鼻翼呼吸.index]] + [[呻吟.index]]",
+            "dispname": "5項目の合計点数"
+        },
+        {
+            "name": "重症度判定",
+            "type": "eval",
+            "formula": "[[合計点]] <= 3 ? '軽度' : ([[合計点]] <= 6 ? '中等度' : '重度')",
+            "dispname": "重症度判定 (0-3点: 軽度、4-6点: 中等度、7-10点: 重度)"
+        },
+        {
+            "name": "呼吸サポート推奨",
+            "type": "eval",
+            "formula": "[[合計点]] >= 5 ? '推奨' : ([[合計点]] >= 4 ? '検討' : '経過観察')",
+            "dispname": "呼吸サポート"
+        },
+        {
+            "name": "Warning: 中等度呼吸窮迫（スコア≧4）",
+            "formula": "[[合計点]] >= 4",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 重度呼吸窮迫（スコア≧7）",
+            "formula": "[[合計点]] >= 7",
+            "type": "emergency"
+        }
+    ]
+}

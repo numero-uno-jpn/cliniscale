@@ -1,0 +1,170 @@
+{
+  "_comment": [
+    "Glasgow-Blatchford Score (GBS) 上部消化管出血リスク評価スコア",
+    "原著論文: Blatchford O, Murray WR, Blatchford M. A risk score to predict need for treatment for upper-gastrointestinal haemorrhage. Lancet. 2000 Oct 14;356(9238):1318-21.",
+    "2000年にグラスゴーで開発された、上部消化管出血患者の緊急治療必要性を予測するスコア",
+    "内視鏡所見を必要とせず、来院時に評価可能な項目のみで構成",
+    "0点: 低リスク、外来管理可能（NICE/ESGEガイドライン推奨）",
+    "1点: 低-中リスク（施設により外来管理を検討可能）",
+    "2-5点: 中リスク、入院・24時間以内の内視鏡検査推奨",
+    "6点以上: 高リスク、50%以上の確率で内視鏡的介入必要",
+    "最大22点"
+  ],
+  "title": "Glasgow-Blatchford Score (GBS) 上部消化管出血リスク評価スコア",
+  "description": [
+    "上部消化管出血患者の緊急治療必要性評価",
+    "輸血・内視鏡治療・外科的介入の必要性を予測",
+    "0点で低リスク、外来管理が可能とされます"
+  ],
+  "contact": "消化器内科・救急科",
+  "dept_in_charge": "消化器内科",
+  "submit_button_title": "スコア算出",
+  "fields": [
+    {
+      "dispname": "性別",
+      "name": "性別",
+      "type": "radio",
+      "required": true,
+      "selector": "男性|女性",
+      "description": "ヘモグロビンの評価基準が性別により異なります"
+    },
+    {
+      "type": "subsection",
+      "dispname": "血液検査値"
+    },
+    {
+      "dispname": "血液尿素窒素 (BUN)",
+      "name": "BUN",
+      "type": "radio",
+      "required": true,
+      "selector": "18.2mg/dL未満 (6.5mmol/L未満)|18.2-22.4mg/dL (6.5-8mmol/L)|22.4-28mg/dL (8-10mmol/L)|28-70mg/dL (10-25mmol/L)|70mg/dL超 (25mmol/L超)",
+      "selectoridx": "0|2|3|4|6",
+      "description": "血液検査結果から該当する範囲を選択してください"
+    },
+    {
+      "dispname": "ヘモグロビン (Hb) - 男性",
+      "name": "Hb_男性",
+      "type": "radio",
+      "required": true,
+      "parentname": "性別",
+      "parentsel": "男性",
+      "selector": "13g/dL以上|12-13g/dL|10-12g/dL|10g/dL未満",
+      "selectoridx": "0|1|3|6",
+      "description": "血液検査結果から該当する範囲を選択してください"
+    },
+    {
+      "dispname": "ヘモグロビン (Hb) - 女性",
+      "name": "Hb_女性",
+      "type": "radio",
+      "required": true,
+      "parentname": "性別",
+      "parentsel": "女性",
+      "selector": "12g/dL以上|10-12g/dL|10g/dL未満",
+      "selectoridx": "0|1|6",
+      "description": "血液検査結果から該当する範囲を選択してください"
+    },
+    {
+      "type": "subsection",
+      "dispname": "バイタルサイン"
+    },
+    {
+      "dispname": "収縮期血圧",
+      "name": "収縮期血圧",
+      "type": "radio",
+      "required": true,
+      "selector": "110mmHg以上|100-109mmHg|90-99mmHg|90mmHg未満",
+      "selectoridx": "0|1|2|3",
+      "description": "来院時の血圧測定値を選択してください"
+    },
+    {
+      "dispname": "脈拍数100回/分以上",
+      "name": "頻脈",
+      "type": "radio",
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1"
+    },
+    {
+      "type": "subsection",
+      "dispname": "臨床症状・既往歴"
+    },
+    {
+      "dispname": "黒色便の存在",
+      "name": "黒色便",
+      "type": "radio",
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1",
+      "description": "タール便を含む"
+    },
+    {
+      "dispname": "失神の存在",
+      "name": "失神",
+      "type": "radio",
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|2",
+      "description": "一過性の意識消失の有無"
+    },
+    {
+      "dispname": "肝疾患の既往",
+      "name": "肝疾患",
+      "type": "radio",
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|2",
+      "description": "肝硬変を含む慢性肝疾患の既往"
+    },
+    {
+      "dispname": "心不全の既往",
+      "name": "心不全",
+      "type": "radio",
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|2",
+      "description": "心エコー所見等で確認された心不全"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "Hb_男性_index",
+      "type": "eval",
+      "formula": "[[Hb_男性.index]]",
+      "noreport": true
+    },
+    {
+      "name": "Hb_女性_index",
+      "type": "eval",
+      "formula": "[[Hb_女性.index]]",
+      "noreport": true
+    },
+    {
+      "name": "ヘモグロビンスコア",
+      "type": "eval",
+      "formula": "{{性別}} == '男性' ? [[Hb_男性_index]] : [[Hb_女性_index]]",
+      "noreport": true
+    },
+    {
+      "name": "Glasgow-Blatchfordスコア",
+      "type": "eval",
+      "dispname": "Glasgow-Blatchfordスコア（0-22点）",
+      "formula": "[[BUN.index]] + [[ヘモグロビンスコア]] + [[収縮期血圧.index]] + [[頻脈.index]] + [[黒色便.index]] + [[失神.index]] + [[肝疾患.index]] + [[心不全.index]]"
+    },
+    {
+      "name": "リスク評価",
+      "type": "eval",
+      "formula": "[[Glasgow-Blatchfordスコア]] == 0 ? '低リスク - 外来管理可能（NICE/ESGEガイドライン推奨）' : ( [[Glasgow-Blatchfordスコア]] == 1 ? '低-中リスク - 施設により外来管理を検討可能' : ( [[Glasgow-Blatchfordスコア]] <= 5 ? '中リスク - 入院・24時間以内の内視鏡検査推奨' : '高リスク - 緊急内視鏡検査適応（50%以上の確率で内視鏡的介入必要）' ) )"
+    },
+    {
+      "name": "Warning: 中リスク GBSスコア 2-5点",
+      "type": "warning",
+      "formula": "[[Glasgow-Blatchfordスコア]] >= 2 && [[Glasgow-Blatchfordスコア]] <= 5"
+    },
+    {
+      "name": "Emergency: 高リスク GBSスコア ≥6点",
+      "type": "emergency",
+      "formula": "[[Glasgow-Blatchfordスコア]] >= 6"
+    }
+  ]
+}

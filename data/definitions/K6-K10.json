@@ -1,0 +1,278 @@
+{
+    "_comment": [
+        "K6-K10 (Kessler Psychological Distress Scale) 問診票",
+        "心理的ストレス・精神的苦痛の評価スケール",
+        "K6: 6項目版（スクリーニング用）",
+        "K10: 10項目版（より詳細な評価用）",
+        "開発者: Ronald C. Kessler (ハーバード大学)",
+        "日本語版: Furukawa et al. (2008)",
+        "日本でのカットオフ値: Sakurai et al. (2011)に基づく",
+        "参考文献: Kessler RC, et al. Archives of General Psychiatry. 2003;60(2):184-189",
+        "参考文献: Furukawa TA, et al. International Journal of Methods in Psychiatric Research. 2008;17:152-158",
+        "参考文献: Sakurai K, et al. Psychiatry and Clinical Neurosciences. 2011;65:434-441",
+        "使用許可: 無料（著作権表示とKessler et al. 2003の引用が必要）",
+        "Copyright © Ronald C. Kessler, PhD. All rights reserved."
+    ],
+    "title": "K6-K10 心理的ストレス評価",
+    "description": [
+        "この質問票は、過去30日間のあなたの心の状態について伺うものです。",
+        "各質問について、最も適切な回答を1つお選びください。"
+    ],
+    "responsible_person": [
+        "心療内科医",
+        "精神科医"
+    ],
+    "dept_in_charge": "精神科・心療内科",
+    "contact": "担当医師または看護師にお尋ねください",
+    "fields": [
+        {
+            "type": "note",
+            "name": "instruction_note",
+            "description": "**過去30日の間に、どれくらいの頻度で以下のことがありましたか？**\n\n各項目について、最も当てはまるものを選択してください。"
+        },
+        {
+            "type": "radio",
+            "name": "version_select",
+            "dispname": "評価版の選択",
+            "description": "実施する評価版を選択してください",
+            "selector": [
+                "K6版（6項目・短縮版）",
+                "K10版（10項目・詳細版）"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "type": "subsection",
+            "name": "k6_subsection",
+            "dispname": "K6項目（共通6項目）"
+        },
+        {
+            "type": "radio",
+            "name": "nervous",
+            "dispname": "1. 神経過敏に感じましたか",
+            "selector": [
+                "全くない",
+                "少しだけ",
+                "ときどき",
+                "たいてい",
+                "いつも"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "type": "radio",
+            "name": "hopeless",
+            "dispname": "2. 絶望的だと感じましたか",
+            "selector": [
+                "全くない",
+                "少しだけ",
+                "ときどき",
+                "たいてい",
+                "いつも"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "type": "radio",
+            "name": "restless",
+            "dispname": "3. そわそわ、落ち着かなく感じましたか",
+            "selector": [
+                "全くない",
+                "少しだけ",
+                "ときどき",
+                "たいてい",
+                "いつも"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "type": "radio",
+            "name": "depressed",
+            "dispname": "4. 気分が沈み込んで、何が起こっても気が晴れないように感じましたか",
+            "selector": [
+                "全くない",
+                "少しだけ",
+                "ときどき",
+                "たいてい",
+                "いつも"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "type": "radio",
+            "name": "effort",
+            "dispname": "5. 何をするのも骨折りだと感じましたか",
+            "selector": [
+                "全くない",
+                "少しだけ",
+                "ときどき",
+                "たいてい",
+                "いつも"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "type": "radio",
+            "name": "worthless",
+            "dispname": "6. 自分は価値のない人間だと感じましたか",
+            "selector": [
+                "全くない",
+                "少しだけ",
+                "ときどき",
+                "たいてい",
+                "いつも"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "type": "subsection",
+            "name": "k10_subsection",
+            "dispname": "K10追加項目（4項目）",
+            "parentname": "version_select",
+            "parentsel": "K10版（10項目・詳細版）"
+        },
+        {
+            "type": "radio",
+            "name": "tired",
+            "dispname": "7. 理由もなく疲れ切ったように感じましたか",
+            "selector": [
+                "全くない",
+                "少しだけ",
+                "ときどき",
+                "たいてい",
+                "いつも"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "parentname": "version_select",
+            "parentsel": "K10版（10項目・詳細版）",
+            "required": true
+        },
+        {
+            "type": "radio",
+            "name": "so_nervous",
+            "dispname": "8. どうしても落ち着けないくらいに、神経過敏に感じましたか",
+            "selector": [
+                "全くない",
+                "少しだけ",
+                "ときどき",
+                "たいてい",
+                "いつも"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "parentname": "version_select",
+            "parentsel": "K10版（10項目・詳細版）",
+            "required": true
+        },
+        {
+            "type": "radio",
+            "name": "so_restless",
+            "dispname": "9. じっと座っていられないほど、落ち着かなく感じましたか",
+            "selector": [
+                "全くない",
+                "少しだけ",
+                "ときどき",
+                "たいてい",
+                "いつも"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "parentname": "version_select",
+            "parentsel": "K10版（10項目・詳細版）",
+            "required": true
+        },
+        {
+            "type": "radio",
+            "name": "so_sad",
+            "dispname": "10. ゆううつに感じましたか",
+            "selector": [
+                "全くない",
+                "少しだけ",
+                "ときどき",
+                "たいてい",
+                "いつも"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "parentname": "version_select",
+            "parentsel": "K10版（10項目・詳細版）",
+            "required": true
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "type": "eval",
+            "name": "k6_total",
+            "dispname": "K6合計スコア",
+            "formula": "[[nervous.index]] + [[hopeless.index]] + [[restless.index]] + [[depressed.index]] + [[effort.index]] + [[worthless.index]]"
+        },
+        {
+            "type": "eval",
+            "name": "tired_score",
+            "formula": "[[tired.index]]",
+            "noreport": true
+        },
+        {
+            "type": "eval",
+            "name": "so_nervous_score",
+            "formula": "[[so_nervous.index]]",
+            "noreport": true
+        },
+        {
+            "type": "eval",
+            "name": "so_restless_score",
+            "formula": "[[so_restless.index]]",
+            "noreport": true
+        },
+        {
+            "type": "eval",
+            "name": "so_sad_score",
+            "formula": "[[so_sad.index]]",
+            "noreport": true
+        },
+        {
+            "type": "eval",
+            "name": "k10_additional",
+            "dispname": "K10追加項目スコア",
+            "formula": "[[tired_score]] + [[so_nervous_score]] + [[so_restless_score]] + [[so_sad_score]]"
+        },
+        {
+            "type": "eval",
+            "name": "total_score",
+            "dispname": "総合スコア",
+            "formula": "[[k6_total]] + [[k10_additional]]"
+        },
+        {
+            "type": "eval",
+            "name": "k6_classification",
+            "dispname": "K6判定",
+            "formula": "[[k6_total]] >= 13 ? \"重度の心理的苦痛\" : [[k6_total]] >= 5 ? \"軽度〜中等度の心理的苦痛（要評価）\" : \"心理的苦痛なし〜軽微\""
+        },
+        {
+            "type": "eval",
+            "name": "k10_classification",
+            "dispname": "K10判定（日本での研究に基づく）",
+            "formula": "[[version_select.index]] == 1 ? ( [[total_score]] >= 10 ? \"要評価レベル（精神科受診検討）\" : \"正常範囲\" ) : \"N/A\""
+        },
+        {
+            "type": "warning",
+            "name": "Warning: K6スクリーニング陽性（合計スコア≧5）",
+            "formula": "[[k6_total]] >= 5"
+        },
+        {
+            "type": "warning",
+            "name": "Warning: K10スクリーニング陽性（合計スコア≧10）",
+            "formula": "[[version_select.index]] == 1 && [[total_score]] >= 10"
+        },
+        {
+            "type": "emergency",
+            "name": "Emergency: 重度の心理的苦痛（K6合計スコア≧13）",
+            "formula": "[[k6_total]] >= 13"
+        }
+    ]
+}

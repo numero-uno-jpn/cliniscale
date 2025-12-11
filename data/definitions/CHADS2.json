@@ -1,0 +1,99 @@
+{
+    "_comment": [
+        "CHADS2スコア問診票",
+        "心房細動患者の脳梗塞発症リスク評価用",
+        "原典: Gage BF, et al. JAMA 2001 Jun 13;285(22):2864-70",
+        "リスク評価: 0点(低リスク,年間1.9%)、1点(中等度,年間2.8%)、2点以上(高リスク,年間4.0%以上)",
+        "抗凝固療法: 1点以上でDOAC推奨、ワルファリン考慮可"
+    ],
+    "title": "CHADS2 心房細動患者の脳梗塞発症リスクスコア",
+    "description": [
+        "心房細動患者の脳梗塞発症リスクを評価します。",
+        "各危険因子の有無をお答えください。"
+    ],
+    "contact": "循環器内科",
+    "dept_in_charge": "循環器内科",
+    "submit_button_title": "評価結果を送信",
+    "fields": [
+        {
+            "dispname": "うっ血性心不全",
+            "name": "心不全",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "なし|あり",
+            "selectoridx": "0|1",
+            "description": "心不全または左室機能不全の既往はありますか"
+        },
+        {
+            "dispname": "高血圧",
+            "name": "高血圧",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "なし|あり",
+            "selectoridx": "0|1",
+            "description": "高血圧の診断を受けていますか"
+        },
+        {
+            "dispname": "年齢",
+            "name": "年齢75歳以上",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "75歳未満|75歳以上",
+            "selectoridx": "0|1",
+            "description": "75歳以上ですか"
+        },
+        {
+            "dispname": "糖尿病",
+            "name": "糖尿病",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "なし|あり",
+            "selectoridx": "0|1",
+            "description": "糖尿病の診断を受けていますか"
+        },
+        {
+            "dispname": "脳卒中または一過性脳虚血発作",
+            "name": "脳卒中TIA",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "なし|あり",
+            "selectoridx": "0|2",
+            "description": "脳卒中または一過性脳虚血発作(TIA)の既往はありますか"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "CHADS2スコア",
+            "type": "eval",
+            "formula": "[[心不全.index]] + [[高血圧.index]] + [[年齢75歳以上.index]] + [[糖尿病.index]] + [[脳卒中TIA.index]]"
+        },
+        {
+            "name": "リスク分類",
+            "type": "eval",
+            "formula": "[[CHADS2スコア]] == 0 ? '低リスク(年間脳梗塞発症率1.9%)' : ([[CHADS2スコア]] == 1 ? '中等度リスク(年間脳梗塞発症率2.8%)' : '高リスク(年間脳梗塞発症率4.0%以上)')",
+            "dispname": "リスク分類と年間脳梗塞発症率"
+        },
+        {
+            "name": "抗凝固療法推奨",
+            "type": "eval",
+            "formula": "[[CHADS2スコア]] >= 1 ? 'DOAC推奨、ワルファリン考慮可' : 'その他のリスク因子を評価'",
+            "dispname": "抗凝固療法の推奨"
+        },
+        {
+            "name": "中等度リスク警告: CHADS2スコア1点（年間脳梗塞発症率2.8%）- 抗凝固療法の開始を考慮",
+            "type": "warning",
+            "formula": "[[CHADS2スコア]] == 1"
+        },
+        {
+            "name": "高リスク注意: CHADS2スコア2点以上（年間脳梗塞発症率4.0%以上）- 抗凝固療法の開始を強く推奨",
+            "type": "emergency",
+            "formula": "[[CHADS2スコア]] >= 2"
+        }
+    ]
+}

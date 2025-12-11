@@ -12,8 +12,8 @@ class DataLoader
     public function __construct($masterYamlFile = null, $definitionsDir = null)
     {
         // PHP 7.4互換: ?? 演算子を使用
-        $this->masterYamlFile = $masterYamlFile !== null ? $masterYamlFile : '/home/medeputize/www/documents/emuyn/cliniscale/スコア票リスト.yaml';
-        $this->definitionsDir = $definitionsDir !== null ? $definitionsDir : '/home/medeputize/www/documents/emuyn/cliniscale/definitions';
+        $this->masterYamlFile = $masterYamlFile !== null ? $masterYamlFile : __DIR__ . '/data/スコア票リスト.yaml';
+        $this->definitionsDir = $definitionsDir !== null ? $definitionsDir : __DIR__ . '/data/definitions';
     }
 
     /**
@@ -34,7 +34,7 @@ class DataLoader
 
         try {
             // Symfony Yamlを使用
-            require_once '/home/medeputize/scripts/stats/vendor/autoload.php';
+            require_once __DIR__ . "/vendor/autoload.php";
             $yamlContent = file_get_contents($this->masterYamlFile);
             $this->allQuestionnaires = \Symfony\Component\Yaml\Yaml::parse($yamlContent);
             return $this->allQuestionnaires;

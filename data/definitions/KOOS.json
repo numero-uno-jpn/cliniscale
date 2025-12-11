@@ -1,0 +1,706 @@
+{
+    "_comment": [
+        "Knee injury and Osteoarthritis Outcome Score (KOOS) - 膝損傷・変形性関節症機能評価",
+        "原典: Roos EM, Roos HP, Lohmander LS, et al. (1998). KOOS development.",
+        "日本語版: Nakamura N, et al. (2011). Cross-cultural adaptation and validation of the Japanese KOOS.",
+        "42項目、5サブスケール: 症状(7項目)、痛み(9項目)、日常生活動作(17項目)、スポーツ・レクリエーション(5項目)、生活の質(4項目)",
+        "各項目0-4点のリッカート尺度、各サブスケールは0-100点に変換(100点が最良)",
+        "著作権: Professor Ewa Maria Roos所有、使用には許可が必要"
+    ],
+    "title": "KOOS 膝損傷・変形性関節症機能評価",
+    "description": [
+        "この調査では、あなたの膝の状態についてお尋ねします。",
+        "この情報は、あなたが膝の状態をどのように感じるか、そしてどの程度日常生活をおこなえるかについて、経過を見るのに役立ちます。",
+        "全ての質問について最も当てはまる項目を1つだけ選んで下さい。",
+        "答えに迷う場合は、最も近いと思うものをお選びください。"
+    ],
+    "fields": [
+        {
+            "dispname": "症状",
+            "type": "subsection"
+        },
+        {
+            "description": "これらの質問は、この1週間のあなたの膝の症状について考えてお答えください。",
+            "type": "note"
+        },
+        {
+            "dispname": "膝の腫れがありますか",
+            "name": "S1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "めったにない",
+                "時々ある",
+                "しばしばある",
+                "いつもある"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "膝を動かすときに、軋む音、クリック音、その他の音を感じたり聞いたりしますか",
+            "name": "S2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "めったにない",
+                "時々ある",
+                "しばしばある",
+                "いつもある"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "動かすときに膝が引っかかったり、ひっかかり感がありますか",
+            "name": "S3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "めったにない",
+                "時々ある",
+                "しばしばある",
+                "いつもある"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "膝を完全に伸ばすことができますか",
+            "name": "S4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "いつもできる",
+                "しばしばできる",
+                "時々できる",
+                "めったにできない",
+                "まったくできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "膝を完全に曲げることができますか",
+            "name": "S5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "いつもできる",
+                "しばしばできる",
+                "時々できる",
+                "めったにできない",
+                "まったくできない"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "朝起きたときの膝関節のこわばりはどの程度ですか",
+            "name": "S6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "日中に座った後、横になった後、または休息した後の膝のこわばりはどの程度ですか",
+            "name": "S7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "痛み",
+            "type": "subsection"
+        },
+        {
+            "dispname": "どのくらいの頻度で膝の痛みを経験しますか",
+            "name": "P1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "月に1回程度",
+                "週に1回程度",
+                "毎日",
+                "常に"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "description": "この1週間に、以下の動作を行う際にどの程度の膝の痛みがありましたか。",
+            "type": "note"
+        },
+        {
+            "dispname": "膝をねじったり、回転させたりするとき",
+            "name": "P2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "膝を完全に伸ばすとき",
+            "name": "P3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "膝を完全に曲げるとき",
+            "name": "P4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "平らな面を歩くとき",
+            "name": "P5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "階段を上り下りするとき",
+            "name": "P6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "夜、ベッドで横になっているとき",
+            "name": "P7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "座ったり横になったりしているとき",
+            "name": "P8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "立っているとき",
+            "name": "P9",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "日常生活動作",
+            "type": "subsection"
+        },
+        {
+            "description": "以下の質問は、あなたの身体機能についてです。これは、あなたの動きや身の回りの世話をする能力を意味します。この1週間に膝のせいで、以下のそれぞれの活動においてどの程度の困難がありましたか。",
+            "type": "note"
+        },
+        {
+            "dispname": "階段を下りる",
+            "name": "A1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "階段を上る",
+            "name": "A2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "座った状態から立ち上がる",
+            "name": "A3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "立っている",
+            "name": "A4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "床まで身をかがめる、物を拾う",
+            "name": "A5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "平らな面を歩く",
+            "name": "A6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "車の乗り降り",
+            "name": "A7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "買い物に行く",
+            "name": "A8",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "靴下やストッキングを履く",
+            "name": "A9",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "ベッドから起き上がる",
+            "name": "A10",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "靴下やストッキングを脱ぐ",
+            "name": "A11",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "ベッドで横になる(寝返り、膝の位置を保つ)",
+            "name": "A12",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "浴槽の出入り",
+            "name": "A13",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "座る",
+            "name": "A14",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "トイレの座り立ち",
+            "name": "A15",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "重い家事(重い箱を動かす、床を磨くなど)",
+            "name": "A16",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "軽い家事(料理、掃除など)",
+            "name": "A17",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "スポーツ・レクリエーション機能",
+            "type": "subsection"
+        },
+        {
+            "description": "以下の質問は、より高いレベルで活動的に動く際の身体機能についてです。この1週間に膝のせいで、どの程度の困難がありましたか。",
+            "type": "note"
+        },
+        {
+            "dispname": "しゃがむ",
+            "name": "SP1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "走る",
+            "name": "SP2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "ジャンプする",
+            "name": "SP3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "膝をねじったり、回転させたりする",
+            "name": "SP4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "ひざまずく",
+            "name": "SP5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "生活の質",
+            "type": "subsection"
+        },
+        {
+            "dispname": "どのくらいの頻度で膝の問題を意識していますか",
+            "name": "Q1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "月に1回程度",
+                "週に1回程度",
+                "毎日",
+                "常に"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "膝に害を与える可能性のある活動を避けるために、ライフスタイルを変更しましたか",
+            "name": "Q2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "完全に"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "膝に対する信頼の欠如にどの程度悩まされていますか",
+            "name": "Q3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "一般的に、膝のせいでどの程度の困難がありますか",
+            "name": "Q4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "まったくない",
+                "軽度",
+                "中等度",
+                "重度",
+                "極度"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "症状_raw",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[S1.index]] + [[S2.index]] + [[S3.index]] + [[S4.index]] + [[S5.index]] + [[S6.index]] + [[S7.index]]"
+        },
+        {
+            "name": "症状スコア",
+            "type": "eval",
+            "dispname": "症状サブスケール得点 (0-100点、100点が最良)",
+            "formula": "100 - ( [[症状_raw]] * 100 / 28 ).toFixed(2)"
+        },
+        {
+            "name": "痛み_raw",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[P1.index]] + [[P2.index]] + [[P3.index]] + [[P4.index]] + [[P5.index]] + [[P6.index]] + [[P7.index]] + [[P8.index]] + [[P9.index]]"
+        },
+        {
+            "name": "痛みスコア",
+            "type": "eval",
+            "dispname": "痛みサブスケール得点 (0-100点、100点が最良)",
+            "formula": "100 - ( [[痛み_raw]] * 100 / 36 ).toFixed(2)"
+        },
+        {
+            "name": "ADL_raw",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[A1.index]] + [[A2.index]] + [[A3.index]] + [[A4.index]] + [[A5.index]] + [[A6.index]] + [[A7.index]] + [[A8.index]] + [[A9.index]] + [[A10.index]] + [[A11.index]] + [[A12.index]] + [[A13.index]] + [[A14.index]] + [[A15.index]] + [[A16.index]] + [[A17.index]]"
+        },
+        {
+            "name": "日常生活動作スコア",
+            "type": "eval",
+            "dispname": "日常生活動作サブスケール得点 (0-100点、100点が最良)",
+            "formula": "100 - ( [[ADL_raw]] * 100 / 68 ).toFixed(2)"
+        },
+        {
+            "name": "スポーツ_raw",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[SP1.index]] + [[SP2.index]] + [[SP3.index]] + [[SP4.index]] + [[SP5.index]]"
+        },
+        {
+            "name": "スポーツ・レクリエーションスコア",
+            "type": "eval",
+            "dispname": "スポーツ・レクリエーションサブスケール得点 (0-100点、100点が最良)",
+            "formula": "100 - ( [[スポーツ_raw]] * 100 / 20 ).toFixed(2)"
+        },
+        {
+            "name": "QOL_raw",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q1.index]] + [[Q2.index]] + [[Q3.index]] + [[Q4.index]]"
+        },
+        {
+            "name": "生活の質スコア",
+            "type": "eval",
+            "dispname": "生活の質サブスケール得点 (0-100点、100点が最良)",
+            "formula": "100 - ( [[QOL_raw]] * 100 / 16 ).toFixed(2)"
+        }
+    ]
+}

@@ -1,0 +1,338 @@
+{
+    "_comment": [
+        "Mini Nutritional Assessment (MNA) - 簡易栄養状態評価表",
+        "高齢者の栄養状態を評価する18項目の包括的栄養評価ツール",
+        "開発: Nestlé Nutrition Institute とフランスの研究チーム (1994年)",
+        "最初にスクリーニング6項目を実施し、11点以下の場合に追加アセスメント12項目を実施",
+        "参考URL: https://www.mna-elderly.com/",
+        "原典論文: Vellas B, et al. J Nutr Health Aging 2006;10:456-465",
+        "著作権: © Société des Produits Nestlé S.A."
+    ],
+    "title": "MNA 簡易栄養状態評価表",
+    "description": [
+        "この評価表は、65歳以上の高齢者の栄養状態を確認するためのツールです。",
+        "MNA本来の手順では、まずスクリーニング6項目を評価し、11点以下の場合に詳細アセスメントを実施しますが、",
+        "システムの制約により全18項目を一括で実施いたします。"
+    ],
+    "contact": "医療担当者",
+    "submit_button_title": "評価を完了",
+    "fields": [
+        {
+            "dispname": "身長",
+            "name": "身長",
+            "type": "text",
+            "postfix": "cm",
+            "inputmode": "decimal",
+            "testrange": [
+                120,
+                200
+            ],
+            "required": true,
+            "description": "半角数字で入力してください（例: 170）"
+        },
+        {
+            "dispname": "体重",
+            "name": "体重",
+            "type": "text",
+            "postfix": "kg",
+            "inputmode": "decimal",
+            "testrange": [
+                25,
+                120
+            ],
+            "required": true,
+            "description": "半角数字で入力してください（例: 65.5）"
+        },
+        {
+            "dispname": "過去3ヶ月間で食欲不振、消化器系の問題、そしゃく・嚥下困難などで食事量が減少しましたか",
+            "name": "A_食事量減少",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "著しい食事量の減少",
+                "中等度の食事量の減少",
+                "食事量の減少なし"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "過去3ヶ月間で体重の減少がありましたか",
+            "name": "B_体重減少",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "3kg以上の減少",
+                "わからない",
+                "1～3kgの減少",
+                "体重減少なし"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "自力で歩けますか",
+            "name": "C_歩行能力",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "寝たきりまたは車椅子を常時使用",
+                "ベッドや車椅子を離れられるが、歩いて外出はできない",
+                "自由に歩いて外出できる"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "過去3ヶ月間で精神的ストレスや急性疾患を経験しましたか",
+            "name": "D_ストレス疾患",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|2"
+        },
+        {
+            "dispname": "神経・精神的問題の有無",
+            "name": "E_神経精神問題",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "強度認知症またはうつ状態",
+                "中程度の認知症",
+                "精神的問題なし"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "詳細アセスメント",
+            "type": "subsection",
+            "description": [
+                "以下の項目にて、より詳細な栄養状態を評価します。<br>",
+                "本来のMNA手順では、スクリーニング値が11点以下の場合に実施する項目ですが、",
+                "システムの制約によりリアルタイムでの表示領域の切り替えができません。"
+            ]
+        },
+        {
+            "dispname": "1日に何回食事を摂っていますか",
+            "name": "G_食事回数",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "1回",
+                "2回",
+                "3回"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "どんなたんぱく質を、どのくらい摂っていますか",
+            "name": "H_タンパク質",
+            "type": "checkbox",
+            "required": true,
+            "description": "該当するものを全て選択してください",
+            "selector": [
+                "乳製品（牛乳、チーズ、ヨーグルト）を毎日1品以上摂取",
+                "豆類または卵を毎週2品以上摂取",
+                "肉類または魚を毎日摂取"
+            ]
+        },
+        {
+            "dispname": "果物または野菜を毎日2品以上摂っていますか",
+            "name": "I_果物野菜",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "いいえ",
+                "はい"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "水分（水、ジュース、コーヒー、茶、牛乳など）を1日どのくらい摂っていますか",
+            "name": "J_水分摂取",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "コップ3杯未満",
+                "3杯以上5杯未満",
+                "5杯以上"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "食事の状況",
+            "name": "K_食事状況",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "介護なしでは食事不可能",
+                "多少困難ではあるが自力で食事可能",
+                "問題なく自力で食事可能"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "栄養状態の自己評価",
+            "name": "L_自己評価",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "自分は低栄養だと思う",
+                "わからない",
+                "問題ないと思う"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "同年齢の人と比べて、自分の健康状態をどう思いますか",
+            "name": "M_健康状態比較",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "良くない",
+                "わからない",
+                "同じ",
+                "良い"
+            ],
+            "selectoridx": "0|1|2|4"
+        },
+        {
+            "dispname": "上腕（利き腕ではない方）の中央の周囲長",
+            "name": "N_上腕周囲長",
+            "type": "text",
+            "required": true,
+            "postfix": "cm",
+            "inputmode": "decimal",
+            "testrange": [
+                15,
+                35
+            ],
+            "description": "半角数字で入力してください（例: 25.5）"
+        },
+        {
+            "dispname": "ふくらはぎの周囲長",
+            "name": "O_ふくらはぎ周囲長",
+            "type": "text",
+            "required": true,
+            "postfix": "cm",
+            "inputmode": "decimal",
+            "testrange": [
+                25,
+                45
+            ],
+            "description": "半角数字で入力してください（例: 32.5）"
+        },
+        {
+            "dispname": "生活は自立していますか（施設入所や入院をしていない）",
+            "name": "P_生活自立",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "いいえ",
+                "はい"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "1日に4種類以上の処方薬を飲んでいる",
+            "name": "Q_処方薬",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "身体のどこかに押して痛いところ、または皮膚潰瘍がある",
+            "name": "R_皮膚潰瘍",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "BMI",
+            "type": "eval",
+            "formula": "( ((体重)) / ( ((身長)) / 100 ) / ( ((身長)) / 100 ) ).toFixed(2)",
+            "noreport": true
+        },
+        {
+            "name": "F_BMI",
+            "type": "eval",
+            "formula": "[[BMI]] < 19 ? 0 : ( [[BMI]] < 21 ? 1 : ( [[BMI]] < 23 ? 2 : 3 ) )",
+            "noreport": true
+        },
+        {
+            "name": "スクリーニング値",
+            "type": "eval",
+            "formula": "[[A_食事量減少.index]] + [[B_体重減少.index]] + [[C_歩行能力.index]] + [[D_ストレス疾患.index]] + [[E_神経精神問題.index]] + [[F_BMI]]",
+            "noreport": true
+        },
+        {
+            "dispname": "スクリーニング結果判定",
+            "name": "スクリーニング判定",
+            "type": "eval",
+            "formula": "[[スクリーニング値]] >= 12 ? '栄養状態良好' : ( [[スクリーニング値]] >= 8 ? '低栄養のおそれあり' : '低栄養' )"
+        },
+        {
+            "name": "H_タンパク質_length",
+            "type": "eval",
+            "formula": "([[H_タンパク質.index]] || []).length",
+            "noreport": true
+        },
+        {
+            "name": "H_タンパク質点数",
+            "type": "eval",
+            "formula": "[[H_タンパク質_length]] == 0 ? 0 : ( [[H_タンパク質_length]] == 1 ? 0 : ( [[H_タンパク質_length]] == 2 ? 0.5 : 1 ) )",
+            "noreport": true
+        },
+        {
+            "name": "N_上腕周囲長点数",
+            "type": "eval",
+            "formula": "((N_上腕周囲長)) < 21 ? 0 : ( ((N_上腕周囲長)) < 22 ? 0.5 : 1 )",
+            "noreport": true
+        },
+        {
+            "name": "O_ふくらはぎ周囲長点数",
+            "type": "eval",
+            "formula": "((O_ふくらはぎ周囲長)) < 31 ? 0 : 1",
+            "noreport": true
+        },
+        {
+            "name": "アセスメント値",
+            "type": "eval",
+            "formula": "[[G_食事回数.index]] + [[H_タンパク質点数]] + [[I_果物野菜.index]] + ([[J_水分摂取.index]] / 2) + [[K_食事状況.index]] + [[L_自己評価.index]] + ([[M_健康状態比較.index]] / 2) + [[N_上腕周囲長点数]] + [[O_ふくらはぎ周囲長点数]] + [[P_生活自立.index]] + [[Q_処方薬.index]] + [[R_皮膚潰瘍.index]]",
+            "noreport": true
+        },
+        {
+            "name": "総合評価値",
+            "type": "eval",
+            "formula": "((スクリーニング値)) + ((アセスメント値))",
+            "noreport": true
+        },
+        {
+            "dispname": "総合判定結果",
+            "name": "総合判定",
+            "type": "eval",
+            "formula": "((総合評価値)) >= 24 ? '栄養状態良好' : ( ((総合評価値)) >= 17 ? '低栄養のおそれあり' : '低栄養' )"
+        },
+        {
+            "name": "Warning: 中程度栄養リスク",
+            "type": "warning",
+            "formula": "((総合評価値)) >= 17 && ((総合評価値)) < 24"
+        },
+        {
+            "name": "Emergency: 高度栄養リスク",
+            "type": "emergency",
+            "formula": "((総合評価値)) < 17"
+        }
+    ]
+}

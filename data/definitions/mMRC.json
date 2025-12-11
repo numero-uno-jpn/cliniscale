@@ -1,0 +1,52 @@
+{
+    "_comment": [
+        "mMRC息切れスケール（Modified Medical Research Council Dyspnea Scale）",
+        "原典: Evaluation of clinical methods for rating dyspnea, Chest. 1988 Mar;93(3):580-6.",
+        "GOLD（Global Initiative for Chronic Obstructive Lung Disease）2018準拠",
+        "Fletcherの息切れスケールを元にMRCスケールが作成され、オリジナル版のグレード1-5をグレード0-4に修正したもの",
+        "呼吸器疾患、特にCOPDの呼吸困難の重症度を層別化に使用",
+        "参考URL: https://hokuto.app/calculator/w3Mwg8UmGa2ilyNkVT5i",
+        "参考URL: https://www.mdcalc.com/calc/4006/mmrc-modified-medical-research-council-dyspnea-scale"
+    ],
+    "title": "mMRC 息切れスケール",
+    "description": [
+        "このスケールは息切れの程度を評価するための問診票です。",
+        "最も当てはまるものを1つ選択してください。"
+    ],
+    "translate": "major",
+    "fields": [
+        {
+            "dispname": "息切れの程度",
+            "name": "mMRC",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "激しい運動をした時のみ息切れがある",
+                "平地を早足で歩く、または緩やかな上り坂を歩く時に息切れがある",
+                "息切れのため同年代の人より歩くのが遅い、または平地を自分のペースで歩いていて息切れのため立ち止まる",
+                "平地で約100m歩くか、または数分歩くと息切れのため立ち止まる",
+                "息切れがひどく家から出られない、または衣服の着脱で息切れがする"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "重症度判定",
+            "type": "eval",
+            "dispname": "mMRCスコアに基づく重症度判定",
+            "formula": "[[mMRC.index]] == 0 ? 'グレード0（軽症）' : ( [[mMRC.index]] == 1 ? 'グレード1（軽症）' : ( [[mMRC.index]] == 2 ? 'グレード2（中等症）' : ( [[mMRC.index]] == 3 ? 'グレード3（重症）' : 'グレード4（重症）' ) ) )"
+        },
+        {
+            "name": "Warning: mMRCグレード2以上 中等症以上の息切れ",
+            "type": "warning",
+            "formula": "[[mMRC.index]] >= 2"
+        },
+        {
+            "name": "Emergency: mMRCグレード3以上 重症の息切れ",
+            "type": "emergency",
+            "formula": "[[mMRC.index]] >= 3"
+        }
+    ]
+}

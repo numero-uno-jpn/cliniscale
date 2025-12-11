@@ -1,0 +1,180 @@
+{
+    "_comment": [
+        "Caregiver Strain Index (CSI) - 介護者ストレス指標",
+        "開発者: Betsy C. Robinson (1983)",
+        "13項目の質問により介護者の負担とストレスを評価",
+        "原典論文: Robinson, B.C. (1983). Validation of a Caregiver Strain Index. Journal of Gerontology, 38(3), 344-348.",
+        "参考URL: https://www.sralab.org/rehabilitation-measures/caregiver-strain-index",
+        "対象: 高齢者の介護を行う家族介護者",
+        "回答形式: はい/いいえの2択",
+        "カットオフ値: 7点以上で高ストレス",
+        "信頼性: Cronbach's α = 0.86"
+    ],
+    "title": "CSI 介護者ストレス指標",
+    "description": [
+        "この質問票は、高齢者の介護を行っている方のストレスや負担を評価するものです。",
+        "あなたの現在の状況について、以下の質問にお答えください。",
+        "それぞれの質問について、「はい」または「いいえ」でお答えください。"
+    ],
+    "submit_button_title": "回答を送信する",
+    "fields": [
+        {
+            "dispname": "基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "回答者",
+            "name": "回答者",
+            "type": "radio",
+            "required": true,
+            "selector": "介護者本人|その他"
+        },
+        {
+            "dispname": "被介護者との関係",
+            "name": "被介護者との関係",
+            "type": "text",
+            "required": true,
+            "description": "例: 配偶者、息子、娘、嫁など"
+        },
+        {
+            "dispname": "介護者ストレス評価質問",
+            "type": "subsection"
+        },
+        {
+            "dispname": "1. 睡眠の妨げ",
+            "name": "Q1",
+            "type": "radio",
+            "required": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "description": "睡眠が妨げられることがありますか（例：夜中にベッドから出入りしたり、徘徊したりするため）"
+        },
+        {
+            "dispname": "2. 不便さ",
+            "name": "Q2",
+            "type": "radio",
+            "required": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "description": "不便を感じることがありますか（例：支援に多くの時間がかかったり、手助けのために長時間移動が必要なため）"
+        },
+        {
+            "dispname": "3. 身体的な負担",
+            "name": "Q3",
+            "type": "radio",
+            "required": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "description": "身体的な負担を感じることがありますか（例：椅子への移乗介助、努力や集中が必要なため）"
+        },
+        {
+            "dispname": "4. 行動の制限",
+            "name": "Q4",
+            "type": "radio",
+            "required": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "description": "行動が制限されることがありますか（例：支援により自由時間が制限されたり、訪問ができなくなるため）"
+        },
+        {
+            "dispname": "5. 家族内の調整",
+            "name": "Q5",
+            "type": "radio",
+            "required": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "description": "家族内での調整が必要になることがありますか（例：支援により日常が乱されたり、プライバシーがなくなるため）"
+        },
+        {
+            "dispname": "6. 個人的計画の変更",
+            "name": "Q6",
+            "type": "radio",
+            "required": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "description": "個人的な計画を変更することがありますか（例：仕事を断ったり、休暇に行けなくなったりする）"
+        },
+        {
+            "dispname": "7. 感情的な調整",
+            "name": "Q7",
+            "type": "radio",
+            "required": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "description": "感情的な調整が必要になることがありますか（例：激しい口論が起こるため）"
+        },
+        {
+            "dispname": "8. 困った行動",
+            "name": "Q8",
+            "type": "radio",
+            "required": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "description": "困った行動により動揺することがありますか（例：失禁、物忘れ、盗まれたと人を責めるなど）"
+        },
+        {
+            "dispname": "9. 人格の変化",
+            "name": "Q9",
+            "type": "radio",
+            "required": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "description": "以前の本人とは大きく変わってしまい動揺することがありますか（例：以前とは別人のようになってしまった）"
+        },
+        {
+            "dispname": "10. 仕事の調整",
+            "name": "Q10",
+            "type": "radio",
+            "required": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "description": "仕事の調整が必要になることがありますか（例：仕事を休まなければならないため）"
+        },
+        {
+            "dispname": "11. 経済的負担",
+            "name": "Q11",
+            "type": "radio",
+            "required": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "description": "経済的な負担を感じることがありますか"
+        },
+        {
+            "dispname": "12. 圧倒される感覚",
+            "name": "Q12",
+            "type": "radio",
+            "required": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "description": "完全に圧倒されるような感覚を覚えることがありますか（例：その人のことが心配、どうやって対処していけばよいか心配など）"
+        },
+        {
+            "dispname": "13. その他の時間的要求",
+            "name": "Q13",
+            "type": "radio",
+            "required": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|0",
+            "description": "他にも時間的な要求がありますか（例：他の家族からも支援を求められるなど）"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "合計スコア",
+            "type": "eval",
+            "formula": "[[Q1.index]] + [[Q2.index]] + [[Q3.index]] + [[Q4.index]] + [[Q5.index]] + [[Q6.index]] + [[Q7.index]] + [[Q8.index]] + [[Q9.index]] + [[Q10.index]] + [[Q11.index]] + [[Q12.index]] + [[Q13.index]]",
+            "dispname": "CSI合計スコア: 0-13点"
+        },
+        {
+            "name": "ストレスレベル判定",
+            "type": "eval",
+            "formula": "[[合計スコア]] >= 7 ? '高ストレス（7点以上）' : '低ストレス（6点以下）'"
+        },
+        {
+            "name": "Warning: 高ストレス CSIスコア ≥ 7",
+            "formula": "[[合計スコア]] >= 7",
+            "type": "warning"
+        }
+    ]
+}

@@ -1,0 +1,211 @@
+{
+    "_comment": [
+        "DLQI (Dermatology Life Quality Index) - 皮膚疾患QOL指標",
+        "開発者: Andrew Y. Finlay, Gul Karim Khan (1994年)",
+        "Cardiff University, Department of Dermatology",
+        "対象: 16歳以上の皮膚疾患患者",
+        "回答期間: 過去1週間",
+        "質問数: 10項目",
+        "得点範囲: 0-30点",
+        "原典論文: Finlay AY, Khan GK. Dermatology Life Quality Index (DLQI)--a simple practical measure for routine clinical use. Clinical and Experimental Dermatology. 1994;19(3):210-216",
+        "公式サイト: https://www.cardiff.ac.uk/medicine/resources/quality-of-life-questionnaires/dermatology-life-quality-index"
+    ],
+    "title": "DLQI 皮膚疾患QOL指標",
+    "description": [
+        "過去1週間の皮膚の状態が生活の質に与えた影響を評価します",
+        "各項目について最もよくあてはまるものを一つだけ選択してください"
+    ],
+    "fields": [
+        {
+            "dispname": "Q1. 皮膚の痛み・かゆみ・ヒリヒリ感",
+            "name": "Q1",
+            "type": "radio",
+            "required": true,
+            "description": "この1週間で、皮膚に痛み、かゆみ、ヒリヒリするような感覚がありましたか",
+            "selector": [
+                "全くなかった",
+                "少しあった",
+                "かなりあった",
+                "非常にあった"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "Q2. 恥ずかしさや自意識過剰",
+            "name": "Q2",
+            "type": "radio",
+            "required": true,
+            "description": "この1週間で、皮膚の状態のせいで、恥ずかしい思いをしたり、人の目が気になったりしましたか",
+            "selector": [
+                "全くなかった",
+                "少しあった",
+                "かなりあった",
+                "非常にあった"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "Q3. 買い物や家事への影響",
+            "name": "Q3",
+            "type": "radio",
+            "required": true,
+            "description": "この1週間で、皮膚の状態のせいで、買い物や家の手入れをするのに支障がありましたか",
+            "selector": [
+                "全くなかった",
+                "少しあった",
+                "かなりあった",
+                "非常にあった"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "Q4. 服装への影響",
+            "name": "Q4",
+            "type": "radio",
+            "required": true,
+            "description": "この1週間で、皮膚の状態のせいで、着る服に影響がありましたか",
+            "selector": [
+                "全くなかった",
+                "少しあった",
+                "かなりあった",
+                "非常にあった"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "Q5. 社会活動や余暇への影響",
+            "name": "Q5",
+            "type": "radio",
+            "required": true,
+            "description": "この1週間で、皮膚の状態のせいで、社会活動や余暇の過ごし方に影響がありましたか",
+            "selector": [
+                "全くなかった",
+                "少しあった",
+                "かなりあった",
+                "非常にあった"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "Q6. スポーツへの影響",
+            "name": "Q6",
+            "type": "radio",
+            "required": true,
+            "description": "この1週間で、皮膚の状態のせいで、スポーツをするのに支障がありましたか",
+            "selector": [
+                "全くなかった",
+                "少しあった",
+                "かなりあった",
+                "非常にあった"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "Q7a. 仕事や勉強の妨げ",
+            "name": "Q7a",
+            "type": "radio",
+            "required": true,
+            "description": "この1週間で、皮膚の状態のせいで、仕事や勉強ができなかったことがありましたか",
+            "selector": [
+                "いいえ",
+                "はい",
+                "該当しない"
+            ],
+            "selectoridx": "0|3|0"
+        },
+        {
+            "dispname": "Q7b. 仕事や勉強での問題",
+            "name": "Q7b",
+            "type": "radio",
+            "required": true,
+            "description": "この1週間で、皮膚の状態のせいで、仕事や勉強をするときに問題がありましたか",
+            "parentname": "Q7a",
+            "parentsel": "いいえ",
+            "selector": [
+                "全くなかった",
+                "少しあった",
+                "かなりあった"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "Q8. 人間関係への影響",
+            "name": "Q8",
+            "type": "radio",
+            "required": true,
+            "description": "この1週間で、皮膚の状態のせいで、配偶者、家族、親しい友人との関係に問題が生じましたか",
+            "selector": [
+                "全くなかった",
+                "少しあった",
+                "かなりあった",
+                "非常にあった"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "Q9. 性的な困難",
+            "name": "Q9",
+            "type": "radio",
+            "required": true,
+            "description": "この1週間で、皮膚の状態のせいで、性的な困難がありましたか",
+            "selector": [
+                "全くなかった",
+                "少しあった",
+                "かなりあった",
+                "非常にあった"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "Q10. 治療による問題",
+            "name": "Q10",
+            "type": "radio",
+            "required": true,
+            "description": "この1週間で、皮膚の治療のせいで、家が汚れたり、時間がかかったり、一般的に不便なことがありましたか",
+            "selector": [
+                "全くなかった",
+                "少しあった",
+                "かなりあった",
+                "非常にあった"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "Q7bスコア",
+            "type": "eval",
+            "formula": "[[Q7b.index]]",
+            "noreport": true
+        },
+        {
+            "name": "Q7スコア",
+            "type": "eval",
+            "formula": "[[Q7a.index]] == 1 ? 3 : [[Q7bスコア]]",
+            "noreport": true
+        },
+        {
+            "name": "合計スコア",
+            "type": "eval",
+            "dispname": "DLQI合計スコア (0-30点)",
+            "formula": "[[Q1.index]] + [[Q2.index]] + [[Q3.index]] + [[Q4.index]] + [[Q5.index]] + [[Q6.index]] + [[Q7スコア]] + [[Q8.index]] + [[Q9.index]] + [[Q10.index]]"
+        },
+        {
+            "name": "重症度分類",
+            "type": "eval",
+            "dispname": "QOLへの影響度評価",
+            "formula": "[[合計スコア]] >= 21 ? '非常に大きな影響' : ( [[合計スコア]] >= 11 ? '大きな影響' : ( [[合計スコア]] >= 6 ? '中等度の影響' : ( [[合計スコア]] >= 2 ? '軽度の影響' : '影響なし' ) ) )"
+        },
+        {
+            "name": "Warning: 中等度以上QOL影響 合計スコア >= 11",
+            "type": "warning",
+            "formula": "[[合計スコア]] >= 11"
+        },
+        {
+            "name": "Emergency: 重度QOL影響 合計スコア >= 21",
+            "type": "emergency",
+            "formula": "[[合計スコア]] >= 21"
+        }
+    ]
+}

@@ -1,0 +1,580 @@
+{
+    "title": "PANSS（陽性・陰性症状評価尺度）",
+    "description": [
+        "統合失調症の陽性症状、陰性症状、一般精神病理症状を評価する尺度です。",
+        "過去1週間の症状について回答してください。"
+    ],
+    "_comment": [
+        "陽性・陰性症状評価尺度（Positive and Negative Syndrome Scale: PANSS）",
+        "開発者: Stanley Kay, Lewis Opler, Abraham Fiszbein (1987年)",
+        "日本語版: 山田寛、増井寛治、菊本弘次（訳）：陽性・陰性症状評価尺度（PANSS）マニュアル、星和書店、1991年",
+        "30項目で構成：陽性尺度7項目、陰性尺度7項目、一般精神病理尺度16項目",
+        "各項目1-7点の7段階評価（1=なし、2=ごく軽度、3=軽度、4=中等度、5=やや重度、6=重度、7=最重度）",
+        "合計点30-210点（陽性尺度7-49点、陰性尺度7-49点、一般精神病理尺度16-112点）",
+        "臨床医による面接時間：45-50分",
+        "統合失調症症状評価の「ゴールドスタンダード」",
+        "NCBI参考文献: https://www.ncbi.nlm.nih.gov/books/NBK169692/",
+        "日本精神科評価尺度研究会: http://jsprs.org/scales/panss.html"
+    ],
+    "submit_button_title": "評価を送信",
+    "fields": [
+        {
+            "type": "subsection",
+            "name": "section_positive",
+            "dispname": "陽性尺度"
+        },
+        {
+            "type": "radio",
+            "name": "P1_delusions",
+            "dispname": "P1. 妄想",
+            "description": "現実と合わない強固な思い込みや信念",
+            "required": true,
+            "selector": [
+                "なし",
+                "ごく軽度",
+                "軽度",
+                "中等度",
+                "やや重度",
+                "重度",
+                "最重度"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7"
+        },
+        {
+            "type": "radio",
+            "name": "P2_conceptual_disorganization",
+            "dispname": "P2. 概念の混乱",
+            "description": "思考の過程の組織化の障害、まとまりのない考え",
+            "required": true,
+            "selector": [
+                "なし",
+                "ごく軽度",
+                "軽度",
+                "中等度",
+                "やや重度",
+                "重度",
+                "最重度"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7"
+        },
+        {
+            "type": "radio",
+            "name": "P3_hallucinatory_behavior",
+            "dispname": "P3. 幻覚行動",
+            "description": "実際にないものを見聞きする症状",
+            "required": true,
+            "selector": [
+                "なし",
+                "ごく軽度",
+                "軽度",
+                "中等度",
+                "やや重度",
+                "重度",
+                "最重度"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7"
+        },
+        {
+            "type": "radio",
+            "name": "P4_excitement",
+            "dispname": "P4. 興奮",
+            "description": "過度の活動性や運動の亢進",
+            "required": true,
+            "selector": [
+                "なし",
+                "ごく軽度",
+                "軽度",
+                "中等度",
+                "やや重度",
+                "重度",
+                "最重度"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7"
+        },
+        {
+            "type": "radio",
+            "name": "P5_grandiosity",
+            "dispname": "P5. 誇大性",
+            "description": "自分の能力や地位についての過大な評価",
+            "required": true,
+            "selector": [
+                "なし",
+                "ごく軽度",
+                "軽度",
+                "中等度",
+                "やや重度",
+                "重度",
+                "最重度"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7"
+        },
+        {
+            "type": "radio",
+            "name": "P6_suspiciousness",
+            "dispname": "P6. 疑惑",
+            "description": "他者への不信や疑い深さ",
+            "required": true,
+            "selector": [
+                "なし",
+                "ごく軽度",
+                "軽度",
+                "中等度",
+                "やや重度",
+                "重度",
+                "最重度"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7"
+        },
+        {
+            "type": "radio",
+            "name": "P7_hostility",
+            "dispname": "P7. 敵意",
+            "description": "攻撃的な態度や行動",
+            "required": true,
+            "selector": [
+                "なし",
+                "ごく軽度",
+                "軽度",
+                "中等度",
+                "やや重度",
+                "重度",
+                "最重度"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7"
+        },
+        {
+            "type": "subsection",
+            "name": "section_negative",
+            "dispname": "陰性尺度"
+        },
+        {
+            "type": "radio",
+            "name": "N1_blunted_affect",
+            "dispname": "N1. 感情鈍麻",
+            "description": "感情表現の減少や平板化",
+            "required": true,
+            "selector": [
+                "なし",
+                "ごく軽度",
+                "軽度",
+                "中等度",
+                "やや重度",
+                "重度",
+                "最重度"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7"
+        },
+        {
+            "type": "radio",
+            "name": "N2_emotional_withdrawal",
+            "dispname": "N2. 情緒的ひきこもり",
+            "description": "対人関係における感情的な関与の低下",
+            "required": true,
+            "selector": [
+                "なし",
+                "ごく軽度",
+                "軽度",
+                "中等度",
+                "やや重度",
+                "重度",
+                "最重度"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7"
+        },
+        {
+            "type": "radio",
+            "name": "N3_poor_rapport",
+            "dispname": "N3. 疎通性の欠如",
+            "description": "面接者との意思疎通の困難",
+            "required": true,
+            "selector": [
+                "なし",
+                "ごく軽度",
+                "軽度",
+                "中等度",
+                "やや重度",
+                "重度",
+                "最重度"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7"
+        },
+        {
+            "type": "radio",
+            "name": "N4_passive_social_withdrawal",
+            "dispname": "N4. 受動的・無関心的社会的ひきこもり",
+            "description": "社会的活動への関心や参加の減少",
+            "required": true,
+            "selector": [
+                "なし",
+                "ごく軽度",
+                "軽度",
+                "中等度",
+                "やや重度",
+                "重度",
+                "最重度"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7"
+        },
+        {
+            "type": "radio",
+            "name": "N5_abstract_thinking",
+            "dispname": "N5. 抽象的思考の困難",
+            "description": "抽象的な概念を理解し使用することの困難",
+            "required": true,
+            "selector": [
+                "なし",
+                "ごく軽度",
+                "軽度",
+                "中等度",
+                "やや重度",
+                "重度",
+                "最重度"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7"
+        },
+        {
+            "type": "radio",
+            "name": "N6_spontaneity_conversation",
+            "dispname": "N6. 自発性と会話の流暢性の欠如",
+            "description": "自発的な発言や会話の流れの欠如",
+            "required": true,
+            "selector": [
+                "なし",
+                "ごく軽度",
+                "軽度",
+                "中等度",
+                "やや重度",
+                "重度",
+                "最重度"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7"
+        },
+        {
+            "type": "radio",
+            "name": "N7_stereotyped_thinking",
+            "dispname": "N7. 常同的思考",
+            "description": "柔軟性に欠ける画一的な思考パターン",
+            "required": true,
+            "selector": [
+                "なし",
+                "ごく軽度",
+                "軽度",
+                "中等度",
+                "やや重度",
+                "重度",
+                "最重度"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7"
+        },
+        {
+            "type": "subsection",
+            "name": "section_general",
+            "dispname": "一般精神病理尺度"
+        },
+        {
+            "type": "radio",
+            "name": "G1_somatic_concern",
+            "dispname": "G1. 身体的関心",
+            "description": "身体の健康や機能に対する過度の関心",
+            "required": true,
+            "selector": [
+                "なし",
+                "ごく軽度",
+                "軽度",
+                "中等度",
+                "やや重度",
+                "重度",
+                "最重度"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7"
+        },
+        {
+            "type": "radio",
+            "name": "G2_anxiety",
+            "dispname": "G2. 不安",
+            "description": "緊張や不安感",
+            "required": true,
+            "selector": [
+                "なし",
+                "ごく軽度",
+                "軽度",
+                "中等度",
+                "やや重度",
+                "重度",
+                "最重度"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7"
+        },
+        {
+            "type": "radio",
+            "name": "G3_guilt_feelings",
+            "dispname": "G3. 罪責感",
+            "description": "自分を責める気持ちや罪悪感",
+            "required": true,
+            "selector": [
+                "なし",
+                "ごく軽度",
+                "軽度",
+                "中等度",
+                "やや重度",
+                "重度",
+                "最重度"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7"
+        },
+        {
+            "type": "radio",
+            "name": "G4_tension",
+            "dispname": "G4. 緊張",
+            "description": "精神的な緊張状態",
+            "required": true,
+            "selector": [
+                "なし",
+                "ごく軽度",
+                "軽度",
+                "中等度",
+                "やや重度",
+                "重度",
+                "最重度"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7"
+        },
+        {
+            "type": "radio",
+            "name": "G5_mannerisms_posturing",
+            "dispname": "G5. てらいと姿勢",
+            "description": "不自然な動作や姿勢",
+            "required": true,
+            "selector": [
+                "なし",
+                "ごく軽度",
+                "軽度",
+                "中等度",
+                "やや重度",
+                "重度",
+                "最重度"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7"
+        },
+        {
+            "type": "radio",
+            "name": "G6_depression",
+            "dispname": "G6. 抑うつ",
+            "description": "気分の落ち込みや憂うつ感",
+            "required": true,
+            "selector": [
+                "なし",
+                "ごく軽度",
+                "軽度",
+                "中等度",
+                "やや重度",
+                "重度",
+                "最重度"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7"
+        },
+        {
+            "type": "radio",
+            "name": "G7_motor_retardation",
+            "dispname": "G7. 運動減少",
+            "description": "動作の遅延や活動量の減少",
+            "required": true,
+            "selector": [
+                "なし",
+                "ごく軽度",
+                "軽度",
+                "中等度",
+                "やや重度",
+                "重度",
+                "最重度"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7"
+        },
+        {
+            "type": "radio",
+            "name": "G8_uncooperativeness",
+            "dispname": "G8. 非協調性",
+            "description": "治療や面接に対する協力の欠如",
+            "required": true,
+            "selector": [
+                "なし",
+                "ごく軽度",
+                "軽度",
+                "中等度",
+                "やや重度",
+                "重度",
+                "最重度"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7"
+        },
+        {
+            "type": "radio",
+            "name": "G9_unusual_thought_content",
+            "dispname": "G9. 異常な思考内容",
+            "description": "奇異で異常な思考の内容",
+            "required": true,
+            "selector": [
+                "なし",
+                "ごく軽度",
+                "軽度",
+                "中等度",
+                "やや重度",
+                "重度",
+                "最重度"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7"
+        },
+        {
+            "type": "radio",
+            "name": "G10_disorientation",
+            "dispname": "G10. 見当識障害",
+            "description": "時間、場所、人に関する見当識の障害",
+            "required": true,
+            "selector": [
+                "なし",
+                "ごく軽度",
+                "軽度",
+                "中等度",
+                "やや重度",
+                "重度",
+                "最重度"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7"
+        },
+        {
+            "type": "radio",
+            "name": "G11_poor_attention",
+            "dispname": "G11. 注意の欠如",
+            "description": "集中力や注意力の低下",
+            "required": true,
+            "selector": [
+                "なし",
+                "ごく軽度",
+                "軽度",
+                "中等度",
+                "やや重度",
+                "重度",
+                "最重度"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7"
+        },
+        {
+            "type": "radio",
+            "name": "G12_lack_judgment_insight",
+            "dispname": "G12. 判断力と洞察力の欠如",
+            "description": "病気に対する理解や判断能力の低下",
+            "required": true,
+            "selector": [
+                "なし",
+                "ごく軽度",
+                "軽度",
+                "中等度",
+                "やや重度",
+                "重度",
+                "最重度"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7"
+        },
+        {
+            "type": "radio",
+            "name": "G13_disturbance_volition",
+            "dispname": "G13. 意志の障害",
+            "description": "意欲や意志決定の障害",
+            "required": true,
+            "selector": [
+                "なし",
+                "ごく軽度",
+                "軽度",
+                "中等度",
+                "やや重度",
+                "重度",
+                "最重度"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7"
+        },
+        {
+            "type": "radio",
+            "name": "G14_poor_impulse_control",
+            "dispname": "G14. 衝動調節の欠如",
+            "description": "衝動的な行動のコントロールの困難",
+            "required": true,
+            "selector": [
+                "なし",
+                "ごく軽度",
+                "軽度",
+                "中等度",
+                "やや重度",
+                "重度",
+                "最重度"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7"
+        },
+        {
+            "type": "radio",
+            "name": "G15_preoccupation",
+            "dispname": "G15. 没頭",
+            "description": "特定の考えや活動への過度の集中",
+            "required": true,
+            "selector": [
+                "なし",
+                "ごく軽度",
+                "軽度",
+                "中等度",
+                "やや重度",
+                "重度",
+                "最重度"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7"
+        },
+        {
+            "type": "radio",
+            "name": "G16_active_social_avoidance",
+            "dispname": "G16. 積極的社会的回避",
+            "description": "能動的な社会的接触の回避",
+            "required": true,
+            "selector": [
+                "なし",
+                "ごく軽度",
+                "軽度",
+                "中等度",
+                "やや重度",
+                "重度",
+                "最重度"
+            ],
+            "selectoridx": "1|2|3|4|5|6|7"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "type": "eval",
+            "name": "positive_total",
+            "dispname": "陽性尺度合計点（7-49点）",
+            "formula": "[[P1_delusions.index]] + [[P2_conceptual_disorganization.index]] + [[P3_hallucinatory_behavior.index]] + [[P4_excitement.index]] + [[P5_grandiosity.index]] + [[P6_suspiciousness.index]] + [[P7_hostility.index]]"
+        },
+        {
+            "type": "eval",
+            "name": "negative_total",
+            "dispname": "陰性尺度合計点（7-49点）",
+            "formula": "[[N1_blunted_affect.index]] + [[N2_emotional_withdrawal.index]] + [[N3_poor_rapport.index]] + [[N4_passive_social_withdrawal.index]] + [[N5_abstract_thinking.index]] + [[N6_spontaneity_conversation.index]] + [[N7_stereotyped_thinking.index]]"
+        },
+        {
+            "type": "eval",
+            "name": "general_total",
+            "dispname": "一般精神病理尺度合計点（16-112点）",
+            "formula": "[[G1_somatic_concern.index]] + [[G2_anxiety.index]] + [[G3_guilt_feelings.index]] + [[G4_tension.index]] + [[G5_mannerisms_posturing.index]] + [[G6_depression.index]] + [[G7_motor_retardation.index]] + [[G8_uncooperativeness.index]] + [[G9_unusual_thought_content.index]] + [[G10_disorientation.index]] + [[G11_poor_attention.index]] + [[G12_lack_judgment_insight.index]] + [[G13_disturbance_volition.index]] + [[G14_poor_impulse_control.index]] + [[G15_preoccupation.index]] + [[G16_active_social_avoidance.index]]"
+        },
+        {
+            "type": "eval",
+            "name": "panss_total",
+            "dispname": "PANSS合計点（30-210点）",
+            "formula": "[[positive_total]] + [[negative_total]] + [[general_total]]"
+        },
+        {
+            "type": "eval",
+            "name": "composite_score",
+            "dispname": "複合尺度（陽性-陰性）",
+            "formula": "[[positive_total]] - [[negative_total]]"
+        }
+    ]
+}

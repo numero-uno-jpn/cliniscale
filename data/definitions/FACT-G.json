@@ -1,0 +1,457 @@
+{
+    "_comment": [
+        "FACT-G (Functional Assessment of Cancer Therapy - General) 日本語版 Version 4",
+        "原典: Cella DF, et al. The Functional Assessment of Cancer Therapy scale: development and validation of the general measure. Journal of Clinical Oncology. 1993; 11(3): 570-9",
+        "日本語版: 下妻晃二郎、江口成美：がん患者用QOL尺度の開発と臨床応用（I）．日医総研ワーキングペーパー No. 56 2001年11月",
+        "公式サイト: https://www.facit.org/measures/fact-g",
+        "標準構成: 27項目(身体7+社会・家族7+精神6+機能7)、総合計0-108点",
+        "回答期間: 過去7日間",
+        "回答形式: 5段階リッカート尺度（0-4点）",
+        "スコアリング: PWB全項目とEWB 5項目は逆転項目（selectoridxを4|3|2|1|0に設定）"
+    ],
+    "title": "FACT-G がん患者の生活の質評価",
+    "description": [
+        "がん患者の生活の質評価のための問診票です",
+        "過去7日間程度のあなたの状態について、最もよくあてはまる番号を選んでください"
+    ],
+    "fields": [
+        {
+            "dispname": "身体症状について",
+            "type": "subsection"
+        },
+        {
+            "dispname": "体に力が入らない感じがする",
+            "name": "GP1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くあてはまらない",
+                "わずかにあてはまる",
+                "多少あてはまる",
+                "かなりあてはまる",
+                "非常によくあてはまる"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "吐き気がする",
+            "name": "GP2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くあてはまらない",
+                "わずかにあてはまる",
+                "多少あてはまる",
+                "かなりあてはまる",
+                "非常によくあてはまる"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "体の具合のせいで家族への負担となっている",
+            "name": "GP3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くあてはまらない",
+                "わずかにあてはまる",
+                "多少あてはまる",
+                "かなりあてはまる",
+                "非常によくあてはまる"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "痛みがある",
+            "name": "GP4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くあてはまらない",
+                "わずかにあてはまる",
+                "多少あてはまる",
+                "かなりあてはまる",
+                "非常によくあてはまる"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "治療による副作用に悩んでいる",
+            "name": "GP5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くあてはまらない",
+                "わずかにあてはまる",
+                "多少あてはまる",
+                "かなりあてはまる",
+                "非常によくあてはまる"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "自分は病気だと感じる",
+            "name": "GP6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くあてはまらない",
+                "わずかにあてはまる",
+                "多少あてはまる",
+                "かなりあてはまる",
+                "非常によくあてはまる"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "体の具合のせいで、床で休まざるを得ない",
+            "name": "GP7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くあてはまらない",
+                "わずかにあてはまる",
+                "多少あてはまる",
+                "かなりあてはまる",
+                "非常によくあてはまる"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "社会的・家族との関係について",
+            "type": "subsection"
+        },
+        {
+            "dispname": "友人たちを身近に感じる",
+            "name": "GS1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くあてはまらない",
+                "わずかにあてはまる",
+                "多少あてはまる",
+                "かなりあてはまる",
+                "非常によくあてはまる"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "家族から精神的な助けがある",
+            "name": "GS2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くあてはまらない",
+                "わずかにあてはまる",
+                "多少あてはまる",
+                "かなりあてはまる",
+                "非常によくあてはまる"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "友人からの助けがある",
+            "name": "GS3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くあてはまらない",
+                "わずかにあてはまる",
+                "多少あてはまる",
+                "かなりあてはまる",
+                "非常によくあてはまる"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "家族は私の病気を充分受け入れている",
+            "name": "GS4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くあてはまらない",
+                "わずかにあてはまる",
+                "多少あてはまる",
+                "かなりあてはまる",
+                "非常によくあてはまる"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "私の病気について家族間の話し合いに満足している",
+            "name": "GS5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くあてはまらない",
+                "わずかにあてはまる",
+                "多少あてはまる",
+                "かなりあてはまる",
+                "非常によくあてはまる"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "パートナーを親密に感じる",
+            "name": "GS6",
+            "type": "radio",
+            "required": true,
+            "description": "パートナーまたは自分を一番支えてくれる人について",
+            "selector": [
+                "全くあてはまらない",
+                "わずかにあてはまる",
+                "多少あてはまる",
+                "かなりあてはまる",
+                "非常によくあてはまる"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "性生活に満足している",
+            "name": "GS7",
+            "type": "radio",
+            "required": false,
+            "description": "現在の性生活の有無とは無関係です。答えにくい場合は回答を省略できます。この項目は研究で高率に未回答となることが知られていますが、回答された場合は重要な情報となります",
+            "selector": [
+                "全くあてはまらない",
+                "わずかにあてはまる",
+                "多少あてはまる",
+                "かなりあてはまる",
+                "非常によくあてはまる"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "精神的状態について",
+            "type": "subsection"
+        },
+        {
+            "dispname": "悲しいと感じる",
+            "name": "GE1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くあてはまらない",
+                "わずかにあてはまる",
+                "多少あてはまる",
+                "かなりあてはまる",
+                "非常によくあてはまる"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "病気を冷静に受け止めている自分に満足している",
+            "name": "GE2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くあてはまらない",
+                "わずかにあてはまる",
+                "多少あてはまる",
+                "かなりあてはまる",
+                "非常によくあてはまる"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "病気と闘うことに希望を失いつつある",
+            "name": "GE3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くあてはまらない",
+                "わずかにあてはまる",
+                "多少あてはまる",
+                "かなりあてはまる",
+                "非常によくあてはまる"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "神経質になっている",
+            "name": "GE4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くあてはまらない",
+                "わずかにあてはまる",
+                "多少あてはまる",
+                "かなりあてはまる",
+                "非常によくあてはまる"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "死ぬことを心配している",
+            "name": "GE5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くあてはまらない",
+                "わずかにあてはまる",
+                "多少あてはまる",
+                "かなりあてはまる",
+                "非常によくあてはまる"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "病気の悪化を心配している",
+            "name": "GE6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くあてはまらない",
+                "わずかにあてはまる",
+                "多少あてはまる",
+                "かなりあてはまる",
+                "非常によくあてはまる"
+            ],
+            "selectoridx": "4|3|2|1|0"
+        },
+        {
+            "dispname": "活動状況について",
+            "type": "subsection"
+        },
+        {
+            "dispname": "仕事をすることができる",
+            "name": "GF1",
+            "type": "radio",
+            "required": true,
+            "description": "家のことも含む",
+            "selector": [
+                "全くあてはまらない",
+                "わずかにあてはまる",
+                "多少あてはまる",
+                "かなりあてはまる",
+                "非常によくあてはまる"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "仕事は生活の張りになる",
+            "name": "GF2",
+            "type": "radio",
+            "required": true,
+            "description": "家のことも含む",
+            "selector": [
+                "全くあてはまらない",
+                "わずかにあてはまる",
+                "多少あてはまる",
+                "かなりあてはまる",
+                "非常によくあてはまる"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "生活を楽しむことができる",
+            "name": "GF3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くあてはまらない",
+                "わずかにあてはまる",
+                "多少あてはまる",
+                "かなりあてはまる",
+                "非常によくあてはまる"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "自分の病気を充分受け入れている",
+            "name": "GF4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くあてはまらない",
+                "わずかにあてはまる",
+                "多少あてはまる",
+                "かなりあてはまる",
+                "非常によくあてはまる"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "よく眠れる",
+            "name": "GF5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くあてはまらない",
+                "わずかにあてはまる",
+                "多少あてはまる",
+                "かなりあてはまる",
+                "非常によくあてはまる"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "いつもの娯楽を楽しんでいる",
+            "name": "GF6",
+            "type": "radio",
+            "required": true,
+            "description": "余暇を含む",
+            "selector": [
+                "全くあてはまらない",
+                "わずかにあてはまる",
+                "多少あてはまる",
+                "かなりあてはまる",
+                "非常によくあてはまる"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "現在の生活の質に満足している",
+            "name": "GF7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くあてはまらない",
+                "わずかにあてはまる",
+                "多少あてはまる",
+                "かなりあてはまる",
+                "非常によくあてはまる"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "GS7_index",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[GS7.index]]"
+        },
+        {
+            "name": "身体症状合計",
+            "type": "eval",
+            "formula": "[[GP1.index]] + [[GP2.index]] + [[GP3.index]] + [[GP4.index]] + [[GP5.index]] + [[GP6.index]] + [[GP7.index]]",
+            "dispname": "身体面下位尺度スコア PWB (0-28点)"
+        },
+        {
+            "name": "社会家族合計",
+            "type": "eval",
+            "formula": "[[GS1.index]] + [[GS2.index]] + [[GS3.index]] + [[GS4.index]] + [[GS5.index]] + [[GS6.index]] + [[GS7_index]]",
+            "dispname": "社会・家族面下位尺度スコア SWB (0-28点)"
+        },
+        {
+            "name": "精神状態合計",
+            "type": "eval",
+            "formula": "[[GE1.index]] + [[GE2.index]] + [[GE3.index]] + [[GE4.index]] + [[GE5.index]] + [[GE6.index]]",
+            "dispname": "心理面下位尺度スコア EWB (0-24点)"
+        },
+        {
+            "name": "活動状況合計",
+            "type": "eval",
+            "formula": "[[GF1.index]] + [[GF2.index]] + [[GF3.index]] + [[GF4.index]] + [[GF5.index]] + [[GF6.index]] + [[GF7.index]]",
+            "dispname": "機能面下位尺度スコア FWB (0-28点)"
+        },
+        {
+            "name": "FACT-G総合計",
+            "type": "eval",
+            "formula": "[[身体症状合計]] + [[社会家族合計]] + [[精神状態合計]] + [[活動状況合計]]",
+            "dispname": "FACT-G総合スコア (0-108点、高得点ほど良好なQOL)"
+        }
+    ]
+}

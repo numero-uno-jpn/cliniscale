@@ -1,0 +1,104 @@
+{
+    "_comment": [
+        "FLACC (Face, Legs, Activity, Cry, Consolability) 疼痛評価スケール",
+        "2ヶ月から7歳の小児および言語コミュニケーションが困難な患者の疼痛評価に使用",
+        "原典: Merkel et al. (1997) Pediatric Nursing 23(3), 293-297",
+        "開発: ミシガン大学",
+        "日本語版: 筑波大学 疾患制御医学専攻 救急集中治療研究室",
+        "参考URL: https://www.md.tsukuba.ac.jp/clinical-med/e-ccm/research/PedTool/FLACC.html"
+    ],
+    "title": "FLACC 疼痛評価スケール",
+    "description": [
+        "FLACC (Face, Legs, Activity, Cry, Consolability) スケール",
+        "2ヶ月から7歳の小児および言語コミュニケーションが困難な患者の疼痛を行動観察により評価します。",
+        "各項目を2-5分間観察し、最も当てはまる状態を選択してください。"
+    ],
+    "submit_button_title": "評価を完了",
+    "fields": [
+        {
+            "dispname": "F - Face (表情)",
+            "name": "face",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "無表情または笑顔",
+                "時折しかめっ面、眉を潜めている、うつむく、無関心",
+                "頻繁または持続的なしかめっ面、歯ぎしり、戦慄く"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "L - Legs (下肢)",
+            "name": "legs",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "正常肢位またはリラックス",
+                "落ち着きがない、じっとしていられない、緊張",
+                "足を蹴る、突っ張る"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "A - Activity (活動性)",
+            "name": "activity",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "おとなしく横になっている、正常位、容易に動く",
+                "じっとしていない、体位変換を繰り返す、緊張",
+                "反り返る、硬直する、ひきつけ"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "C - Cry (啼泣)",
+            "name": "cry",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "泣いていない",
+                "うめく、めそめそ泣く、時折苦痛を訴える",
+                "泣き続ける、悲鳴をあげる、泣きじゃくる、不満を訴え続ける"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "C - Consolability (安静度)",
+            "name": "consolability",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "満足している、リラックス",
+                "時々、タッチングや抱っこ、声かけをすると落ち着く、注意散漫になることもある",
+                "慰めたり、安心させたりすることが困難"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "total_score",
+            "type": "eval",
+            "dispname": "合計スコア(0-10点)",
+            "formula": "[[face.index]] + [[legs.index]] + [[activity.index]] + [[cry.index]] + [[consolability.index]]"
+        },
+        {
+            "name": "pain_level",
+            "type": "eval",
+            "dispname": "疼痛レベル判定",
+            "formula": "[[total_score]] >= 7 ? '重度の不快感/痛み' : ([[total_score]] >= 4 ? '中等度の痛み' : ([[total_score]] >= 1 ? '軽度の不快感' : 'リラックスし快適'))"
+        },
+        {
+            "name": "Warning: 中等度の痛み（4点以上）",
+            "formula": "[[total_score]] >= 4",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 重度の不快感/痛み（7点以上）",
+            "formula": "[[total_score]] >= 7",
+            "type": "emergency"
+        }
+    ]
+}

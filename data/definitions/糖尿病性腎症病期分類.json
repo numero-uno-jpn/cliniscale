@@ -1,0 +1,161 @@
+{
+    "_comment": [
+        "糖尿病性腎症病期分類2023",
+        "日本糖尿病学会・日本腎臓学会・日本透析医学会による糖尿病性腎症合同委員会策定",
+        "尿アルブミン値・推算糸球体濾過量により分類",
+        "参考文献: 糖尿病性腎症合同委員会・糖尿病性腎症病期分類改訂ワーキンググループ：糖尿病性腎症病期分類2023の策定. 糖尿病 2023; 66(11): 797-805",
+        "日本糖尿病学会: https://www.jds.or.jp/",
+        "日本腎臓学会: https://jsn.or.jp/"
+    ],
+    "title": "糖尿病性腎症病期分類 2023",
+    "description": [
+        "糖尿病性腎症の病期を評価する分類システムです。",
+        "尿アルブミン値とeGFRに基づいて第1期から第5期に分類します。"
+    ],
+    "contact": "問い合わせ担当者",
+    "dept_in_charge": "内科",
+    "responsible_person": [
+        "責任医師"
+    ],
+    "staffs": [
+        "医師",
+        "看護師"
+    ],
+    "submit_button_title": "分類結果を送信",
+    "translate": "major",
+    "fields": [
+        {
+            "dispname": "基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "患者年齢",
+            "name": "年齢",
+            "type": "text",
+            "postfix": "歳",
+            "inputmode": "numeric",
+            "required": true,
+            "description": "患者の年齢を入力してください"
+        },
+        {
+            "dispname": "糖尿病診断からの期間",
+            "name": "糖尿病期間",
+            "type": "text",
+            "postfix": "年",
+            "inputmode": "numeric",
+            "testrange": [
+                1,
+                20
+            ],
+            "required": true,
+            "description": "糖尿病と診断されてからの年数を入力してください"
+        },
+        {
+            "dispname": "検査値",
+            "type": "subsection"
+        },
+        {
+            "dispname": "尿アルブミン／クレアチニン比",
+            "name": "アルブミン比",
+            "type": "text",
+            "postfix": "mg/gCr",
+            "inputmode": "numeric",
+            "testrange": [
+                10,
+                500
+            ],
+            "required": true,
+            "description": "随時尿で測定可能です"
+        },
+        {
+            "dispname": "推算糸球体濾過量",
+            "name": "eGFR",
+            "type": "text",
+            "postfix": "mL/分/1.73m²",
+            "inputmode": "numeric",
+            "testrange": [
+                15,
+                120
+            ],
+            "required": true,
+            "description": "血清クレアチニン値から算出されます"
+        },
+        {
+            "dispname": "腎代替療法の有無",
+            "name": "透析",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|血液透析|腹膜透析|腎移植後",
+            "required": true
+        },
+        {
+            "dispname": "合併症・併存疾患",
+            "type": "subsection"
+        },
+        {
+            "dispname": "高血圧",
+            "name": "高血圧",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|あり",
+            "required": true
+        },
+        {
+            "dispname": "脂質異常症",
+            "name": "脂質異常症",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|あり"
+        },
+        {
+            "dispname": "心血管疾患",
+            "name": "心血管疾患",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|あり"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "アルブミン区分",
+            "type": "eval",
+            "formula": "( ((アルブミン比)) ) < 30 ? 'A1: 正常アルブミン尿' : ( ( ((アルブミン比)) ) <= 299 ? 'A2: 微量アルブミン尿' : 'A3: 顕性アルブミン尿' )",
+            "dispname": "尿アルブミン／クレアチニン比による分類"
+        },
+        {
+            "name": "GFR区分",
+            "type": "eval",
+            "formula": "( ((eGFR)) ) >= 90 ? 'G1: 正常または高値' : ( ( ((eGFR)) ) >= 60 ? 'G2: 軽度低下' : ( ( ((eGFR)) ) >= 45 ? 'G3a: 軽度〜中等度低下' : ( ( ((eGFR)) ) >= 30 ? 'G3b: 中等度〜高度低下' : ( ( ((eGFR)) ) >= 15 ? 'G4: 高度低下' : 'G5: 末期腎不全' ) ) ) )",
+            "dispname": "推算糸球体濾過量による分類"
+        },
+        {
+            "name": "糖尿病性腎症病期",
+            "type": "eval",
+            "formula": "{{透析}} != 'なし' ? '第5期: 腎代替療法期' : ( ( ((eGFR)) ) < 30 ? '第4期: GFR高度低下・末期腎不全期' : ( ( ((アルブミン比)) ) >= 300 && ( ((eGFR)) ) >= 30 ? '第3期: 顕性アルブミン尿期' : ( ( ((アルブミン比)) ) >= 30 ? '第2期: 微量アルブミン尿期' : '第1期: 正常アルブミン尿期' ) ) )",
+            "dispname": "糖尿病性腎症病期分類2023による最終判定"
+        },
+        {
+            "name": "CKDステージ",
+            "type": "eval",
+            "formula": "( ((eGFR)) ) >= 90 ? ( ( ((アルブミン比)) ) < 30 ? 'CKDなし' : 'CKDステージ1' ) : ( ( ((eGFR)) ) >= 60 ? 'CKDステージ2' : ( ( ((eGFR)) ) >= 45 ? 'CKDステージ3a' : ( ( ((eGFR)) ) >= 30 ? 'CKDステージ3b' : ( ( ((eGFR)) ) >= 15 ? 'CKDステージ4' : 'CKDステージ5' ) ) ) )",
+            "dispname": "慢性腎臓病重症度分類"
+        },
+        {
+            "name": "注意事項",
+            "type": "eval",
+            "formula": "( ((eGFR)) ) < 60 && ( ((アルブミン比)) ) < 30 ? '糖尿病性腎症以外の腎疾患との鑑別が必要' : ( ( ((アルブミン比)) ) >= 30 && ( ((アルブミン比)) ) < 300 ? '第2期: 早期腎症の診断基準に留意' : '' )",
+            "dispname": "診断上の注意点"
+        },
+        {
+            "name": "Warning: 中程度リスク eGFR < 30",
+            "formula": "( ((eGFR)) ) < 30",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 高度リスク eGFR < 15 または腎代替療法",
+            "formula": "( ((eGFR)) ) < 15 || {{透析}} != 'なし'",
+            "type": "emergency"
+        }
+    ]
+}

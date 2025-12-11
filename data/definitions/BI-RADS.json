@@ -1,0 +1,186 @@
+{
+    "_comment": [
+        "BI-RADS (Breast Imaging Reporting and Data System) - 乳房画像診断報告システム",
+        "米国放射線専門医会 (ACR) により1993年に発行された乳房画像診断の標準化システム",
+        "原典: American College of Radiology ACR BI-RADS Atlas (2013)",
+        "参考URL: https://www.acr.org/Clinical-Resources/Reporting-and-Data-Systems/BI-RADS",
+        "日本では主にMRI読影に使用、マンモグラフィと超音波は独自ガイドライン採用"
+    ],
+    "title": "BI-RADS 乳房画像診断報告システム",
+    "description": [
+        "BI-RADS は米国放射線専門医会が開発した乳房画像診断の標準化システムです",
+        "マンモグラフィ、超音波、MRIの読影所見と報告書を統一化し、カテゴリー0-6で分類します"
+    ],
+    "contact": "放射線科",
+    "dept_in_charge": "画像診断部",
+    "responsible_person": [
+        "読影医師"
+    ],
+    "staffs": [
+        "放射線技師",
+        "医師"
+    ],
+    "submit_button_title": "評価を完了",
+    "translate": "major",
+    "fields": [
+        {
+            "dispname": "基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "検査方法",
+            "name": "検査方法",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "マンモグラフィ|超音波|MRI|複数併用"
+        },
+        {
+            "dispname": "対象部位",
+            "name": "対象部位",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "右乳房|左乳房|両側乳房"
+        },
+        {
+            "dispname": "所見記載",
+            "type": "subsection"
+        },
+        {
+            "dispname": "主要所見の有無",
+            "name": "主要所見",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "なし|あり"
+        },
+        {
+            "dispname": "所見の詳細",
+            "name": "所見詳細",
+            "type": "textarea",
+            "rows": 4,
+            "parentname": "主要所見",
+            "parentsel": "あり",
+            "description": "病変の位置、大きさ、性状等を詳細に記載"
+        },
+        {
+            "dispname": "追加検査の必要性",
+            "name": "追加検査必要",
+            "type": "radio",
+            "inline": true,
+            "selector": "不要|必要"
+        },
+        {
+            "dispname": "追加検査内容",
+            "name": "追加検査内容",
+            "type": "checkbox",
+            "selector": [
+                "診断マンモグラフィ",
+                "超音波検査",
+                "MRI検査",
+                "過去画像との比較"
+            ],
+            "parentname": "追加検査必要",
+            "parentsel": "必要"
+        },
+        {
+            "dispname": "BI-RADSカテゴリー評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "BI-RADSカテゴリー",
+            "name": "カテゴリー",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "0 - 不完全評価",
+                "1 - 陰性",
+                "2 - 良性所見",
+                "3 - おそらく良性",
+                "4 - 悪性疑い",
+                "5 - 悪性強疑い",
+                "6 - 既知の悪性"
+            ],
+            "selectoridx": "0|1|2|3|4|5|6"
+        },
+        {
+            "dispname": "カテゴリー4の詳細分類",
+            "name": "カテゴリー4詳細",
+            "type": "radio",
+            "inline": true,
+            "selector": "4A - 低度疑い (2-10%)|4B - 中等度疑い (10-50%)|4C - 高度疑い (50-94%)",
+            "parentname": "カテゴリー",
+            "parentsel": "4 - 悪性疑い"
+        },
+        {
+            "dispname": "推奨管理方針",
+            "type": "subsection"
+        },
+        {
+            "name": "管理方針",
+            "type": "eval",
+            "description": "カテゴリーに基づく推奨管理",
+            "formula": "[[カテゴリー.index]] == 0 ? '追加画像検査が必要' : ( [[カテゴリー.index]] == 1 ? '通常スクリーニング継続' : ( [[カテゴリー.index]] == 2 ? '通常スクリーニング継続' : ( [[カテゴリー.index]] == 3 ? '6ヶ月後短期経過観察' : ( [[カテゴリー.index]] == 4 ? '組織診断 (生検) 推奨' : ( [[カテゴリー.index]] == 5 ? '組織診断 (生検) 強く推奨' : ( [[カテゴリー.index]] == 6 ? '治療効果判定・経過観察' : '不明' ) ) ) ) ) )"
+        },
+        {
+            "name": "癌可能性",
+            "type": "eval",
+            "description": "悪性腫瘍の可能性",
+            "formula": "[[カテゴリー.index]] == 0 ? '評価不能' : ( [[カテゴリー.index]] == 1 ? '0%' : ( [[カテゴリー.index]] == 2 ? '0%' : ( [[カテゴリー.index]] == 3 ? '2%未満' : ( [[カテゴリー.index]] == 4 ? '2-95%' : ( [[カテゴリー.index]] == 5 ? '95%超' : ( [[カテゴリー.index]] == 6 ? '確定診断済み' : '不明' ) ) ) ) ) )"
+        },
+        {
+            "dispname": "フォローアップ予定",
+            "name": "フォローアップ",
+            "type": "date",
+            "format": "YYYY/MM/DD",
+            "description": "次回検査予定日"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "dispname": "読影医師名",
+            "name": "読影医師",
+            "type": "text",
+            "required": true
+        },
+        {
+            "dispname": "読影日時",
+            "name": "読影日時",
+            "type": "date",
+            "format": "YYYY/MM/DD",
+            "required": true
+        },
+        {
+            "dispname": "最終確認",
+            "name": "確認署名",
+            "type": "signpad",
+            "required": true,
+            "description": "最終確認の署名をお願いします"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "患者向けレポート",
+            "type": "eval",
+            "formula": "'【検査結果のご説明】\\n\\n' + {{検査方法}} + 'の結果をお知らせいたします。\\n\\n' + '■ 検査結果\\n' + ( [[カテゴリー.index]] <= 2 ? '今回の検査では、特に心配される所見は認められませんでした。' : ( [[カテゴリー.index]] == 3 ? '念のため経過を観察する必要がある所見が認められました。' : ( [[カテゴリー.index]] >= 4 ? '詳しい検査が必要な所見が認められました。' : '' ) ) ) + '\\n\\n' + '■ 今後の対応\\n' + ( [[カテゴリー.index]] <= 2 ? '通常通り、定期的な検診を継続してください。' : ( [[カテゴリー.index]] == 3 ? '6ヶ月後に再度検査を受けてください。' : ( [[カテゴリー.index]] >= 4 ? '担当医より詳しい検査についてご相談させていただきます。' : '' ) ) ) + '\\n\\n' + ( {{フォローアップ}} ? '次回検査予定: ' + {{フォローアップ}} + '\\n\\n' : '' ) + 'ご不明な点がございましたら、お気軽にお声かけください。\\n\\n' + '読影担当医: ' + {{読影医師}}"
+        },
+        {
+            "name": "医師向けレポート",
+            "type": "eval",
+            "formula": "'【画像診断報告書】\\n\\n' + 'Modality: ' + {{検査方法}} + '\\n' + 'Target: ' + {{対象部位}} + '\\n\\n' + 'FINDINGS:\\n' + ( {{主要所見}} == 'あり' ? {{所見詳細}} + '\\n' : 'No significant abnormality detected.\\n' ) + ( {{追加検査必要}} == '必要' ? 'Additional imaging recommended: ' + {{追加検査内容}} + '\\n' : '' ) + '\\n' + 'ASSESSMENT:\\n' + 'BI-RADS Category: ' + [[カテゴリー.index]] + ( [[カテゴリー.index]] == 4 ? ' (' + {{カテゴリー4詳細}} + ')' : '' ) + '\\n' + 'Malignancy risk: ' + ( [[カテゴリー.index]] <= 2 ? '0%' : ( [[カテゴリー.index]] == 3 ? '<2%' : ( [[カテゴリー.index]] == 4 ? '2-95%' : ( [[カテゴリー.index]] == 5 ? '>95%' : 'Known malignancy' ) ) ) ) + '\\n\\n' + 'RECOMMENDATION:\\n' + ( [[カテゴリー.index]] == 0 ? 'Additional imaging workup needed.' : ( [[カテゴリー.index]] <= 2 ? 'Routine screening interval.' : ( [[カテゴリー.index]] == 3 ? 'Short-interval follow-up in 6 months.' : ( [[カテゴリー.index]] >= 4 && [[カテゴリー.index]] <= 5 ? 'Tissue diagnosis recommended.' : 'Treatment response evaluation.' ) ) ) ) + '\\n' + ( {{フォローアップ}} ? 'Next examination: ' + {{フォローアップ}} + '\\n' : '' ) + '\\n' + 'Interpreted by: ' + {{読影医師}} + '\\n' + 'Report Date: ' + {{読影日時}}"
+        },
+        {
+            "name": "Warning: 3～6ヶ月後の短期経過観察が必要",
+            "formula": "[[カテゴリー.index]] == 3",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 組織診断 (生検) が推奨されます",
+            "formula": "[[カテゴリー.index]] >= 4 && [[カテゴリー.index]] <= 5",
+            "type": "emergency"
+        }
+    ]
+}

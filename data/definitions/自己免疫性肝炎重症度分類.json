@@ -1,0 +1,173 @@
+{
+  "_comment": [
+    "自己免疫性肝炎重症度分類（AIH重症度）",
+    "厚生労働省自己免疫性肝炎（AIH）診療ガイドライン（2021年）15頁",
+    "厚生労働省「難治性の肝・胆道疾患に関する調査研究」班",
+    "患者の治療方針決定、紹介タイミング決定に使用",
+    "中等症以上が難病医療費助成対象"
+  ],
+  "title": "自己免疫性肝炎重症度分類",
+  "description": [
+    "自己免疫性肝炎患者の重症度を臨床所見と臨床検査所見から評価し、治療方針決定や専門医への紹介タイミングを判断するための分類です",
+    "中等症以上の場合は国の指定難病として医療費助成の対象となります"
+  ],
+  "contact": "難治性肝胆道疾患研究班",
+  "dept_in_charge": "消化器内科・肝臓内科",
+  "responsible_person": [
+    "主治医",
+    "肝臓専門医"
+  ],
+  "submit_button_title": "重症度評価を送信",
+  "mail_notification": true,
+  "fields": [
+    {
+      "dispname": "臨床所見",
+      "type": "subsection"
+    },
+    {
+      "dispname": "肝性脳症",
+      "name": "肝性脳症",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "selectoridx": "0|1",
+      "description": "意識障害や行動異常の有無"
+    },
+    {
+      "dispname": "肝萎縮",
+      "name": "肝萎縮",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "selectoridx": "0|1",
+      "description": "画像検査や触診での肝萎縮の有無"
+    },
+    {
+      "dispname": "臨床検査所見",
+      "type": "subsection"
+    },
+    {
+      "dispname": "AST値",
+      "name": "AST",
+      "type": "text",
+      "postfix": "U/L",
+      "inputmode": "numeric",
+      "required": true,
+      "testrange": [
+        10,
+        500
+      ],
+      "description": "アスパラギン酸アミノトランスフェラーゼ（半角数字で入力）"
+    },
+    {
+      "dispname": "ALT値",
+      "name": "ALT",
+      "type": "text",
+      "postfix": "U/L",
+      "inputmode": "numeric",
+      "required": true,
+      "testrange": [
+        10,
+        500
+      ],
+      "description": "アラニンアミノトランスフェラーゼ（半角数字で入力）"
+    },
+    {
+      "dispname": "総ビリルビン値",
+      "name": "総ビリルビン",
+      "type": "text",
+      "postfix": "mg/dL",
+      "inputmode": "decimal",
+      "required": true,
+      "testrange": [
+        0.3,
+        15
+      ],
+      "description": "総ビリルビン濃度（半角数字で入力、例: 1.2）"
+    },
+    {
+      "dispname": "プロトロンビン時間（PT-INR）",
+      "name": "PT-INR",
+      "type": "text",
+      "inputmode": "decimal",
+      "required": true,
+      "testrange": [
+        0.8,
+        3.0
+      ],
+      "description": "プロトロンビン時間国際標準化比（半角数字で入力、例: 1.15）"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "AST又はALT_200以上",
+      "type": "eval",
+      "formula": "((AST)) > 200 || ((ALT)) > 200 ? 1 : 0",
+      "noreport": true
+    },
+    {
+      "name": "ビリルビン_5以上",
+      "type": "eval",
+      "formula": "((総ビリルビン)) > 5 ? 1 : 0",
+      "noreport": true
+    },
+    {
+      "name": "PT-INR_1.3以上",
+      "type": "eval",
+      "formula": "((PT-INR)) >= 1.3 ? 1 : 0",
+      "noreport": true
+    },
+    {
+      "name": "重症判定条件1",
+      "type": "eval",
+      "formula": "[[肝性脳症.index]] == 1 || [[肝萎縮.index]] == 1 ? 1 : 0",
+      "noreport": true
+    },
+    {
+      "name": "重症判定条件2",
+      "type": "eval",
+      "formula": "[[PT-INR_1.3以上]] == 1 ? 1 : 0",
+      "noreport": true
+    },
+    {
+      "name": "中等症判定条件",
+      "type": "eval",
+      "formula": "[[重症判定条件1]] == 0 && [[重症判定条件2]] == 0 && ( [[AST又はALT_200以上]] == 1 || [[ビリルビン_5以上]] == 1 ) ? 1 : 0",
+      "noreport": true
+    },
+    {
+      "name": "重症度分類",
+      "type": "eval",
+      "formula": "[[重症判定条件1]] == 1 || [[重症判定条件2]] == 1 ? '重症' : [[中等症判定条件]] == 1 ? '中等症' : '軽症'"
+    },
+    {
+      "name": "重症度説明",
+      "type": "eval",
+      "formula": "{{重症度分類}} == '重症' ? '遅滞なく肝臓専門医のいる医療機関への紹介を考慮' : {{重症度分類}} == '中等症' ? '病態に応じ専門機関への紹介を考慮（特に黄疸高度、60歳以上）' : '軽症 - 外来での経過観察可能'"
+    },
+    {
+      "name": "難病医療費助成",
+      "type": "eval",
+      "formula": "{{重症度分類}} == '軽症' ? '対象外' : '対象（中等症以上）'"
+    },
+    {
+      "name": "Warning: 中等症判定",
+      "type": "warning",
+      "formula": "{{重症度分類}} == '中等症'"
+    },
+    {
+      "name": "Emergency: 重症判定",
+      "type": "emergency",
+      "formula": "{{重症度分類}} == '重症'"
+    }
+  ]
+}

@@ -1,0 +1,315 @@
+{
+    "_comment": [
+        "M-CHAT（オリジナル版・23項目） - Modified Checklist for Autism in Toddlers",
+        "注: 本版は2001年発表のオリジナル版です。現行標準版はM-CHAT-R/F（20項目、2009年版）です。",
+        "開発者: Diana Robins, Deborah Fein, Marianne Barton (2001年学術論文発表)",
+        "日本語版: 神尾陽子 (国立精神・神経センター精神保健研究所)",
+        "対象年齢: 16-30ヶ月（日本語版は18ヶ月の健診を想定、2次スクリーニングとして2歳まで適用可能）",
+        "項目数: 23項目（社会的発達16項目、知覚反応・常同行動4項目、言語理解1項目、その他2項目）",
+        "評価方式: はい/いいえの二択",
+        "カットオフ値: 23項目中3項目以上で不通過（陽性）",
+        "精度: 感度0.613、特異度0.985、陽性的中率43-46%",
+        "公式サイト: http://mchatscreen.com/",
+        "日本語版文献: Inada et al. (2011), Kamio et al. (2014)",
+        "著作権: Diana Robins, Deborah Fein, Marianne Barton",
+        "日本語版翻訳許可: 神尾陽子（国立精神・神経センター精神保健研究所）"
+    ],
+    "title": "M-CHAT（乳幼児期自閉症チェックリスト修正版）",
+    "description": [
+        "お子さんの日頃のご様子について、最も質問にあてはまるものを選択してください。",
+        "すべての質問にご回答くださるようにお願いいたします。",
+        "もし質問の行動をめったにしないと思われる場合は（たとえば1、2度しか見た覚えがないなど）、お子さんはそのような行動をしない（「いいえ」を選ぶ）とご回答ください。"
+    ],
+    "responsible_person": [
+        "発達小児科医師"
+    ],
+    "dept_in_charge": "小児科",
+    "disable_privacyitem_requirement": true,
+    "fields": [
+        {
+            "name": "note1",
+            "type": "note",
+            "description": "**対象年齢**: 16-30ヶ月のお子さん<br>**回答者**: 保護者の方<br>**実施時間**: 約5-10分"
+        },
+        {
+            "name": "mchat1",
+            "type": "radio",
+            "dispname": "1. お子さんをブランコのように揺らしたり、ひざの上で揺すると喜びますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchat2",
+            "type": "radio",
+            "dispname": "2. 他の子どもに興味がありますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchat3",
+            "type": "radio",
+            "dispname": "3. 階段など、何かの上に這い上がることが好きですか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchat4",
+            "type": "radio",
+            "dispname": "4. イナイイナイバーをすると喜びますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchat5",
+            "type": "radio",
+            "dispname": "5. 電話の受話器を耳にあててしゃべるまねをしたり、人形やその他のモノを使ってごっこ遊びをしますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchat6",
+            "type": "radio",
+            "dispname": "6. 何かほしいモノがある時、指をさして要求しますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchat7",
+            "type": "radio",
+            "dispname": "7. 何かに興味を持った時、指をさして伝えようとしますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchat8",
+            "type": "radio",
+            "dispname": "8. クルマや積木などのオモチャを、口に入れたり、さわったり、落としたりする遊びではなく、オモチャに合った遊び方をしますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchat9",
+            "type": "radio",
+            "dispname": "9. あなたに見てほしいモノがある時、それを見せに持ってきますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchat10",
+            "type": "radio",
+            "dispname": "10. 1、2秒より長く、あなたの目を見つめますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchat11",
+            "type": "radio",
+            "dispname": "11. ある種の音に、とくに過敏に反応して不機嫌になりますか？（耳をふさぐなど）",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchat12",
+            "type": "radio",
+            "dispname": "12. あなたがお子さんの顔をみたり、笑いかけると、笑顔を返してきますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchat13",
+            "type": "radio",
+            "dispname": "13. あなたのすることをまねしますか？（たとえば、口をとがらせてみせると、顔まねをしようとしますか？）",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchat14",
+            "type": "radio",
+            "dispname": "14. あなたが名前を呼ぶと、反応しますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchat15",
+            "type": "radio",
+            "dispname": "15. あなたが部屋の中の離れたところにあるオモチャを指でさすと、お子さんはその方向を見ますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchat16",
+            "type": "radio",
+            "dispname": "16. お子さんは歩きますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchat17",
+            "type": "radio",
+            "dispname": "17. あなたが見ているモノを、お子さんも一緒に見ますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchat18",
+            "type": "radio",
+            "dispname": "18. 顔の近くで指をひらひら動かすなどの変わった癖がありますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchat19",
+            "type": "radio",
+            "dispname": "19. あなたの注意を、自分の方にひこうとしますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchat20",
+            "type": "radio",
+            "dispname": "20. お子さんの耳が聞こえないのではないかと心配されたことがありますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchat21",
+            "type": "radio",
+            "dispname": "21. 言われたことばをわかっていますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchat22",
+            "type": "radio",
+            "dispname": "22. 何もない宙をじぃーっと見つめたり、目的なくひたすらうろうろすることがありますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "name": "mchat23",
+            "type": "radio",
+            "dispname": "23. いつもと違うことがある時、あなたの顔を見て反応を確かめますか？",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "0|1",
+            "required": true
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "mchat_score",
+            "type": "eval",
+            "dispname": "M-CHATスコア（不通過項目数）",
+            "formula": "[[mchat1.index]] + [[mchat2.index]] + [[mchat3.index]] + [[mchat4.index]] + [[mchat5.index]] + [[mchat6.index]] + [[mchat7.index]] + [[mchat8.index]] + [[mchat9.index]] + [[mchat10.index]] + (1 - [[mchat11.index]]) + [[mchat12.index]] + [[mchat13.index]] + [[mchat14.index]] + [[mchat15.index]] + [[mchat16.index]] + [[mchat17.index]] + (1 - [[mchat18.index]]) + [[mchat19.index]] + (1 - [[mchat20.index]]) + [[mchat21.index]] + (1 - [[mchat22.index]]) + [[mchat23.index]]"
+        },
+        {
+            "name": "mchat_critical_score",
+            "type": "eval",
+            "dispname": "クリティカル項目スコア（項目2,7,9,13,14,15の不通過数）",
+            "formula": "[[mchat2.index]] + [[mchat7.index]] + [[mchat9.index]] + [[mchat13.index]] + [[mchat14.index]] + [[mchat15.index]]",
+            "noreport": true
+        },
+        {
+            "name": "mchat_risk_level",
+            "type": "eval",
+            "dispname": "M-CHATリスクレベル",
+            "formula": "[[mchat_score]] >= 3 || [[mchat_critical_score]] >= 2 ? \"要フォローアップ（第2段階スクリーニング必要）\" : \"陰性（正常範囲）\""
+        },
+        {
+            "name": "Warning: M-CHATスコア >= 3 または クリティカル項目スコア >= 2",
+            "type": "warning",
+            "formula": "[[mchat_score]] >= 3 || [[mchat_critical_score]] >= 2"
+        }
+    ]
+}

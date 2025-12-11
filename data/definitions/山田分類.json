@@ -1,0 +1,264 @@
+{
+  "_comment": [
+    "山田分類（胃隆起性病変形態分類）問診票",
+    "参考文献: 山田・福富分類（1965年）",
+    "適用: 胃内視鏡検査での隆起性病変評価",
+    "日本消化器内視鏡学会推奨の形態分類システム"
+  ],
+  "title": "山田分類 評価問診票",
+  "description": [
+    "胃内視鏡検査における隆起性病変の形態評価",
+    "山田分類に基づく病変の分類評価を行います"
+  ],
+  "contact": "消化器内科担当医",
+  "dept_in_charge": "消化器内科",
+  "responsible_person": [
+    "内視鏡専門医"
+  ],
+  "staffs": [
+    "消化器内科医師"
+  ],
+  "submit_button_title": "評価結果を送信",
+  "fields": [
+    {
+      "dispname": "病変の基本情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "病変の部位",
+      "name": "病変部位",
+      "type": "checkbox",
+      "selector": [
+        "噴門部",
+        "胃底部",
+        "胃体上部",
+        "胃体中部",
+        "胃体下部",
+        "前庭部",
+        "幽門部"
+      ],
+      "required": true
+    },
+    {
+      "dispname": "病変数",
+      "name": "病変数",
+      "type": "text",
+      "postfix": "個",
+      "inputmode": "numeric",
+      "testrange": [
+        1,
+        20
+      ],
+      "required": true,
+      "description": "半角数字で入力してください（例: 3）"
+    },
+    {
+      "dispname": "最大病変サイズ",
+      "name": "最大病変サイズ",
+      "type": "text",
+      "postfix": "mm",
+      "inputmode": "decimal",
+      "testrange": [
+        1,
+        50
+      ],
+      "required": true,
+      "description": "半角数字で入力してください（例: 15.5）"
+    },
+    {
+      "dispname": "山田分類評価",
+      "type": "subsection"
+    },
+    {
+      "dispname": "山田分類タイプ",
+      "name": "山田分類",
+      "type": "radio",
+      "selector": [
+        "I型",
+        "II型",
+        "III型",
+        "IV型"
+      ],
+      "selectoridx": "1|2|3|4",
+      "required": true,
+      "description": "病変の形態に基づく分類"
+    },
+    {
+      "dispname": "I型の詳細評価",
+      "name": "I型詳細",
+      "type": "radio",
+      "selector": [
+        "有茎性",
+        "広基性"
+      ],
+      "parentname": "山田分類",
+      "parentsel": "I型"
+    },
+    {
+      "dispname": "II型の詳細評価",
+      "name": "II型詳細",
+      "type": "radio",
+      "selector": [
+        "亜有茎性",
+        "やや扁平"
+      ],
+      "parentname": "山田分類",
+      "parentsel": "II型"
+    },
+    {
+      "dispname": "III型の詳細評価",
+      "name": "III型詳細",
+      "type": "radio",
+      "selector": [
+        "扁平隆起",
+        "やや陥凹"
+      ],
+      "parentname": "山田分類",
+      "parentsel": "III型"
+    },
+    {
+      "dispname": "IV型の詳細評価",
+      "name": "IV型詳細",
+      "type": "radio",
+      "selector": [
+        "陥凹性",
+        "潰瘍性"
+      ],
+      "parentname": "山田分類",
+      "parentsel": "IV型"
+    },
+    {
+      "dispname": "病変の性状",
+      "type": "subsection"
+    },
+    {
+      "dispname": "表面性状",
+      "name": "表面性状",
+      "type": "radio",
+      "selector": [
+        "平滑",
+        "分葉状",
+        "結節状",
+        "びらん",
+        "潰瘍形成"
+      ],
+      "required": true
+    },
+    {
+      "dispname": "色調",
+      "name": "色調",
+      "type": "radio",
+      "selector": [
+        "正常粘膜と同色",
+        "発赤",
+        "褪色",
+        "白色調"
+      ],
+      "required": true
+    },
+    {
+      "dispname": "硬度評価",
+      "name": "硬度",
+      "type": "radio",
+      "selector": [
+        "軟",
+        "やや硬",
+        "硬"
+      ],
+      "description": "生検鉗子による触診評価"
+    },
+    {
+      "dispname": "出血傾向",
+      "name": "出血傾向",
+      "type": "radio",
+      "selector": [
+        "なし",
+        "軽度",
+        "中等度",
+        "高度"
+      ],
+      "inline": true
+    },
+    {
+      "dispname": "追加検査・処置",
+      "type": "subsection"
+    },
+    {
+      "dispname": "生検実施",
+      "name": "生検実施",
+      "type": "radio",
+      "selector": [
+        "実施",
+        "未実施"
+      ],
+      "inline": true,
+      "required": true
+    },
+    {
+      "dispname": "生検部位数",
+      "name": "生検部位数",
+      "type": "text",
+      "postfix": "箇所",
+      "inputmode": "numeric",
+      "testrange": [
+        1,
+        10
+      ],
+      "parentname": "生検実施",
+      "parentsel": "実施"
+    },
+    {
+      "dispname": "内視鏡的切除の適応",
+      "name": "切除適応",
+      "type": "radio",
+      "selector": [
+        "適応あり",
+        "適応なし",
+        "要検討"
+      ],
+      "description": "山田分類と病変サイズに基づく判定"
+    },
+    {
+      "dispname": "フォローアップ計画",
+      "name": "フォローアップ",
+      "type": "radio",
+      "selector": [
+        "3ヶ月後",
+        "6ヶ月後",
+        "1年後",
+        "不要"
+      ],
+      "description": "病変の性状に応じた経過観察計画"
+    },
+    {
+      "dispname": "総合所見",
+      "name": "総合所見",
+      "type": "textarea",
+      "rows": 5,
+      "description": "山田分類に基づく総合的な評価所見"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "悪性リスク評価",
+      "type": "eval",
+      "formula": "[[山田分類.index]] == 2 && ((最大病変サイズ)) >= 5 ? '高リスク' : ( [[山田分類.index]] == 3 && ((最大病変サイズ)) >= 10 ? '高リスク' : ( [[山田分類.index]] == 4 && ((最大病変サイズ)) >= 20 ? '高リスク' : '低リスク' ) )"
+    },
+    {
+      "name": "リスクスコア",
+      "type": "eval",
+      "formula": "[[山田分類.index]] + ( [[最大病変サイズ]] / 10 )"
+    },
+    {
+      "name": "Warning: 悪性リスク評価が高リスク",
+      "formula": "{{悪性リスク評価}} == '高リスク'",
+      "type": "warning"
+    },
+    {
+      "name": "Emergency: リスクスコア ≥ 6",
+      "formula": "[[リスクスコア]] >= 6",
+      "type": "emergency"
+    }
+  ]
+}

@@ -1,0 +1,348 @@
+{
+  "_comment": "アジソン病重症度分類問診票 - 厚生労働省 83 アジソン病診断基準・重症度分類（指定難病83）に基づく - 参考URL: https://www.mhlw.go.jp/file/06-Seisakujouhou-10900000-Kenkoukyoku/0000089865.pdf - 重症度判定: 4項目のうち少なくとも1項目以上で医療費助成対象 - 評価基準: 治療開始後は直近6か月間で最も悪い状態で判定 - 修正内容: sectionをsubsectionに変更、数値入力をscaleからtextに変更（システムバグ対応・ユーザビリティ向上）",
+  "title": "アジソン病重症度分類",
+  "description": [
+    "アジソン病（原発性副腎皮質機能低下症）の重症度評価を行います。",
+    "厚生労働省指定難病83番の診断基準に基づき、医療費助成の判定に使用されます。",
+    "4つの評価項目のうち少なくとも1項目以上に該当する場合、重症度基準を満たします。"
+  ],
+  "fields": [
+    {
+      "dispname": "治療状況",
+      "name": "治療状況",
+      "type": "radio",
+      "selector": [
+        "治療前",
+        "治療開始後"
+      ],
+      "required": true,
+      "description": "治療開始後の場合、直近6か月間で最も悪い状態で評価してください"
+    },
+    {
+      "dispname": "項目1: 血中コルチゾール値",
+      "type": "subsection"
+    },
+    {
+      "dispname": "血中コルチゾール基礎値を測定しましたか",
+      "name": "コルチゾール測定",
+      "type": "radio",
+      "selector": [
+        "はい",
+        "いいえ"
+      ],
+      "inline": true,
+      "required": true
+    },
+    {
+      "dispname": "血中コルチゾール基礎値",
+      "name": "コルチゾール値",
+      "type": "text",
+      "postfix": "μg/dL",
+      "inputmode": "decimal",
+      "testrange": [
+        0,
+        30
+      ],
+      "parentname": "コルチゾール測定",
+      "parentsel": "はい",
+      "description": "血中コルチゾール基礎値を半角数字で入力してください（例: 3.5）"
+    },
+    {
+      "dispname": "項目2: 負荷試験反応性",
+      "type": "subsection"
+    },
+    {
+      "dispname": "迅速ACTH負荷試験を実施しましたか",
+      "name": "ACTH試験実施",
+      "type": "radio",
+      "selector": [
+        "はい",
+        "いいえ"
+      ],
+      "inline": true,
+      "required": true
+    },
+    {
+      "dispname": "迅速ACTH負荷試験後の血中コルチゾール値",
+      "name": "ACTH後コルチゾール値",
+      "type": "text",
+      "postfix": "μg/dL",
+      "inputmode": "decimal",
+      "testrange": [
+        0,
+        50
+      ],
+      "parentname": "ACTH試験実施",
+      "parentsel": "はい",
+      "description": "迅速ACTH負荷（250μg）後の血中コルチゾール値を半角数字で入力してください（例: 14.5）"
+    },
+    {
+      "dispname": "項目3: 副腎不全症状",
+      "type": "subsection"
+    },
+    {
+      "dispname": "特徴的な色素沈着",
+      "name": "色素沈着",
+      "type": "radio",
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "inline": true,
+      "required": true,
+      "description": "皮膚、肘や膝などの関節部、爪床、口腔内の特徴的色素沈着"
+    },
+    {
+      "dispname": "半年間で5%以上の体重減少",
+      "name": "体重減少",
+      "type": "radio",
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "inline": true,
+      "required": true,
+      "description": "過去6か月間で体重の5%以上の減少"
+    },
+    {
+      "dispname": "低血圧",
+      "name": "低血圧",
+      "type": "radio",
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "inline": true,
+      "required": true,
+      "description": "起立性低血圧を含む低血圧症状"
+    },
+    {
+      "dispname": "脱毛",
+      "name": "脱毛",
+      "type": "radio",
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "inline": true,
+      "required": true,
+      "description": "腋毛、恥毛の脱落など"
+    },
+    {
+      "dispname": "低血糖症状",
+      "name": "低血糖症状",
+      "type": "radio",
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "inline": true,
+      "required": true,
+      "description": "低血糖による症状"
+    },
+    {
+      "dispname": "消化器症状",
+      "name": "消化器症状",
+      "type": "radio",
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "inline": true,
+      "required": true,
+      "description": "悪心、嘔吐などの消化器症状"
+    },
+    {
+      "dispname": "精神症状",
+      "name": "精神症状",
+      "type": "radio",
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "inline": true,
+      "required": true,
+      "description": "無気力、嗜眠、不安などの精神症状"
+    },
+    {
+      "dispname": "関節痛",
+      "name": "関節痛",
+      "type": "radio",
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "inline": true,
+      "required": true,
+      "description": "関節痛症状"
+    },
+    {
+      "dispname": "過去1年間の急性副腎皮質不全による入院歴",
+      "name": "入院歴",
+      "type": "radio",
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "inline": true,
+      "required": true,
+      "description": "急性副腎皮質不全症状に伴う入院歴"
+    },
+    {
+      "dispname": "項目4: ステロイド補充療法",
+      "type": "subsection"
+    },
+    {
+      "dispname": "ステロイドを定期的に補充していますか",
+      "name": "ステロイド補充",
+      "type": "radio",
+      "selector": [
+        "いいえ",
+        "はい"
+      ],
+      "inline": true,
+      "required": true,
+      "description": "グルココルチコイドやミネラルコルチコイドの定期補充"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "コルチゾール値_数値",
+      "type": "eval",
+      "noreport": true,
+      "formula": "((コルチゾール値))"
+    },
+    {
+      "name": "項目1判定",
+      "type": "eval",
+      "formula": "{{コルチゾール測定}} == 'はい' && ((コルチゾール値_数値)) >= 0 && ((コルチゾール値_数値)) < 4 ? '該当' : '非該当'",
+      "dispname": "項目1判定結果 血中コルチゾールの低下（4μg/dL未満）"
+    },
+    {
+      "name": "ACTH後コルチゾール値_数値",
+      "type": "eval",
+      "noreport": true,
+      "formula": "((ACTH後コルチゾール値))"
+    },
+    {
+      "name": "項目2判定",
+      "type": "eval",
+      "formula": "{{ACTH試験実施}} == 'はい' && ((ACTH後コルチゾール値_数値)) >= 0 && ((ACTH後コルチゾール値_数値)) < 15 ? '該当' : '非該当'",
+      "dispname": "項目2判定結果 負荷試験への反応性低下（15μg/dL未満）"
+    },
+    {
+      "name": "色素沈着_数値",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[色素沈着.index]]"
+    },
+    {
+      "name": "体重減少_数値",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[体重減少.index]]"
+    },
+    {
+      "name": "低血圧_数値",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[低血圧.index]]"
+    },
+    {
+      "name": "脱毛_数値",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[脱毛.index]]"
+    },
+    {
+      "name": "低血糖症状_数値",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[低血糖症状.index]]"
+    },
+    {
+      "name": "消化器症状_数値",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[消化器症状.index]]"
+    },
+    {
+      "name": "精神症状_数値",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[精神症状.index]]"
+    },
+    {
+      "name": "関節痛_数値",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[関節痛.index]]"
+    },
+    {
+      "name": "入院歴_数値",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[入院歴.index]]"
+    },
+    {
+      "name": "項目3判定",
+      "type": "eval",
+      "formula": "( [[色素沈着_数値]] + [[体重減少_数値]] + [[低血圧_数値]] + [[脱毛_数値]] + [[低血糖症状_数値]] + [[消化器症状_数値]] + [[精神症状_数値]] + [[関節痛_数値]] + [[入院歴_数値]] ) >= 1 ? '該当' : '非該当'",
+      "dispname": "項目3判定結果 何らかの副腎不全症状の有無"
+    },
+    {
+      "name": "項目4判定",
+      "type": "eval",
+      "formula": "{{ステロイド補充}} == 'はい' ? '該当' : '非該当'",
+      "dispname": "項目4判定結果 ステロイドを定期的に補充している"
+    },
+    {
+      "name": "項目1該当_数値",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{項目1判定}} == '該当' ? 1 : 0"
+    },
+    {
+      "name": "項目2該当_数値",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{項目2判定}} == '該当' ? 1 : 0"
+    },
+    {
+      "name": "項目3該当_数値",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{項目3判定}} == '該当' ? 1 : 0"
+    },
+    {
+      "name": "項目4該当_数値",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{項目4判定}} == '該当' ? 1 : 0"
+    },
+    {
+      "name": "該当項目数",
+      "type": "eval",
+      "formula": "[[項目1該当_数値]] + [[項目2該当_数値]] + [[項目3該当_数値]] + [[項目4該当_数値]]",
+      "dispname": "重症度基準に該当する項目数"
+    },
+    {
+      "name": "重症度判定",
+      "type": "eval",
+      "formula": "[[該当項目数]] >= 1 ? '重症度基準該当' : '重症度基準非該当'",
+      "dispname": "最終重症度判定（1項目以上で基準該当）"
+    },
+    {
+      "name": "医療費助成判定",
+      "type": "eval",
+      "formula": "{{重症度判定}} == '重症度基準該当' ? '医療費助成対象' : '重症度基準では非対象（高額医療継続の場合は個別判定）'",
+      "dispname": "医療費助成対象判定"
+    },
+    {
+      "name": "Warning: 重症度基準該当",
+      "formula": "[[該当項目数]] >= 1",
+      "type": "warning"
+    }
+  ]
+}

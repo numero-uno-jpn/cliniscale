@@ -1,0 +1,242 @@
+{
+    "_comment": [
+        "エドモントン症状評価システム改訂版日本語版 (ESAS-r-J)",
+        "Edmonton Symptom Assessment System Revised Japanese version",
+        "がん患者の9つの主要症状を0-10のNRSで評価する尺度",
+        "原典文献: Yokomichi N, et al. Validation of the Japanese Version of Edmonton Symptom Assessment System-Revised. J Pain Symptom Manage. 2015;50(5):718-23. PMID: 26025278",
+        "カットオフ値: Yamaguchi T, et al. J Pain Symptom Manage. 2016;51(2):292-7. PMID: 26482223",
+        "日本緩和医療学会推奨、緩和ケア診療ガイドライン掲載",
+        "国立がん研究センター東病院 精神腫瘍学開発分野 承認版",
+        "URL: https://www.ncc.go.jp/jp/epoc/division/psycho_oncology/kashiwa/ESAS-r-J_20150929.pdf"
+    ],
+    "title": "ESAS-r-J エドモントン症状評価システム改訂版",
+    "description": [
+        "今の時点での症状について、それぞれの強度を0から10の数字で評価してください",
+        "0は症状がないこと、10は症状が最もひどいことを示します"
+    ],
+    "submit_button_title": "症状評価を送信",
+    "responsible_person": [
+        "緩和ケア担当医"
+    ],
+    "dept_in_charge": "緩和ケア科",
+    "contact": "緩和ケア外来",
+    "translate": "major",
+    "fields": [
+        {
+            "dispname": "痛み",
+            "name": "痛み",
+            "type": "scale",
+            "required": true,
+            "min": 0,
+            "max": 10,
+            "step": 1,
+            "value": -1,
+            "starttag": "なし",
+            "endtag": "最もひどい",
+            "disprange": true
+        },
+        {
+            "dispname": "だるさ (元気が出ないこと)",
+            "name": "だるさ",
+            "type": "scale",
+            "required": true,
+            "min": 0,
+            "max": 10,
+            "step": 1,
+            "value": -1,
+            "starttag": "なし",
+            "endtag": "最もひどい",
+            "disprange": true
+        },
+        {
+            "dispname": "眠気 (うとうとする感じ)",
+            "name": "眠気",
+            "type": "scale",
+            "required": true,
+            "min": 0,
+            "max": 10,
+            "step": 1,
+            "value": -1,
+            "starttag": "なし",
+            "endtag": "最もひどい",
+            "disprange": true
+        },
+        {
+            "dispname": "吐き気",
+            "name": "吐き気",
+            "type": "scale",
+            "required": true,
+            "min": 0,
+            "max": 10,
+            "step": 1,
+            "value": -1,
+            "starttag": "なし",
+            "endtag": "最もひどい",
+            "disprange": true
+        },
+        {
+            "dispname": "食欲不振",
+            "name": "食欲不振",
+            "type": "scale",
+            "required": true,
+            "min": 0,
+            "max": 10,
+            "step": 1,
+            "value": -1,
+            "starttag": "なし",
+            "endtag": "最もひどい",
+            "disprange": true
+        },
+        {
+            "dispname": "息苦しさ",
+            "name": "息苦しさ",
+            "type": "scale",
+            "required": true,
+            "min": 0,
+            "max": 10,
+            "step": 1,
+            "value": -1,
+            "starttag": "なし",
+            "endtag": "最もひどい",
+            "disprange": true
+        },
+        {
+            "dispname": "気分の落ち込み (悲しい気持ち)",
+            "name": "気分の落ち込み",
+            "type": "scale",
+            "required": true,
+            "min": 0,
+            "max": 10,
+            "step": 1,
+            "value": -1,
+            "starttag": "なし",
+            "endtag": "最もひどい",
+            "disprange": true
+        },
+        {
+            "dispname": "不安 (心配で落ち着かない)",
+            "name": "不安",
+            "type": "scale",
+            "required": true,
+            "min": 0,
+            "max": 10,
+            "step": 1,
+            "value": -1,
+            "starttag": "なし",
+            "endtag": "最もひどい",
+            "disprange": true
+        },
+        {
+            "dispname": "他の症状 (例: 便秘など)",
+            "name": "他の症状",
+            "type": "scale",
+            "required": false,
+            "min": 0,
+            "max": 10,
+            "step": 1,
+            "value": -1,
+            "starttag": "なし",
+            "endtag": "最もひどい",
+            "disprange": true,
+            "description": "その他気になる症状があれば評価してください"
+        },
+        {
+            "dispname": "全体的な調子 (全体的にどう感じるか)",
+            "name": "全体的な調子",
+            "type": "scale",
+            "required": true,
+            "min": 0,
+            "max": 10,
+            "step": 1,
+            "value": -1,
+            "starttag": "最もよい",
+            "endtag": "最も悪い",
+            "disprange": true
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "身体症状合計",
+            "type": "eval",
+            "formula": "[[痛み]] + [[だるさ]] + [[吐き気]] + [[食欲不振]] + [[息苦しさ]]",
+            "dispname": "身体症状合計: 痛み、だるさ、吐き気、食欲不振、息苦しさの合計 (0-50点)"
+        },
+        {
+            "name": "精神症状合計",
+            "type": "eval",
+            "formula": "[[気分の落ち込み]] + [[不安]]",
+            "dispname": "精神症状合計: 気分の落ち込み、不安の合計 (0-20点)"
+        },
+        {
+            "name": "ESAS総合計",
+            "type": "eval",
+            "formula": "[[痛み]] + [[だるさ]] + [[眠気]] + [[吐き気]] + [[食欲不振]] + [[息苦しさ]] + [[気分の落ち込み]] + [[不安]] + [[全体的な調子]]",
+            "dispname": "ESAS総合計: 9項目の症状合計 (0-90点)"
+        },
+        {
+            "name": "痛み重症度",
+            "type": "eval",
+            "formula": "[[痛み]] == 0 ? 'なし' : ( [[痛み]] <= 3 ? '軽度' : ( [[痛み]] <= 6 ? '中等度' : '重度' ) )",
+            "dispname": "痛み重症度分類"
+        },
+        {
+            "name": "だるさ重症度",
+            "type": "eval",
+            "formula": "[[だるさ]] == 0 ? 'なし' : ( [[だるさ]] <= 3 ? '軽度' : ( [[だるさ]] <= 6 ? '中等度' : '重度' ) )",
+            "dispname": "だるさ重症度分類"
+        },
+        {
+            "name": "眠気重症度",
+            "type": "eval",
+            "formula": "[[眠気]] == 0 ? 'なし' : ( [[眠気]] <= 3 ? '軽度' : ( [[眠気]] <= 6 ? '中等度' : '重度' ) )",
+            "dispname": "眠気重症度分類"
+        },
+        {
+            "name": "吐き気重症度",
+            "type": "eval",
+            "formula": "[[吐き気]] == 0 ? 'なし' : ( [[吐き気]] <= 3 ? '軽度' : ( [[吐き気]] <= 6 ? '中等度' : '重度' ) )",
+            "dispname": "吐き気重症度分類"
+        },
+        {
+            "name": "食欲不振重症度",
+            "type": "eval",
+            "formula": "[[食欲不振]] == 0 ? 'なし' : ( [[食欲不振]] <= 3 ? '軽度' : ( [[食欲不振]] <= 6 ? '中等度' : '重度' ) )",
+            "dispname": "食欲不振重症度分類"
+        },
+        {
+            "name": "息苦しさ重症度",
+            "type": "eval",
+            "formula": "[[息苦しさ]] == 0 ? 'なし' : ( [[息苦しさ]] <= 3 ? '軽度' : ( [[息苦しさ]] <= 6 ? '中等度' : '重度' ) )",
+            "dispname": "息苦しさ重症度分類"
+        },
+        {
+            "name": "気分の落ち込み重症度",
+            "type": "eval",
+            "formula": "[[気分の落ち込み]] == 0 ? 'なし' : ( [[気分の落ち込み]] <= 2 ? '軽度' : ( [[気分の落ち込み]] <= 6 ? '中等度' : '重度' ) )",
+            "dispname": "気分の落ち込み重症度分類"
+        },
+        {
+            "name": "不安重症度",
+            "type": "eval",
+            "formula": "[[不安]] == 0 ? 'なし' : ( [[不安]] <= 3 ? '軽度' : ( [[不安]] <= 6 ? '中等度' : '重度' ) )",
+            "dispname": "不安重症度分類"
+        },
+        {
+            "name": "全体的な調子重症度",
+            "type": "eval",
+            "formula": "[[全体的な調子]] <= 3 ? '良好' : ( [[全体的な調子]] <= 6 ? '不良' : '著しく不良' )",
+            "dispname": "全体的な調子評価"
+        },
+        {
+            "name": "Warning: 症状重度",
+            "formula": "[[痛み]] >= 7 || [[だるさ]] >= 7 || [[眠気]] >= 7 || [[吐き気]] >= 7 || [[食欲不振]] >= 7 || [[息苦しさ]] >= 7 || [[気分の落ち込み]] >= 3 || [[不安]] >= 7 || [[全体的な調子]] >= 7",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 症状最重度",
+            "formula": "[[ESAS総合計]] >= 45 || [[痛み]] >= 9 || [[だるさ]] >= 9 || [[眠気]] >= 9 || [[吐き気]] >= 9 || [[食欲不振]] >= 9 || [[息苦しさ]] >= 9 || [[気分の落ち込み]] >= 7 || [[不安]] >= 9 || [[全体的な調子]] >= 9",
+            "type": "emergency"
+        }
+    ]
+}

@@ -1,0 +1,176 @@
+{
+    "_comment": [
+        "Adherence to Refills and Medications Scale (ARMS)",
+        "原典: Kripalani S, Risser J, Gatti ME, Jacobson TA. (2009). Development and evaluation of the Adherence to Refills and Medications Scale (ARMS) among low-literacy patients with chronic disease. Value in Health, 12(1), 118-123. PMID: 19911444",
+        "公式サイト: https://ott.emory.edu/industry/featured/arms.html",
+        "PhenX Toolkit: https://www.phenxtoolkit.org/protocols/view/331001",
+        "12項目の薬物遵守評価尺度。服薬遵守(8項目)と処方補充遵守(4項目)の2つのサブスケールから構成。",
+        "各項目は4段階評価(ない・時々ある・ほとんどある・常にある)。項目12のみ逆転採点。スコアが低いほど良好な遵守を示す。",
+        "注意: この日本語訳は参考例であり、公式翻訳版ではありません。実際の使用には適切な翻訳検証と文化的適応が必要です。"
+    ],
+    "title": "ARMS 薬物遵守評価尺度",
+    "description": [
+        "これから、お薬の飲み忘れなどについてお尋ねします。",
+        "正解や不正解はありませんので、実際の状況を率直にお答えください。",
+        "各質問について、「ない」「時々ある」「ほとんどある」「常にある」の中から最も当てはまるものをお選びください。"
+    ],
+    "contact": "担当医師・薬剤師",
+    "dept_in_charge": "薬剤部",
+    "fields": [
+        {
+            "dispname": "服薬遵守について",
+            "type": "subsection",
+            "description": "以下の質問は、処方されたお薬を指示通りに飲むことに関するものです。"
+        },
+        {
+            "dispname": "薬を飲み忘れる頻度",
+            "name": "Q1",
+            "type": "radio",
+            "required": true,
+            "selector": "ない|時々ある|ほとんどある|常にある",
+            "selectoridx": "1|2|3|4",
+            "description": "どのくらいの頻度で薬を飲み忘れますか"
+        },
+        {
+            "dispname": "薬を飲まないと決める頻度",
+            "name": "Q2",
+            "type": "radio",
+            "required": true,
+            "selector": "ない|時々ある|ほとんどある|常にある",
+            "selectoridx": "1|2|3|4",
+            "description": "どのくらいの頻度で薬を飲まないと決めることがありますか"
+        },
+        {
+            "dispname": "処方箋の受け取りを忘れる頻度",
+            "name": "Q3",
+            "type": "radio",
+            "required": true,
+            "selector": "ない|時々ある|ほとんどある|常にある",
+            "selectoridx": "1|2|3|4",
+            "description": "どのくらいの頻度で処方箋を薬局に持参するのを忘れますか"
+        },
+        {
+            "dispname": "薬がなくなる頻度",
+            "name": "Q4",
+            "type": "radio",
+            "required": true,
+            "selector": "ない|時々ある|ほとんどある|常にある",
+            "selectoridx": "1|2|3|4",
+            "description": "どのくらいの頻度で薬がなくなってしまいますか"
+        },
+        {
+            "dispname": "受診前に薬を飲まない頻度",
+            "name": "Q5",
+            "type": "radio",
+            "required": true,
+            "selector": "ない|時々ある|ほとんどある|常にある",
+            "selectoridx": "1|2|3|4",
+            "description": "医師の診察前に薬の服用を止めることがどのくらいありますか"
+        },
+        {
+            "dispname": "気分が良い時に薬を飲まない頻度",
+            "name": "Q6",
+            "type": "radio",
+            "required": true,
+            "selector": "ない|時々ある|ほとんどある|常にある",
+            "selectoridx": "1|2|3|4",
+            "description": "気分が良い時に薬を飲まないことがどのくらいありますか"
+        },
+        {
+            "dispname": "気分が悪い時に薬を飲まない頻度",
+            "name": "Q7",
+            "type": "radio",
+            "required": true,
+            "selector": "ない|時々ある|ほとんどある|常にある",
+            "selectoridx": "1|2|3|4",
+            "description": "気分が悪い時に薬を飲まないことがどのくらいありますか"
+        },
+        {
+            "dispname": "うっかりして薬を飲まない頻度",
+            "name": "Q8",
+            "type": "radio",
+            "required": true,
+            "selector": "ない|時々ある|ほとんどある|常にある",
+            "selectoridx": "1|2|3|4",
+            "description": "うっかりして薬を飲まないことがどのくらいありますか"
+        },
+        {
+            "dispname": "処方補充遵守について",
+            "type": "subsection",
+            "description": "以下の質問は、薬の量を調整することや、処方を補充することに関するものです。"
+        },
+        {
+            "dispname": "薬の用量を自己調整する頻度",
+            "name": "Q9",
+            "type": "radio",
+            "required": true,
+            "selector": "ない|時々ある|ほとんどある|常にある",
+            "selectoridx": "1|2|3|4",
+            "description": "必要に応じて薬の用量を変更する(多く飲んだり少なく飲んだり)ことがどのくらいありますか"
+        },
+        {
+            "dispname": "1日複数回服薬時の飲み忘れ頻度",
+            "name": "Q10",
+            "type": "radio",
+            "required": true,
+            "selector": "ない|時々ある|ほとんどある|常にある",
+            "selectoridx": "1|2|3|4",
+            "description": "1日に複数回飲むべき薬を飲み忘れることがどのくらいありますか"
+        },
+        {
+            "dispname": "費用を理由に処方補充を延期する頻度",
+            "name": "Q11",
+            "type": "radio",
+            "required": true,
+            "selector": "ない|時々ある|ほとんどある|常にある",
+            "selectoridx": "1|2|3|4",
+            "description": "費用がかかりすぎるという理由で薬の補充を延期することがどのくらいありますか"
+        },
+        {
+            "dispname": "事前の処方補充計画頻度",
+            "name": "Q12",
+            "type": "radio",
+            "required": true,
+            "selector": "ない|時々ある|ほとんどある|常にある",
+            "selectoridx": "4|3|2|1",
+            "description": "薬がなくなる前に計画的に補充することがどのくらいありますか"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "dispname": "服薬遵守サブスケール得点(項目1-8)",
+            "name": "服薬遵守スコア",
+            "type": "eval",
+            "formula": "[[Q1.index]] + [[Q2.index]] + [[Q3.index]] + [[Q4.index]] + [[Q5.index]] + [[Q6.index]] + [[Q7.index]] + [[Q8.index]]"
+        },
+        {
+            "dispname": "処方補充遵守サブスケール得点(項目9-12)",
+            "name": "処方補充遵守スコア",
+            "type": "eval",
+            "formula": "[[Q9.index]] + [[Q10.index]] + [[Q11.index]] + [[Q12.index]]"
+        },
+        {
+            "dispname": "ARMS総合得点(範囲: 12-48点)",
+            "name": "ARMS総合得点",
+            "type": "eval",
+            "formula": "[[服薬遵守スコア]] + [[処方補充遵守スコア]]"
+        },
+        {
+            "dispname": "薬物遵守の評価(PhenX Toolkit推奨基準)",
+            "name": "遵守評価",
+            "type": "eval",
+            "formula": "[[ARMS総合得点]] <= 12 ? '良好な遵守' : '遵守問題あり'"
+        },
+        {
+            "name": "Warning: 遵守問題あり ARMSスコア > 12",
+            "formula": "[[ARMS総合得点]] > 12",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 重度の遵守問題 ARMSスコア > 24",
+            "formula": "[[ARMS総合得点]] > 24",
+            "type": "emergency"
+        }
+    ]
+}

@@ -1,0 +1,186 @@
+{
+    "_comment": [
+        "Forrester分類 (Forrester Hemodynamic Subsets)",
+        "原典: New England Journal of Medicine, 1976 (2部構成)",
+        "第1部: Vol.295, No.24, pp.1356-1362 (PMID: 790191)",
+        "第2部: Vol.295, No.25, pp.1404-1413 (PMID: 790194)",
+        "開発者: James S. Forrester III",
+        "急性心筋梗塞患者の血行動態分類",
+        "Swan-Ganzカテーテルによる測定値を使用"
+    ],
+    "title": "Forrester分類 急性心筋梗塞血行動態評価",
+    "description": [
+        "急性心筋梗塞患者の血行動態を評価し、治療方針決定のための分類を行います",
+        "Swan-Ganzカテーテルで測定された心係数と肺動脈楔入圧を入力してください"
+    ],
+    "responsible_person": [
+        "集中治療医"
+    ],
+    "dept_in_charge": "集中治療室/冠動脈疾患集中治療室",
+    "submit_button_title": "分類結果を送信",
+    "fields": [
+        {
+            "dispname": "患者基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "測定日時",
+            "name": "測定日時",
+            "type": "date",
+            "format": "YYYY/MM/DD",
+            "required": true
+        },
+        {
+            "dispname": "急性心筋梗塞発症からの経過時間",
+            "name": "発症経過",
+            "type": "text",
+            "postfix": "時間",
+            "inputmode": "numeric",
+            "testrange": [
+                0,
+                168
+            ],
+            "required": true,
+            "description": "発症からの経過時間を半角数字で入力してください（例: 6）"
+        },
+        {
+            "dispname": "血行動態測定値",
+            "type": "subsection"
+        },
+        {
+            "dispname": "心係数",
+            "name": "心係数",
+            "type": "text",
+            "postfix": "L/min/m²",
+            "inputmode": "decimal",
+            "testrange": [
+                0.5,
+                6
+            ],
+            "required": true,
+            "description": "Swan-Ganzカテーテルで測定された心係数を入力してください（例: 2.5）"
+        },
+        {
+            "dispname": "肺動脈楔入圧",
+            "name": "PAWP",
+            "type": "text",
+            "postfix": "mmHg",
+            "inputmode": "numeric",
+            "testrange": [
+                0,
+                50
+            ],
+            "required": true,
+            "description": "Swan-Ganzカテーテルで測定された肺動脈楔入圧を入力してください（例: 20）"
+        },
+        {
+            "dispname": "心拍数",
+            "name": "心拍数",
+            "type": "text",
+            "postfix": "回/分",
+            "inputmode": "numeric",
+            "testrange": [
+                30,
+                200
+            ],
+            "description": "心拍数を半角数字で入力してください（例: 80）"
+        },
+        {
+            "dispname": "収縮期血圧",
+            "name": "収縮期血圧",
+            "type": "text",
+            "postfix": "mmHg",
+            "inputmode": "numeric",
+            "testrange": [
+                50,
+                250
+            ],
+            "description": "収縮期血圧を半角数字で入力してください（例: 120）"
+        },
+        {
+            "dispname": "拡張期血圧",
+            "name": "拡張期血圧",
+            "type": "text",
+            "postfix": "mmHg",
+            "inputmode": "numeric",
+            "testrange": [
+                30,
+                150
+            ],
+            "description": "拡張期血圧を半角数字で入力してください（例: 80）"
+        },
+        {
+            "dispname": "臨床所見",
+            "type": "subsection"
+        },
+        {
+            "dispname": "肺うっ血所見",
+            "name": "肺うっ血",
+            "type": "checkbox",
+            "selector": [
+                "湿性ラ音",
+                "呼吸困難",
+                "起坐呼吸",
+                "胸部X線での肺水腫"
+            ]
+        },
+        {
+            "dispname": "末梢循環不全所見",
+            "name": "末梢循環不全",
+            "type": "checkbox",
+            "selector": [
+                "冷汗",
+                "四肢冷感",
+                "チアノーゼ",
+                "尿量減少",
+                "意識レベル低下"
+            ]
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "CI判定",
+            "type": "eval",
+            "formula": "((心係数)) >= 2.2 ? '正常' : '低下'",
+            "dispname": "心係数判定: 2.2L/min/m²以上で正常、未満で低下"
+        },
+        {
+            "name": "PAWP判定",
+            "type": "eval",
+            "formula": "((PAWP)) >= 18 ? '上昇' : '正常'",
+            "dispname": "肺動脈楔入圧判定: 18mmHg以上で上昇、未満で正常"
+        },
+        {
+            "name": "Forrester分類",
+            "type": "eval",
+            "formula": "{{CI判定}} == '正常' && {{PAWP判定}} == '正常' ? 'Subset I' : ( {{CI判定}} == '正常' && {{PAWP判定}} != '正常' ? 'Subset II' : ( {{CI判定}} != '正常' && {{PAWP判定}} == '正常' ? 'Subset III' : 'Subset IV' ) )"
+        },
+        {
+            "name": "病態解釈",
+            "type": "eval",
+            "formula": "{{Forrester分類}} == 'Subset I' ? 'ポンプ失調なし' : ( {{Forrester分類}} == 'Subset II' ? '肺うっ血あり、末梢循環不全なし' : ( {{Forrester分類}} == 'Subset III' ? '肺うっ血なし、末梢循環不全あり' : '肺うっ血あり、末梢循環不全あり' ) )"
+        },
+        {
+            "name": "推定死亡率",
+            "type": "eval",
+            "formula": "{{Forrester分類}} == 'Subset I' ? '3%' : ( {{Forrester分類}} == 'Subset II' ? '9%' : ( {{Forrester分類}} == 'Subset III' ? '23%' : '51%' ) )"
+        },
+        {
+            "name": "治療方針",
+            "type": "eval",
+            "formula": "{{Forrester分類}} == 'Subset I' ? '一般治療、鎮痛・鎮静' : ( {{Forrester分類}} == 'Subset II' ? '利尿薬、血管拡張薬' : ( {{Forrester分類}} == 'Subset III' ? '輸液、必要時カテコラミン' : '利尿薬、血管拡張薬、カテコラミン併用、必要時補助循環' ) )",
+            "dispname": "推奨される治療方針"
+        },
+        {
+            "name": "Warning: Forrester分類 Subset III・IV",
+            "type": "warning",
+            "formula": "{{Forrester分類}} == 'Subset III' || {{Forrester分類}} == 'Subset IV'"
+        },
+        {
+            "name": "Emergency: Forrester分類 Subset IV",
+            "type": "emergency",
+            "formula": "{{Forrester分類}} == 'Subset IV'"
+        }
+    ]
+}

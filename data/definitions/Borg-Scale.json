@@ -1,0 +1,195 @@
+{
+    "_comment": [
+        "修正ボルグスケール（Borg CR-10スケール）は1982年にGunnar Borgによって開発された主観的運動強度評価スケール",
+        "原著: Borg, G. (1982). Psychophysical bases of perceived exertion. Medicine & Science in Sports & Exercise, 14(5), 377-381.",
+        "日本では1986年頃からアメリカスポーツ医学会の推奨により臨床応用が普及",
+        "呼吸困難感や運動強度の主観的評価に使用される",
+        "リハビリテーション、運動療法、呼吸器疾患、循環器疾患の分野で広く使用"
+    ],
+    "title": "Borg CR-10 スケール",
+    "description": [
+        "修正ボルグスケール（Borg CR-10スケール）は運動時の主観的な息切れや疲労感を評価するスケールです。",
+        "0から10までの11段階で運動強度を評価し、適切な運動負荷の設定に役立ちます。"
+    ],
+    "contact": "担当医師",
+    "dept_in_charge": "リハビリテーション科",
+    "translate": "major",
+    "fields": [
+        {
+            "dispname": "患者基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "年齢",
+            "name": "年齢",
+            "type": "text",
+            "required": true,
+            "postfix": "歳",
+            "inputmode": "numeric"
+        },
+        {
+            "dispname": "性別",
+            "name": "性別",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "男性|女性"
+        },
+        {
+            "dispname": "基礎疾患",
+            "name": "基礎疾患",
+            "type": "checkbox",
+            "selector": [
+                "COPD",
+                "心不全",
+                "間質性肺炎",
+                "心筋梗塞",
+                "パーキンソン病",
+                "その他",
+                "なし"
+            ]
+        },
+        {
+            "dispname": "評価場面",
+            "type": "subsection"
+        },
+        {
+            "dispname": "運動内容",
+            "name": "運動内容",
+            "type": "radio",
+            "required": true,
+            "selector": "6分間歩行|エルゴメーター|階段昇降|日常動作|その他"
+        },
+        {
+            "dispname": "その他の運動内容",
+            "name": "その他運動内容",
+            "type": "text",
+            "parentname": "運動内容",
+            "parentsel": "その他"
+        },
+        {
+            "dispname": "評価タイミング",
+            "name": "評価タイミング",
+            "type": "radio",
+            "required": true,
+            "selector": "運動前|運動中|運動後|安静時"
+        },
+        {
+            "dispname": "修正ボルグスケール評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "現在の息切れの程度はどの程度ですか",
+            "name": "息切れ評価",
+            "type": "radio",
+            "required": true,
+            "description": "あなたが今感じている息切れや疲労感に最も近いものを選んでください",
+            "selector": [
+                "0: 感じない",
+                "0.5: 非常に弱い",
+                "1: かなり弱い",
+                "2: 弱い",
+                "3: 中等度",
+                "4: やや強い",
+                "5: 強い",
+                "6: ",
+                "7: とても強い",
+                "8: ",
+                "9: ",
+                "10: 非常に強い（最大）"
+            ],
+            "selectoridx": "0|0.5|1|2|3|4|5|6|7|8|9|10"
+        },
+        {
+            "dispname": "バイタルサイン",
+            "type": "subsection"
+        },
+        {
+            "dispname": "心拍数",
+            "name": "心拍数",
+            "type": "text",
+            "postfix": "回/分",
+            "inputmode": "numeric",
+            "testrange": [
+                30,
+                200
+            ]
+        },
+        {
+            "dispname": "血圧（収縮期）",
+            "name": "収縮期血圧",
+            "type": "text",
+            "postfix": "mmHg",
+            "inputmode": "numeric",
+            "testrange": [
+                70,
+                250
+            ]
+        },
+        {
+            "dispname": "血圧（拡張期）",
+            "name": "拡張期血圧",
+            "type": "text",
+            "postfix": "mmHg",
+            "inputmode": "numeric",
+            "testrange": [
+                40,
+                150
+            ]
+        },
+        {
+            "dispname": "酸素飽和度",
+            "name": "酸素飽和度",
+            "type": "text",
+            "postfix": "%",
+            "inputmode": "numeric",
+            "testrange": [
+                70,
+                100
+            ]
+        },
+        {
+            "dispname": "呼吸数",
+            "name": "呼吸数",
+            "type": "text",
+            "postfix": "回/分",
+            "inputmode": "numeric",
+            "testrange": [
+                8,
+                40
+            ]
+        },
+        {
+            "dispname": "評価結果",
+            "type": "subsection"
+        },
+        {
+            "name": "BorgScore",
+            "type": "eval",
+            "formula": "[[息切れ評価.index]] == 0 ? 0 : ( [[息切れ評価.index]] == 1 ? 0.5 : [[息切れ評価.index]] - 1 )",
+            "dispname": "修正ボルグスケールスコア"
+        },
+        {
+            "name": "運動強度評価",
+            "type": "eval",
+            "formula": "[[BorgScore]] <= 2 ? '軽度' : ( [[BorgScore]] <= 4 ? '中等度（継続可能）' : ( [[BorgScore]] <= 6 ? '強度（注意）' : '非常に強度（中止検討）' ) )",
+            "dispname": "運動強度レベル"
+        },
+        {
+            "name": "注意レベル判定",
+            "type": "eval",
+            "formula": "[[BorgScore]] >= 7 ? '運動中止を検討してください' : ( [[BorgScore]] >= 5 ? '注意深く監視が必要です' : '適切な運動強度です' )",
+            "dispname": "臨床的判断"
+        },
+        {
+            "name": "Warning: 運動強度警告 BorgScore >= 5",
+            "type": "warning",
+            "formula": "[[BorgScore]] >= 5"
+        },
+        {
+            "name": "Emergency: 運動中止警告 BorgScore >= 7",
+            "type": "emergency",
+            "formula": "[[BorgScore]] >= 7"
+        }
+    ]
+}

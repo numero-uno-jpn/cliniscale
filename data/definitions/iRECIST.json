@@ -1,0 +1,225 @@
+{
+  "_comment": [
+    "Immune Response Evaluation Criteria in Solid Tumors (iRECIST)",
+    "免疫療法の反応評価",
+    "原著論文: Seymour L, et al. Lancet Oncol. 2017;18(3):e143-e152.",
+    "PubMed: https://pubmed.ncbi.nlm.nih.gov/28271869/",
+    "公式サイト: https://recist.eortc.org/irecist/",
+    "EORTC所有"
+  ],
+  "title": "iRECIST (免疫療法反応評価基準)",
+  "description": [
+    "免疫療法における腫瘍反応を評価する基準です",
+    "擬似進行を考慮したRECISTの修正版です"
+  ],
+  "responsible_person": [
+    "腫瘍内科医",
+    "放射線科医"
+  ],
+  "dept_in_charge": "腫瘍内科",
+  "fields": [
+    {
+      "dispname": "基本情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "評価日",
+      "name": "評価日",
+      "type": "date",
+      "format": "YYYY/MM/DD"
+    },
+    {
+      "dispname": "腫瘍の種類",
+      "name": "腫瘍種類",
+      "type": "text",
+      "required": true,
+      "description": "固形腫瘍の種類を記載"
+    },
+    {
+      "dispname": "免疫療法の種類",
+      "name": "免疫療法",
+      "type": "text",
+      "required": true,
+      "description": "使用している免疫チェックポイント阻害薬など"
+    },
+    {
+      "dispname": "ベースライン測定",
+      "type": "subsection"
+    },
+    {
+      "dispname": "ベースライン標的病変径の合計",
+      "name": "ベースライン標的",
+      "type": "text",
+      "required": true,
+      "postfix": "mm",
+      "inputmode": "decimal",
+      "testrange": [
+        10,
+        200
+      ],
+      "description": "治療開始前の標的病変の最長径の合計"
+    },
+    {
+      "dispname": "現在の評価",
+      "type": "subsection"
+    },
+    {
+      "dispname": "現在の標的病変径の合計",
+      "name": "現在標的",
+      "type": "text",
+      "required": true,
+      "postfix": "mm",
+      "inputmode": "decimal",
+      "testrange": [
+        0,
+        300
+      ],
+      "description": "今回評価時の標的病変の最長径の合計"
+    },
+    {
+      "dispname": "新規病変",
+      "name": "新規病変",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "新規病変の詳細",
+      "name": "新規病変詳細",
+      "type": "textarea",
+      "rows": 3,
+      "parentname": "新規病変",
+      "parentsel": "あり",
+      "description": "新規病変の部位、サイズなどを記載"
+    },
+    {
+      "dispname": "非標的病変の評価",
+      "name": "非標的病変",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "完全消失",
+        "非CR/非PD (持続または改善)",
+        "明らかな進行"
+      ],
+      "selectoridx": "0|1|2"
+    },
+    {
+      "dispname": "前回iUPDの判定",
+      "type": "subsection"
+    },
+    {
+      "dispname": "前回評価でiUPDと判定されたか",
+      "name": "前回iUPD",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": [
+        "いいえ",
+        "はい"
+      ],
+      "selectoridx": "0|1",
+      "description": "immune Unconfirmed Progressive Disease"
+    },
+    {
+      "dispname": "追加情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "画像所見の詳細",
+      "name": "画像所見",
+      "type": "textarea",
+      "rows": 5,
+      "description": "CT、MRI、PETなどの詳細所見を記載"
+    },
+    {
+      "dispname": "擬似進行の可能性",
+      "name": "擬似進行",
+      "type": "radio",
+      "inline": true,
+      "selector": [
+        "低い",
+        "疑わしい",
+        "高い"
+      ],
+      "selectoridx": "1|2|3",
+      "description": "臨床的に擬似進行が疑われるか"
+    },
+    {
+      "dispname": "次回評価予定日",
+      "name": "次回評価",
+      "type": "date",
+      "format": "YYYY/MM/DD",
+      "description": "iUPDの場合は4-8週後に確認スキャン"
+    },
+    {
+      "dispname": "その他の所見・コメント",
+      "name": "その他所見",
+      "type": "textarea",
+      "rows": 5
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "標的病変変化率",
+      "type": "eval",
+      "formula": "( ((現在標的)) - ((ベースライン標的)) ) / ((ベースライン標的)) * 100"
+    },
+    {
+      "name": "標的病変基準",
+      "type": "eval",
+      "formula": "((標的病変変化率)) <= -30 ? 'iCR候補/iPR候補' : ( ((標的病変変化率)) >= 20 ? 'iUPD候補' : 'iSD候補' )"
+    },
+    {
+      "name": "新規病変あり",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[新規病変.index]]"
+    },
+    {
+      "name": "非標的病変index",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[非標的病変.index]]"
+    },
+    {
+      "name": "前回iUPDindex",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[前回iUPD.index]]"
+    },
+    {
+      "name": "iRECIST反応",
+      "type": "eval",
+      "formula": "[[新規病変あり]] == 1 ? 'iUPD (新規病変あり、確認スキャン必要)' : ( [[標的病変変化率]] <= -100 && [[非標的病変index]] == 0 ? 'iCR (完全奏効)' : ( [[標的病変変化率]] <= -30 && [[非標的病変index]] <= 1 ? 'iPR (部分奏効)' : ( [[標的病変変化率]] >= 20 || [[非標的病変index]] == 2 ? ( [[前回iUPDindex]] == 1 ? 'iCPD (確認された進行)' : 'iUPD (未確認の進行、4-8週後に確認スキャン必要)' ) : 'iSD (安定)' ) ) )"
+    },
+    {
+      "name": "iUPDまたはiCPD",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{iRECIST反応}}.includes('iUPD') || {{iRECIST反応}}.includes('iCPD')"
+    },
+    {
+      "name": "iCPD判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{iRECIST反応}}.includes('iCPD')"
+    },
+    {
+      "name": "Warning: 進行病変",
+      "formula": "{{iUPDまたはiCPD}} == 'true'",
+      "type": "warning"
+    },
+    {
+      "name": "Emergency: 確認された進行",
+      "formula": "{{iCPD判定}} == 'true'",
+      "type": "emergency"
+    }
+  ]
+}

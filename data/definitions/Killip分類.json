@@ -1,0 +1,174 @@
+{
+    "_comment": [
+        "Killip分類による急性心筋梗塞重症度評価問診票",
+        "原典文献: Killip T, Kimball JT. Treatment of myocardial infarction in a coronary care unit. A two year experience with 250 patients. Am J Cardiol. 1967;20(4):457-64.",
+        "PMID: 6059183",
+        "参考: MSD Manual Professional Edition, ESC Guidelines"
+    ],
+    "title": "Killip分類による急性心筋梗塞重症度評価",
+    "description": [
+        "急性心筋梗塞における心不全重症度を評価するKillip分類の問診票です。",
+        "身体所見に基づいた予後予測と治療方針決定に使用されます。",
+        "原典（Killip & Kimball, 1967）に基づく正確な分類基準を実装しています。"
+    ],
+    "responsible_person": [
+        "循環器内科医"
+    ],
+    "dept_in_charge": "循環器内科",
+    "contact": "循環器内科外来",
+    "submit_button_title": "評価完了",
+    "fields": [
+        {
+            "dispname": "急性心筋梗塞診断確定",
+            "name": "診断確定",
+            "type": "radio",
+            "required": true,
+            "selector": "確定|疑い|否定",
+            "description": "急性心筋梗塞の診断状況を選択してください"
+        },
+        {
+            "dispname": "身体所見評価",
+            "type": "subsection",
+            "description": "以下の身体所見に基づいてKillip分類を判定します（原典基準に従い複数項目を総合評価）"
+        },
+        {
+            "dispname": "肺野の湿性ラ音",
+            "name": "湿性ラ音",
+            "type": "radio",
+            "required": true,
+            "selector": "聴取されない|肺野下1/3以下|肺野の1/2まで|肺野の1/2以上",
+            "selectoridx": "0|1|2|3",
+            "description": "聴診で確認される湿性ラ音の範囲を選択してください（Killip分類の主要基準：下半分以内→Class II、半分以上→Class III）"
+        },
+        {
+            "dispname": "S3心音（奔馬律）",
+            "name": "S3心音",
+            "type": "radio",
+            "required": true,
+            "selector": "聴取されない|聴取される",
+            "selectoridx": "0|1",
+            "description": "心音聴診でS3心音（第3心音）の有無を評価してください"
+        },
+        {
+            "dispname": "頸静脈圧",
+            "name": "頸静脈圧",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|軽度上昇|明らかな上昇",
+            "selectoridx": "0|1|2",
+            "description": "頸静脈圧の状態を評価してください"
+        },
+        {
+            "dispname": "収縮期血圧",
+            "name": "収縮期血圧",
+            "type": "text",
+            "postfix": "mmHg",
+            "inputmode": "numeric",
+            "testrange": [
+                40,
+                240
+            ],
+            "required": true,
+            "description": "収縮期血圧を測定してください（心原性ショックの判定に重要）（例: 120）"
+        },
+        {
+            "dispname": "急性肺水腫の徴候",
+            "name": "肺水腫",
+            "type": "radio",
+            "required": true,
+            "selector": "なし|軽度|明らかな肺水腫",
+            "selectoridx": "0|1|2",
+            "description": "胸部X線所見、臨床症状（呼吸困難、起座呼吸）、広範囲のラ音等を総合的に評価してください"
+        },
+        {
+            "dispname": "末梢循環不全の徴候",
+            "type": "subsection",
+            "description": "心原性ショック（Killip IV）の判定に必要な所見"
+        },
+        {
+            "dispname": "チアノーゼ",
+            "name": "チアノーゼ",
+            "type": "radio",
+            "required": true,
+            "selector": "なし|あり",
+            "selectoridx": "0|1",
+            "description": "中心性・末梢性チアノーゼの有無"
+        },
+        {
+            "dispname": "皮膚所見",
+            "name": "皮膚所見",
+            "type": "radio",
+            "required": true,
+            "selector": "正常|冷たく湿った皮膚|冷たく乾いた皮膚",
+            "selectoridx": "0|1|2",
+            "description": "末梢循環不全の指標となる皮膚の状態"
+        },
+        {
+            "dispname": "尿量",
+            "name": "尿量",
+            "type": "radio",
+            "required": true,
+            "selector": "正常（≥0.5mL/kg/h）|軽度減少|乏尿（<0.5mL/kg/h）",
+            "selectoridx": "0|1|2",
+            "description": "腎灌流低下の指標（心原性ショックの判定）"
+        },
+        {
+            "dispname": "意識状態",
+            "name": "意識状態",
+            "type": "radio",
+            "required": true,
+            "selector": "清明|軽度混濁|明らかな意識障害",
+            "selectoridx": "0|1|2",
+            "description": "脳灌流低下の指標"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "低血圧判定",
+            "type": "eval",
+            "formula": "((収縮期血圧)) < 90 ? 1 : 0",
+            "noreport": true
+        },
+        {
+            "name": "末梢循環不全スコア",
+            "type": "eval",
+            "formula": "[[チアノーゼ.index]] + [[皮膚所見.index]] + [[尿量.index]] + [[意識状態.index]]",
+            "noreport": true
+        },
+        {
+            "name": "Killipスコア",
+            "type": "eval",
+            "formula": "[[肺水腫.index]] == 2 || [[湿性ラ音.index]] == 3 ? 3 : ( [[低血圧判定]] == 1 && [[末梢循環不全スコア]] >= 2 ? 4 : ( ( [[湿性ラ音.index]] >= 1 && [[湿性ラ音.index]] <= 2 || [[S3心音.index]] == 1 || [[頸静脈圧.index]] >= 1 ) ? 2 : 1 ) )",
+            "noreport": true
+        },
+        {
+            "name": "Killip分類",
+            "type": "eval",
+            "formula": "[[Killipスコア]] == 1 ? 'I度 - 心不全徴候なし' : ( [[Killipスコア]] == 2 ? 'II度 - 軽度～中等度心不全' : ( [[Killipスコア]] == 3 ? 'III度 - 急性肺水腫' : ( [[Killipスコア]] == 4 ? 'IV度 - 心原性ショック' : '分類不能' ) ) )",
+            "dispname": "Killip分類判定結果"
+        },
+        {
+            "name": "予測死亡率",
+            "type": "eval",
+            "formula": "[[Killipスコア]] == 1 ? '約6%' : ( [[Killipスコア]] == 2 ? '約17%' : ( [[Killipスコア]] == 3 ? '約38%' : ( [[Killipスコア]] == 4 ? '約81%' : '未算出' ) ) )",
+            "dispname": "院内死亡率予測（原典データ）"
+        },
+        {
+            "name": "臨床的意義",
+            "type": "eval",
+            "formula": "[[Killipスコア]] == 1 ? '心不全徴候なし。標準的治療で良好な予後が期待される。' : ( [[Killipスコア]] == 2 ? '軽度～中等度心不全。心不全治療の併用を検討。ACE阻害薬・利尿薬等の適応。' : ( [[Killipスコア]] == 3 ? '急性肺水腫。緊急の前負荷軽減・利尿・血管拡張薬が必要。' : ( [[Killipスコア]] == 4 ? '心原性ショック。緊急血行再建術・機械的循環補助・強心薬投与が必要。' : '評価不能' ) ) )",
+            "dispname": "治療方針の指針"
+        },
+        {
+            "name": "Warning: 高リスク Killip III度以上",
+            "formula": "[[Killipスコア]] >= 3",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 心原性ショック Killip IV度",
+            "formula": "[[Killipスコア]] == 4",
+            "type": "emergency"
+        }
+    ]
+}

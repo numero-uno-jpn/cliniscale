@@ -1,0 +1,247 @@
+{
+  "_comment": [
+    "子宮内膜症不妊指数 (Endometriosis Fertility Index, EFI)",
+    "開発者: G. David Adamson & David J. Pasta (2010)",
+    "原著論文: Adamson GD, Pasta DJ. Endometriosis fertility index: the new, validated endometriosis staging system. Fertil Steril. 2010;94(5):1609-15.",
+    "目的: 子宮内膜症手術後の非ART妊娠率を予測するための指標",
+    "構成: Historical score (既往歴スコア) + Surgical score (術中所見スコア) = 総合スコア (0-10点)",
+    "評価対象: 腹腔鏡手術により子宮内膜症が確認され、術後に非ART妊娠を希望する患者"
+  ],
+  "title": "EFI 子宮内膜症不妊指数",
+  "description": [
+    "子宮内膜症患者の腹腔鏡手術後の自然妊娠率を予測するための評価指標です。",
+    "Historical score（既往歴）とSurgical score（術中所見）を合計して総合スコアを算出します。"
+  ],
+  "contact": "担当医師",
+  "dept_in_charge": "産婦人科",
+  "responsible_person": [
+    "主治医",
+    "術者"
+  ],
+  "staffs": [
+    "医師",
+    "看護師"
+  ],
+  "fields": [
+    {
+      "dispname": "Historical Score (既往歴スコア)",
+      "type": "subsection",
+      "description": "年齢、不妊期間、妊娠歴の3項目で最大5点を評価します"
+    },
+    {
+      "dispname": "手術時年齢",
+      "name": "年齢",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "39歳以上|36-38歳|35歳以下",
+      "selectoridx": "0|1|2",
+      "description": "手術を受けた時の年齢を選択してください"
+    },
+    {
+      "dispname": "不妊期間",
+      "name": "不妊期間",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "3年以上|2年|1年以下",
+      "selectoridx": "0|1|2",
+      "description": "妊娠を希望してから手術までの期間を選択してください"
+    },
+    {
+      "dispname": "妊娠歴",
+      "name": "妊娠歴",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1",
+      "description": "過去の妊娠歴の有無を選択してください"
+    },
+    {
+      "dispname": "Surgical Score (術中所見スコア)",
+      "type": "subsection",
+      "description": "<p>Least Function Score、r-AFS内膜症病変スコア、r-AFS合計スコアで最大5点を評価します</p><br><strong>左側機能スコア</strong><br>- 左側の卵管、卵管采、卵巣の機能を評価します"
+    },
+    {
+      "dispname": "左卵管",
+      "name": "左卵管",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "正常",
+        "軽度機能障害",
+        "中等度機能障害",
+        "重度機能障害",
+        "欠損・閉塞"
+      ],
+      "selectoridx": "4|3|2|1|0",
+      "description": "術後の左卵管の機能状態を評価してください"
+    },
+    {
+      "dispname": "左卵管采",
+      "name": "左卵管采",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "正常",
+        "軽度機能障害",
+        "中等度機能障害",
+        "重度機能障害",
+        "欠損・閉塞"
+      ],
+      "selectoridx": "4|3|2|1|0",
+      "description": "術後の左卵管采の機能状態を評価してください"
+    },
+    {
+      "dispname": "左卵巣",
+      "name": "左卵巣",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "正常",
+        "軽度機能障害",
+        "中等度機能障害",
+        "重度機能障害",
+        "欠損"
+      ],
+      "selectoridx": "4|3|2|1|0",
+      "description": "術後の左卵巣の機能状態を評価してください"
+    },
+    {
+      "type": "subsection",
+      "description": "<strong>右側機能スコア</strong><br>- 右側の卵管、卵管采、卵巣の機能を評価します"
+    },
+    {
+      "dispname": "右卵管",
+      "name": "右卵管",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "正常",
+        "軽度機能障害",
+        "中等度機能障害",
+        "重度機能障害",
+        "欠損・閉塞"
+      ],
+      "selectoridx": "4|3|2|1|0",
+      "description": "術後の右卵管の機能状態を評価してください"
+    },
+    {
+      "dispname": "右卵管采",
+      "name": "右卵管采",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "正常",
+        "軽度機能障害",
+        "中等度機能障害",
+        "重度機能障害",
+        "欠損・閉塞"
+      ],
+      "selectoridx": "4|3|2|1|0",
+      "description": "術後の右卵管采の機能状態を評価してください"
+    },
+    {
+      "dispname": "右卵巣",
+      "name": "右卵巣",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "正常",
+        "軽度機能障害",
+        "中等度機能障害",
+        "重度機能障害",
+        "欠損"
+      ],
+      "selectoridx": "4|3|2|1|0",
+      "description": "術後の右卵巣の機能状態を評価してください"
+    },
+    {
+      "dispname": "r-AFS分類評価",
+      "type": "subsection",
+      "description": "r-AFS分類による内膜症病変と合計スコアを評価します"
+    },
+    {
+      "dispname": "r-AFS内膜症病変スコア",
+      "name": "rAFS内膜症",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "16点以上",
+        "1-15点"
+      ],
+      "selectoridx": "0|1",
+      "description": "r-AFS分類による内膜症病変のスコアを選択してください"
+    },
+    {
+      "dispname": "r-AFS合計スコア",
+      "name": "rAFS合計",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "71点以上",
+        "70点以下"
+      ],
+      "selectoridx": "0|1",
+      "description": "r-AFS分類による合計スコアを選択してください"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "Historical_Score",
+      "type": "eval",
+      "formula": "[[年齢.index]] + [[不妊期間.index]] + [[妊娠歴.index]]",
+      "dispname": "既往歴スコア: 年齢 + 不妊期間 + 妊娠歴 (最大5点)"
+    },
+    {
+      "name": "左側機能スコア",
+      "type": "eval",
+      "formula": "Math.min( [[左卵管.index]], [[左卵管采.index]], [[左卵巣.index]] )",
+      "dispname": "左側の卵管、卵管采、卵巣のうち最も低いスコア"
+    },
+    {
+      "name": "右側機能スコア",
+      "type": "eval",
+      "formula": "Math.min( [[右卵管.index]], [[右卵管采.index]], [[右卵巣.index]] )",
+      "dispname": "右側の卵管、卵管采、卵巣のうち最も低いスコア"
+    },
+    {
+      "name": "Least_Function_Score",
+      "type": "eval",
+      "formula": "[[左側機能スコア]] + [[右側機能スコア]]",
+      "dispname": "Least Function Score: 左右の機能スコアの合計 (0-8点)"
+    },
+    {
+      "name": "Surgical_Score",
+      "type": "eval",
+      "formula": "( [[Least_Function_Score]] >= 7 ? 3 : ( [[Least_Function_Score]] >= 4 ? 2 : 1 ) ) + [[rAFS内膜症.index]] + [[rAFS合計.index]]",
+      "dispname": "術中所見スコア: LF評価点(1-3) + r-AFS内膜症(0-1) + r-AFS合計(0-1) (最大5点)"
+    },
+    {
+      "name": "EFI総合スコア",
+      "type": "eval",
+      "formula": "[[Historical_Score]] + [[Surgical_Score]]",
+      "dispname": "EFI総合スコア (0-10点)"
+    },
+    {
+      "name": "妊娠率予測_1年",
+      "type": "eval",
+      "formula": "[[EFI総合スコア]] >= 9 ? '67%' : ( [[EFI総合スコア]] >= 7 ? '39%' : ( [[EFI総合スコア]] == 6 ? '30%' : ( [[EFI総合スコア]] == 5 ? '27%' : ( [[EFI総合スコア]] == 4 ? '15%' : '10%' ) ) ) )",
+      "dispname": "術後1年以内の予測妊娠率"
+    },
+    {
+      "name": "妊娠率予測_3年",
+      "type": "eval",
+      "formula": "[[EFI総合スコア]] >= 9 ? '75%' : ( [[EFI総合スコア]] >= 7 ? '66%' : ( [[EFI総合スコア]] == 6 ? '54%' : ( [[EFI総合スコア]] == 5 ? '42%' : ( [[EFI総合スコア]] == 4 ? '28%' : '10%' ) ) ) )",
+      "dispname": "術後3年以内の予測妊娠率"
+    },
+    {
+      "name": "治療推奨",
+      "type": "eval",
+      "formula": "[[EFI総合スコア]] >= 5 ? '経過観察または非ART治療を検討可能' : 'ART（体外受精）を早期に検討推奨'",
+      "dispname": "治療方針の参考"
+    }
+  ]
+}

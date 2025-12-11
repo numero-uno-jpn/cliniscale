@@ -1,0 +1,119 @@
+{
+    "_comment": [
+        "IIEF-5 (International Index of Erectile Function-5) 日本語版問診票",
+        "原典: Rosen RC, et al. Development and evaluation of an abridged, 5-item version of the International Index of Erectile Function (IIEF-5) as a diagnostic tool for erectile dysfunction. Int J Impot Res. 1999;11(6):319-326.",
+        "国際勃起機能スコア5項目版による勃起機能障害の評価・診断用問診票"
+    ],
+    "title": "IIEF-5 国際勃起機能スコア 5項目版",
+    "description": [
+        "勃起機能の評価を行うための国際的に標準化された5項目の質問票です。",
+        "最近6か月間の性機能について回答してください。"
+    ],
+    "contact": "担当医師",
+    "responsible_person": [
+        "泌尿器科担当医"
+    ],
+    "submit_button_title": "回答内容を送信",
+    "fields": [
+        {
+            "dispname": "質問1",
+            "name": "Q1",
+            "type": "radio",
+            "required": true,
+            "description": "勃起を維持する自信の程度はどれくらいありましたか",
+            "selector": [
+                "非常に低い",
+                "低い",
+                "普通",
+                "高い",
+                "非常に高い"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "質問2",
+            "name": "Q2",
+            "type": "radio",
+            "required": true,
+            "description": "性的刺激による勃起の場合、何回挿入可能な勃起の硬さになりましたか",
+            "selector": [
+                "全くなし、またはほとんどなし",
+                "たまに",
+                "時々（半分くらい）",
+                "おおかた毎回",
+                "毎回またはほぼ毎回"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "質問3",
+            "name": "Q3",
+            "type": "radio",
+            "required": true,
+            "description": "性交中、挿入後何回勃起を維持することができましたか",
+            "selector": [
+                "全くなし、またはほとんどなし",
+                "たまに",
+                "時々（半分くらい）",
+                "おおかた毎回",
+                "毎回またはほぼ毎回"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "質問4",
+            "name": "Q4",
+            "type": "radio",
+            "required": true,
+            "description": "性交中、性交を終了するまで勃起を維持するのはどれくらい困難でしたか",
+            "selector": [
+                "ほとんど困難",
+                "かなり困難",
+                "困難",
+                "やや困難",
+                "困難でない"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "質問5",
+            "name": "Q5",
+            "type": "radio",
+            "required": true,
+            "description": "性交を試みたとき、何回満足に性交ができましたか",
+            "selector": [
+                "全くなし、またはほとんどなし",
+                "たまに",
+                "時々（半分くらい）",
+                "おおかた毎回",
+                "毎回またはほぼ毎回"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "合計スコア",
+            "type": "eval",
+            "dispname": "IIEF-5合計得点（5-25点）",
+            "formula": "[[Q1.index]] + [[Q2.index]] + [[Q3.index]] + [[Q4.index]] + [[Q5.index]]"
+        },
+        {
+            "name": "重症度分類",
+            "type": "eval",
+            "dispname": "EDの重症度分類",
+            "formula": "[[合計スコア]] >= 22 ? 'EDなし' : ( [[合計スコア]] >= 17 ? '軽症' : ( [[合計スコア]] >= 12 ? '軽症から中等症' : ( [[合計スコア]] >= 8 ? '中等症' : '重症' ) ) )"
+        },
+        {
+            "name": "Warning: 軽度以上ED判定",
+            "type": "warning",
+            "formula": "[[合計スコア]] <= 21"
+        },
+        {
+            "name": "Emergency: 重症ED判定",
+            "type": "emergency",
+            "formula": "[[合計スコア]] <= 7"
+        }
+    ]
+}

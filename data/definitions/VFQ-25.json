@@ -1,0 +1,465 @@
+{
+    "_comment": [
+        "NEI VFQ-25（National Eye Institute Visual Function Questionnaire-25）- 原典準拠版",
+        "原著：Mangione CM, Lee PP, Gutierrez PR, et al. Development of the 25-item National Eye Institute Visual Function Questionnaire. Arch Ophthalmol. 2001;119(7):1050-1058. [PMID: 11448327]",
+        "スコアリングマニュアル：https://www.rand.org/health-care/surveys_tools/vfq.html",
+        "PhenX Protocol：https://www.phenxtoolkit.org/protocols/view/111201",
+        "",
+        "【重要】原典の正確なスコア変換式を使用：",
+        "- 6段階評価：(6-index)*20 → 100, 80, 60, 40, 20, 0",
+        "- 5段階評価：(5-index)*25 → 100, 75, 50, 25, 0",
+        "- 4段階評価：100*(4-index)/3 → 100, 66.67, 33.33, 0",
+        "",
+        "【システム制約への対応】",
+        "本システムでは、eval式内に未入力項目があると結果がN/Aになる制約があります。",
+        "この制約に対応するため、各項目に中間変数（_index）を作成し、",
+        "未入力時は0として評価されるよう実装しています。",
+        "この処理により、原典の「欠損値を除いて平均」と同等の結果を実現しています。"
+    ],
+    "title": "VFQ-25 視覚機能質問票",
+    "description": [
+        "<h3>視覚機能に関する質問票（VFQ-25）</h3>",
+        "この質問票は、あなたの視覚機能や視覚に関連した問題があなたの日常生活に与える影響について評価するものです。",
+        "普段眼鏡やコンタクトレンズをお使いの方は、それを装用した状態でお答えください。"
+    ],
+    "submit_button_title": "回答を送信",
+    "mail_notification": true,
+    "fields": [
+        {
+            "dispname": "第1部：全般的健康と視覚",
+            "type": "subsection"
+        },
+        {
+            "dispname": "あなたの全般的な健康状態",
+            "name": "全般健康",
+            "type": "radio",
+            "required": true,
+            "selector": "非常に良い|良い|普通|悪い|非常に悪い",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "現在の視力（眼鏡やコンタクトレンズを使用している場合はそれを装用した状態）",
+            "name": "現在視力",
+            "type": "radio",
+            "required": true,
+            "selector": "非常に良い|良い|普通|悪い|非常に悪い|完全に見えない",
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "どのくらい視力のことを心配していますか",
+            "name": "視力心配",
+            "type": "radio",
+            "required": true,
+            "selector": "全く心配していない|少し心配している|時々心配している|よく心配している|いつも心配している",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "目やその周辺の痛みや不快感（やけるような感じ、かゆみ、痛みなど）",
+            "name": "目の痛み",
+            "type": "radio",
+            "required": true,
+            "selector": "全くない|軽度|中等度|重度|非常に重度",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "第2部：活動の困難さ",
+            "type": "subsection"
+        },
+        {
+            "dispname": "新聞の普通の文字を読むのに困難を感じますか",
+            "name": "Q5新聞",
+            "type": "radio",
+            "required": true,
+            "selector": "全く困難でない|少し困難|中等度の困難|非常に困難|視力のためにやめた|他の理由でやめた",
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "手元をよく見る必要のある作業や趣味（料理、裁縫、家の修理、手工具の使用など）",
+            "name": "Q6手元作業",
+            "type": "radio",
+            "required": true,
+            "selector": "全く困難でない|少し困難|中等度の困難|非常に困難|視力のためにやめた|他の理由でやめた",
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "混雑した棚から物を見つけること",
+            "name": "Q7棚探し",
+            "type": "radio",
+            "required": true,
+            "selector": "全く困難でない|少し困難|中等度の困難|非常に困難|視力のためにやめた|他の理由でやめた",
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "道路標識や店の名前を読むこと",
+            "name": "Q8道路標識",
+            "type": "radio",
+            "required": true,
+            "selector": "全く困難でない|少し困難|中等度の困難|非常に困難|視力のためにやめた|他の理由でやめた",
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "薄暗いところや夜間に階段や段差を降りること",
+            "name": "Q9階段",
+            "type": "radio",
+            "required": true,
+            "selector": "全く困難でない|少し困難|中等度の困難|非常に困難|視力のためにやめた|他の理由でやめた",
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "歩いているときに横にある物に気づくこと",
+            "name": "Q10周辺視野",
+            "type": "radio",
+            "required": true,
+            "selector": "全く困難でない|少し困難|中等度の困難|非常に困難|視力のためにやめた|他の理由でやめた",
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "あなたが話したことに対する人の反応を見ること",
+            "name": "Q11反応観察",
+            "type": "radio",
+            "required": true,
+            "selector": "全く困難でない|少し困難|中等度の困難|非常に困難|視力のためにやめた|他の理由でやめた",
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "自分の服を選んで組み合わせること",
+            "name": "Q12服選び",
+            "type": "radio",
+            "required": true,
+            "selector": "全く困難でない|少し困難|中等度の困難|非常に困難|視力のためにやめた|他の理由でやめた",
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "人の家やパーティー、レストランなどで人と会うこと",
+            "name": "Q13社交",
+            "type": "radio",
+            "required": true,
+            "selector": "全く困難でない|少し困難|中等度の困難|非常に困難|視力のためにやめた|他の理由でやめた",
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "映画、演劇、スポーツ観戦に出かけること",
+            "name": "Q14娯楽",
+            "type": "radio",
+            "required": true,
+            "selector": "全く困難でない|少し困難|中等度の困難|非常に困難|視力のためにやめた|他の理由でやめた",
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "運転について",
+            "type": "subsection"
+        },
+        {
+            "dispname": "現在車の運転をしていますか",
+            "name": "運転状況",
+            "type": "radio",
+            "required": true,
+            "selector": "はい|いいえ",
+            "selectoridx": "1|2"
+        },
+        {
+            "dispname": "なぜ運転をしていませんか",
+            "name": "運転中止理由",
+            "type": "radio",
+            "parentname": "運転状況",
+            "parentsel": "いいえ",
+            "selector": "運転したことがない|運転をやめた",
+            "selectoridx": "1|2"
+        },
+        {
+            "dispname": "運転をやめた主な理由",
+            "name": "運転中止詳細",
+            "type": "radio",
+            "parentname": "運転中止理由",
+            "parentsel": "運転をやめた",
+            "selector": "主に視力のため|主に他の理由|視力と他の理由両方",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "慣れた場所での日中の運転",
+            "name": "Q15c日中運転",
+            "type": "radio",
+            "parentname": "運転状況",
+            "parentsel": "はい",
+            "selector": "全く困難でない|少し困難|中等度の困難|非常に困難",
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "夜間の運転",
+            "name": "Q16夜間運転",
+            "type": "radio",
+            "parentname": "運転状況",
+            "parentsel": "はい",
+            "selector": "全く困難でない|少し困難|中等度の困難|非常に困難|視力のためにやめた|他の理由でやめた",
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "困難な状況での運転（悪天候、ラッシュアワー、高速道路、市街地など）",
+            "name": "Q16a困難運転",
+            "type": "radio",
+            "parentname": "運転状況",
+            "parentsel": "はい",
+            "selector": "全く困難でない|少し困難|中等度の困難|非常に困難|視力のためにやめた|他の理由でやめた",
+            "selectoridx": "1|2|3|4|5|6"
+        },
+        {
+            "dispname": "第3部：視覚問題への反応",
+            "type": "subsection"
+        },
+        {
+            "dispname": "視力のせいで、やりたいことができないことがありますか",
+            "name": "Q17達成感",
+            "type": "radio",
+            "required": true,
+            "selector": "いつも|よく|時々|あまりない|全くない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "視力のせいで、仕事や他の活動をする時間が制限されますか",
+            "name": "Q18時間制限",
+            "type": "radio",
+            "required": true,
+            "selector": "いつも|よく|時々|あまりない|全くない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "目の痛みや不快感（やけるような感じ、かゆみ、痛みなど）のせいで、やりたいことができないことがありますか",
+            "name": "Q19痛み制限",
+            "type": "radio",
+            "required": true,
+            "selector": "いつも|よく|時々|あまりない|全くない",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "視力のせいで家にいることが多い",
+            "name": "Q20在宅",
+            "type": "radio",
+            "required": true,
+            "selector": "確実にそうだ|だいたいそうだ|わからない|だいたい違う|確実に違う",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "視力のせいでよくイライラする",
+            "name": "Q21イライラ",
+            "type": "radio",
+            "required": true,
+            "selector": "確実にそうだ|だいたいそうだ|わからない|だいたい違う|確実に違う",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "視力のせいで、自分のできることをコントロールできない",
+            "name": "Q22コントロール",
+            "type": "radio",
+            "required": true,
+            "selector": "確実にそうだ|だいたいそうだ|わからない|だいたい違う|確実に違う",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "視力のせいで、他の人に言われることに頼りすぎている",
+            "name": "Q23依存",
+            "type": "radio",
+            "required": true,
+            "selector": "確実にそうだ|だいたいそうだ|わからない|だいたい違う|確実に違う",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "視力のせいで、他の人からの手助けが多く必要だ",
+            "name": "Q24手助け",
+            "type": "radio",
+            "required": true,
+            "selector": "確実にそうだ|だいたいそうだ|わからない|だいたい違う|確実に違う",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "視力のせいで、自分や他の人に恥ずかしい思いをさせることを心配している",
+            "name": "Q25恥ずかしさ",
+            "type": "radio",
+            "required": true,
+            "selector": "確実にそうだ|だいたいそうだ|わからない|だいたい違う|確実に違う",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "Q15c日中運転_index",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q15c日中運転.index]]"
+        },
+        {
+            "name": "Q16夜間運転_index",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q16夜間運転.index]]"
+        },
+        {
+            "name": "Q16a困難運転_index",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q16a困難運転.index]]"
+        },
+        {
+            "name": "全般健康スコア",
+            "type": "eval",
+            "formula": "( 5 - [[全般健康.index]] ) * 25",
+            "dispname": "全般健康スコア（0-100点、総合スコアには含まれない）"
+        },
+        {
+            "name": "全般視力スコア",
+            "type": "eval",
+            "formula": "( 6 - [[現在視力.index]] ) * 20",
+            "dispname": "全般視力スコア（0-100点）"
+        },
+        {
+            "name": "目の痛みスコア",
+            "type": "eval",
+            "formula": "( 5 - [[目の痛み.index]] ) * 25",
+            "dispname": "目の痛みスコア（0-100点）"
+        },
+        {
+            "name": "近見項目数",
+            "type": "eval",
+            "noreport": true,
+            "formula": "( [[Q5新聞.index]] >= 1 && [[Q5新聞.index]] <= 4 ? 1 : 0 ) + ( [[Q6手元作業.index]] >= 1 && [[Q6手元作業.index]] <= 4 ? 1 : 0 ) + ( [[Q12服選び.index]] >= 1 && [[Q12服選び.index]] <= 4 ? 1 : 0 )"
+        },
+        {
+            "name": "近見視力活動スコア",
+            "type": "eval",
+            "formula": "( [[近見項目数]] > 0 ? ( ( [[Q5新聞.index]] >= 1 && [[Q5新聞.index]] <= 4 ? ( 6 - [[Q5新聞.index]] ) * 20 : 0 ) + ( [[Q6手元作業.index]] >= 1 && [[Q6手元作業.index]] <= 4 ? ( 6 - [[Q6手元作業.index]] ) * 20 : 0 ) + ( [[Q12服選び.index]] >= 1 && [[Q12服選び.index]] <= 4 ? ( 6 - [[Q12服選び.index]] ) * 20 : 0 ) ) / [[近見項目数]] : 0).toFixed(2)",
+            "dispname": "近見視力活動スコア（0-100点）"
+        },
+        {
+            "name": "遠見項目数",
+            "type": "eval",
+            "noreport": true,
+            "formula": "( [[Q7棚探し.index]] >= 1 && [[Q7棚探し.index]] <= 4 ? 1 : 0 ) + ( [[Q8道路標識.index]] >= 1 && [[Q8道路標識.index]] <= 4 ? 1 : 0 ) + ( [[Q14娯楽.index]] >= 1 && [[Q14娯楽.index]] <= 4 ? 1 : 0 )"
+        },
+        {
+            "name": "遠見視力活動スコア",
+            "type": "eval",
+            "formula": "( [[遠見項目数]] > 0 ? ( ( [[Q7棚探し.index]] >= 1 && [[Q7棚探し.index]] <= 4 ? ( 6 - [[Q7棚探し.index]] ) * 20 : 0 ) + ( [[Q8道路標識.index]] >= 1 && [[Q8道路標識.index]] <= 4 ? ( 6 - [[Q8道路標識.index]] ) * 20 : 0 ) + ( [[Q14娯楽.index]] >= 1 && [[Q14娯楽.index]] <= 4 ? ( 6 - [[Q14娯楽.index]] ) * 20 : 0 ) ) / [[遠見項目数]] : 0).toFixed(2)",
+            "dispname": "遠見視力活動スコア（0-100点）"
+        },
+        {
+            "name": "社会項目数",
+            "type": "eval",
+            "noreport": true,
+            "formula": "( [[Q11反応観察.index]] >= 1 && [[Q11反応観察.index]] <= 4 ? 1 : 0 ) + ( [[Q13社交.index]] >= 1 && [[Q13社交.index]] <= 4 ? 1 : 0 )"
+        },
+        {
+            "name": "社会機能スコア",
+            "type": "eval",
+            "formula": "( [[社会項目数]] > 0 ? ( ( [[Q11反応観察.index]] >= 1 && [[Q11反応観察.index]] <= 4 ? ( 6 - [[Q11反応観察.index]] ) * 20 : 0 ) + ( [[Q13社交.index]] >= 1 && [[Q13社交.index]] <= 4 ? ( 6 - [[Q13社交.index]] ) * 20 : 0 ) ) / [[社会項目数]] : 0).toFixed(2)",
+            "dispname": "社会機能スコア（0-100点）"
+        },
+        {
+            "name": "精神的健康スコア",
+            "type": "eval",
+            "formula": "( ( 5 - [[Q21イライラ.index]] ) * 25 + ( 5 - [[Q25恥ずかしさ.index]] ) * 25 ) / 2",
+            "dispname": "精神的健康スコア（0-100点）"
+        },
+        {
+            "name": "役割制限スコア",
+            "type": "eval",
+            "formula": "( ( 5 - [[Q17達成感.index]] ) * 25 + ( 5 - [[Q18時間制限.index]] ) * 25 ) / 2",
+            "dispname": "役割制限スコア（0-100点）"
+        },
+        {
+            "name": "依存スコア",
+            "type": "eval",
+            "formula": "( ( ( 5 - [[Q23依存.index]] ) * 25 + ( 5 - [[Q24手助け.index]] ) * 25 + ( 5 - [[Q22コントロール.index]] ) * 25 ) / 3).toFixed(2)",
+            "dispname": "依存スコア（0-100点）"
+        },
+        {
+            "name": "運転実施判定",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[運転状況.index]] == 1 ? 1 : 0"
+        },
+        {
+            "name": "運転項目有効数",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[運転実施判定]] == 1 ? ( ( [[Q15c日中運転_index]] >= 1 && [[Q15c日中運転_index]] <= 4 ? 1 : 0 ) + ( [[Q16夜間運転_index]] >= 1 && [[Q16夜間運転_index]] <= 4 ? 1 : 0 ) + ( [[Q16a困難運転_index]] >= 1 && [[Q16a困難運転_index]] <= 4 ? 1 : 0 ) ) : 0"
+        },
+        {
+            "name": "運転スコア",
+            "type": "eval",
+            "formula": "( [[運転項目有効数]] > 0 ? ( ( [[Q15c日中運転_index]] >= 1 && [[Q15c日中運転_index]] <= 4 ? 100 * ( 4 - [[Q15c日中運転_index]] ) / 3 : 0 ) + ( [[Q16夜間運転_index]] >= 1 && [[Q16夜間運転_index]] <= 4 ? ( 6 - [[Q16夜間運転_index]] ) * 20 : 0 ) + ( [[Q16a困難運転_index]] >= 1 && [[Q16a困難運転_index]] <= 4 ? ( 6 - [[Q16a困難運転_index]] ) * 20 : 0 ) ) / [[運転項目有効数]] : 0).toFixed(2)",
+            "dispname": "運転スコア（0-100点）"
+        },
+        {
+            "name": "周辺視野スコア",
+            "type": "eval",
+            "formula": "[[Q10周辺視野.index]] >= 1 && [[Q10周辺視野.index]] <= 4 ? ( 6 - [[Q10周辺視野.index]] ) * 20 : 0",
+            "dispname": "周辺視野スコア（0-100点）"
+        },
+        {
+            "name": "色覚スコア",
+            "type": "eval",
+            "formula": "[[Q9階段.index]] >= 1 && [[Q9階段.index]] <= 4 ? ( 6 - [[Q9階段.index]] ) * 20 : 0",
+            "dispname": "色覚・暗順応スコア（0-100点）"
+        },
+        {
+            "name": "近見有効",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[近見項目数]] > 0 ? 1 : 0"
+        },
+        {
+            "name": "遠見有効",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[遠見項目数]] > 0 ? 1 : 0"
+        },
+        {
+            "name": "社会有効",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[社会項目数]] > 0 ? 1 : 0"
+        },
+        {
+            "name": "周辺視野有効",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q10周辺視野.index]] >= 1 && [[Q10周辺視野.index]] <= 4 ? 1 : 0"
+        },
+        {
+            "name": "色覚有効",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[Q9階段.index]] >= 1 && [[Q9階段.index]] <= 4 ? 1 : 0"
+        },
+        {
+            "name": "運転有効",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[運転項目有効数]] > 0 ? 1 : 0"
+        },
+        {
+            "name": "有効サブスケール数",
+            "type": "eval",
+            "noreport": true,
+            "formula": "5 + [[近見有効]] + [[遠見有効]] + [[社会有効]] + [[周辺視野有効]] + [[色覚有効]] + [[運転有効]]"
+        },
+        {
+            "name": "総合スコア分子",
+            "type": "eval",
+            "noreport": true,
+            "formula": "( ((全般視力スコア)) + ((目の痛みスコア)) + ( [[近見有効]] > 0 ? ((近見視力活動スコア)) : 0 ) + ( [[遠見有効]] > 0 ? ((遠見視力活動スコア)) : 0 ) + ( [[社会有効]] > 0 ? ((社会機能スコア)) : 0 ) + ((精神的健康スコア)) + ((役割制限スコア)) + ((依存スコア)) + ( [[周辺視野有効]] > 0 ? ((周辺視野スコア)) : 0 ) + ( [[色覚有効]] > 0 ? ((色覚スコア)) : 0 ) + ( [[運転有効]] > 0 ? ((運転スコア)) : 0 ) ).toFixed(2)"
+        },
+        {
+            "name": "VFQ25総合スコア",
+            "type": "eval",
+            "formula": "( ((総合スコア分子)) / [[有効サブスケール数]] ).toFixed(2)",
+            "dispname": "VFQ-25総合スコア（0-100点）"
+        },
+        {
+            "name": "QOL評価",
+            "type": "eval",
+            "formula": "((VFQ25総合スコア)) >= 80 ? '良好' : ( ((VFQ25総合スコア)) >= 60 ? '中等度' : '低下' )",
+            "dispname": "視覚関連QOL評価"
+        }
+    ]
+}

@@ -1,0 +1,123 @@
+{
+    "_comment": [
+        "FRAIL Scale (Fatigue, Resistance, Ambulation, Illnesses, Loss of Weight)",
+        "5項目の簡易フレイル評価尺度",
+        "原典: Morley JE, Malmstrom TK, Miller DK. A simple frailty questionnaire (FRAIL) predicts outcomes in middle aged African Americans. J Nutr Health Aging. 2012;16(7):601-608.",
+        "公式文書: https://www.mass.gov/doc/frail-scale-screening-tool/download",
+        "スコア範囲: 0-5点（0=健常、1-2=プレフレイル、3-5=フレイル）"
+    ],
+    "title": "FRAIL Scale 簡易フレイル評価尺度",
+    "description": [
+        "フレイル（虚弱）を評価する5項目の簡易スクリーニング尺度です。",
+        "疲労、抵抗力、歩行能力、疾患数、体重減少の5つの項目で評価します。"
+    ],
+    "fields": [
+        {
+            "dispname": "F - 疲労感",
+            "name": "fatigue",
+            "type": "radio",
+            "required": true,
+            "description": "過去4週間でどのくらい疲れを感じましたか",
+            "selector": [
+                "いつも",
+                "ほとんどいつも",
+                "ときどき",
+                "少しだけ",
+                "まったくない"
+            ],
+            "selectoridx": "1|1|0|0|0"
+        },
+        {
+            "dispname": "R - 抵抗力（階段昇降）",
+            "name": "resistance",
+            "type": "radio",
+            "required": true,
+            "description": "補助具を使わず一人で10段の階段を休まずに上がることに困難がありますか",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "A - 歩行能力",
+            "name": "ambulation",
+            "type": "radio",
+            "required": true,
+            "description": "補助具を使わず一人で数百メートル（2-3ブロック）歩くことに困難がありますか",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "I - 疾患数",
+            "name": "illnesses",
+            "type": "checkbox",
+            "description": "医師に以下の病気があると言われたことがある項目をすべて選択してください",
+            "selector": [
+                "高血圧",
+                "糖尿病",
+                "がん（軽度の皮膚がんを除く）",
+                "慢性肺疾患",
+                "心筋梗塞",
+                "うっ血性心不全",
+                "狭心症",
+                "喘息",
+                "関節炎",
+                "脳卒中",
+                "腎臓病"
+            ]
+        },
+        {
+            "dispname": "L - 体重減少",
+            "name": "weight_loss",
+            "type": "radio",
+            "required": true,
+            "description": "過去1年間で体重が5%以上減少しましたか",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "illnesses_length",
+            "type": "eval",
+            "formula": "( [[illnesses.index]] || [] ).length",
+            "noreport": true
+        },
+        {
+            "name": "illnesses_score",
+            "type": "eval",
+            "formula": "[[illnesses_length]] >= 5 ? 1 : 0",
+            "noreport": true
+        },
+        {
+            "name": "total_score",
+            "type": "eval",
+            "formula": "[[fatigue.index]] + [[resistance.index]] + [[ambulation.index]] + [[illnesses_score]] + [[weight_loss.index]]",
+            "dispname": "FRAIL Scale 合計スコア（0-5点）"
+        },
+        {
+            "name": "frailty_status",
+            "type": "eval",
+            "formula": "[[total_score]] >= 3 ? 'フレイル' : ( [[total_score]] >= 1 ? 'プレフレイル' : '健常' )",
+            "dispname": "フレイル判定結果"
+        },
+        {
+            "name": "Warning: プレフレイル以上",
+            "formula": "[[total_score]] >= 1",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: フレイル",
+            "formula": "[[total_score]] >= 3",
+            "type": "emergency"
+        }
+    ]
+}

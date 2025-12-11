@@ -1,0 +1,203 @@
+{
+    "_comment": [
+        "Sport Competition Anxiety Test (SCAT) 問診票定義",
+        "開発者: Rainer Martens (1977)",
+        "目的: スポーツ競技場面での競技不安特性を評価",
+        "原典: Martens, R. (1977). Sport Competition Anxiety Test. Champaign, IL: Human Kinetics",
+        "参考文献: Martens, R., Vealey, R. S., & Burton, D. (1990). Competitive anxiety in sport. Champaign, IL: Human Kinetics",
+        "URL: https://www.topendsports.com/psychology/scat.htm",
+        "項目数: 15項目 (10項目は不安評価、5項目は偽装項目)",
+        "重要な注意: この日本語版は原典の英語版を翻訳したものです",
+        "日本での標準化研究は実施されておらず、翻訳の妥当性も専門家による検証が必要です",
+        "使用にあたっては、文化的適応性と翻訳の妥当性を十分考慮してください",
+        "臨床使用には慎重を期し、研究目的での使用を推奨します"
+    ],
+    "title": "SCAT スポーツ競技不安テスト",
+    "description": [
+        "このテストは、スポーツ競技において感じる不安の程度を評価します。",
+        "競技中や競技前に感じる気持ちについて、最も当てはまる選択肢をお選びください。",
+        "各質問に対して「ほとんどない」「時々ある」「よくある」から選んでください。",
+        "制限時間はありません。正直にお答えください。",
+        "<h4 style='color: #d63384;'>重要な注意事項</h4>",
+        "<strong style='color: #d63384;'>これは英語原典を翻訳した非公式版です。</strong>",
+        "• 日本での標準化研究は実施されていません",
+        "• 翻訳の妥当性は専門家による検証が必要です",
+        "• 日本人アスリートでの信頼性・妥当性は未検証です",
+        "• 判定基準は1970年代のアメリカのサンプルに基づいています",
+        "<strong>研究目的での使用を推奨し、臨床判断には慎重を期してください。</strong>"
+    ],
+    "contact": "担当者",
+    "dept_in_charge": "スポーツ心理学科",
+    "fields": [
+        {
+            "dispname": "1. 他者と競い合うことは社会的に楽しい",
+            "description": "Competing against others is socially enjoyable",
+            "name": "Q1",
+            "type": "radio",
+            "inline": true,
+            "selector": "ほとんどない|時々ある|よくある",
+            "selectoridx": "0|0|0",
+            "required": true
+        },
+        {
+            "dispname": "2. 競技前に、私は不安を感じる",
+            "description": "Before I compete I feel uneasy",
+            "name": "Q2",
+            "type": "radio",
+            "inline": true,
+            "selector": "ほとんどない|時々ある|よくある",
+            "selectoridx": "1|2|3",
+            "required": true
+        },
+        {
+            "dispname": "3. 競技前に、私はうまくできないのではないかと心配する",
+            "description": "Before I compete I worry about not performing well",
+            "name": "Q3",
+            "type": "radio",
+            "inline": true,
+            "selector": "ほとんどない|時々ある|よくある",
+            "selectoridx": "1|2|3",
+            "required": true
+        },
+        {
+            "dispname": "4. 私は競技において良いスポーツマンである",
+            "description": "I am a good sportsman when I compete",
+            "name": "Q4",
+            "type": "radio",
+            "inline": true,
+            "selector": "ほとんどない|時々ある|よくある",
+            "selectoridx": "0|0|0",
+            "required": true
+        },
+        {
+            "dispname": "5. 競技中、私はミスをすることを心配する",
+            "description": "When I compete, I worry about making mistakes",
+            "name": "Q5",
+            "type": "radio",
+            "inline": true,
+            "selector": "ほとんどない|時々ある|よくある",
+            "selectoridx": "1|2|3",
+            "required": true
+        },
+        {
+            "dispname": "6. 競技前、私は落ち着いている",
+            "description": "Before I compete I am calm (逆転項目)",
+            "name": "Q6",
+            "type": "radio",
+            "inline": true,
+            "selector": "ほとんどない|時々ある|よくある",
+            "selectoridx": "3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "7. 競技において目標を設定することは重要である",
+            "description": "Setting a goal is important when competing",
+            "name": "Q7",
+            "type": "radio",
+            "inline": true,
+            "selector": "ほとんどない|時々ある|よくある",
+            "selectoridx": "0|0|0",
+            "required": true
+        },
+        {
+            "dispname": "8. 競技前、私は胃がむかむかする感じがする",
+            "description": "Before I compete I get a queasy feeling in my stomach",
+            "name": "Q8",
+            "type": "radio",
+            "inline": true,
+            "selector": "ほとんどない|時々ある|よくある",
+            "selectoridx": "1|2|3",
+            "required": true
+        },
+        {
+            "dispname": "9. 競技直前、私は心臓の鼓動が普段より速いことに気づく",
+            "description": "Just before competing, I notice my heart beats faster than usual",
+            "name": "Q9",
+            "type": "radio",
+            "inline": true,
+            "selector": "ほとんどない|時々ある|よくある",
+            "selectoridx": "1|2|3",
+            "required": true
+        },
+        {
+            "dispname": "10. 私は身体的にきつい競技が好きである",
+            "description": "I like to compete in games that demands a lot of physical energy",
+            "name": "Q10",
+            "type": "radio",
+            "inline": true,
+            "selector": "ほとんどない|時々ある|よくある",
+            "selectoridx": "0|0|0",
+            "required": true
+        },
+        {
+            "dispname": "11. 競技前、私はリラックスしている",
+            "description": "Before I compete I feel relaxed (逆転項目)",
+            "name": "Q11",
+            "type": "radio",
+            "inline": true,
+            "selector": "ほとんどない|時々ある|よくある",
+            "selectoridx": "3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "12. 競技前、私は緊張している",
+            "description": "Before I compete I am nervous",
+            "name": "Q12",
+            "type": "radio",
+            "inline": true,
+            "selector": "ほとんどない|時々ある|よくある",
+            "selectoridx": "1|2|3",
+            "required": true
+        },
+        {
+            "dispname": "13. 団体競技は個人競技よりも刺激的である",
+            "description": "Team sports are more exciting than individual sports",
+            "name": "Q13",
+            "type": "radio",
+            "inline": true,
+            "selector": "ほとんどない|時々ある|よくある",
+            "selectoridx": "0|0|0",
+            "required": true
+        },
+        {
+            "dispname": "14. 私は競技を始めたいと思うと緊張する",
+            "description": "I get nervous wanting to start the game",
+            "name": "Q14",
+            "type": "radio",
+            "inline": true,
+            "selector": "ほとんどない|時々ある|よくある",
+            "selectoridx": "1|2|3",
+            "required": true
+        },
+        {
+            "dispname": "15. 競技前、私はたいていぴりぴりした気持ちになる",
+            "description": "Before I compete I usually get uptight",
+            "name": "Q15",
+            "type": "radio",
+            "inline": true,
+            "selector": "ほとんどない|時々ある|よくある",
+            "selectoridx": "1|2|3",
+            "required": true
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "合計スコア",
+            "type": "eval",
+            "formula": "[[Q2.index]] + [[Q3.index]] + [[Q5.index]] + [[Q6.index]] + [[Q8.index]] + [[Q9.index]] + [[Q11.index]] + [[Q12.index]] + [[Q14.index]] + [[Q15.index]]",
+            "dispname": "不安評価項目の合計点数 (範囲: 10-30点)"
+        },
+        {
+            "name": "不安レベル判定",
+            "type": "eval",
+            "formula": "[[合計スコア]] < 17 ? '低レベル' : ( [[合計スコア]] > 24 ? '高レベル' : '平均レベル' )",
+            "dispname": "不安レベル判定 (16点以下: 低レベルの競技不安、17-24点: 平均レベルの競技不安、25点以上: 高レベルの競技不安)"
+        },
+        {
+            "type": "warning",
+            "name": "Warning: 高レベル競技不安 SCATスコア > 24",
+            "formula": "[[合計スコア]] > 24"
+        }
+    ]
+}

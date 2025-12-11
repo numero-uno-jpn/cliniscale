@@ -1,0 +1,214 @@
+{
+    "title": "ASRS（成人ADHD自己評価尺度）",
+    "_comment": [
+        "Adult ADHD Self-Report Scale (ASRS-v1.1)",
+        "World Health Organization (WHO) 作成",
+        "DSM-5に基づく18項目の自己評価尺度",
+        "パートA: 6項目（スクリーニング用）",
+        "パートB: 12項目（症状詳細評価用）",
+        "原典: Kessler RC, et al. The World Health Organization Adult ADHD Self-Report Scale (ASRS): a short screening scale for use in the general population. Psychol Med. 2005;35(2):245-56.",
+        "日本語版: Takeda T, et al. Psychometric properties of the Japanese version of the Adult Attention-deficit hyperactivity disorder (ADHD) Self-Report Scale (ASRS-J). Res Dev Disabil. 2017;63:59-66.",
+        "参考URL: https://www.hcp.med.harvard.edu/ncs/ftpdir/adhd/18Q_Japanese_final.pdf"
+    ],
+    "description": [
+        "過去6ヶ月におけるあなたの感じ方や行動を最も表すものを選択してください。",
+        "このチェックリストは、ADHDの特性を確かめるものであり、診断結果を表すものではありません。"
+    ],
+    "translate": "major",
+    "disable_privacyitem_requirement": false,
+    "fields": [
+        {
+            "name": "section_partA",
+            "type": "subsection",
+            "dispname": "パートA（6項目）"
+        },
+        {
+            "name": "q1",
+            "type": "radio",
+            "dispname": "1. 物事を行うにあたって、難所は乗り越えたのに、詰めが甘くて仕上げるのが困難だったことが、どのくらいの頻度でありますか？",
+            "required": true,
+            "selector": "全くない|めったにない|時々|頻繁|非常に頻繁",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "q2",
+            "type": "radio",
+            "dispname": "2. 計画性を要する作業を行う際に、作業を順序だてるのが困難だったことが、どのくらいの頻度でありますか？",
+            "required": true,
+            "selector": "全くない|めったにない|時々|頻繁|非常に頻繁",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "q3",
+            "type": "radio",
+            "dispname": "3. 約束や、しなければならない用事を忘れたことが、どのくらいの頻度でありますか？",
+            "required": true,
+            "selector": "全くない|めったにない|時々|頻繁|非常に頻繁",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "q4",
+            "type": "radio",
+            "dispname": "4. じっくりと考える必要のある課題に取り掛かるのを避けたり、遅らせたりすることが、どのくらいの頻度でありますか？",
+            "required": true,
+            "selector": "全くない|めったにない|時々|頻繁|非常に頻繁",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "q5",
+            "type": "radio",
+            "dispname": "5. 長時間座っていなければならない時に、手足をそわそわと動かしたり、もぞもぞしたりすることが、どのくらいの頻度でありますか？",
+            "required": true,
+            "selector": "全くない|めったにない|時々|頻繁|非常に頻繁",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "q6",
+            "type": "radio",
+            "dispname": "6. まるでモーターで動かされるように過度に活発になることが、どのくらいの頻度でありますか？",
+            "required": true,
+            "selector": "全くない|めったにない|時々|頻繁|非常に頻繁",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "section_partB",
+            "type": "subsection",
+            "dispname": "パートB（12項目）"
+        },
+        {
+            "name": "q7",
+            "type": "radio",
+            "dispname": "7. 作業や活動中に、不注意で間違いをおかすことが、どのくらいの頻度でありますか？",
+            "required": true,
+            "selector": "全くない|めったにない|時々|頻繁|非常に頻繁",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "q8",
+            "type": "radio",
+            "dispname": "8. つまらない作業や困難な作業をする時に、注意を集中し続けることが困難なことが、どのくらいの頻度でありますか？",
+            "required": true,
+            "selector": "全くない|めったにない|時々|頻繁|非常に頻繁",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "q9",
+            "type": "radio",
+            "dispname": "9. 他の人が直接話しかけているのに聞いていないようにみられることが、どのくらいの頻度でありますか？",
+            "required": true,
+            "selector": "全くない|めったにない|時々|頻繁|非常に頻繁",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "q10",
+            "type": "radio",
+            "dispname": "10. 家庭、職場、学校で自分がしなければならないことから気がそれてしまうことが、どのくらいの頻度でありますか？",
+            "required": true,
+            "selector": "全くない|めったにない|時々|頻繁|非常に頻繁",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "q11",
+            "type": "radio",
+            "dispname": "11. 座っていることが求められる状況で席を離れることが、どのくらいの頻度でありますか？",
+            "required": true,
+            "selector": "全くない|めったにない|時々|頻繁|非常に頻繁",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "q12",
+            "type": "radio",
+            "dispname": "12. 落ち着かない、またはそわそわすることが、どのくらいの頻度でありますか？",
+            "required": true,
+            "selector": "全くない|めったにない|時々|頻繁|非常に頻繁",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "q13",
+            "type": "radio",
+            "dispname": "13. 自由時間に、リラックスして余暇を楽しむことが困難なことが、どのくらいの頻度でありますか？",
+            "required": true,
+            "selector": "全くない|めったにない|時々|頻繁|非常に頻繁",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "q14",
+            "type": "radio",
+            "dispname": "14. 社交場面で、しゃべり過ぎることが、どのくらいの頻度でありますか？",
+            "required": true,
+            "selector": "全くない|めったにない|時々|頻繁|非常に頻繁",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "q15",
+            "type": "radio",
+            "dispname": "15. 会話で、相手の話が終わる前に会話を終わらせてしまうことが、どのくらいの頻度でありますか？",
+            "required": true,
+            "selector": "全くない|めったにない|時々|頻繁|非常に頻繁",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "q16",
+            "type": "radio",
+            "dispname": "16. 自分の順番を待つことが困難なことが、どのくらいの頻度でありますか？",
+            "required": true,
+            "selector": "全くない|めったにない|時々|頻繁|非常に頻繁",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "q17",
+            "type": "radio",
+            "dispname": "17. 忙しくしている人の邪魔をすることが、どのくらいの頻度でありますか？",
+            "required": true,
+            "selector": "全くない|めったにない|時々|頻繁|非常に頻繁",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "q18",
+            "type": "radio",
+            "dispname": "18. 質問が終わる前に出し抜けに答えることが、どのくらいの頻度でありますか？",
+            "required": true,
+            "selector": "全くない|めったにない|時々|頻繁|非常に頻繁",
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "partA_score",
+            "type": "eval",
+            "dispname": "パートA合計点（0-24点）",
+            "formula": "[[q1.index]] + [[q2.index]] + [[q3.index]] + [[q4.index]] + [[q5.index]] + [[q6.index]]"
+        },
+        {
+            "name": "partB_score",
+            "type": "eval",
+            "dispname": "パートB合計点（0-48点）",
+            "formula": "[[q7.index]] + [[q8.index]] + [[q9.index]] + [[q10.index]] + [[q11.index]] + [[q12.index]] + [[q13.index]] + [[q14.index]] + [[q15.index]] + [[q16.index]] + [[q17.index]] + [[q18.index]]"
+        },
+        {
+            "name": "total_score",
+            "type": "eval",
+            "dispname": "総合計点（0-72点）",
+            "formula": "[[partA_score]] + [[partB_score]]"
+        },
+        {
+            "name": "partA_screening",
+            "type": "eval",
+            "dispname": "パートAスクリーニング結果",
+            "formula": "[[partA_score]] >= 14 ? \"ADHDの可能性が示唆される（14点以上）\" : \"カットオフ値未満（14点未満）\""
+        },
+        {
+            "name": "inattention_score",
+            "type": "eval",
+            "dispname": "不注意症状（項目1,2,3,4,7,8,9,10,11）",
+            "formula": "[[q1.index]] + [[q2.index]] + [[q3.index]] + [[q4.index]] + [[q7.index]] + [[q8.index]] + [[q9.index]] + [[q10.index]] + [[q11.index]]"
+        },
+        {
+            "name": "hyperactivity_impulsivity_score",
+            "type": "eval",
+            "dispname": "多動性・衝動性症状（項目5,6,12,13,14,15,16,17,18）",
+            "formula": "[[q5.index]] + [[q6.index]] + [[q12.index]] + [[q13.index]] + [[q14.index]] + [[q15.index]] + [[q16.index]] + [[q17.index]] + [[q18.index]]"
+        }
+    ]
+}

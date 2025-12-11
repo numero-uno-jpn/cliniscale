@@ -1,0 +1,100 @@
+{
+    "_comment": [
+        "Atlanta Classification for Acute Pancreatitis (Revised 2012)",
+        "原著論文: https://gut.bmj.com/content/62/1/102",
+        "参考URL: https://pubmed.ncbi.nlm.nih.gov/23100216/"
+    ],
+    "title": "Atlanta分類 - 急性膵炎",
+    "description": [
+        "急性膵炎の重症度分類システムです",
+        "膵炎のタイプと臓器不全の程度により重症度を評価します"
+    ],
+    "fields": [
+        {
+            "dispname": "膵炎のタイプ",
+            "type": "subsection"
+        },
+        {
+            "dispname": "画像所見に基づく分類",
+            "name": "膵炎タイプ",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "間質性浮腫型膵炎",
+                "壊死性膵炎"
+            ],
+            "selectoridx": "1|2"
+        },
+        {
+            "dispname": "臓器不全の評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "臓器不全の有無",
+            "name": "臓器不全",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "なし",
+                "一時的臓器不全 (48時間以内に改善)",
+                "持続的臓器不全 (48時間以上持続)"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "局所合併症",
+            "type": "subsection"
+        },
+        {
+            "dispname": "局所合併症の有無",
+            "name": "局所合併症",
+            "type": "checkbox",
+            "selector": [
+                "急性膵周囲液体貯留",
+                "膵仮性嚢胞",
+                "急性壊死性貯留",
+                "被包化壊死"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "全身性炎症反応",
+            "type": "subsection"
+        },
+        {
+            "dispname": "SIRS基準",
+            "name": "SIRS",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "なし",
+                "あり (2項目以上該当)"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "局所合併症の数",
+            "type": "eval",
+            "noreport": true,
+            "formula": "((局所合併症.index)).length"
+        },
+        {
+            "name": "Atlanta重症度",
+            "type": "eval",
+            "formula": "{{臓器不全}}.includes('持続的') ? '重症急性膵炎' : ( {{臓器不全}}.includes('一時的') || [[局所合併症の数]] > 0 ? '中等症急性膵炎' : '軽症急性膵炎' )"
+        },
+        {
+            "name": "予後予測",
+            "type": "eval",
+            "formula": "{{Atlanta重症度}}.includes('重症') ? '死亡率高 - 集中治療が必要' : ( {{Atlanta重症度}}.includes('中等症') ? '合併症リスクあり - 慎重な観察が必要' : '良好な予後 - 通常は保存的治療で改善' )"
+        },
+        {
+            "name": "画像評価の推奨",
+            "type": "eval",
+            "formula": "{{膵炎タイプ}}.includes('壊死') || {{Atlanta重症度}}.includes('重症') || {{Atlanta重症度}}.includes('中等症') ? '造影CT推奨 - 壊死範囲の評価が必要' : 'CT不要 - 臨床経過観察で可'"
+        }
+    ]
+}

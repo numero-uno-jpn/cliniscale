@@ -1,0 +1,98 @@
+{
+  "_comment": [
+    "Overactive Bladder Symptom Score (OABSS)",
+    "Homma Y, Yoshida M, Seki N, et al. Symptom assessment tool for overactive bladder syndrome--overactive bladder symptom score. Urology. 2006;68(2):318-23.",
+    "https://pubmed.ncbi.nlm.nih.gov/16979735/",
+    "過活動膀胱症状スコア",
+    "0-15点で評価、日本泌尿器科学会開発"
+  ],
+  "title": "OABSS (過活動膀胱症状スコア)",
+  "description": [
+    "過活動膀胱の症状評価",
+    "頻尿、夜間頻尿、尿意切迫感、切迫性尿失禁を評価します"
+  ],
+  "fields": [
+    {
+      "type": "subsection",
+      "dispname": "症状評価"
+    },
+    {
+      "type": "radio",
+      "name": "日中頻尿",
+      "dispname": "朝起きてから寝るまでに何回くらい尿をしましたか",
+      "selector": [
+        "7回以下",
+        "8-14回",
+        "15回以上"
+      ],
+      "selectoridx": "0|1|2",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "夜間頻尿",
+      "dispname": "夜寝てから朝起きるまでに何回くらい尿をしましたか",
+      "selector": [
+        "0回",
+        "1回",
+        "2回",
+        "3回以上"
+      ],
+      "selectoridx": "0|1|2|3",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "尿意切迫感",
+      "dispname": "急に尿がしたくなり我慢が難しいことがありましたか",
+      "selector": [
+        "なし",
+        "週に1回より少ない",
+        "週に1回以上",
+        "1日1回くらい",
+        "1日2-4回",
+        "1日5回以上"
+      ],
+      "selectoridx": "0|1|2|3|4|5",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "切迫性尿失禁",
+      "dispname": "急に尿がしたくなり我慢できずに尿が漏れることがありましたか",
+      "selector": [
+        "なし",
+        "週に1回より少ない",
+        "週に1回以上",
+        "1日1回くらい",
+        "1日2-4回",
+        "1日5回以上"
+      ],
+      "selectoridx": "0|1|2|3|4|5",
+      "required": true
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "type": "eval",
+      "name": "合計スコア",
+      "formula": "[[日中頻尿.index]] + [[夜間頻尿.index]] + [[尿意切迫感.index]] + [[切迫性尿失禁.index]]"
+    },
+    {
+      "type": "eval",
+      "name": "重症度分類",
+      "formula": "[[合計スコア]] >= 12 ? '重度' : ( [[合計スコア]] >= 6 ? '中等度' : ( [[合計スコア]] >= 3 ? '軽度' : '正常範囲'))"
+    },
+    {
+      "type": "warning",
+      "formula": "[[合計スコア]] >= 3",
+      "name": "Warning: 中等度リスク"
+    },
+    {
+      "type": "emergency",
+      "formula": "[[合計スコア]] >= 6",
+      "name": "Emergency: 高度リスク"
+    }
+  ]
+}

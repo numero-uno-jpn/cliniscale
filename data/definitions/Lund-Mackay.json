@@ -1,0 +1,191 @@
+{
+  "_comment": [
+    "Lund-Mackay Staging System for Chronic Rhinosinusitis",
+    "Lund VJ, Mackay IS. Staging in rhinosinusitis. Rhinology 1993;31:183-4.",
+    "https://pubmed.ncbi.nlm.nih.gov/7942622/",
+    "慢性鼻副鼻腔炎のCT評価スコアリングシステム",
+    "0-24点で評価、各副鼻腔を左右別々に評価"
+  ],
+  "title": "Lund-Mackayステージングシステム",
+  "description": [
+    "慢性鼻副鼻腔炎のCT画像評価",
+    "各副鼻腔の炎症程度をスコア化します"
+  ],
+  "fields": [
+    {
+      "type": "subsection",
+      "dispname": "右側副鼻腔"
+    },
+    {
+      "type": "radio",
+      "name": "右上顎洞",
+      "dispname": "上顎洞",
+      "selector": [
+        "正常",
+        "部分的陰影",
+        "完全陰影"
+      ],
+      "selectoridx": "0|1|2",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "右前篩骨洞",
+      "dispname": "前篩骨洞",
+      "selector": [
+        "正常",
+        "部分的陰影",
+        "完全陰影"
+      ],
+      "selectoridx": "0|1|2",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "右後篩骨洞",
+      "dispname": "後篩骨洞",
+      "selector": [
+        "正常",
+        "部分的陰影",
+        "完全陰影"
+      ],
+      "selectoridx": "0|1|2",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "右蝶形骨洞",
+      "dispname": "蝶形骨洞",
+      "selector": [
+        "正常",
+        "部分的陰影",
+        "完全陰影"
+      ],
+      "selectoridx": "0|1|2",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "右前頭洞",
+      "dispname": "前頭洞",
+      "selector": [
+        "正常",
+        "部分的陰影",
+        "完全陰影"
+      ],
+      "selectoridx": "0|1|2",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "右OMC",
+      "dispname": "骨鼻道複合体",
+      "selector": [
+        "閉塞なし",
+        "閉塞あり"
+      ],
+      "selectoridx": "0|2",
+      "required": true,
+      "description": "OMC: Ostiomeatal Complex"
+    },
+    {
+      "type": "subsection",
+      "dispname": "左側副鼻腔"
+    },
+    {
+      "type": "radio",
+      "name": "左上顎洞",
+      "dispname": "上顎洞",
+      "selector": [
+        "正常",
+        "部分的陰影",
+        "完全陰影"
+      ],
+      "selectoridx": "0|1|2",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "左前篩骨洞",
+      "dispname": "前篩骨洞",
+      "selector": [
+        "正常",
+        "部分的陰影",
+        "完全陰影"
+      ],
+      "selectoridx": "0|1|2",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "左後篩骨洞",
+      "dispname": "後篩骨洞",
+      "selector": [
+        "正常",
+        "部分的陰影",
+        "完全陰影"
+      ],
+      "selectoridx": "0|1|2",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "左蝶形骨洞",
+      "dispname": "蝶形骨洞",
+      "selector": [
+        "正常",
+        "部分的陰影",
+        "完全陰影"
+      ],
+      "selectoridx": "0|1|2",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "左前頭洞",
+      "dispname": "前頭洞",
+      "selector": [
+        "正常",
+        "部分的陰影",
+        "完全陰影"
+      ],
+      "selectoridx": "0|1|2",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "左OMC",
+      "dispname": "骨鼻道複合体",
+      "selector": [
+        "閉塞なし",
+        "閉塞あり"
+      ],
+      "selectoridx": "0|2",
+      "required": true,
+      "description": "OMC: Ostiomeatal Complex"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "type": "eval",
+      "name": "合計スコア",
+      "formula": "[[右上顎洞.index]] + [[右前篩骨洞.index]] + [[右後篩骨洞.index]] + [[右蝶形骨洞.index]] + [[右前頭洞.index]] + [[右OMC.index]] + [[左上顎洞.index]] + [[左前篩骨洞.index]] + [[左後篩骨洞.index]] + [[左蝶形骨洞.index]] + [[左前頭洞.index]] + [[左OMC.index]]"
+    },
+    {
+      "type": "eval",
+      "name": "重症度分類",
+      "formula": "[[合計スコア]] >= 9 ? '重度' : ( [[合計スコア]] >= 5 ? '中等度' : '軽度' )"
+    },
+    {
+      "type": "warning",
+      "name": "Warning: 中等度以上",
+      "formula": "[[合計スコア]] >= 5"
+    },
+    {
+      "type": "emergency",
+      "name": "Emergency: 重度",
+      "formula": "[[合計スコア]] >= 9"
+    }
+  ]
+}

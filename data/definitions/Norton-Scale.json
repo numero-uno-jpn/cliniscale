@@ -1,0 +1,123 @@
+{
+    "_comment": [
+        "Norton Scale (ノートンスケール) - 褥瘡発生リスク評価尺度",
+        "開発者: Doreen Norton (1962年)",
+        "評価項目: 身体状態、精神状態、活動度、可動性、失禁の5項目",
+        "合計スコア: 5-20点（低得点ほど高リスク）",
+        "14点以下で褥瘡発生高リスク",
+        "参考文献: Norton, D., McLaren, R., Exton-Smith, A.N. An Investigation of Geriatric Nursing Problems in the Hospital. London: National Corporation for the Care of Old People; 1962",
+        "URL: https://www.ahrq.gov/patient-safety/settings/hospital/resource/pressureulcer/tool/pu7b.html"
+    ],
+    "title": "Norton Scale 褥瘡リスク評価",
+    "description": [
+        "Norton Scaleは褥瘡発生リスクを評価するための尺度です。",
+        "身体状態、精神状態、活動度、可動性、失禁の5項目を各4段階で評価し、合計20点満点で判定します。",
+        "14点以下で褥瘡発生リスクが高いと判断されます。"
+    ],
+    "responsible_person": [
+        "担当医師"
+    ],
+    "dept_in_charge": "看護部",
+    "submit_button_title": "評価を送信",
+    "fields": [
+        {
+            "dispname": "Norton Scale評価項目",
+            "type": "subsection"
+        },
+        {
+            "dispname": "1. 身体状態",
+            "name": "身体状態",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "良好",
+                "やや不良",
+                "不良",
+                "非常に不良"
+            ],
+            "selectoridx": "4|3|2|1",
+            "description": "患者の全般的な身体状態を評価してください"
+        },
+        {
+            "dispname": "2. 精神状態",
+            "name": "精神状態",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "清明",
+                "無関心",
+                "混乱",
+                "昏迷"
+            ],
+            "selectoridx": "4|3|2|1",
+            "description": "患者の精神状態・意識レベルを評価してください"
+        },
+        {
+            "dispname": "3. 活動度",
+            "name": "活動度",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "歩行可能",
+                "介助で歩行",
+                "車椅子使用",
+                "寝たきり"
+            ],
+            "selectoridx": "4|3|2|1",
+            "description": "患者の活動レベルを評価してください"
+        },
+        {
+            "dispname": "4. 可動性",
+            "name": "可動性",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "完全",
+                "わずかに制限",
+                "非常に制限",
+                "不動"
+            ],
+            "selectoridx": "4|3|2|1",
+            "description": "患者の体位変換能力を評価してください"
+        },
+        {
+            "dispname": "5. 失禁",
+            "name": "失禁",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "なし",
+                "時々",
+                "通常",
+                "二重失禁"
+            ],
+            "selectoridx": "4|3|2|1",
+            "description": "尿失禁・便失禁の状況を評価してください"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "合計スコア",
+            "type": "eval",
+            "formula": "[[身体状態.index]] + [[精神状態.index]] + [[活動度.index]] + [[可動性.index]] + [[失禁.index]]",
+            "dispname": "Norton Scale合計スコア（5-20点）"
+        },
+        {
+            "name": "リスク分類",
+            "type": "eval",
+            "formula": "[[合計スコア]] > 18 ? '低リスク' : ( [[合計スコア]] >= 15 ? '中等度リスク' : ( [[合計スコア]] >= 10 ? '高リスク' : '非常に高リスク' ) )",
+            "dispname": "褥瘡発生リスクレベル"
+        },
+        {
+            "name": "Warning: 褥瘡高リスク 合計スコア <= 14",
+            "formula": "[[合計スコア]] <= 14",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 褥瘡緊急リスク 合計スコア < 10",
+            "formula": "[[合計スコア]] < 10",
+            "type": "emergency"
+        }
+    ]
+}

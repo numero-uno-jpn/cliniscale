@@ -1,0 +1,464 @@
+{
+    "_comment": [
+        "Parents' Evaluation of Developmental Status (PEDS) - 年齢依存版完全実装",
+        "開発者: Dr. Frances Page Glascoe",
+        "対象年齢: 0-8歳",
+        "回答者: 親・保護者",
+        "参考URL: https://pedstest.com/",
+        "本実装: 原典PEDSの年齢依存スコアリングを完全実装",
+        "微細運動・粗大運動の懸念は年齢により予測的/非予測的が変化",
+        "18ヶ月未満: 粗大・微細運動は非予測的",
+        "18ヶ月以上: 粗大・微細運動は予測的"
+    ],
+    "title": "PEDS - 親による発達状況評価（年齢依存版）",
+    "description": [
+        "このスクリーニングツールは、お子さんの発達や行動についての親御さんのご心配を把握し、早期の支援が必要なお子さんを見つけることを目的としています。",
+        "各質問について、心配なことがあれば具体的にご記入いただき、懸念のレベルをお選びください。"
+    ],
+    "fields": [
+        {
+            "name": "age_info_note",
+            "type": "note",
+            "description": "**お子さんの年齢をご入力ください**<br>正確なスコアリングのため、現在の年齢を月齢単位で入力してください。"
+        },
+        {
+            "name": "child_age_years",
+            "type": "text",
+            "dispname": "お子さんの年齢（歳）",
+            "description": "0-8の数字を入力してください",
+            "inputmode": "numeric",
+            "required": true,
+            "testrange": [
+                0,
+                8
+            ]
+        },
+        {
+            "name": "child_age_months",
+            "type": "text",
+            "dispname": "お子さんの年齢（追加の月数）",
+            "description": "0-11の数字を入力してください（例: 1歳6ヶ月の場合、年齢1歳、月数6）",
+            "inputmode": "numeric",
+            "required": true,
+            "testrange": [
+                0,
+                11
+            ]
+        },
+        {
+            "name": "intro_note",
+            "type": "note",
+            "description": "**お子さんについて、以下の項目でご心配なことがあれば、具体的にお聞かせください。**<br>各項目について、心配なことを記入し、懸念のレベルを選択してください。"
+        },
+        {
+            "name": "q1_general_description",
+            "type": "textarea",
+            "dispname": "1. お子さんの学習、発達、行動について",
+            "description": "全般的なご心配があれば、具体的にお書きください",
+            "rows": 3,
+            "placeholder": "心配なことがあれば具体的に記入してください"
+        },
+        {
+            "name": "q1_concern_level",
+            "type": "radio",
+            "dispname": "1. 懸念レベル",
+            "selector": [
+                "心配ありません",
+                "少し心配です",
+                "心配です"
+            ],
+            "selectoridx": "0|1|2",
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "q2_speech_description",
+            "type": "textarea",
+            "dispname": "2. お子さんの話し方や言葉の発音について",
+            "description": "話すことや言葉の明瞭さについてご心配があれば、具体的にお書きください",
+            "rows": 3,
+            "placeholder": "心配なことがあれば具体的に記入してください"
+        },
+        {
+            "name": "q2_concern_level",
+            "type": "radio",
+            "dispname": "2. 懸念レベル",
+            "selector": [
+                "心配ありません",
+                "少し心配です",
+                "心配です"
+            ],
+            "selectoridx": "0|1|2",
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "q3_understanding_description",
+            "type": "textarea",
+            "dispname": "3. お子さんが他の人の言うことを理解することについて",
+            "description": "言葉の理解や指示に従うことについてご心配があれば、具体的にお書きください",
+            "rows": 3,
+            "placeholder": "心配なことがあれば具体的に記入してください"
+        },
+        {
+            "name": "q3_concern_level",
+            "type": "radio",
+            "dispname": "3. 懸念レベル",
+            "selector": [
+                "心配ありません",
+                "少し心配です",
+                "心配です"
+            ],
+            "selectoridx": "0|1|2",
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "q4_fine_motor_description",
+            "type": "textarea",
+            "dispname": "4. お子さんの手や指の使い方について",
+            "description": "手先の器用さ、絵を描く、物をつかむなどについてご心配があれば、具体的にお書きください",
+            "rows": 3,
+            "placeholder": "心配なことがあれば具体的に記入してください"
+        },
+        {
+            "name": "q4_concern_level",
+            "type": "radio",
+            "dispname": "4. 懸念レベル",
+            "selector": [
+                "心配ありません",
+                "少し心配です",
+                "心配です"
+            ],
+            "selectoridx": "0|1|2",
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "q5_gross_motor_description",
+            "type": "textarea",
+            "dispname": "5. お子さんの腕や足の使い方について",
+            "description": "歩く、走る、バランス、運動能力についてご心配があれば、具体的にお書きください",
+            "rows": 3,
+            "placeholder": "心配なことがあれば具体的に記入してください"
+        },
+        {
+            "name": "q5_concern_level",
+            "type": "radio",
+            "dispname": "5. 懸念レベル",
+            "selector": [
+                "心配ありません",
+                "少し心配です",
+                "心配です"
+            ],
+            "selectoridx": "0|1|2",
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "q6_behavior_description",
+            "type": "textarea",
+            "dispname": "6. お子さんの行動について",
+            "description": "かんしゃく、攻撃性、注意力、従順さなどについてご心配があれば、具体的にお書きください",
+            "rows": 3,
+            "placeholder": "心配なことがあれば具体的に記入してください"
+        },
+        {
+            "name": "q6_concern_level",
+            "type": "radio",
+            "dispname": "6. 懸念レベル",
+            "selector": [
+                "心配ありません",
+                "少し心配です",
+                "心配です"
+            ],
+            "selectoridx": "0|1|2",
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "q7_social_description",
+            "type": "textarea",
+            "dispname": "7. お子さんの他の人との関わり方について",
+            "description": "友達との遊び、社会的なやりとり、感情についてご心配があれば、具体的にお書きください",
+            "rows": 3,
+            "placeholder": "心配なことがあれば具体的に記入してください"
+        },
+        {
+            "name": "q7_concern_level",
+            "type": "radio",
+            "dispname": "7. 懸念レベル",
+            "selector": [
+                "心配ありません",
+                "少し心配です",
+                "心配です"
+            ],
+            "selectoridx": "0|1|2",
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "q8_selfhelp_description",
+            "type": "textarea",
+            "dispname": "8. お子さんが自分でできることについて",
+            "description": "食事、着替え、トイレ、身の回りのことについてご心配があれば、具体的にお書きください",
+            "rows": 3,
+            "placeholder": "心配なことがあれば具体的に記入してください"
+        },
+        {
+            "name": "q8_concern_level",
+            "type": "radio",
+            "dispname": "8. 懸念レベル",
+            "selector": [
+                "心配ありません",
+                "少し心配です",
+                "心配です"
+            ],
+            "selectoridx": "0|1|2",
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "q9_school_description",
+            "type": "textarea",
+            "dispname": "9. お子さんの就学前教育や学習について",
+            "description": "文字、数、色、形の理解、学習の準備についてご心配があれば、具体的にお書きください",
+            "rows": 3,
+            "placeholder": "心配なことがあれば具体的に記入してください"
+        },
+        {
+            "name": "q9_concern_level",
+            "type": "radio",
+            "dispname": "9. 懸念レベル",
+            "selector": [
+                "心配ありません",
+                "少し心配です",
+                "心配です"
+            ],
+            "selectoridx": "0|1|2",
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "q10_other_description",
+            "type": "textarea",
+            "dispname": "10. その他、お子さんについて",
+            "description": "上記以外でご心配なことがあれば、具体的にお書きください",
+            "rows": 3,
+            "placeholder": "心配なことがあれば具体的に記入してください"
+        },
+        {
+            "name": "q10_concern_level",
+            "type": "radio",
+            "dispname": "10. 懸念レベル",
+            "selector": [
+                "心配ありません",
+                "少し心配です",
+                "心配です"
+            ],
+            "selectoridx": "0|1|2",
+            "required": true,
+            "inline": true
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "age_in_months",
+            "type": "eval",
+            "dispname": "月齢（総計）",
+            "formula": "( ((child_age_years)) * 12 ) + ((child_age_months))"
+        },
+        {
+            "name": "age_category",
+            "type": "eval",
+            "dispname": "年齢カテゴリ",
+            "formula": "[[age_in_months]] < 18 ? '0-17ヶ月（運動懸念は非予測的）' : '18ヶ月以上（運動懸念は予測的）'"
+        },
+        {
+            "name": "q1_index",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[q1_concern_level.index]]"
+        },
+        {
+            "name": "q2_index",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[q2_concern_level.index]]"
+        },
+        {
+            "name": "q3_index",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[q3_concern_level.index]]"
+        },
+        {
+            "name": "q4_index",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[q4_concern_level.index]]"
+        },
+        {
+            "name": "q5_index",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[q5_concern_level.index]]"
+        },
+        {
+            "name": "q6_index",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[q6_concern_level.index]]"
+        },
+        {
+            "name": "q7_index",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[q7_concern_level.index]]"
+        },
+        {
+            "name": "q8_index",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[q8_concern_level.index]]"
+        },
+        {
+            "name": "q9_index",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[q9_concern_level.index]]"
+        },
+        {
+            "name": "q10_index",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[q10_concern_level.index]]"
+        },
+        {
+            "name": "q2_predictive",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[q2_index]] > 0 ? 1 : 0"
+        },
+        {
+            "name": "q3_predictive",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[q3_index]] > 0 ? 1 : 0"
+        },
+        {
+            "name": "q4_predictive",
+            "type": "eval",
+            "noreport": true,
+            "formula": "( [[q4_index]] > 0 && [[age_in_months]] >= 18 ) ? 1 : 0"
+        },
+        {
+            "name": "q5_predictive",
+            "type": "eval",
+            "noreport": true,
+            "formula": "( [[q5_index]] > 0 && [[age_in_months]] >= 18 ) ? 1 : 0"
+        },
+        {
+            "name": "q6_predictive",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[q6_index]] > 0 ? 1 : 0"
+        },
+        {
+            "name": "q7_predictive",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[q7_index]] > 0 ? 1 : 0"
+        },
+        {
+            "name": "q9_predictive",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[q9_index]] > 0 ? 1 : 0"
+        },
+        {
+            "name": "q1_non_predictive",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[q1_index]] > 0 ? 1 : 0"
+        },
+        {
+            "name": "q4_non_predictive",
+            "type": "eval",
+            "noreport": true,
+            "formula": "( [[q4_index]] > 0 && [[age_in_months]] < 18 ) ? 1 : 0"
+        },
+        {
+            "name": "q5_non_predictive",
+            "type": "eval",
+            "noreport": true,
+            "formula": "( [[q5_index]] > 0 && [[age_in_months]] < 18 ) ? 1 : 0"
+        },
+        {
+            "name": "q8_non_predictive",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[q8_index]] > 0 ? 1 : 0"
+        },
+        {
+            "name": "q10_non_predictive",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[q10_index]] > 0 ? 1 : 0"
+        },
+        {
+            "name": "predictive_concerns",
+            "type": "eval",
+            "dispname": "予測的懸念数",
+            "formula": "[[q2_predictive]] + [[q3_predictive]] + [[q4_predictive]] + [[q5_predictive]] + [[q6_predictive]] + [[q7_predictive]] + [[q9_predictive]]"
+        },
+        {
+            "name": "non_predictive_concerns",
+            "type": "eval",
+            "dispname": "非予測的懸念数",
+            "formula": "[[q1_non_predictive]] + [[q4_non_predictive]] + [[q5_non_predictive]] + [[q8_non_predictive]] + [[q10_non_predictive]]"
+        },
+        {
+            "name": "total_concerns",
+            "type": "eval",
+            "dispname": "総懸念数",
+            "formula": "[[predictive_concerns]] + [[non_predictive_concerns]]"
+        },
+        {
+            "name": "predictive_detail",
+            "type": "eval",
+            "dispname": "予測的懸念の内訳",
+            "formula": "'Q2表出言語:' + [[q2_predictive]] + ' Q3受容言語:' + [[q3_predictive]] + ' Q4微細運動:' + [[q4_predictive]] + ' Q5粗大運動:' + [[q5_predictive]] + ' Q6行動:' + [[q6_predictive]] + ' Q7社会性:' + [[q7_predictive]] + ' Q9学習:' + [[q9_predictive]]"
+        },
+        {
+            "name": "non_predictive_detail",
+            "type": "eval",
+            "dispname": "非予測的懸念の内訳",
+            "formula": "'Q1全般:' + [[q1_non_predictive]] + ' Q4微細運動:' + [[q4_non_predictive]] + ' Q5粗大運動:' + [[q5_non_predictive]] + ' Q8身辺自立:' + [[q8_non_predictive]] + ' Q10その他:' + [[q10_non_predictive]]"
+        },
+        {
+            "name": "path_classification",
+            "type": "eval",
+            "dispname": "PEDSパス分類",
+            "formula": "[[predictive_concerns]] >= 2 ? 'Path A: 高リスク（発達評価への紹介が必要）' : [[predictive_concerns]] == 1 ? 'Path B: 中リスク（発達評価への紹介を検討）' : [[non_predictive_concerns]] >= 1 ? 'Path C: 軽微リスク（発達ガイダンスと経過観察）' : 'Path D/E: 低リスク（定期的な発達促進）'"
+        },
+        {
+            "name": "emergency_path_a",
+            "type": "emergency",
+            "dispname": "Path A: 高リスク",
+            "formula": "[[predictive_concerns]] >= 2"
+        },
+        {
+            "name": "warning_path_b",
+            "type": "warning",
+            "dispname": "Path B: 中リスク",
+            "formula": "[[predictive_concerns]] == 1"
+        },
+        {
+            "name": "completion_note",
+            "type": "note",
+            "description": "**ご記入ありがとうございました。**<br><br>【結果の見方】<br>• <strong>Path A（高リスク）</strong>: 予測的懸念が2つ以上 → 発達評価への紹介が必要<br>• <strong>Path B（中リスク）</strong>: 予測的懸念が1つ → 発達評価への紹介を検討<br>• <strong>Path C（軽微リスク）</strong>: 非予測的懸念のみ → 発達ガイダンスと経過観察<br>• <strong>Path D/E（低リスク）</strong>: 懸念なし → 定期的な発達促進<br><br>【年齢依存スコアリング】<br>• <strong>18ヶ月未満</strong>: 微細運動（Q4）と粗大運動（Q5）の懸念は非予測的として扱われます<br>• <strong>18ヶ月以上</strong>: 微細運動（Q4）と粗大運動（Q5）の懸念は予測的として扱われます<br>• <strong>常に予測的</strong>: Q2（話し方）、Q3（理解）、Q6（行動）、Q7（社会性）、Q9（学習）<br>• <strong>常に非予測的</strong>: Q1（全般）、Q8（身辺自立）、Q10（その他）<br><br>ご回答いただいた内容は、専門家が評価し、必要に応じてさらなる評価や支援についてご相談させていただきます。"
+        }
+    ]
+}

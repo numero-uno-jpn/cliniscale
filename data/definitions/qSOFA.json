@@ -1,0 +1,71 @@
+{
+    "_comment": [
+        "qSOFA (quick Sequential Organ Failure Assessment) スコア",
+        "敗血症のスクリーニングツールとして2016年にSepsis-3で提唱",
+        "原典：Singer M, et al. The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3). JAMA. 2016;315(8):801-10.",
+        "参考：Seymour CW, et al. Assessment of Clinical Criteria for Sepsis: For the Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3). JAMA. 2016;315(8):762-774.",
+        "2点以上で敗血症を疑い、さらなる評価が必要",
+        "重要：SSCG2021では単独使用は推奨されない。SIRS、NEWS、MEWSとの併用推奨",
+        "出典：Evans L, et al. Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021. Crit Care Med. 2021;49(11):1974-1982."
+    ],
+    "title": "qSOFA (quick SOFA) スコア",
+    "description": [
+        "qSOFAは敗血症のスクリーニングツールです",
+        "ICU以外の病棟や外来で簡便に使用できます",
+        "以下の3項目を評価し、2点以上で敗血症を疑います"
+    ],
+    "contact": "担当医師",
+    "dept_in_charge": "内科・救急科",
+    "responsible_person": [
+        "主治医"
+    ],
+    "fields": [
+        {
+            "dispname": "呼吸数評価",
+            "name": "呼吸数",
+            "type": "radio",
+            "required": true,
+            "selector": "22回/分未満|22回/分以上",
+            "selectoridx": "0|1",
+            "description": "安静時の1分間の呼吸数を測定してください"
+        },
+        {
+            "dispname": "意識状態評価",
+            "name": "意識状態",
+            "type": "radio",
+            "required": true,
+            "selector": "正常（GCS 15点）|意識変容あり（GCS 14点以下）",
+            "selectoridx": "0|1",
+            "description": "Glasgow Coma Scale（GCS）で評価した意識レベル"
+        },
+        {
+            "dispname": "収縮期血圧評価",
+            "name": "収縮期血圧",
+            "type": "radio",
+            "required": true,
+            "selector": "101mmHg以上|100mmHg以下",
+            "selectoridx": "0|1",
+            "description": "収縮期血圧を測定してください"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "qSOFAスコア",
+            "type": "eval",
+            "formula": "[[呼吸数.index]] + [[意識状態.index]] + [[収縮期血圧.index]]",
+            "dispname": "qSOFAスコア合計点（0-3点）"
+        },
+        {
+            "name": "判定結果",
+            "type": "eval",
+            "formula": "[[qSOFAスコア]] >= 2 ? '敗血症疑い（要精査）' : '敗血症リスク低'",
+            "dispname": "2点以上で敗血症を疑い、さらなる評価が必要"
+        },
+        {
+            "name": "Warning: qSOFAスコア ≥ 2 敗血症疑い",
+            "formula": "[[qSOFAスコア]] >= 2",
+            "type": "warning"
+        }
+    ]
+}

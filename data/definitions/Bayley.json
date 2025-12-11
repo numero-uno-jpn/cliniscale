@@ -1,0 +1,300 @@
+{
+    "_comment": [
+        "Bayley Scales of Infant and Toddler Development - Third Edition (Bayley-III) 乳幼児発達検査",
+        "原著: Nancy Bayley (2006), Bayley Scales of Infant and Toddler Development Third Edition, Pearson",
+        "日本版: 日本版Bayley-III刊行委員会 (2023), 日本文化科学社",
+        "参考URL: https://www.nichibun.co.jp/seek/kensa/bayley3.html",
+        "参考URL: https://www.pearsonassessments.com/store/usassessments/en/Store/Professional-Assessments/Cognition-&-Neuro/Bayley-Scales-of-Infant-and-Toddler-Development-|-Third-Edition/p/100000123.html",
+        "社会情動尺度と適応行動尺度を中心とした保護者質問紙版",
+        "【重要】Bayley-IIIの評価は0-2の3段階評価（0=なし、1=新興、2=習得）"
+    ],
+    "title": "Bayley 乳幼児発達検査 社会情動・適応行動評価",
+    "description": [
+        "Bayley-III乳幼児発達検査の社会情動尺度と適応行動尺度による評価です。",
+        "生後16日から42カ月15日までのお子様の発達状況について、保護者の方にお答えいただきます。"
+    ],
+    "submit_button_title": "評価を送信",
+    "fields": [
+        {
+            "name": "child_age",
+            "type": "text",
+            "dispname": "お子様の月齢",
+            "description": "お子様の現在の月齢を記入してください（例: 18か月、2歳6か月）",
+            "required": true
+        },
+        {
+            "name": "birth_gestational_age",
+            "type": "text",
+            "dispname": "在胎週数",
+            "description": "お子様が生まれた時の在胎週数を記入してください（例: 38週）"
+        },
+        {
+            "name": "section_social_emotional",
+            "type": "subsection",
+            "dispname": "社会情動尺度"
+        },
+        {
+            "name": "social_emotional_note",
+            "type": "note",
+            "description": "お子様の社会性や情緒面の発達について、以下の質問にお答えください。各項目について、お子様の普段の様子に最もあてはまるものを選んでください。"
+        },
+        {
+            "name": "calming_difficulty",
+            "type": "radio",
+            "dispname": "泣いている時になだめやすさ",
+            "description": "お子様が泣いている時の様子について",
+            "selector": [
+                "なし（全くなだめられない）",
+                "新興（時々なだめることができる）",
+                "習得（容易になだめることができる）"
+            ],
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "name": "social_responsiveness",
+            "type": "radio",
+            "dispname": "社会的応答性",
+            "description": "人との関わりに対するお子様の反応",
+            "selector": [
+                "なし（ほとんど反応しない）",
+                "新興（時々反応する）",
+                "習得（積極的に反応し関わりを求める）"
+            ],
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "name": "imitation_play",
+            "type": "radio",
+            "dispname": "模倣遊び",
+            "description": "他の人の動作や行動を真似する様子",
+            "selector": [
+                "なし（全く真似をしない）",
+                "新興（時々真似をする）",
+                "習得（よく真似をして遊ぶ）"
+            ],
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "name": "emotional_regulation",
+            "type": "radio",
+            "dispname": "感情調整",
+            "description": "お子様の感情のコントロールについて",
+            "selector": [
+                "なし（感情のコントロールが困難）",
+                "新興（時々コントロールが困難）",
+                "習得（感情を上手にコントロールできる）"
+            ],
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "name": "stranger_anxiety",
+            "type": "radio",
+            "dispname": "人見知り",
+            "description": "知らない人に対するお子様の反応",
+            "selector": [
+                "なし（強い人見知り）",
+                "新興（中程度の人見知り）",
+                "習得（軽い人見知りまたは全く人見知りしない）"
+            ],
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "name": "separation_anxiety",
+            "type": "radio",
+            "dispname": "分離不安",
+            "description": "保護者と離れる時のお子様の様子",
+            "selector": [
+                "なし（強い不安を示す）",
+                "新興（中程度の不安を示す）",
+                "習得（軽い不安または全く不安を示さない）"
+            ],
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "name": "attention_span",
+            "type": "radio",
+            "dispname": "注意の持続",
+            "description": "一つの活動への集中時間",
+            "selector": [
+                "なし（集中することが困難）",
+                "新興（集中時間がやや短い）",
+                "習得（年齢相応かそれ以上に集中できる）"
+            ],
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "name": "sensory_processing",
+            "type": "radio",
+            "dispname": "感覚処理",
+            "description": "音、光、触覚などの感覚刺激に対する反応",
+            "selector": [
+                "なし（著しく過敏または鈍感）",
+                "新興（しばしば過敏または鈍感な反応）",
+                "習得（適切に反応する）"
+            ],
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "name": "section_adaptive_behavior",
+            "type": "subsection",
+            "dispname": "適応行動尺度"
+        },
+        {
+            "name": "adaptive_behavior_note",
+            "type": "note",
+            "description": "お子様の日常生活での適応行動について、以下の質問にお答えください。"
+        },
+        {
+            "name": "receptive_communication",
+            "type": "radio",
+            "dispname": "受容的コミュニケーション",
+            "description": "話しかけられた内容の理解",
+            "selector": [
+                "なし（ほとんど理解していない）",
+                "新興（部分的に理解している）",
+                "習得（年齢相応によく理解している）"
+            ],
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "name": "expressive_communication",
+            "type": "radio",
+            "dispname": "表出的コミュニケーション",
+            "description": "自分の意思や要求を伝える能力",
+            "selector": [
+                "なし（ほとんど伝えられない）",
+                "新興（部分的に伝えられる）",
+                "習得（年齢相応によく伝えられる）"
+            ],
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "name": "daily_living_personal",
+            "type": "radio",
+            "dispname": "日常生活スキル - 身辺自立",
+            "description": "食事、着替え、トイレなどの身辺自立",
+            "selector": [
+                "なし（ほとんどできない）",
+                "新興（部分的にできる）",
+                "習得（年齢相応にできる）"
+            ],
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "name": "interpersonal_relationships",
+            "type": "radio",
+            "dispname": "対人関係",
+            "description": "他の人との関係の築き方",
+            "selector": [
+                "なし（関係を築くことが困難）",
+                "新興（時々関係を築くことができる）",
+                "習得（年齢相応に良好な関係を築く）"
+            ],
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "name": "play_and_leisure",
+            "type": "radio",
+            "dispname": "遊びと余暇",
+            "description": "遊びや余暇活動への参加",
+            "selector": [
+                "なし（ほとんど遊ばない）",
+                "新興（時々遊ぶ）",
+                "習得（年齢相応によく遊ぶ）"
+            ],
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "name": "motor_skills",
+            "type": "radio",
+            "dispname": "運動スキル",
+            "description": "粗大運動・微細運動の発達",
+            "selector": [
+                "なし（明らかな遅れがある）",
+                "新興（やや遅れがある）",
+                "習得（年齢相応に発達している）"
+            ],
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "name": "maladaptive_behavior",
+            "type": "radio",
+            "dispname": "不適応行動",
+            "description": "問題行動の有無",
+            "selector": [
+                "なし（頻繁にある）",
+                "新興（しばしばある）",
+                "習得（ほとんどない）"
+            ],
+            "selectoridx": "0|1|2",
+            "required": true
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "comments",
+            "type": "textarea",
+            "dispname": "その他気になること",
+            "description": "お子様について特に気になることや相談したいことがあれば記入してください",
+            "rows": 4
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "social_emotional_score",
+            "type": "eval",
+            "dispname": "社会情動領域の評価点",
+            "formula": "[[calming_difficulty.index]] + [[social_responsiveness.index]] + [[imitation_play.index]] + [[emotional_regulation.index]] + [[stranger_anxiety.index]] + [[separation_anxiety.index]] + [[attention_span.index]] + [[sensory_processing.index]]",
+            "noreport": false
+        },
+        {
+            "name": "adaptive_behavior_score",
+            "type": "eval",
+            "dispname": "適応行動領域の評価点",
+            "formula": "[[receptive_communication.index]] + [[expressive_communication.index]] + [[daily_living_personal.index]] + [[interpersonal_relationships.index]] + [[play_and_leisure.index]] + [[motor_skills.index]] + [[maladaptive_behavior.index]]",
+            "noreport": false
+        },
+        {
+            "name": "total_composite_score",
+            "type": "eval",
+            "dispname": "総合評価点",
+            "formula": "((social_emotional_score)) + ((adaptive_behavior_score))",
+            "noreport": false
+        },
+        {
+            "name": "developmental_level",
+            "type": "eval",
+            "dispname": "発達レベル評価",
+            "formula": "((total_composite_score)) >= 24 ? \"年齢相応の発達\" : ((total_composite_score)) >= 18 ? \"軽度の懸念\" : ((total_composite_score)) >= 12 ? \"中程度の懸念\" : \"要詳細評価\"",
+            "noreport": false
+        },
+        {
+            "name": "Warning: 注意を要する領域 社会情動スコア < 8 または 適応行動スコア < 8",
+            "type": "warning",
+            "description": "注意を要する領域があります",
+            "formula": "((social_emotional_score)) < 8 || ((adaptive_behavior_score)) < 8"
+        },
+        {
+            "name": "Emergency: 要詳細評価 総合評価点 < 12",
+            "type": "emergency",
+            "description": "専門機関での詳細評価を推奨します",
+            "formula": "((total_composite_score)) < 12"
+        }
+    ]
+}

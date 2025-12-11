@@ -1,0 +1,320 @@
+{
+    "_comment": [
+        "Strengths and Difficulties Questionnaire (SDQ) - 子どもの強さと困難さアンケート",
+        "開発者: Robert Goodman (1997)",
+        "対象年齢: 2-17歳（この定義は保護者版）",
+        "原著論文: Goodman, R. (1997). The Strengths and Difficulties Questionnaire: a research note. J Child Psychol Psychiatry, 38(5), 581-6.",
+        "公式サイト: https://www.sdqinfo.org/",
+        "日本語版サイト: https://ddclinic.jp/SDQ/",
+        "注意：項目7,11,14,21,25は逆転項目です（計算時に2-回答値で処理）"
+    ],
+    "title": "SDQ 子どもの強さと困難さアンケート（保護者版）",
+    "description": [
+        "お子さんの情緒や行動について25の質問にお答えください。",
+        "あなたのお子さんのここ半年くらいの行動についてお答えください。",
+        "答えに自信がなくても、全ての質問にお答えください。"
+    ],
+    "contact": "担当医師",
+    "fields": [
+        {
+            "dispname": "お子さんの性別",
+            "name": "性別",
+            "type": "radio",
+            "inline": true,
+            "selector": "男児|女児"
+        },
+        {
+            "dispname": "お子さんの生年月日",
+            "name": "生年月日",
+            "type": "date",
+            "format": "YYYY年MM月DD日"
+        },
+        {
+            "type": "separator"
+        },
+        {
+            "dispname": "行動・情緒に関する質問",
+            "type": "subsection"
+        },
+        {
+            "dispname": "1. 他人の気持ちをよく気づかう",
+            "name": "Q1",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "あてはまらない|まああてはまる|あてはまる",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "2. 落ち着きがなく、長い間じっとしていられない",
+            "name": "Q2",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "あてはまらない|まああてはまる|あてはまる",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "3. 頭がいたい、お腹がいたい、気持ちが悪いなどと、よくうったえる",
+            "name": "Q3",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "あてはまらない|まああてはまる|あてはまる",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "4. 他の子どもたちと、よく分け合う（おやつ・おもちゃ・鉛筆など）",
+            "name": "Q4",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "あてはまらない|まああてはまる|あてはまる",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "5. カッとなったり、かんしゃくをおこしたりする事がよくある",
+            "name": "Q5",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "あてはまらない|まああてはまる|あてはまる",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "6. 一人でいるのが好きで、一人で遊ぶことが多い",
+            "name": "Q6",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "あてはまらない|まああてはまる|あてはまる",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "7. 素直で、大体は大人の言うことをよく聞く",
+            "name": "Q7",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "あてはまらない|まああてはまる|あてはまる",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "8. 心配ごとが多く、いつも、不安なようだ",
+            "name": "Q8",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "あてはまらない|まああてはまる|あてはまる",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "9. 誰かが心を痛めていたり、落ち込んでいたり、嫌な思いをしているときなど、すすんで助ける",
+            "name": "Q9",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "あてはまらない|まああてはまる|あてはまる",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "10. いつもそわそわしたり、もじもじしている",
+            "name": "Q10",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "あてはまらない|まああてはまる|あてはまる",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "11. 仲の良い友だちが少なくとも一人はいる",
+            "name": "Q11",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "あてはまらない|まああてはまる|あてはまる",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "12. よく他の子とけんかをしたり、いじめたりする",
+            "name": "Q12",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "あてはまらない|まああてはまる|あてはまる",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "13. おちこんでしずんでいたり、涙ぐんでいたりすることがよくある",
+            "name": "Q13",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "あてはまらない|まああてはまる|あてはまる",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "14. 他の子どもたちから、だいたいは好かれているようだ",
+            "name": "Q14",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "あてはまらない|まああてはまる|あてはまる",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "15. すぐに気が散りやすく、注意を集中できない",
+            "name": "Q15",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "あてはまらない|まああてはまる|あてはまる",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "16. 目新しい場面に直面すると不安ですがりついたり、すぐに自信をなくす",
+            "name": "Q16",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "あてはまらない|まああてはまる|あてはまる",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "17. 年下の子どもに対してやさしい",
+            "name": "Q17",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "あてはまらない|まああてはまる|あてはまる",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "18. よく大人に対して口答えする",
+            "name": "Q18",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "あてはまらない|まああてはまる|あてはまる",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "19. 他の子から、いじめの対象にされたり、からかわれたりする",
+            "name": "Q19",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "あてはまらない|まああてはまる|あてはまる",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "20. 自分からすすんでよく他人を手伝う（親・先生・子どもたちなど）",
+            "name": "Q20",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "あてはまらない|まああてはまる|あてはまる",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "21. よく考えてから行動することができる",
+            "name": "Q21",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "あてはまらない|まああてはまる|あてはまる",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "22. 他の人にたいしていじわるをする",
+            "name": "Q22",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "あてはまらない|まああてはまる|あてはまる",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "23. 他の子どもより、大人といる方がうまくいくようだ",
+            "name": "Q23",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "あてはまらない|まああてはまる|あてはまる",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "24. こわがりで、すぐにおびえたりする",
+            "name": "Q24",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "あてはまらない|まああてはまる|あてはまる",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "25. ものごとを最後までやりとげ、集中力もある",
+            "name": "Q25",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "あてはまらない|まああてはまる|あてはまる",
+            "selectoridx": "0|1|2"
+        },
+        {
+            "type": "note",
+            "description": [
+                "<b>【日本版SDQの解釈について重要な注意】</b>",
+                "日本版では、開発者との協議により、カットオフ値による単純な判定は推奨されていません。",
+                "得点は年齢・性別・評価者によって変動するため、標準値およびパーセンタイル値を参照し、",
+                "複数の情報源（親・教師・本人）からの情報を総合的に判断することが重要です。",
+                "詳細は日本語版サイト（https://ddclinic.jp/SDQ/）を参照してください。"
+            ]
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "情緒の問題",
+            "type": "eval",
+            "dispname": "情緒の問題サブスケール得点（0-10点）",
+            "formula": "[[Q3.index]] + [[Q8.index]] + [[Q13.index]] + [[Q16.index]] + [[Q24.index]]"
+        },
+        {
+            "name": "行為の問題",
+            "type": "eval",
+            "dispname": "行為の問題サブスケール得点（0-10点）",
+            "formula": "[[Q5.index]] + (2 - [[Q7.index]]) + [[Q12.index]] + [[Q18.index]] + [[Q22.index]]"
+        },
+        {
+            "name": "多動不注意",
+            "type": "eval",
+            "dispname": "多動・不注意サブスケール得点（0-10点）",
+            "formula": "[[Q2.index]] + [[Q10.index]] + [[Q15.index]] + (2 - [[Q21.index]]) + (2 - [[Q25.index]])"
+        },
+        {
+            "name": "仲間関係の問題",
+            "type": "eval",
+            "dispname": "仲間関係の問題サブスケール得点（0-10点）",
+            "formula": "[[Q6.index]] + (2 - [[Q11.index]]) + (2 - [[Q14.index]]) + [[Q19.index]] + [[Q23.index]]"
+        },
+        {
+            "name": "向社会性",
+            "type": "eval",
+            "dispname": "向社会的行動サブスケール得点（0-10点）",
+            "formula": "[[Q1.index]] + [[Q4.index]] + [[Q9.index]] + [[Q17.index]] + [[Q20.index]]"
+        },
+        {
+            "name": "総合的困難さ",
+            "type": "eval",
+            "dispname": "総合困難さ得点（0-40点）：情緒の問題＋行為の問題＋多動不注意＋仲間関係の問題",
+            "formula": "[[情緒の問題]] + [[行為の問題]] + [[多動不注意]] + [[仲間関係の問題]]"
+        },
+        {
+            "name": "総合困難さ国際標準判定_参考",
+            "type": "eval",
+            "dispname": "総合困難さの国際標準判定（参考）※日本版では総合的判断を推奨",
+            "formula": "[[総合的困難さ]] <= 13 ? '正常範囲（0-13点）' : [[総合的困難さ]] <= 16 ? 'ボーダーライン（14-16点）' : '要注意範囲（17-40点）'"
+        }
+    ]
+}

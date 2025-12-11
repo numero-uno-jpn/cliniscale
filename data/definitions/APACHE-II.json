@@ -1,0 +1,379 @@
+{
+    "_comment": [
+        "APACHE II (Acute Physiology and Chronic Health Evaluation II) 重症度評価スコア",
+        "原典: Knaus WA, Draper EA, Wagner DP, Zimmerman JE. APACHE II: a severity of disease classification system. Crit Care Med. 1985;13(10):818-29.",
+        "ICU入室患者の重症度評価と死亡率予測に使用",
+        "0-71点の範囲でスコア化、高得点ほど重症度が高い",
+        "入室後24時間以内の最悪値を使用",
+        "臨床実用性向上のため、体温説明追加・クレアチニン入力方式変更"
+    ],
+    "title": "APACHE II 重症度評価スコア",
+    "description": [
+        "APACHE II (Acute Physiology and Chronic Health Evaluation II) は、ICU患者の重症度を評価し、死亡率を予測するためのスコアです。",
+        "ICU入室後24時間以内の最も異常な値を使用してください。"
+    ],
+    "translate": "major",
+    "fields": [
+        {
+            "dispname": "急性生理学的スコア",
+            "type": "subsection"
+        },
+        {
+            "dispname": "体温",
+            "name": "体温",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "41°C以上",
+                "39-40.9°C",
+                "38.5-38.9°C",
+                "36-38.4°C",
+                "34-35.9°C",
+                "32-33.9°C",
+                "30-31.9°C",
+                "30°C未満"
+            ],
+            "selectoridx": "4|3|2|0|1|2|3|4",
+            "description": "深部体温（直腸温）を使用してください。腋窩温や口腔温は0.5-1°C低値となるため注意"
+        },
+        {
+            "dispname": "平均動脈圧",
+            "name": "平均動脈圧",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "160mmHg以上",
+                "130-159mmHg",
+                "110-129mmHg",
+                "70-109mmHg",
+                "50-69mmHg",
+                "50mmHg未満"
+            ],
+            "selectoridx": "4|3|2|0|2|4",
+            "description": "平均動脈圧 = (収縮期血圧 + 拡張期血圧×2) ÷ 3"
+        },
+        {
+            "dispname": "心拍数",
+            "name": "心拍数",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "180回/分以上",
+                "140-179回/分",
+                "110-139回/分",
+                "70-109回/分",
+                "55-69回/分",
+                "40-54回/分",
+                "40回/分未満"
+            ],
+            "selectoridx": "4|3|2|0|2|3|4"
+        },
+        {
+            "dispname": "呼吸数",
+            "name": "呼吸数",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "50回/分以上",
+                "35-49回/分",
+                "25-34回/分",
+                "12-24回/分",
+                "10-11回/分",
+                "6-9回/分",
+                "6回/分未満"
+            ],
+            "selectoridx": "4|3|1|0|1|2|4"
+        },
+        {
+            "dispname": "酸素化状態",
+            "name": "酸素化状態",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "FiO2≥50%でA-aDO2≥500",
+                "FiO2≥50%でA-aDO2 350-499",
+                "FiO2≥50%でA-aDO2 200-349",
+                "FiO2≥50%でA-aDO2<200またはFiO2<50%でPaO2≥70",
+                "FiO2<50%でPaO2 61-70",
+                "FiO2<50%でPaO2 55-60",
+                "FiO2<50%でPaO2<55"
+            ],
+            "selectoridx": "4|3|2|0|1|3|4",
+            "description": "A-aDO2: 肺胞気動脈血酸素分圧較差、PaO2: 動脈血酸素分圧（動脈血ガス分析が困難な場合は血清HCO3で代替可能）"
+        },
+        {
+            "dispname": "動脈血pH",
+            "name": "動脈血pH",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "7.7以上",
+                "7.6-7.69",
+                "7.5-7.59",
+                "7.33-7.49",
+                "7.25-7.32",
+                "7.15-7.24",
+                "7.15未満"
+            ],
+            "selectoridx": "4|3|1|0|2|3|4"
+        },
+        {
+            "dispname": "血清ナトリウム",
+            "name": "血清ナトリウム",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "180mEq/L以上",
+                "160-179mEq/L",
+                "155-159mEq/L",
+                "150-154mEq/L",
+                "130-149mEq/L",
+                "120-129mEq/L",
+                "111-119mEq/L",
+                "110mEq/L以下"
+            ],
+            "selectoridx": "4|3|2|1|0|2|3|4"
+        },
+        {
+            "dispname": "血清カリウム",
+            "name": "血清カリウム",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "7mEq/L以上",
+                "6-6.9mEq/L",
+                "5.5-5.9mEq/L",
+                "3.5-5.4mEq/L",
+                "3-3.4mEq/L",
+                "2.5-2.9mEq/L",
+                "2.5mEq/L未満"
+            ],
+            "selectoridx": "4|3|1|0|1|2|4"
+        },
+        {
+            "dispname": "急性腎不全の有無",
+            "name": "急性腎不全",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "なし",
+                "あり"
+            ],
+            "selectoridx": "0|1",
+            "description": "急性腎不全がある場合、血清クレアチニンの点数が2倍になります"
+        },
+        {
+            "dispname": "血清クレアチニン値",
+            "name": "血清クレアチニン値",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "3.5mg/dL以上",
+                "2.0-3.4mg/dL",
+                "1.5-1.9mg/dL",
+                "0.6-1.4mg/dL",
+                "0.6mg/dL未満"
+            ],
+            "selectoridx": "4|3|2|0|2",
+            "description": "急性腎不全がある場合、この点数が2倍になります"
+        },
+        {
+            "dispname": "ヘマトクリット",
+            "name": "ヘマトクリット",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "60%以上",
+                "50-59.9%",
+                "46-49.9%",
+                "30-45.9%",
+                "20-29.9%",
+                "20%未満"
+            ],
+            "selectoridx": "4|2|1|0|2|4"
+        },
+        {
+            "dispname": "白血球数",
+            "name": "白血球数",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "40,000/μL以上",
+                "20,000-39,999/μL",
+                "15,000-19,999/μL",
+                "3,000-14,999/μL",
+                "1,000-2,999/μL",
+                "1,000/μL未満"
+            ],
+            "selectoridx": "4|3|1|0|2|4"
+        },
+        {
+            "dispname": "Glasgow Coma Scale",
+            "name": "GCS",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "15点",
+                "14点",
+                "13点",
+                "10-12点",
+                "7-9点",
+                "4-6点",
+                "3点"
+            ],
+            "selectoridx": "0|1|2|3|4|5|6",
+            "description": "意識レベルの評価: 開眼・言語・運動反応の合計"
+        },
+        {
+            "dispname": "年齢",
+            "type": "subsection"
+        },
+        {
+            "dispname": "年齢",
+            "name": "年齢",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "44歳以下",
+                "45-54歳",
+                "55-64歳",
+                "65-74歳",
+                "75歳以上"
+            ],
+            "selectoridx": "0|2|3|5|6"
+        },
+        {
+            "dispname": "慢性健康評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "重篤な慢性疾患の有無",
+            "name": "慢性疾患",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "なし",
+                "あり・非手術患者または緊急手術患者",
+                "あり・待機手術患者"
+            ],
+            "selectoridx": "0|5|2",
+            "description": "肝硬化、NYHA分類IV度心不全、重症COPD、透析中の腎不全、免疫不全状態のいずれかがある場合"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "体温点数",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[体温.index]]"
+        },
+        {
+            "name": "平均動脈圧点数",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[平均動脈圧.index]]"
+        },
+        {
+            "name": "心拍数点数",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[心拍数.index]]"
+        },
+        {
+            "name": "呼吸数点数",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[呼吸数.index]]"
+        },
+        {
+            "name": "酸素化点数",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[酸素化状態.index]]"
+        },
+        {
+            "name": "pH点数",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[動脈血pH.index]]"
+        },
+        {
+            "name": "ナトリウム点数",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[血清ナトリウム.index]]"
+        },
+        {
+            "name": "カリウム点数",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[血清カリウム.index]]"
+        },
+        {
+            "name": "クレアチニン基本点数",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[血清クレアチニン値.index]]"
+        },
+        {
+            "name": "クレアチニン点数",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[急性腎不全.index]] == 1 ? [[クレアチニン基本点数]] * 2 : [[クレアチニン基本点数]]"
+        },
+        {
+            "name": "ヘマトクリット点数",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[ヘマトクリット.index]]"
+        },
+        {
+            "name": "白血球点数",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[白血球数.index]]"
+        },
+        {
+            "name": "GCS点数",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[GCS.index]]"
+        },
+        {
+            "name": "急性生理学的スコア",
+            "type": "eval",
+            "formula": "[[体温点数]] + [[平均動脈圧点数]] + [[心拍数点数]] + [[呼吸数点数]] + [[酸素化点数]] + [[pH点数]] + [[ナトリウム点数]] + [[カリウム点数]] + [[クレアチニン点数]] + [[ヘマトクリット点数]] + [[白血球点数]] + [[GCS点数]]"
+        },
+        {
+            "name": "年齢加算点数",
+            "type": "eval",
+            "formula": "[[年齢.index]]"
+        },
+        {
+            "name": "慢性疾患による加算点数",
+            "type": "eval",
+            "formula": "[[慢性疾患.index]]"
+        },
+        {
+            "name": "APACHE II スコア",
+            "type": "eval",
+            "formula": "[[急性生理学的スコア]] + [[年齢加算点数]] + [[慢性疾患による加算点数]]"
+        },
+        {
+            "name": "重症度分類",
+            "type": "eval",
+            "formula": "[[APACHE II スコア]] >= 25 ? '重篤' : ([[APACHE II スコア]] >= 15 ? '中等度' : '軽度')"
+        },
+        {
+            "name": "Warning: 中等度リスク APACHE II スコア ≥ 15",
+            "formula": "[[APACHE II スコア]] >= 15",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 重篤リスク APACHE II スコア ≥ 25",
+            "formula": "[[APACHE II スコア]] >= 25",
+            "type": "emergency"
+        }
+    ]
+}

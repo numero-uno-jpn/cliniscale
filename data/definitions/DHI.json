@@ -1,0 +1,287 @@
+{
+    "_comment": [
+        "DHI (Dizziness Handicap Inventory) 日本語版",
+        "原典: Jacobson GP, Newman CW. The development of the Dizziness Handicap Inventory. Arch Otolaryngol Head Neck Surg. 1990;116(4):424-427.",
+        "日本語版妥当性研究: Masuda K, Goto F, Fujii M, Kunihiro T. Investigation of the reliability and validity of Dizziness Handicap Inventory (DHI) translated into Japanese. Equilibrium Research. 2004;63(6):555-563.",
+        "めまい・平衡障害が日常生活に与える影響を評価する25項目の自己報告型質問票",
+        "機能的側面(9項目)、感情的側面(9項目)、身体的側面(7項目)で構成",
+        "各項目: はい=4点、時々=2点、いいえ=0点で評価",
+        "総合計点: 0-100点(高得点ほどめまいによる障害が高い)",
+        "カットオフ値: 16-34点=軽度、36-52点=中等度、54点以上=重度"
+    ],
+    "title": "DHI めまい障害度評価",
+    "description": [
+        "以下の質問は、あなたがめまいやふらつきのために経験する可能性のある困難を特定することを目的としています。",
+        "過去1か月間のあなたの状態について、すべての質問にお答えください。"
+    ],
+    "fields": [
+        {
+            "dispname": "上を見上げることで問題が悪化しますか",
+            "name": "P1",
+            "type": "radio",
+            "inline": true,
+            "selector": "いいえ|時々|はい",
+            "selectoridx": "0|2|4",
+            "required": true
+        },
+        {
+            "dispname": "問題のために、イライラを感じますか",
+            "name": "E2",
+            "type": "radio",
+            "inline": true,
+            "selector": "いいえ|時々|はい",
+            "selectoridx": "0|2|4",
+            "required": true
+        },
+        {
+            "dispname": "問題のために、仕事や娯楽での外出を制限していますか",
+            "name": "F3",
+            "type": "radio",
+            "inline": true,
+            "selector": "いいえ|時々|はい",
+            "selectoridx": "0|2|4",
+            "required": true
+        },
+        {
+            "dispname": "スーパーマーケットの通路を歩くことで問題が悪化しますか",
+            "name": "P4",
+            "type": "radio",
+            "inline": true,
+            "selector": "いいえ|時々|はい",
+            "selectoridx": "0|2|4",
+            "required": true
+        },
+        {
+            "dispname": "問題のために、ベッドに入ったり出たりすることが困難ですか",
+            "name": "F5",
+            "type": "radio",
+            "inline": true,
+            "selector": "いいえ|時々|はい",
+            "selectoridx": "0|2|4",
+            "required": true
+        },
+        {
+            "dispname": "問題のために、外食、映画、ダンス、パーティーなどの社会活動への参加が大幅に制限されますか",
+            "name": "F6",
+            "type": "radio",
+            "inline": true,
+            "selector": "いいえ|時々|はい",
+            "selectoridx": "0|2|4",
+            "required": true
+        },
+        {
+            "dispname": "問題のために、読書が困難ですか",
+            "name": "F7",
+            "type": "radio",
+            "inline": true,
+            "selector": "いいえ|時々|はい",
+            "selectoridx": "0|2|4",
+            "required": true
+        },
+        {
+            "dispname": "スポーツ、ダンス、掃除や食器の片付けなどのより活動的な動作をすることで問題が悪化しますか",
+            "name": "P8",
+            "type": "radio",
+            "inline": true,
+            "selector": "いいえ|時々|はい",
+            "selectoridx": "0|2|4",
+            "required": true
+        },
+        {
+            "dispname": "問題のために、誰かと一緒でなければ家を出るのが怖いですか",
+            "name": "E9",
+            "type": "radio",
+            "inline": true,
+            "selector": "いいえ|時々|はい",
+            "selectoridx": "0|2|4",
+            "required": true
+        },
+        {
+            "dispname": "問題のために、他人の前で恥ずかしい思いをしたことがありますか",
+            "name": "E10",
+            "type": "radio",
+            "inline": true,
+            "selector": "いいえ|時々|はい",
+            "selectoridx": "0|2|4",
+            "required": true
+        },
+        {
+            "dispname": "頭を素早く動かすことで問題が悪化しますか",
+            "name": "P11",
+            "type": "radio",
+            "inline": true,
+            "selector": "いいえ|時々|はい",
+            "selectoridx": "0|2|4",
+            "required": true
+        },
+        {
+            "dispname": "問題のために、高い場所を避けますか",
+            "name": "F12",
+            "type": "radio",
+            "inline": true,
+            "selector": "いいえ|時々|はい",
+            "selectoridx": "0|2|4",
+            "required": true
+        },
+        {
+            "dispname": "ベッドで寝返りをうつことで問題が悪化しますか",
+            "name": "P13",
+            "type": "radio",
+            "inline": true,
+            "selector": "いいえ|時々|はい",
+            "selectoridx": "0|2|4",
+            "required": true
+        },
+        {
+            "dispname": "問題のために、激しい家事や庭仕事をするのが困難ですか",
+            "name": "F14",
+            "type": "radio",
+            "inline": true,
+            "selector": "いいえ|時々|はい",
+            "selectoridx": "0|2|4",
+            "required": true
+        },
+        {
+            "dispname": "問題のために、人から酔っていると思われるのではないかと心配ですか",
+            "name": "E15",
+            "type": "radio",
+            "inline": true,
+            "selector": "いいえ|時々|はい",
+            "selectoridx": "0|2|4",
+            "required": true
+        },
+        {
+            "dispname": "問題のために、一人で散歩に出かけるのが困難ですか",
+            "name": "F16",
+            "type": "radio",
+            "inline": true,
+            "selector": "いいえ|時々|はい",
+            "selectoridx": "0|2|4",
+            "required": true
+        },
+        {
+            "dispname": "歩道を歩くことで問題が悪化しますか",
+            "name": "P17",
+            "type": "radio",
+            "inline": true,
+            "selector": "いいえ|時々|はい",
+            "selectoridx": "0|2|4",
+            "required": true
+        },
+        {
+            "dispname": "問題のために、集中することが困難ですか",
+            "name": "E18",
+            "type": "radio",
+            "inline": true,
+            "selector": "いいえ|時々|はい",
+            "selectoridx": "0|2|4",
+            "required": true
+        },
+        {
+            "dispname": "問題のために、暗闇の中で家の中を歩き回ることが困難ですか",
+            "name": "F19",
+            "type": "radio",
+            "inline": true,
+            "selector": "いいえ|時々|はい",
+            "selectoridx": "0|2|4",
+            "required": true
+        },
+        {
+            "dispname": "問題のために、一人で家にいるのが怖いですか",
+            "name": "E20",
+            "type": "radio",
+            "inline": true,
+            "selector": "いいえ|時々|はい",
+            "selectoridx": "0|2|4",
+            "required": true
+        },
+        {
+            "dispname": "問題のために、障害があると感じますか",
+            "name": "E21",
+            "type": "radio",
+            "inline": true,
+            "selector": "いいえ|時々|はい",
+            "selectoridx": "0|2|4",
+            "required": true
+        },
+        {
+            "dispname": "問題によって、家族や友人との関係にストレスがかかっていますか",
+            "name": "E22",
+            "type": "radio",
+            "inline": true,
+            "selector": "いいえ|時々|はい",
+            "selectoridx": "0|2|4",
+            "required": true
+        },
+        {
+            "dispname": "問題のために、憂うつになりますか",
+            "name": "E23",
+            "type": "radio",
+            "inline": true,
+            "selector": "いいえ|時々|はい",
+            "selectoridx": "0|2|4",
+            "required": true
+        },
+        {
+            "dispname": "問題によって、仕事や家事の責任に支障をきたしますか",
+            "name": "F24",
+            "type": "radio",
+            "inline": true,
+            "selector": "いいえ|時々|はい",
+            "selectoridx": "0|2|4",
+            "required": true
+        },
+        {
+            "dispname": "かがむことで問題が悪化しますか",
+            "name": "P25",
+            "type": "radio",
+            "inline": true,
+            "selector": "いいえ|時々|はい",
+            "selectoridx": "0|2|4",
+            "required": true
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "dispname": "機能的側面得点",
+            "name": "機能的得点",
+            "type": "eval",
+            "formula": "[[F3.index]] + [[F5.index]] + [[F6.index]] + [[F7.index]] + [[F12.index]] + [[F14.index]] + [[F16.index]] + [[F19.index]] + [[F24.index]]"
+        },
+        {
+            "dispname": "感情的側面得点",
+            "name": "感情的得点",
+            "type": "eval",
+            "formula": "[[E2.index]] + [[E9.index]] + [[E10.index]] + [[E15.index]] + [[E18.index]] + [[E20.index]] + [[E21.index]] + [[E22.index]] + [[E23.index]]"
+        },
+        {
+            "dispname": "身体的側面得点",
+            "name": "身体的得点",
+            "type": "eval",
+            "formula": "[[P1.index]] + [[P4.index]] + [[P8.index]] + [[P11.index]] + [[P13.index]] + [[P17.index]] + [[P25.index]]"
+        },
+        {
+            "dispname": "DHI総合計点",
+            "name": "DHI総合計点",
+            "type": "eval",
+            "formula": "[[機能的得点]] + [[感情的得点]] + [[身体的得点]]"
+        },
+        {
+            "dispname": "重症度判定",
+            "name": "重症度判定",
+            "type": "eval",
+            "formula": "[[DHI総合計点]] >= 54 ? '重度' : ( [[DHI総合計点]] >= 36 ? '中等度' : ( [[DHI総合計点]] >= 16 ? '軽度' : '正常範囲' ) )"
+        },
+        {
+            "name": "Warning: 中等度以上 DHI総合計点 >= 36",
+            "formula": "[[DHI総合計点]] >= 36",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency 重度 DHI総合計点 >= 54",
+            "formula": "[[DHI総合計点]] >= 54",
+            "type": "emergency"
+        }
+    ]
+}

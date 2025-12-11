@@ -1,0 +1,593 @@
+{
+    "_comment": [
+        "MMSE (Mini-Mental State Examination): 認知機能障害のスクリーニング検査",
+        "原典: Folstein, M.F., et al. (1975). Mini-Mental State: a practical method for grading the cognitive state of patients for the clinician. Journal of Psychiatric Research, 12, 189-198.",
+        "日本版: MMSE-J (翻訳・翻案: 杉下守弘、2006年)",
+        "参考URL: https://www.jpn-geriat-soc.or.jp/tool/tool_02.html",
+        "30点満点、23点以下で認知症疑い、27点以下でMCI疑い"
+    ],
+    "title": "MMSE (Mini-Mental State Examination)",
+    "description": [
+        "認知機能障害のスクリーニングを目的とした問診票です。",
+        "30点満点で評価し、所要時間は約10-15分です。"
+    ],
+    "fields": [
+        {
+            "name": "section_orientation_time",
+            "type": "subsection",
+            "dispname": "見当識 - 時間"
+        },
+        {
+            "name": "q1_year_response",
+            "type": "text",
+            "dispname": "今年は何年ですか（回答）",
+            "description": "被検者の回答を記録してください",
+            "required": true
+        },
+        {
+            "name": "q1_year",
+            "type": "radio",
+            "dispname": "今年は何年ですか（採点）",
+            "description": "西暦または年号のどちらでも正答。検査者が採点してください",
+            "selector": [
+                "正答",
+                "誤答"
+            ],
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "q2_season_response",
+            "type": "text",
+            "dispname": "今の季節は何ですか（回答）",
+            "description": "被検者の回答を記録してください",
+            "required": true
+        },
+        {
+            "name": "q2_season",
+            "type": "radio",
+            "dispname": "今の季節は何ですか（採点）",
+            "description": "春夏秋冬、梅雨、初夏・初冬なども正答可。検査者が採点してください",
+            "selector": [
+                "正答",
+                "誤答"
+            ],
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "q3_date_response",
+            "type": "text",
+            "dispname": "今日は何日ですか（回答）",
+            "description": "被検者の回答を記録してください",
+            "required": true
+        },
+        {
+            "name": "q3_date",
+            "type": "radio",
+            "dispname": "今日は何日ですか（採点）",
+            "description": "1日違いでも不正解。検査者が採点してください",
+            "selector": [
+                "正答",
+                "誤答"
+            ],
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "q4_day_of_week_response",
+            "type": "text",
+            "dispname": "今日は何曜日ですか（回答）",
+            "description": "被検者の回答を記録してください",
+            "required": true
+        },
+        {
+            "name": "q4_day_of_week",
+            "type": "radio",
+            "dispname": "今日は何曜日ですか（採点）",
+            "description": "検査者が採点してください",
+            "selector": [
+                "正答",
+                "誤答"
+            ],
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "q5_month_response",
+            "type": "text",
+            "dispname": "今日は何月ですか（回答）",
+            "description": "被検者の回答を記録してください",
+            "required": true
+        },
+        {
+            "name": "q5_month",
+            "type": "radio",
+            "dispname": "今日は何月ですか（採点）",
+            "description": "検査者が採点してください",
+            "selector": [
+                "正答",
+                "誤答"
+            ],
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "section_orientation_place",
+            "type": "subsection",
+            "dispname": "見当識 - 場所"
+        },
+        {
+            "name": "q6_prefecture_response",
+            "type": "text",
+            "dispname": "ここは何県ですか（回答）",
+            "description": "被検者の回答を記録してください",
+            "required": true
+        },
+        {
+            "name": "q6_prefecture",
+            "type": "radio",
+            "dispname": "ここは何県ですか（採点）",
+            "description": "検査者が採点してください",
+            "selector": [
+                "正答",
+                "誤答"
+            ],
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "q7_city_response",
+            "type": "text",
+            "dispname": "ここは何市ですか（回答）",
+            "description": "被検者の回答を記録してください。町・村・区なども含む",
+            "required": true
+        },
+        {
+            "name": "q7_city",
+            "type": "radio",
+            "dispname": "ここは何市ですか（採点）",
+            "description": "町・村・区なども含む。検査者が採点してください",
+            "selector": [
+                "正答",
+                "誤答"
+            ],
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "q8_building_response",
+            "type": "text",
+            "dispname": "ここはどこですか（回答）",
+            "description": "被検者の回答を記録してください。施設や建物の名前",
+            "required": true
+        },
+        {
+            "name": "q8_building",
+            "type": "radio",
+            "dispname": "ここはどこですか（採点）",
+            "description": "施設や建物の名前。通称や略称も正答可。検査者が採点してください",
+            "selector": [
+                "正答",
+                "誤答"
+            ],
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "q9_floor_response",
+            "type": "text",
+            "dispname": "ここは何階ですか（回答）",
+            "description": "被検者の回答を記録してください",
+            "required": true
+        },
+        {
+            "name": "q9_floor",
+            "type": "radio",
+            "dispname": "ここは何階ですか（採点）",
+            "description": "検査者が採点してください",
+            "selector": [
+                "正答",
+                "誤答"
+            ],
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "q10_region_response",
+            "type": "text",
+            "dispname": "ここは何地方ですか（回答）",
+            "description": "被検者の回答を記録してください",
+            "required": true
+        },
+        {
+            "name": "q10_region",
+            "type": "radio",
+            "dispname": "ここは何地方ですか（採点）",
+            "description": "検査者が採点してください",
+            "selector": [
+                "正答",
+                "誤答"
+            ],
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "section_immediate_recall",
+            "type": "subsection",
+            "dispname": "即時想起"
+        },
+        {
+            "name": "q11_recall_instruction",
+            "type": "note",
+            "description": "**指示**: 私がこれから言う言葉を繰り返し言ってください。「さくら、ねこ、電車」。今の言葉は、後で聞くので覚えておいてください。"
+        },
+        {
+            "name": "q11_word1",
+            "type": "radio",
+            "dispname": "1つ目の単語: さくら",
+            "selector": [
+                "正答",
+                "誤答"
+            ],
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "q11_word2",
+            "type": "radio",
+            "dispname": "2つ目の単語: ねこ",
+            "selector": [
+                "正答",
+                "誤答"
+            ],
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "q11_word3",
+            "type": "radio",
+            "dispname": "3つ目の単語: でんしゃ",
+            "selector": [
+                "正答",
+                "誤答"
+            ],
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "section_attention_calculation",
+            "type": "subsection",
+            "dispname": "注意と計算"
+        },
+        {
+            "name": "q12_calculation_instruction",
+            "type": "note",
+            "description": "**指示**: 100から順に7をくり返し引いてください。"
+        },
+        {
+            "name": "q12_calc1",
+            "type": "radio",
+            "dispname": "100-7=",
+            "description": "正答: 93",
+            "selector": [
+                "正答",
+                "誤答"
+            ],
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "q12_calc2",
+            "type": "radio",
+            "dispname": "93-7=",
+            "description": "正答: 86",
+            "selector": [
+                "正答",
+                "誤答"
+            ],
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "q12_calc3",
+            "type": "radio",
+            "dispname": "86-7=",
+            "description": "正答: 79",
+            "selector": [
+                "正答",
+                "誤答"
+            ],
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "q12_calc4",
+            "type": "radio",
+            "dispname": "79-7=",
+            "description": "正答: 72",
+            "selector": [
+                "正答",
+                "誤答"
+            ],
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "q12_calc5",
+            "type": "radio",
+            "dispname": "72-7=",
+            "description": "正答: 65",
+            "selector": [
+                "正答",
+                "誤答"
+            ],
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "section_delayed_recall",
+            "type": "subsection",
+            "dispname": "遅延再生"
+        },
+        {
+            "name": "q13_delayed_instruction",
+            "type": "note",
+            "description": "**指示**: さっき私が覚えてもらった言葉は何でしたか?"
+        },
+        {
+            "name": "q13_word1_recall",
+            "type": "radio",
+            "dispname": "1つ目の単語の想起",
+            "description": "「さくら」が想起できたか",
+            "selector": [
+                "正答",
+                "誤答"
+            ],
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "q13_word2_recall",
+            "type": "radio",
+            "dispname": "2つ目の単語の想起",
+            "description": "「ねこ」が想起できたか",
+            "selector": [
+                "正答",
+                "誤答"
+            ],
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "q13_word3_recall",
+            "type": "radio",
+            "dispname": "3つ目の単語の想起",
+            "description": "「でんしゃ」が想起できたか",
+            "selector": [
+                "正答",
+                "誤答"
+            ],
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "section_naming",
+            "type": "subsection",
+            "dispname": "物品呼称"
+        },
+        {
+            "name": "q14_naming_watch",
+            "type": "radio",
+            "dispname": "時計または鍵を見せて「これは何ですか」",
+            "selector": [
+                "正答",
+                "誤答"
+            ],
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "q14_naming_pencil",
+            "type": "radio",
+            "dispname": "鉛筆を見せて「これは何ですか」",
+            "selector": [
+                "正答",
+                "誤答"
+            ],
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "section_repetition",
+            "type": "subsection",
+            "dispname": "復唱"
+        },
+        {
+            "name": "q15_repetition",
+            "type": "radio",
+            "dispname": "「みんなで、力を合わせて綱を引きます」",
+            "description": "口頭でゆっくり、はっきりと言い、繰り返させる",
+            "selector": [
+                "正答",
+                "誤答"
+            ],
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "section_3stage_command",
+            "type": "subsection",
+            "dispname": "3段階口頭命令"
+        },
+        {
+            "name": "q16_command1",
+            "type": "radio",
+            "dispname": "右手にこの紙を持ってください",
+            "selector": [
+                "正答",
+                "誤答"
+            ],
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "q16_command2",
+            "type": "radio",
+            "dispname": "それを半分に折りたたんでください",
+            "selector": [
+                "正答",
+                "誤答"
+            ],
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "q16_command3",
+            "type": "radio",
+            "dispname": "それを私にください",
+            "selector": [
+                "正答",
+                "誤答"
+            ],
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "section_reading_comprehension",
+            "type": "subsection",
+            "dispname": "読字理解"
+        },
+        {
+            "name": "q17_reading",
+            "type": "radio",
+            "dispname": "「目を閉じてください」を読んで実行する",
+            "description": "音読でも黙読でも構わない",
+            "selector": [
+                "正答",
+                "誤答"
+            ],
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "section_writing",
+            "type": "subsection",
+            "dispname": "書字"
+        },
+        {
+            "name": "q18_writing",
+            "type": "radio",
+            "dispname": "何か文章を書いてください",
+            "description": "主語がなくても文章として成り立っていれば正答",
+            "selector": [
+                "正答",
+                "誤答"
+            ],
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "section_drawing",
+            "type": "subsection",
+            "dispname": "図形模写"
+        },
+        {
+            "name": "q19_drawing",
+            "type": "radio",
+            "dispname": "重なり合う五角形の模写",
+            "description": "五角形の角がそれぞれ5つあり、2つの五角形が交差していれば正答",
+            "selector": [
+                "正答",
+                "誤答"
+            ],
+            "required": true,
+            "inline": true
+        },
+        {
+            "name": "separator_scores",
+            "type": "separator"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "orientation_time_score",
+            "type": "eval",
+            "dispname": "時間の見当識得点(5点満点)",
+            "formula": "([[q1_year.index]] == 0 ? 1 : 0) + ([[q2_season.index]] == 0 ? 1 : 0) + ([[q3_date.index]] == 0 ? 1 : 0) + ([[q4_day_of_week.index]] == 0 ? 1 : 0) + ([[q5_month.index]] == 0 ? 1 : 0)"
+        },
+        {
+            "name": "orientation_place_score",
+            "type": "eval",
+            "dispname": "場所の見当識得点(5点満点)",
+            "formula": "([[q6_prefecture.index]] == 0 ? 1 : 0) + ([[q7_city.index]] == 0 ? 1 : 0) + ([[q8_building.index]] == 0 ? 1 : 0) + ([[q9_floor.index]] == 0 ? 1 : 0) + ([[q10_region.index]] == 0 ? 1 : 0)"
+        },
+        {
+            "name": "immediate_recall_score",
+            "type": "eval",
+            "dispname": "即時想起得点(3点満点)",
+            "formula": "([[q11_word1.index]] == 0 ? 1 : 0) + ([[q11_word2.index]] == 0 ? 1 : 0) + ([[q11_word3.index]] == 0 ? 1 : 0)"
+        },
+        {
+            "name": "attention_calculation_score",
+            "type": "eval",
+            "dispname": "注意と計算得点(5点満点)",
+            "formula": "([[q12_calc1.index]] == 0 ? 1 : 0) + ([[q12_calc2.index]] == 0 ? 1 : 0) + ([[q12_calc3.index]] == 0 ? 1 : 0) + ([[q12_calc4.index]] == 0 ? 1 : 0) + ([[q12_calc5.index]] == 0 ? 1 : 0)"
+        },
+        {
+            "name": "delayed_recall_score",
+            "type": "eval",
+            "dispname": "遅延再生得点(3点満点)",
+            "formula": "([[q13_word1_recall.index]] == 0 ? 1 : 0) + ([[q13_word2_recall.index]] == 0 ? 1 : 0) + ([[q13_word3_recall.index]] == 0 ? 1 : 0)"
+        },
+        {
+            "name": "naming_score",
+            "type": "eval",
+            "dispname": "物品呼称得点(2点満点)",
+            "formula": "([[q14_naming_watch.index]] == 0 ? 1 : 0) + ([[q14_naming_pencil.index]] == 0 ? 1 : 0)"
+        },
+        {
+            "name": "repetition_score",
+            "type": "eval",
+            "dispname": "復唱得点(1点満点)",
+            "formula": "[[q15_repetition.index]] == 0 ? 1 : 0"
+        },
+        {
+            "name": "command_score",
+            "type": "eval",
+            "dispname": "3段階口頭命令得点(3点満点)",
+            "formula": "([[q16_command1.index]] == 0 ? 1 : 0) + ([[q16_command2.index]] == 0 ? 1 : 0) + ([[q16_command3.index]] == 0 ? 1 : 0)"
+        },
+        {
+            "name": "reading_score",
+            "type": "eval",
+            "dispname": "読字理解得点(1点満点)",
+            "formula": "[[q17_reading.index]] == 0 ? 1 : 0"
+        },
+        {
+            "name": "writing_score",
+            "type": "eval",
+            "dispname": "書字得点(1点満点)",
+            "formula": "[[q18_writing.index]] == 0 ? 1 : 0"
+        },
+        {
+            "name": "drawing_score",
+            "type": "eval",
+            "dispname": "図形模写得点(1点満点)",
+            "formula": "[[q19_drawing.index]] == 0 ? 1 : 0"
+        },
+        {
+            "name": "total_score",
+            "type": "eval",
+            "dispname": "MMSE総得点(30点満点)",
+            "formula": "[[orientation_time_score]] + [[orientation_place_score]] + [[immediate_recall_score]] + [[attention_calculation_score]] + [[delayed_recall_score]] + [[naming_score]] + [[repetition_score]] + [[command_score]] + [[reading_score]] + [[writing_score]] + [[drawing_score]]"
+        },
+        {
+            "name": "cognitive_status",
+            "type": "eval",
+            "dispname": "認知機能評価",
+            "formula": "[[total_score]] >= 28 ? \"正常範囲\" : [[total_score]] >= 24 ? \"軽度認知障害疑い\" : \"認知症疑い\""
+        }
+    ]
+}

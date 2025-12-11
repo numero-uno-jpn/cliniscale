@@ -1,0 +1,925 @@
+{
+    "_comment": [
+        "Behavior Rating Inventory of Executive Function (BRIEF)",
+        "Gerard Gioia, Peter Isquith, Steven Guy, Lauren Kenworthy (2000)により開発",
+        "5-18歳の子どもの実行機能を家庭・学校環境で評価する86項目の質問紙",
+        "原典: Gioia, G. A., Isquith, P. K., Guy, S. C., & Kenworthy, L. (2000). Behavior Rating Inventory of Executive Function. Lutz, FL: PAR.",
+        "公式サイト: https://www.parinc.com/products/BRIEF"
+    ],
+    "title": "BRIEF 実行機能行動評価尺度",
+    "description": [
+        "この問診票は、お子さんの日常生活における実行機能の特徴を把握するためのものです。",
+        "過去6か月間のお子さんの行動について、最もよく当てはまる選択肢をお選びください。",
+        "全86項目で構成される原典準拠版です。"
+    ],
+    "contact": "担当医師",
+    "dept_in_charge": "小児科",
+    "fields": [
+        {
+            "dispname": "抑制（衝動制御）- 10項目",
+            "type": "subsection"
+        },
+        {
+            "dispname": "宿題をするとき、気が散りやすい",
+            "name": "inhibit_1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "衝動的に行動する",
+            "name": "inhibit_2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "話しているときに割り込む",
+            "name": "inhibit_3",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "考える前に行動する",
+            "name": "inhibit_4",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "適切でないときに話す",
+            "name": "inhibit_5",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "興奮すると制御が困難になる",
+            "name": "inhibit_6",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "不適切な行動を止められない",
+            "name": "inhibit_7",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "活動に夢中になりすぎる",
+            "name": "inhibit_8",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "怒りを爆発させる",
+            "name": "inhibit_9",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "すぐにかんしゃくを起こす",
+            "name": "inhibit_10",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "切り替え（認知的柔軟性）- 8項目",
+            "type": "subsection"
+        },
+        {
+            "dispname": "新しい状況に適応するのが困難",
+            "name": "shift_1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "活動を切り替えるとき動揺する",
+            "name": "shift_2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "変化を嫌がる",
+            "name": "shift_3",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "問題解決の別の方法を思い付かない",
+            "name": "shift_4",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "一つのことにこだわりすぎる",
+            "name": "shift_5",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "予定が変わると動揺する",
+            "name": "shift_6",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "新しいやり方に抵抗する",
+            "name": "shift_7",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "ルーチンや決まりが変わるとイライラする",
+            "name": "shift_8",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "感情統制（感情調整）- 10項目",
+            "type": "subsection"
+        },
+        {
+            "dispname": "ささいなことで感情的になる",
+            "name": "emotional_1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "予想外のことが起こると感情的になる",
+            "name": "emotional_2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "感情の変動が激しい",
+            "name": "emotional_3",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "怒りを爆発させる",
+            "name": "emotional_4",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "問題があるとすぐに動揺する",
+            "name": "emotional_5",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "過度に感情的な反応を示す",
+            "name": "emotional_6",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "感情をコントロールできない",
+            "name": "emotional_7",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "悲しんだり落ち込んだりするとなかなか立ち直れない",
+            "name": "emotional_8",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "急に機嫌が悪くなる",
+            "name": "emotional_9",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "興奮すると落ち着くのに時間がかかる",
+            "name": "emotional_10",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "開始（課題の開始）- 8項目",
+            "type": "subsection"
+        },
+        {
+            "dispname": "自分でアイデアを思い付くのが困難",
+            "name": "initiate_1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "課題や活動を始めるのが困難",
+            "name": "initiate_2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "宿題を始めるのに時間がかかる",
+            "name": "initiate_3",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "プロジェクトを開始するのが困難",
+            "name": "initiate_4",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "自発的な問題解決が困難",
+            "name": "initiate_5",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "独立して課題を開始できない",
+            "name": "initiate_6",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "創造的な問題解決策が思い浮かばない",
+            "name": "initiate_7",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "新しい活動を始める意欲がない",
+            "name": "initiate_8",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "ワーキングメモリ（作業記憶）- 10項目",
+            "type": "subsection"
+        },
+        {
+            "dispname": "複数の指示を覚えていられない",
+            "name": "working_memory_1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "課題をしているときに重要な部分を忘れる",
+            "name": "working_memory_2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "複雑な指示を理解するのが困難",
+            "name": "working_memory_3",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "課題の途中で何をしていたか忘れる",
+            "name": "working_memory_4",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "多段階の指示についていけない",
+            "name": "working_memory_5",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "課題に必要な情報を記憶できない",
+            "name": "working_memory_6",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "約束や予定を忘れる",
+            "name": "working_memory_7",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "宿題の内容を覚えていない",
+            "name": "working_memory_8",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "必要な情報を頭の中で保持できない",
+            "name": "working_memory_9",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "課題の途中でやるべきことを見失う",
+            "name": "working_memory_10",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "計画・整理（目標設定と系統的実行）- 12項目",
+            "type": "subsection"
+        },
+        {
+            "dispname": "課題の優先順位を決められない",
+            "name": "plan_organize_1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "大きな課題を小さな部分に分けられない",
+            "name": "plan_organize_2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "課題に効率的に取り組めない",
+            "name": "plan_organize_3",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "課題を順序立てて行うのが困難",
+            "name": "plan_organize_4",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "将来の出来事に備えられない",
+            "name": "plan_organize_5",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "課題を完成させるための計画を立てられない",
+            "name": "plan_organize_6",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "時間を効果的に管理できない",
+            "name": "plan_organize_7",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "目標に向かって計画的に行動できない",
+            "name": "plan_organize_8",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "複雑な課題を整理して取り組めない",
+            "name": "plan_organize_9",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "やるべきことの手順を考えられない",
+            "name": "plan_organize_10",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "長期的な目標を設定できない",
+            "name": "plan_organize_11",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "スケジュールを管理するのが困難",
+            "name": "plan_organize_12",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "物の整理（作業環境の整頓）- 8項目",
+            "type": "subsection"
+        },
+        {
+            "dispname": "部屋や遊び場が散らかっている",
+            "name": "organization_1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "学校の道具や持ち物を整理できない",
+            "name": "organization_2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "必要な物がどこにあるか分からない",
+            "name": "organization_3",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "バックパックや机が整理されていない",
+            "name": "organization_4",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "物をあちこちに置き忘れる",
+            "name": "organization_5",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "整理整頓を維持できない",
+            "name": "organization_6",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "作業スペースが散乱している",
+            "name": "organization_7",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "物を決まった場所に戻さない",
+            "name": "organization_8",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "監視（自己評価と他者への影響の理解）- 10項目",
+            "type": "subsection"
+        },
+        {
+            "dispname": "自分の行動が他人に与える影響を理解していない",
+            "name": "monitor_1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "仕事を確認しない",
+            "name": "monitor_2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "間違いに気付かない",
+            "name": "monitor_3",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "自分の行動を客観視できない",
+            "name": "monitor_4",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "課題の出来栄えを評価できない",
+            "name": "monitor_5",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "自分の問題に気付かない",
+            "name": "monitor_6",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "パフォーマンスの質をチェックしない",
+            "name": "monitor_7",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "自分の言動がどう受け取られるかわからない",
+            "name": "monitor_8",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "課題の進捗を把握していない",
+            "name": "monitor_9",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "自分の能力や限界を理解していない",
+            "name": "monitor_10",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "妥当性チェック項目",
+            "type": "subsection"
+        },
+        {
+            "dispname": "机の上で物を移動させる",
+            "name": "inconsistency_1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "歩いている",
+            "name": "inconsistency_2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "朝、目を覚ます",
+            "name": "inconsistency_3",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "椅子に座る",
+            "name": "inconsistency_4",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "ドアを開ける",
+            "name": "inconsistency_5",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "ひどい行動をとる",
+            "name": "negativity_1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "問題行動が多い",
+            "name": "negativity_2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "最悪な行動をする",
+            "name": "negativity_3",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "極めて困った行動をとる",
+            "name": "negativity_4",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "dispname": "非常に問題のある行動をする",
+            "name": "negativity_5",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "全くない|時々ある|よくある",
+            "selectoridx": "1|2|3"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "inhibit_score",
+            "type": "eval",
+            "dispname": "抑制スケール得点",
+            "formula": "[[inhibit_1.index]] + [[inhibit_2.index]] + [[inhibit_3.index]] + [[inhibit_4.index]] + [[inhibit_5.index]] + [[inhibit_6.index]] + [[inhibit_7.index]] + [[inhibit_8.index]] + [[inhibit_9.index]] + [[inhibit_10.index]]"
+        },
+        {
+            "name": "shift_score",
+            "type": "eval",
+            "dispname": "切り替えスケール得点",
+            "formula": "[[shift_1.index]] + [[shift_2.index]] + [[shift_3.index]] + [[shift_4.index]] + [[shift_5.index]] + [[shift_6.index]] + [[shift_7.index]] + [[shift_8.index]]"
+        },
+        {
+            "name": "emotional_control_score",
+            "type": "eval",
+            "dispname": "感情統制スケール得点",
+            "formula": "[[emotional_1.index]] + [[emotional_2.index]] + [[emotional_3.index]] + [[emotional_4.index]] + [[emotional_5.index]] + [[emotional_6.index]] + [[emotional_7.index]] + [[emotional_8.index]] + [[emotional_9.index]] + [[emotional_10.index]]"
+        },
+        {
+            "name": "initiate_score",
+            "type": "eval",
+            "dispname": "開始スケール得点",
+            "formula": "[[initiate_1.index]] + [[initiate_2.index]] + [[initiate_3.index]] + [[initiate_4.index]] + [[initiate_5.index]] + [[initiate_6.index]] + [[initiate_7.index]] + [[initiate_8.index]]"
+        },
+        {
+            "name": "working_memory_score",
+            "type": "eval",
+            "dispname": "ワーキングメモリスケール得点",
+            "formula": "[[working_memory_1.index]] + [[working_memory_2.index]] + [[working_memory_3.index]] + [[working_memory_4.index]] + [[working_memory_5.index]] + [[working_memory_6.index]] + [[working_memory_7.index]] + [[working_memory_8.index]] + [[working_memory_9.index]] + [[working_memory_10.index]]"
+        },
+        {
+            "name": "plan_organize_score",
+            "type": "eval",
+            "dispname": "計画・整理スケール得点",
+            "formula": "[[plan_organize_1.index]] + [[plan_organize_2.index]] + [[plan_organize_3.index]] + [[plan_organize_4.index]] + [[plan_organize_5.index]] + [[plan_organize_6.index]] + [[plan_organize_7.index]] + [[plan_organize_8.index]] + [[plan_organize_9.index]] + [[plan_organize_10.index]] + [[plan_organize_11.index]] + [[plan_organize_12.index]]"
+        },
+        {
+            "name": "organization_materials_score",
+            "type": "eval",
+            "dispname": "物の整理スケール得点",
+            "formula": "[[organization_1.index]] + [[organization_2.index]] + [[organization_3.index]] + [[organization_4.index]] + [[organization_5.index]] + [[organization_6.index]] + [[organization_7.index]] + [[organization_8.index]]"
+        },
+        {
+            "name": "monitor_score",
+            "type": "eval",
+            "dispname": "監視スケール得点",
+            "formula": "[[monitor_1.index]] + [[monitor_2.index]] + [[monitor_3.index]] + [[monitor_4.index]] + [[monitor_5.index]] + [[monitor_6.index]] + [[monitor_7.index]] + [[monitor_8.index]] + [[monitor_9.index]] + [[monitor_10.index]]"
+        },
+        {
+            "name": "bri_score",
+            "type": "eval",
+            "dispname": "行動調整指標 (BRI)",
+            "formula": "[[inhibit_score]] + [[shift_score]] + [[emotional_control_score]]"
+        },
+        {
+            "name": "mi_score",
+            "type": "eval",
+            "dispname": "メタ認知指標 (MI)",
+            "formula": "[[initiate_score]] + [[working_memory_score]] + [[plan_organize_score]] + [[organization_materials_score]] + [[monitor_score]]"
+        },
+        {
+            "name": "gec_score",
+            "type": "eval",
+            "dispname": "全般的実行機能複合得点 (GEC)",
+            "formula": "[[bri_score]] + [[mi_score]]"
+        },
+        {
+            "name": "inconsistency_score",
+            "type": "eval",
+            "dispname": "非一貫性指標（7以上で注意）",
+            "formula": "[[inconsistency_1.index]] + [[inconsistency_2.index]] + [[inconsistency_3.index]] + [[inconsistency_4.index]] + [[inconsistency_5.index]]"
+        },
+        {
+            "name": "negativity_score",
+            "type": "eval",
+            "dispname": "否定的反応指標",
+            "formula": "[[negativity_1.index]] + [[negativity_2.index]] + [[negativity_3.index]] + [[negativity_4.index]] + [[negativity_5.index]]"
+        },
+        {
+            "name": "Warning: 非一貫性指標が7以上",
+            "formula": "[[inconsistency_score]] >= 7",
+            "type": "warning"
+        },
+        {
+            "name": "Warning: GEC得点が150以上（軽度の困難）",
+            "formula": "[[gec_score]] >= 150",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: GEC得点が180以上（臨床的に有意）",
+            "formula": "[[gec_score]] >= 180",
+            "type": "emergency"
+        }
+    ]
+}

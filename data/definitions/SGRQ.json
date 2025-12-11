@@ -1,0 +1,733 @@
+{
+    "_comment": [
+        "St. George's Respiratory Questionnaire (SGRQ) - 日本語版",
+        "原典: Jones PW, et al. St. George's University of London",
+        "呼吸器疾患患者の健康関連QOL評価尺度",
+        "50項目、3つのコンポーネント(症状、活動、影響)と総合スコア",
+        "質問構成: Part 1 (Q1-8), Part 2 (Q9-17)",
+        "スコア範囲: 0-100点(高いほど健康状態が悪い)",
+        "公式サイト: https://www.sgul.ac.uk/research/research-operations/research-administration/st-georges-respiratory-questionnaire",
+        "公式マニュアル2022年3月版に基づく完全実装"
+    ],
+    "title": "SGRQ St. George's 呼吸器質問票",
+    "description": [
+        "この質問票は、あなたの呼吸の問題がどの程度困っているか、またそれがあなたの生活にどのような影響を与えているかを調べるためのものです。",
+        "この質問票を使用して、あなたの病気のどの側面が最も問題となっているかを見つけ出します。",
+        "第1部は過去1年間について、第2部は現在の状態についてお答えください。回答に時間をかけすぎないでください。"
+    ],
+    "contact": "呼吸器内科",
+    "dept_in_charge": "呼吸器内科",
+    "submit_button_title": "回答を送信する",
+    "fields": [
+        {
+            "dispname": "現在の健康状態",
+            "description": "現在のあなたの健康状態についてお答えください",
+            "type": "subsection"
+        },
+        {
+            "dispname": "現在の健康状態",
+            "name": "健康状態",
+            "type": "radio",
+            "selector": [
+                "とても良い",
+                "良い",
+                "普通",
+                "悪い",
+                "とても悪い"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "第1部: 呼吸器症状について(過去1年間)",
+            "description": "過去1年間で、どの程度胸の症状があったかについての質問です。",
+            "type": "subsection"
+        },
+        {
+            "dispname": "1. 咳が出ましたか",
+            "name": "Q1_咳",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "ほとんど毎日",
+                "週に数日",
+                "月に数日",
+                "胸の感染症のときだけ",
+                "全くなし"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "2. たんが出ましたか",
+            "name": "Q2_たん",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "ほとんど毎日",
+                "週に数日",
+                "月に数日",
+                "胸の感染症のときだけ",
+                "全くなし"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "3. 息切れがありましたか",
+            "name": "Q3_息切れ",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "ほとんど毎日",
+                "週に数日",
+                "月に数日",
+                "激しい運動のときだけ",
+                "全くなし"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "4. 喘鳴の発作がありましたか",
+            "name": "Q4_喘鳴",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "ほとんど毎日",
+                "週に数日",
+                "月に数日",
+                "胸の感染症のときだけ",
+                "全くなし"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "5. 過去1年間に重症または非常に不快な胸の症状の発作は何回ありましたか",
+            "name": "Q5_発作回数",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "3回以上",
+                "3回",
+                "2回",
+                "1回",
+                "なし"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "6. 最も悪かった胸の症状の発作はどのくらい続きましたか",
+            "name": "Q6_発作持続",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "1週間以上",
+                "3日以上",
+                "1〜2日",
+                "1日未満"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "7. 過去1年間の典型的な1週間で、良い日(胸の症状がほとんどない日)はどのくらいありましたか",
+            "name": "Q7_良い日",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "良い日がない",
+                "1〜2日",
+                "3〜4日",
+                "ほとんど毎日が良い",
+                "毎日良い"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "dispname": "8. 喘鳴がある場合、朝に悪化しますか",
+            "name": "Q8_朝の喘鳴",
+            "description": "喘鳴があり、かつ朝に悪化する場合のみ「はい」を選択してください",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "喘鳴なし、または朝悪化しない",
+                "喘鳴があり朝悪化する"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "第2部: 現在の状態について",
+            "description": "現在の状態について、どの程度胸の症状があるかについての質問です。",
+            "type": "subsection"
+        },
+        {
+            "dispname": "9. あなたの胸の状態をどのように表現しますか",
+            "name": "Q9_胸の状態",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "私が抱える最も重要な問題である",
+                "かなり多くの問題を引き起こす",
+                "いくつかの問題を引き起こす",
+                "問題を引き起こさない"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "10. 有給の仕事に就いたことがある場合",
+            "name": "Q10_仕事",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "胸の症状のため仕事を辞めた",
+                "胸の症状が仕事に支障をきたすか、仕事を変えた",
+                "胸の症状は仕事に影響しない"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "dispname": "11. 通常息切れを感じる活動について",
+            "type": "subsection"
+        },
+        {
+            "dispname": "座っているか横になっている",
+            "name": "Q11a_座位臥位",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "洗面や着替え",
+            "name": "Q11b_洗面着替え",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "家の中を歩く",
+            "name": "Q11c_家内歩行",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "平地を外で歩く",
+            "name": "Q11d_平地歩行",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "階段を1階分上がる",
+            "name": "Q11e_階段1階分",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "坂道を上がる",
+            "name": "Q11f_坂道",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "スポーツやゲームをする",
+            "name": "Q11g_スポーツ",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "12. 咳と息切れについて",
+            "type": "subsection"
+        },
+        {
+            "dispname": "咳が痛い",
+            "name": "Q12a_咳の痛み",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "咳で疲れる",
+            "name": "Q12b_咳による疲労",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "話すときに息切れする",
+            "name": "Q12c_話す時の息切れ",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "かがむときに息切れする",
+            "name": "Q12d_かがむ時の息切れ",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "咳や呼吸で睡眠が妨げられる",
+            "name": "Q12e_睡眠障害",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "すぐに疲れる",
+            "name": "Q12f_易疲労",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "13. 胸の症状があなたに与える他の影響について",
+            "type": "subsection"
+        },
+        {
+            "dispname": "人前で咳や呼吸が恥ずかしい",
+            "name": "Q13a_恥ずかしさ",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "胸の症状は家族や友人、隣人に迷惑をかけている",
+            "name": "Q13b_迷惑",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "息ができなくなると恐怖やパニックを感じる",
+            "name": "Q13c_恐怖パニック",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "胸の問題をコントロールできていないと感じる",
+            "name": "Q13d_コントロール不能",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "胸の症状が良くなるとは思わない",
+            "name": "Q13e_予後悲観",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "胸の症状のため弱くなったり無力になったりしている",
+            "name": "Q13f_虚弱無力",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "運動は自分にとって安全ではないと思う",
+            "name": "Q13g_運動不安",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "すべてが大変な努力を要すると感じる",
+            "name": "Q13h_全て困難",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "14. 薬物療法について",
+            "type": "subsection"
+        },
+        {
+            "dispname": "薬があまり役に立たない",
+            "name": "Q14a_薬無効",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "人前で薬を使うのが恥ずかしい",
+            "name": "Q14b_薬使用恥",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "薬の不快な副作用がある",
+            "name": "Q14c_副作用",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "薬が生活に大きく支障をきたす",
+            "name": "Q14d_薬支障",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "15. 呼吸により活動がどの程度影響を受けるか",
+            "type": "subsection"
+        },
+        {
+            "dispname": "洗面や着替えに時間がかかる",
+            "name": "Q15a_洗面着替え時間",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "入浴やシャワーができない、または時間がかかる",
+            "name": "Q15b_入浴",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "他の人より歩くのが遅い、または休憩が必要",
+            "name": "Q15c_歩行速度",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "家事に時間がかかる、または休憩が必要",
+            "name": "Q15d_家事",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "1階分の階段をゆっくり上がる、または途中で止まる必要がある",
+            "name": "Q15e_階段ゆっくり",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "急いだり早歩きをしたりすると止まったり遅くしたりする必要がある",
+            "name": "Q15f_急歩",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "呼吸により軽い運動(坂道を歩く、階段で物を運ぶ、軽い庭仕事、ダンス、ボウリング、ゴルフなど)が困難",
+            "name": "Q15g_軽い運動",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "呼吸により中等度の運動(重い荷物を運ぶ、庭を掘る、雪かき、ジョギング、時速8キロで歩く、テニス、水泳など)が困難",
+            "name": "Q15h_中等度運動",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "呼吸により激しい運動(重労働、走る、サイクリング、速く泳ぐ、競技スポーツなど)が困難",
+            "name": "Q15i_激しい運動",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "16. 胸の症状が日常生活に与える影響",
+            "type": "subsection"
+        },
+        {
+            "dispname": "スポーツやゲームができない",
+            "name": "Q16a_スポーツ不可",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "娯楽やレクリエーションのために外出できない",
+            "name": "Q16b_娯楽外出不可",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "買い物のために家から出ることができない",
+            "name": "Q16c_買い物外出不可",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "家事ができない",
+            "name": "Q16d_家事不可",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "ベッドや椅子から遠く離れることができない",
+            "name": "Q16e_移動制限",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "inline": true,
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "17. 胸の症状があなたに与える全体的な影響について",
+            "description": "あなたの胸の症状は生活全般にどの程度影響しますか。最も当てはまるものを選んでください。",
+            "type": "subsection"
+        },
+        {
+            "dispname": "胸の症状が生活全般に与える影響",
+            "name": "Q17_全体的影響",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "したいことを何もやめさせない",
+                "したいことの1つか2つをやめさせる",
+                "したいことのほとんどをやめさせる",
+                "したいことをすべてやめさせる"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "症状スコア",
+            "type": "eval",
+            "formula": "( ( ([[Q1_咳.index]] == 0 ? 80.6 : ([[Q1_咳.index]] == 1 ? 63.2 : ([[Q1_咳.index]] == 2 ? 29.3 : ([[Q1_咳.index]] == 3 ? 28.1 : 0)))) + ([[Q2_たん.index]] == 0 ? 76.8 : ([[Q2_たん.index]] == 1 ? 60.0 : ([[Q2_たん.index]] == 2 ? 34.0 : ([[Q2_たん.index]] == 3 ? 30.2 : 0)))) + ([[Q3_息切れ.index]] == 0 ? 87.2 : ([[Q3_息切れ.index]] == 1 ? 71.4 : ([[Q3_息切れ.index]] == 2 ? 43.7 : ([[Q3_息切れ.index]] == 3 ? 35.7 : 0)))) + ([[Q4_喘鳴.index]] == 0 ? 86.2 : ([[Q4_喘鳴.index]] == 1 ? 71.0 : ([[Q4_喘鳴.index]] == 2 ? 45.6 : ([[Q4_喘鳴.index]] == 3 ? 36.4 : 0)))) + ([[Q5_発作回数.index]] == 0 ? 86.7 : ([[Q5_発作回数.index]] == 1 ? 73.5 : ([[Q5_発作回数.index]] == 2 ? 60.3 : ([[Q5_発作回数.index]] == 3 ? 44.2 : 0)))) + ([[Q6_発作持続.index]] == 0 ? 89.7 : ([[Q6_発作持続.index]] == 1 ? 73.5 : ([[Q6_発作持続.index]] == 2 ? 58.8 : 41.9))) + ([[Q7_良い日.index]] == 0 ? 93.3 : ([[Q7_良い日.index]] == 1 ? 76.6 : ([[Q7_良い日.index]] == 2 ? 61.5 : ([[Q7_良い日.index]] == 3 ? 15.4 : 0)))) + ([[Q8_朝の喘鳴.index]] == 1 ? 62.0 : 0) ) / 662.5 * 100).toFixed(2)"
+        },
+        {
+            "name": "活動スコア",
+            "type": "eval",
+            "formula": "( ( ([[Q11a_座位臥位.index]] * 90.6) + ([[Q11b_洗面着替え.index]] * 82.8) + ([[Q11c_家内歩行.index]] * 80.2) + ([[Q11d_平地歩行.index]] * 81.4) + ([[Q11e_階段1階分.index]] * 76.1) + ([[Q11f_坂道.index]] * 75.1) + ([[Q11g_スポーツ.index]] * 72.1) + ([[Q15a_洗面着替え時間.index]] * 74.2) + ([[Q15b_入浴.index]] * 81.0) + ([[Q15c_歩行速度.index]] * 71.7) + ([[Q15d_家事.index]] * 70.6) + ([[Q15e_階段ゆっくり.index]] * 71.6) + ([[Q15f_急歩.index]] * 72.3) + ([[Q15g_軽い運動.index]] * 74.5) + ([[Q15h_中等度運動.index]] * 71.4) + ([[Q15i_激しい運動.index]] * 63.5) ) / 1209.1 * 100).toFixed(2)"
+        },
+        {
+            "name": "影響スコア",
+            "type": "eval",
+            "formula": "( ( ([[Q9_胸の状態.index]] == 0 ? 83.2 : ([[Q9_胸の状態.index]] == 1 ? 82.5 : ([[Q9_胸の状態.index]] == 2 ? 34.6 : 0))) + ([[Q10_仕事.index]] == 0 ? 88.9 : ([[Q10_仕事.index]] == 1 ? 77.6 : 0)) + ([[Q12a_咳の痛み.index]] * 81.1) + ([[Q12b_咳による疲労.index]] * 79.1) + ([[Q12c_話す時の息切れ.index]] * 84.5) + ([[Q12d_かがむ時の息切れ.index]] * 76.8) + ([[Q12e_睡眠障害.index]] * 87.9) + ([[Q12f_易疲労.index]] * 84.0) + ([[Q13a_恥ずかしさ.index]] * 74.1) + ([[Q13b_迷惑.index]] * 79.1) + ([[Q13c_恐怖パニック.index]] * 87.7) + ([[Q13d_コントロール不能.index]] * 90.1) + ([[Q13e_予後悲観.index]] * 82.3) + ([[Q13f_虚弱無力.index]] * 89.9) + ([[Q13g_運動不安.index]] * 75.7) + ([[Q13h_全て困難.index]] * 84.5) + ([[Q14a_薬無効.index]] * 88.2) + ([[Q14b_薬使用恥.index]] * 53.9) + ([[Q14c_副作用.index]] * 81.1) + ([[Q14d_薬支障.index]] * 70.3) + ([[Q16a_スポーツ不可.index]] * 64.8) + ([[Q16b_娯楽外出不可.index]] * 79.8) + ([[Q16c_買い物外出不可.index]] * 81.0) + ([[Q16d_家事不可.index]] * 79.1) + ([[Q16e_移動制限.index]] * 94.0) + ([[Q17_全体的影響.index]] == 1 ? 42.0 : ([[Q17_全体的影響.index]] == 2 ? 84.2 : ([[Q17_全体的影響.index]] == 3 ? 96.7 : 0))) ) / 2117.8 * 100).toFixed(2)"
+        },
+        {
+            "name": "総合スコア",
+            "type": "eval",
+            "formula": "( ( ( ((症状スコア)) * 662.5 / 100 ) + ( ((活動スコア)) * 1209.1 / 100 ) + ( ((影響スコア)) * 2117.8 / 100 ) ) / 3989.4 * 100).toFixed(2)"
+        },
+        {
+            "name": "重症度判定",
+            "type": "eval",
+            "formula": "((総合スコア)) >= 50 ? '重度' : ( ((総合スコア)) >= 25 ? '中等度' : '軽度' )"
+        },
+        {
+            "name": "Warning: SGRQ総合スコア中等度",
+            "formula": "((総合スコア)) >= 25",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: SGRQ総合スコア重度",
+            "formula": "((総合スコア)) >= 50",
+            "type": "emergency"
+        }
+    ]
+}

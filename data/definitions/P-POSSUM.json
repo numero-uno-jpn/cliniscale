@@ -1,0 +1,306 @@
+{
+  "_comment": [
+    "P-POSSUM (Portsmouth POSSUM) 消化器外科術後死亡・合併症予測スコア",
+    "原著: Prytherch DR, et al. Br J Surg. 1998;85:1217-20",
+    "開発: 1998年、Portsmouth大学 Prytherch博士ら",
+    "改良版: 元のPOSSUMスコア(Copeland et al. 1991)の死亡率過大予測を修正",
+    "計算式: ln[R/(1-R)] = -9.065 + (0.1692×生理学的スコア) + (0.155×手術重症度スコア)",
+    "注意: 原著では手術重症度スコアに出血量項目が含まれるが、本実装では簡易版として省略",
+    "対象: 一般外科・消化器外科の待機・緊急手術の術後死亡・合併症リスク評価"
+  ],
+  "title": "P-POSSUM 消化器外科術後死亡・合併症予測スコア",
+  "description": [
+    "消化器外科手術の術後死亡・合併症リスクを予測するスコアです",
+    "18項目の術前・術中因子から死亡・合併症確率を算出します"
+  ],
+  "contact": "消化器外科",
+  "fields": [
+    {
+      "dispname": "生理学的評価",
+      "type": "subsection"
+    },
+    {
+      "dispname": "年齢",
+      "name": "年齢",
+      "type": "radio",
+      "selector": [
+        "60歳以下",
+        "61-70歳",
+        "71歳以上"
+      ],
+      "selectoridx": "1|2|4",
+      "required": true
+    },
+    {
+      "dispname": "心不全兆候",
+      "name": "心不全兆候",
+      "type": "radio",
+      "selector": [
+        "なし",
+        "末梢循環不全のみ",
+        "頸静脈拡張",
+        "心不全",
+        "重篤な心不全"
+      ],
+      "selectoridx": "1|2|4|8|8",
+      "required": true
+    },
+    {
+      "dispname": "呼吸器症状",
+      "name": "呼吸器症状",
+      "type": "radio",
+      "selector": [
+        "異常なし",
+        "軽度呼吸困難",
+        "中等度呼吸困難・喘鳴",
+        "安静時呼吸困難",
+        "人工呼吸管理"
+      ],
+      "selectoridx": "1|2|4|8|8",
+      "required": true
+    },
+    {
+      "dispname": "胸部X線所見",
+      "name": "胸部X線所見",
+      "type": "radio",
+      "selector": [
+        "正常",
+        "軽微な異常",
+        "中等度異常",
+        "高度異常"
+      ],
+      "selectoridx": "1|2|4|8",
+      "required": true
+    },
+    {
+      "dispname": "収縮期血圧",
+      "name": "収縮期血圧",
+      "type": "radio",
+      "selector": [
+        "110-130mmHg",
+        "131-170mmHg または 100-109mmHg",
+        "171mmHg以上 または 90-99mmHg",
+        "89mmHg以下"
+      ],
+      "selectoridx": "1|2|4|8",
+      "required": true,
+      "description": "術前の収縮期血圧を選択してください"
+    },
+    {
+      "dispname": "脈拍数",
+      "name": "脈拍数",
+      "type": "radio",
+      "selector": [
+        "50-80回/分",
+        "81-100回/分 または 40-49回/分",
+        "101-120回/分",
+        "120回/分以上 または 40回/分未満"
+      ],
+      "selectoridx": "1|2|4|8",
+      "required": true
+    },
+    {
+      "dispname": "意識レベル",
+      "name": "意識レベル",
+      "type": "radio",
+      "selector": [
+        "清明 (GCS 15)",
+        "軽度混乱 (GCS 12-14)",
+        "中等度混乱 (GCS 9-11)",
+        "昏迷 (GCS 3-8)"
+      ],
+      "selectoridx": "1|2|4|8",
+      "required": true,
+      "description": "Glasgow Coma Scaleを参考に評価してください"
+    },
+    {
+      "dispname": "心電図所見",
+      "name": "心電図所見",
+      "type": "radio",
+      "selector": [
+        "正常",
+        "心房性不整脈",
+        "5個以上/分の心室性期外収縮",
+        "その他の異常"
+      ],
+      "selectoridx": "1|2|4|8",
+      "required": true
+    },
+    {
+      "dispname": "血色素値",
+      "name": "血色素値",
+      "type": "radio",
+      "selector": [
+        "13-16g/dl",
+        "11.5-12.9g/dl または 16.1-17.0g/dl",
+        "10.0-11.4g/dl または 17.1-18.0g/dl",
+        "10.0g/dl未満 または 18.1g/dl以上"
+      ],
+      "selectoridx": "1|2|4|8",
+      "required": true
+    },
+    {
+      "dispname": "白血球数",
+      "name": "白血球数",
+      "type": "radio",
+      "selector": [
+        "4000-10000/μl",
+        "10001-20000/μl または 3000-3999/μl",
+        "20001/μl以上 または 3000/μl未満"
+      ],
+      "selectoridx": "1|2|4",
+      "required": true
+    },
+    {
+      "dispname": "尿素窒素",
+      "name": "尿素窒素",
+      "type": "radio",
+      "selector": [
+        "7.5mg/dl以下",
+        "7.6-10.0mg/dl",
+        "10.1-15.0mg/dl",
+        "15.1mg/dl以上"
+      ],
+      "selectoridx": "1|2|4|8",
+      "required": true
+    },
+    {
+      "dispname": "血清ナトリウム",
+      "name": "血清ナトリウム",
+      "type": "radio",
+      "selector": [
+        "136-145mEq/l",
+        "131-135mEq/l または 146-150mEq/l",
+        "126-130mEq/l または 151-155mEq/l",
+        "125mEq/l以下 または 156mEq/l以上"
+      ],
+      "selectoridx": "1|2|4|8",
+      "required": true
+    },
+    {
+      "dispname": "血清カリウム",
+      "name": "血清カリウム",
+      "type": "radio",
+      "selector": [
+        "3.5-5.0mEq/l",
+        "3.2-3.4mEq/l または 5.1-5.3mEq/l",
+        "2.9-3.1mEq/l または 5.4-5.9mEq/l",
+        "2.8mEq/l以下 または 6.0mEq/l以上"
+      ],
+      "selectoridx": "1|2|4|8",
+      "required": true
+    },
+    {
+      "dispname": "手術関連評価",
+      "type": "subsection"
+    },
+    {
+      "dispname": "手術の規模",
+      "name": "手術の規模",
+      "type": "radio",
+      "selector": [
+        "軽微",
+        "小手術",
+        "中手術",
+        "大手術",
+        "超大手術"
+      ],
+      "selectoridx": "1|2|4|8|8",
+      "required": true,
+      "description": "手術侵襲の程度を評価してください"
+    },
+    {
+      "dispname": "30日以内の手術回数",
+      "name": "手術回数",
+      "type": "radio",
+      "selector": [
+        "1回",
+        "2回以上"
+      ],
+      "selectoridx": "1|4",
+      "required": true,
+      "description": "術前30日以内に施行された手術の回数"
+    },
+    {
+      "dispname": "手術の緊急度",
+      "name": "手術の緊急度",
+      "type": "radio",
+      "selector": [
+        "待機手術",
+        "緊急手術 (24時間以内)",
+        "即座の緊急手術"
+      ],
+      "selectoridx": "1|2|4",
+      "required": true
+    },
+    {
+      "dispname": "腹水の性状",
+      "name": "腹水の性状",
+      "type": "radio",
+      "selector": [
+        "なし",
+        "漿液性",
+        "局所的膿性/血性",
+        "遊離性膿性/血性"
+      ],
+      "selectoridx": "1|2|4|8",
+      "required": true
+    },
+    {
+      "dispname": "悪性腫瘍の進行度",
+      "name": "悪性腫瘍の進行度",
+      "type": "radio",
+      "selector": [
+        "悪性腫瘍なし",
+        "原発巣のみ",
+        "結節転移",
+        "遠隔転移"
+      ],
+      "selectoridx": "1|2|4|8",
+      "required": true
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "生理学的スコア",
+      "type": "eval",
+      "formula": "[[年齢.index]] + [[心不全兆候.index]] + [[呼吸器症状.index]] + [[胸部X線所見.index]] + [[収縮期血圧.index]] + [[脈拍数.index]] + [[意識レベル.index]] + [[心電図所見.index]] + [[血色素値.index]] + [[白血球数.index]] + [[尿素窒素.index]] + [[血清ナトリウム.index]] + [[血清カリウム.index]]",
+      "dispname": "12項目の生理学的因子の合計スコア"
+    },
+    {
+      "name": "手術重症度スコア",
+      "type": "eval",
+      "formula": "[[手術の規模.index]] + [[手術回数.index]] + [[手術の緊急度.index]] + [[腹水の性状.index]] + [[悪性腫瘍の進行度.index]]",
+      "dispname": "5項目の手術関連因子の合計スコア（簡易版: 出血量項目を省略）"
+    },
+    {
+      "name": "P-POSSUM予測死亡率",
+      "type": "eval",
+      "formula": "( Math.exp( -9.065 + 0.1692 * [[生理学的スコア]] + 0.155 * [[手術重症度スコア]] ) / ( 1 + Math.exp( -9.065 + 0.1692 * [[生理学的スコア]] + 0.155 * [[手術重症度スコア]] ) ) * 100).toFixed(2)",
+      "dispname": "P-POSSUMによる予測死亡率 (%)"
+    },
+    {
+      "name": "POSSUM予測合併症率",
+      "type": "eval",
+      "formula": "( Math.exp( -5.91 + 0.16 * [[生理学的スコア]] + 0.19 * [[手術重症度スコア]] ) / ( 1 + Math.exp( -5.91 + 0.16 * [[生理学的スコア]] + 0.19 * [[手術重症度スコア]] ) ) * 100).toFixed(2)",
+      "dispname": "POSSUMによる予測合併症率 (%)"
+    },
+    {
+      "name": "リスク分類",
+      "type": "eval",
+      "formula": "[[P-POSSUM予測死亡率]] >= 10 ? '高リスク' : ( [[P-POSSUM予測死亡率]] >= 5 ? '中リスク' : '低リスク' )",
+      "dispname": "死亡率に基づくリスク分類"
+    },
+    {
+      "name": "Warning: 中リスク P-POSSUM予測死亡率 ≥ 5%",
+      "formula": "[[P-POSSUM予測死亡率]] >= 5",
+      "type": "warning"
+    },
+    {
+      "name": "Emergency: 高リスク P-POSSUM予測死亡率 ≥ 10%",
+      "formula": "[[P-POSSUM予測死亡率]] >= 10",
+      "type": "emergency"
+    }
+  ]
+}

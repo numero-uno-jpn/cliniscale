@@ -1,0 +1,266 @@
+{
+    "_comment": [
+        "ADOS-2 (Autism Diagnostic Observation Schedule, Second Edition) 自閉症診断観察スケジュール第2版",
+        "原著: Lord, C., Rutter, M., DiLavore, P.C., Risi, S., Gotham, K., & Bishop, S.L. (2012)",
+        "出版社: Western Psychological Services (WPS)",
+        "重要: ADOS-2は訓練を受けた専門家による観察評価ツールです",
+        "この問診票は教育・啓発目的のみで、実際の診断には使用できません",
+        "著作権: Western Psychological Services",
+        "日本語版あり",
+        "対象年齢: 12か月以上 (成人まで)"
+    ],
+    "title": "ADOS-2参考評価票 (教育目的)",
+    "description": [
+        "この評価票は、ADOS-2 (自閉症診断観察スケジュール第2版) の理解促進を目的として作成されています。",
+        "実際のADOS-2は訓練を受けた専門家による直接観察評価が必要で、問診票形式ではありません。",
+        "この結果は参考情報のみであり、診断には使用できません。"
+    ],
+    "fields": [
+        {
+            "name": "module_selection",
+            "type": "radio",
+            "dispname": "評価対象者の言語発達レベル",
+            "description": "評価対象者の年齢と言語能力に最も適したモジュールを選択してください (参考)",
+            "required": true,
+            "selector": [
+                "幼児モジュール (12-30か月、一貫した句レベル発話なし)",
+                "モジュール1 (31か月以上、句レベル発話なし)",
+                "モジュール2 (句レベル発話あり、流暢ではない)",
+                "モジュール3 (言語流暢な児童・若年青年)",
+                "モジュール4 (言語流暢な青年・成人)"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "section_social_affect",
+            "type": "subsection",
+            "dispname": "社会的影響 (Social Affect) 領域"
+        },
+        {
+            "name": "eye_contact",
+            "type": "radio",
+            "dispname": "視線の使用",
+            "description": "社会的コミュニケーションにおける視線の使用について",
+            "required": true,
+            "selector": [
+                "年齢相応で適切",
+                "軽度の異常あり",
+                "明らかな異常あり"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "name": "facial_expressions",
+            "type": "radio",
+            "dispname": "表情の使用",
+            "description": "社会的コミュニケーションにおける表情の使用について",
+            "required": true,
+            "selector": [
+                "年齢相応で適切",
+                "軽度の異常あり",
+                "明らかな異常あり"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "name": "shared_enjoyment",
+            "type": "radio",
+            "dispname": "共有された楽しみ",
+            "description": "他者と楽しみを共有する能力について",
+            "required": true,
+            "selector": [
+                "自発的に共有",
+                "促されれば共有",
+                "共有しない"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "name": "showing",
+            "type": "radio",
+            "dispname": "見せる行動",
+            "description": "物や興味を他者に見せる行動について",
+            "required": true,
+            "selector": [
+                "自発的に見せる",
+                "促されれば見せる",
+                "見せない"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "name": "spontaneous_initiation",
+            "type": "radio",
+            "dispname": "自発的な開始",
+            "description": "社会的相互作用の自発的な開始について",
+            "required": true,
+            "selector": [
+                "頻繁に開始",
+                "時々開始",
+                "ほとんど開始しない"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "name": "response_to_name",
+            "type": "radio",
+            "dispname": "名前への反応",
+            "description": "名前を呼ばれた時の反応について",
+            "required": true,
+            "selector": [
+                "一貫して反応",
+                "時々反応",
+                "反応しない"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "name": "requesting",
+            "type": "radio",
+            "dispname": "要求行動",
+            "description": "物や活動を要求する能力について",
+            "required": true,
+            "selector": [
+                "適切に要求",
+                "時々適切に要求",
+                "要求しない"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "name": "gestures",
+            "type": "radio",
+            "dispname": "身振りの使用",
+            "description": "コミュニケーションにおける身振りの使用について",
+            "required": true,
+            "selector": [
+                "適切に使用",
+                "限定的使用",
+                "使用しない"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "name": "imaginative_play",
+            "type": "radio",
+            "dispname": "想像遊び",
+            "description": "想像的・象徴的遊びの能力について",
+            "required": true,
+            "selector": [
+                "年齢相応",
+                "限定的",
+                "なし"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "name": "quality_social_response",
+            "type": "radio",
+            "dispname": "社会的反応の質",
+            "description": "社会的働きかけに対する反応の質について",
+            "required": true,
+            "selector": [
+                "適切で自然",
+                "やや不自然",
+                "不適切"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "name": "section_rrb",
+            "type": "subsection",
+            "dispname": "制限的・反復的行動 (RRB) 領域"
+        },
+        {
+            "name": "unusual_sensory_interest",
+            "type": "radio",
+            "dispname": "異常な感覚的興味",
+            "description": "感覚刺激に対する異常な興味や反応について",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "明らか"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "name": "hand_finger_mannerisms",
+            "type": "radio",
+            "dispname": "手・指の常同行動",
+            "description": "手や指の反復的な動きについて",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "明らか"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "name": "repetitive_interests",
+            "type": "radio",
+            "dispname": "反復的興味・行動",
+            "description": "同じ活動や話題への固執について",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "明らか"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "name": "unusual_repetitive_interests",
+            "type": "radio",
+            "dispname": "異常な反復的興味",
+            "description": "年齢不相応な反復的興味について",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "明らか"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "name": "compulsions_rituals",
+            "type": "radio",
+            "dispname": "強迫行動・儀式的行動",
+            "description": "強迫的または儀式的な行動について",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽度",
+                "明らか"
+            ],
+            "selectoridx": "0|1|2"
+        },
+        {
+            "name": "educational_note",
+            "type": "note",
+            "description": "**この結果は教育・参考目的のみです**\n\n- この評価は実際のADOS-2ではありません\n- 実際のADOS-2は専門家による直接観察が必要です\n- この結果で診断はできません\n- 気になる点がある場合は、専門医療機関にご相談ください"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "social_affect_total",
+            "type": "eval",
+            "dispname": "社会的影響領域の合計点数",
+            "formula": "[[eye_contact.index]] + [[facial_expressions.index]] + [[shared_enjoyment.index]] + [[showing.index]] + [[spontaneous_initiation.index]] + [[response_to_name.index]] + [[requesting.index]] + [[gestures.index]] + [[imaginative_play.index]] + [[quality_social_response.index]]"
+        },
+        {
+            "name": "rrb_total",
+            "type": "eval",
+            "dispname": "制限的・反復的行動領域の合計点数",
+            "formula": "[[unusual_sensory_interest.index]] + [[hand_finger_mannerisms.index]] + [[repetitive_interests.index]] + [[unusual_repetitive_interests.index]] + [[compulsions_rituals.index]]"
+        },
+        {
+            "name": "overall_total",
+            "type": "eval",
+            "dispname": "総合得点",
+            "formula": "[[social_affect_total]] + [[rrb_total]]"
+        }
+    ]
+}

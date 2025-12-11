@@ -1,0 +1,149 @@
+{
+    "_comment": [
+        "ISS (Injury Severity Score) 外傷重症度スコア",
+        "Baker SP et al. The injury severity score: a method for describing patients with multiple injuries and evaluating emergency care. J Trauma 1974;14:187-96",
+        "日本救急医学会 外傷重症度スコア定義: https://www.jaam.jp/dictionary/dictionary/word/0411.html",
+        "AIS-90 Update 98をもとに算出、最重症3部位の2乗和で評価",
+        "ISS>15で重症外傷、ISS≧25で死亡率30%以上"
+    ],
+    "title": "ISS 外傷重症度スコア評価",
+    "description": [
+        "多発外傷患者の重症度を評価するスコアです。",
+        "身体6部位のAISスコアから最重症3部位を選択し、それぞれの2乗の和で算出します。"
+    ],
+    "fields": [
+        {
+            "dispname": "患者基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "年齢",
+            "name": "年齢",
+            "type": "text",
+            "postfix": "歳",
+            "inputmode": "numeric",
+            "testrange": [
+                0,
+                120
+            ],
+            "required": true,
+            "description": "半角数字で入力してください（例: 65）"
+        },
+        {
+            "dispname": "性別",
+            "name": "性別",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "男性|女性"
+        },
+        {
+            "dispname": "外傷機転",
+            "name": "外傷機転",
+            "type": "radio",
+            "required": true,
+            "selector": "交通外傷|墜落外傷|刺創|鈍器による外傷|その他"
+        },
+        {
+            "dispname": "身体部位別AISスコア評価",
+            "type": "subsection"
+        },
+        {
+            "dispname": "1. 頭頸部のAISスコア",
+            "name": "頭頸部AIS",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "損傷なし|軽微|中等度|重篤（生命に危険なし）|重症（生命に危険あり）|重篤（生存の可能性疑問）|最重症（現在治療不可能）",
+            "selectoridx": "0|1|2|3|4|5|6",
+            "description": "脳挫傷、頭蓋骨骨折、頸椎損傷など"
+        },
+        {
+            "dispname": "2. 顔面のAISスコア",
+            "name": "顔面AIS",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "損傷なし|軽微|中等度|重篤（生命に危険なし）|重症（生命に危険あり）|重篤（生存の可能性疑問）|最重症（現在治療不可能）",
+            "selectoridx": "0|1|2|3|4|5|6",
+            "description": "眼窩骨折、上顎骨骨折、下顎骨骨折など"
+        },
+        {
+            "dispname": "3. 胸部のAISスコア",
+            "name": "胸部AIS",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "損傷なし|軽微|中等度|重篤（生命に危険なし）|重症（生命に危険あり）|重篤（生存の可能性疑問）|最重症（現在治療不可能）",
+            "selectoridx": "0|1|2|3|4|5|6",
+            "description": "肋骨骨折、血胸、気胸、心損傷など"
+        },
+        {
+            "dispname": "4. 腹部および骨盤内臓器のAISスコア",
+            "name": "腹部AIS",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "損傷なし|軽微|中等度|重篤（生命に危険なし）|重症（生命に危険あり）|重篤（生存の可能性疑問）|最重症（現在治療不可能）",
+            "selectoridx": "0|1|2|3|4|5|6",
+            "description": "肝損傷、脾損傷、腎損傷、腸管損傷など"
+        },
+        {
+            "dispname": "5. 四肢および骨盤のAISスコア",
+            "name": "四肢AIS",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "損傷なし|軽微|中等度|重篤（生命に危険なし）|重症（生命に危険あり）|重篤（生存の可能性疑問）|最重症（現在治療不可能）",
+            "selectoridx": "0|1|2|3|4|5|6",
+            "description": "長管骨骨折、骨盤骨折、切断など"
+        },
+        {
+            "dispname": "6. 体表のAISスコア",
+            "name": "体表AIS",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "損傷なし|軽微|中等度|重篤（生命に危険なし）|重症（生命に危険あり）|重篤（生存の可能性疑問）|最重症（現在治療不可能）",
+            "selectoridx": "0|1|2|3|4|5|6",
+            "description": "熱傷、挫創、裂創など"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "AIS6の有無",
+            "type": "eval",
+            "noreport": true,
+            "formula": "[[頭頸部AIS.index]] == 6 || [[顔面AIS.index]] == 6 || [[胸部AIS.index]] == 6 || [[腹部AIS.index]] == 6 || [[四肢AIS.index]] == 6 || [[体表AIS.index]] == 6 ? 1 : 0"
+        },
+        {
+            "name": "ISS計算値",
+            "type": "eval",
+            "noreport": true,
+            "formula": "Math.max( [[頭頸部AIS.index]]*[[頭頸部AIS.index]] + [[顔面AIS.index]]*[[顔面AIS.index]] + [[胸部AIS.index]]*[[胸部AIS.index]], [[頭頸部AIS.index]]*[[頭頸部AIS.index]] + [[顔面AIS.index]]*[[顔面AIS.index]] + [[腹部AIS.index]]*[[腹部AIS.index]], [[頭頸部AIS.index]]*[[頭頸部AIS.index]] + [[顔面AIS.index]]*[[顔面AIS.index]] + [[四肢AIS.index]]*[[四肢AIS.index]], [[頭頸部AIS.index]]*[[頭頸部AIS.index]] + [[顔面AIS.index]]*[[顔面AIS.index]] + [[体表AIS.index]]*[[体表AIS.index]], [[頭頸部AIS.index]]*[[頭頸部AIS.index]] + [[胸部AIS.index]]*[[胸部AIS.index]] + [[腹部AIS.index]]*[[腹部AIS.index]], [[頭頸部AIS.index]]*[[頭頸部AIS.index]] + [[胸部AIS.index]]*[[胸部AIS.index]] + [[四肢AIS.index]]*[[四肢AIS.index]], [[頭頸部AIS.index]]*[[頭頸部AIS.index]] + [[胸部AIS.index]]*[[胸部AIS.index]] + [[体表AIS.index]]*[[体表AIS.index]], [[頭頸部AIS.index]]*[[頭頸部AIS.index]] + [[腹部AIS.index]]*[[腹部AIS.index]] + [[四肢AIS.index]]*[[四肢AIS.index]], [[頭頸部AIS.index]]*[[頭頸部AIS.index]] + [[腹部AIS.index]]*[[腹部AIS.index]] + [[体表AIS.index]]*[[体表AIS.index]], [[頭頸部AIS.index]]*[[頭頸部AIS.index]] + [[四肢AIS.index]]*[[四肢AIS.index]] + [[体表AIS.index]]*[[体表AIS.index]], [[顔面AIS.index]]*[[顔面AIS.index]] + [[胸部AIS.index]]*[[胸部AIS.index]] + [[腹部AIS.index]]*[[腹部AIS.index]], [[顔面AIS.index]]*[[顔面AIS.index]] + [[胸部AIS.index]]*[[胸部AIS.index]] + [[四肢AIS.index]]*[[四肢AIS.index]], [[顔面AIS.index]]*[[顔面AIS.index]] + [[胸部AIS.index]]*[[胸部AIS.index]] + [[体表AIS.index]]*[[体表AIS.index]], [[顔面AIS.index]]*[[顔面AIS.index]] + [[腹部AIS.index]]*[[腹部AIS.index]] + [[四肢AIS.index]]*[[四肢AIS.index]], [[顔面AIS.index]]*[[顔面AIS.index]] + [[腹部AIS.index]]*[[腹部AIS.index]] + [[体表AIS.index]]*[[体表AIS.index]], [[顔面AIS.index]]*[[顔面AIS.index]] + [[四肢AIS.index]]*[[四肢AIS.index]] + [[体表AIS.index]]*[[体表AIS.index]], [[胸部AIS.index]]*[[胸部AIS.index]] + [[腹部AIS.index]]*[[腹部AIS.index]] + [[四肢AIS.index]]*[[四肢AIS.index]], [[胸部AIS.index]]*[[胸部AIS.index]] + [[腹部AIS.index]]*[[腹部AIS.index]] + [[体表AIS.index]]*[[体表AIS.index]], [[胸部AIS.index]]*[[胸部AIS.index]] + [[四肢AIS.index]]*[[四肢AIS.index]] + [[体表AIS.index]]*[[体表AIS.index]], [[腹部AIS.index]]*[[腹部AIS.index]] + [[四肢AIS.index]]*[[四肢AIS.index]] + [[体表AIS.index]]*[[体表AIS.index]] )"
+        },
+        {
+            "dispname": "ISS（外傷重症度スコア）",
+            "name": "ISS",
+            "type": "eval",
+            "formula": "[[AIS6の有無]] == 1 ? 75 : [[ISS計算値]]"
+        },
+        {
+            "dispname": "重症度分類",
+            "name": "重症度分類",
+            "type": "eval",
+            "formula": "[[ISS]] >= 25 ? '最重症（死亡率30%以上）' : ( [[ISS]] > 15 ? '重症外傷' : ( [[ISS]] >= 9 ? '中等症' : '軽症' ) )"
+        },
+        {
+            "name": "Warning: 重症外傷 ISS>15",
+            "formula": "[[ISS]] > 15",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 重篤外傷 ISS≧25",
+            "formula": "[[ISS]] >= 25",
+            "type": "emergency"
+        }
+    ]
+}

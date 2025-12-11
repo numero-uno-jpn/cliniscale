@@ -1,0 +1,142 @@
+{
+    "_comment": [
+        "A-DROPスコア（市中肺炎重症度分類）",
+        "日本呼吸器学会 成人肺炎診療ガイドライン2024に基づく",
+        "Age, Dehydration, Respiration, Orientation, Pressureの5項目評価",
+        "CURB-65を参考に日本人向けに開発されたスコア",
+        "参考URL: https://hokuto.app/calculator/BP9cBixmD1MGH0NDoPG1",
+        "参考URL: https://www.jrs.or.jp/publication/jrs_guidelines/20240319125656.html"
+    ],
+    "title": "A-DROP 市中肺炎重症度分類",
+    "description": [
+        "市中肺炎の重症度評価と治療方針決定のための問診票です",
+        "5つの危険因子について評価し、外来治療または入院治療の判断に使用します"
+    ],
+    "responsible_person": [
+        "呼吸器内科医"
+    ],
+    "staffs": [
+        "看護師",
+        "医師"
+    ],
+    "dept_in_charge": "呼吸器内科",
+    "contact": "呼吸器内科外来",
+    "submit_button_title": "評価結果を送信",
+    "fields": [
+        {
+            "dispname": "基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "性別",
+            "name": "性別",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "男性|女性"
+        },
+        {
+            "dispname": "年齢",
+            "name": "年齢",
+            "type": "text",
+            "required": true,
+            "postfix": "歳",
+            "inputmode": "numeric"
+        },
+        {
+            "dispname": "A-DROPスコア評価項目",
+            "type": "subsection"
+        },
+        {
+            "dispname": "A - Age（年齢）",
+            "name": "A_年齢基準",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "該当する|該当しない",
+            "selectoridx": "1|0",
+            "description": "男性70歳以上または女性75歳以上"
+        },
+        {
+            "dispname": "D - Dehydration（脱水）",
+            "name": "D_脱水",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "該当する|該当しない",
+            "selectoridx": "1|0",
+            "description": "BUN 21mg/dL以上または脱水あり"
+        },
+        {
+            "dispname": "R - Respiration（呼吸）",
+            "name": "R_呼吸",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "該当する|該当しない",
+            "selectoridx": "1|0",
+            "description": "SpO2 90%以下（PaO2 60Torr以下）"
+        },
+        {
+            "dispname": "O - Orientation（意識）",
+            "name": "O_意識",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "該当する|該当しない",
+            "selectoridx": "1|0",
+            "description": "意識障害あり（肺炎による）"
+        },
+        {
+            "dispname": "P - Pressure（血圧）",
+            "name": "P_血圧",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "該当する|該当しない",
+            "selectoridx": "1|0",
+            "description": "収縮期血圧 90mmHg以下"
+        },
+        {
+            "dispname": "ショックの有無",
+            "name": "ショック",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "あり|なし",
+            "selectoridx": "1|0",
+            "description": "循環不全の有無"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "dispname": "A-DROPスコア合計",
+            "name": "A-DROP_合計スコア",
+            "type": "eval",
+            "formula": "[[A_年齢基準.index]] + [[D_脱水.index]] + [[R_呼吸.index]] + [[O_意識.index]] + [[P_血圧.index]]"
+        },
+        {
+            "dispname": "重症度分類",
+            "name": "重症度分類",
+            "type": "eval",
+            "formula": "[[ショック.index]] == 1 ? '超重症' : ( [[A-DROP_合計スコア]] == 0 ? '軽症' : ( [[A-DROP_合計スコア]] <= 2 ? '中等症' : ( [[A-DROP_合計スコア]] == 3 ? '重症' : '超重症' ) ) )"
+        },
+        {
+            "dispname": "治療方針",
+            "name": "治療方針",
+            "type": "eval",
+            "formula": "{{重症度分類}} == '軽症' ? '外来治療' : ( {{重症度分類}} == '中等症' ? '外来または入院治療' : ( {{重症度分類}} == '重症' ? '入院治療' : 'ICU入院' ) )"
+        },
+        {
+            "name": "Warning: 中程度リスク A-DROP ≥ 3 またはショック",
+            "formula": "[[A-DROP_合計スコア]] >= 3 || [[ショック.index]] == 1",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 高度リスク A-DROP ≥ 4 またはショック",
+            "formula": "[[A-DROP_合計スコア]] >= 4 || [[ショック.index]] == 1",
+            "type": "emergency"
+        }
+    ]
+}

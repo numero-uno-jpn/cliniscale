@@ -1,0 +1,122 @@
+{
+    "_comment": [
+        "STOP-BANG質問票: 睡眠時無呼吸症候群スクリーニング用問診票",
+        "開発者: Frances Chung, University of Toronto (2008年)",
+        "原典論文: Chung F, et al. STOP questionnaire: a tool to screen patients for obstructive sleep apnea. Anesthesiology. 2008;108(5):812-21.",
+        "8項目の二択質問からなり、0-8点で評価",
+        "3点以上で睡眠時無呼吸症候群高リスクと判定",
+        "公式サイト: http://www.stopbang.ca/",
+        "著作権: Property of University Health Network",
+        "【日本版適応】",
+        "- 首周囲径: 原典は男性43cm/女性41cmだが、日本では40cm統一が一般的"
+    ],
+    "title": "STOP-BANG 睡眠時無呼吸症候群スクリーニング用問診票",
+    "description": [
+        "<h3>睡眠時無呼吸症候群スクリーニング</h3>",
+        "以下の質問にお答えください。",
+        "該当する項目について「はい」または「いいえ」を選択してください。"
+    ],
+    "contact": "担当医師",
+    "dept_in_charge": "睡眠外来",
+    "submit_button_title": "回答を送信",
+    "translate": "major",
+    "fields": [
+        {
+            "dispname": "S: いびき",
+            "name": "いびき",
+            "type": "radio",
+            "required": true,
+            "selector": "いいえ|はい",
+            "selectoridx": "0|1",
+            "description": "大きないびきをかきますか（話し声よりも大きい、または閉まったドア越しに聞こえる程度）"
+        },
+        {
+            "dispname": "T: 疲労",
+            "name": "疲労",
+            "type": "radio",
+            "required": true,
+            "selector": "いいえ|はい",
+            "selectoridx": "0|1",
+            "description": "日中にしばしば疲労感、倦怠感、眠気を感じますか（運転中や人と話をしている時に眠気を感じる程度）"
+        },
+        {
+            "dispname": "O: 無呼吸の目撃",
+            "name": "無呼吸目撃",
+            "type": "radio",
+            "required": true,
+            "selector": "いいえ|はい",
+            "selectoridx": "0|1",
+            "description": "他の人から睡眠中に呼吸が止まっているまたは息苦しくなっているのを指摘されたことがありますか"
+        },
+        {
+            "dispname": "P: 血圧",
+            "name": "血圧",
+            "type": "radio",
+            "required": true,
+            "selector": "いいえ|はい",
+            "selectoridx": "0|1",
+            "description": "高血圧ですか、または現在高血圧の治療を受けていますか"
+        },
+        {
+            "dispname": "B: BMI",
+            "name": "BMI",
+            "type": "radio",
+            "required": true,
+            "selector": "いいえ|はい",
+            "selectoridx": "0|1",
+            "description": "BMIが35kg/m²以上ですか"
+        },
+        {
+            "dispname": "A: 年齢",
+            "name": "年齢",
+            "type": "radio",
+            "required": true,
+            "selector": "いいえ|はい",
+            "selectoridx": "0|1",
+            "description": "50歳以上ですか"
+        },
+        {
+            "dispname": "N: 首周囲径",
+            "name": "首周囲径",
+            "type": "radio",
+            "required": true,
+            "selector": "いいえ|はい",
+            "selectoridx": "0|1",
+            "description": "首の周囲径が40cm以上ですか（のどぼとけの部分で測定）"
+        },
+        {
+            "dispname": "G: 性別",
+            "name": "性別",
+            "type": "radio",
+            "required": true,
+            "selector": "いいえ|はい",
+            "selectoridx": "0|1",
+            "description": "男性ですか"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "STOP_BANG合計点",
+            "dispname": "STOP-BANG合計点（0-8点）",
+            "type": "eval",
+            "formula": "[[いびき.index]] + [[疲労.index]] + [[無呼吸目撃.index]] + [[血圧.index]] + [[BMI.index]] + [[年齢.index]] + [[首周囲径.index]] + [[性別.index]]"
+        },
+        {
+            "name": "リスク評価",
+            "type": "eval",
+            "formula": "[[STOP_BANG合計点]] >= 5 ? '高リスク' : ( [[STOP_BANG合計点]] >= 3 ? '中等度リスク' : '低リスク' )",
+            "dispname": "閉塞性睡眠時無呼吸症候群のリスク分類"
+        },
+        {
+            "name": "Warning: STOP-BANGスコア ≥3点 (OSA中等度リスク)",
+            "formula": "[[STOP_BANG合計点]] >= 3",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: STOP-BANGスコア ≥5点 (OSA高リスク)",
+            "formula": "[[STOP_BANG合計点]] >= 5",
+            "type": "emergency"
+        }
+    ]
+}

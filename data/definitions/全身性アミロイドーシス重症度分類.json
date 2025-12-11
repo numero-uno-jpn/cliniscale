@@ -1,0 +1,369 @@
+{
+  "_comment": [
+    "全身性アミロイドーシス重症度分類問診票",
+    "厚生労働省指定難病28番の重症度分類に基づく",
+    "2度以上が医療費助成対象",
+    "参考: https://www.mhlw.go.jp/file/06-Seisakujouhou-10900000-Kenkoukyoku/0000089928.pdf",
+    "2025年10月版（修正版）: 重症度判定ロジック修正、3度・2度判定条件の簡略化"
+  ],
+  "title": "全身性アミロイドーシス重症度分類",
+  "description": [
+    "全身性アミロイドーシスの重症度を評価する分類です。",
+    "アミロイド沈着の確認と臓器機能障害の程度により1度から5度に分類されます。"
+  ],
+  "contact": "担当医師",
+  "dept_in_charge": "血液内科・腎臓内科・神経内科",
+  "responsible_person": [
+    "主治医"
+  ],
+  "staffs": [
+    "担当医師",
+    "看護師"
+  ],
+  "submit_button_title": "評価を送信",
+  "fields": [
+    {
+      "dispname": "基本情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "診断年月日",
+      "name": "診断日",
+      "type": "date",
+      "format": "YYYY/MM/DD",
+      "required": true
+    },
+    {
+      "dispname": "評価時点",
+      "name": "評価日",
+      "type": "date",
+      "format": "YYYY/MM/DD",
+      "required": true
+    },
+    {
+      "dispname": "アミロイドーシス病型",
+      "name": "病型",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "免疫グロブリン性アミロイドーシス（AL/AH）",
+        "遺伝性トランスサイレチン（ATTRv）アミロイドーシス",
+        "野生型トランスサイレチン（ATTRwt）アミロイドーシス",
+        "その他"
+      ],
+      "description": "ATTRv: 旧称「家族性アミロイドニューロパチー」、ATTRwt: 旧称「老人性TTRアミロイドーシス」"
+    },
+    {
+      "dispname": "アミロイド沈着の確認",
+      "type": "subsection"
+    },
+    {
+      "dispname": "組織学的アミロイド沈着",
+      "name": "組織学的沈着",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "確認されている",
+        "確認されていない"
+      ],
+      "description": "コンゴーレッド染色陽性、偏光顕微鏡下でアップルグリーン複屈折を確認"
+    },
+    {
+      "dispname": "沈着確認部位",
+      "name": "沈着部位",
+      "type": "checkbox",
+      "parentname": "組織学的沈着",
+      "parentsel": "確認されている",
+      "selector": [
+        "心臓",
+        "腎臓",
+        "神経",
+        "消化管",
+        "肝臓",
+        "脾臓",
+        "皮膚",
+        "脂肪組織",
+        "その他"
+      ],
+      "description": "腹壁脂肪吸引、消化管生検、皮膚生検、神経生検、心筋生検などで確認"
+    },
+    {
+      "dispname": "アミロイド沈着を疑わせる検査所見",
+      "name": "検査所見",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "あり",
+        "なし"
+      ],
+      "description": "組織学的確認がない場合でも、臨床的にアミロイド沈着が疑われる所見"
+    },
+    {
+      "dispname": "疑わせる検査所見の内容",
+      "name": "検査所見内容",
+      "type": "checkbox",
+      "parentname": "検査所見",
+      "parentsel": "あり",
+      "selector": [
+        "心電図異常（低電位、伝導障害）",
+        "心エコー異常（心筋肥厚、輝度増強）",
+        "蛋白尿・ネフローゼ症候群",
+        "血液検査異常（M蛋白、BJP陽性）",
+        "画像検査異常",
+        "その他"
+      ]
+    },
+    {
+      "dispname": "臓器機能障害の評価",
+      "type": "subsection",
+      "description": "アミロイド沈着による機能障害の程度を各臓器で評価してください"
+    },
+    {
+      "dispname": "心臓の機能障害",
+      "name": "心臓障害",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "軽度",
+        "中等度",
+        "重度"
+      ],
+      "description": "心不全、不整脈、伝導障害の程度"
+    },
+    {
+      "dispname": "腎臓の機能障害",
+      "name": "腎臓障害",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "軽度",
+        "中等度",
+        "重度"
+      ],
+      "description": "蛋白尿、ネフローゼ症候群、腎機能低下の程度"
+    },
+    {
+      "dispname": "神経の機能障害",
+      "name": "神経障害",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "軽度",
+        "中等度",
+        "重度"
+      ],
+      "description": "末梢神経障害、自律神経障害の程度"
+    },
+    {
+      "dispname": "消化管の機能障害",
+      "name": "消化管障害",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "軽度",
+        "中等度",
+        "重度"
+      ],
+      "description": "下痢、便秘、吸収不良、消化管運動障害の程度"
+    },
+    {
+      "dispname": "呼吸器の機能障害",
+      "name": "呼吸器障害",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "軽度",
+        "中等度",
+        "重度"
+      ],
+      "description": "呼吸困難、拘束性換気障害の程度"
+    },
+    {
+      "dispname": "泌尿器の機能障害",
+      "name": "泌尿器障害",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "軽度",
+        "中等度",
+        "重度"
+      ],
+      "description": "排尿障害、膀胱機能障害の程度"
+    },
+    {
+      "dispname": "眼の機能障害",
+      "name": "眼障害",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "軽度",
+        "中等度",
+        "重度"
+      ],
+      "description": "硝子体混濁、視力障害の程度"
+    },
+    {
+      "dispname": "骨・関節の機能障害",
+      "name": "骨関節障害",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "軽度",
+        "中等度",
+        "重度"
+      ],
+      "description": "関節症状、手根管症候群の程度"
+    },
+    {
+      "dispname": "内分泌の機能障害",
+      "name": "内分泌障害",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "軽度",
+        "中等度",
+        "重度"
+      ],
+      "description": "甲状腺機能障害、副腎機能障害の程度"
+    },
+    {
+      "dispname": "その他の機能障害",
+      "name": "その他障害",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "なし",
+        "軽度",
+        "中等度",
+        "重度"
+      ],
+      "description": "上記以外の臓器障害"
+    },
+    {
+      "dispname": "補足情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "アミロイド原因蛋白質の同定",
+      "name": "原因蛋白",
+      "type": "radio",
+      "selector": [
+        "実施済み",
+        "未実施"
+      ],
+      "description": "免疫染色または質量分析法による確認"
+    },
+    {
+      "dispname": "同定された原因蛋白質",
+      "name": "蛋白質種類",
+      "type": "checkbox",
+      "parentname": "原因蛋白",
+      "parentsel": "実施済み",
+      "selector": [
+        "AL（免疫グロブリン軽鎖）",
+        "AH（免疫グロブリン重鎖）",
+        "ATTR（トランスサイレチン）",
+        "AA（血清アミロイドA）",
+        "その他"
+      ],
+      "description": "複数検出される場合があります（例: AHL型、MGUS併発ATTRwt）"
+    },
+    {
+      "dispname": "備考",
+      "name": "備考",
+      "type": "textarea",
+      "rows": 3,
+      "description": "重症度判定に関する特記事項があれば記載してください"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "障害臓器数",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( [[心臓障害.index]] > 0 ? 1 : 0 ) + ( [[腎臓障害.index]] > 0 ? 1 : 0 ) + ( [[神経障害.index]] > 0 ? 1 : 0 ) + ( [[消化管障害.index]] > 0 ? 1 : 0 ) + ( [[呼吸器障害.index]] > 0 ? 1 : 0 ) + ( [[泌尿器障害.index]] > 0 ? 1 : 0 ) + ( [[眼障害.index]] > 0 ? 1 : 0 ) + ( [[骨関節障害.index]] > 0 ? 1 : 0 ) + ( [[内分泌障害.index]] > 0 ? 1 : 0 ) + ( [[その他障害.index]] > 0 ? 1 : 0 )"
+    },
+    {
+      "name": "中等度以上障害数",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( [[心臓障害.index]] >= 2 ? 1 : 0 ) + ( [[腎臓障害.index]] >= 2 ? 1 : 0 ) + ( [[神経障害.index]] >= 2 ? 1 : 0 ) + ( [[消化管障害.index]] >= 2 ? 1 : 0 ) + ( [[呼吸器障害.index]] >= 2 ? 1 : 0 ) + ( [[泌尿器障害.index]] >= 2 ? 1 : 0 ) + ( [[眼障害.index]] >= 2 ? 1 : 0 ) + ( [[骨関節障害.index]] >= 2 ? 1 : 0 ) + ( [[内分泌障害.index]] >= 2 ? 1 : 0 ) + ( [[その他障害.index]] >= 2 ? 1 : 0 )"
+    },
+    {
+      "name": "重度障害数",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( [[心臓障害.index]] >= 3 ? 1 : 0 ) + ( [[腎臓障害.index]] >= 3 ? 1 : 0 ) + ( [[神経障害.index]] >= 3 ? 1 : 0 ) + ( [[消化管障害.index]] >= 3 ? 1 : 0 ) + ( [[呼吸器障害.index]] >= 3 ? 1 : 0 ) + ( [[泌尿器障害.index]] >= 3 ? 1 : 0 ) + ( [[眼障害.index]] >= 3 ? 1 : 0 ) + ( [[骨関節障害.index]] >= 3 ? 1 : 0 ) + ( [[内分泌障害.index]] >= 3 ? 1 : 0 ) + ( [[その他障害.index]] >= 3 ? 1 : 0 )"
+    },
+    {
+      "name": "診断基準満たすか",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{組織学的沈着}} == '確認されていない' && {{検査所見}} == 'なし' ? 0 : 1"
+    },
+    {
+      "name": "組織学的確認あり",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{組織学的沈着}} == '確認されている' ? 1 : 0"
+    },
+    {
+      "name": "重症度_5度判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[組織学的確認あり]] == 1 && [[重度障害数]] >= 2 ? 1 : 0"
+    },
+    {
+      "name": "重症度_4度判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[組織学的確認あり]] == 1 && [[中等度以上障害数]] >= 1 && [[重度障害数]] < 2 ? 1 : 0"
+    },
+    {
+      "name": "重症度_3度判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[診断基準満たすか]] == 1 && [[障害臓器数]] >= 2 ? 1 : 0"
+    },
+    {
+      "name": "重症度_2度判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[診断基準満たすか]] == 1 && [[障害臓器数]] == 1 ? 1 : 0"
+    },
+    {
+      "name": "重症度_1度判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[診断基準満たすか]] == 1 && [[障害臓器数]] == 0 ? 1 : 0"
+    },
+    {
+      "name": "重症度分類",
+      "dispname": "重症度分類",
+      "type": "eval",
+      "formula": "[[診断基準満たすか]] == 0 ? '診断基準を満たさない' : ( [[重症度_5度判定]] == 1 ? '5度' : ( [[重症度_4度判定]] == 1 ? '4度' : ( [[重症度_3度判定]] == 1 ? '3度' : ( [[重症度_2度判定]] == 1 ? '2度' : '1度' ) ) ) )"
+    },
+    {
+      "name": "医療費助成対象",
+      "dispname": "医療費助成",
+      "type": "eval",
+      "formula": "{{重症度分類}}.includes('2度') || {{重症度分類}}.includes('3度') || {{重症度分類}}.includes('4度') || {{重症度分類}}.includes('5度') ? '対象' : '対象外'"
+    },
+    {
+      "name": "Warning: 注意事項",
+      "type": "warning",
+      "formula": "{{医療費助成対象}} == '対象外' ? true : false",
+      "dispname": "2度未満でも高額医療継続が必要な場合は助成対象となることがあります"
+    }
+  ]
+}

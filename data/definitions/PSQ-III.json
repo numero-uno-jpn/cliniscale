@@ -1,0 +1,507 @@
+{
+    "_comment": [
+        "Patient Satisfaction Questionnaire-III (PSQ-III) - 患者満足度質問票第3版",
+        "RAND Corporation開発の医療ケア満足度評価尺度（50項目、7領域）",
+        "原典: Ware JE, Snyder MK, Wright WR (1976)",
+        "PSQ-III版: Hays RD, Davies AR, Ware JE (1987)",
+        "URL: https://www.rand.org/health-care/surveys_tools/psq.html",
+        "各項目は5段階評価（1-5）",
+        "逆転項目処理済み: 高スコア = 高満足度",
+        "採点方法: 原典は合計スコアだが、本実装では解釈しやすさのため平均スコアを使用"
+    ],
+    "title": "PSQ-III 患者満足度質問票第3版",
+    "description": [
+        "この質問票は、あなたが受けた医療ケアに対する満足度を評価するために使用されます。",
+        "各質問について、あなたの気持ちに最も近い回答を選択してください。",
+        "回答に正解・不正解はありません。率直なご意見をお聞かせください。"
+    ],
+    "submit_button_title": "回答を送信",
+    "translate": "major",
+    "fields": [
+        {
+            "dispname": "全体的な満足度",
+            "type": "subsection"
+        },
+        {
+            "dispname": "私が受けた医療ケアは優れていた",
+            "name": "Q1",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "私は自分が受けた医療ケアに不満がある",
+            "name": "Q2",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "私は受けた医療ケアの質に満足している",
+            "name": "Q3",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "私はこの医療機関のサービスに満足している",
+            "name": "Q4",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "全体的に見て、私は受けた医療に満足している",
+            "name": "Q5",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "私の医療ケアは私が期待していたものと同じかそれ以上だった",
+            "name": "Q6",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "技術的品質",
+            "type": "subsection"
+        },
+        {
+            "dispname": "医師は私の病気を正確に診断した",
+            "name": "Q7",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "医師の医学的技術は優秀である",
+            "name": "Q8",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "医師は適切な治療を提供してくれた",
+            "name": "Q9",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "医師は私の健康問題について十分な知識を持っている",
+            "name": "Q10",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "医師の診察は徹底的である",
+            "name": "Q11",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "医師は最新の医学知識を持っている",
+            "name": "Q12",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "医師は必要な検査を適切に行った",
+            "name": "Q13",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "医師の治療により私の症状は改善した",
+            "name": "Q14",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "医師の医療技術に信頼を置いている",
+            "name": "Q15",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "医師は適切な薬を処方してくれた",
+            "name": "Q16",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "対人関係",
+            "type": "subsection"
+        },
+        {
+            "dispname": "医師は親しみやすく接してくれた",
+            "name": "Q17",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "医師は思いやりがあり優しかった",
+            "name": "Q18",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "医師は私を一人の人間として扱ってくれた",
+            "name": "Q19",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "医師は私の話を注意深く聞いてくれた",
+            "name": "Q20",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "医師は私の感情に配慮してくれた",
+            "name": "Q21",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "医師は事務的で人間味がない",
+            "name": "Q22",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "医師は私の尊厳を尊重してくれた",
+            "name": "Q23",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "コミュニケーション",
+            "type": "subsection"
+        },
+        {
+            "dispname": "医師は私の病状について分かりやすく説明してくれた",
+            "name": "Q24",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "医師は治療について詳しく説明してくれた",
+            "name": "Q25",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "医師は私の質問に丁寧に答えてくれた",
+            "name": "Q26",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "医師の説明は理解しやすかった",
+            "name": "Q27",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "医師は私が理解しているかを確認してくれた",
+            "name": "Q28",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "費用関連",
+            "type": "subsection"
+        },
+        {
+            "dispname": "医療費は妥当である",
+            "name": "Q29",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "この医療機関の料金は高すぎる",
+            "name": "Q30",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "医療費について事前に説明があった",
+            "name": "Q31",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "医療費の支払い方法は適切である",
+            "name": "Q32",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "受けた医療に見合った料金である",
+            "name": "Q33",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "医療費のために経済的に困っている",
+            "name": "Q34",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "保険が適用されない費用について説明があった",
+            "name": "Q35",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "医療費の明細が分かりやすかった",
+            "name": "Q36",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "診察時間",
+            "type": "subsection"
+        },
+        {
+            "dispname": "医師は十分な時間をかけて診察してくれた",
+            "name": "Q37",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "医師の診察時間は短すぎる",
+            "name": "Q38",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "アクセス・利便性",
+            "type": "subsection"
+        },
+        {
+            "dispname": "この医療機関は便利な場所にある",
+            "name": "Q39",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "予約を取るのが困難である",
+            "name": "Q40",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "待ち時間は許容範囲内である",
+            "name": "Q41",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "診察室へのアクセスが良い",
+            "name": "Q42",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "診療時間は適切である",
+            "name": "Q43",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "緊急時の対応が可能である",
+            "name": "Q44",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "受付スタッフの対応が良い",
+            "name": "Q45",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "施設の設備が充実している",
+            "name": "Q46",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "医療機関への交通アクセスが良い",
+            "name": "Q47",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "駐車場が利用しやすい",
+            "name": "Q48",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "1|2|3|4|5",
+            "required": true
+        },
+        {
+            "dispname": "予約システムが使いやすい",
+            "name": "Q49",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "dispname": "この医療機関は必要な時にいつでも利用できる",
+            "name": "Q50",
+            "type": "radio",
+            "selector": "強く同意|同意|どちらでもない|不同意|強く不同意",
+            "selectoridx": "5|4|3|2|1",
+            "required": true
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "全体満足度スコア",
+            "type": "eval",
+            "dispname": "全体的な満足度（6項目の平均、高スコア=高満足度）",
+            "formula": "( ( [[Q1.index]] + [[Q2.index]] + [[Q3.index]] + [[Q4.index]] + [[Q5.index]] + [[Q6.index]] ) / 6).toFixed(2)"
+        },
+        {
+            "name": "技術品質スコア",
+            "type": "eval",
+            "dispname": "技術的品質（10項目の平均、高スコア=高満足度）",
+            "formula": "( ( [[Q7.index]] + [[Q8.index]] + [[Q9.index]] + [[Q10.index]] + [[Q11.index]] + [[Q12.index]] + [[Q13.index]] + [[Q14.index]] + [[Q15.index]] + [[Q16.index]] ) / 10).toFixed(2)"
+        },
+        {
+            "name": "対人関係スコア",
+            "type": "eval",
+            "dispname": "対人関係（7項目の平均、高スコア=高満足度）",
+            "formula": "( ( [[Q17.index]] + [[Q18.index]] + [[Q19.index]] + [[Q20.index]] + [[Q21.index]] + [[Q22.index]] + [[Q23.index]] ) / 7).toFixed(2)"
+        },
+        {
+            "name": "コミュニケーションスコア",
+            "type": "eval",
+            "dispname": "コミュニケーション（5項目の平均、高スコア=高満足度）",
+            "formula": "( ( [[Q24.index]] + [[Q25.index]] + [[Q26.index]] + [[Q27.index]] + [[Q28.index]] ) / 5).toFixed(2)"
+        },
+        {
+            "name": "費用関連スコア",
+            "type": "eval",
+            "dispname": "費用関連（8項目の平均、高スコア=高満足度）",
+            "formula": "( ( [[Q29.index]] + [[Q30.index]] + [[Q31.index]] + [[Q32.index]] + [[Q33.index]] + [[Q34.index]] + [[Q35.index]] + [[Q36.index]] ) / 8).toFixed(2)"
+        },
+        {
+            "name": "診察時間スコア",
+            "type": "eval",
+            "dispname": "診察時間（2項目の平均、高スコア=高満足度）",
+            "formula": "( ( [[Q37.index]] + [[Q38.index]] ) / 2).toFixed(2)"
+        },
+        {
+            "name": "アクセス利便性スコア",
+            "type": "eval",
+            "dispname": "アクセス・利便性（12項目の平均、高スコア=高満足度）",
+            "formula": "( ( [[Q39.index]] + [[Q40.index]] + [[Q41.index]] + [[Q42.index]] + [[Q43.index]] + [[Q44.index]] + [[Q45.index]] + [[Q46.index]] + [[Q47.index]] + [[Q48.index]] + [[Q49.index]] + [[Q50.index]] ) / 12).toFixed(2)"
+        },
+        {
+            "name": "総合スコア",
+            "type": "eval",
+            "dispname": "PSQ-III総合スコア（全50項目の平均、高スコア=高満足度）",
+            "formula": "( ( ((全体満足度スコア)) * 6 + ((技術品質スコア)) * 10 + ((対人関係スコア)) * 7 + ((コミュニケーションスコア)) * 5 + ((費用関連スコア)) * 8 + ((診察時間スコア)) * 2 + ((アクセス利便性スコア)) * 12 ) / 50).toFixed(2)"
+        },
+        {
+            "name": "満足度解釈",
+            "type": "eval",
+            "dispname": "総合満足度の解釈（高スコア=高満足度）",
+            "formula": "((総合スコア)) >= 4.0 ? '非常に満足' : ( ((総合スコア)) >= 3.0 ? '満足' : ( ((総合スコア)) >= 2.0 ? 'やや不満' : '不満' ) )"
+        }
+    ]
+}

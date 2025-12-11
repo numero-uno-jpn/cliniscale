@@ -1,0 +1,391 @@
+{
+    "_comment": [
+        "Saint Louis University Mental Status (SLUMS) Examination - 日本文化適応版",
+        "開発者: Saint Louis University School of Medicine Division of Geriatric Medicine (2006年)",
+        "30点満点の認知機能スクリーニング検査",
+        "教育レベルによるカットオフ値調整あり",
+        "原典論文: Tariq SH, et al. The Saint Louis University Mental Status (SLUMS) Examination. Am J Geriatr Psych 14:900-10, 2006",
+        "無料利用可能: https://www.slu.edu/medicine/internal-medicine/geriatric-medicine/aging-successfully/assessment-tools/mental-status-exam.php",
+        "評価PDF: https://www.slu.edu/medicine/internal-medicine/geriatric-medicine/aging-successfully/-pdf/slums-form.pdf",
+        "【文化的適応】物語文を日本の文脈に適応（大阪/太郎）。原版はChicago/Jack。",
+        "【重要】この文化的適応版は日本での臨床使用を想定していますが、公式標準化データは原版に基づきます。"
+    ],
+    "title": "SLUMS 聖ルイス大学精神状態検査 (日本文化適応版)",
+    "description": [
+        "認知機能のスクリーニング検査",
+        "11項目30点満点で定位、記憶、注意、実行機能を評価",
+        "教育レベルに応じたカットオフ値で判定"
+    ],
+    "disable_privacyitems": false,
+    "translate": "major",
+    "fields": [
+        {
+            "name": "検査前確認",
+            "type": "note",
+            "description": "**検査前の確認事項**\n\n・患者が覚醒していることを確認\n・聴力に問題がないことを確認\n・静かな環境で実施\n・患者の母国語で実施"
+        },
+        {
+            "name": "教育レベル",
+            "type": "radio",
+            "dispname": "教育レベル",
+            "description": "患者の教育レベルを選択してください（カットオフ値判定に使用）",
+            "required": true,
+            "selector": [
+                "高校卒業以上",
+                "高校卒業未満"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "section_orientation",
+            "type": "subsection",
+            "dispname": "見当識"
+        },
+        {
+            "name": "曜日",
+            "type": "radio",
+            "dispname": "1. 今日は何曜日ですか？",
+            "description": "正確な曜日を答える必要があります",
+            "required": true,
+            "selector": [
+                "月曜日",
+                "火曜日",
+                "水曜日",
+                "木曜日",
+                "金曜日",
+                "土曜日",
+                "日曜日",
+                "不正解"
+            ],
+            "selectoridx": "1|1|1|1|1|1|1|0"
+        },
+        {
+            "name": "年",
+            "type": "radio",
+            "dispname": "2. 今年は何年ですか？",
+            "description": "正確な年を答える必要があります",
+            "required": true,
+            "selector": [
+                "正解",
+                "不正解"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "都道府県",
+            "type": "radio",
+            "dispname": "3. ここはどこの都道府県ですか？",
+            "description": "正確な都道府県名を答える必要があります",
+            "required": true,
+            "selector": [
+                "正解",
+                "不正解"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "section_memory",
+            "type": "subsection",
+            "dispname": "記憶"
+        },
+        {
+            "name": "物品記憶指示",
+            "type": "note",
+            "description": "**5つの物品を覚えてもらってください**\n\n「これから5つの物の名前を言います。後でお聞きしますので覚えておいてください。」\n\n**りんご　ペン　ネクタイ　家　車**\n\n3回まで繰り返し可能。3回で覚えられない場合は次に進む。"
+        },
+        {
+            "name": "section_calculation",
+            "type": "subsection",
+            "dispname": "計算"
+        },
+        {
+            "name": "計算支出",
+            "type": "radio",
+            "dispname": "100円持ってお店に行き、りんごを12個3円で、三輪車を20円で買いました。いくら使いましたか？",
+            "description": "正解は23円",
+            "required": true,
+            "selector": [
+                "23円（正解）",
+                "その他（不正解）"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "計算残金",
+            "type": "radio",
+            "dispname": "残りはいくらですか？",
+            "description": "正解は77円（支出の正誤に関係なく77円なら2点）",
+            "required": true,
+            "selector": [
+                "77円（正解）",
+                "その他（不正解）"
+            ],
+            "selectoridx": "2|0"
+        },
+        {
+            "name": "section_fluency",
+            "type": "subsection",
+            "dispname": "語流暢性"
+        },
+        {
+            "name": "動物名",
+            "type": "radio",
+            "dispname": "6. 1分間でできるだけ多くの動物の名前を言ってください",
+            "description": "昆虫、人間、先史時代、絶滅動物、神話の動物も含む",
+            "required": true,
+            "selector": [
+                "0-4個",
+                "5-9個",
+                "10-14個",
+                "15個以上"
+            ],
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "name": "section_recall",
+            "type": "subsection",
+            "dispname": "遅延再生"
+        },
+        {
+            "name": "物品再生りんご",
+            "type": "radio",
+            "dispname": "7-1. 最初にお聞きした5つの物品を思い出してください（りんご）",
+            "required": true,
+            "selector": [
+                "正解",
+                "不正解"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "物品再生ペン",
+            "type": "radio",
+            "dispname": "7-2. ペン",
+            "required": true,
+            "selector": [
+                "正解",
+                "不正解"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "物品再生ネクタイ",
+            "type": "radio",
+            "dispname": "7-3. ネクタイ",
+            "required": true,
+            "selector": [
+                "正解",
+                "不正解"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "物品再生家",
+            "type": "radio",
+            "dispname": "7-4. 家",
+            "required": true,
+            "selector": [
+                "正解",
+                "不正解"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "物品再生車",
+            "type": "radio",
+            "dispname": "7-5. 車",
+            "required": true,
+            "selector": [
+                "正解",
+                "不正解"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "section_attention",
+            "type": "subsection",
+            "dispname": "注意・集中"
+        },
+        {
+            "name": "数字逆唱87",
+            "type": "radio",
+            "dispname": "8-1. 数字を逆から言ってください：87",
+            "description": "正解は78",
+            "required": true,
+            "selector": [
+                "78（正解）",
+                "その他（不正解）"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "数字逆唱648",
+            "type": "radio",
+            "dispname": "8-2. 数字を逆から言ってください：648",
+            "description": "正解は846",
+            "required": true,
+            "selector": [
+                "846（正解）",
+                "その他（不正解）"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "数字逆唱8537",
+            "type": "radio",
+            "dispname": "8-3. 数字を逆から言ってください：8537",
+            "description": "正解は7358",
+            "required": true,
+            "selector": [
+                "7358（正解）",
+                "その他（不正解）"
+            ],
+            "selectoridx": "2|0"
+        },
+        {
+            "name": "section_construction",
+            "type": "subsection",
+            "dispname": "構成・視空間"
+        },
+        {
+            "name": "時計描画時刻",
+            "type": "radio",
+            "dispname": "9-1. 時計の文字盤に11時10分前の時刻を描いてください（時刻）",
+            "description": "10時50分を正確に描けているか",
+            "required": true,
+            "selector": [
+                "正解",
+                "不正解"
+            ],
+            "selectoridx": "2|0"
+        },
+        {
+            "name": "時計描画文字盤",
+            "type": "radio",
+            "dispname": "9-2. 時計の文字盤の数字は正確ですか？",
+            "description": "時間のマーカーが適切に配置されているか",
+            "required": true,
+            "selector": [
+                "正解",
+                "不正解"
+            ],
+            "selectoridx": "2|0"
+        },
+        {
+            "name": "図形指示",
+            "type": "note",
+            "description": "**図形課題の指示**\n\n以下の図形を見せて課題を実施してください：\n- 三角形にXを描いてもらう\n- どの図形が一番大きいかを尋ねる"
+        },
+        {
+            "name": "図形課題X",
+            "type": "radio",
+            "dispname": "10-1. 三角形にXを描いてください",
+            "required": true,
+            "selector": [
+                "正解",
+                "不正解"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "図形課題大きさ",
+            "type": "radio",
+            "dispname": "10-2. どの図形が一番大きいですか？",
+            "description": "正解は四角形",
+            "required": true,
+            "selector": [
+                "四角形（正解）",
+                "その他（不正解）"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "section_story",
+            "type": "subsection",
+            "dispname": "物語記憶"
+        },
+        {
+            "name": "物語指示",
+            "type": "note",
+            "description": "**物語を読み上げてください**\n\n「これからお話をします。後で質問しますので、よく聞いてください。」\n\n**花子さんはとても成功した株式仲買人でした。彼女は株式市場で多くのお金を稼ぎました。そして、非常にハンサムな男性の太郎さんに出会いました。彼女は太郎さんと結婚し、3人の子供を授かりました。彼らは大阪に住んでいました。その後、彼女は仕事を辞めて家庭に入り、子育てに専念しました。子供たちが10代になったとき、彼女は仕事に復帰しました。彼女と太郎さんはその後幸せに暮らしました。**"
+        },
+        {
+            "name": "物語女性名",
+            "type": "radio",
+            "dispname": "11-1. 女性の名前は何でしたか？",
+            "description": "正解は花子",
+            "required": true,
+            "selector": [
+                "花子（正解）",
+                "その他（不正解）"
+            ],
+            "selectoridx": "2|0"
+        },
+        {
+            "name": "物語職業",
+            "type": "radio",
+            "dispname": "11-2. 彼女はどんな仕事をしていましたか？",
+            "description": "正解は株式仲買人",
+            "required": true,
+            "selector": [
+                "株式仲買人（正解）",
+                "その他（不正解）"
+            ],
+            "selectoridx": "2|0"
+        },
+        {
+            "name": "物語復職時期",
+            "type": "radio",
+            "dispname": "11-3. いつ仕事に戻りましたか？",
+            "description": "正解は子供たちが10代になったとき",
+            "required": true,
+            "selector": [
+                "子供たちが10代になったとき（正解）",
+                "その他（不正解）"
+            ],
+            "selectoridx": "2|0"
+        },
+        {
+            "name": "物語居住地",
+            "type": "radio",
+            "dispname": "11-4. どこに住んでいましたか？",
+            "description": "正解は大阪",
+            "required": true,
+            "selector": [
+                "大阪（正解）",
+                "その他（不正解）"
+            ],
+            "selectoridx": "2|0"
+        },
+        {
+            "name": "section_score",
+            "type": "subsection",
+            "dispname": "得点計算"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "合計点数",
+            "type": "eval",
+            "dispname": "SLUMS合計得点",
+            "formula": "[[曜日.index]] + [[年.index]] + [[都道府県.index]] + [[計算支出.index]] + [[計算残金.index]] + [[動物名.index]] + [[物品再生りんご.index]] + [[物品再生ペン.index]] + [[物品再生ネクタイ.index]] + [[物品再生家.index]] + [[物品再生車.index]] + [[数字逆唱87.index]] + [[数字逆唱648.index]] + [[数字逆唱8537.index]] + [[時計描画時刻.index]] + [[時計描画文字盤.index]] + [[図形課題X.index]] + [[図形課題大きさ.index]] + [[物語女性名.index]] + [[物語職業.index]] + [[物語復職時期.index]] + [[物語居住地.index]]"
+        },
+        {
+            "name": "認知機能判定高校卒業以上",
+            "type": "eval",
+            "dispname": "認知機能判定（高校卒業以上）",
+            "parentname": "教育レベル",
+            "parentsel": "高校卒業以上",
+            "formula": "[[合計点数]] >= 27 ? \"正常（27-30点）\" : [[合計点数]] >= 21 ? \"軽度神経認知障害（21-26点）\" : \"認知症（1-20点）\""
+        },
+        {
+            "name": "認知機能判定高校卒業未満",
+            "type": "eval",
+            "dispname": "認知機能判定（高校卒業未満）",
+            "parentname": "教育レベル",
+            "parentsel": "高校卒業未満",
+            "formula": "[[合計点数]] >= 25 ? \"正常（25-30点）\" : [[合計点数]] >= 20 ? \"軽度神経認知障害（20-24点）\" : \"認知症（1-19点）\""
+        }
+    ]
+}

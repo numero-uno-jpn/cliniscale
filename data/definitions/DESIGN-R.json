@@ -1,0 +1,201 @@
+{
+    "_comment": [
+        "DESIGN-R2020 褥瘡状態評価スケール",
+        "日本褥瘡学会が開発した褥瘡の重症度分類と治癒過程を数量化する評価ツール",
+        "2020年改定版では深部損傷褥瘡DTI疑いと臨界的定着疑いが追加",
+        "参考: 改定DESIGN-R2020 コンセンサス・ドキュメント（日本褥瘡学会編、照林社、2020年）",
+        "公式URL: https://www.jspu.org/medical/design-r/",
+        "修正内容: G肉芽組織を公式6段階に修正、計算式簡略化、中間変数追加、type修正"
+    ],
+    "title": "DESIGN-R2020 褥瘡状態評価スケール",
+    "description": [
+        "DESIGN-R2020は日本褥瘡学会が開発した褥瘡状態評価スケールです",
+        "褥瘡の重症度分類と治癒過程の数量化を目的として作成されました",
+        "深さ、滲出液、大きさ、炎症感染、肉芽組織、壊死組織、ポケットの7項目で評価します"
+    ],
+    "fields": [
+        {
+            "dispname": "褥瘡情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "褥瘡部位",
+            "name": "褥瘡部位",
+            "type": "text",
+            "required": true,
+            "description": "褥瘡の発生部位を記録してください（例: 仙骨部、坐骨部、大転子部、踵骨部など）"
+        },
+        {
+            "dispname": "DESIGN-R2020 評価項目",
+            "type": "subsection"
+        },
+        {
+            "dispname": "D: 深さ（Depth）",
+            "name": "D深さ",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "皮膚損傷・発赤なし",
+                "持続する発赤",
+                "真皮までの損傷",
+                "皮下組織までの損傷",
+                "皮下組織を超える損傷",
+                "関節腔・体腔に至る損傷",
+                "深部損傷褥瘡疑い",
+                "壊死組織で覆われ深さ判定不能"
+            ],
+            "selectoridx": "0|1|2|3|4|5|0|0",
+            "description": "創内の一番深い部分で評価します。深さの点数は合計点に含めません"
+        },
+        {
+            "dispname": "E: 滲出液（Exudate）",
+            "name": "E滲出液",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "滲出液なし",
+                "少量（毎日の交換を要しない）",
+                "中等量（1日1回の交換を要する）",
+                "多量（1日2回以上の交換を要する）"
+            ],
+            "selectoridx": "0|1|3|6",
+            "description": "ガーゼを貼付した場合を想定して判定します"
+        },
+        {
+            "dispname": "S: 大きさ（Size）",
+            "name": "S大きさ",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "皮膚損傷なし",
+                "4未満",
+                "4以上16未満",
+                "16以上36未満",
+                "36以上64未満",
+                "64以上100未満",
+                "100以上"
+            ],
+            "selectoridx": "0|1|3|6|9|12|15",
+            "description": "長径×短径（cm²）で計算します。毎回同一体位で測定してください"
+        },
+        {
+            "dispname": "I: 炎症・感染（Inflammation/Infection）",
+            "name": "I炎症感染",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "局所の炎症徴候なし",
+                "局所の炎症徴候あり",
+                "臨界的定着疑い",
+                "局所の明らかな感染徴候あり"
+            ],
+            "selectoridx": "0|1|3|3",
+            "description": "発赤、腫脹、熱感、疼痛、膿、悪臭などで判定します。臨界的定着は創面のぬめりと多量の滲出液が特徴です"
+        },
+        {
+            "dispname": "G: 肉芽組織（Granulation）",
+            "name": "G肉芽組織",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "創が治癒、創が浅い、DTI疑い",
+                "良性肉芽が創面の90%以上",
+                "良性肉芽が創面の50%以上90%未満",
+                "良性肉芽が創面の10%以上50%未満",
+                "良性肉芽が創面の10%未満",
+                "良性肉芽が全く形成されていない"
+            ],
+            "selectoridx": "0|1|3|4|5|6",
+            "description": "創底に占める良性肉芽組織の割合で判定します。DTI疑いの場合は基本的に1番目を選択してください"
+        },
+        {
+            "dispname": "N: 壊死組織（Necrotic tissue）",
+            "name": "N壊死組織",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "壊死組織なし",
+                "柔らかい壊死組織あり",
+                "硬く厚い密着した壊死組織あり"
+            ],
+            "selectoridx": "0|3|6",
+            "description": "壊死組織の有無と柔らかさで判定します。混在する場合は全体的に多いもので評価してください"
+        },
+        {
+            "dispname": "P: ポケット（Pocket）",
+            "name": "Pポケット",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "ポケットなし",
+                "4未満",
+                "4以上16未満",
+                "16以上36未満",
+                "36以上"
+            ],
+            "selectoridx": "0|6|9|12|24",
+            "description": "ポケットを含む外形から褥瘡の大きさを差し引いた値です。綿棒等で開口範囲を確認してください"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "滲出液点数",
+            "type": "eval",
+            "formula": "[[E滲出液.index]] <= 1 ? [[E滲出液.index]] : ( [[E滲出液.index]] == 2 ? 3 : 6 )",
+            "noreport": true
+        },
+        {
+            "name": "大きさ点数",
+            "type": "eval",
+            "formula": "[[S大きさ.index]] == 0 ? 0 : ( [[S大きさ.index]] == 1 ? 1 : ( [[S大きさ.index]] == 2 ? 3 : ( [[S大きさ.index]] == 3 ? 6 : ( [[S大きさ.index]] == 4 ? 9 : ( [[S大きさ.index]] == 5 ? 12 : 15 ) ) ) ) )",
+            "noreport": true
+        },
+        {
+            "name": "炎症感染点数",
+            "type": "eval",
+            "formula": "[[I炎症感染.index]] <= 1 ? [[I炎症感染.index]] : 3",
+            "noreport": true
+        },
+        {
+            "name": "肉芽組織点数",
+            "type": "eval",
+            "formula": "[[G肉芽組織.index]] == 0 ? 0 : ( [[G肉芽組織.index]] == 1 ? 1 : ( [[G肉芽組織.index]] == 2 ? 3 : ( [[G肉芽組織.index]] == 3 ? 4 : ( [[G肉芽組織.index]] == 4 ? 5 : 6 ) ) ) )",
+            "noreport": true
+        },
+        {
+            "name": "壊死組織点数",
+            "type": "eval",
+            "formula": "[[N壊死組織.index]] == 0 ? 0 : ( [[N壊死組織.index]] == 1 ? 3 : 6 )",
+            "noreport": true
+        },
+        {
+            "name": "ポケット点数",
+            "type": "eval",
+            "formula": "[[Pポケット.index]] == 0 ? 0 : ( [[Pポケット.index]] == 1 ? 6 : ( [[Pポケット.index]] == 2 ? 9 : ( [[Pポケット.index]] == 3 ? 12 : 24 ) ) )",
+            "noreport": true
+        },
+        {
+            "name": "DESIGN-R2020合計点",
+            "type": "eval",
+            "formula": "[[滲出液点数]] + [[大きさ点数]] + [[炎症感染点数]] + [[肉芽組織点数]] + [[壊死組織点数]] + [[ポケット点数]]",
+            "dispname": "DESIGN-R2020 深さを除く6項目の合計点（0-66点）"
+        },
+        {
+            "name": "重症度評価",
+            "type": "eval",
+            "dispname": "合計点による重症度の目安",
+            "formula": "[[DESIGN-R2020合計点]] >= 40 ? '高度' : ( [[DESIGN-R2020合計点]] >= 20 ? '中等度' : '軽度' )"
+        },
+        {
+            "name": "Warning: 中等度以上 DESIGN-R2020合計点 >= 20",
+            "formula": "[[DESIGN-R2020合計点]] >= 20",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 高度 DESIGN-R2020合計点 >= 45",
+            "formula": "[[DESIGN-R2020合計点]] >= 45",
+            "type": "emergency"
+        }
+    ]
+}

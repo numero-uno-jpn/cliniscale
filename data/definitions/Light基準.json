@@ -1,0 +1,154 @@
+{
+  "_comment": [
+    "Light基準（Light's Criteria）：胸水の滲出性・漏出性鑑別基準",
+    "開発者：Richard W. Light, MD（1972年）",
+    "原典：Ann Intern Med. 1972; 77(4):507-13",
+    "感度98%、特異度83%",
+    "3つの基準のうち1つ以上を満たすと滲出性胸水と判定"
+  ],
+  "title": "Light 胸水の滲出性・漏出性鑑別基準",
+  "description": [
+    "胸水が滲出性か漏出性かを鑑別するための検査基準です。",
+    "血清と胸水の生化学検査値を入力してください。",
+    "<br>**判定結果の解釈**\n\n- **滲出性胸水**: 肺炎、肺がん、胸膜炎、結核など胸膜の炎症により発生\n- **漏出性胸水**: 心不全、肝硬変、腎不全など全身性疾患により発生\n\n**注意**: 心不全で利尿薬使用中の場合、漏出性胸水が滲出性と誤判定される場合があります。"
+  ],
+  "responsible_person": [
+    "担当医師"
+  ],
+  "staffs": [
+    "検査技師",
+    "担当医師"
+  ],
+  "dept_in_charge": "呼吸器内科",
+  "contact": "検査室",
+  "submit_button_title": "結果を確認",
+  "fields": [
+    {
+      "dispname": "血清データ",
+      "type": "subsection"
+    },
+    {
+      "dispname": "血清総タンパク",
+      "name": "血清総タンパク",
+      "type": "text",
+      "postfix": "g/dL",
+      "inputmode": "decimal",
+      "testrange": [
+        1.0,
+        10.0
+      ],
+      "required": true,
+      "description": "半角数字で入力してください（例: 6.5）"
+    },
+    {
+      "dispname": "血清LDH",
+      "name": "血清LDH",
+      "type": "text",
+      "postfix": "IU/L",
+      "inputmode": "numeric",
+      "testrange": [
+        50,
+        1000
+      ],
+      "required": true,
+      "description": "半角数字で入力してください（例: 200）"
+    },
+    {
+      "dispname": "血清LDH正常値上限",
+      "name": "血清LDH上限",
+      "type": "text",
+      "postfix": "IU/L",
+      "inputmode": "numeric",
+      "testrange": [
+        200,
+        300
+      ],
+      "required": true,
+      "description": "施設基準値を入力してください（一般的に240）"
+    },
+    {
+      "type": "separator"
+    },
+    {
+      "dispname": "胸水データ",
+      "type": "subsection"
+    },
+    {
+      "dispname": "胸水総タンパク",
+      "name": "胸水総タンパク",
+      "type": "text",
+      "postfix": "g/dL",
+      "inputmode": "decimal",
+      "testrange": [
+        0.1,
+        10.0
+      ],
+      "required": true,
+      "description": "半角数字で入力してください（例: 4.2）"
+    },
+    {
+      "dispname": "胸水LDH",
+      "name": "胸水LDH",
+      "type": "text",
+      "postfix": "IU/L",
+      "inputmode": "numeric",
+      "testrange": [
+        10,
+        3000
+      ],
+      "required": true,
+      "description": "半角数字で入力してください（例: 350）"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "タンパク比",
+      "type": "eval",
+      "formula": "( ((胸水総タンパク)) / ((血清総タンパク)) ).toFixed(2)",
+      "dispname": "胸水総タンパク/血清総タンパク比"
+    },
+    {
+      "name": "LDH比",
+      "type": "eval",
+      "formula": "( ((胸水LDH)) / ((血清LDH)) ).toFixed(2)",
+      "dispname": "胸水LDH/血清LDH比"
+    },
+    {
+      "name": "LDH上限2/3",
+      "type": "eval",
+      "formula": "( ((血清LDH上限)) * 2 / 3 ).toFixed(2)",
+      "dispname": "血清LDH正常値上限の2/3値"
+    },
+    {
+      "name": "基準1",
+      "type": "eval",
+      "formula": "((タンパク比)) > 0.5 ? 'あり' : 'なし'",
+      "dispname": "基準1: 胸水総タンパク/血清総タンパク > 0.5"
+    },
+    {
+      "name": "基準2",
+      "type": "eval",
+      "formula": "((LDH比)) > 0.6 ? 'あり' : 'なし'",
+      "dispname": "基準2: 胸水LDH/血清LDH > 0.6"
+    },
+    {
+      "name": "基準3",
+      "type": "eval",
+      "formula": "((胸水LDH)) > [[LDH上限2/3]] ? 'あり' : 'なし'",
+      "dispname": "基準3: 胸水LDH > 血清LDH正常値上限の2/3"
+    },
+    {
+      "name": "判定結果",
+      "type": "eval",
+      "formula": "{{基準1}} == 'あり' || {{基準2}} == 'あり' || {{基準3}} == 'あり' ? '滲出性胸水' : '漏出性胸水'",
+      "dispname": "Light基準による胸水の分類"
+    },
+    {
+      "name": "満たす基準数",
+      "type": "eval",
+      "formula": "({{基準1}} == 'あり' ? 1 : 0) + ({{基準2}} == 'あり' ? 1 : 0) + ({{基準3}} == 'あり' ? 1 : 0)",
+      "dispname": "満たす基準の数（0-3）"
+    }
+  ]
+}

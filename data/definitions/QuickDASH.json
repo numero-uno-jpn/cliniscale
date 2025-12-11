@@ -1,0 +1,217 @@
+{
+    "_comment": [
+        "QuickDASH: Quick Disabilities of the Arm, Shoulder and Hand",
+        "上肢障害簡易評価票",
+        "原典: Beaton DE, Wright JG, Katz JN; Upper Extremity Collaborative Group. Development of the QuickDASH: comparison of three item-reduction approaches. J Bone Joint Surg Am. 2005;87(5):1038-1046.",
+        "公式サイト: https://dash.iwh.on.ca/about-quickdash",
+        "著作権: Institute for Work & Health",
+        "評価方式: 各項目1-5点、0-100点スケールに変換",
+        "計算式: QuickDASHスコア = ((合計点 / 11) - 1) × 25"
+    ],
+    "title": "QuickDASH上肢障害簡易評価票",
+    "description": [
+        "過去1週間の上肢の状態について、以下の質問にお答えください。",
+        "各質問について、最もあてはまるものを1つ選んでください。"
+    ],
+    "contact": "整形外科外来",
+    "fields": [
+        {
+            "dispname": "身体機能",
+            "type": "subsection"
+        },
+        {
+            "dispname": "重いドアを開ける",
+            "name": "Q1",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "困難なし",
+                "やや困難",
+                "中等度困難",
+                "かなり困難",
+                "できない"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "家事や庭仕事",
+            "name": "Q2",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "困難なし",
+                "やや困難",
+                "中等度困難",
+                "かなり困難",
+                "できない"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "買い物袋や鞄を運ぶ",
+            "name": "Q3",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "困難なし",
+                "やや困難",
+                "中等度困難",
+                "かなり困難",
+                "できない"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "背中を洗う",
+            "name": "Q4",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "困難なし",
+                "やや困難",
+                "中等度困難",
+                "かなり困難",
+                "できない"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "ナイフで食べ物を切る",
+            "name": "Q5",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "困難なし",
+                "やや困難",
+                "中等度困難",
+                "かなり困難",
+                "できない"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "娯楽活動(スポーツ、楽器演奏等)",
+            "name": "Q6",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "困難なし",
+                "やや困難",
+                "中等度困難",
+                "かなり困難",
+                "できない"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "症状",
+            "type": "subsection"
+        },
+        {
+            "dispname": "腕、肩、手の痛み",
+            "name": "Q7",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "軽度",
+                "中等度",
+                "重度",
+                "非常に重度"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "特定動作時の腕、肩、手の痛み",
+            "name": "Q8",
+            "type": "radio",
+            "required": true,
+            "description": "何か特定の動作をしたときの痛み",
+            "selector": [
+                "全くない",
+                "軽度",
+                "中等度",
+                "重度",
+                "非常に重度"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "腕、肩、手のピリピリ感やしびれ",
+            "name": "Q9",
+            "type": "radio",
+            "required": true,
+            "selector": [
+                "全くない",
+                "軽度",
+                "中等度",
+                "重度",
+                "非常に重度"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "社会機能",
+            "type": "subsection"
+        },
+        {
+            "dispname": "社会活動への支障",
+            "name": "Q10",
+            "type": "radio",
+            "required": true,
+            "description": "家族、友人、近所の人、グループとの通常の社会活動への支障の程度",
+            "selector": [
+                "全く支障なし",
+                "やや支障あり",
+                "中等度支障あり",
+                "かなり支障あり",
+                "非常に支障あり"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "仕事や日常活動の制限",
+            "name": "Q11",
+            "type": "radio",
+            "required": true,
+            "description": "腕、肩、手の問題により、仕事や日常活動がどの程度制限されているか",
+            "selector": [
+                "全く制限なし",
+                "やや制限あり",
+                "中等度制限あり",
+                "かなり制限あり",
+                "制限のため不可能"
+            ],
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "項目合計",
+            "type": "eval",
+            "formula": "[[Q1.index]] + [[Q2.index]] + [[Q3.index]] + [[Q4.index]] + [[Q5.index]] + [[Q6.index]] + [[Q7.index]] + [[Q8.index]] + [[Q9.index]] + [[Q10.index]] + [[Q11.index]]",
+            "noreport": true
+        },
+        {
+            "name": "QuickDASHスコア",
+            "type": "eval",
+            "formula": "Math.round( ( ( [[項目合計]] / 11 - 1 ) * 25 ) * 10 ) / 10"
+        },
+        {
+            "name": "障害度分類",
+            "type": "eval",
+            "formula": "[[QuickDASHスコア]] == 0 ? '障害なし' : ( [[QuickDASHスコア]] <= 25 ? '軽度障害' : ( [[QuickDASHスコア]] <= 50 ? '中等度障害' : '重度障害' ) )"
+        },
+        {
+            "type": "warning",
+            "name": "Warning: 中等度以上の障害 QuickDASH > 25",
+            "formula": "[[QuickDASHスコア]] > 25"
+        },
+        {
+            "type": "emergency",
+            "name": "Emergency: 重度障害 QuickDASH > 50",
+            "formula": "[[QuickDASHスコア]] > 50"
+        }
+    ]
+}

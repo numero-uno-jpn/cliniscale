@@ -1,0 +1,236 @@
+{
+  "_comment": [
+    "ベーチェット病重症度基準",
+    "厚生労働省ベーチェット病診断基準（2010年小改訂）に基づく重症度分類",
+    "参考文献: 厚生労働省指定難病56 ベーチェット病 重症度基準",
+    "URL: https://www.mhlw.go.jp/file/06-Seisakujouhou-10900000-Kenkoukyoku/0000089968.pdf",
+    "日本ベーチェット病学会: http://www-user.yokohama-cu.ac.jp/~jbehcet/jigyou/shindan.html"
+  ],
+  "title": "ベーチェット病重症度基準",
+  "description": [
+    "ベーチェット病の重症度を評価し、医療費助成の対象となるStage II以上を判定するための基準です",
+    "診断は既に確定したベーチェット病患者を対象としています"
+  ],
+  "contact": "リウマチ膠原病内科",
+  "dept_in_charge": "膠原病内科",
+  "submit_button_title": "重症度評価を送信",
+  "fields": [
+    {
+      "dispname": "基本症状の評価",
+      "type": "subsection"
+    },
+    {
+      "dispname": "口腔粘膜のアフタ性潰瘍",
+      "name": "口腔潰瘍",
+      "type": "radio",
+      "required": true,
+      "selector": "なし|あり",
+      "description": "境界鮮明な浅い有痛性潰瘍（口唇粘膜、頬粘膜、舌、歯肉など）"
+    },
+    {
+      "dispname": "皮膚症状",
+      "name": "皮膚症状",
+      "type": "checkbox",
+      "selector": "結節性紅斑様皮疹|皮下の血栓性静脈炎|毛嚢炎様皮疹、痤瘡様皮疹",
+      "description": "該当する皮膚症状をすべて選択してください。該当なしの場合は何も選択しないでください"
+    },
+    {
+      "dispname": "外陰部潰瘍",
+      "name": "外陰部潰瘍",
+      "type": "radio",
+      "required": true,
+      "selector": "なし|あり",
+      "description": "有痛性の境界鮮明なアフタ性潰瘍（男性: 陰嚢・陰茎、女性: 大小陰唇）"
+    },
+    {
+      "dispname": "眼症状の詳細評価",
+      "type": "subsection"
+    },
+    {
+      "dispname": "虹彩毛様体炎",
+      "name": "虹彩毛様体炎",
+      "type": "radio",
+      "required": true,
+      "selector": "なし|現在あり|過去にあり",
+      "description": "眼痛、結膜充血、視力低下などを伴う眼炎症"
+    },
+    {
+      "dispname": "網脈絡膜炎（網膜ぶどう膜炎）",
+      "name": "網脈絡膜炎",
+      "type": "radio",
+      "required": true,
+      "selector": "なし|あり（失明の可能性なし）|あり（失明の可能性あり）",
+      "description": "失明の可能性: 両眼視力の和が0.12以下または両眼視野がそれぞれ10度以内の可能性がある、または既に失明に至った"
+    },
+    {
+      "dispname": "眼の後遺症",
+      "name": "眼後遺症",
+      "type": "checkbox",
+      "selector": "虹彩後癒着|水晶体上色素沈着|網脈絡膜萎縮|視神経萎縮|併発白内障|続発緑内障|眼球癆",
+      "description": "過去の眼症状による後遺症をすべて選択してください。該当なしの場合は何も選択しないでください"
+    },
+    {
+      "dispname": "特殊病型の評価",
+      "type": "subsection"
+    },
+    {
+      "dispname": "腸管ベーチェット病",
+      "name": "腸管型",
+      "type": "radio",
+      "required": true,
+      "selector": "なし|あり（活動性・重度後遺症）|あり（生命予後に危険）",
+      "description": "回盲部潰瘍などの消化器病変（内視鏡確認）。活動性がある、または重度の後遺症を残す場合は「活動性・重度後遺症」、生命予後に危険がある場合は「生命予後に危険」を選択"
+    },
+    {
+      "dispname": "血管ベーチェット病",
+      "name": "血管型",
+      "type": "radio",
+      "required": true,
+      "selector": "なし|あり（活動性・重度後遺症）|あり（生命予後に危険）",
+      "description": "動脈瘤、動脈閉塞、深部静脈血栓症、肺塞栓など。活動性がある、または重度の後遺症を残す場合は「活動性・重度後遺症」、生命予後に危険がある場合は「生命予後に危険」を選択"
+    },
+    {
+      "dispname": "神経ベーチェット病のタイプ",
+      "name": "神経型タイプ",
+      "type": "radio",
+      "required": true,
+      "selector": "なし|急性型|慢性進行型",
+      "description": "急性型: 髄膜炎・脳幹脳炎、慢性進行型: 体幹失調・精神症状"
+    },
+    {
+      "dispname": "神経ベーチェット病の重症度",
+      "name": "神経型重症度",
+      "type": "radio",
+      "required": true,
+      "selector": "該当なし|活動性・重度後遺症|中等度以上の知能低下を有する進行性|生命予後に危険",
+      "parentname": "神経型タイプ",
+      "parentsel": "急性型|慢性進行型",
+      "description": "活動性がある、または重度の後遺症を残す場合は「活動性・重度後遺症」、慢性進行型で中等度以上の知能低下がある場合は該当項目、生命予後に危険がある場合は「生命予後に危険」を選択"
+    },
+    {
+      "dispname": "副症状の評価",
+      "type": "subsection"
+    },
+    {
+      "dispname": "関節炎",
+      "name": "関節炎",
+      "type": "radio",
+      "required": true,
+      "selector": "なし|あり",
+      "description": "変形や硬直を伴わない関節炎"
+    },
+    {
+      "dispname": "副睾丸炎",
+      "name": "副睾丸炎",
+      "type": "radio",
+      "required": true,
+      "selector": "なし|あり",
+      "description": "男性のみ該当"
+    },
+    {
+      "dispname": "活動期の評価",
+      "type": "subsection"
+    },
+    {
+      "dispname": "現在の炎症兆候",
+      "name": "炎症兆候",
+      "type": "radio",
+      "required": true,
+      "selector": "なし|あり",
+      "description": "理学所見または検査所見（血清CRP、血清補体価、髄液所見、腸管内視鏡所見など）で炎症が明らか"
+    },
+    {
+      "dispname": "活動期病変の状態",
+      "name": "活動期病変状態",
+      "type": "radio",
+      "required": true,
+      "selector": "現在活動期病変あり|1年以上活動期病変なし",
+      "description": "Stage I・IIの場合のみ該当。活動期病変: ぶどう膜炎、皮下血栓性静脈炎、結節性紅斑様皮疹、外陰部潰瘍（女性の性周期に連動したものを除く）、関節炎症状、腸管潰瘍、進行性の中枢神経病変、進行性の血管病変、副睾丸炎のいずれかがみられ、炎症兆候が明らかなもの"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "主症状あり",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( {{口腔潰瘍}} == 'あり' || {{皮膚症状}} != '' || {{外陰部潰瘍}} == 'あり')? 1: 0"
+    },
+    {
+      "name": "眼症状なし",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( {{虹彩毛様体炎}} == 'なし' && {{網脈絡膜炎}} == 'なし')? 1: 0"
+    },
+    {
+      "name": "虹彩毛様体炎あり",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( {{虹彩毛様体炎}} != 'なし')? 1: 0"
+    },
+    {
+      "name": "副症状あり",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( {{関節炎}} == 'あり' || {{副睾丸炎}} == 'あり')? 1: 0"
+    },
+    {
+      "name": "網脈絡膜炎Stage3",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( {{網脈絡膜炎}} == 'あり（失明の可能性なし）')? 1: 0"
+    },
+    {
+      "name": "網脈絡膜炎Stage4",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( {{網脈絡膜炎}} == 'あり（失明の可能性あり）')? 1: 0"
+    },
+    {
+      "name": "眼後遺症あり",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( {{眼後遺症}} != '')? 1: 0"
+    },
+    {
+      "name": "特殊病型Stage4",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( {{腸管型}} == 'あり（活動性・重度後遺症）' || {{血管型}} == 'あり（活動性・重度後遺症）' || ( {{神経型タイプ}} != 'なし' && {{神経型重症度}} == '活動性・重度後遺症') )? 1: 0"
+    },
+    {
+      "name": "特殊病型Stage5",
+      "type": "eval",
+      "noreport": true,
+      "formula": "( {{腸管型}} == 'あり（生命予後に危険）' || {{血管型}} == 'あり（生命予後に危険）' || ( {{神経型タイプ}} != 'なし' && ( {{神経型重症度}} == '中等度以上の知能低下を有する進行性' || {{神経型重症度}} == '生命予後に危険') ) )? 1: 0"
+    },
+    {
+      "dispname": "最終重症度判定",
+      "name": "最終重症度",
+      "type": "eval",
+      "formula": "[[特殊病型Stage5]] ? 'Stage V' : ( [[網脈絡膜炎Stage4]] || [[眼後遺症あり]] || [[特殊病型Stage4]] ? 'Stage IV' : ( [[網脈絡膜炎Stage3]] ? 'Stage III' : ( [[主症状あり]] && ( [[虹彩毛様体炎あり]] || [[副症状あり]] ) ? 'Stage II' : ( [[主症状あり]] && [[眼症状なし]] ? 'Stage I' : '評価不能' ) ) ) )"
+    },
+    {
+      "dispname": "医療費助成対象判定（Stage II以上）",
+      "name": "医療費助成",
+      "type": "eval",
+      "formula": "{{最終重症度}} == 'Stage II' || {{最終重症度}} == 'Stage III' || {{最終重症度}} == 'Stage IV' || {{最終重症度}} == 'Stage V' ? '医療費助成対象' : '医療費助成対象外'"
+    },
+    {
+      "dispname": "固定期（寛解）判定（Stage I・IIで活動期病変が1年間以上みられず、かつ炎症兆候がない場合の判定。評価不能の場合は該当なし）",
+      "name": "固定期判定",
+      "type": "eval",
+      "formula": "{{最終重症度}} == '評価不能' ? '該当なし' : ( ( {{最終重症度}} == 'Stage I' || {{最終重症度}} == 'Stage II' ) && {{活動期病変状態}} == '1年以上活動期病変なし' && {{炎症兆候}} == 'なし' ? '固定期（寛解）' : '活動期' )"
+    },
+    {
+      "name": "Warning: Stage IV 重度の眼合併症または活動性特殊病型で集学的治療が必要",
+      "type": "warning",
+      "formula": "{{最終重症度}} == 'Stage IV'"
+    },
+    {
+      "name": "Emergency: Stage V 生命予後に危険のあり緊急の専門的治療が必要",
+      "type": "emergency",
+      "formula": "{{最終重症度}} == 'Stage V'"
+    }
+  ]
+}

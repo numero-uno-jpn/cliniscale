@@ -1,0 +1,103 @@
+{
+  "_comment": [
+    "Mayo Score for Ulcerative Colitis",
+    "Schroeder KW, Tremaine WJ, Ilstrup DM. Coated oral 5-aminosalicylic acid therapy for mildly to moderately active ulcerative colitis. N Engl J Med. 1987;317:1625-9.",
+    "https://pubmed.ncbi.nlm.nih.gov/3317057/",
+    "潰瘍性大腸炎の活動性評価スコア",
+    "0-12点で評価、寛解から重度まで分類"
+  ],
+  "title": "Mayoスコア",
+  "description": [
+    "潰瘍性大腸炎の活動性評価",
+    "便回数、出血、内視鏡所見、医師評価を総合的に評価します"
+  ],
+  "fields": [
+    {
+      "type": "subsection",
+      "dispname": "臨床症状"
+    },
+    {
+      "type": "radio",
+      "name": "便回数",
+      "dispname": "排便回数",
+      "selector": [
+        "正常",
+        "正常より1-2回多い",
+        "正常より3-4回多い",
+        "正常より5回以上多い"
+      ],
+      "selectoridx": "0|1|2|3",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "直腸出血",
+      "dispname": "直腸出血",
+      "selector": [
+        "なし",
+        "便の半分未満に血液の筋",
+        "便の半分以上に血液",
+        "単独で血液排出"
+      ],
+      "selectoridx": "0|1|2|3",
+      "required": true
+    },
+    {
+      "type": "subsection",
+      "dispname": "内視鏡所見"
+    },
+    {
+      "type": "radio",
+      "name": "内視鏡所見",
+      "dispname": "内視鏡所見",
+      "selector": [
+        "正常または非活動性疾患",
+        "軽度病変 (紅斑、血管透見消失、軽度脆弱性)",
+        "中等度病変 (著明な紅斑、血管透見消失、脆弱性、びらん)",
+        "重度病変 (自然出血、潰瘍)"
+      ],
+      "selectoridx": "0|1|2|3",
+      "required": true
+    },
+    {
+      "type": "subsection",
+      "dispname": "医師評価"
+    },
+    {
+      "type": "radio",
+      "name": "医師全般評価",
+      "dispname": "医師による全般的評価",
+      "selector": [
+        "正常",
+        "軽度",
+        "中等度",
+        "重度"
+      ],
+      "selectoridx": "0|1|2|3",
+      "required": true
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "type": "eval",
+      "name": "合計スコア",
+      "formula": "[[便回数.index]] + [[直腸出血.index]] + [[内視鏡所見.index]] + [[医師全般評価.index]]"
+    },
+    {
+      "type": "eval",
+      "name": "活動性分類",
+      "formula": "[[合計スコア]] >= 11 ? '重度' : ( [[合計スコア]] >= 6 ? '中等度' : ( [[合計スコア]] >= 3 ? '軽度' : '寛解'))"
+    },
+    {
+      "type": "warning",
+      "formula": "[[合計スコア]] >= 6",
+      "name": "Warning: 中等度リスク"
+    },
+    {
+      "type": "emergency",
+      "formula": "[[合計スコア]] >= 11",
+      "name": "Emergency: 高度リスク"
+    }
+  ]
+}

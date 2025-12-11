@@ -1,0 +1,145 @@
+{
+  "_comment": [
+    "LRINEC (Laboratory Risk Indicator for Necrotizing Fasciitis) Score 問診票",
+    "2004年にChin-Ho Wong氏らにより開発された壊死性筋膜炎診断補助スコア",
+    "原著論文: Wong CH, et al. The LRINEC score: a tool for distinguishing necrotizing fasciitis from other soft tissue infections. Crit Care Med 2004;32:1535-41. PMID: 15241098",
+    "6点以上で壊死性筋膜炎を疑う (感度90%、特異度97%)",
+    "最高13点満点",
+    "CRP単位: 国際標準のmg/L表記を使用 (15 mg/dL = 150 mg/L)",
+    "リスク分類の%値は後続研究に基づく臨床的目安"
+  ],
+  "title": "LRINEC 壊死性筋膜炎診断補助スコア",
+  "description": [
+    "Laboratory Risk Indicator for Necrotizing Fasciitis",
+    "壊死性筋膜炎診断補助スコア"
+  ],
+  "submit_button_title": "スコアを計算",
+  "fields": [
+    {
+      "dispname": "CRP",
+      "name": "CRP",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": [
+        "<150 mg/L",
+        "≧150 mg/L"
+      ],
+      "selectoridx": [
+        "0",
+        "4"
+      ],
+      "description": "C反応性蛋白 (国際単位: mg/L)"
+    },
+    {
+      "dispname": "白血球数 (WBC)",
+      "name": "WBC",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": [
+        "<15,000 /μL",
+        "15,000-25,000 /μL",
+        ">25,000 /μL"
+      ],
+      "selectoridx": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    {
+      "dispname": "ヘモグロビン (Hb)",
+      "name": "Hb",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": [
+        ">13.5 g/dL",
+        "11.0-13.5 g/dL",
+        "<11.0 g/dL"
+      ],
+      "selectoridx": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    {
+      "dispname": "血清ナトリウム (Na)",
+      "name": "Na",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": [
+        "≧135 mEq/L",
+        "<135 mEq/L"
+      ],
+      "selectoridx": [
+        "0",
+        "2"
+      ]
+    },
+    {
+      "dispname": "血清クレアチニン (Cr)",
+      "name": "Cr",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": [
+        "≦1.6 mg/dL",
+        ">1.6 mg/dL"
+      ],
+      "selectoridx": [
+        "0",
+        "2"
+      ]
+    },
+    {
+      "dispname": "血糖 (Glucose)",
+      "name": "Glucose",
+      "type": "radio",
+      "inline": true,
+      "required": true,
+      "selector": [
+        "≦180 mg/dL",
+        ">180 mg/dL"
+      ],
+      "selectoridx": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "LRINEC_total",
+      "type": "eval",
+      "formula": "[[CRP.index]] + [[WBC.index]] + [[Hb.index]] + [[Na.index]] + [[Cr.index]] + [[Glucose.index]]",
+      "dispname": "合計点数 (最高13点)"
+    },
+    {
+      "name": "risk_level",
+      "type": "eval",
+      "formula": "[[LRINEC_total]] <= 5 ? '低リスク (<50%)' : ( [[LRINEC_total]] <= 7 ? '中等度リスク (50-75%)' : '高リスク (>75%)' )",
+      "dispname": "リスク分類 (後続研究に基づく臨床的目安)"
+    },
+    {
+      "name": "interpretation",
+      "type": "eval",
+      "formula": "[[LRINEC_total]] >= 6 ? '壊死性筋膜炎を疑う' : '壊死性筋膜炎の可能性は低い'",
+      "dispname": "判定"
+    },
+    {
+      "name": "Warning: 中等度リスク LRINECスコア ≥ 6",
+      "formula": "[[LRINEC_total]] >= 6",
+      "type": "warning"
+    },
+    {
+      "name": "Emergency: 高リスク LRINECスコア ≥ 8",
+      "formula": "[[LRINEC_total]] >= 8",
+      "type": "emergency"
+    }
+  ]
+}

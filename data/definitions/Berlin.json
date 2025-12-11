@@ -1,0 +1,299 @@
+{
+    "_comment": [
+        "Berlin Questionnaire - 睡眠時無呼吸症候群スクリーニング質問票",
+        "原典：Netzer, N.C., et al. Using the Berlin Questionnaire to identify patients at risk for the sleep apnea syndrome. Ann Intern Med. 1999;131:485-491.",
+        "日本語版：小島重子, 榊原博樹, 他. 睡眠呼吸障害スクリーニング質問紙日本語版の信頼性と妥当性. 日本呼吸ケア・リハビリテーション学会誌. 2007;17(3):251-256.",
+        "3カテゴリー構成：カテゴリー1(いびき)、カテゴリー2(覚醒時の眠気・倦怠感)、カテゴリー3(肥満・高血圧)",
+        "高リスク判定：2つ以上のカテゴリーが陽性の場合",
+        "修正内容：質問6の2点配点、論理演算子修正、section→subsection変更、warning項目補完"
+    ],
+    "title": "Berlin Questionnaire 睡眠時無呼吸症候群スクリーニング",
+    "description": [
+        "睡眠時無呼吸症候群のリスクを評価するための質問票です。",
+        "身長・体重・年齢・性別の記入と10の質問にお答えください。"
+    ],
+    "fields": [
+        {
+            "dispname": "1. 基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "身長",
+            "name": "身長",
+            "type": "text",
+            "inputmode": "decimal",
+            "postfix": "cm",
+            "testrange": [
+                130,
+                190
+            ],
+            "required": true,
+            "description": "半角数字で入力してください（例: 170.5）"
+        },
+        {
+            "dispname": "体重",
+            "name": "体重",
+            "type": "text",
+            "inputmode": "decimal",
+            "postfix": "kg",
+            "testrange": [
+                40,
+                100
+            ],
+            "required": true,
+            "description": "半角数字で入力してください（例: 65.5）"
+        },
+        {
+            "dispname": "年齢",
+            "name": "年齢",
+            "type": "text",
+            "inputmode": "numeric",
+            "postfix": "歳",
+            "testrange": [
+                20,
+                90
+            ],
+            "required": true,
+            "description": "半角数字で入力してください（例: 45）"
+        },
+        {
+            "dispname": "性別",
+            "name": "性別",
+            "type": "radio",
+            "selector": [
+                "男性",
+                "女性"
+            ],
+            "required": true
+        },
+        {
+            "dispname": "いびきに関する質問",
+            "type": "subsection"
+        },
+        {
+            "dispname": "2. あなたはいびきをかくと、誰かに言われたことはありますか",
+            "name": "Q2",
+            "type": "radio",
+            "selector": [
+                "はい",
+                "いいえ",
+                "わからない"
+            ],
+            "selectoridx": "1|0|0",
+            "required": true
+        },
+        {
+            "dispname": "3. あなたのいびきの大きさは",
+            "name": "Q3",
+            "type": "radio",
+            "selector": [
+                "呼吸よりわずかに大きい",
+                "話し声と同じくらい",
+                "話し声より大きい",
+                "とても大きく、隣の部屋でも聞こえる"
+            ],
+            "selectoridx": "0|0|1|1",
+            "parentname": "Q2",
+            "parentsel": "はい",
+            "required": true
+        },
+        {
+            "dispname": "4. いびきをかく頻度は",
+            "name": "Q4",
+            "type": "radio",
+            "selector": [
+                "ほぼ毎日",
+                "週3-4回",
+                "週1-2回",
+                "月1-2回",
+                "ほとんどない"
+            ],
+            "selectoridx": "1|1|0|0|0",
+            "parentname": "Q2",
+            "parentsel": "はい",
+            "required": true
+        },
+        {
+            "dispname": "5. あなたのいびきで他の人が迷惑したことはありますか",
+            "name": "Q5",
+            "type": "radio",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "parentname": "Q2",
+            "parentsel": "はい",
+            "required": true
+        },
+        {
+            "dispname": "6. 睡眠中に呼吸が止まっていると言われたことはありますか",
+            "name": "Q6",
+            "type": "radio",
+            "selector": [
+                "ほぼ毎日",
+                "週3-4回",
+                "週1-2回",
+                "月1-2回",
+                "ほとんどない"
+            ],
+            "selectoridx": "2|2|0|0|0",
+            "required": true
+        },
+        {
+            "dispname": "日中の眠気・倦怠感に関する質問",
+            "type": "subsection"
+        },
+        {
+            "dispname": "7. 睡眠後に疲労感や倦怠感を感じることはどれくらいありますか",
+            "name": "Q7",
+            "type": "radio",
+            "selector": [
+                "ほぼ毎日",
+                "週3-4回",
+                "週1-2回",
+                "月1-2回",
+                "ほとんどない"
+            ],
+            "selectoridx": "1|1|0|0|0",
+            "required": true
+        },
+        {
+            "dispname": "8. 起きている時に疲労感、倦怠感、または調子が悪いと感じることはどれくらいありますか",
+            "name": "Q8",
+            "type": "radio",
+            "selector": [
+                "ほぼ毎日",
+                "週3-4回",
+                "週1-2回",
+                "月1-2回",
+                "ほとんどない"
+            ],
+            "selectoridx": "1|1|0|0|0",
+            "required": true
+        },
+        {
+            "dispname": "9. 運転中に居眠りをしたり眠くなったりしたことはありますか",
+            "name": "Q9",
+            "type": "radio",
+            "selector": [
+                "はい",
+                "いいえ"
+            ],
+            "selectoridx": "1|0",
+            "required": true
+        },
+        {
+            "dispname": "9-1. はいの場合、どれくらいの頻度ですか",
+            "name": "Q9_frequency",
+            "type": "radio",
+            "selector": [
+                "ほぼ毎日",
+                "週3-4回",
+                "週1-2回",
+                "月1-2回",
+                "ほとんどない"
+            ],
+            "selectoridx": "1|1|0|0|0",
+            "parentname": "Q9",
+            "parentsel": "はい",
+            "required": true
+        },
+        {
+            "dispname": "高血圧・肥満に関する質問",
+            "type": "subsection"
+        },
+        {
+            "dispname": "10. 高血圧はありますか",
+            "name": "Q10",
+            "type": "radio",
+            "selector": [
+                "はい",
+                "いいえ",
+                "わからない"
+            ],
+            "selectoridx": "1|0|0",
+            "required": true
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "BMI",
+            "type": "eval",
+            "formula": "( ((体重)) / ( ((身長)) / 100 ) ** 2).toFixed(2)",
+            "dispname": "BMI"
+        },
+        {
+            "name": "Q3_index",
+            "type": "eval",
+            "formula": "[[Q3.index]]",
+            "noreport": true
+        },
+        {
+            "name": "Q4_index",
+            "type": "eval",
+            "formula": "[[Q4.index]]",
+            "noreport": true
+        },
+        {
+            "name": "Q5_index",
+            "type": "eval",
+            "formula": "[[Q5.index]]",
+            "noreport": true
+        },
+        {
+            "name": "Q9_index",
+            "type": "eval",
+            "formula": "[[Q9.index]]",
+            "noreport": true
+        },
+        {
+            "name": "Category1_score",
+            "type": "eval",
+            "formula": "[[Q2.index]] + [[Q3_index]] + [[Q4_index]] + [[Q5_index]] + [[Q6.index]]",
+            "noreport": true
+        },
+        {
+            "name": "Category1_positive",
+            "type": "eval",
+            "formula": "[[Category1_score]] >= 2 ? 1 : 0",
+            "noreport": true
+        },
+        {
+            "name": "Category2_score",
+            "type": "eval",
+            "formula": "[[Q7.index]] + [[Q8.index]] + [[Q9_index]]",
+            "noreport": true
+        },
+        {
+            "name": "Category2_positive",
+            "type": "eval",
+            "formula": "[[Category2_score]] >= 2 ? 1 : 0",
+            "noreport": true
+        },
+        {
+            "name": "Category3_positive",
+            "type": "eval",
+            "formula": "( [[Q10.index]] >= 1 || [[BMI]] > 30 ) ? 1 : 0",
+            "noreport": true
+        },
+        {
+            "name": "Total_positive_categories",
+            "type": "eval",
+            "formula": "[[Category1_positive]] + [[Category2_positive]] + [[Category3_positive]]",
+            "dispname": "陽性カテゴリー数"
+        },
+        {
+            "dispname": "睡眠時無呼吸症候群リスク判定",
+            "name": "Risk_assessment",
+            "type": "eval",
+            "formula": "[[Total_positive_categories]] >= 2 ? '高リスク' : '低リスク'"
+        },
+        {
+            "name": "Warning: 睡眠時無呼吸症候群高リスク",
+            "type": "warning",
+            "formula": "[[Total_positive_categories]] >= 2"
+        }
+    ]
+}

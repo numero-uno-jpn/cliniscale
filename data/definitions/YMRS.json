@@ -1,0 +1,206 @@
+{
+    "_comment": [
+        "YMRS (Young Mania Rating Scale) - ヤング躁病評価尺度日本語版",
+        "原典: Young RC, Biggs JT, Ziegler VE, Meyer DA. A rating scale for mania: reliability, validity and sensitivity. Br J Psychiatry. 1978;133:429-435.",
+        "日本語版: 稲田俊也編. YMRSを使いこなす 改訂版ヤング躁病評価尺度日本語版(YMRS-J)による躁病の臨床評価. じほう, 2012.",
+        "参考URL: http://jsprs.org/scales/ymrs.html",
+        "躁症状の重症度を評価する11項目の臨床評価尺度。過去48時間の症状に基づく評価。",
+        "総得点範囲: 0-60点",
+        "【重要】4項目は0-8点評価で5段階のアンカーポイント（0,2,4,6,8）を使用（易怒性、発話、思考内容、破壊的・攻撃的行為）",
+        "7項目は0-4点評価（気分高揚、過活動性、性的関心、睡眠、言語・思考障害、身なり、病識）",
+        "※原典では各項目に「5つの明確に定義された重症度レベル」が規定されている"
+    ],
+    "title": "YMRS ヤング躁病評価尺度日本語版",
+    "description": [
+        "ヤング躁病評価尺度（YMRS）",
+        "過去48時間の躁症状について評価してください。各項目で最も適切なものを選択してください。"
+    ],
+    "fields": [
+        {
+            "name": "mood_elevation",
+            "type": "radio",
+            "dispname": "気分高揚",
+            "description": "気分の高揚や陽気さについて",
+            "required": true,
+            "selector": [
+                "正常または抑うつ",
+                "わずかな高揚感または陽気さ",
+                "明確だが適切でない高揚感",
+                "明らかに高揚し、不適切で一貫している",
+                "極度の陶酔感"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "motor_activity",
+            "type": "radio",
+            "dispname": "過活動性（活動の量・質の増大）",
+            "description": "活動量や運動の増加について",
+            "required": true,
+            "selector": [
+                "正常",
+                "主観的にエネルギーの増加を感じる",
+                "アニメーション的で身振りが多い",
+                "過度のエネルギー、時々衝動的行動、落ち着きなし",
+                "運動の興奮、継続的な過活動"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "sexual_interest",
+            "type": "radio",
+            "dispname": "性的関心",
+            "description": "性的関心や行動について",
+            "required": true,
+            "selector": [
+                "正常または減少",
+                "わずかまたは疑わしい増加",
+                "明確だが社会的に適切",
+                "明らかに不適切",
+                "完全に不適切な性的行動"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "sleep",
+            "type": "radio",
+            "dispname": "睡眠",
+            "description": "睡眠の必要性について",
+            "required": true,
+            "selector": [
+                "8時間以上睡眠または通常の睡眠",
+                "6-8時間睡眠",
+                "4-6時間睡眠",
+                "2-4時間睡眠",
+                "2時間未満の睡眠"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "irritability",
+            "type": "radio",
+            "dispname": "易怒性",
+            "description": "怒りやすさやイライラについて",
+            "required": true,
+            "selector": [
+                "正常",
+                "主観的に増加",
+                "いらいらして怒りっぽい、面接中に時々怒りや不快感のエピソード",
+                "面接中に頻繁にいらいら、ぶっきらぼう",
+                "敵対的、非協力的、面接不可能"
+            ],
+            "selectoridx": "0|2|4|6|8"
+        },
+        {
+            "name": "speech",
+            "type": "radio",
+            "dispname": "発話（速度・量）",
+            "description": "話す速度や量について",
+            "required": true,
+            "selector": [
+                "増加なし",
+                "多弁と感じる",
+                "速度や量が時々増加、時々多弁",
+                "促迫、一貫して速度と量が増加、中断困難",
+                "迫促、中断不可能、継続的な発話"
+            ],
+            "selectoridx": "0|2|4|6|8"
+        },
+        {
+            "name": "language_thought",
+            "type": "radio",
+            "dispname": "言語・思考障害",
+            "description": "思考の連続性や論理性について",
+            "required": true,
+            "selector": [
+                "正常",
+                "軽微で疑わしい",
+                "観念奔逸の明確な証拠",
+                "観念奔逸、時々支離滅裂",
+                "著明な支離滅裂、コミュニケーション困難"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "thought_content",
+            "type": "radio",
+            "dispname": "思考内容",
+            "description": "妄想や偏執的思考について",
+            "required": true,
+            "selector": [
+                "正常",
+                "疑わしい計画、新しい関心",
+                "特別なプロジェクト、過度に宗教的",
+                "誇大的または偏執的観念、関係念慮",
+                "妄想、幻覚"
+            ],
+            "selectoridx": "0|2|4|6|8"
+        },
+        {
+            "name": "disruptive_behavior",
+            "type": "radio",
+            "dispname": "破壊的・攻撃的行為",
+            "description": "攻撃的または破壊的な行動について",
+            "required": true,
+            "selector": [
+                "なし、協力的",
+                "皮肉っぽく大声で時々論争的、用心深い",
+                "要求的、病棟で脅迫的",
+                "面接者を脅す、叫ぶ、面接困難",
+                "攻撃的、破壊的、面接不可能"
+            ],
+            "selectoridx": "0|2|4|6|8"
+        },
+        {
+            "name": "appearance",
+            "type": "radio",
+            "dispname": "身なり",
+            "description": "服装や身だしなみについて",
+            "required": true,
+            "selector": [
+                "適切で清潔",
+                "わずかに乱れ",
+                "やや不適切",
+                "だらしなく一部不適切",
+                "乱れ、完全に不適切"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "name": "insight",
+            "type": "radio",
+            "dispname": "病識",
+            "description": "病気に対する理解について",
+            "required": true,
+            "selector": [
+                "現在の症状を理解し治療に同意",
+                "病気の可能性があることを認める",
+                "病気を認めるが他人のせいにする",
+                "病気であることを否認",
+                "病気を完全に否認、敵対的"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "ymrs_total",
+            "type": "eval",
+            "dispname": "YMRS総得点（0-60点）",
+            "formula": "[[mood_elevation.index]] + [[motor_activity.index]] + [[sexual_interest.index]] + [[sleep.index]] + [[irritability.index]] + [[speech.index]] + [[language_thought.index]] + [[thought_content.index]] + [[disruptive_behavior.index]] + [[appearance.index]] + [[insight.index]]"
+        },
+        {
+            "name": "ymrs_severity",
+            "type": "eval",
+            "dispname": "重症度判定",
+            "formula": "[[ymrs_total]] < 4 ? '寛解（完全）' : [[ymrs_total]] < 7 ? '寛解（軽症状あり）' : [[ymrs_total]] < 12 ? '境界域' : [[ymrs_total]] < 20 ? '軽度' : [[ymrs_total]] < 25 ? '中等度' : [[ymrs_total]] < 30 ? '重度（著明）' : [[ymrs_total]] < 40 ? '重篤' : '最重症'"
+        },
+        {
+            "name": "clinical_interpretation",
+            "type": "eval",
+            "dispname": "臨床的解釈",
+            "formula": "[[ymrs_total]] <= 12 ? '寛解基準達成（治療不要または維持療法）' : [[ymrs_total]] < 20 ? '部分寛解（継続治療が望ましい）' : '急性期治療が必要（中等度以上の躁症状）'"
+        }
+    ]
+}

@@ -1,0 +1,385 @@
+{
+    "_comment": [
+        "IES-R (Impact of Event Scale-Revised) 改訂出来事インパクト尺度日本語版",
+        "作成者: Weiss, D.S. & Marmar, C.R. (1996)",
+        "日本語版作成者: 飛鳥井望 (公益財団法人東京都医学総合研究所)",
+        "原著論文: Weiss, D.S.: The Impact of Event Scale-Revised. In: Wilson, J.P., Keane T.M. eds., Assessing psychological trauma and PTSD (Second Edition). The Guilford Press, New York, 2004, pp168-189.",
+        "日本語版論文: Asukai, N., Kato, H., Kawamura, N., Kim, Y., Yamamoto, K., Kishimoto, J., Miyake, Y., Nishizono-Maher, A.: Reliability and validity of the Japanese-language version of the Impact of Event Scale-Revised (IES-R-J): Four studies on different traumatic events. The Journal of Nervous and Mental Disease 190:175-182, 2002.",
+        "参考URL: https://www.ptsd.va.gov/professional/assessment/adult-sr/ies-r.asp",
+        "公式PDF: https://www.jstss.org/docs/2017121200368/file_contents/IES-R2014.pdf",
+        "22項目で構成、0-4点の5段階評価、総得点0-88点",
+        "カットオフ値: 24/25点 (PTSDスクリーニング目的)",
+        "下位尺度: 侵入症状8項目、回避症状8項目、過覚醒症状6項目"
+    ],
+    "title": "IES-R (改訂出来事インパクト尺度)",
+    "description": [
+        "下記の項目はいずれも、強いストレスを伴うような出来事にまきこまれた方々に、後になって生じることのあるものです。",
+        "特定の出来事に関して、本日を含む最近の1週間では、それぞれの項目の内容について、どの程度強く悩まされましたか。",
+        "あてはまる欄に○をつけてください。",
+        "(なお答に迷われた場合は、不明とせず、もっとも近いと思うものを選んでください。)"
+    ],
+    "fields": [
+        {
+            "type": "note",
+            "name": "trauma_event_instruction",
+            "description": "対象となる出来事について具体的に記載してください"
+        },
+        {
+            "type": "textarea",
+            "name": "trauma_event",
+            "dispname": "出来事の内容",
+            "required": true,
+            "rows": 3
+        },
+        {
+            "type": "subsection",
+            "name": "questions_section",
+            "dispname": "質問項目"
+        },
+        {
+            "type": "note",
+            "name": "instruction",
+            "description": "最近の1週間の状態についてお答えください。"
+        },
+        {
+            "type": "radio",
+            "name": "q1",
+            "dispname": "1. どんなきっかけでも、そのことを思い出すと、そのときの気もちがぶりかえしてくる",
+            "required": true,
+            "selector": [
+                "全くなし",
+                "少し",
+                "中くらい",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q2",
+            "dispname": "2. 睡眠の途中で目がさめてしまう",
+            "required": true,
+            "selector": [
+                "全くなし",
+                "少し",
+                "中くらい",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q3",
+            "dispname": "3. 別のことをしていても、そのことが頭から離れない",
+            "required": true,
+            "selector": [
+                "全くなし",
+                "少し",
+                "中くらい",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q4",
+            "dispname": "4. イライラして、怒りっぽくなっている",
+            "required": true,
+            "selector": [
+                "全くなし",
+                "少し",
+                "中くらい",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q5",
+            "dispname": "5. そのことについて考えたり思い出すときは、なんとか気を落ちつかせるようにしている",
+            "required": true,
+            "selector": [
+                "全くなし",
+                "少し",
+                "中くらい",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q6",
+            "dispname": "6. 考えるつもりはないのに、そのことを考えてしまうことがある",
+            "required": true,
+            "selector": [
+                "全くなし",
+                "少し",
+                "中くらい",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q7",
+            "dispname": "7. そのことは、実際には起きなかったとか、現実のことではなかったような気がする",
+            "required": true,
+            "selector": [
+                "全くなし",
+                "少し",
+                "中くらい",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q8",
+            "dispname": "8. そのことを思い出させるものには近よらない",
+            "required": true,
+            "selector": [
+                "全くなし",
+                "少し",
+                "中くらい",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q9",
+            "dispname": "9. そのときの場面が、いきなり頭にうかんでくる",
+            "required": true,
+            "selector": [
+                "全くなし",
+                "少し",
+                "中くらい",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q10",
+            "dispname": "10. 神経が敏感になっていて、ちょっとしたことでどきっとしてしまう",
+            "required": true,
+            "selector": [
+                "全くなし",
+                "少し",
+                "中くらい",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q11",
+            "dispname": "11. そのことは考えないようにしている",
+            "required": true,
+            "selector": [
+                "全くなし",
+                "少し",
+                "中くらい",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q12",
+            "dispname": "12. そのことについては、まだいろいろな気もちがあるが、それには触れないようにしている",
+            "required": true,
+            "selector": [
+                "全くなし",
+                "少し",
+                "中くらい",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q13",
+            "dispname": "13. そのことについての感情は、マヒしたようである",
+            "required": true,
+            "selector": [
+                "全くなし",
+                "少し",
+                "中くらい",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q14",
+            "dispname": "14. 気がつくと、まるでそのときにもどってしまったかのように、ふるまったり感じたりすることがある",
+            "required": true,
+            "selector": [
+                "全くなし",
+                "少し",
+                "中くらい",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q15",
+            "dispname": "15. 寝つきが悪い",
+            "required": true,
+            "selector": [
+                "全くなし",
+                "少し",
+                "中くらい",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q16",
+            "dispname": "16. そのことについて、感情が強くこみあげてくることがある",
+            "required": true,
+            "selector": [
+                "全くなし",
+                "少し",
+                "中くらい",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q17",
+            "dispname": "17. そのことを何とか忘れようとしている",
+            "required": true,
+            "selector": [
+                "全くなし",
+                "少し",
+                "中くらい",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q18",
+            "dispname": "18. ものごとに集中できない",
+            "required": true,
+            "selector": [
+                "全くなし",
+                "少し",
+                "中くらい",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q19",
+            "dispname": "19. そのことを思い出すと、身体が反応して、汗ばんだり、息苦しくなったり、むかむかしたり、どきどきすることがある",
+            "required": true,
+            "selector": [
+                "全くなし",
+                "少し",
+                "中くらい",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q20",
+            "dispname": "20. そのことについての夢を見る",
+            "required": true,
+            "selector": [
+                "全くなし",
+                "少し",
+                "中くらい",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q21",
+            "dispname": "21. 警戒して用心深くなっている気がする",
+            "required": true,
+            "selector": [
+                "全くなし",
+                "少し",
+                "中くらい",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "radio",
+            "name": "q22",
+            "dispname": "22. そのことについては話さないようにしている",
+            "required": true,
+            "selector": [
+                "全くなし",
+                "少し",
+                "中くらい",
+                "かなり",
+                "非常に"
+            ],
+            "selectoridx": "0|1|2|3|4"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "type": "eval",
+            "name": "total_score",
+            "dispname": "IES-R総得点",
+            "formula": "[[q1.index]] + [[q2.index]] + [[q3.index]] + [[q4.index]] + [[q5.index]] + [[q6.index]] + [[q7.index]] + [[q8.index]] + [[q9.index]] + [[q10.index]] + [[q11.index]] + [[q12.index]] + [[q13.index]] + [[q14.index]] + [[q15.index]] + [[q16.index]] + [[q17.index]] + [[q18.index]] + [[q19.index]] + [[q20.index]] + [[q21.index]] + [[q22.index]]"
+        },
+        {
+            "type": "eval",
+            "name": "intrusion_score",
+            "dispname": "侵入症状得点 (項目1,2,3,6,9,14,16,20)",
+            "formula": "[[q1.index]] + [[q2.index]] + [[q3.index]] + [[q6.index]] + [[q9.index]] + [[q14.index]] + [[q16.index]] + [[q20.index]]"
+        },
+        {
+            "type": "eval",
+            "name": "avoidance_score",
+            "dispname": "回避症状得点 (項目5,7,8,11,12,13,17,22)",
+            "formula": "[[q5.index]] + [[q7.index]] + [[q8.index]] + [[q11.index]] + [[q12.index]] + [[q13.index]] + [[q17.index]] + [[q22.index]]"
+        },
+        {
+            "type": "eval",
+            "name": "hyperarousal_score",
+            "dispname": "過覚醒症状得点 (項目4,10,15,18,19,21)",
+            "formula": "[[q4.index]] + [[q10.index]] + [[q15.index]] + [[q18.index]] + [[q19.index]] + [[q21.index]]"
+        },
+        {
+            "type": "warning",
+            "name": "Warning: PTSDスクリーニング要注意",
+            "formula": "[[total_score]] >= 25"
+        }
+    ]
+}

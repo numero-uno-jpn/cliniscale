@@ -1,0 +1,99 @@
+{
+    "_comment": [
+        "GNRI問診票定義",
+        "高齢者栄養リスク指標",
+        "計算式: 14.89 × アルブミン(g/dL) + 41.7 × (現体重/理想体重)",
+        "理想体重 = 22 × (身長(m))² (BMI 22を用いた計算)",
+        "原典: Bouillanne O, et al. Am J Clin Nutr. 2005 Oct;82(4):777-83. PMID: 16210706",
+        "分類: >98:リスクなし, 92-98:軽度栄養リスク, 82-91:中等度栄養リスク, <82:重度栄養リスク",
+        "注意: アルブミン値の単位は g/dL です（日本の臨床で一般的な単位）",
+        "原典は g/L を使用していますが、1 g/dL = 10 g/L のため係数を10倍して数学的に等価です"
+    ],
+    "title": "GNRI 高齢者栄養リスク指標",
+    "description": [
+        "血清アルブミン値と理想体重比を用いて高齢者の栄養リスクを評価します",
+        "GNRI値が92未満で栄養リスクありとされます"
+    ],
+    "submit_button_title": "評価結果を送信",
+    "fields": [
+        {
+            "dispname": "基本項目",
+            "type": "subsection"
+        },
+        {
+            "dispname": "身長",
+            "name": "身長",
+            "type": "text",
+            "inputmode": "decimal",
+            "postfix": "cm",
+            "testrange": [
+                130,
+                190
+            ],
+            "required": true,
+            "description": "身長をセンチメートルで入力してください（例: 165）"
+        },
+        {
+            "dispname": "現在の体重",
+            "name": "体重",
+            "type": "text",
+            "inputmode": "decimal",
+            "postfix": "kg",
+            "testrange": [
+                25,
+                120
+            ],
+            "required": true,
+            "description": "現在の体重をキログラムで入力してください（例: 60.5）"
+        },
+        {
+            "dispname": "血清アルブミン値",
+            "name": "アルブミン",
+            "type": "text",
+            "inputmode": "decimal",
+            "postfix": "g/dL",
+            "testrange": [
+                1.5,
+                4.5
+            ],
+            "required": true,
+            "description": "血液検査での血清アルブミン値を g/dL で入力してください（正常値: 約3.5-5.0 g/dL）"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "理想体重",
+            "type": "eval",
+            "formula": "22 * ( ((身長)) / 100 ) * ( ((身長)) / 100 )",
+            "noreport": true
+        },
+        {
+            "name": "体重比",
+            "type": "eval",
+            "formula": "((体重)) / ((理想体重))",
+            "noreport": true
+        },
+        {
+            "dispname": "GNRI: 14.89 × アルブミン(g/dL) + 41.7 × (現体重/理想体重)",
+            "name": "GNRI",
+            "type": "eval",
+            "formula": "(14.89 * ((アルブミン)) + 41.7 * ((体重比)) ).toFixed(1)"
+        },
+        {
+            "name": "栄養リスク分類",
+            "type": "eval",
+            "formula": "[[GNRI]] < 82 ? '重度栄養リスク' : ( [[GNRI]] < 92 ? '中等度栄養リスク' : ( [[GNRI]] <= 98 ? '軽度栄養リスク' : 'リスクなし' ) )"
+        },
+        {
+            "name": "Emergency: 重度栄養リスク GNRI < 82",
+            "formula": "[[GNRI]] < 82",
+            "type": "emergency"
+        },
+        {
+            "name": "Warning: 中等度栄養リスク GNRI < 92",
+            "formula": "[[GNRI]] >= 82 && [[GNRI]] < 92",
+            "type": "warning"
+        }
+    ]
+}

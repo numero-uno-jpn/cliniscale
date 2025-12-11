@@ -1,0 +1,131 @@
+{
+    "_comment": [
+        "HAS-BLED出血リスクスコア問診票",
+        "原典: Pisters R, et al. A novel user-friendly score (HAS-BLED) to assess 1-year risk of major bleeding in patients with atrial fibrillation: the Euro Heart Survey. Chest. 2010 Nov;138(5):1093-100. PMID: 20299623",
+        "心房細動患者の抗凝固療法における出血リスク評価",
+        "最大9点、3点以上で高リスク",
+        "参考URL: https://en.wikipedia.org/wiki/HAS-BLED"
+    ],
+    "title": "HAS-BLED 出血リスクスコア",
+    "description": [
+        "心房細動患者の抗凝固療法における出血リスクを評価するスコアです。",
+        "各項目について該当するものを選択してください。"
+    ],
+    "submit_button_title": "評価結果を送信",
+    "fields": [
+        {
+            "dispname": "高血圧",
+            "name": "高血圧",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "なし|あり",
+            "selectoridx": "0|1",
+            "description": "収縮期血圧160mmHg以上の高血圧"
+        },
+        {
+            "dispname": "腎機能異常",
+            "name": "腎機能異常",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "なし|あり",
+            "selectoridx": "0|1",
+            "description": "慢性透析、腎移植、血清クレアチニン200μmol/L（≒2.26mg/dL）以上"
+        },
+        {
+            "dispname": "肝機能異常",
+            "name": "肝機能異常",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "なし|あり",
+            "selectoridx": "0|1",
+            "description": "慢性肝疾患または肝機能検査値異常"
+        },
+        {
+            "dispname": "脳卒中の既往",
+            "name": "脳卒中既往",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "なし|あり",
+            "selectoridx": "0|1",
+            "description": "脳卒中の既往歴"
+        },
+        {
+            "dispname": "出血の既往または出血傾向",
+            "name": "出血既往",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "なし|あり",
+            "selectoridx": "0|1",
+            "description": "出血歴、出血傾向、貧血など"
+        },
+        {
+            "dispname": "不安定なINR",
+            "name": "不安定INR",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "なし|あり",
+            "selectoridx": "0|1",
+            "description": "高値または不安定なINR、TTR60%未満"
+        },
+        {
+            "dispname": "高齢",
+            "name": "高齢",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "なし|あり",
+            "selectoridx": "0|1",
+            "description": "65歳以上"
+        },
+        {
+            "dispname": "抗血小板薬の使用",
+            "name": "抗血小板薬",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "なし|あり",
+            "selectoridx": "0|1",
+            "description": "抗血小板薬またはNSAIDsの併用"
+        },
+        {
+            "dispname": "アルコール依存",
+            "name": "アルコール依存",
+            "type": "radio",
+            "required": true,
+            "inline": true,
+            "selector": "なし|あり",
+            "selectoridx": "0|1",
+            "description": "アルコール依存症または乱用"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "HAS-BLEDスコア",
+            "type": "eval",
+            "formula": "[[高血圧.index]] + [[腎機能異常.index]] + [[肝機能異常.index]] + [[脳卒中既往.index]] + [[出血既往.index]] + [[不安定INR.index]] + [[高齢.index]] + [[抗血小板薬.index]] + [[アルコール依存.index]]"
+        },
+        {
+            "name": "出血リスク評価",
+            "type": "eval",
+            "formula": "[[HAS-BLEDスコア]] >= 3 ? '高リスク' : ( [[HAS-BLEDスコア]] == 1 || [[HAS-BLEDスコア]] == 2 ? '中等度リスク' : '低リスク' )"
+        },
+        {
+            "name": "年間出血率",
+            "type": "eval",
+            "formula": "[[HAS-BLEDスコア]] == 0 ? '約1%' : ( [[HAS-BLEDスコア]] >= 1 && [[HAS-BLEDスコア]] <= 2 ? '約2-4%' : '約4-6%' )"
+        },
+        {
+            "name": "Warning HAS-BLEDスコア 3点以上",
+            "type": "warning",
+            "formula": "[[HAS-BLEDスコア]] >= 3",
+            "description": "3点以上で高リスク：より慎重な管理と定期的な経過観察が必要"
+        }
+    ]
+}

@@ -1,0 +1,104 @@
+{
+  "_comment": [
+    "Paris Classification for Superficial Gastrointestinal Lesions",
+    "The Paris endoscopic classification of superficial neoplastic lesions: esophagus, stomach, and colon. Gastrointest Endosc. 2003;58(6 Suppl):S3-43.",
+    "https://pubmed.ncbi.nlm.nih.gov/14652541/",
+    "消化管表在性病変の内視鏡形態分類",
+    "病変の形態から浸潤リスクを評価"
+  ],
+  "title": "Paris分類",
+  "description": [
+    "消化管表在性病変の形態分類",
+    "内視鏡所見に基づいて病変を分類します"
+  ],
+  "fields": [
+    {
+      "type": "subsection",
+      "dispname": "病変の基本形態"
+    },
+    {
+      "type": "radio",
+      "name": "主要形態",
+      "dispname": "病変の主要形態",
+      "selector": [
+        "0-I: 隆起型",
+        "0-II: 表面型",
+        "0-III: 陥凹型"
+      ],
+      "selectoridx": "1|2|3",
+      "required": true,
+      "description": "最も特徴的な形態を選択してください"
+    },
+    {
+      "type": "radio",
+      "name": "隆起型詳細",
+      "dispname": "隆起型の詳細分類",
+      "selector": [
+        "0-Ip: 有茎性",
+        "0-Is: 無茎性 (亜有茎性)"
+      ],
+      "selectoridx": "1|2",
+      "parentname": "主要形態",
+      "parentsel": "0-I: 隆起型"
+    },
+    {
+      "type": "radio",
+      "name": "表面型詳細",
+      "dispname": "表面型の詳細分類",
+      "selector": [
+        "0-IIa: 表面隆起型",
+        "0-IIb: 完全平坦型",
+        "0-IIc: 表面陥凹型"
+      ],
+      "selectoridx": "1|2|3",
+      "parentname": "主要形態",
+      "parentsel": "0-II: 表面型",
+      "required": true
+    },
+    {
+      "type": "radio",
+      "name": "混合型",
+      "dispname": "混合型の有無",
+      "selector": [
+        "単一型",
+        "混合型"
+      ],
+      "selectoridx": "0|1",
+      "required": true,
+      "description": "複数の形態が混在する場合は混合型を選択"
+    },
+    {
+      "type": "text",
+      "name": "混合型詳細",
+      "dispname": "混合型の詳細",
+      "parentname": "混合型",
+      "parentsel": "混合型",
+      "description": "例: 0-IIa+IIc"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "type": "eval",
+      "name": "主要形態値",
+      "formula": "[[主要形態.index]]",
+      "noreport": true
+    },
+    {
+      "type": "eval",
+      "name": "悪性リスク評価",
+      "dispname": "粘膜下浸潤リスク評価",
+      "formula": "[[主要形態値]] == 3 ? '高リスク (陥凹型)' : ( [[主要形態値]] == 2 ? '中リスク (表面型)' : '低リスク (隆起型)' )"
+    },
+    {
+      "type": "warning",
+      "name": "Warning: 中リスク",
+      "formula": "[[主要形態値]] == 2"
+    },
+    {
+      "type": "emergency",
+      "name": "Emergency: 高リスク (陥凹型)",
+      "formula": "[[主要形態値]] == 3"
+    }
+  ]
+}

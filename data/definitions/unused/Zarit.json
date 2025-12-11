@@ -1,0 +1,355 @@
+{
+    "_comment": [
+        "Zarit Burden Interview (ZBI) - Zarit介護負担尺度日本語版",
+        "原典: Zarit, S. H., Reever, K. E., & Bach-Peterson, J. (1980). Relatives of the impaired elderly: correlates of feelings of burden. The Gerontologist, 20(6), 649-655.",
+        "日本語版: Arai, Y., Kudo, K., Hosokawa, T., Washio, M., Miura, H., & Hisamichi, S. (1997). Reliability and validity of the Japanese version of the Zarit Caregiver Burden Interview. Psychiatry and Clinical Neuroscience, 51(5), 281-287.",
+        "短縮版8項目 (J-ZBI_8) も利用可能",
+        "著作権: Copyright 1983, 1990, Steven H. Zarit and Judy M. Zarit"
+    ],
+    "title": "Zarit 介護負担尺度 (ZBI-22)",
+    "description": [
+        "このアンケートは、介護者の方が感じる負担について評価するものです。",
+        "各質問について、あなたの気持ちにもっとも近いものを選んでください。",
+        "正解や間違いはありませんので、率直にお答えください。"
+    ],
+    "submit_button_title": "回答を送信",
+    "fields": [
+        {
+            "dispname": "介護負担に関する質問",
+            "type": "subsection"
+        },
+        {
+            "dispname": "あなたの親族のお世話をしているために、自分の時間が十分にないと感じますか",
+            "name": "Q1",
+            "type": "radio",
+            "selector": [
+                "全くない",
+                "たまに",
+                "時々",
+                "よくある",
+                "いつもそう"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "dispname": "親族のお世話と他の責任との間でストレスを感じますか",
+            "name": "Q2",
+            "type": "radio",
+            "selector": [
+                "全くない",
+                "たまに",
+                "時々",
+                "よくある",
+                "いつもそう"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "dispname": "親族の側にいると怒りを感じますか",
+            "name": "Q3",
+            "type": "radio",
+            "selector": [
+                "全くない",
+                "たまに",
+                "時々",
+                "よくある",
+                "いつもそう"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "dispname": "親族のことが、あなたと家族や友人との関係に悪い影響を与えていると感じますか",
+            "name": "Q4",
+            "type": "radio",
+            "selector": [
+                "全くない",
+                "たまに",
+                "時々",
+                "よくある",
+                "いつもそう"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "dispname": "親族の側にいると気が張り詰めますか",
+            "name": "Q5",
+            "type": "radio",
+            "selector": [
+                "全くない",
+                "たまに",
+                "時々",
+                "よくある",
+                "いつもそう"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "dispname": "親族のお世話のために、あなたの健康状態が悪くなったと思いますか",
+            "name": "Q6",
+            "type": "radio",
+            "selector": [
+                "全くない",
+                "たまに",
+                "時々",
+                "よくある",
+                "いつもそう"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "dispname": "親族のことで、あなたのプライバシーが十分にないと感じますか",
+            "name": "Q7",
+            "type": "radio",
+            "selector": [
+                "全くない",
+                "たまに",
+                "時々",
+                "よくある",
+                "いつもそう"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "dispname": "親族のお世話のために、あなたの社会生活が犠牲になっていると感じますか",
+            "name": "Q8",
+            "type": "radio",
+            "selector": [
+                "全くない",
+                "たまに",
+                "時々",
+                "よくある",
+                "いつもそう"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "dispname": "親族の病気以来、あなたの生活のコントロールを失ったと感じますか",
+            "name": "Q9",
+            "type": "radio",
+            "selector": [
+                "全くない",
+                "たまに",
+                "時々",
+                "よくある",
+                "いつもそう"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "dispname": "親族に何をしてあげたらよいのかわからないと感じますか",
+            "name": "Q10",
+            "type": "radio",
+            "selector": [
+                "全くない",
+                "たまに",
+                "時々",
+                "よくある",
+                "いつもそう"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "dispname": "親族にもっと何かしてあげるべきだと感じますか",
+            "name": "Q11",
+            "type": "radio",
+            "selector": [
+                "全くない",
+                "たまに",
+                "時々",
+                "よくある",
+                "いつもそう"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "dispname": "親族のお世話をもっとうまくできるはずだと感じますか",
+            "name": "Q12",
+            "type": "radio",
+            "selector": [
+                "全くない",
+                "たまに",
+                "時々",
+                "よくある",
+                "いつもそう"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "dispname": "全体的に、親族のお世話にどの程度負担を感じていますか",
+            "name": "Q13",
+            "type": "radio",
+            "selector": [
+                "全く負担ではない",
+                "少し負担",
+                "それなりに負担",
+                "かなり負担",
+                "とても負担"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "dispname": "親族を施設に預けたいと思ったことがありますか",
+            "name": "Q14",
+            "type": "radio",
+            "selector": [
+                "全くない",
+                "たまに",
+                "時々",
+                "よくある",
+                "いつもそう"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "dispname": "親族のお世話に恥ずかしさを感じますか",
+            "name": "Q15",
+            "type": "radio",
+            "selector": [
+                "全くない",
+                "たまに",
+                "時々",
+                "よくある",
+                "いつもそう"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "dispname": "親族の側にいると不安や心配を感じますか",
+            "name": "Q16",
+            "type": "radio",
+            "selector": [
+                "全くない",
+                "たまに",
+                "時々",
+                "よくある",
+                "いつもそう"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "dispname": "親族があなたに依存していると感じますか",
+            "name": "Q17",
+            "type": "radio",
+            "selector": [
+                "全くない",
+                "たまに",
+                "時々",
+                "よくある",
+                "いつもそう"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "dispname": "親族の側にいると落ち着かない気持ちになりますか",
+            "name": "Q18",
+            "type": "radio",
+            "selector": [
+                "全くない",
+                "たまに",
+                "時々",
+                "よくある",
+                "いつもそう"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "dispname": "親族のお世話のために、あなたの親族や友人への関心が薄れましたか",
+            "name": "Q19",
+            "type": "radio",
+            "selector": [
+                "全くない",
+                "たまに",
+                "時々",
+                "よくある",
+                "いつもそう"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "dispname": "親族の将来について心配ですか",
+            "name": "Q20",
+            "type": "radio",
+            "selector": [
+                "全くない",
+                "たまに",
+                "時々",
+                "よくある",
+                "いつもそう"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "dispname": "親族があなたよりも長生きすることを恐れていますか",
+            "name": "Q21",
+            "type": "radio",
+            "selector": [
+                "全くない",
+                "たまに",
+                "時々",
+                "よくある",
+                "いつもそう"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "dispname": "親族のお世話のために、あなたの人生に悪い影響が生じていますか",
+            "name": "Q22",
+            "type": "radio",
+            "selector": [
+                "全くない",
+                "たまに",
+                "時々",
+                "よくある",
+                "いつもそう"
+            ],
+            "selectoridx": "0|1|2|3|4",
+            "required": true
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "ZBI総得点",
+            "type": "eval",
+            "formula": "[[Q1.index]] + [[Q2.index]] + [[Q3.index]] + [[Q4.index]] + [[Q5.index]] + [[Q6.index]] + [[Q7.index]] + [[Q8.index]] + [[Q9.index]] + [[Q10.index]] + [[Q11.index]] + [[Q12.index]] + [[Q13.index]] + [[Q14.index]] + [[Q15.index]] + [[Q16.index]] + [[Q17.index]] + [[Q18.index]] + [[Q19.index]] + [[Q20.index]] + [[Q21.index]] + [[Q22.index]]",
+            "dispname": "ZBI総得点 (0-88点)"
+        },
+        {
+            "name": "負担レベル分類",
+            "type": "eval",
+            "formula": "[[ZBI総得点]] <= 20 ? '軽度の負担' : ( [[ZBI総得点]] <= 40 ? '中等度の負担' : ( [[ZBI総得点]] <= 60 ? '高度の負担' : '重度の負担' ) )",
+            "dispname": "介護負担レベル分類"
+        },
+        {
+            "name": "Warning: 中等度以上の介護負担",
+            "formula": "[[ZBI総得点]] >= 21",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 高度以上の介護負担",
+            "formula": "[[ZBI総得点]] >= 41",
+            "type": "emergency"
+        }
+    ]
+}

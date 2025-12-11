@@ -1,0 +1,1032 @@
+{
+    "title": "陰性症状評価尺度 (SANS) / 陽性症状評価尺度 (SAPS)",
+    "_comment": [
+        "SANS (Scale for Assessment of Negative Symptoms) - 陰性症状評価尺度",
+        "SAPS (Scale for Assessment of Positive Symptoms) - 陽性症状評価尺度",
+        "開発者: Nancy Andreasen, 1983-1984年",
+        "統合失調症の陰性症状（感情鈍麻、意欲減退、思考貧困など）と陽性症状（幻覚、妄想、異常行動など）を評価",
+        "各項目は0（なし）から5（重篤）の6段階で評価",
+        "参考文献: Andreasen NC. The Scale for the Assessment of Negative Symptoms (SANS). Iowa City: University of Iowa, 1983",
+        "参考文献: Andreasen NC. The Scale for the Assessment of Positive Symptoms (SAPS). Iowa City: University of Iowa, 1984",
+        "参考URL: https://www.cambridge.org/core/journals/the-british-journal-of-psychiatry/article/abs/scale-for-the-assessment-of-negative-symptoms-sans-conceptual-and-theoretical-foundations/18566559C72FE6F9F39EF33D11BDB284"
+    ],
+    "description": [
+        "Scale for Assessment of Negative Symptoms (SANS) / Scale for Assessment of Positive Symptoms (SAPS)",
+        "統合失調症の陰性症状・陽性症状を評価する国際的標準尺度です",
+        "<br>",
+        "【重要】本尺度は臨床家評価専用です<br>",
+        "・精神科医または訓練を受けた臨床家が、患者の面接・観察に基づいて評価してください<br>",
+        "・患者様ご自身による入力は想定されていません<br>",
+        "・評価には症状評価に関する専門知識と訓練が必要です"
+    ],
+    "responsible_person": [
+        "精神科医師"
+    ],
+    "dept_in_charge": "精神科",
+    "fields": [
+        {
+            "name": "section_sans",
+            "type": "subsection",
+            "dispname": "SANS (陰性症状評価尺度)"
+        },
+        {
+            "name": "sans_subsection_affective",
+            "type": "subsection",
+            "dispname": "1. 感情鈍麻"
+        },
+        {
+            "name": "sans_unchanging_facial_expression",
+            "type": "radio",
+            "dispname": "表情の不変性",
+            "description": "患者の顔面表情の乏しさの程度",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "sans_decreased_spontaneous_movement",
+            "type": "radio",
+            "dispname": "自発的動作の減少",
+            "description": "自発的な身振り、手振り、身体の動きの減少",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "sans_paucity_expressive_gestures",
+            "type": "radio",
+            "dispname": "表現的身振りの貧困",
+            "description": "表現的身振りの使用の減少",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "sans_poor_eye_contact",
+            "type": "radio",
+            "dispname": "アイコンタクトの乏しさ",
+            "description": "視線を合わせることの回避または不適切さ",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "sans_affective_nonresponsivity",
+            "type": "radio",
+            "dispname": "感情的反応性の欠如",
+            "description": "感情的刺激への適切な反応の欠如",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "sans_lack_vocal_inflections",
+            "type": "radio",
+            "dispname": "声の抑揚の欠如",
+            "description": "話し方の単調さ、感情的な抑揚の欠如",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "sans_global_affective_flattening",
+            "type": "radio",
+            "dispname": "感情鈍麻の全体評価",
+            "description": "感情鈍麻の全体的な重症度評価",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "sans_subsection_alogia",
+            "type": "subsection",
+            "dispname": "2. 思考言語障害（思考貧困）"
+        },
+        {
+            "name": "sans_poverty_speech",
+            "type": "radio",
+            "dispname": "発話の貧困",
+            "description": "自発的発話量の減少",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "sans_poverty_content_speech",
+            "type": "radio",
+            "dispname": "発話内容の貧困",
+            "description": "発話の内容が乏しく、情報量が少ない",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "sans_blocking",
+            "type": "radio",
+            "dispname": "思考途絶",
+            "description": "話の途中で突然止まってしまう",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "sans_increased_latency_response",
+            "type": "radio",
+            "dispname": "反応潜時の増加",
+            "description": "質問に対する反応が遅い",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "sans_global_alogia",
+            "type": "radio",
+            "dispname": "思考言語障害の全体評価",
+            "description": "思考言語障害の全体的な重症度評価",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "sans_subsection_avolition",
+            "type": "subsection",
+            "dispname": "3. 意欲・自発性の欠如"
+        },
+        {
+            "name": "sans_grooming_hygiene",
+            "type": "radio",
+            "dispname": "身だしなみと衛生",
+            "description": "身だしなみや個人衛生の悪化",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "sans_impersistence_work_school",
+            "type": "radio",
+            "dispname": "仕事や学業の継続困難",
+            "description": "仕事や学業を継続する能力の低下",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "sans_physical_anergia",
+            "type": "radio",
+            "dispname": "身体的活力の低下",
+            "description": "身体的エネルギーや活力の著明な低下",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "sans_global_avolition_apathy",
+            "type": "radio",
+            "dispname": "意欲・自発性欠如の全体評価",
+            "description": "意欲・自発性欠如の全体的な重症度評価",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "sans_subsection_anhedonia",
+            "type": "subsection",
+            "dispname": "4. 快感消失・非社交性"
+        },
+        {
+            "name": "sans_recreational_interests",
+            "type": "radio",
+            "dispname": "娯楽的興味・活動",
+            "description": "趣味や娯楽活動への興味の減少",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "sans_sexual_interest_activity",
+            "type": "radio",
+            "dispname": "性的興味・活動",
+            "description": "性的興味や活動の減少",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "sans_ability_feel_intimacy",
+            "type": "radio",
+            "dispname": "親密感を感じる能力",
+            "description": "他者に対する親密感や愛情を感じる能力の減少",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "sans_relationships_friends_peers",
+            "type": "radio",
+            "dispname": "友人・同僚との関係",
+            "description": "友人や同僚との社会的関係の質の低下",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "sans_global_anhedonia_asociality",
+            "type": "radio",
+            "dispname": "快感消失・非社交性の全体評価",
+            "description": "快感消失・非社交性の全体的な重症度評価",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "sans_subsection_attention",
+            "type": "subsection",
+            "dispname": "5. 注意障害"
+        },
+        {
+            "name": "sans_social_inattentiveness",
+            "type": "radio",
+            "dispname": "社会的不注意",
+            "description": "社会的状況での注意の散漫",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "sans_inattentiveness_testing",
+            "type": "radio",
+            "dispname": "精神状態検査中の不注意",
+            "description": "面接や検査中の注意集中困難",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "sans_global_attention",
+            "type": "radio",
+            "dispname": "注意障害の全体評価",
+            "description": "注意障害の全体的な重症度評価",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "section_saps",
+            "type": "subsection",
+            "dispname": "SAPS (陽性症状評価尺度)"
+        },
+        {
+            "name": "saps_subsection_hallucinations",
+            "type": "subsection",
+            "dispname": "1. 幻覚"
+        },
+        {
+            "name": "saps_auditory_hallucinations",
+            "type": "radio",
+            "dispname": "聴覚性幻覚",
+            "description": "実際には存在しない音や声を聞く",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "saps_voices_commenting",
+            "type": "radio",
+            "dispname": "解説する声",
+            "description": "患者の行動を解説したり論評したりする声",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "saps_voices_conversing",
+            "type": "radio",
+            "dispname": "会話する声",
+            "description": "複数の声が互いに会話している",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "saps_somatic_tactile_hallucinations",
+            "type": "radio",
+            "dispname": "体感性・触覚性幻覚",
+            "description": "身体に何かが触れているような感覚",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "saps_olfactory_hallucinations",
+            "type": "radio",
+            "dispname": "嗅覚性幻覚",
+            "description": "実際には存在しない匂いを感じる",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "saps_visual_hallucinations",
+            "type": "radio",
+            "dispname": "視覚性幻覚",
+            "description": "実際には存在しないものを見る",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "saps_global_hallucinations",
+            "type": "radio",
+            "dispname": "幻覚の全体評価",
+            "description": "幻覚の全体的な重症度評価",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "saps_subsection_delusions",
+            "type": "subsection",
+            "dispname": "2. 妄想"
+        },
+        {
+            "name": "saps_persecutory_delusions",
+            "type": "radio",
+            "dispname": "被害妄想",
+            "description": "他者から害を加えられているという信念",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "saps_delusions_jealousy",
+            "type": "radio",
+            "dispname": "嫉妬妄想",
+            "description": "配偶者や恋人が不貞を働いているという妄想",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "saps_delusions_guilt_sin",
+            "type": "radio",
+            "dispname": "罪業妄想",
+            "description": "重大な罪を犯したという妄想",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "saps_grandiose_delusions",
+            "type": "radio",
+            "dispname": "誇大妄想",
+            "description": "自分が特別な能力や地位を持っているという妄想",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "saps_religious_delusions",
+            "type": "radio",
+            "dispname": "宗教妄想",
+            "description": "宗教的内容の妄想",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "saps_somatic_delusions",
+            "type": "radio",
+            "dispname": "身体妄想",
+            "description": "身体に関する妄想",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "saps_delusions_reference",
+            "type": "radio",
+            "dispname": "関係妄想",
+            "description": "他者の行動や出来事が自分に向けられているという妄想",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "saps_delusions_control",
+            "type": "radio",
+            "dispname": "操作妄想",
+            "description": "外部の力によって操作されているという妄想",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "saps_delusions_mind_reading",
+            "type": "radio",
+            "dispname": "読心妄想",
+            "description": "他者が自分の心を読んでいるという妄想",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "saps_thought_broadcasting",
+            "type": "radio",
+            "dispname": "思考伝播",
+            "description": "自分の思考が他者に伝わっているという妄想",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "saps_thought_insertion",
+            "type": "radio",
+            "dispname": "思考注入",
+            "description": "他者の思考が自分の心に入ってくるという妄想",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "saps_thought_withdrawal",
+            "type": "radio",
+            "dispname": "思考奪取",
+            "description": "自分の思考が奪われているという妄想",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "saps_global_delusions",
+            "type": "radio",
+            "dispname": "妄想の全体評価",
+            "description": "妄想の全体的な重症度評価",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "saps_subsection_bizarre_behavior",
+            "type": "subsection",
+            "dispname": "3. 異常行動"
+        },
+        {
+            "name": "saps_clothing_appearance",
+            "type": "radio",
+            "dispname": "服装・外見",
+            "description": "奇異な服装や外見",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "saps_social_sexual_behavior",
+            "type": "radio",
+            "dispname": "社会的・性的行動",
+            "description": "社会的に不適切な行動",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "saps_aggressive_agitated_behavior",
+            "type": "radio",
+            "dispname": "攻撃的・興奮性行動",
+            "description": "攻撃的または過度に興奮した行動",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "saps_repetitive_stereotyped_behavior",
+            "type": "radio",
+            "dispname": "反復的・常同的行動",
+            "description": "同じ行動を繰り返す",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "saps_global_bizarre_behavior",
+            "type": "radio",
+            "dispname": "異常行動の全体評価",
+            "description": "異常行動の全体的な重症度評価",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "saps_subsection_thought_disorder",
+            "type": "subsection",
+            "dispname": "4. 陽性の形式的思考障害"
+        },
+        {
+            "name": "saps_derailment",
+            "type": "radio",
+            "dispname": "話題の逸脱",
+            "description": "話題が脱線し、本来の話から外れる",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "saps_tangentiality",
+            "type": "radio",
+            "dispname": "話題の接線化",
+            "description": "質問に対して関連はあるが的外れな答え",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "saps_incoherence",
+            "type": "radio",
+            "dispname": "支離滅裂",
+            "description": "話の内容が理解困難で一貫性がない",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "saps_illogicality",
+            "type": "radio",
+            "dispname": "非論理性",
+            "description": "論理的でない思考パターン",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "saps_circumstantiality",
+            "type": "radio",
+            "dispname": "迂遠",
+            "description": "遠回りで過度に詳細な話し方",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "saps_pressure_speech",
+            "type": "radio",
+            "dispname": "多弁",
+            "description": "過度に速く、多量の発話",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "saps_distractible_speech",
+            "type": "radio",
+            "dispname": "注意散漫な発話",
+            "description": "外的刺激によって話題が変わる",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "saps_clanging",
+            "type": "radio",
+            "dispname": "音韻連合",
+            "description": "音の類似性に基づく言葉の連想",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "name": "saps_global_positive_formal_thought_disorder",
+            "type": "radio",
+            "dispname": "陽性形式的思考障害の全体評価",
+            "description": "陽性形式的思考障害の全体的な重症度評価",
+            "required": true,
+            "selector": [
+                "なし",
+                "軽微",
+                "軽度",
+                "中度",
+                "高度",
+                "重篤"
+            ],
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "type": "eval",
+            "name": "sans_total_score",
+            "dispname": "SANS総合得点",
+            "formula": "[[sans_global_affective_flattening.index]] + [[sans_global_alogia.index]] + [[sans_global_avolition_apathy.index]] + [[sans_global_anhedonia_asociality.index]] + [[sans_global_attention.index]]"
+        },
+        {
+            "type": "eval",
+            "name": "saps_total_score",
+            "dispname": "SAPS総合得点",
+            "formula": "[[saps_global_hallucinations.index]] + [[saps_global_delusions.index]] + [[saps_global_bizarre_behavior.index]] + [[saps_global_positive_formal_thought_disorder.index]]"
+        },
+        {
+            "type": "eval",
+            "name": "composite_score",
+            "dispname": "SANS-SAPS合計得点",
+            "formula": "[[sans_total_score]] + [[saps_total_score]]"
+        }
+    ]
+}

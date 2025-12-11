@@ -1,0 +1,202 @@
+{
+  "_comment": [
+    "ABC Score: 消化管出血の30日死亡率予測スコア",
+    "原典: Laursen SB, et al. ABC score: a new risk score that accurately predicts mortality in acute upper and lower gastrointestinal bleeding: an international multicentre study. Gut. 2021 Apr;70(4):707-716. PMID: 32723845",
+    "URL: https://pubmed.ncbi.nlm.nih.gov/32723845/",
+    "日本語解説: https://note.com/nasuketore/n/n261e87fff67b",
+    "計算ツール: https://hokuto.app/calculator/pLLNSmdFSC5q9K2ORKUs",
+    "修正版: 原典論文Table 1に基づき年齢カテゴリ、血液検査値、ASA分類を修正"
+  ],
+  "title": "ABC Score 消化管出血30日死亡率予測スコア",
+  "description": [
+    "消化管出血患者の30日死亡率を予測するスコアです。",
+    "年齢、血液検査値、合併症の8つの項目で評価します。",
+    "上部・下部両方の消化管出血に対応しています。"
+  ],
+  "contact": "担当医師",
+  "dept_in_charge": "消化器内科・救急科",
+  "responsible_person": [
+    "主治医"
+  ],
+  "staffs": [
+    "担当看護師"
+  ],
+  "submit_button_title": "評価を送信",
+  "fields": [
+    {
+      "dispname": "基本情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "年齢",
+      "name": "年齢",
+      "type": "text",
+      "required": true,
+      "testrange": [
+        18,
+        120
+      ],
+      "postfix": "歳",
+      "value": 65,
+      "inputmode": "numeric"
+    },
+    {
+      "dispname": "血液検査値",
+      "type": "subsection"
+    },
+    {
+      "dispname": "尿素（Urea）",
+      "name": "尿素",
+      "type": "text",
+      "required": true,
+      "testrange": [
+        15,
+        40
+      ],
+      "postfix": "mmol/L",
+      "inputmode": "decimal",
+      "description": "血中尿素値を入力してください（SI単位）"
+    },
+    {
+      "dispname": "アルブミン",
+      "name": "アルブミン",
+      "type": "text",
+      "required": true,
+      "testrange": [
+        1,
+        5
+      ],
+      "postfix": "g/dL",
+      "inputmode": "decimal",
+      "description": "血清アルブミン値を入力してください"
+    },
+    {
+      "dispname": "クレアチニン",
+      "name": "クレアチニン",
+      "type": "text",
+      "required": true,
+      "testrange": [
+        0.6,
+        4.0
+      ],
+      "postfix": "μmol/L",
+      "inputmode": "decimal",
+      "description": "血清クレアチニン値を入力してください（SI単位）"
+    },
+    {
+      "dispname": "合併症・状態",
+      "type": "subsection"
+    },
+    {
+      "dispname": "意識状態",
+      "name": "意識状態",
+      "type": "radio",
+      "required": true,
+      "selector": "正常|意識変容あり",
+      "selectoridx": "0|2",
+      "description": "現在の意識レベルを選択してください"
+    },
+    {
+      "dispname": "肝硬変",
+      "name": "肝硬変",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|2"
+    },
+    {
+      "dispname": "悪性腫瘍の転移・播種",
+      "name": "悪性腫瘍転移",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|4"
+    },
+    {
+      "dispname": "ASA身体状態分類",
+      "name": "ASA分類",
+      "type": "radio",
+      "required": true,
+      "selector": "ASA I-II (健常または軽度の全身疾患)|ASA III (重篤な全身疾患)|ASA IV以上 (生命を脅かす重篤な全身疾患)",
+      "selectoridx": "0|1|3",
+      "description": "ASA Physical Status Classificationを選択してください"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "年齢スコア",
+      "type": "eval",
+      "formula": "((年齢)) < 60 ? 0 : ((年齢)) < 75 ? 1 : 2",
+      "description": "年齢: <60歳=0点、60-74歳=1点、≥75歳=2点"
+    },
+    {
+      "name": "尿素スコア",
+      "type": "eval",
+      "formula": "((尿素)) <= 10 ? 0 : 1",
+      "description": "尿素: ≤10 mmol/L=0点、>10 mmol/L=1点"
+    },
+    {
+      "name": "アルブミンスコア",
+      "type": "eval",
+      "formula": "((アルブミン)) >= 3.0 ? 0 : 2",
+      "description": "アルブミン: ≥ 3.0g/dL=0点、<3.0g/dL=2点"
+    },
+    {
+      "name": "クレアチニンスコア",
+      "type": "eval",
+      "formula": "((クレアチニン)) < 100 ? 0 : ( ((クレアチニン)) <= 150 ? 1 : 2 )",
+      "description": "クレアチニン: <100 μmol/L=0点、100-150 μmol/L=1点、>150 μmol/L=2点"
+    },
+    {
+      "name": "意識状態スコア",
+      "type": "eval",
+      "formula": "[[意識状態.index]]",
+      "description": "意識状態: 正常=0点、意識変容あり=2点"
+    },
+    {
+      "name": "肝硬変スコア",
+      "type": "eval",
+      "formula": "[[肝硬変.index]]",
+      "description": "肝硬変: なし=0点、あり=2点"
+    },
+    {
+      "name": "悪性腫瘍転移スコア",
+      "type": "eval",
+      "formula": "[[悪性腫瘍転移.index]]",
+      "description": "悪性腫瘍の転移・播種: なし=0点、あり=4点"
+    },
+    {
+      "name": "ASA分類スコア",
+      "type": "eval",
+      "formula": "[[ASA分類.index]]",
+      "description": "ASA分類: I-II=0点、III=1点、≥IV=3点"
+    },
+    {
+      "dispname": "ABC合計スコア",
+      "name": "ABC合計スコア",
+      "type": "eval",
+      "formula": "[[年齢スコア]] + [[尿素スコア]] + [[アルブミンスコア]] + [[クレアチニンスコア]] + [[意識状態スコア]] + [[肝硬変スコア]] + [[悪性腫瘍転移スコア]] + [[ASA分類スコア]]",
+      "description": "ABCスコア合計点数 (0-18点)"
+    },
+    {
+      "dispname": "30日死亡リスク評価",
+      "name": "リスク評価",
+      "type": "eval",
+      "formula": "[[ABC合計スコア]] <= 3 ? '低リスク (30日死亡率約1%)' : [[ABC合計スコア]] <= 7 ? '中等度リスク (30日死亡率約7%)' : '高リスク (30日死亡率約25%)'",
+      "description": "リスク分類: 0-3点=低リスク、4-7点=中等度リスク、8点以上=高リスク"
+    },
+    {
+      "name": "Warning: 中等度リスク",
+      "formula": "[[ABC合計スコア]] >= 4 && [[ABC合計スコア]] <= 7",
+      "type": "warning"
+    },
+    {
+      "name": "Emergency: 高リスク",
+      "formula": "[[ABC合計スコア]] >= 8",
+      "type": "emergency"
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "_comment": [
+    "スティーヴンス・ジョンソン症候群および中毒性表皮壊死症重症度分類問診票",
+    "厚生労働省指定難病基準（2018年4月）および難病情報センター資料に基づく",
+    "参考URL: https://www.nanbyou.or.jp/entry/4074",
+    "参考資料: 厚生労働省難病対策課（2018）スティーヴンス・ジョンソン症候群診断基準",
+    "合計点数による評価: 2点未満=軽症、2点以上6点未満=中等症、6点以上=重症",
+    "中等症以上が医療費助成対象"
+  ],
+  "title": "SJS/TEN スティーヴンス・ジョンソン症候群および中毒性表皮壊死症 重症度分類スコア",
+  "description": [
+    "スティーヴンス・ジョンソン症候群および中毒性表皮壊死症の重症度を評価します",
+    "各項目について該当する症状を選択してください"
+  ],
+  "submit_button_title": "重症度評価を送信",
+  "fields": [
+    {
+      "dispname": "1. 粘膜疹",
+      "type": "subsection"
+    },
+    {
+      "dispname": "眼病変（該当するものすべて選択）",
+      "name": "眼病変",
+      "type": "checkbox",
+      "selector": [
+        "結膜充血",
+        "偽膜形成",
+        "眼表面の上皮欠損（びらん）",
+        "視力障害（慢性期後遺症）",
+        "ドライアイ（慢性期後遺症）"
+      ],
+      "selectoridx": "1|1|1|1|1",
+      "description": "各項目1点。視力障害・ドライアイは慢性期の後遺症としてのみ評価し、急性期所見としては選択しないでください"
+    },
+    {
+      "dispname": "口唇・口腔内・陰部病変（該当するものすべて選択）",
+      "name": "粘膜病変",
+      "type": "checkbox",
+      "selector": [
+        "口腔内広範囲に血痂・出血を伴うびらん",
+        "口唇の血痂・出血を伴うびらん",
+        "広範囲に血痂・出血を伴わないびらん",
+        "陰部びらん"
+      ],
+      "selectoridx": "1|1|1|1",
+      "description": "各項目1点"
+    },
+    {
+      "dispname": "2. 皮膚の水疱・びらん",
+      "type": "subsection"
+    },
+    {
+      "dispname": "皮膚剥離面積（体表面積に対する割合）",
+      "name": "皮膚剥離面積",
+      "type": "radio",
+      "required": true,
+      "selector": [
+        "10%未満",
+        "10%以上30%未満",
+        "30%以上"
+      ],
+      "selectoridx": "1|2|3",
+      "description": "外力を加えると表皮が容易に剥離すると思われる部位も含めて評価してください"
+    },
+    {
+      "dispname": "3. その他の所見",
+      "type": "subsection"
+    },
+    {
+      "dispname": "38℃以上の発熱",
+      "name": "発熱",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "呼吸器障害",
+      "name": "呼吸器障害",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "selectoridx": "0|1",
+      "description": "SJS/TENに起因する呼吸器症状の有無を評価してください"
+    },
+    {
+      "dispname": "表皮の全層性壊死性変化",
+      "name": "表皮壊死変化",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "selectoridx": "0|1",
+      "description": "病理組織学的所見により判定してください"
+    },
+    {
+      "dispname": "肝機能障害（ALT＞100 IU/L）",
+      "name": "肝機能障害",
+      "type": "radio",
+      "required": true,
+      "inline": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "selectoridx": "0|1"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "眼病変スコア",
+      "type": "eval",
+      "noreport": true,
+      "formula": "([[眼病変.index]] || []).length"
+    },
+    {
+      "name": "粘膜病変スコア",
+      "type": "eval",
+      "noreport": true,
+      "formula": "([[粘膜病変.index]] || []).length"
+    },
+    {
+      "name": "合計スコア",
+      "type": "eval",
+      "formula": "[[眼病変スコア]] + [[粘膜病変スコア]] + [[皮膚剥離面積.index]] + [[発熱.index]] + [[呼吸器障害.index]] + [[表皮壊死変化.index]] + [[肝機能障害.index]]",
+      "dispname": "SJS/TEN重症度分類の総合スコア"
+    },
+    {
+      "name": "重症度判定",
+      "type": "eval",
+      "formula": "[[合計スコア]] >= 6 ? '重症' : ( [[合計スコア]] >= 2 ? '中等症' : '軽症' )",
+      "dispname": "重症度分類判定結果（2点未満: 軽症、2点以上6点未満: 中等症、6点以上: 重症）"
+    },
+    {
+      "name": "医療費助成対象",
+      "type": "eval",
+      "formula": "[[合計スコア]] >= 2 ? '対象' : '対象外'",
+      "dispname": "医療費助成対象判定（中等症以上が対象）"
+    },
+    {
+      "name": "眼表面上皮欠損チェック",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{眼病変}}.includes(\"眼表面の上皮欠損（びらん）\") ? 1 : 0"
+    },
+    {
+      "name": "偽膜形成チェック",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{眼病変}}.includes(\"偽膜形成\") ? 1 : 0"
+    },
+    {
+      "name": "特別重症判定",
+      "type": "eval",
+      "formula": "( [[眼表面上皮欠損チェック]] == 1 || [[偽膜形成チェック]] == 1 ) || {{呼吸器障害}} == 'あり' ? 'スコアによらず重症' : 'スコア通り'",
+      "dispname": "特別重症判定基準適用（注: 原典の「眼病変が高度」という条件は、実装上あり/なしで判定しています）"
+    },
+    {
+      "name": "Warning: 中等症 合計スコア ≥ 2",
+      "formula": "[[合計スコア]] >= 2",
+      "type": "warning"
+    },
+    {
+      "name": "Emergency: 重症または特別重症基準該当",
+      "formula": "[[合計スコア]] >= 6 || ( [[眼表面上皮欠損チェック]] == 1 || [[偽膜形成チェック]] == 1 ) || {{呼吸器障害}} == 'あり'",
+      "type": "emergency"
+    }
+  ]
+}

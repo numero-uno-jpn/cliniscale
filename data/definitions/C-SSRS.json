@@ -1,0 +1,152 @@
+{
+    "_comment": [
+        "Columbia Suicide Severity Rating Scale (C-SSRS) 日本語版 - スクリーナー版",
+        "原典: Posner K, Brown GK, Stanley B, et al. Am J Psychiatry. 2011;168(12):1266-1277",
+        "公式サイト: https://cssrs.columbia.edu/",
+        "公式スクリーナー版PDF: https://www.cms.gov/files/document/cssrs-screen-version-instrument.pdf",
+        "日本語版に関する研究: コロンビア自殺重症度評価尺度(C-SSRS)日本語版の妥当性・信頼性の検討",
+        "この評価尺度は自殺リスクの評価に用いられる",
+        "6項目のスクリーナー版で、自殺念慮と自殺行動を評価する",
+        "質問4、5、6Bで「はい」と回答した場合は高リスクとして扱う"
+    ],
+    "title": "C-SSRS コロンビア自殺重症度評価尺度",
+    "description": [
+        "この質問票は、あなたの最近1か月間の気持ちや行動について伺うものです。",
+        "自殺に関する質問が含まれますが、あなたの状態を正しく把握するために重要です。",
+        "正直にお答えください。"
+    ],
+    "fields": [
+        {
+            "name": "死にたい気持ち",
+            "type": "radio",
+            "dispname": "死んでしまいたい、または眠ったまま目覚めたくないと思ったことがありますか",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "いいえ",
+                "はい"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "自殺念慮",
+            "type": "radio",
+            "dispname": "実際に自分を殺してしまいたいと思ったことがありますか",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "いいえ",
+                "はい"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "自殺方法の考え",
+            "type": "radio",
+            "dispname": "どのようにして自殺するかについて考えたことがありますか",
+            "description": "例：薬物過剰摂取について考えたが、いつ、どこで、どのように実際に行うかという具体的な計画は立てておらず、実行するつもりもない",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "いいえ",
+                "はい"
+            ],
+            "selectoridx": "0|1",
+            "parentname": "自殺念慮",
+            "parentsel": "はい"
+        },
+        {
+            "name": "自殺実行意図",
+            "type": "radio",
+            "dispname": "これらの考えを実行に移す意図がありましたか",
+            "description": "「考えはあるが絶対に何もしない」というのとは異なります",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "いいえ",
+                "はい"
+            ],
+            "selectoridx": "0|1",
+            "parentname": "自殺念慮",
+            "parentsel": "はい"
+        },
+        {
+            "name": "自殺実行意図_index",
+            "type": "eval",
+            "formula": "[[自殺実行意図.index]]",
+            "noreport": true
+        },
+        {
+            "name": "自殺計画の詳細",
+            "type": "radio",
+            "dispname": "自分を殺す方法の詳細を考えたり計画したりしましたか。その計画を実行するつもりでしたか",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "いいえ",
+                "はい"
+            ],
+            "selectoridx": "0|1",
+            "parentname": "自殺念慮",
+            "parentsel": "はい"
+        },
+        {
+            "name": "自殺計画の詳細_index",
+            "type": "eval",
+            "formula": "[[自殺計画の詳細.index]]",
+            "noreport": true
+        },
+        {
+            "name": "自殺行動の既往",
+            "type": "radio",
+            "dispname": "自分の命を絶つために何かをした、しようとした、または準備をしたことがありますか",
+            "description": "例：薬を集める、銃を入手する、貴重品を譲る、遺書を書く、薬を取り出したが飲まなかった、銃を持ったが考えを変えた、屋上に行ったが飛び降りなかった、実際に薬を飲んだ、自分を撃とうとした、自分を切った、首を吊ろうとしたなど",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "いいえ",
+                "はい"
+            ],
+            "selectoridx": "0|1"
+        },
+        {
+            "name": "最近の自殺行動",
+            "type": "radio",
+            "dispname": "それは過去3か月以内のことでしたか",
+            "required": true,
+            "inline": true,
+            "selector": [
+                "いいえ",
+                "はい"
+            ],
+            "selectoridx": "0|1",
+            "parentname": "自殺行動の既往",
+            "parentsel": "はい"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "最近の自殺行動_index",
+            "type": "eval",
+            "formula": "[[最近の自殺行動.index]]",
+            "noreport": true
+        },
+        {
+            "name": "リスク評価",
+            "type": "eval",
+            "dispname": "自殺リスク評価結果",
+            "formula": "[[自殺実行意図_index]] == 1 || [[自殺計画の詳細_index]] == 1 || [[最近の自殺行動_index]] == 1 ? \"高リスク\" : ([[死にたい気持ち.index]] == 1 || [[自殺念慮.index]] == 1) ? \"中等度リスク\" : \"低リスク\""
+        },
+        {
+            "name": "Warning: 中等度自殺リスク",
+            "type": "warning",
+            "formula": "([[死にたい気持ち.index]] == 1 || [[自殺念慮.index]] == 1) && ([[自殺実行意図_index]] != 1 && [[自殺計画の詳細_index]] != 1 && [[最近の自殺行動_index]] != 1)"
+        },
+        {
+            "name": "Emergency: 高自殺リスク",
+            "type": "emergency",
+            "formula": "[[自殺実行意図_index]] == 1 || [[自殺計画の詳細_index]] == 1 || [[最近の自殺行動_index]] == 1"
+        }
+    ]
+}

@@ -1,0 +1,125 @@
+{
+    "_comment": [
+        "Braden Scale for Predicting Pressure Sore Risk (1984)",
+        "開発者: Barbara Braden & Nancy Bergstrom",
+        "原典論文: Bergstrom N, Braden BJ, Laguzza A, Holman V. The Braden Scale for Predicting Pressure Sore Risk. Nurs Res. 1987;36(4):205-10.",
+        "公式サイト: https://www.bradenscale.com/",
+        "著作権: Barbara Braden and Nancy Bergstrom. Copyright 1988"
+    ],
+    "title": "Braden Scale 褥瘡リスク評価",
+    "description": [
+        "褥瘡発生リスクを予測するためのアセスメントツールです。",
+        "6つの領域について評価し、合計スコアでリスクレベルを判定します。"
+    ],
+    "submit_button_title": "評価完了",
+    "fields": [
+        {
+            "dispname": "知覚の認知",
+            "name": "知覚の認知",
+            "type": "radio",
+            "required": true,
+            "description": "圧迫による不快感に対して適切に反応できる能力",
+            "selector": [
+                "全く知覚なし",
+                "重度の障害あり",
+                "軽度の障害あり",
+                "障害なし"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "湿潤",
+            "name": "湿潤",
+            "type": "radio",
+            "required": true,
+            "description": "皮膚が湿潤にさらされる程度",
+            "selector": [
+                "常に湿っている",
+                "たいてい湿っている",
+                "時々湿っている",
+                "めったに湿っていない"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "活動性",
+            "name": "活動性",
+            "type": "radio",
+            "required": true,
+            "description": "行動の範囲",
+            "selector": [
+                "臥床",
+                "坐位可能",
+                "時々歩行可能",
+                "歩行可能"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "可動性",
+            "name": "可動性",
+            "type": "radio",
+            "required": true,
+            "description": "体位を変えたり整えたりできる能力",
+            "selector": [
+                "全く体動なし",
+                "非常に限られる",
+                "やや限られる",
+                "自由に体動する"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "栄養状態",
+            "name": "栄養状態",
+            "type": "radio",
+            "required": true,
+            "description": "普段の食事摂取状況",
+            "selector": [
+                "不良",
+                "やや不良",
+                "良好",
+                "非常に良好"
+            ],
+            "selectoridx": "1|2|3|4"
+        },
+        {
+            "dispname": "摩擦とずれ",
+            "name": "摩擦とずれ",
+            "type": "radio",
+            "required": true,
+            "description": "摩擦とずれに関する問題の有無",
+            "selector": [
+                "問題あり",
+                "潜在的に問題あり",
+                "問題なし"
+            ],
+            "selectoridx": "1|2|3"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "合計スコア",
+            "type": "eval",
+            "dispname": "Braden Scale合計スコア",
+            "formula": "[[知覚の認知.index]] + [[湿潤.index]] + [[活動性.index]] + [[可動性.index]] + [[栄養状態.index]] + [[摩擦とずれ.index]]"
+        },
+        {
+            "name": "リスクレベル",
+            "type": "eval",
+            "dispname": "褥瘡発生リスクレベル",
+            "formula": "[[合計スコア]] <= 9 ? '重度リスク' : ( [[合計スコア]] <= 12 ? '高リスク' : ( [[合計スコア]] <= 14 ? '中等度リスク' : ( [[合計スコア]] <= 18 ? '軽度リスク' : '低リスク' ) ) )"
+        },
+        {
+            "type": "warning",
+            "name": "Warning: 褥瘡リスク注意 合計スコア <= 18",
+            "formula": "[[合計スコア]] <= 18"
+        },
+        {
+            "type": "emergency",
+            "name": "Emergency: 褥瘡高リスク 合計スコア <= 16",
+            "formula": "[[合計スコア]] <= 16"
+        }
+    ]
+}

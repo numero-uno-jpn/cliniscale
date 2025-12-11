@@ -1,0 +1,164 @@
+{
+    "_comment": [
+        "ACQ (Asthma Control Questionnaire) - 喘息コントロール質問票",
+        "過去1週間の喘息コントロール状態を評価する7項目の質問紙",
+        "開発者: Juniper et al. QOL Technologies Ltd.",
+        "原典論文: Juniper EF, et al. Eur Respir J 1999;14:902-907",
+        "公式サイト: https://www.qoltech.co.uk/acq.html",
+        "使用許可が必要な著作権保護された質問紙"
+    ],
+    "title": "ACQ 喘息コントロール質問票",
+    "description": [
+        "<h3>過去1週間の喘息コントロール評価</h3>",
+        "過去1週間のあなたの喘息の状態についてお聞きします。",
+        "各質問について、最もあてはまる数字を選んでください。"
+    ],
+    "contact": "呼吸器内科",
+    "dept_in_charge": "呼吸器内科",
+    "responsible_person": [
+        "呼吸器内科医師"
+    ],
+    "submit_button_title": "回答を送信",
+    "translate": "major",
+    "fields": [
+        {
+            "dispname": "問1. 夜間症状による覚醒",
+            "name": "Q1",
+            "type": "radio",
+            "required": true,
+            "description": "過去1週間で、どのくらいの頻度で夜間に喘息症状（咳、喘鳴、胸の圧迫感、息切れ）で目が覚めましたか？",
+            "selector": [
+                "全くなかった",
+                "1週間に1〜2回",
+                "1週間に3〜4回",
+                "1週間に5〜6回",
+                "毎日1回",
+                "毎日2〜3回",
+                "毎日4回以上"
+            ],
+            "selectoridx": "0|1|2|3|4|5|6"
+        },
+        {
+            "dispname": "問2. 起床時症状",
+            "name": "Q2",
+            "type": "radio",
+            "required": true,
+            "description": "過去1週間で、朝起きた時の喘息症状（咳、喘鳴、胸の圧迫感、息切れ）はどの程度でしたか？",
+            "selector": [
+                "全くなかった",
+                "とても軽度",
+                "軽度",
+                "中等度",
+                "やや重度",
+                "重度",
+                "とても重度"
+            ],
+            "selectoridx": "0|1|2|3|4|5|6"
+        },
+        {
+            "dispname": "問3. 日常活動の制限",
+            "name": "Q3",
+            "type": "radio",
+            "required": true,
+            "description": "過去1週間で、喘息のために日常の活動がどの程度制限されましたか？",
+            "selector": [
+                "全く制限されなかった",
+                "とても軽度の制限",
+                "軽度の制限",
+                "中等度の制限",
+                "やや重度の制限",
+                "重度の制限",
+                "とても重度の制限"
+            ],
+            "selectoridx": "0|1|2|3|4|5|6"
+        },
+        {
+            "dispname": "問4. 息切れ",
+            "name": "Q4",
+            "type": "radio",
+            "required": true,
+            "description": "過去1週間で、息切れはどの程度でしたか？",
+            "selector": [
+                "全くなかった",
+                "とても軽度",
+                "軽度",
+                "中等度",
+                "やや重度",
+                "重度",
+                "とても重度"
+            ],
+            "selectoridx": "0|1|2|3|4|5|6"
+        },
+        {
+            "dispname": "問5. 喘鳴",
+            "name": "Q5",
+            "type": "radio",
+            "required": true,
+            "description": "過去1週間で、喘鳴（ゼーゼー、ヒューヒューという音）はどの程度でしたか？",
+            "selector": [
+                "全くなかった",
+                "とても軽度",
+                "軽度",
+                "中等度",
+                "やや重度",
+                "重度",
+                "とても重度"
+            ],
+            "selectoridx": "0|1|2|3|4|5|6"
+        },
+        {
+            "dispname": "問6. 救急薬の使用頻度",
+            "name": "Q6",
+            "type": "radio",
+            "required": true,
+            "description": "過去1週間で、1日平均何回救急薬（レリーバー、短時間作用性β2刺激薬）を使用しましたか？",
+            "selector": [
+                "全く使用しなかった",
+                "1日1〜2回",
+                "1日3〜4回",
+                "1日5〜8回",
+                "1日9〜12回",
+                "1日13〜16回",
+                "1日16回以上"
+            ],
+            "selectoridx": "0|1|2|3|4|5|6"
+        },
+        {
+            "dispname": "問7. 肺機能（FEV1予測値）",
+            "name": "Q7",
+            "type": "radio",
+            "required": true,
+            "description": "気管支拡張薬使用前のFEV1予測値に基づき、医療スタッフが該当するスコアを選択してください",
+            "selector": [
+                "95%以上",
+                "85-94%",
+                "75-84%",
+                "65-74%",
+                "50-64%",
+                "35-49%",
+                "35%未満"
+            ],
+            "selectoridx": "0|1|2|3|4|5|6"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "dispname": "ACQ合計スコア",
+            "name": "ACQ_total",
+            "type": "eval",
+            "formula": "( ( ((Q1.index)) + ((Q2.index)) + ((Q3.index)) + ((Q4.index)) + ((Q5.index)) + ((Q6.index)) + ((Q7.index)) ) / 7 ).toFixed(2)"
+        },
+        {
+            "dispname": "コントロール判定",
+            "name": "control_level",
+            "type": "eval",
+            "formula": "((ACQ_total)) < 0.75 ? 'コントロール良好' : ( ((ACQ_total)) < 1.5 ? 'ボーダーライン' : 'コントロール不良' )"
+        },
+        {
+            "name": "Warning: コントロール不良 (ACQ 1.5以上)",
+            "formula": "((ACQ_total)) >= 1.5",
+            "type": "warning"
+        }
+    ]
+}

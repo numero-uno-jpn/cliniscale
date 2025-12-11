@@ -1,0 +1,146 @@
+{
+    "_comment": [
+        "Mini-Cog: 簡易認知機能スクリーニング検査",
+        "開発者: Soo Borson, 2000年",
+        "所要時間: 約3分",
+        "構成: 3単語記憶 + 時計描画",
+        "スコア: 0-5点 (2点以下で認知症疑い)",
+        "公式サイト: https://mini-cog.com/",
+        "日本老年医学会推奨検査"
+    ],
+    "title": "Mini-Cog 簡易認知機能スクリーニング検査",
+    "description": [
+        "<h3>Mini-Cog 簡易認知機能スクリーニング</h3>",
+        "この検査は、3分間で認知機能の状態を簡易的に評価する検査です。",
+        "3つの単語の記憶と時計描画により、認知症の可能性をスクリーニングします。"
+    ],
+    "fields": [
+        {
+            "name": "section1",
+            "type": "subsection",
+            "dispname": "ステップ1: 3つの単語の記憶テスト"
+        },
+        {
+            "name": "word_version",
+            "type": "radio",
+            "dispname": "使用する単語セット",
+            "required": true,
+            "selector": [
+                "バージョン1: バナナ・日の出・椅子",
+                "バージョン2: リーダー・季節・テーブル",
+                "バージョン3: 村・台所・赤ちゃん",
+                "バージョン4: 川・国家・指",
+                "バージョン5: キャプテン・庭・写真",
+                "バージョン6: 娘・天国・山"
+            ],
+            "description": "検査実施者が選択してください"
+        },
+        {
+            "name": "immediate_recall",
+            "type": "radio",
+            "dispname": "即時再生の結果",
+            "required": true,
+            "selector": [
+                "3単語すべて正しく復唱できた",
+                "一部復唱できなかった",
+                "3回試行しても復唱できなかった"
+            ],
+            "description": "患者が3つの単語を即座に復唱できたかを記録"
+        },
+        {
+            "name": "section2",
+            "type": "subsection",
+            "dispname": "ステップ2: 時計描画テスト"
+        },
+        {
+            "name": "clock_drawing",
+            "type": "figure",
+            "dispname": "時計描画",
+            "src": "https://documents.emuyn.net/emuyn/q4cl/samples/Mini-Cog_circle.png",
+            "required": true,
+            "description": "円に数字を書き、11時10分を指す針を描いてください"
+        },
+        {
+            "name": "clock_score",
+            "type": "radio",
+            "dispname": "時計描画の評価",
+            "required": true,
+            "selector": [
+                "正常",
+                "異常"
+            ],
+            "selectoridx": "2|0",
+            "description": "時計の数字と11時10分の針が正しく描けている場合は正常"
+        },
+        {
+            "name": "section3",
+            "type": "subsection",
+            "dispname": "ステップ3: 遅延再生テスト"
+        },
+        {
+            "name": "delayed_recall_word1",
+            "type": "radio",
+            "dispname": "1番目の単語",
+            "required": true,
+            "selector": [
+                "正答",
+                "誤答・無回答"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "delayed_recall_word2",
+            "type": "radio",
+            "dispname": "2番目の単語",
+            "required": true,
+            "selector": [
+                "正答",
+                "誤答・無回答"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "delayed_recall_word3",
+            "type": "radio",
+            "dispname": "3番目の単語",
+            "required": true,
+            "selector": [
+                "正答",
+                "誤答・無回答"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "word_recall_score",
+            "type": "eval",
+            "dispname": "単語遅延再生スコア (0-3点)",
+            "formula": "[[delayed_recall_word1.index]] + [[delayed_recall_word2.index]] + [[delayed_recall_word3.index]]"
+        },
+        {
+            "name": "total_score",
+            "type": "eval",
+            "dispname": "Mini-Cog総合スコア (0-5点)",
+            "formula": "[[word_recall_score]] + [[clock_score.index]]"
+        },
+        {
+            "name": "interpretation",
+            "type": "eval",
+            "dispname": "解釈",
+            "formula": "[[total_score]] <= 2 ? \"認知症の疑いあり (要詳細評価)\" : \"認知症の疑い低い (正常範囲)\""
+        },
+        {
+            "name": "detail_interpretation",
+            "type": "eval",
+            "dispname": "詳細解釈",
+            "formula": "[[word_recall_score]] == 0 ? \"遅延再生0点: 認知症の可能性高\" : [[word_recall_score]] >= 1 && [[word_recall_score]] <= 2 && [[clock_score.index]] == 0 ? \"遅延再生1-2点かつ時計描画異常: 認知症の可能性高\" : [[word_recall_score]] >= 1 && [[word_recall_score]] <= 2 && [[clock_score.index]] == 2 ? \"遅延再生1-2点かつ時計描画正常: 認知症の可能性低\" : [[word_recall_score]] == 3 ? \"遅延再生3点: 認知症の可能性低\" : \"判定困難\""
+        },
+        {
+            "name": "Warning: Mini-Cog総合スコア <= 2",
+            "type": "warning",
+            "formula": "[[total_score]] <= 2"
+        }
+    ]
+}

@@ -1,0 +1,141 @@
+{
+  "_comment": [
+    "Geckler分類は、喀痰検体の顕微鏡的品質評価に使用される分類システム",
+    "原典論文: Geckler RW, et al. Microscopic and bacteriological comparison of paired sputa and transtracheal aspirates. J Clin Microbiol. 1977;6(4):396-399.",
+    "DOI: 10.1128/jcm.6.4.396-399.1977, PMID: 334796",
+    "応用研究: Geckler RW, et al. Clinical value of paired sputum and transtracheal aspirates in the initial management of pneumonia. Chest. 1985;87(5):631-635.",
+    "DOI: 10.1378/chest.87.5.631, PMID: 3921315",
+    "用途: 喀痰検体が細菌培養検査に適しているかを判定",
+    "基準: 100倍顕微鏡1視野あたりの白血球数と扁平上皮細胞数"
+  ],
+  "title": "Geckler 喀痰品質評価",
+  "description": [
+    "喀痰検体の顕微鏡的品質評価を行います",
+    "100倍顕微鏡で1視野あたりの白血球数と扁平上皮細胞数を確認してください"
+  ],
+  "fields": [
+    {
+      "type": "subsection",
+      "dispname": "検体情報"
+    },
+    {
+      "dispname": "検体番号",
+      "name": "検体番号",
+      "type": "text",
+      "required": true
+    },
+    {
+      "dispname": "採取日",
+      "name": "採取日",
+      "type": "date",
+      "format": "YYYY/MM/DD",
+      "required": true
+    },
+    {
+      "dispname": "採取方法",
+      "name": "採取方法",
+      "type": "radio",
+      "inline": true,
+      "selector": [
+        "自然喀出",
+        "誘発喀痰",
+        "気管内吸引",
+        "気管支鏡下採取",
+        "その他"
+      ],
+      "required": true
+    },
+    {
+      "type": "subsection",
+      "dispname": "顕微鏡観察所見"
+    },
+    {
+      "dispname": "観察倍率",
+      "name": "観察倍率",
+      "type": "radio",
+      "inline": true,
+      "selector": [
+        "100倍",
+        "その他"
+      ],
+      "required": true,
+      "description": "Geckler分類は100倍での観察が標準です"
+    },
+    {
+      "dispname": "1視野あたりの白血球数",
+      "name": "白血球数",
+      "type": "text",
+      "inputmode": "numeric",
+      "postfix": "個",
+      "testrange": [
+        0,
+        100
+      ],
+      "required": true,
+      "description": "好中球を中心とした白血球の数を半角数字で入力してください（例: 30）"
+    },
+    {
+      "dispname": "1視野あたりの扁平上皮細胞数",
+      "name": "扁平上皮細胞数",
+      "type": "text",
+      "inputmode": "numeric",
+      "postfix": "個",
+      "testrange": [
+        0,
+        100
+      ],
+      "required": true,
+      "description": "口腔由来の扁平上皮細胞の数を半角数字で入力してください（例: 5）"
+    },
+    {
+      "type": "subsection",
+      "dispname": "追加所見"
+    },
+    {
+      "dispname": "その他の観察所見",
+      "name": "その他所見",
+      "type": "checkbox",
+      "selector": [
+        "貪食像あり",
+        "好酸球優位",
+        "繊毛上皮細胞あり",
+        "結晶成分あり",
+        "真菌要素あり",
+        "特記事項なし"
+      ]
+    },
+    {
+      "dispname": "検査者コメント",
+      "name": "コメント",
+      "type": "textarea",
+      "rows": 3,
+      "description": "特記すべき所見や推奨事項があれば記載してください"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "Geckler群",
+      "type": "eval",
+      "formula": "{{観察倍率}} != '100倍' ? '分類不能（100倍での観察が必要）' : ( ((扁平上皮細胞数)) > 25 ? ( ((白血球数)) < 10 ? 'グループ1' : ( ((白血球数)) <= 25 ? 'グループ2' : 'グループ3' ) ) : ( ((白血球数)) > 25 ? ( ((扁平上皮細胞数)) < 10 ? 'グループ5' : 'グループ4' ) : 'グループ6' ) )",
+      "dispname": "Geckler群: 白血球数と扁平上皮細胞数による自動分類（100倍観察時のみ有効）"
+    },
+    {
+      "name": "検査適性判定",
+      "type": "eval",
+      "formula": "{{Geckler群}} == '分類不能（100倍での観察が必要）' ? '判定不可' : ( {{Geckler群}} == 'グループ4' || {{Geckler群}} == 'グループ5' ? '検査に適する' : ( {{Geckler群}} == 'グループ6' ? '条件付き適用（経気管吸引や免疫不全時）' : '検査に不適、再採取推奨' ) )",
+      "dispname": "検査適性判定: 細菌培養検査への適用可否"
+    },
+    {
+      "name": "品質評価詳細",
+      "type": "eval",
+      "formula": "{{Geckler群}} == '分類不能（100倍での観察が必要）' ? 'Geckler分類は100倍顕微鏡での観察が標準です' : ( {{Geckler群}} == 'グループ1' ? '唾液成分主体、口腔汚染が顕著' : ( {{Geckler群}} == 'グループ2' ? '中等度口腔汚染あり' : ( {{Geckler群}} == 'グループ3' ? '嚥下性肺炎で見られる所見、口腔汚染あり' : ( {{Geckler群}} == 'グループ4' ? '良質検体、検査適応' : ( {{Geckler群}} == 'グループ5' ? '最良検体、検査適応' : '経気管吸引時や免疫不全時に適用可能' ) ) ) ) )",
+      "dispname": "品質評価詳細: 各群の臨床的意義"
+    },
+    {
+      "type": "warning",
+      "name": "Warning: 検体品質不良 (Geckler 1-3)",
+      "formula": "{{Geckler群}} == 'グループ1' || {{Geckler群}} == 'グループ2' || {{Geckler群}} == 'グループ3'"
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+{
+    "_comment": [
+        "BMQ: Beliefs about Medicines Questionnaire",
+        "開発者: Horne, R., Weinman, J., & Hankins, M. (1999)",
+        "原著論文: The beliefs about medicines questionnaire: The development and evaluation of a new method for assessing the cognitive representation of medication. Psychology & Health, 14(1), 1-24.",
+        "構造: 18項目、4因子（Specific-Necessity、Specific-Concerns、General-Overuse、General-Harm）",
+        "信頼性: Cronbach's α = 0.48-0.81（研究・文化的適応により異なる）",
+        "対象: 薬物治療を受けている成人患者",
+        "評価: 薬物に対する信念（必要性と懸念）を評価",
+        "注意: 著作権に保護された質問項目のため、研究文献に示された例を基に作成",
+        "修正内容: section→subsection変更（dark mode対応）、description簡潔化"
+    ],
+    "title": "BMQ 薬物信念質問票",
+    "description": [
+        "この質問票は、あなたが薬について持っている考えや信念をお聞きするものです。",
+        "処方されている薬についての考えと、薬全般についての考えを教えてください。",
+        "正しい答えや間違った答えはありません。あなたの率直な考えをお聞かせください。"
+    ],
+    "translate": "major",
+    "fields": [
+        {
+            "dispname": "処方薬に関する信念",
+            "type": "subsection"
+        },
+        {
+            "dispname": "現在の健康状態は処方された薬に依存している",
+            "name": "SN1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "強く反対|反対|どちらでもない|同意|強く同意",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "処方された薬がなければ私はもっと病気になるだろう",
+            "name": "SN2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "強く反対|反対|どちらでもない|同意|強く同意",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "病気にならないために処方された薬が必要である",
+            "name": "SN3",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "強く反対|反対|どちらでもない|同意|強く同意",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "処方された薬は症状を予防するために必要である",
+            "name": "SN4",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "強く反対|反対|どちらでもない|同意|強く同意",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "将来の健康のために処方された薬を服用する必要がある",
+            "name": "SN5",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "強く反対|反対|どちらでもない|同意|強く同意",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "処方された薬の長期使用による影響を心配することがある",
+            "name": "SC1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "強く反対|反対|どちらでもない|同意|強く同意",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "処方された薬を服用することに不安を感じる",
+            "name": "SC2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "強く反対|反対|どちらでもない|同意|強く同意",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "処方された薬は私の生活を大きく混乱させる",
+            "name": "SC3",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "強く反対|反対|どちらでもない|同意|強く同意",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "処方された薬に依存することを心配している",
+            "name": "SC4",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "強く反対|反対|どちらでもない|同意|強く同意",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "処方された薬は毒のようなものである",
+            "name": "SC5",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "強く反対|反対|どちらでもない|同意|強く同意",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "薬全般に関する信念",
+            "type": "subsection"
+        },
+        {
+            "dispname": "医師は薬に頼りすぎている",
+            "name": "GO1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "強く反対|反対|どちらでもない|同意|強く同意",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "薬は病気の人が最後に頼るべきものである",
+            "name": "GO2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "強く反対|反対|どちらでもない|同意|強く同意",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "医師は患者との時間をもっと取れれば薬を処方することが少なくなるだろう",
+            "name": "GO3",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "強く反対|反対|どちらでもない|同意|強く同意",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "自然療法は薬よりも安全である",
+            "name": "GO4",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "強く反対|反対|どちらでもない|同意|強く同意",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "薬は害をもたらすものである",
+            "name": "GH1",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "強く反対|反対|どちらでもない|同意|強く同意",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "すべての薬は毒である",
+            "name": "GH2",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "強く反対|反対|どちらでもない|同意|強く同意",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "薬はもともと中毒性のあるものである",
+            "name": "GH3",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "強く反対|反対|どちらでもない|同意|強く同意",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "dispname": "薬は長期間続けて服用すべきものではない",
+            "name": "GH4",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "強く反対|反対|どちらでもない|同意|強く同意",
+            "selectoridx": "1|2|3|4|5"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "必要性得点",
+            "type": "eval",
+            "dispname": "必要性得点",
+            "formula": "[[SN1.index]] + [[SN2.index]] + [[SN3.index]] + [[SN4.index]] + [[SN5.index]]"
+        },
+        {
+            "name": "懸念得点",
+            "type": "eval",
+            "dispname": "懸念得点",
+            "formula": "[[SC1.index]] + [[SC2.index]] + [[SC3.index]] + [[SC4.index]] + [[SC5.index]]"
+        },
+        {
+            "name": "過剰使用得点",
+            "type": "eval",
+            "dispname": "過剰使用得点",
+            "formula": "[[GO1.index]] + [[GO2.index]] + [[GO3.index]] + [[GO4.index]]"
+        },
+        {
+            "name": "害悪得点",
+            "type": "eval",
+            "dispname": "害悪得点",
+            "formula": "[[GH1.index]] + [[GH2.index]] + [[GH3.index]] + [[GH4.index]]"
+        },
+        {
+            "name": "必要性・懸念差得点",
+            "type": "eval",
+            "dispname": "必要性・懸念差得点 (正の値は必要性が懸念を上回ることを示す)",
+            "formula": "[[必要性得点]] - [[懸念得点]]"
+        }
+    ]
+}

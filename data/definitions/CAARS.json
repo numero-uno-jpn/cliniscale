@@ -1,0 +1,734 @@
+{
+    "_comment": [
+        "CAARS日本語版（Conners' Adult ADHD Rating Scales Japanese Version）",
+        "成人ADHD症状評価尺度",
+        "原著: Conners, C. K., Erhardt, D., & Sparrow, E. P. (1999)",
+        "日本語版監修: 中村和彦（浜松医科大学）",
+        "出版: Multi-Health Systems Inc. / 金子書房",
+        "66項目の自己記入式評価尺度",
+        "DSM-IV診断基準に基づく構成",
+        "18歳以上の成人を対象"
+    ],
+    "title": "CAARS 成人ADHD評価尺度",
+    "description": [
+        "この検査は、18歳以上の成人におけるADHD（注意欠如・多動性障害）の症状を評価するものです。",
+        "最近のあなたの状況について、それぞれの質問にお答えください。",
+        "各質問について、最近のあなたにどの程度当てはまるかを4段階で評価してください。"
+    ],
+    "contact": "担当医師・臨床心理士",
+    "submit_button_title": "評価を送信",
+    "fields": [
+        {
+            "dispname": "基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "年齢",
+            "name": "年齢",
+            "type": "text",
+            "inputmode": "numeric",
+            "postfix": "歳",
+            "required": true
+        },
+        {
+            "dispname": "性別",
+            "name": "性別",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "男性|女性|その他"
+        },
+        {
+            "dispname": "A. 不注意/記憶の問題",
+            "type": "subsection"
+        },
+        {
+            "dispname": "1. 細かいところまで注意を払わなかったり、不注意な間違いをしたりする",
+            "name": "A1",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "2. 課題や活動に注意を集中し続けることが困難である",
+            "name": "A2",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "3. 話しかけられているのに聞いていないようにみえる",
+            "name": "A3",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "4. 指示に従えず、学業や職場での義務をやり遂げることができない",
+            "name": "A4",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "5. 課題や活動を順序立てることが困難である",
+            "name": "A5",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "6. 精神的努力の持続を要する課題に従事することを避ける、嫌う、またはいやいやながら取り組む",
+            "name": "A6",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "7. 課題や活動に必要なものをなくしてしまう",
+            "name": "A7",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "8. 外からの刺激によって容易に注意をそらされる",
+            "name": "A8",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "9. 日々の活動を忘れてしまう",
+            "name": "A9",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "10. 記憶に関する問題がある",
+            "name": "A10",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "11. 集中することが困難である",
+            "name": "A11",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "12. 物事を先延ばしにする",
+            "name": "A12",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "B. 多動性/落ち着きのなさ",
+            "type": "subsection"
+        },
+        {
+            "dispname": "13. 手足をそわそわと動かしたり、いすの上でもじもじしたりする",
+            "name": "B1",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "14. 着席していることが期待される状況で席を離れる",
+            "name": "B2",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "15. 不適切な状況で走り回ったり、よじ登ったりする",
+            "name": "B3",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "16. 静かに遊んだり、余暇活動に従事したりすることができない",
+            "name": "B4",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "17. じっとしていない、またはまるでエンジンで動かされるように行動する",
+            "name": "B5",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "18. しゃべりすぎる",
+            "name": "B6",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "19. 落ち着きがない",
+            "name": "B7",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "20. エネルギッシュすぎる",
+            "name": "B8",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "C. 衝動性/情緒不安定",
+            "type": "subsection"
+        },
+        {
+            "dispname": "21. 質問が終わる前に出し抜けに答えてしまう",
+            "name": "C1",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "22. 順番を待つことが困難である",
+            "name": "C2",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "23. 他人を妨害し、邪魔をする",
+            "name": "C3",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "24. 衝動的である",
+            "name": "C4",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "25. 気分の変動が激しい",
+            "name": "C5",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "26. 短気で怒りっぽい",
+            "name": "C6",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "27. フラストレーションに対する耐性が低い",
+            "name": "C7",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "28. かんしゃくを起こす",
+            "name": "C8",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "D. 自己概念の問題",
+            "type": "subsection"
+        },
+        {
+            "dispname": "29. 自分に自信がない",
+            "name": "D1",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "30. 自分は他の人ほど賢くないと思う",
+            "name": "D2",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "31. 自分の能力に自信がない",
+            "name": "D3",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "32. 自分を価値のない人間だと思う",
+            "name": "D4",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "33. 物事がうまくいかないとき、自分を責める",
+            "name": "D5",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "34. 劣等感がある",
+            "name": "D6",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "その他の項目",
+            "type": "subsection"
+        },
+        {
+            "dispname": "35. 社会的な場面で不安を感じる",
+            "name": "E1",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "36. 人との関係を築くのが困難である",
+            "name": "E2",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "37. 人前で話すことが苦手である",
+            "name": "E3",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "38. 仕事や学業で期待される成果を出せない",
+            "name": "E4",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "39. 時間管理が苦手である",
+            "name": "E5",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "40. 決断を下すのに時間がかかる",
+            "name": "E6",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "41. 物事を整理整頓することが困難である",
+            "name": "E7",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "42. 長時間の会議や講義に集中できない",
+            "name": "E8",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "43. 締切りを守ることが困難である",
+            "name": "E9",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "44. 複数の作業を同時に行うことが困難である",
+            "name": "E10",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "45. 読書に集中することが困難である",
+            "name": "E11",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "46. 考えがまとまらない",
+            "name": "E12",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "47. 気が散りやすい",
+            "name": "E13",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "48. 必要なものを失くしやすい",
+            "name": "E14",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "49. 約束を忘れてしまう",
+            "name": "E15",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "50. 運転中に注意散漫になりやすい",
+            "name": "E16",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "51. 待つことが苦手である",
+            "name": "E17",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "52. せっかちである",
+            "name": "E18",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "53. 他人の話を最後まで聞けない",
+            "name": "E19",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "54. 考える前に行動してしまう",
+            "name": "E20",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "55. 感情のコントロールが困難である",
+            "name": "E21",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "56. すぐにイライラしてしまう",
+            "name": "E22",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "57. 怒りを抑えることが困難である",
+            "name": "E23",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "58. ストレスを感じやすい",
+            "name": "E24",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "59. 変化に適応するのが困難である",
+            "name": "E25",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "60. 新しいことを学ぶのに時間がかかる",
+            "name": "E26",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "61. 単調な作業を続けることが困難である",
+            "name": "E27",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "62. 完璧主義的である",
+            "name": "E28",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "63. 自分の行動を振り返ることが少ない",
+            "name": "E29",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "64. 長期的な目標を立てるのが困難である",
+            "name": "E30",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "65. 優先順位をつけることが困難である",
+            "name": "E31",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "dispname": "66. 責任を持って行動することが困難である",
+            "name": "E32",
+            "type": "radio",
+            "inline": false,
+            "required": true,
+            "selector": "全く当てはまらない|ほとんど当てはまらない|かなり当てはまる|非常に当てはまる",
+            "selectoridx": "0|1|2|3"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "不注意記憶問題スコア",
+            "type": "eval",
+            "dispname": "不注意/記憶の問題スコア",
+            "formula": "[[A1.index]] + [[A2.index]] + [[A3.index]] + [[A4.index]] + [[A5.index]] + [[A6.index]] + [[A7.index]] + [[A8.index]] + [[A9.index]] + [[A10.index]] + [[A11.index]] + [[A12.index]]"
+        },
+        {
+            "name": "多動性落ち着きなさスコア",
+            "type": "eval",
+            "dispname": "多動性/落ち着きのなさスコア",
+            "formula": "[[B1.index]] + [[B2.index]] + [[B3.index]] + [[B4.index]] + [[B5.index]] + [[B6.index]] + [[B7.index]] + [[B8.index]]"
+        },
+        {
+            "name": "衝動性情緒不安定スコア",
+            "type": "eval",
+            "dispname": "衝動性/情緒不安定スコア",
+            "formula": "[[C1.index]] + [[C2.index]] + [[C3.index]] + [[C4.index]] + [[C5.index]] + [[C6.index]] + [[C7.index]] + [[C8.index]]"
+        },
+        {
+            "name": "自己概念問題スコア",
+            "type": "eval",
+            "dispname": "自己概念の問題スコア",
+            "formula": "[[D1.index]] + [[D2.index]] + [[D3.index]] + [[D4.index]] + [[D5.index]] + [[D6.index]]"
+        },
+        {
+            "name": "DSM4不注意型症状スコア",
+            "type": "eval",
+            "dispname": "DSM-IV不注意型症状スコア",
+            "formula": "[[A1.index]] + [[A2.index]] + [[A3.index]] + [[A4.index]] + [[A5.index]] + [[A6.index]] + [[A7.index]] + [[A8.index]] + [[A9.index]]"
+        },
+        {
+            "name": "DSM4多動性衝動性症状スコア",
+            "type": "eval",
+            "dispname": "DSM-IV多動性-衝動性症状スコア",
+            "formula": "[[B1.index]] + [[B2.index]] + [[B3.index]] + [[B4.index]] + [[B5.index]] + [[B6.index]] + [[C1.index]] + [[C2.index]] + [[C3.index]]"
+        },
+        {
+            "name": "DSM4総合ADHDスコア",
+            "type": "eval",
+            "dispname": "DSM-IV総合ADHD症状スコア",
+            "formula": "[[DSM4不注意型症状スコア]] + [[DSM4多動性衝動性症状スコア]]"
+        },
+        {
+            "name": "ADHD指標スコア",
+            "type": "eval",
+            "dispname": "ADHD指標スコア（12項目）",
+            "formula": "[[A2.index]] + [[A5.index]] + [[A8.index]] + [[A11.index]] + [[B1.index]] + [[B5.index]] + [[B7.index]] + [[C1.index]] + [[C4.index]] + [[C5.index]] + [[D1.index]] + [[E21.index]]"
+        },
+        {
+            "name": "矛盾指標",
+            "type": "eval",
+            "dispname": "矛盾指標（回答の一貫性評価）",
+            "formula": "([[A1.index]] == [[A2.index]] ? 0 : 1) + ([[B1.index]] == [[B7.index]] ? 0 : 1) + ([[C4.index]] == [[E20.index]] ? 0 : 1) + ([[C5.index]] == [[E21.index]] ? 0 : 1) + ([[D1.index]] == [[D3.index]] ? 0 : 1)"
+        },
+        {
+            "name": "総合スコア",
+            "type": "eval",
+            "dispname": "総合スコア（全66項目の合計）",
+            "formula": "[[不注意記憶問題スコア]] + [[多動性落ち着きなさスコア]] + [[衝動性情緒不安定スコア]] + [[自己概念問題スコア]] + [[E1.index]] + [[E2.index]] + [[E3.index]] + [[E4.index]] + [[E5.index]] + [[E6.index]] + [[E7.index]] + [[E8.index]] + [[E9.index]] + [[E10.index]] + [[E11.index]] + [[E12.index]] + [[E13.index]] + [[E14.index]] + [[E15.index]] + [[E16.index]] + [[E17.index]] + [[E18.index]] + [[E19.index]] + [[E20.index]] + [[E21.index]] + [[E22.index]] + [[E23.index]] + [[E24.index]] + [[E25.index]] + [[E26.index]] + [[E27.index]] + [[E28.index]] + [[E29.index]] + [[E30.index]] + [[E31.index]] + [[E32.index]]"
+        },
+        {
+            "dispname": "※注意事項",
+            "type": "note",
+            "description": "CAARSの正確な評価には、マニュアルの換算表を用いたT得点の算出が必要です。このスコアは生スコア（素点）であり、専門家による解釈が必要です。"
+        },
+        {
+            "name": "Warning: 矛盾指標高値",
+            "formula": "[[矛盾指標]] >= 3",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 高スコア要確認",
+            "formula": "[[総合スコア]] >= 132",
+            "type": "emergency"
+        }
+    ]
+}

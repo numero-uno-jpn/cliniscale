@@ -1,0 +1,597 @@
+{
+    "_comment": [
+        "Montreal Cognitive Assessment (MoCA) 日本語版",
+        "軽度認知障害の検出に高い感度(90%)を持つ認知スクリーニングツール",
+        "Nasreddine ZS, Phillips NA, Bédirian V, et al. The Montreal Cognitive Assessment, MoCA: a brief screening tool for mild cognitive impairment. J Am Geriatr Soc. 2005 Apr;53(4):695-9.",
+        "Fujiwara Y., Suzuki H., Yasunaga M., et al. Brief screening tool for mild cognitive impairment in older Japanese: Validation of the Japanese version of the Montreal Cognitive Assessment. Geriatrics & Gerontology International, 2010; 10. 225-232",
+        "東京都健康長寿医療センター研究所による日本語版作成・検証",
+        "公式サイト: https://mocacognition.com/",
+        "多領域認知機能評価: 視空間認知、実行機能、注意、言語、記憶、抽象的思考、見当識",
+        "記憶指標得点（MIS）: 自由再生×3 + カテゴリ手がかり×2 + 選択再生×1（最大15点）"
+    ],
+    "title": "Montreal Cognitive Assessment (MoCA) 日本語版",
+    "description": [
+        "<h3>Montreal Cognitive Assessment (MoCA) 日本語版</h3>",
+        "軽度認知障害の早期発見を目的とした30点満点の認知機能評価ツールです。",
+        "視空間認知、実行機能、注意機能、言語機能、記憶、抽象的思考、見当識の7つの認知領域を約10分で評価します。",
+        "26点以上が正常範囲とされ、教育年数12年以下の方は1点加算します。",
+        "記憶指標得点（MIS）により記憶障害の詳細な評価が可能です。"
+    ],
+    "fields": [
+        {
+            "name": "section_trail",
+            "type": "subsection",
+            "dispname": "1. Trail Making（実行機能）"
+        },
+        {
+            "name": "trail_making",
+            "type": "radio",
+            "dispname": "Trail Making テスト",
+            "description": "数字からひらがなへ順番通りに線で結ぶテストを実施しました。",
+            "required": true,
+            "selector": [
+                "正確に完成できた",
+                "完成できなかった"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "section_visuospatial",
+            "type": "subsection",
+            "dispname": "2. 視空間認知機能"
+        },
+        {
+            "name": "cube_copy",
+            "type": "radio",
+            "dispname": "立方体の模写",
+            "description": "立方体を正確に模写できるかを評価します。",
+            "required": true,
+            "selector": [
+                "正確に描けた",
+                "描けなかった"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "clock_contour",
+            "type": "radio",
+            "dispname": "時計描画 - 輪郭",
+            "description": "時計の文字盤を円形に描けるかを評価します。",
+            "required": true,
+            "selector": [
+                "適切に描けた",
+                "描けなかった"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "clock_numbers",
+            "type": "radio",
+            "dispname": "時計描画 - 数字",
+            "description": "時計の数字を過不足なく正しい位置に描けるかを評価します。",
+            "required": true,
+            "selector": [
+                "適切に描けた",
+                "描けなかった"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "clock_hands",
+            "type": "radio",
+            "dispname": "時計描画 - 針",
+            "description": "11時10分を示す長針と短針を正しく描けるかを評価します。",
+            "required": true,
+            "selector": [
+                "適切に描けた",
+                "描けなかった"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "section_naming",
+            "type": "subsection",
+            "dispname": "3. 命名"
+        },
+        {
+            "name": "naming_lion",
+            "type": "radio",
+            "dispname": "命名 - 動物1",
+            "description": "ライオンの絵を見て正しく命名できるかを評価します。",
+            "required": true,
+            "selector": [
+                "正しく答えた",
+                "答えられなかった"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "naming_rhino",
+            "type": "radio",
+            "dispname": "命名 - 動物2",
+            "description": "サイの絵を見て正しく命名できるかを評価します。",
+            "required": true,
+            "selector": [
+                "正しく答えた",
+                "答えられなかった"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "naming_camel",
+            "type": "radio",
+            "dispname": "命名 - 動物3",
+            "description": "ラクダの絵を見て正しく命名できるかを評価します。",
+            "required": true,
+            "selector": [
+                "正しく答えた",
+                "答えられなかった"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "section_attention",
+            "type": "subsection",
+            "dispname": "4. 注意機能"
+        },
+        {
+            "name": "digit_span_forward",
+            "type": "radio",
+            "dispname": "数字復唱 - 順唱",
+            "description": "5つの数字を聞いた通りに復唱できるかを評価します。",
+            "required": true,
+            "selector": [
+                "正しく復唱できた",
+                "復唱できなかった"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "digit_span_backward",
+            "type": "radio",
+            "dispname": "数字復唱 - 逆唱",
+            "description": "3つの数字を逆順に復唱できるかを評価します。",
+            "required": true,
+            "selector": [
+                "正しく復唱できた",
+                "復唱できなかった"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "vigilance",
+            "type": "radio",
+            "dispname": "ビジランス課題",
+            "description": "ひらがな列から「あ」を聞いたときのみ手を叩く課題のエラー数を評価します。",
+            "required": true,
+            "selector": [
+                "エラー1回以下",
+                "エラー2回以上"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "serial_sevens",
+            "type": "radio",
+            "dispname": "計算 - 連続減算",
+            "description": "100から7を順に引いていく計算の正答数を評価します。",
+            "required": true,
+            "selector": [
+                "4-5個正答",
+                "2-3個正答",
+                "1個正答",
+                "正答なし"
+            ],
+            "selectoridx": "3|2|1|0"
+        },
+        {
+            "name": "section_language",
+            "type": "subsection",
+            "dispname": "5. 言語機能"
+        },
+        {
+            "name": "repetition_sentence1",
+            "type": "radio",
+            "dispname": "復唱 - 文章1",
+            "description": "「太郎が今日手伝うことしか知りません」を正確に復唱できるかを評価します。",
+            "required": true,
+            "selector": [
+                "正確に復唱できた",
+                "復唱できなかった"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "repetition_sentence2",
+            "type": "radio",
+            "dispname": "復唱 - 文章2",
+            "description": "「犬が部屋にいるときは、猫はいつもイスの下にかくれていました」を正確に復唱できるかを評価します。",
+            "required": true,
+            "selector": [
+                "正確に復唱できた",
+                "復唱できなかった"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "verbal_fluency",
+            "type": "radio",
+            "dispname": "語想起",
+            "description": "「か」で始まる言葉を1分間でいくつ言えるかを評価します。",
+            "required": true,
+            "selector": [
+                "11個以上",
+                "10個以下"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "section_abstraction",
+            "type": "subsection",
+            "dispname": "6. 抽象的思考"
+        },
+        {
+            "name": "similarity_1",
+            "type": "radio",
+            "dispname": "類似性 - 電車と自転車",
+            "description": "電車と自転車の共通点を抽象的に答えられるかを評価します。",
+            "required": true,
+            "selector": [
+                "適切な抽象概念で回答",
+                "具体的な回答または不適切"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "similarity_2",
+            "type": "radio",
+            "dispname": "類似性 - ものさしと時計",
+            "description": "ものさしと時計の共通点を抽象的に答えられるかを評価します。",
+            "required": true,
+            "selector": [
+                "適切な抽象概念で回答",
+                "具体的な回答または不適切"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "section_delayed_recall",
+            "type": "subsection",
+            "dispname": "7. 遅延再生"
+        },
+        {
+            "name": "recall_face",
+            "type": "radio",
+            "dispname": "遅延再生 - 顔",
+            "description": "記憶課題で学習した単語「顔」を手がかりなしで再生できるかを評価します。",
+            "required": true,
+            "selector": [
+                "自由再生できた",
+                "再生できなかった"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "recall_silk",
+            "type": "radio",
+            "dispname": "遅延再生 - 絹",
+            "description": "記憶課題で学習した単語「絹」を手がかりなしで再生できるかを評価します。",
+            "required": true,
+            "selector": [
+                "自由再生できた",
+                "再生できなかった"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "recall_temple",
+            "type": "radio",
+            "dispname": "遅延再生 - 神社",
+            "description": "記憶課題で学習した単語「神社」を手がかりなしで再生できるかを評価します。",
+            "required": true,
+            "selector": [
+                "自由再生できた",
+                "再生できなかった"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "recall_lily",
+            "type": "radio",
+            "dispname": "遅延再生 - 百合",
+            "description": "記憶課題で学習した単語「百合」を手がかりなしで再生できるかを評価します。",
+            "required": true,
+            "selector": [
+                "自由再生できた",
+                "再生できなかった"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "recall_red",
+            "type": "radio",
+            "dispname": "遅延再生 - 赤",
+            "description": "記憶課題で学習した単語「赤」を手がかりなしで再生できるかを評価します。",
+            "required": true,
+            "selector": [
+                "自由再生できた",
+                "再生できなかった"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "section_cued_recall",
+            "type": "subsection",
+            "dispname": "7-2. カテゴリ手がかり再生（MIS計算用）"
+        },
+        {
+            "name": "recall_face_cued",
+            "type": "radio",
+            "dispname": "手がかり再生 - 顔",
+            "description": "「体の一部」という手がかりで「顔」を再生できたかを評価します。",
+            "required": true,
+            "selector": [
+                "手がかりで再生できた",
+                "手がかりでも再生できなかった"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "recall_silk_cued",
+            "type": "radio",
+            "dispname": "手がかり再生 - 絹",
+            "description": "「織物」という手がかりで「絹」を再生できたかを評価します。",
+            "required": true,
+            "selector": [
+                "手がかりで再生できた",
+                "手がかりでも再生できなかった"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "recall_temple_cued",
+            "type": "radio",
+            "dispname": "手がかり再生 - 神社",
+            "description": "「建物」という手がかりで「神社」を再生できたかを評価します。",
+            "required": true,
+            "selector": [
+                "手がかりで再生できた",
+                "手がかりでも再生できなかった"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "recall_lily_cued",
+            "type": "radio",
+            "dispname": "手がかり再生 - 百合",
+            "description": "「花」という手がかりで「百合」を再生できたかを評価します。",
+            "required": true,
+            "selector": [
+                "手がかりで再生できた",
+                "手がかりでも再生できなかった"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "recall_red_cued",
+            "type": "radio",
+            "dispname": "手がかり再生 - 赤",
+            "description": "「色」という手がかりで「赤」を再生できたかを評価します。",
+            "required": true,
+            "selector": [
+                "手がかりで再生できた",
+                "手がかりでも再生できなかった"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "section_recognition",
+            "type": "subsection",
+            "dispname": "7-3. 多肢選択再生（MIS計算用）"
+        },
+        {
+            "name": "recall_face_recognition",
+            "type": "radio",
+            "dispname": "選択再生 - 顔",
+            "description": "「顔・手・足」の選択肢から「顔」を選択できたかを評価します。",
+            "required": true,
+            "selector": [
+                "選択肢から正答できた",
+                "選択肢からも正答できなかった"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "recall_silk_recognition",
+            "type": "radio",
+            "dispname": "選択再生 - 絹",
+            "description": "「絹・木綿・麻」の選択肢から「絹」を選択できたかを評価します。",
+            "required": true,
+            "selector": [
+                "選択肢から正答できた",
+                "選択肢からも正答できなかった"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "recall_temple_recognition",
+            "type": "radio",
+            "dispname": "選択再生 - 神社",
+            "description": "「神社・学校・病院」の選択肢から「神社」を選択できたかを評価します。",
+            "required": true,
+            "selector": [
+                "選択肢から正答できた",
+                "選択肢からも正答できなかった"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "recall_lily_recognition",
+            "type": "radio",
+            "dispname": "選択再生 - 百合",
+            "description": "「百合・桜・薔薇」の選択肢から「百合」を選択できたかを評価します。",
+            "required": true,
+            "selector": [
+                "選択肢から正答できた",
+                "選択肢からも正答できなかった"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "recall_red_recognition",
+            "type": "radio",
+            "dispname": "選択再生 - 赤",
+            "description": "「赤・青・黄」の選択肢から「赤」を選択できたかを評価します。",
+            "required": true,
+            "selector": [
+                "選択肢から正答できた",
+                "選択肢からも正答できなかった"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "section_orientation",
+            "type": "subsection",
+            "dispname": "8. 見当識"
+        },
+        {
+            "name": "orientation_date",
+            "type": "radio",
+            "dispname": "見当識 - 日付",
+            "description": "今日の日付を正確に答えられるかを評価します。",
+            "required": true,
+            "selector": [
+                "正確に答えた",
+                "答えられなかった"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "orientation_month",
+            "type": "radio",
+            "dispname": "見当識 - 月",
+            "description": "今日の月を正確に答えられるかを評価します。",
+            "required": true,
+            "selector": [
+                "正確に答えた",
+                "答えられなかった"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "orientation_year",
+            "type": "radio",
+            "dispname": "見当識 - 年",
+            "description": "今年を正確に答えられるかを評価します。",
+            "required": true,
+            "selector": [
+                "正確に答えた",
+                "答えられなかった"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "orientation_day",
+            "type": "radio",
+            "dispname": "見当識 - 曜日",
+            "description": "今日の曜日を正確に答えられるかを評価します。",
+            "required": true,
+            "selector": [
+                "正確に答えた",
+                "答えられなかった"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "orientation_place",
+            "type": "radio",
+            "dispname": "見当識 - 場所",
+            "description": "ここがどこかを正確に答えられるかを評価します。",
+            "required": true,
+            "selector": [
+                "正確に答えた",
+                "答えられなかった"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "orientation_institution",
+            "type": "radio",
+            "dispname": "見当識 - 施設名",
+            "description": "この施設の名前を正確に答えられるかを評価します。",
+            "required": true,
+            "selector": [
+                "正確に答えた",
+                "答えられなかった"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "name": "section_education",
+            "type": "subsection",
+            "dispname": "9. 教育年数調整"
+        },
+        {
+            "name": "education_years",
+            "type": "radio",
+            "dispname": "教育年数",
+            "description": "教育年数が12年以下の場合は1点を加算します。",
+            "required": true,
+            "selector": [
+                "12年以下（1点加算）",
+                "13年以上"
+            ],
+            "selectoridx": "1|0"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "raw_score",
+            "type": "eval",
+            "dispname": "各項目の合計点数",
+            "formula": "((trail_making.index)) + ((cube_copy.index)) + ((clock_contour.index)) + ((clock_numbers.index)) + ((clock_hands.index)) + ((naming_lion.index)) + ((naming_rhino.index)) + ((naming_camel.index)) + ((digit_span_forward.index)) + ((digit_span_backward.index)) + ((vigilance.index)) + ((serial_sevens.index)) + ((repetition_sentence1.index)) + ((repetition_sentence2.index)) + ((verbal_fluency.index)) + ((similarity_1.index)) + ((similarity_2.index)) + ((recall_face.index)) + ((recall_silk.index)) + ((recall_temple.index)) + ((recall_lily.index)) + ((recall_red.index)) + ((orientation_date.index)) + ((orientation_month.index)) + ((orientation_year.index)) + ((orientation_day.index)) + ((orientation_place.index)) + ((orientation_institution.index))"
+        },
+        {
+            "name": "total_score",
+            "type": "eval",
+            "dispname": "MoCA総得点",
+            "dispname": "教育年数調整後の総得点（30点満点）",
+            "formula": "((raw_score)) + ((education_years.index))"
+        },
+        {
+            "name": "interpretation",
+            "type": "eval",
+            "dispname": "判定",
+            "dispname": "認知機能の判定結果",
+            "formula": "((total_score)) >= 26 ? \"正常範囲\" : \"軽度認知障害の可能性\""
+        },
+        {
+            "name": "free_recall_total",
+            "type": "eval",
+            "description": "自由再生の合計点（MIS計算用）",
+            "noreport": true,
+            "formula": "((recall_face.index)) + ((recall_silk.index)) + ((recall_temple.index)) + ((recall_lily.index)) + ((recall_red.index))"
+        },
+        {
+            "name": "cued_recall_total",
+            "type": "eval",
+            "description": "手がかり再生の合計点（MIS計算用）",
+            "noreport": true,
+            "formula": "((recall_face_cued.index)) + ((recall_silk_cued.index)) + ((recall_temple_cued.index)) + ((recall_lily_cued.index)) + ((recall_red_cued.index))"
+        },
+        {
+            "name": "recognition_total",
+            "type": "eval",
+            "description": "選択再生の合計点（MIS計算用）",
+            "noreport": true,
+            "formula": "((recall_face_recognition.index)) + ((recall_silk_recognition.index)) + ((recall_temple_recognition.index)) + ((recall_lily_recognition.index)) + ((recall_red_recognition.index))"
+        },
+        {
+            "name": "memory_index_score",
+            "type": "eval",
+            "dispname": "記憶指標得点（MIS）",
+            "formula": "( ((recall_face.index)) ? 3 : ((recall_face_cued.index)) ? 2 : ((recall_face_recognition.index)) ) + ( ((recall_silk.index)) ? 3 : ((recall_silk_cued.index)) ? 2 : ((recall_silk_recognition.index)) ) + ( ((recall_temple.index)) ? 3 : ((recall_temple_cued.index)) ? 2 : ((recall_temple_recognition.index)) ) + ( ((recall_lily.index)) ? 3 : ((recall_lily_cued.index)) ? 2 : ((recall_lily_recognition.index)) ) + ( ((recall_red.index)) ? 3 : ((recall_red_cued.index)) ? 2 : ((recall_red_recognition.index)) )"
+        }
+    ]
+}

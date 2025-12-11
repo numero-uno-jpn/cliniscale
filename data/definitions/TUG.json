@@ -1,0 +1,243 @@
+{
+    "_comment": [
+        "TUG (Timed Up and Go Test) 転倒リスク・移動能力評価問診票",
+        "原典: Podsiadlo D, Richardson S. The timed Up & Go: a test of basic functional mobility for frail elderly persons. J Am Geriatr Soc. 1991;39(2):142-148.",
+        "開発者: Diane Podsiadlo, Sandra Richardson (1991年)",
+        "日本整形外科学会運動器不安定症診断基準に採用",
+        "参考URL: https://www.sralab.org/rehabilitation-measures/timed-and-go"
+    ],
+    "title": "TUG 転倒リスク評価",
+    "description": [
+        "<h3>TUG (Timed Up and Go Test) 転倒リスク・移動能力評価</h3>",
+        "椅子からの立ち上がり、3メートル歩行、方向転換、着座を含む複合的な移動能力を評価し、転倒リスクを判定します。",
+        "測定は2回実施し、より良い記録を採用します。",
+        "<strong>重要</strong>: このテストはスクリーニングツールです。13.5秒未満でも転倒リスクを完全に否定できません。"
+    ],
+    "contact": "リハビリテーション科",
+    "dept_in_charge": "整形外科・リハビリテーション科",
+    "submit_button_title": "評価結果を送信",
+    "fields": [
+        {
+            "dispname": "基本情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "年齢",
+            "name": "年齢",
+            "type": "text",
+            "inputmode": "numeric",
+            "postfix": "歳",
+            "testrange": [
+                50,
+                100
+            ],
+            "required": true,
+            "description": "半角数字で入力してください（例: 75）"
+        },
+        {
+            "dispname": "性別",
+            "name": "性別",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "男性|女性"
+        },
+        {
+            "dispname": "歩行補助具の使用",
+            "name": "歩行補助具",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|杖|歩行器|その他",
+            "description": "普段使用している歩行補助具を選択してください（測定時も使用可能）"
+        },
+        {
+            "dispname": "過去1年間の転倒歴",
+            "name": "転倒歴",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|1回|2回以上",
+            "required": true
+        },
+        {
+            "dispname": "測定環境・条件",
+            "type": "subsection",
+            "description": "標準化された条件での測定が重要です"
+        },
+        {
+            "dispname": "使用した椅子の種類",
+            "name": "椅子種類",
+            "type": "radio",
+            "inline": true,
+            "selector": "肘掛けあり|肘掛けなし",
+            "required": true,
+            "description": "肘掛けありの椅子が推奨されます"
+        },
+        {
+            "dispname": "椅子の高さ",
+            "name": "椅子高さ",
+            "type": "text",
+            "inputmode": "numeric",
+            "postfix": "cm",
+            "testrange": [
+                44,
+                47
+            ],
+            "required": true,
+            "description": "標準範囲44-47cm、推奨46cm。範囲外の椅子は結果の妥当性に影響します（例: 46）"
+        },
+        {
+            "dispname": "測定時の歩行速度指示",
+            "name": "歩行速度指示",
+            "type": "radio",
+            "inline": true,
+            "selector": "普通の速さ|できるだけ速く",
+            "required": true,
+            "description": "標準プロトコルは「普通の速さ」です"
+        },
+        {
+            "dispname": "TUG測定結果",
+            "type": "subsection"
+        },
+        {
+            "dispname": "1回目測定時間",
+            "name": "TUG1回目",
+            "type": "text",
+            "inputmode": "decimal",
+            "postfix": "秒",
+            "testrange": [
+                5,
+                60
+            ],
+            "required": true,
+            "description": "秒単位で入力してください（例: 12.5）"
+        },
+        {
+            "dispname": "2回目測定時間",
+            "name": "TUG2回目",
+            "type": "text",
+            "inputmode": "decimal",
+            "postfix": "秒",
+            "testrange": [
+                5,
+                60
+            ],
+            "required": true,
+            "description": "秒単位で入力してください（例: 11.8）"
+        },
+        {
+            "dispname": "観察所見",
+            "type": "subsection"
+        },
+        {
+            "dispname": "立ち上がり時の問題",
+            "name": "立ち上がり問題",
+            "type": "checkbox",
+            "selector": [
+                "なし",
+                "手すりが必要",
+                "複数回の試行",
+                "ふらつき",
+                "痛みあり"
+            ]
+        },
+        {
+            "dispname": "歩行時の問題",
+            "name": "歩行問題",
+            "type": "checkbox",
+            "selector": [
+                "なし",
+                "小刻み歩行",
+                "ふらつき",
+                "歩幅の短縮",
+                "速度の低下",
+                "壁に手をつく"
+            ]
+        },
+        {
+            "dispname": "方向転換時の問題",
+            "name": "方向転換問題",
+            "type": "checkbox",
+            "selector": [
+                "なし",
+                "複数ステップ",
+                "ふらつき",
+                "手すりが必要",
+                "バランス失調"
+            ]
+        },
+        {
+            "dispname": "着座時の問題",
+            "name": "着座問題",
+            "type": "checkbox",
+            "selector": [
+                "なし",
+                "急に座る",
+                "手すりが必要",
+                "位置確認が必要",
+                "ふらつき"
+            ]
+        },
+        {
+            "dispname": "追加情報",
+            "type": "subsection"
+        },
+        {
+            "dispname": "転倒に対する不安",
+            "name": "転倒不安",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|軽度|中等度|強い不安"
+        },
+        {
+            "dispname": "日常生活での移動制限",
+            "name": "移動制限",
+            "type": "radio",
+            "inline": true,
+            "selector": "なし|軽度|中等度|重度"
+        },
+        {
+            "dispname": "その他の特記事項",
+            "name": "特記事項",
+            "type": "textarea",
+            "rows": 3,
+            "description": "測定時の特記すべき所見や患者の訴えがあれば記載してください"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "dispname": "最良記録",
+            "name": "TUG最良",
+            "type": "eval",
+            "formula": "((TUG1回目)) != 0 && ((TUG2回目)) != 0 ? ( ((TUG1回目)) < ((TUG2回目)) ? ((TUG1回目)) : ((TUG2回目)) ) : ( ((TUG1回目)) != 0 ? ((TUG1回目)) : ((TUG2回目)) )"
+        },
+        {
+            "dispname": "転倒リスク分類（一般的基準）",
+            "name": "転倒リスク分類",
+            "type": "eval",
+            "formula": "((TUG最良)) >= 20 ? '高リスク（ADL自立困難）' : ( ((TUG最良)) >= 13.5 ? '中等度リスク（要注意）' : '低リスク（ただし完全否定不可）' )"
+        },
+        {
+            "dispname": "運動器不安定症基準",
+            "name": "運動器不安定症",
+            "type": "eval",
+            "formula": "((TUG最良)) >= 11 ? '基準該当' : '基準非該当'"
+        },
+        {
+            "dispname": "年齢・性別別評価",
+            "name": "年齢別評価",
+            "type": "eval",
+            "formula": "((年齢)) >= 80 ? ( ((TUG最良)) > 11 ? '平均より遅い' : '平均範囲内' ) : ( ((年齢)) >= 70 ? ( {{性別}} == '男性' ? ( ((TUG最良)) > 9.5 ? '平均より遅い' : '平均範囲内' ) : ( ((TUG最良)) > 10 ? '平均より遅い' : '平均範囲内' ) ) : ( {{性別}} == '男性' ? ( ((TUG最良)) > 9 ? '平均より遅い' : '平均範囲内' ) : ( ((TUG最良)) > 9.5 ? '平均より遅い' : '平均範囲内' ) ) )"
+        },
+        {
+            "name": "Warning: 中等度リスク TUGスコア >= 13.5秒",
+            "formula": "((TUG最良)) >= 13.5",
+            "type": "warning"
+        },
+        {
+            "name": "Emergency: 高リスク TUGスコア >= 20秒",
+            "formula": "((TUG最良)) >= 20",
+            "type": "emergency"
+        }
+    ]
+}

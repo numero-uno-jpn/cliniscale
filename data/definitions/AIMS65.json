@@ -1,0 +1,94 @@
+{
+    "_comment": [
+        "AIMS65スコア問診票定義",
+        "原典論文: Saltzman JR, et al. A simple risk score accurately predicts in-hospital mortality, length of stay, and cost in acute upper GI bleeding. Gastrointest Endosc. 2011;74(6):1215-24.",
+        "開発者: John R. Saltzman et al., 2011年",
+        "目的: 急性上部消化管出血患者の院内死亡率予測",
+        "構成要素: アルブミン、INR、精神状態、収縮期血圧、年齢の5項目",
+        "参考URL: https://pubmed.ncbi.nlm.nih.gov/21907980/"
+    ],
+    "title": "AIMS65 急性上部消化管出血患者の院内死亡率予測スコア",
+    "description": [
+        "<h3>上部消化管出血患者の死亡リスク評価</h3>",
+        "以下の項目について該当するものを選択してください。",
+        "スコアが2点以上の場合は高リスクと判定されます。"
+    ],
+    "contact": "消化器内科",
+    "dept_in_charge": "消化器内科",
+    "responsible_person": [
+        "消化器内科医師"
+    ],
+    "staffs": [
+        "看護師"
+    ],
+    "submit_button_title": "評価を送信",
+    "translate": "major",
+    "fields": [
+        {
+            "dispname": "アルブミン値",
+            "name": "アルブミン",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "3.0 g/dL未満|3.0 g/dL以上",
+            "selectoridx": "1|0"
+        },
+        {
+            "dispname": "INR値",
+            "name": "INR",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "1.5以下|1.5超",
+            "selectoridx": "0|1"
+        },
+        {
+            "dispname": "意識状態",
+            "name": "意識状態",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "正常|意識障害あり",
+            "selectoridx": "0|1",
+            "description": "GCS<14または見当識障害、傾眠、昏迷、昏睡のいずれかがある場合は「意識障害あり」を選択"
+        },
+        {
+            "dispname": "収縮期血圧",
+            "name": "収縮期血圧",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "90 mmHg以下|90 mmHg超",
+            "selectoridx": "1|0",
+            "description": "来院時の収縮期血圧"
+        },
+        {
+            "dispname": "年齢",
+            "name": "年齢",
+            "type": "radio",
+            "inline": true,
+            "required": true,
+            "selector": "65歳未満|65歳以上",
+            "selectoridx": "0|1",
+            "description": "患者の年齢を確認してください"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "AIMS65スコア 5項目の合計点数(0-5点)",
+            "type": "eval",
+            "formula": "[[アルブミン.index]] + [[INR.index]] + [[意識状態.index]] + [[収縮期血圧.index]] + [[年齢.index]]"
+        },
+        {
+            "name": "リスク分類",
+            "type": "eval",
+            "formula": "[[AIMS65スコア]] >= 2 ? '高リスク' : '低リスク'"
+        },
+        {
+            "name": "予測死亡率",
+            "type": "eval",
+            "formula": "[[AIMS65スコア]] == 0 ? '0.3%' : ([[AIMS65スコア]] == 1 ? '1.2%' : ([[AIMS65スコア]] == 2 ? '5.3%' : ([[AIMS65スコア]] == 3 ? '13.4%' : ([[AIMS65スコア]] == 4 ? '24.5%' : '24.5%以上'))))"
+        }
+    ]
+}

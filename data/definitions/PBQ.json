@@ -1,0 +1,296 @@
+{
+    "_comment": [
+        "Postpartum Bonding Questionnaire (PBQ) 日本語版",
+        "原著論文: Brockington IF, Fraser C, Wilson D. The Postpartum Bonding Questionnaire: a validation. Archives of Women's Mental Health 9, 233-242 (2006)",
+        "公式採点表: https://www.gvhealth.org.au/wp-content/uploads/2024/07/postpartum-bonding-questionnaire-pbq_colourcodedAB-1.pdf"
+    ],
+    "title": "PBQ 産後愛着質問票",
+    "description": [
+        "この質問票は、お母さんとお子さんとの関係について伺うものです。",
+        "あなたの最近の体験に基づいて、最も適切だと思われる答えを選択してください。",
+        "「正しい」答えや「間違った」答えはありません。"
+    ],
+    "contact": "産科外来",
+    "responsible_person": [
+        "主治医"
+    ],
+    "fields": [
+        {
+            "dispname": "1. 赤ちゃんに親しみを感じる",
+            "name": "Q1",
+            "type": "radio",
+            "required": true,
+            "selector": "いつも|よくある|ときどき|まれに|ほとんどない|全くない",
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "2. 赤ちゃんがいない昔の日々が戻ってくればよいと思う",
+            "name": "Q2",
+            "type": "radio",
+            "required": true,
+            "selector": "いつも|よくある|ときどき|まれに|ほとんどない|全くない",
+            "selectoridx": "5|4|3|2|1|0"
+        },
+        {
+            "dispname": "3. 赤ちゃんと距離を感じる",
+            "name": "Q3",
+            "type": "radio",
+            "required": true,
+            "selector": "いつも|よくある|ときどき|まれに|ほとんどない|全くない",
+            "selectoridx": "5|4|3|2|1|0"
+        },
+        {
+            "dispname": "4. 赤ちゃんを抱きしめることが好きだ",
+            "name": "Q4",
+            "type": "radio",
+            "required": true,
+            "selector": "いつも|よくある|ときどき|まれに|ほとんどない|全くない",
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "5. この赤ちゃんを産んだことを後悔している",
+            "name": "Q5",
+            "type": "radio",
+            "required": true,
+            "selector": "いつも|よくある|ときどき|まれに|ほとんどない|全くない",
+            "selectoridx": "5|4|3|2|1|0"
+        },
+        {
+            "dispname": "6. この赤ちゃんは自分の赤ちゃんのような気がしない",
+            "name": "Q6",
+            "type": "radio",
+            "required": true,
+            "selector": "いつも|よくある|ときどき|まれに|ほとんどない|全くない",
+            "selectoridx": "5|4|3|2|1|0"
+        },
+        {
+            "dispname": "7. 赤ちゃんにイライラする",
+            "name": "Q7",
+            "type": "radio",
+            "required": true,
+            "selector": "いつも|よくある|ときどき|まれに|ほとんどない|全くない",
+            "selectoridx": "5|4|3|2|1|0"
+        },
+        {
+            "dispname": "8. 赤ちゃんがとても愛しい",
+            "name": "Q8",
+            "type": "radio",
+            "required": true,
+            "selector": "いつも|よくある|ときどき|まれに|ほとんどない|全くない",
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "9. 赤ちゃんが笑ったり声を出したりするとうれしい",
+            "name": "Q9",
+            "type": "radio",
+            "required": true,
+            "selector": "いつも|よくある|ときどき|まれに|ほとんどない|全くない",
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "10. 赤ちゃんの言動にイライラする",
+            "name": "Q10",
+            "type": "radio",
+            "required": true,
+            "selector": "いつも|よくある|ときどき|まれに|ほとんどない|全くない",
+            "selectoridx": "5|4|3|2|1|0"
+        },
+        {
+            "dispname": "11. 赤ちゃんと遊ぶのが楽しい",
+            "name": "Q11",
+            "type": "radio",
+            "required": true,
+            "selector": "いつも|よくある|ときどき|まれに|ほとんどない|全くない",
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "12. 赤ちゃんは泣きすぎる",
+            "name": "Q12",
+            "type": "radio",
+            "required": true,
+            "selector": "いつも|よくある|ときどき|まれに|ほとんどない|全くない",
+            "selectoridx": "5|4|3|2|1|0"
+        },
+        {
+            "dispname": "13. 母親として束縛されていると感じる",
+            "name": "Q13",
+            "type": "radio",
+            "required": true,
+            "selector": "いつも|よくある|ときどき|まれに|ほとんどない|全くない",
+            "selectoridx": "5|4|3|2|1|0"
+        },
+        {
+            "dispname": "14. 赤ちゃんに腹が立つ",
+            "name": "Q14",
+            "type": "radio",
+            "required": true,
+            "selector": "いつも|よくある|ときどき|まれに|ほとんどない|全くない",
+            "selectoridx": "5|4|3|2|1|0"
+        },
+        {
+            "dispname": "15. 赤ちゃんを恨めしく思う",
+            "name": "Q15",
+            "type": "radio",
+            "required": true,
+            "selector": "いつも|よくある|ときどき|まれに|ほとんどない|全くない",
+            "selectoridx": "5|4|3|2|1|0"
+        },
+        {
+            "dispname": "16. 私の赤ちゃんは世界で一番美しい赤ちゃんだ",
+            "name": "Q16",
+            "type": "radio",
+            "required": true,
+            "selector": "いつも|よくある|ときどき|まれに|ほとんどない|全くない",
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "17. 赤ちゃんがどこかに行ってしまえばよいと思う",
+            "name": "Q17",
+            "type": "radio",
+            "required": true,
+            "selector": "いつも|よくある|ときどき|まれに|ほとんどない|全くない",
+            "selectoridx": "5|4|3|2|1|0"
+        },
+        {
+            "dispname": "18. 赤ちゃんに有害なことをしたことがある",
+            "name": "Q18",
+            "type": "radio",
+            "required": true,
+            "selector": "いつも|よくある|ときどき|まれに|ほとんどない|全くない",
+            "selectoridx": "5|4|3|2|1|0"
+        },
+        {
+            "dispname": "19. 赤ちゃんによって不安になる",
+            "name": "Q19",
+            "type": "radio",
+            "required": true,
+            "selector": "いつも|よくある|ときどき|まれに|ほとんどない|全くない",
+            "selectoridx": "5|4|3|2|1|0"
+        },
+        {
+            "dispname": "20. 赤ちゃんが怖い",
+            "name": "Q20",
+            "type": "radio",
+            "required": true,
+            "selector": "いつも|よくある|ときどき|まれに|ほとんどない|全くない",
+            "selectoridx": "5|4|3|2|1|0"
+        },
+        {
+            "dispname": "21. 赤ちゃんが迷惑だ",
+            "name": "Q21",
+            "type": "radio",
+            "required": true,
+            "selector": "いつも|よくある|ときどき|まれに|ほとんどない|全くない",
+            "selectoridx": "5|4|3|2|1|0"
+        },
+        {
+            "dispname": "22. 赤ちゃんの世話をするのに自信がある",
+            "name": "Q22",
+            "type": "radio",
+            "required": true,
+            "selector": "いつも|よくある|ときどき|まれに|ほとんどない|全くない",
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "dispname": "23. 誰か他の人に赤ちゃんの世話をしてもらうしか解決策がないと思う",
+            "name": "Q23",
+            "type": "radio",
+            "required": true,
+            "selector": "いつも|よくある|ときどき|まれに|ほとんどない|全くない",
+            "selectoridx": "5|4|3|2|1|0"
+        },
+        {
+            "dispname": "24. 赤ちゃんを傷つけたい気持ちになる",
+            "name": "Q24",
+            "type": "radio",
+            "required": true,
+            "selector": "いつも|よくある|ときどき|まれに|ほとんどない|全くない",
+            "selectoridx": "5|4|3|2|1|0"
+        },
+        {
+            "dispname": "25. 赤ちゃんは簡単になだめることができる",
+            "name": "Q25",
+            "type": "radio",
+            "required": true,
+            "selector": "いつも|よくある|ときどき|まれに|ほとんどない|全くない",
+            "selectoridx": "0|1|2|3|4|5"
+        },
+        {
+            "type": "subsection"
+        },
+        {
+            "name": "下位尺度1",
+            "type": "eval",
+            "description": "一般的愛着困難 (項目1,2,6,7,8,9,10,12,13,15,16,17)",
+            "formula": "[[Q1.index]] + [[Q2.index]] + [[Q6.index]] + [[Q7.index]] + [[Q8.index]] + [[Q9.index]] + [[Q10.index]] + [[Q12.index]] + [[Q13.index]] + [[Q15.index]] + [[Q16.index]] + [[Q17.index]]",
+            "noreport": true
+        },
+        {
+            "name": "下位尺度2",
+            "type": "eval",
+            "description": "拒絶と病的怒り (項目3,4,5,11,14,21,23)",
+            "formula": "[[Q3.index]] + [[Q4.index]] + [[Q5.index]] + [[Q11.index]] + [[Q14.index]] + [[Q21.index]] + [[Q23.index]]",
+            "noreport": true
+        },
+        {
+            "name": "下位尺度3",
+            "type": "eval",
+            "description": "子どもに焦点を当てた不安 (項目19,20,22,25)",
+            "formula": "[[Q19.index]] + [[Q20.index]] + [[Q22.index]] + [[Q25.index]]",
+            "noreport": true
+        },
+        {
+            "name": "下位尺度4",
+            "type": "eval",
+            "description": "虐待リスク (項目18,24)",
+            "formula": "[[Q18.index]] + [[Q24.index]]",
+            "noreport": true
+        },
+        {
+            "name": "PBQ総得点",
+            "type": "eval",
+            "dispname": "PBQ総得点 (0-125点)",
+            "formula": "[[下位尺度1]] + [[下位尺度2]] + [[下位尺度3]] + [[下位尺度4]]"
+        },
+        {
+            "name": "一般的愛着困難_判定",
+            "type": "eval",
+            "dispname": "一般的愛着困難",
+            "formula": "[[下位尺度1]] >= 12 ? '高リスク' : '正常範囲'"
+        },
+        {
+            "name": "拒絶と病的怒り_判定",
+            "type": "eval",
+            "dispname": "拒絶と病的怒り",
+            "formula": "[[下位尺度2]] >= 17 ? '高リスク' : '正常範囲'"
+        },
+        {
+            "name": "子どもに焦点を当てた不安_判定",
+            "type": "eval",
+            "dispname": "子どもに焦点を当てた不安",
+            "formula": "[[下位尺度3]] >= 10 ? '高リスク' : '正常範囲'"
+        },
+        {
+            "name": "虐待リスク_判定",
+            "type": "eval",
+            "dispname": "虐待リスク",
+            "formula": "[[下位尺度4]] >= 3 ? '高リスク' : '正常範囲'"
+        },
+        {
+            "name": "総合判定",
+            "type": "eval",
+            "dispname": "総合判定",
+            "formula": "[[PBQ総得点]] >= 40 ? '重篤な愛着障害' : ([[PBQ総得点]] >= 26 ? '一般的愛着障害' : '正常範囲')"
+        },
+        {
+            "name": "高虐待リスク",
+            "formula": "[[下位尺度4]] >= 3",
+            "type": "emergency"
+        },
+        {
+            "name": "愛着障害",
+            "formula": "[[PBQ総得点]] >= 26",
+            "type": "warning"
+        }
+    ]
+}

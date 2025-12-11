@@ -1,0 +1,238 @@
+{
+  "_comment": [
+    "Graf分類による発育性股関節形成不全の分類評価",
+    "超音波検査によるα角とβ角の測定で分類する",
+    "参考: Graf R. J Pediatr Orthop. 1984;4(6):735-740. PMID: 6392336",
+    "参考: Radiology Assistant (radiologyassistant.nl)"
+  ],
+  "title": "Graf分類による発育性股関節形成不全の分類評価",
+  "description": [
+    "発育性股関節形成不全(DDH)の超音波診断分類",
+    "α角、β角の測定値から股関節の成熟度と状態を評価します"
+  ],
+  "contact": "整形外科",
+  "fields": [
+    {
+      "dispname": "患児情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "検査時月齢",
+      "name": "検査時月齢",
+      "type": "text",
+      "postfix": "か月",
+      "inputmode": "numeric",
+      "testrange": [
+        0,
+        12
+      ],
+      "required": true,
+      "description": "超音波検査を実施した時の月齢を半角数字で入力してください"
+    },
+    {
+      "dispname": "検査側",
+      "name": "検査側",
+      "type": "radio",
+      "selector": "右|左|両側",
+      "required": true,
+      "description": "検査を実施した股関節"
+    },
+    {
+      "dispname": "超音波測定値",
+      "type": "subsection"
+    },
+    {
+      "dispname": "α角",
+      "name": "α角",
+      "type": "text",
+      "postfix": "度",
+      "inputmode": "decimal",
+      "testrange": [
+        30,
+        90
+      ],
+      "required": true,
+      "description": "寛骨臼と腸骨との角度(骨性屋根の角度)を半角数字で入力してください(例: 55.5)"
+    },
+    {
+      "dispname": "β角",
+      "name": "β角",
+      "type": "text",
+      "postfix": "度",
+      "inputmode": "decimal",
+      "testrange": [
+        30,
+        90
+      ],
+      "required": true,
+      "description": "臼蓋と腸骨の間の角度(軟骨性屋根の角度)を半角数字で入力してください(例: 52.0)"
+    },
+    {
+      "dispname": "骨頭の求心性",
+      "name": "骨頭求心性",
+      "type": "radio",
+      "selector": "求心性あり|求心性なし",
+      "required": true,
+      "description": "骨頭が臼蓋に適切に収まっているか"
+    },
+    {
+      "dispname": "臼蓋軟骨構造",
+      "name": "臼蓋軟骨構造",
+      "type": "radio",
+      "selector": "正常エコー輝度|低エコー輝度",
+      "required": true,
+      "description": "軟骨部分のエコー所見(Type III細分類に必須)"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "α角_数値",
+      "type": "eval",
+      "noreport": true,
+      "formula": "((α角))"
+    },
+    {
+      "name": "β角_数値",
+      "type": "eval",
+      "noreport": true,
+      "formula": "((β角))"
+    },
+    {
+      "name": "月齢_数値",
+      "type": "eval",
+      "noreport": true,
+      "formula": "((検査時月齢))"
+    },
+    {
+      "name": "求心性あり判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{骨頭求心性}} == '求心性あり' ? 1 : 0"
+    },
+    {
+      "name": "求心性なし判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{骨頭求心性}} == '求心性なし' ? 1 : 0"
+    },
+    {
+      "name": "正常エコー判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{臼蓋軟骨構造}} == '正常エコー輝度' ? 1 : 0"
+    },
+    {
+      "name": "低エコー判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "{{臼蓋軟骨構造}} == '低エコー輝度' ? 1 : 0"
+    },
+    {
+      "name": "Type_D判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[求心性なし判定]] && ( [[α角_数値]] >= 43 || [[β角_数値]] >= 77 ) ? 1 : 0"
+    },
+    {
+      "name": "Type_IIIa判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[α角_数値]] < 43 && [[求心性なし判定]] && [[正常エコー判定]] ? 1 : 0"
+    },
+    {
+      "name": "Type_IIIb判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[α角_数値]] < 43 && [[求心性なし判定]] && [[低エコー判定]] ? 1 : 0"
+    },
+    {
+      "name": "Type_III_IV判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[α角_数値]] < 43 ? 1 : 0"
+    },
+    {
+      "name": "Type_Ia判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[α角_数値]] >= 60 && [[β角_数値]] < 55 && [[求心性あり判定]] ? 1 : 0"
+    },
+    {
+      "name": "Type_Ib判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[α角_数値]] >= 60 && [[β角_数値]] >= 55 && [[求心性あり判定]] ? 1 : 0"
+    },
+    {
+      "name": "Type_IIa_plus判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[α角_数値]] >= 55 && [[α角_数値]] < 60 && [[求心性あり判定]] && [[月齢_数値]] < 3 ? 1 : 0"
+    },
+    {
+      "name": "Type_IIa_minus判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[α角_数値]] >= 50 && [[α角_数値]] < 55 && [[求心性あり判定]] && [[月齢_数値]] < 3 ? 1 : 0"
+    },
+    {
+      "name": "Type_IIb判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[α角_数値]] >= 50 && [[α角_数値]] < 60 && [[求心性あり判定]] && [[月齢_数値]] >= 3 ? 1 : 0"
+    },
+    {
+      "name": "Type_IIc判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[α角_数値]] >= 43 && [[α角_数値]] < 50 && [[求心性あり判定]] ? 1 : 0"
+    },
+    {
+      "name": "分類判定",
+      "type": "eval",
+      "dispname": "Graf分類",
+      "formula": "[[Type_D判定]] ? 'Type D (脱臼傾向)' : [[Type_IIIa判定]] ? 'Type IIIa (偏心性・正常エコー)' : [[Type_IIIb判定]] ? 'Type IIIb (偏心性・低エコー)' : [[Type_III_IV判定]] ? 'Type III/IV (脱臼)' : [[Type_Ia判定]] ? 'Type Ia (成熟股関節)' : [[Type_Ib判定]] ? 'Type Ib (成熟股関節・軟骨屋根鈍角)' : [[Type_IIa_plus判定]] ? 'Type IIa+ (生理的未熟股関節)' : [[Type_IIa_minus判定]] ? 'Type IIa- (生理的未熟股関節・要経過観察)' : [[Type_IIb判定]] ? 'Type IIb (遅延性骨化)' : [[Type_IIc判定]] ? 'Type IIc (重度遅延)' : '判定不能'"
+    },
+    {
+      "name": "Type_I系判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[Type_Ia判定]] || [[Type_Ib判定]] ? 1 : 0"
+    },
+    {
+      "name": "Type_II系判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[Type_IIa_plus判定]] || [[Type_IIa_minus判定]] || [[Type_IIb判定]] || [[Type_IIc判定]] ? 1 : 0"
+    },
+    {
+      "name": "Type_III系判定",
+      "type": "eval",
+      "noreport": true,
+      "formula": "[[Type_IIIa判定]] || [[Type_IIIb判定]] || [[Type_III_IV判定]] || [[Type_D判定]] ? 1 : 0"
+    },
+    {
+      "name": "重症度評価",
+      "type": "eval",
+      "dispname": "重症度の総合評価",
+      "formula": "[[Type_III系判定]] ? '重度異常' : [[Type_II系判定]] ? '軽度異常' : [[Type_I系判定]] ? '正常' : '評価困難'"
+    },
+    {
+      "name": "治療推奨",
+      "type": "eval",
+      "dispname": "分類に基づく治療方針",
+      "formula": "[[Type_I系判定]] ? '経過観察' : [[Type_IIa_plus判定]] ? '経過観察(再検査推奨)' : [[Type_IIa_minus判定]] ? '厳重経過観察(再検査必須)' : [[Type_IIb判定]] || [[Type_IIc判定]] ? 'リーメンビューゲル装具検討' : [[Type_D判定]] || [[Type_III_IV判定]] ? '専門医紹介(牽引治療等検討)' : '専門医相談'"
+    },
+    {
+      "name": "Warning: 軽度以上の異常",
+      "type": "warning",
+      "formula": "{{重症度評価}} == '軽度異常' || {{重症度評価}} == '重度異常'"
+    },
+    {
+      "name": "Emergency: 重度異常",
+      "type": "emergency",
+      "formula": "{{重症度評価}} == '重度異常'"
+    }
+  ]
+}

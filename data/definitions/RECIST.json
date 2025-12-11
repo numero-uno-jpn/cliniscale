@@ -1,0 +1,122 @@
+{
+  "_comment": [
+    "RECIST - Response Evaluation Criteria in Solid Tumors",
+    "固形癌の治療反応評価基準",
+    "開発者: International Consortium (2000年、v1.1は2009年)",
+    "原典: Eisenhauer EA, et al. Eur J Cancer. 2009;45(2):228-47.",
+    "参考URL: https://pubmed.ncbi.nlm.nih.gov/10655437/",
+    "公式URL: https://recist.eortc.org/recist-1-1-2/",
+    "評価: CR/PR/SD/PD の4カテゴリ",
+    "腫瘍サイズ変化率による分類"
+  ],
+  "title": "RECIST v1.1",
+  "description": [
+    "固形腫瘍の治療反応を評価します",
+    "標的病変の最長径の合計を測定してください"
+  ],
+  "fields": [
+    {
+      "type": "subsection",
+      "dispname": "基線測定"
+    },
+    {
+      "type": "text",
+      "name": "基線合計",
+      "dispname": "基線時の標的病変径合計",
+      "description": "治療開始前の標的病変の最長径の合計（mm）\n最大5病変、臓器あたり最大2病変\n半角数字で入力してください（例: 120.5）",
+      "required": true,
+      "inputmode": "decimal",
+      "postfix": "mm",
+      "testrange": [
+        10,
+        300
+      ]
+    },
+    {
+      "type": "subsection",
+      "dispname": "現在の測定"
+    },
+    {
+      "type": "text",
+      "name": "現在合計",
+      "dispname": "現在の標的病変径合計",
+      "description": "評価時点での標的病変の最長径の合計（mm）\n半角数字で入力してください（例: 85.3）",
+      "required": true,
+      "inputmode": "decimal",
+      "postfix": "mm",
+      "testrange": [
+        0,
+        300
+      ]
+    },
+    {
+      "type": "radio",
+      "name": "新病変",
+      "dispname": "新病変の出現",
+      "description": "治療開始後に新しい病変が出現したか",
+      "required": true,
+      "inline": true,
+      "selector": [
+        "なし",
+        "あり"
+      ],
+      "selectoridx": "0|1"
+    },
+    {
+      "type": "radio",
+      "name": "非標的病変",
+      "dispname": "非標的病変の評価",
+      "description": "非標的病変の状態",
+      "required": true,
+      "selector": [
+        "なし/測定不能",
+        "存在するが変化なし",
+        "明らかな増悪"
+      ],
+      "selectoridx": "0|1|2"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "type": "eval",
+      "name": "変化率",
+      "formula": "Math.round( ( ((現在合計)) - ((基線合計)) ) / ((基線合計)) * 1000) / 10",
+      "noreport": true
+    },
+    {
+      "type": "eval",
+      "name": "標的病変評価",
+      "formula": "((現在合計)) == 0 ? 'CR候補' : ((変化率)) <= -30 ? 'PR候補' : ((変化率)) >= 20 ? 'PD候補' : 'SD候補'",
+      "noreport": true
+    },
+    {
+      "type": "eval",
+      "name": "総合評価",
+      "description": "RECIST総合評価",
+      "formula": "[[新病変.index]] == 1 ? 'PD (進行)' : ({{標的病変評価}} == 'PD候補' || [[非標的病変.index]] == 2 ? 'PD (進行)' : ({{標的病変評価}} == 'CR候補' && [[非標的病変.index]] == 0 ? 'CR (完全奏効)' : ({{標的病変評価}} == 'PR候補' ? 'PR (部分奏効)' : 'SD (安定)')) )"
+    },
+    {
+      "type": "eval",
+      "name": "奏効判定",
+      "description": "治療効果の判定",
+      "formula": "{{総合評価}} == 'CR (完全奏効)' || {{総合評価}} == 'PR (部分奏効)' ? '奏効' : '非奏効'"
+    },
+    {
+      "type": "eval",
+      "name": "変化率表示",
+      "description": "基線からの変化率",
+      "formula": "((変化率)) > 0 ? '+' + ((変化率)) + '%' : ((変化率)) + '%'"
+    },
+    {
+      "type": "warning",
+      "formula": "{{総合評価}} == 'PD (進行)'",
+      "name": "Warning: PD (進行)"
+    },
+    {
+      "type": "emergency",
+      "formula": "{{総合評価}} == 'PD (進行)' && [[新病変.index]] == 1",
+      "name": "Emergency: PD + 新病変"
+    }
+  ]
+}

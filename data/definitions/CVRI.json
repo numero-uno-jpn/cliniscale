@@ -1,0 +1,109 @@
+{
+  "_comment": [
+    "Cardiovascular Risk Index (CVRI) - 術前心血管リスク評価スコア",
+    "原典: Dakik HA et al. A New Index for Pre-Operative Cardiovascular Evaluation. J Am Coll Cardiol. 2019;73(24):3067-3078",
+    "PMID: 31221255, DOI: 10.1016/j.jacc.2019.04.023",
+    "非心臓手術前の30日以内の死亡、心筋梗塞、脳卒中リスクを予測する6項目スコア",
+    "低リスク: 0-1点、中等度リスク: 2-3点、高リスク: 4点以上",
+    "AUC=0.90 (誘導コホート), 0.82 (検証コホート)の高い判別能を持つ簡便なリスク評価ツール",
+    "注意: 原典では誤記でヘモグロビン単位が mg/dL となっているが、正しくは g/dL である"
+  ],
+  "title": "CVRI 術前心血管リスクスコア",
+  "description": [
+    "非心臓手術を予定されている患者様の心血管リスクを評価する問診票です。",
+    "手術後30日以内の心血管イベント(死亡・心筋梗塞・脳卒中)のリスクを6つの項目で評価します。"
+  ],
+  "contact": "循環器科",
+  "dept_in_charge": "循環器科・麻酔科",
+  "submit_button_title": "評価を送信",
+  "fields": [
+    {
+      "dispname": "基本情報",
+      "type": "subsection"
+    },
+    {
+      "dispname": "年齢",
+      "name": "年齢",
+      "type": "radio",
+      "required": true,
+      "selector": "75歳未満|75歳以上",
+      "selectoridx": "0|1",
+      "description": "現在の年齢をお選びください"
+    },
+    {
+      "dispname": "心疾患の既往歴",
+      "name": "心疾患既往",
+      "type": "radio",
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1",
+      "description": "過去に心疾患(心筋梗塞、狭心症、心不全、不整脈など)の診断を受けたことがありますか"
+    },
+    {
+      "dispname": "狭心症または呼吸困難の症状",
+      "name": "狭心症呼吸困難",
+      "type": "radio",
+      "required": true,
+      "selector": "なし|あり",
+      "selectoridx": "0|1",
+      "description": "日常生活の軽い活動で胸痛(狭心症)や息切れ(呼吸困難)の症状がありますか"
+    },
+    {
+      "dispname": "ヘモグロビン値",
+      "name": "ヘモグロビン",
+      "type": "radio",
+      "required": true,
+      "selector": "12 g/dL以上|12 g/dL未満",
+      "selectoridx": "0|1"
+    },
+    {
+      "dispname": "手術の種類",
+      "name": "手術種類",
+      "type": "radio",
+      "required": true,
+      "selector": "血管手術以外|血管手術",
+      "selectoridx": "0|1",
+      "description": "予定されている手術は血管手術(動脈瘤修復、血管バイパスなど)ですか"
+    },
+    {
+      "dispname": "手術の緊急度",
+      "name": "手術緊急度",
+      "type": "radio",
+      "required": true,
+      "selector": "待機手術|緊急手術",
+      "selectoridx": "0|1",
+      "description": "今回の手術は緊急手術ですか"
+    },
+    {
+      "type": "subsection"
+    },
+    {
+      "name": "CVRI_合計",
+      "type": "eval",
+      "formula": "[[年齢.index]] + [[心疾患既往.index]] + [[狭心症呼吸困難.index]] + [[ヘモグロビン.index]] + [[手術種類.index]] + [[手術緊急度.index]]",
+      "dispname": "CVRIスコア合計点(0-6点)"
+    },
+    {
+      "name": "CVRI_リスク分類",
+      "type": "eval",
+      "formula": "[[CVRI_合計]] <= 1 ? '低リスク' : ( [[CVRI_合計]] <= 3 ? '中等度リスク' : '高リスク' )",
+      "dispname": "心血管リスク分類(低: 0-1点、中等度: 2-3点、高: 4点以上)"
+    },
+    {
+      "name": "CVRI_イベント率",
+      "type": "eval",
+      "formula": "[[CVRI_合計]] == 0 ? '0.3%' : ( [[CVRI_合計]] == 1 ? '1.6%' : ( [[CVRI_合計]] == 2 ? '5.6%' : ( [[CVRI_合計]] == 3 ? '11.0%' : '17.5%以上' ) ) )",
+      "dispname": "30日以内の心血管イベント発生率(検証コホート)"
+    },
+    {
+      "name": "Warning: 中等度リスク CVRIスコア ≥ 2点",
+      "formula": "[[CVRI_合計]] >= 2",
+      "type": "warning"
+    },
+    {
+      "name": "Emergency: 高リスク CVRIスコア ≥ 4点",
+      "formula": "[[CVRI_合計]] >= 4",
+      "type": "emergency"
+    }
+  ]
+}

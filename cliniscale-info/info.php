@@ -46,8 +46,8 @@ if (preg_match('/[\x00-\x1F\x7F]/', $questionnaireKey)) {
 
 try {
     // 1. データロード（実際のファイルパスを指定）
-    $masterYamlFile = '/home/medeputize/www/documents/emuyn/cliniscale/スコア票リスト.yaml';
-    $definitionsDir = '/home/medeputize/www/documents/emuyn/cliniscale/definitions';
+    $masterYamlFile = __DIR__ . '/data/スコア票リスト.yaml';
+    $definitionsDir = __DIR__ . '/data/definitions';
 
     $dataLoader = new DataLoader($masterYamlFile, $definitionsDir);
     $data = $dataLoader->loadQuestionnaireData($questionnaireKey);
