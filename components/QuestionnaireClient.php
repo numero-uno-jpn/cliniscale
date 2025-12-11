@@ -859,16 +859,41 @@
                 this.observer.observe(titlePanel);
             },
 
+            // ひらがな・カタカナを1文字ずらす難読化
+            obfuscateText(text) {
+                if (typeof text !== 'string') return text;
+                return text.replace(/[\u3041-\u3093\u30A1-\u30F3]/g, c => String.fromCharCode(c.charCodeAt(0) + 1));
+            },
+
+            obfuscateField(field) {
+                if (!field || !this.isPermissionRequired) return field;
+                const f = { ...field };
+                if (f.dispname) f.dispname = this.obfuscateText(f.dispname);
+                if (f.description) {
+                    f.description = Array.isArray(f.description)
+                        ? f.description.map(d => this.obfuscateText(d))
+                        : this.obfuscateText(f.description);
+                }
+                if (f.selector) {
+                    f.selector = Array.isArray(f.selector)
+                        ? f.selector.map(s => this.obfuscateText(s))
+                        : f.selector.split('|').map(s => this.obfuscateText(s)).join('|');
+                }
+                return f;
+            },
+
             processFields() {
                 if (!this.data?.fields) return;
 
                 const processedFields = {};
                 this.data.fields.forEach((field, index) => {
                     if (field) {
-                        if (!field.id) field.id = field.name || `field_${index}`;
-                        field.hidden = field.parentname ? true : false;
-                        this.processFieldByType(field);
-                        processedFields[field.id] = field;
+                        let f = { ...field };
+                        if (!f.id) f.id = f.name || `field_${index}`;
+                        f.hidden = f.parentname ? true : false;
+                        f = this.obfuscateField(f);
+                        this.processFieldByType(f);
+                        processedFields[f.id] = f;
                     }
                 });
                 this.fields = processedFields;
