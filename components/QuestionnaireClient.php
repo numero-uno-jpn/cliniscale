@@ -92,16 +92,21 @@
                 <!-- 許諾未取得の警告メッセージ -->
                 <div v-if="isPermissionRequired" class="permission-message">
                     <h3>
-                        <i class="fas fa-lock"></i>
-                        <span>利用許諾が必要です</span>
+                        <i :class="['fas', getPermissionIcon(copyrightInfo.license_category)]"></i>
+                        <span>{{ getPermissionTitle(copyrightInfo.license_category) }}</span>
                     </h3>
-                    <p>
-                        このスケールは著作権保護されており、使用には開発者または権利者からの許諾が必要です。
-                    </p>
-                    <p>
-                        現在、許諾を取得していないため入力できません。
-                    </p>
-                    <div class="category-label">
+                    <p>{{ getPermissionDescription(copyrightInfo.license_category) }}</p>
+                    <p class="text-sm opacity-80">現在、許諾を取得していないため入力できません。</p>
+                    <a
+                        v-if="copyrightInfo.copyright_url"
+                        :href="copyrightInfo.copyright_url"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="category-label category-label-link">
+                        <i class="fas fa-external-link-alt mr-2"></i>
+                        権利者サイトへ
+                    </a>
+                    <div v-else class="category-label">
                         {{ getCopyrightLabel(copyrightInfo.license_category) }}
                     </div>
                 </div>
@@ -778,6 +783,40 @@
             }
         },
         methods: {
+            // カテゴリ別の許諾メッセージ用メソッド
+            getPermissionIcon(category) {
+                const iconMap = {
+                    permission_required_paid: 'fa-file-invoice-dollar',
+                    permission_required_free: 'fa-file-signature',
+                    non_commercial_free: 'fa-user-friends',
+                    commercial_license_required: 'fa-building',
+                    restricted: 'fa-ban'
+                };
+                return iconMap[category] || 'fa-lock';
+            },
+
+            getPermissionTitle(category) {
+                const titleMap = {
+                    permission_required_paid: '有料ライセンスが必要です',
+                    permission_required_free: '許諾手続きが必要です',
+                    non_commercial_free: '商用利用には許諾が必要です',
+                    commercial_license_required: '商用ライセンスが必要です',
+                    restricted: '使用が制限されています'
+                };
+                return titleMap[category] || '利用許諾が必要です';
+            },
+
+            getPermissionDescription(category) {
+                const descMap = {
+                    permission_required_paid: 'このスケールの使用には、権利者から有料ライセンスを取得する必要があります。',
+                    permission_required_free: 'このスケールは無料で使用できますが、事前に権利者への申請・登録手続きが必要です。',
+                    non_commercial_free: 'このスケールは非営利・教育目的では無料ですが、商用利用には権利者からの許諾が必要です。',
+                    commercial_license_required: 'このスケールの商用利用には、別途ライセンス契約が必要です。',
+                    restricted: 'このスケールは特定の条件下でのみ使用が許可されており、一般公開での利用は制限されています。'
+                };
+                return descMap[category] || 'このスケールは著作権保護されており、使用には権利者からの許諾が必要です。';
+            },
+
             formatDescription(description) {
                 if (Array.isArray(description)) {
                     return description.join('<br>');

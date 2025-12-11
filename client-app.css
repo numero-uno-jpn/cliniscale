@@ -571,6 +571,20 @@ html {
     font-size: 0.875rem;
 }
 
+.permission-message .category-label-link {
+    background: rgba(255, 255, 255, 0.95);
+    color: #991b1b;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.permission-message .category-label-link:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
 .permission-message i {
     font-size: 1.5rem;
 }
