@@ -85,7 +85,7 @@
 
         <!-- フォーム -->
         <div class="bg-white rounded-lg shadow-md p-6">
-            <div class="form-wrapper">
+            <div :class="['form-wrapper', { 'is-locked': isPermissionRequired }]">
                 <!-- 許諾未取得の場合のすりガラスオーバーレイ -->
                 <div v-if="isPermissionRequired" class="permission-overlay"></div>
 
