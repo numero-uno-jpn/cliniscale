@@ -1,0 +1,54 @@
+{
+    "name": "臨床評価スケールアプリ CliniScale",
+    "short_name": "CliniScale",
+    "description": "医療現場で使用される標準化された臨床評価スケールを簡単に利用できるアプリケーションです",
+    "start_url": "./",
+    "scope": "./",
+    "display": "standalone",
+    "background_color": "#EFF6FF",
+    "theme_color": "#3B82F6",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "./img/favicon-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "./img/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        },
+        {
+            "src": "./img/web-app-manifest-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "./img/web-app-manifest-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        }
+    ],
+    "categories": [
+        "medical",
+        "health",
+        "productivity"
+    ],
+    "shortcuts": [
+        {
+            "name": "臨床評価スケール一覧",
+            "short_name": "一覧",
+            "description": "利用可能な臨床評価スケールの一覧を表示",
+            "url": "./",
+            "icons": [
+                {
+                    "src": "./img/favicon-96x96.png",
+                    "sizes": "96x96"
+                }
+            ]
+        }
+    ]
+}

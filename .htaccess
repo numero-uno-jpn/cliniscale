@@ -1,0 +1,75 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # URL末尾のスラッシュを除去（ルート"/"以外）
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} .+/$
+    RewriteRule ^(.+)/$ /$1 [R=301,L]
+    
+    # .php ファイルへの直接アクセスを禁止（index.php, sitemap.php, cliniscale-info/info.php 以外）
+    RewriteCond %{REQUEST_URI} \.php$
+    RewriteCond %{REQUEST_URI} !^/index\.php$
+    RewriteCond %{REQUEST_URI} !^/sitemap\.php$
+    RewriteCond %{REQUEST_URI} !^/cliniscale-info/info\.php$
+    RewriteRule .* - [F,L]
+    
+    # components ディレクトリへの直接アクセスを禁止
+    RewriteCond %{REQUEST_URI} ^/components/
+    RewriteRule .* - [F,L]
+    
+    # 既存のファイルやディレクトリへのアクセスは許可
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule .* - [L]
+    
+    
+    # sitemap.xml を sitemap.php にリダイレクト
+    RewriteRule ^sitemap\.xml$ /sitemap.php [L]
+    
+    # スケール票のクリーンURL
+    RewriteRule ^([^/]+)/?$ index.php?q=$1 [L,QSA]
+
+    # 質問票の詳細情報ページ
+    # /PHQ-9/info → /cliniscale-info/info.php?q=PHQ-9
+    RewriteRule ^([^/]+)/info/?$ /cliniscale-info/info.php?q=$1 [L,QSA]
+</IfModule>
+
+# Service Worker用のMIMEタイプ設定
+<IfModule mod_mime.c>
+    AddType application/javascript .js
+    AddType application/json .json
+    AddType application/manifest+json .webmanifest
+</IfModule>
+
+# キャッシュコントロール
+<IfModule mod_headers.c>
+    # Service Workerはキャッシュしない
+    <FilesMatch "sw\.js$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires 0
+    </FilesMatch>
+    
+    # Manifestファイルのキャッシュコントロール
+    <FilesMatch "\.(webmanifest|json)$">
+        Header set Cache-Control "public, max-age=3600"
+    </FilesMatch>
+    
+    # 静的ファイルのキャッシュ
+    <FilesMatch "\.(css|js|jpg|jpeg|png|gif|ico|svg|woff|woff2)$">
+        Header set Cache-Control "public, max-age=604800"
+    </FilesMatch>
+</IfModule>
+
+# セキュリティヘッダー
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# GZIP圧縮
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
