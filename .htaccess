@@ -16,6 +16,10 @@
     # components ディレクトリへの直接アクセスを禁止
     RewriteCond %{REQUEST_URI} ^/components/
     RewriteRule .* - [F,L]
+
+    # data ディレクトリへの直接アクセスを禁止
+    RewriteCond %{REQUEST_URI} ^/data/
+    RewriteRule .* - [F,L]
     
     # 既存のファイルやディレクトリへのアクセスは許可
     RewriteCond %{REQUEST_FILENAME} -f [OR]
