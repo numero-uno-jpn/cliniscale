@@ -95,6 +95,33 @@
                             </option>
                         </select>
                     </div>
+
+                    <!-- ライセンス -->
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <label class="block text-sm font-medium text-gray-700">
+                                <i class="fas fa-copyright mr-1"></i>ライセンス
+                            </label>
+                            <button
+                                v-if="selectedLicenses.length > 0"
+                                @click="clearLicenses"
+                                class="text-xs text-gray-500 hover:text-red-600">
+                                クリア
+                            </button>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <button
+                                v-for="license in availableLicenses"
+                                :key="license.value"
+                                @click="toggleLicense(license.value)"
+                                class="px-3 py-1 text-sm rounded-full border transition-colors"
+                                :class="selectedLicenses.includes(license.value)
+                                    ? 'bg-blue-600 text-white border-blue-600'
+                                    : 'bg-white text-gray-700 border-gray-300 hover:border-blue-400'">
+                                {{ license.label }}
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -416,7 +443,7 @@
                     </div>
                 </div>
 
-                <div v-if="searchQuery || selectedCategory" class="mt-3 pt-3 border-t border-blue-200">
+                <div v-if="searchQuery || selectedCategory || selectedLicenses.length > 0" class="mt-3 pt-3 border-t border-blue-200">
                     <div class="flex items-center gap-2 mb-2">
                         <i class="fas fa-filter text-blue-600 text-sm"></i>
                         <span class="text-sm font-medium text-blue-700">絞り込み条件</span>
@@ -433,6 +460,16 @@
                             <i class="fas fa-tag text-blue-600"></i>
                             <span class="text-gray-700">{{ selectedCategory }}</span>
                             <button @click.stop="selectedCategory = ''" class="text-gray-400 hover:text-gray-600 ml-1">
+                                <i class="fas fa-times text-xs"></i>
+                            </button>
+                        </span>
+                        <span
+                            v-for="license in selectedLicenses"
+                            :key="license"
+                            class="inline-flex items-center gap-1 px-3 py-1 bg-white rounded-full text-sm border border-blue-300">
+                            <i class="fas fa-copyright text-blue-600"></i>
+                            <span class="text-gray-700">{{ getLicenseLabel(license) }}</span>
+                            <button @click.stop="toggleLicense(license)" class="text-gray-400 hover:text-gray-600 ml-1">
                                 <i class="fas fa-times text-xs"></i>
                             </button>
                         </span>
@@ -685,6 +722,33 @@
                 isTitleVisible: true,
                 isOffline: !navigator.onLine,
                 sortAscending: true, // true=昇順, false=降順
+                selectedLicenses: ['public_domain', 'free_with_citation'], // デフォルト: 自由利用可と引用明記
+                licenseMap: {
+                    'public_domain': {
+                        label: '自由利用可',
+                        class: 'success'
+                    },
+                    'free_with_citation': {
+                        label: '引用明記',
+                        class: 'info'
+                    },
+                    'non_commercial_free': {
+                        label: '非営利のみ',
+                        class: 'info'
+                    },
+                    'permission_required_free': {
+                        label: '許諾必要(無料)',
+                        class: 'warning'
+                    },
+                    'permission_required_paid': {
+                        label: '許諾必要(有料)',
+                        class: 'warning'
+                    },
+                    'commercial_license_required': {
+                        label: '商用ライセンス必要',
+                        class: 'danger'
+                    }
+                },
             };
         },
         async mounted() {
@@ -764,13 +828,16 @@
                     } :
                     this.categorizedQuestionnaires;
 
-                // 検索文字列が空ならそのまま返す
-                if (!this.searchQuery.trim()) {
+                // 検索処理とライセンスフィルタリングを適用
+                const query = this.searchQuery.trim().toLowerCase();
+                const hasSearchQuery = query.length > 0;
+                const hasLicenseFilter = this.selectedLicenses.length > 0;
+
+                // フィルタリングが不要な場合
+                if (!hasSearchQuery && !hasLicenseFilter) {
                     return filtered;
                 }
 
-                // 検索処理
-                const query = this.searchQuery.toLowerCase();
                 const result = {};
 
                 Object.keys(filtered).forEach(category => {
@@ -779,13 +846,25 @@
 
                     Object.keys(items).forEach(key => {
                         const item = items[key];
-                        if (
-                            (item.abbreviation && item.abbreviation.toLowerCase().includes(query)) ||
-                            (item.full_name && item.full_name.toLowerCase().includes(query)) ||
-                            (item.purpose && item.purpose.toLowerCase().includes(query))
-                        ) {
-                            matched[key] = item;
+
+                        // 検索クエリでフィルタ
+                        if (hasSearchQuery) {
+                            const matchesSearch =
+                                (item.abbreviation && item.abbreviation.toLowerCase().includes(query)) ||
+                                (item.full_name && item.full_name.toLowerCase().includes(query)) ||
+                                (item.purpose && item.purpose.toLowerCase().includes(query));
+                            if (!matchesSearch) return;
                         }
+
+                        // ライセンスでフィルタ
+                        if (hasLicenseFilter) {
+                            const itemLicense = item.copyright?.license_category;
+                            if (!itemLicense || !this.selectedLicenses.includes(itemLicense)) {
+                                return;
+                            }
+                        }
+
+                        matched[key] = item;
                     });
 
                     // マッチした項目があれば登録
@@ -813,6 +892,17 @@
                     });
                 });
                 return uniqueKeys.size;
+            },
+
+            availableLicenses() {
+                return [
+                    { value: 'public_domain', label: '自由利用可' },
+                    { value: 'free_with_citation', label: '引用明記' },
+                    { value: 'non_commercial_free', label: '非営利のみ' },
+                    { value: 'permission_required_free', label: '許諾必要(無料)' },
+                    { value: 'permission_required_paid', label: '許諾必要(有料)' },
+                    { value: 'commercial_license_required', label: '商用ライセンス必要' }
+                ];
             },
 
             displaySections() {
@@ -1015,6 +1105,23 @@
             }
         },
         methods: {
+            toggleLicense(license) {
+                const index = this.selectedLicenses.indexOf(license);
+                if (index > -1) {
+                    this.selectedLicenses.splice(index, 1);
+                } else {
+                    this.selectedLicenses.push(license);
+                }
+            },
+
+            clearLicenses() {
+                this.selectedLicenses = [];
+            },
+
+            getLicenseLabel(category) {
+                return this.licenseMap[category] ? this.licenseMap[category].label : '要確認';
+            },
+
             loadQuestionnaires() {
                 try {
                     this.questionnaires = window.PHP_DATA.questionnaires;
