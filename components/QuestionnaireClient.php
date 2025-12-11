@@ -605,13 +605,17 @@
                 isSubmitting: false,
                 showConfirmReset: false,
                 sessionStorageKey: '',
-                saveDebounceTimer: null
+                saveDebounceTimer: null,
+                deviceId: ''
             };
         },
         mounted() {
             // URLパラメータからデバッグモードを判定
             const urlParams = new URLSearchParams(window.location.search);
             this.debugMode = urlParams.get('debug') === 'true' || urlParams.get('debug') === '1';
+
+            // 端末IDを取得または生成
+            this.initDeviceId();
 
             // セッションストレージキーの設定
             this.sessionStorageKey = `cliniscale_session_${this.questionnaire.key}`;
@@ -790,16 +794,50 @@
             }
         },
         methods: {
+            // 端末IDの初期化（localStorage + indexedDB に保存）
+            initDeviceId() {
+                const storageKey = 'cliniscale_device_id';
+                let deviceId = localStorage.getItem(storageKey);
+
+                if (!deviceId) {
+                    // ランダムな端末IDを生成（16文字の16進数）
+                    deviceId = Array.from(crypto.getRandomValues(new Uint8Array(8)))
+                        .map(b => b.toString(16).padStart(2, '0')).join('');
+                    localStorage.setItem(storageKey, deviceId);
+
+                    // indexedDBにもバックアップ保存
+                    this.saveDeviceIdToIndexedDB(deviceId);
+                }
+
+                this.deviceId = deviceId;
+            },
+
+            // indexedDBへの保存
+            saveDeviceIdToIndexedDB(deviceId) {
+                const request = indexedDB.open('cliniscale', 1);
+                request.onupgradeneeded = (e) => {
+                    const db = e.target.result;
+                    if (!db.objectStoreNames.contains('config')) {
+                        db.createObjectStore('config', { keyPath: 'key' });
+                    }
+                };
+                request.onsuccess = (e) => {
+                    const db = e.target.result;
+                    const tx = db.transaction('config', 'readwrite');
+                    tx.objectStore('config').put({ key: 'deviceId', value: deviceId });
+                };
+            },
+
             // アクセスキーの検証
             validateAccessKey(key) {
                 const expectedKey = this.generateAccessKey(this.questionnaire.key);
                 return key === expectedKey;
             },
 
-            // アクセスキーの生成（質問票名からハッシュ）
+            // アクセスキーの生成（質問票名 + 端末ID + salt からハッシュ）
             generateAccessKey(name) {
                 const salt = 'cliniscale2024';
-                const str = name + salt;
+                const str = name + this.deviceId + salt;
                 let hash = 0;
                 for (let i = 0; i < str.length; i++) {
                     const char = str.charCodeAt(i);
@@ -809,10 +847,11 @@
                 return Math.abs(hash).toString(16).padStart(8, '0');
             },
 
-            // 問い合わせURLの生成
+            // 問い合わせURLの生成（端末IDも含める）
             getInquiryUrl() {
                 const q = encodeURIComponent(this.questionnaire.key);
-                return `https://www.emuyn.net/cliniscale/inquiry?q=${q}`;
+                const d = encodeURIComponent(this.deviceId);
+                return `https://www.emuyn.net/cliniscale/inquiry?q=${q}&d=${d}`;
             },
             // カテゴリ別の許諾メッセージ用メソッド
             getPermissionIcon(category) {
