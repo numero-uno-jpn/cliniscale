@@ -30,26 +30,6 @@ if (preg_match('/\/([^\/\?]+)\/?(\?.*)?$/', $path, $matches)) {
     }
 }
 
-// ひらがな・カタカナを1文字ずらす（許諾未取得コンテンツの難読化）
-function obfuscateJapanese($data) {
-    if (is_string($data)) {
-        return preg_replace_callback('/[\x{3041}-\x{3093}\x{30A1}-\x{30F3}]/u', fn($m) => mb_chr(mb_ord($m[0]) + 1), $data);
-    }
-    if (is_array($data)) {
-        return array_map('obfuscateJapanese', $data);
-    }
-    return $data;
-}
-
-// 許諾が必要なライセンスカテゴリ
-$permissionRequiredCategories = [
-    'permission_required_paid',
-    'permission_required_free',
-    'non_commercial_free',
-    'commercial_license_required',
-    'restricted'
-];
-
 // questionnaire データを読み込み
 if ($questionnaireId) {
     $basePath = __DIR__ . '/data/definitions/';
@@ -59,12 +39,6 @@ if ($questionnaireId) {
 
     if (file_exists($jsonPath)) {
         $questionnaireData = json_decode(file_get_contents($jsonPath), true);
-
-        // 許諾が必要な場合はテキストを難読化
-        $licenseCategory = $questionnaireData['copyright']['license_category'] ?? null;
-        if (in_array($licenseCategory, $permissionRequiredCategories)) {
-            $questionnaireData['fields'] = obfuscateJapanese($questionnaireData['fields']);
-        }
 
         if (file_exists($mdPath)) {
             $markdownContent = file_get_contents($mdPath);
