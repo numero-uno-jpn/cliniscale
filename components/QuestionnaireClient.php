@@ -96,19 +96,15 @@
                         <span>{{ getPermissionTitle(copyrightInfo.license_category) }}</span>
                     </h3>
                     <p>{{ getPermissionDescription(copyrightInfo.license_category) }}</p>
-                    <p class="text-sm opacity-80">現在、許諾を取得していないため入力できません。</p>
+                    <p class="text-sm opacity-80">許諾を取得された方は、下記よりアクセスキーをお問い合わせください。</p>
                     <a
-                        v-if="copyrightInfo.copyright_url"
-                        :href="copyrightInfo.copyright_url"
+                        :href="getInquiryUrl()"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="category-label category-label-link">
-                        <i class="fas fa-external-link-alt mr-2"></i>
-                        権利者サイトへ
+                        <i class="fas fa-envelope mr-2"></i>
+                        許諾済みの方はこちら
                     </a>
-                    <div v-else class="category-label">
-                        {{ getCopyrightLabel(copyrightInfo.license_category) }}
-                    </div>
                 </div>
 
                 <!-- 入力フォーム本体 -->
@@ -779,10 +775,45 @@
                     'restricted'
                 ];
 
-                return permissionRequired.includes(this.copyrightInfo.license_category);
+                if (!permissionRequired.includes(this.copyrightInfo.license_category)) {
+                    return false;
+                }
+
+                // URLパラメータのkeyをチェック
+                const urlParams = new URLSearchParams(window.location.search);
+                const key = urlParams.get('key');
+                if (key && this.validateAccessKey(key)) {
+                    return false;
+                }
+
+                return true;
             }
         },
         methods: {
+            // アクセスキーの検証
+            validateAccessKey(key) {
+                const expectedKey = this.generateAccessKey(this.questionnaire.key);
+                return key === expectedKey;
+            },
+
+            // アクセスキーの生成（質問票名からハッシュ）
+            generateAccessKey(name) {
+                const salt = 'cliniscale2024';
+                const str = name + salt;
+                let hash = 0;
+                for (let i = 0; i < str.length; i++) {
+                    const char = str.charCodeAt(i);
+                    hash = ((hash << 5) - hash) + char;
+                    hash = hash & hash;
+                }
+                return Math.abs(hash).toString(16).padStart(8, '0');
+            },
+
+            // 問い合わせURLの生成
+            getInquiryUrl() {
+                const q = encodeURIComponent(this.questionnaire.key);
+                return `https://www.emuyn.net/cliniscale/inquiry?q=${q}`;
+            },
             // カテゴリ別の許諾メッセージ用メソッド
             getPermissionIcon(category) {
                 const iconMap = {
