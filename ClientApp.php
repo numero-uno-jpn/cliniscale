@@ -559,13 +559,13 @@
 
     <!-- フッター -->
     <footer class="bg-gray-50 border-t border-gray-200 mt-12">
-        <!-- 医療免責事項（最重要） -->
+        <!-- 免責事項（最重要） -->
         <div class="bg-yellow-50 border-t-4 border-yellow-400">
             <div class="container mx-auto px-4 py-6 max-w-7xl">
                 <div class="flex items-start gap-3">
                     <i class="fas fa-exclamation-triangle text-yellow-600 text-2xl flex-shrink-0 mt-1"></i>
                     <div>
-                        <h3 class="text-lg font-bold text-yellow-900 mb-3">医療免責事項</h3>
+                        <h3 class="text-lg font-bold text-yellow-900 mb-3">免責事項</h3>
                         <div class="text-sm text-yellow-800 space-y-2">
                             <p class="font-semibold">本アプリは医療行為を提供するものではありません。</p>
                             <ul class="list-disc list-inside space-y-1 ml-2">
@@ -632,7 +632,7 @@
                     </h4>
                     <div class="text-sm text-gray-600 space-y-1">
                         <p class="flex items-center gap-2">
-                            1.4.2
+                            1.5.0
                         </p>
                     </div>
                 </div>

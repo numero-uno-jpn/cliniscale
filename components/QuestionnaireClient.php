@@ -49,16 +49,6 @@
                         <span v-if="copyrightInfo.original_developers">{{ copyrightInfo.original_developers }}</span>
                     </div>
                 </div>
-
-                <!-- 2行目: 非営利・教育目的の説明（該当カテゴリのみ） -->
-                <div v-if="showNonCommercialNotice(copyrightInfo.license_category)" class="flex justify-end mt-1">
-                    <div class="flex items-start gap-2 text-blue-600 text-xs max-w-2xl">
-                        <i class="fas fa-info-circle mt-0.5 flex-shrink-0"></i>
-                        <span class="leading-relaxed">
-                            非営利・教育目的での提供です。医療者の責任にて臨床判断を行ってください。
-                        </span>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -818,13 +808,18 @@
                 request.onupgradeneeded = (e) => {
                     const db = e.target.result;
                     if (!db.objectStoreNames.contains('config')) {
-                        db.createObjectStore('config', { keyPath: 'key' });
+                        db.createObjectStore('config', {
+                            keyPath: 'key'
+                        });
                     }
                 };
                 request.onsuccess = (e) => {
                     const db = e.target.result;
                     const tx = db.transaction('config', 'readwrite');
-                    tx.objectStore('config').put({ key: 'deviceId', value: deviceId });
+                    tx.objectStore('config').put({
+                        key: 'deviceId',
+                        value: deviceId
+                    });
                 };
             },
 
@@ -937,17 +932,19 @@
 
             obfuscateField(field) {
                 if (!field || !this.isPermissionRequired) return field;
-                const f = { ...field };
+                const f = {
+                    ...field
+                };
                 if (f.dispname) f.dispname = this.obfuscateText(f.dispname);
                 if (f.description) {
-                    f.description = Array.isArray(f.description)
-                        ? f.description.map(d => this.obfuscateText(d))
-                        : this.obfuscateText(f.description);
+                    f.description = Array.isArray(f.description) ?
+                        f.description.map(d => this.obfuscateText(d)) :
+                        this.obfuscateText(f.description);
                 }
                 if (f.selector) {
-                    f.selector = Array.isArray(f.selector)
-                        ? f.selector.map(s => this.obfuscateText(s))
-                        : f.selector.split('|').map(s => this.obfuscateText(s)).join('|');
+                    f.selector = Array.isArray(f.selector) ?
+                        f.selector.map(s => this.obfuscateText(s)) :
+                        f.selector.split('|').map(s => this.obfuscateText(s)).join('|');
                 }
                 return f;
             },
@@ -958,7 +955,9 @@
                 const processedFields = {};
                 this.data.fields.forEach((field, index) => {
                     if (field) {
-                        let f = { ...field };
+                        let f = {
+                            ...field
+                        };
                         if (!f.id) f.id = f.name || `field_${index}`;
                         f.hidden = f.parentname ? true : false;
                         f = this.obfuscateField(f);

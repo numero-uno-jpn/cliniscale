@@ -1,5 +1,5 @@
 // Service Worker for ClinicalScale Application
-const CACHE_VERSION = "cliniscale-v1.4.2"; // ClientApp.php のバージョンと同期させること！
+const CACHE_VERSION = "cliniscale-v1.5.0"; // ClientApp.php のバージョンと同期させること！
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const DYNAMIC_CACHE = `${CACHE_VERSION}-dynamic`;
 const API_CACHE = `${CACHE_VERSION}-api`;
